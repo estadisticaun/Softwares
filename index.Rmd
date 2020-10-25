@@ -1,5 +1,5 @@
 --- 
-title: "Sftwares para la visualización estadística"
+title: "Softwares para la visualización estadística"
 author: "Camila Acosta Ramirez"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
