@@ -1,1 +1,1 @@
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). Please see the page "Get Started" at https://bookdown.org/home/about/ for how to compile this example.
+Este documento presenta las principales características y funcionalidades de 3 softwares estadísticos que lideran el mercado de la visualización de datos: Tableau, Power BI y Flourish.
