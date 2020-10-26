@@ -1,0 +1,10 @@
+fig:nice-fig
+tab:nice-tab
+intro
+tableau
+powerbi
+flourish
+example-one
+example-two
+conclu
+genralidades
