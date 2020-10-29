@@ -5,7 +5,7 @@ library(dplyr)
 
 #LECTURA Y UNION DE BASES DE DATOS
 Graduados <- data.frame()
-for(archivo in list.files("Softwares")) {
+for(archivo in list.files()) {
   if(grepl("Graduados", archivo, fixed = T)){
     Graduados <- rbind(Graduados, read_excel(paste0("Softwares/", archivo)))
   }
