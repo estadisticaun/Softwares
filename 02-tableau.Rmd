@@ -220,8 +220,24 @@ Cuando se usa Tableau Public solo se tiene la opción de guardar el libro de tra
 
 Si desea compartir sus descubrimientos de datos con el mundo fuera de su organización, puede guardar su libro de trabajo en Tableau Public, un servicio gratuito en la nube. En Tableau Public, cualquiera puede interactuar con sus vistas o descargar sus libros de trabajo o fuentes de datos. Para guaradar un libro de trabajo:
 
-   1. Con su libro de trabajo abierto en Tableau Desktop, seleccione Servidor > Tableau Public > Guardar en Tableau Public.
+   1. Con su libro de trabajo abierto en Tableau Desktop Public Edition, seleccione Archivo > Guardar en Tableau Public como...
+   
+```{r echo=F, fig.cap='', out.width='40%', fig.asp=.9, fig.align='center'}
+knitr::include_graphics("imagen1.png")
+```
+
    2. Inicie sesión con su cuenta de Tableau Public. Si no tiene una cuenta, seleccione el enlace para crear una nueva.
+```{r echo=FALSE, fig.align='center', out.width = '40%',fig.cap=''}
+knitr::include_graphics("imagen5.JPG")
+```  
    3. Escriba un nombre para el libro y haga clic en Guardar. Cuando guarda un libro de trabajo en Tableau Public, el proceso de publicación crea un extracto de la conexión de datos.
+   
+```{r echo=FALSE, fig.align='center', out.width = '50%',fig.cap=''}
+knitr::include_graphics("Imagen3.png")
+```
    4. Una vez publicado el libro de trabajo, se le redirige a su cuenta en el sitio web de Tableau Public.(El enlace se abre en una nueva ventana).
    5. Una vez en el sitio web de la visualización haga clic en el botón con el icono de compartir y copie el enlace para agregarlo en el sitio web o donde desee publicar el trabajo. 
+   
+```{r echo=FALSE, fig.align='center', out.width = '50%', fig.cap=''}
+knitr::include_graphics("Imagen4.png")
+```
