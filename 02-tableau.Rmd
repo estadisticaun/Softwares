@@ -14,7 +14,7 @@ Tableau es una herramienta revolucionaria que está permitiendo acceder y      a
 -	Adaptable a diferentes situaciones y entornos 
 
 Existen diversas formas de utilizar Tableau, de forma individual puedes utilizar Tableau Desktop en tu ordenador para diseñar las visualizaciones de datos.
-Si necesitas un entorno para organizaciones o empresas, Tableau Server ofrece un entorno colaborativo y seguro al que puedes acceder simplemente con un navegador web. También existe Tableau Online que es equivalente, pero toda la plataforma funciona en la nube de Tableau, sin necesidad de tener infraestructura propia
+Si necesitas un entorno para organizaciones o empresas, Tableau Server ofrece un entorno colaborativo y seguro al que puedes acceder simplemente con un navegador web. También existe Tableau Online que es equivalente, pero toda la plataforma funciona en la nube de Tableau, sin necesidad de tener infraestructura propia.
 
 - Rápido y fácil, es posible utilizar Tableau para:
     * Crear dashboards e informes visuales.
@@ -30,6 +30,7 @@ No es complejo de utilizar ya que Tableau está diseñado para que sea fácil de
     * Fuentes OLAP: Microsoft Analysis Services, SAP Hana, etc.
     * Fuentes online como Google Analytics, etc.
     * Conectores a servicios web.
+
 
 - Juega con tus bases de datos: 
 

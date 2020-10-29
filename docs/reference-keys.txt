@@ -7,4 +7,3 @@ flourish
 example-one
 example-two
 conclu
-genralidades

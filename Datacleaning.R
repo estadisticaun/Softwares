@@ -7,7 +7,7 @@ library(dplyr)
 Graduados <- data.frame()
 for(archivo in list.files()) {
   if(grepl("Graduados", archivo, fixed = T)){
-    Graduados <- rbind(Graduados, read_excel(paste0("Softwares/", archivo)))
+    Graduados <- rbind(Graduados, read_excel(archivo))
   }
 }
 

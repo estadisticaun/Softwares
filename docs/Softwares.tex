@@ -90,7 +90,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx}
+\usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-10-25}
+\date{2020-10-29}
 
 \begin{document}
 \maketitle
@@ -138,7 +138,7 @@ Figures and tables with captions will be placed in \texttt{figure} and \texttt{t
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{.1}\NormalTok{, }\FloatTok{.1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
+\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -156,7 +156,7 @@ Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
+  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
   \DataTypeTok{booktabs =} \OtherTok{TRUE}
 \NormalTok{)}
 \end{Highlighting}
@@ -202,7 +202,520 @@ You can write citations, too. For example, we are using the \textbf{bookdown} pa
 \hypertarget{tableau}{%
 \chapter{Tableau}\label{tableau}}
 
-Here is a review of existing methods.
+Tableau es una plataforma de análisis visual que transforma la forma en que usamos los datos para resolver problemas, lo que permite a las personas y organizaciones aprovechar al máximo sus datos. Esta plataforma hace que sea más fácil para las personas explorar y administrar datos, y más rápido para descubrir y compartir información que puede cambiar las empresas y el mundo, todo lo creado por esta plataforma esta impulsado por ayudar a las personas a ver y comprender los datos, porque sus productos están diseñados para poner al usuario en primer lugar, ya sea un analista, un científico de datos, un estudiante, un profesor, un ejecutivo o un usuario empresarial. Desde la conexión hasta la colaboración, Tableau es la plataforma de análisis de un extremo a otro más potente, seguro y flexible.
+
+Tableau se fundo en 2003 como resultado de un proyecto de informática en Stanford que tenia como objetivo mejorar el flujo de análisis y hacer que los datos fueran más accesibles para las personas a través de la visualización. Los cofundadores Chris Stolte, Pat Hanrahan y Christian Chabot desarrollaron y patentaron la tecnología fundamental de Tableau, VizQL, que expresa visualmente los datos al traducir las acciones de arrastrar y soltar en consultas de datos a través de una interfaz intuitiva. Desde su fundación han invertido continuamente en investigación y desarrollo, creando así soluciones para ayudar a cualquier persona que trabaje con datos a obtener respuestas más rápido y descubrir información no anticipada, este desarrollo e investigación incluye hacer que el aprendizaje automático, las estadísticas, el lenguaje natural y la preparación inteligente de datos sean más útiles para aumentar la creatividad humana en el análisis.
+
+\textbf{Principales ventajas de Tableau:}
+
+\begin{itemize}
+\tightlist
+\item
+  Puedes ver y entender tus datos
+\end{itemize}
+
+Es la misión de la compañía, ``ayudar a las personas a ver y comprender sus datos''. Con Tableau está cambiando la forma en la que las personas resuelven sus preguntas, analizando sus datos de forma rápida, sencilla y visual.
+Tableau es una herramienta revolucionaria que está permitiendo acceder y analizar los datos -que son el petróleo del SXXI- a todas las personas, democratizando el análisis de datos de forma visual.
+
+\begin{itemize}
+\tightlist
+\item
+  Adaptable a diferentes situaciones y entornos
+\end{itemize}
+
+Existen diversas formas de utilizar Tableau, de forma individual puedes utilizar Tableau Desktop en tu ordenador para diseñar las visualizaciones de datos.
+Si necesitas un entorno para organizaciones o empresas, Tableau Server ofrece un entorno colaborativo y seguro al que puedes acceder simplemente con un navegador web. También existe Tableau Online que es equivalente, pero toda la plataforma funciona en la nube de Tableau, sin necesidad de tener infraestructura propia.
+
+\begin{itemize}
+\tightlist
+\item
+  Rápido y fácil, es posible utilizar Tableau para:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Crear dashboards e informes visuales.
+  \item
+    Navegar y visualizar datos de múltiples formas.
+  \item
+    Tener un autoservicio de BI.
+  \item
+    Realizar algunos análisis estadísticos, ver tendencias y pronósticos.
+  \end{itemize}
+\end{itemize}
+
+No es complejo de utilizar ya que Tableau está diseñado para que sea fácil de usar, enfocado al autoservicio y no requiere de usuarios técnicos.
+
+\begin{itemize}
+\tightlist
+\item
+  Es compatible con múltiples fuentes de datos, Tableau soporta diferentes fuentes de datos y puede conectar a más de 40 diferentes fuentes, algunos ejemplos son:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Ficheros Excel, CSV, PDF, etc.
+  \item
+    Bases de datos relacionales como SQL Server, MySQL, etc.
+  \item
+    Fuentes OLAP: Microsoft Analysis Services, SAP Hana, etc.
+  \item
+    Fuentes online como Google Analytics, etc.
+  \item
+    Conectores a servicios web.
+  \end{itemize}
+\item
+  Juega con tus bases de datos:
+\end{itemize}
+
+Además de conectarse a fuentes de datos diferentes, en Tableau puedes conectarte a diferentes vistas de datos a la vez, crear extracciones, hacer transformaciones, unir y dividir datos, combinar diferentes fuentes de datos, crear grupos y conjuntos, etc.
+
+\begin{itemize}
+\tightlist
+\item
+  No necesitas programar:
+\end{itemize}
+
+Todas las funcionalidades de Tableau funcionan con arrastrar y soltar, incluso la creación de cálculos (que tienen su propio asistente de ayuda) puedes hacerla así, simplemente con el ratón.
+Eso no quita que, si lo deseas, puedas integrar y utilizar Tableau con herramientas y lenguajes más complejos como Python o R para la analítica de datos.
+
+\begin{itemize}
+\tightlist
+\item
+  Tiene una comunidad enorme:
+\end{itemize}
+
+En Internet es posible encontrar multitud de usuarios que comparten su trabajo y aprender de ellos, ver y compartir visualizaciones en las galerías de Tableau Public, formarte en la plataforma gratuita de Tableau Training, resolver dudas en Tableau Community, conocer a otros usuarios en los Tableau User Group.
+
+\textbf{Principales desventajas de Tableau:}
+
+\begin{itemize}
+\tightlist
+\item
+  Se requiere preparación de datos inicial.
+\item
+  Las características pueden parecer demasiado especializadas y restrictivas, ya que Tableau esta diseñado para un uso más amplio.
+\item
+  Aunque es excelente para fines analíticos, no puede reemplazar las aplicaciones de informes financieros.\\
+\item
+  Brinda la capacidad de establecer seguridad de ``nivel bajo'' en el nivel de datos, pero lo implementa de una manera un poco precaria.
+\item
+  Tableau se ha especializado en el factor de facilidad de uso. Sin embargo, a medida que los usuarios van obteniendo habilidades y experiencia desean hacer más, y Tableau posee una capacidad limitada de ampliación que no siempre les permite ir a donde desean.
+\item
+  Los usuarios especializados en herramientas de Inteligencia Empresarial suelen considerar mejor contar con una arquitectura abierta.
+\end{itemize}
+
+\textbf{Productos de Tableau:}
+
+\begin{itemize}
+\item
+  Tableau Public: es una plataforma gratuita en línea para explorar visualizaciones de datos y compartir con el público general.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Las visualizaciones publicadas en Tableau Public están disponibles para consultarlas en línea, es una plataforma de datos públicos.
+  \item
+    No es posible guardar visualizaciones localmente.
+  \item
+    Solo es posible la Conexión a archivos CSV, Excel, y archivos de texto.
+  \item
+    No es posible cargar más de 15 millones de filas.
+  \item
+    No permite conexión en tiempo real con los datos, solo es posible la conexión por medio de extracción.
+  \item
+    Recursos de aprendizaje guiados.
+  \item
+    Desafíos virtuales.
+  \item
+    Datos de muestra.
+  \end{itemize}
+\item
+  Tableau Desktop: es la versión profesional, de escritorio y paga de Tableau.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Las visualizaciones se pueden guardar localmente en nuestro computador.
+  \item
+    Cantidad ilimitada de datos.
+  \item
+    Conexión a todas las fuentes de datos, tanto locales como en la nube.
+  \end{itemize}
+\item
+  Tableau Prep: proporciona una forma visual y directa de combinar, dar forma y limpiar datos, así como automatizar los flujos de preparación de datos, lo que le ayuda a obtener análisis y conocimientos más rápidamente, se compone de dos productos:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Tableau Prep Builder para crear sus flujos de datos. Si desea editar un valor, seleccione y edite directamente. Cambie su tipo de unión y vea el resultado de inmediato. Con cada acción, ve instantáneamente cambiar sus datos, incluso en millones de filas de datos. Tableau Prep Builder le brinda la libertad de reordenar los pasos y experimentar sin consecuencias. Utilice funciones inteligentes para solucionar problemas comunes de preparación de datos. Tableau Prep Builder emplea agrupaciones difusas para convertir tareas repetitivas, como agrupar por pronunciación, en operaciones de un solo clic.
+  \item
+    Tablear Prep Conductor permite publicar y ejecutar flujos fácilmente en su entorno de servidor. Comparta sus fuentes de datos de forma segura con Tableau Server o Tableau Online. Cree un entorno en el que todos los miembros de su organización puedan trabajar con datos preparados y actualizados.
+  \end{itemize}
+\item
+  Tableau Server: servidor que permite colaborar de forma segura y compartir la información a partir de los datos que ya hayamos subido a través de Tableau Desktop.
+\item
+  Tableau Online: se trata de una versión de Tableau Server alojada en la nube que permite acceder a los datos sin necesidad de hacer instalaciones.
+\item
+  Tableau Mobile: se trata de una aplicación complementaria gratuita para Tableau Server o Tableau Online que permite un acceso a los datos y la información guardada en nuestra cuenta.
+\end{itemize}
+
+\textbf{Precios de Tableau:}
+
+\begin{itemize}
+\item
+  Para individuos existe ``Creador de Tableau'', tiene un costo de \$70 USD por usuario mensual. Incluye Tableau Desktop, Tableau Prep Builder y una licencia de Creator en Tableau Server o Tableau Online.
+\item
+  Para equipos y organizaciones: Se tiene la opción de implementar con Tableau Server o implementar con Tableau Online, ambas implementaciones requieren al menos un usuario Creador de Tableau y proporcionan la opción de elegir entre dos roles de usuario, pero varían en los precios.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Implementación con Tableau Server:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Creador de Tableau, tiene un costo de \$70 USD por usuario mensual. Incluye Tableau Desktop, Tableau Prep Builder y una licencia de creador en Tableau Server.
+    \item
+      Explorador de Tableau, permite explorar datos confiables y responder sus propias preguntas más rápido con análisis completos de autoservicio, tiene un costo de \$35 USD por usurario mensual y se requieren mínimo 5 exploradores. Incluye una licencia de Explorer de Tableau Server.
+    \item
+      Visor de Tableau, permite ver e interactuar con paneles y visualizaciones en una plataforma segura y fácil de usar, posee un costo de \$12 USD por usuario mensual y se requieren mínimo 100 espectadores. Incluye una licencia de Viewer de Tableau Sever.
+    \end{itemize}
+  \item
+    Implementación con Tableau Online:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Creador de Tableau, permite al usuario descubrir información valiosa con un potente conjunto de productos que respaldan su flujo de trabajo de análisis de un extremo a otro, tiene un costo de \$70 USD por usuario mensual. Incluye Tableau Desktop, Tableau Prep Builder y una licencia de Creator en Tableau Online.
+    \item
+      Explorador de Tableau, permite explorar datos confiables y responder sus propias preguntas más rápido con análisis completos de autoservicio, tiene un costo de \$42 USD por usurario mensual y se requieren mínimo 5 exploradores. Incluye una licencia de Explorer de Tableau Online.
+    \item
+      Visor de Tableau, permite ver e interactuar con paneles y visualizaciones en una plataforma segura y fácil de usar, posee un costo de \$15 USD por usuario mensual y se requieren mínimo 100 espectadores. Incluye una licencia de Viewer de Tableau Online.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\textbf{Compartir el trabajo realizado en Tableau}
+
+Cuando se usa Tableau Desktop, hay varias formas de guardar y compartir el trabajo realizado:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Guardar automáticamente un libro de trabajo: Tableau Desktop guarda automáticamente el trabajo realizado cada pocos minutos; por lo que no se perderán horas de trabajo si Tableau Desktop se cierra inesperadamente. Esta función está habilitada de forma predeterminada.
+  Si Tableau falla, se crea automáticamente una versión recuperada del libro de trabajo con una extensión \(.twbr\) y se guarda en la misma ubicación que el archivo original o en su carpeta Mi repositorio / libros de Tableau . Los libros de trabajo nuevos se guardan con el nombre ``Libro1'' más un ID numérico. Cuando vuelve a abrir Tableau, un cuadro de diálogo de recuperación muestra una lista de los archivos recuperados que puede seleccionar y abrir para continuar en su flujo.
+\item
+  Guardar un libro de trabajo: cuando abre Tableau Desktop, crea automáticamente un nuevo libro de trabajo. Los libros de trabajo contienen el trabajo que crea y constan de una o más hojas de trabajo. Cada hoja de trabajo contiene una vista particular de sus datos. Para guardar un libro de trabajo de Tableau:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Seleccione Archivo \textgreater{} Guardar.
+  \item
+    Especifique el nombre del archivo del libro de trabajo en el cuadro de
+    diálogo Guardar como.
+    De forma predeterminada, Tableau guarda el archivo con la extensión .twb.
+    De forma predeterminada, Tableau guarda su libro de trabajo en la carpeta
+    Libros de trabajo de su repositorio Mi Tableau. Puede encontrar este
+    repositorio en su carpeta Documentos. Sin embargo, puede guardar los
+    libros de trabajo de Tableau en cualquier directorio que elija.
+  \item
+    Para guardar una copia de un libro de trabajo que tiene abierto:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Seleccione Archivo \textgreater{} Guardar como y guarde el archivo con un nombre
+      nuevo.
+    \end{itemize}
+  \end{itemize}
+\item
+  Guardar un libro de trabajo empaquetado: estos libros de trabajo contienen el libro de trabajo junto con una copia de cualquier fuente de datos de archivo local e imágenes de fondo. El libro de trabajo ya no está vinculado a las imágenes y las fuentes de datos originales. Estos libros de trabajo se guardan con una extensión de archivo .twbx. Otros usuarios pueden abrir el libro de trabajo empaquetado con Tableau Desktop o Tableau Reader y no necesitan acceder a las fuentes de datos que incluye el libro de trabajo.
+\item
+  Guardar un marcador: puede guardar una sola hoja de trabajo como marcador de Tableau. Cuando guarda el marcador, Tableau crea una instantánea de la hoja de trabajo. Se puede acceder a los marcadores desde cualquier libro utilizando el menú Marcadores. Cuando abre una hoja de trabajo marcada como favorita, agrega la hoja de trabajo a su libro de trabajo en el estado en que estaba cuando se marcó. Nunca se actualizará ni cambiará automáticamente. Los marcadores son convenientes cuando tiene hojas de trabajo que usa con frecuencia. Para guardar un marcador de Tableau:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Seleccione Archivo \textgreater{} Marcador \textgreater{} Crear marcador.
+  \item
+    Especifique el nombre y la ubicación del archivo de marcador en el
+    cuadro de diálogo Crear marcador.
+  \end{itemize}
+\end{enumerate}
+
+Tableau guarda el archivo con la extensión .tbm. La ubicación predeterminada es la carpeta Marcadores en el repositorio de Tableau. Sin embargo, puede guardar marcadores en cualquier ubicación que elija. Los marcadores que no están almacenados en el repositorio de Tableau no aparecen en el menú Marcador.
+
+Es posible compartir libros de trabajo y marcadores con sus compañeros de trabajo, siempre que puedan acceder a las fuentes de datos relevantes que utiliza el libro de trabajo. Si sus compañeros de trabajo no tienen acceso a las fuentes de datos, puede guardar un libro de trabajo empaquetado.
+
+Los campos personalizados como medidas agrupadas, campos calculados, grupos y conjuntos se guardan con libros de trabajo y marcadores.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Libros de trabajo empaquetados: estos libros contienen el libro de trabajo junto con una copia de cualquier fuente de datos de archivo local e imágenes de fondo. El libro de trabajo ya no está vinculado a las imágenes y las fuentes de datos originales. Estos libros de trabajo se guardan con una extensión de archivo .twbx. Otros usuarios pueden abrir el libro de trabajo empaquetado con Tableau Desktop o Tableau Reader.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Cree un .twbx con fuentes de datos basadas en archivos
+
+    \begin{enumerate}
+    \def\labelenumii{\arabic{enumii}.}
+    \tightlist
+    \item
+      Seleccione Archivo\textgreater{} Guardar como.
+    \item
+      Especifique un nombre de archivo para el libro empaquetado en el
+      cuadro de diálogo Guardar como.
+    \item
+      Seleccione Libros de trabajo empaquetados de Tableau en la lista
+      desplegable Guardar como tipo .
+    \item
+      Haga clic en Guardar .
+      La ubicación predeterminada es la carpeta Workbooks del repositorio de Tableau. Sin embargo, puede guardar libros de trabajo empaquetados en cualquier directorio que elija.
+    \end{enumerate}
+
+    Los siguientes archivos se incluyen en los libros de trabajo empaquetados:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Imágenes de fondo.
+    \item
+      Geocodificación personalizada.
+    \item
+      Formas personalizadas.
+    \item
+      Archivos de cubo locales.
+    \item
+      Archivos de Microsoft Access.
+    \item
+      Archivos de Microsoft Excel.
+    \item
+      Archivos de extracción de Tableau (.hyper o .tde).
+    \item
+      Archivos de texto (.csv, .txt, etc.)
+    \end{itemize}
+  \item
+    Cree un .twbx con fuentes de datos no basadas en archivos
+    Si el libro de trabajo contiene conexiones a fuentes de datos
+    empresariales u otras fuentes de datos no basadas en archivos, como
+    Microsoft SQL, Oracle o MySQL, los datos deben extraerse de las fuentes de
+    datos para que se incluyan en un libro de trabajo empaquetado (.twbx ).
+
+    \begin{enumerate}
+    \def\labelenumii{\arabic{enumii}.}
+    \tightlist
+    \item
+      En el libro de trabajo, haga clic con el botón derecho en la fuente
+      de datos en el panel Datos y elija Extraer datos.
+    \item
+      En el cuadro de diálogo Extraer datos, haga clic en el botón Extraer
+      para extraer todos los datos de la fuente de datos. Una vez que se
+      completa la extracción, el icono de la fuente de datos cambia para
+      indicar que hay una extracción activa para esa fuente de datos. En
+      lugar de un solo cilindro, hay dos cilindros conectados por una flecha.
+    \item
+      Opcional: repita los pasos anteriores para cada fuente de datos en
+      el libro de trabajo.
+    \item
+      Seleccione Archivo \textgreater{} Guardar como.
+    \item
+      En el menú desplegable Guardar como tipo , seleccione Libro de
+      trabajo empaquetado de Tableau (* .twbx).
+      Una vez que se hayan creado los extractos para todas las fuentes de datos no basadas en archivos y se haya guardado el libro de trabajo empaquetado, puede enviar su libro de trabajo.
+    \end{enumerate}
+  \item
+    Cree un .twbx con fuentes de datos de Tableau Server, si el libro de trabajo contiene conexiones a una fuente de datos de Tableau Server publicada, debe descargar una copia local de la fuente de datos de Tableau Server, tomar un extracto y luego reemplazar la conexión a la copia local para que se incluya en un libro de trabajo empaquetado. (.twbx).
+
+    \begin{enumerate}
+    \def\labelenumii{\arabic{enumii}.}
+    \tightlist
+    \item
+      En el libro de trabajo, haga clic con el botón derecho en la fuente de datos publicada en el panel Datos y luego seleccione Crear copia local. Se agrega una copia de la fuente de datos publicada al panel Datos.
+    \item
+      Haga clic con el botón derecho en la copia local y seleccione Extraer datos.
+    \item
+      En el cuadro de diálogo Extraer datos, haga clic en el botón Extraer para extraer todos los datos de la fuente de datos. La creación de un extracto de la fuente de datos le permite a la persona con la que está compartiendo el libro tener acceso a una copia de la fuente de datos.
+    \item
+      En el panel Datos, haga clic con el botón derecho en la fuente de datos publicada y luego seleccione Reemplazar fuente de datos.
+    \item
+      Verifique que la fuente de datos publicada sea reemplazada por la fuente de datos local y luego haga clic en Aceptar.
+    \item
+      Haga clic con el botón derecho en la fuente de datos publicada y luego haga clic en Cerrar.
+    \item
+      Seleccione Archivo \textgreater{} Guardar como.
+    \item
+      En el menú desplegable Guardar como tipo , seleccione Libro de trabajo empaquetado de Tableau (* .twbx).
+    \end{enumerate}
+  \item
+    Desempaquetar un .twbx, los libros empaquetados se pueden descomprimir.
+    En una computadora con Windows o macOS, cambie el nombre del archivo con
+    una extensión .zip (por ejemplo, de myfile.twbx a myfile.zip) y luego haga
+    doble clic en él.
+    Cuando desempaqueta un libro de trabajo, obtiene un archivo de libro de trabajo normal (.twb), junto con una carpeta que contiene las fuentes de datos y las imágenes que se empaquetaron con el libro de trabajo.
+  \end{itemize}
+\end{enumerate}
+
+Hay varias formas de obtener vistas y libros de trabajo de Tableau Desktop y convertirlos en una presentación, informe o página web.
+
+\begin{itemize}
+\tightlist
+\item
+  Copiar una vista como imagen, puede copiar rápidamente una vista individual como una imagen y pegarla en otra aplicación, como Microsoft Word o Excel. Si usa Tableau Desktop en macOS, se copia una imagen TIFF (formato de archivo de imagen con etiquetas) al portapapeles. En Windows, se copia una imagen BMP (mapa de bits).
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Seleccione Hoja de trabajo \textgreater{} Copiar \textgreater{} Imagen.
+  \item
+    En el cuadro de diálogo Copiar imagen, seleccione los elementos que desea incluir en la imagen. Si la vista contiene una leyenda, en Opciones de imagen, seleccione el diseño de la leyenda.
+  \item
+    Haga clic en Copiar.
+  \item
+    Abra la aplicación de destino y pegue la imagen del portapapeles.
+  \end{enumerate}
+\item
+  Exportar una vista como un archivo de imagen, para crear un archivo de imagen que pueda reutilizar, exporte la vista en lugar de copiarla. Puede elegir el formato BMP, JPEG o PNG en macOS.
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Seleccione Hoja de trabajo \textgreater{} Exportar \textgreater{} Imagen.
+  \item
+    En el cuadro de diálogo Exportar imagen, seleccione los elementos que desea incluir en la imagen. Si la vista contiene una leyenda, en Opciones de imagen, seleccione el diseño de la leyenda.
+  \item
+    Haga clic en Guardar.
+  \item
+    En el cuadro de diálogo Guardar imagen, especifique la ubicación, el nombre y el formato del archivo. Luego haga clic en Guardar.
+  \end{enumerate}
+\item
+  Exportar como una presentación de PowerPoint, cuando exporta un libro a formato de Microsoft PowerPoint, las hojas seleccionadas se convierten en imágenes PNG estáticas en diapositivas independientes. Si exporta una hoja de historia, todos los puntos de la historia se exportan como diapositivas independientes. Todos los filtros aplicados actualmente en Tableau se reflejan en la presentación exportada. Para exportar un libro a PowerPoint:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Seleccione Archivo \textgreater{} Exportar como PowerPoint.
+  \item
+    Seleccione las hojas que desea incluir en la presentación. (También se pueden incluir hojas ocultas). El archivo de PowerPoint exportado refleja el nombre de archivo de su libro y la diapositiva de título indica el nombre del libro y la fecha en que se generó.
+  \end{enumerate}
+\item
+  Exportar a PDF, para crear un archivo basado en vectores que incorpore las fuentes de Tableau, imprima en PDF. Después de personalizar el diseño de los elementos de la página mediante el cuadro de diálogo Archivo \textgreater{} Configurar página , elija Archivo \textgreater{} Imprimir en PDF.
+\end{itemize}
+
+Al crear, editar e interactuar con vistas en Tableau Server o Tableau Online, existen formas diferentes de guardar su trabajo:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Guardar un libro de trabajo: cuando crea un libro de trabajo nuevo o edita un libro de trabajo existente en Tableau Server o Tableau Online, puede guardar su trabajo en cualquier momento. Para guardar un libro de trabajo:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    En el modo de edición web, seleccione Archivo \textgreater{} Guardar.
+  \end{itemize}
+\item
+  Guardar una copia de un libro de trabajo: A veces, no desea sobrescribir una vista existente con sus cambios. En casos como estos, puede guardar una copia de un libro de trabajo existente. Cuando hace esto, el libro de trabajo existente permanece sin cambios y se crea una copia para que pueda editarlo como desee. Para guardar una copia de un libro de trabajo:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    En el modo de edición web, seleccione Archivo \textgreater{} Guardar como .
+  \item
+    En el cuadro de diálogo Guardar libro de trabajo que se abre, haga lo
+    siguiente:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Para el nombre: introduzca un nombre para el libro.
+    \item
+      Para proyecto: seleccione el proyecto en el que le gustaría guardar
+      el libro de trabajo.
+    \end{itemize}
+  \item
+    Haga clic en Guardar.
+  \end{itemize}
+\item
+  Guardar cambios como una vista personalizada: una vista personalizada no cambia la original, pero está relacionada con ella. Si la vista original se actualiza o se vuelve a publicar, la vista personalizada también se actualiza. También puede elegir si sus vistas personalizadas son visibles para otros usuarios (públicas) o solo para usted (privadas).
+\end{enumerate}
+
+Cuando se usa Tableau Public solo se tiene la opción de guardar el libro de trabajo en el repositorio público.
+
+Si desea compartir sus descubrimientos de datos con el mundo fuera de su organización, puede guardar su libro de trabajo en Tableau Public, un servicio gratuito en la nube. En Tableau Public, cualquiera puede interactuar con sus vistas o descargar sus libros de trabajo o fuentes de datos. Para guaradar un libro de trabajo:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Con su libro de trabajo abierto en Tableau Desktop Public Edition, seleccione Archivo \textgreater{} Guardar en Tableau Public como\ldots{}
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{imagen1} 
+
+}
+
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Inicie sesión con su cuenta de Tableau Public. Si no tiene una cuenta, seleccione el enlace para crear una nueva.
+  \textbackslash begin\{figure\}
+\end{enumerate}
+
+\{\centering \includegraphics[width=0.4\linewidth]{imagen5}
+
+\}
+
+\textbackslash end\{figure\}
+3. Escriba un nombre para el libro y haga clic en Guardar. Cuando guarda un libro de trabajo en Tableau Public, el proceso de publicación crea un extracto de la conexión de datos.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagen3} 
+
+}
+
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Una vez publicado el libro de trabajo, se le redirige a su cuenta en el sitio web de Tableau Public.(El enlace se abre en una nueva ventana).
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{4}
+  \tightlist
+  \item
+    Una vez en el sitio web de la visualización haga clic en el botón con el icono de compartir y copie el enlace para agregarlo en el sitio web o donde desee publicar el trabajo.
+  \end{enumerate}
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imagen4} 
+
+}
+
+\end{figure}
 
 \hypertarget{powerbi}{%
 \chapter{Power BI}\label{powerbi}}
