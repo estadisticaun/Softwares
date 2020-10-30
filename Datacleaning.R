@@ -12,7 +12,10 @@ for(archivo in list.files()) {
 }
 
 #ELIMINAR COLUMNAS INNECESARIAS
-Graduados <- Graduados[,-c(1, 2, 8, 10, 14, 16, 19, 20, 33, 35, 45, 49)]
+nombre <- c("ID","TID", "COD_DEP_NAC", "COD_CIU_NAC", "COD_DEP_PROC", 
+            "COD_CIU_PROC", "CODS_NAC", "CODN_NAC", "SNIES_SEDE_ADM", 
+            "SNIES_SEDE_MAT", "SNIESU_CONVENIO")
+Graduados <- Graduados[, !(names(Graduados) %in% nombre)]
 
 #INICIALES CON MAYUSCULA 
 Graduados$DEP_NAC <- capitalize(tolower(Graduados$DEP_NAC))
@@ -32,7 +35,10 @@ for (columna in colnames(Graduados)) {
 }
 
 #ELIMINAR COLUMNAS QUE ESTAN COMPLETAMENTE VACIAS
-Graduados <- Graduados[,-c(9:12, 19:24, 32)]
+nombre <- c("DEP_PROC", "CIU_PROC", "LON_CIU_PROC", "LAT_CIU_PROC", "TIPO_COL",
+            "PBM_ORIG", "PBM", "MAT_PVEZ", "DISCAPACIDAD", "TIPO_DISC", 
+            "MOV_PEAMA")
+Graduados <- Graduados[,!(names(Graduados) %in% nombre)]
 
 #IDENTIFICACIÓN DE CATEGORIAS
 nacionalidad <- Graduados %>% group_by(NACIONALIDAD) %>% count()

@@ -7,3 +7,10 @@ flourish
 example-one
 example-two
 conclu
+generalidades
+qué-es-tableau
+principales-ventajas-de-tableau
+principales-desventajas-de-tableau
+productos-de-tableau
+precios-de-tableau
+compartir-el-trabajo-realizado-en-tableau

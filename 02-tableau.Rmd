@@ -1,10 +1,14 @@
 # Tableau {#tableau}
 
+## Generalidades
+
+### ¿Qué es Tableau?
+
 Tableau es una plataforma de análisis visual que transforma la forma en que usamos los datos para resolver problemas, lo que permite a las personas y organizaciones aprovechar al máximo sus datos.  Esta plataforma hace que sea más fácil para las personas explorar y administrar datos, y más rápido para descubrir y compartir información que puede cambiar las empresas y el mundo, todo lo creado por esta plataforma esta impulsado por ayudar a las personas a ver y comprender los datos, porque sus productos están diseñados para poner al usuario en primer lugar, ya sea un analista, un científico de datos, un estudiante, un profesor, un ejecutivo o un usuario empresarial. Desde la conexión hasta la colaboración, Tableau es la plataforma de análisis de un extremo a otro más potente, seguro y flexible. 
 
 Tableau se fundo en 2003 como resultado de un proyecto de informática en Stanford que tenia como objetivo mejorar el flujo de análisis y hacer que los datos fueran más accesibles para las personas a través de la visualización. Los cofundadores Chris Stolte, Pat Hanrahan y Christian Chabot desarrollaron y patentaron la tecnología fundamental de Tableau, VizQL, que expresa visualmente los datos al traducir las acciones de arrastrar y soltar en consultas de datos a través de una interfaz intuitiva. Desde su fundación han invertido continuamente en investigación y desarrollo, creando así soluciones para ayudar a cualquier persona que trabaje con datos a obtener respuestas más rápido y descubrir información no anticipada, este desarrollo e investigación incluye hacer que el aprendizaje automático, las estadísticas, el lenguaje natural y la preparación inteligente de datos sean más útiles para aumentar la creatividad humana en el análisis. 
 
-**Principales ventajas de Tableau:**
+### Principales ventajas de Tableau
 
 -	Puedes ver y entender tus datos
 
@@ -43,9 +47,9 @@ Eso no quita que, si lo deseas, puedas integrar y utilizar Tableau con herramien
 
 - Tiene una comunidad enorme:
 
-En Internet es posible encontrar multitud de usuarios que comparten su trabajo y aprender de ellos, ver y compartir visualizaciones en las galerías de Tableau Public, formarte en la plataforma gratuita de Tableau Training, resolver dudas en Tableau Community, conocer a otros usuarios en los Tableau User Group.
+En Internet es posible encontrar multitud de usuarios que comparten su trabajo y aprender de ellos, ver y compartir visualizaciones en las galerías de [Tableau Public](https://public.tableau.com/en-us/s/), formarte en la plataforma gratuita de [Tableau Training](https://www.tableau.com/learn/training/20203), resolver dudas en [Tableau Community](https://community.tableau.com/s/), conocer a otros usuarios en los [Tableau User Group](https://usergroups.tableau.com/).
 
-**Principales desventajas de Tableau:**
+### Principales desventajas de Tableau
 
 - Se requiere preparación de datos inicial.
 - Las características pueden parecer demasiado especializadas y restrictivas, ya que Tableau esta diseñado para un uso más amplio. 
@@ -54,34 +58,34 @@ En Internet es posible encontrar multitud de usuarios que comparten su trabajo y
 - Tableau se ha especializado en el factor de facilidad de uso. Sin embargo, a medida que los usuarios van obteniendo habilidades y experiencia desean hacer más, y Tableau posee una capacidad limitada de ampliación que no siempre les permite ir a donde desean.
 - Los usuarios especializados en herramientas de Inteligencia Empresarial suelen considerar mejor contar con una arquitectura abierta. 
 
-**Productos de Tableau:**
+### Productos de Tableau
 
--	Tableau Public: es una plataforma gratuita en línea para explorar visualizaciones de datos y compartir con el público general.
+-	[Tableau Public](https://public.tableau.com/en-us/s/): es una plataforma gratuita en línea para explorar visualizaciones de datos y compartir con el público general.
     * Las visualizaciones publicadas en Tableau Public están disponibles para consultarlas en línea, es una plataforma de datos públicos. 
     * No es posible guardar visualizaciones localmente.
     * Solo es posible la Conexión a archivos CSV, Excel, y archivos de texto.
     * No es posible cargar más de 15 millones de filas. 
     * No permite conexión en tiempo real con los datos, solo es posible la conexión por medio de extracción. 
-    * Recursos de aprendizaje guiados. 
-    * Desafíos virtuales.
-    * Datos de muestra.
+    * [Recursos de aprendizaje guiados](https://public.tableau.com/es-es/s/resources). 
+    * [Desafíos virtuales](https://public.tableau.com/es-es/s/resources).
+    * [Datos de muestra](https://public.tableau.com/es-es/s/resources).
 
--	Tableau Desktop: es la versión profesional, de escritorio y paga de Tableau.
+-	[Tableau Desktop](https://www.tableau.com/products/desktop): es la versión profesional, de escritorio y paga de Tableau.
     * Las visualizaciones se pueden guardar localmente en nuestro computador. 
     * Cantidad ilimitada de datos.
     * Conexión a todas las fuentes de datos, tanto locales como en la nube.
 
-- Tableau Prep: proporciona una forma visual y directa de combinar, dar forma y limpiar datos, así como automatizar los flujos de preparación de datos, lo que le ayuda a obtener análisis y conocimientos más rápidamente, se compone de dos productos:
+- [Tableau Prep](https://www.tableau.com/trial/tableau-prep?utm_campaign_id=2017049&utm_campaign=Prospecting-CORE-ALL-ALL-ALL-ALL&utm_medium=Paid+Search&utm_source=Google+Search&utm_language=EN&utm_country=RoLAC&kw=%2Btableau%20%2Bprep&adgroup=CTX-Brand-Tableau+Prep-EN-B&adused=335523927259&matchtype=b&placement=&gclid=CjwKCAjw0On8BRAgEiwAincsHMNUqIicWtve96Be3NVOstpKxXYHS87VxJn-dxW5W3dLcqPzrbZDjRoClTkQAvD_BwE&gclsrc=aw.ds): proporciona una forma visual y directa de combinar, dar forma y limpiar datos, así como automatizar los flujos de preparación de datos, lo que le ayuda a obtener análisis y conocimientos más rápidamente, se compone de dos productos:
     * Tableau Prep Builder para crear sus flujos de datos. Si desea editar un valor, seleccione y edite directamente. Cambie su tipo de unión y vea el resultado de inmediato. Con cada acción, ve instantáneamente cambiar sus datos, incluso en millones de filas de datos. Tableau Prep Builder le brinda la libertad de reordenar los pasos y experimentar sin consecuencias. Utilice funciones inteligentes para solucionar problemas comunes de preparación de datos. Tableau Prep Builder emplea agrupaciones difusas para convertir tareas repetitivas, como agrupar por pronunciación, en operaciones de un solo clic.
     * Tablear Prep Conductor permite publicar y ejecutar flujos fácilmente en su entorno de servidor. Comparta sus fuentes de datos de forma segura con Tableau Server o Tableau Online. Cree un entorno en el que todos los miembros de su organización puedan trabajar con datos preparados y actualizados.
 
-- Tableau Server: servidor que permite colaborar de forma segura y compartir la información a partir de los datos que ya hayamos subido a través de Tableau Desktop.
+- [Tableau Server](https://www.tableau.com/trial/tableau-server?utm_campaign_id=2017049&utm_campaign=Prospecting-PROD-ALL-ALL-ALL-ALL&utm_medium=Paid+Search&utm_source=Google+Search&utm_language=EN&utm_country=RoLAC&kw=tableau%20server&adgroup=CTX-Brand-Tableau+Server-EN-E&adused=335523921559&matchtype=e&placement=&gclid=CjwKCAjw0On8BRAgEiwAincsHCZqPLQEPe2h4IAzln5xZCifMpCslooGEQsI1lydcdCjsnXsw-JCSxoCdqgQAvD_BwE&gclsrc=aw.ds): servidor que permite colaborar de forma segura y compartir la información a partir de los datos que ya hayamos subido a través de Tableau Desktop.
 
-- Tableau Online: se trata de una versión de Tableau Server alojada en la nube que permite acceder a los datos sin necesidad de hacer instalaciones. 
+- [Tableau Online](https://www.tableau.com/trial/tableau-online?utm_campaign_id=2017049&utm_campaign=Prospecting-PROD-ALL-ALL-ALL-ALL&utm_medium=Paid+Search&utm_source=Google+Search&utm_language=EN&utm_country=RoLAC&kw=tableau%20online&adgroup=CTX-Brand-Tableau+Online-EN-E&adused=335550600371&matchtype=e&placement=&gclid=CjwKCAjw0On8BRAgEiwAincsHKCBtZUhZ2zpL8R-ozsGupggrrqr_lCJBaOS-znSXDBANWonewDlDBoCBKEQAvD_BwE&gclsrc=aw.ds): se trata de una versión de Tableau Server alojada en la nube que permite acceder a los datos sin necesidad de hacer instalaciones. 
 
-- Tableau Mobile: se trata de una aplicación complementaria gratuita para Tableau Server o Tableau Online que permite un acceso a los datos y la información guardada en nuestra cuenta.
+- [Tableau Mobile](https://www.tableau.com/products/mobile): se trata de una aplicación complementaria gratuita para Tableau Server o Tableau Online que permite un acceso a los datos y la información guardada en nuestra cuenta.
 
-**Precios de Tableau:**
+### Precios de Tableau 
 
 - Para individuos existe “Creador de Tableau”, tiene un costo de $70 USD por usuario mensual. Incluye Tableau Desktop, Tableau Prep Builder y una licencia de Creator en Tableau Server o Tableau Online.
 
@@ -96,7 +100,9 @@ En Internet es posible encontrar multitud de usuarios que comparten su trabajo y
         * Explorador de Tableau, permite explorar datos confiables y responder sus propias preguntas más rápido con análisis completos de autoservicio, tiene un costo de $42 USD por usurario mensual y se requieren mínimo 5 exploradores. Incluye una licencia de Explorer de Tableau Online. 
         * Visor de Tableau, permite ver e interactuar con paneles y visualizaciones en una plataforma segura y fácil de usar, posee un costo de $15 USD por usuario mensual y se requieren mínimo 100 espectadores. Incluye una licencia de Viewer de Tableau Online.
 
-**Compartir el trabajo realizado en Tableau**
+Para mayor información acerca de los precios puede visitar [Tableau Pricing](https://www.tableau.com/pricing/individual).
+
+### Compartir el trabajo realizado en Tableau
 
 Cuando se usa Tableau Desktop, hay varias formas de guardar y compartir el trabajo realizado:
 
@@ -224,21 +230,23 @@ Si desea compartir sus descubrimientos de datos con el mundo fuera de su organiz
    1. Con su libro de trabajo abierto en Tableau Desktop Public Edition, seleccione Archivo > Guardar en Tableau Public como...
    
 ```{r echo=F, fig.cap='', out.width='40%', fig.asp=.9, fig.align='center'}
-knitr::include_graphics("imagen1.png")
+knitr::include_graphics("Imágenes/imagen1.png")
 ```
 
    2. Inicie sesión con su cuenta de Tableau Public. Si no tiene una cuenta, seleccione el enlace para crear una nueva.
 ```{r echo=FALSE, fig.align='center', out.width = '40%',fig.cap=''}
-knitr::include_graphics("imagen5.JPG")
+knitr::include_graphics("Imágenes/imagen5.JPG")
 ```  
    3. Escriba un nombre para el libro y haga clic en Guardar. Cuando guarda un libro de trabajo en Tableau Public, el proceso de publicación crea un extracto de la conexión de datos.
    
 ```{r echo=FALSE, fig.align='center', out.width = '50%',fig.cap=''}
-knitr::include_graphics("Imagen3.png")
+knitr::include_graphics("Imágenes/Imagen3.png")
 ```
    4. Una vez publicado el libro de trabajo, se le redirige a su cuenta en el sitio web de Tableau Public.(El enlace se abre en una nueva ventana).
    5. Una vez en el sitio web de la visualización haga clic en el botón con el icono de compartir y copie el enlace para agregarlo en el sitio web o donde desee publicar el trabajo. 
    
 ```{r echo=FALSE, fig.align='center', out.width = '50%', fig.cap=''}
-knitr::include_graphics("Imagen4.png")
+knitr::include_graphics("Imágenes/Imagen4.png")
 ```
+
+Para obtener más información acerca de los pasos de publicación del trabajo puede visitar [Ayuda de Tableau](https://help.tableau.com/current/pro/desktop/en-us/save_savework.htm).
