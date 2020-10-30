@@ -223,9 +223,19 @@ Al crear, editar e interactuar con vistas en Tableau Server o Tableau Online, ex
     
 3. Guardar cambios como una vista personalizada: una vista personalizada no cambia la original, pero está relacionada con ella. Si la vista original se actualiza o se vuelve a publicar, la vista personalizada también se actualiza. También puede elegir si sus vistas personalizadas son visibles para otros usuarios (públicas) o solo para usted (privadas).
 
-Cuando se usa Tableau Public solo se tiene la opción de guardar el libro de trabajo en el repositorio público.
+Cuando se usa Tableau Public solo se tiene la opción de guardar el libro de trabajo en el repositorio público. El proceso de la versión de escritorio de Tableau Public se realiza mediante los siguientes pasos:
 
-Si desea compartir sus descubrimientos de datos con el mundo fuera de su organización, puede guardar su libro de trabajo en Tableau Public, un servicio gratuito en la nube. En Tableau Public, cualquiera puede interactuar con sus vistas o descargar sus libros de trabajo o fuentes de datos. Para guaradar un libro de trabajo:
+   1. Dirigirse a la página principal de [Tableau Public](https://public.tableau.com/en-us/s/), ingrese un correo electrónico con el cual quiere vincular su descarga y cuenta de Tableau Public, luego clic en "DOWNLOAD THE APP", inmediantamente se inicia la descarga.
+   
+```{r echo=F, fig.cap='', out.width='40%', fig.asp=.9, fig.align='center'}
+knitr::include_graphics("Imágenes/descargapublic.JPG")
+```
+   2. Una vez se complete la descarga abra el archivo, lea los términos de licencia, selecciones "He leído y acepto los términos de acuerdo de licencia" y finalmente clic en "Instalar".
+
+```{r echo=F, fig.cap='', out.width='40%', fig.asp=.9, fig.align='center'}
+knitr::include_graphics("Imágenes/descarga2.JPG")
+```
+   3. Cuando términe el proceso de instalación se creará un acceso directo en el escirtorio a la aplicación, una vez creadas las visualizaciones puede continuar con el proceso de publicación del trabajo, para el cual debe seguir estos pasos:
 
    1. Con su libro de trabajo abierto en Tableau Desktop Public Edition, seleccione Archivo > Guardar en Tableau Public como...
    
