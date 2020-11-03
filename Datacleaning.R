@@ -325,5 +325,5 @@ Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Vias(\\sY\\s)?(T|t)ransportes?", 
                                       "Vias Y Transportes")
-
-programa <- Graduados %>% group_by(PROGRAMA) %>% count()
+Graduados$YEAR_SEMESTER <- str_c(Graduados$YEAR, Graduados$SEMESTRE,
+                                 sep = " - ")
