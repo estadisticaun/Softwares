@@ -327,3 +327,4 @@ Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Vias Y Transportes")
 Graduados$YEAR_SEMESTER <- str_c(Graduados$YEAR, Graduados$SEMESTRE,
                                  sep = " - ")
+write.csv(Graduados, file = "Datos.csv", row.names = F)

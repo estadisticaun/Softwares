@@ -180,6 +180,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">2.3</span> Flujo de trabajo</h2>
 <div id="conexión-a-fuentes-de-datos" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Conexión a fuentes de datos</h3>
+<p>Antes de poder crear y analizar los datos debe conectar Tableau a estos, en este caso la conexión se hará a través de un archivo de Excel, inicialmente se hará la conexión a las bases de datos de estudiantes graduados a nivel de micro datos para mostrar las funcionalidades de unión que tiene Tableau, para hacer estas conexiones debe seguir estos pasos:</p>
+<ol style="list-style-type: decimal">
+<li><p>Abrir Tableau desde el acceso directo creado en su escritorio al momento de la instalación, la pantalla que se debe ver es la mostrada en la figura <a href="2-2-formadenavegacion.html#fig:paginaprincipal-fig">2.7</a>.</p></li>
+<li><p>Hacer clic en el botón “Microsoft Excel” si su archivo posee este formato, al hacer clic en este botón se abre una ventana que permite navegar a través de las carpetas de su equipo para ubicar la localización de las bases de datos. Debe seleccionar una de las bases y dar clic en el botón “Abrir”.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:carpetas-fig"></span>
+<img src="Imágenes/conexiondatos1.jpg" alt="Navegación entre carpetas" width="60%" />
+<p class="caption">
+Figura 2.12: Navegación entre carpetas
+</p>
+</div>
+<p>Con esta conexión a la fuente de datos se obtiene la siguiente pantalla</p>
+<div class="figure" style="text-align: center"><span id="fig:pantallaconexiondatos-fig"></span>
+<img src="Imágenes/conexiondatos2.jpg" alt="Vista previa de la conexión" width="80%" />
+<p class="caption">
+Figura 2.13: Vista previa de la conexión
+</p>
+</div>
+<p>En el panel lateral izquierdo encontrara el nombre del archivo al que se conecto en este caso “P2009 Graduados”, debajo de esto se ubican las hojas que componen el archivo para esta base solo se tiene una hoja llamada “P2009G”, luego se encuentra un botón llamado “Nueva unión”. La parte central de la conexión a datos es el lienzo en blanco dispuesto en la parte superior allí se deben arrastrar las hojas a las que se quiere conectar, en la parte inferior se encuentra una vista previa de la base de datos, los campos marcados con “#” indica que son medidas, “Abc” indica que el campo es una dimensión y finalmente las variables relacionadas con ubicaciones geográficas como latitud y longitud tiene como icono un globo terráqueo, haciendo clic sobre estos iconos se puede editar el tipo de dato, por ejemplo la variable Snies Sede Mat Tableau la tomo como una medida cuando en realidad esta variable hace referencia a la categorización establecida para las sedes de la universidad, la podemos editar dando clic en el icono “#” y en el menú desplegable seleccionar Cadena.</p>
+<div class="figure" style="text-align: center"><span id="fig:cambiartipocampo-fig"></span>
+<img src="Imágenes/conexiondatos3.jpg" alt="Cambiar el tipo de un campo" width="20%" />
+<p class="caption">
+Figura 2.14: Cambiar el tipo de un campo
+</p>
+</div>
+<p>En la esquina superior derecha del lienzo, se observa una etiqueta llamada Filtros y un botón añadir, al hacer clic en este botón se abre un cuadro de diálogo que permite añadir, editar o eliminar filtros, a modo de ejemplo se creara un filtro que seleccione únicamente las filas en las que el campo Sede Nombre Adm sea Medellín,</p>
+<ul>
+<li><p>Clic en el botón añadir ubicado en la parte superior derecha del lienzo.</p></li>
+<li><p>En el cuadro de dialogo hacer clic en “Añadir”.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:crearfiltro-fig"></span>
+<img src="Imágenes/conexiondatos4.jpg" alt="Crear un filtro" width="60%" />
+<p class="caption">
+Figura 2.15: Crear un filtro
+</p>
+</div>
+<ul>
+<li>Terminado el paso anterior se abre una nueva ventana que contiene el nombre de todas las columnas de la base de datos, aquí se debe seleccionar la columna por la que se quiere filtrar, en este caso Sede Nombre Adm y dar clic en aceptar.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:nombrecamposfiltro-fig"></span>
+<img src="Imágenes/conexiondatos5.jpg" alt="Nombre de los campos" width="50%" />
+<p class="caption">
+Figura 2.16: Nombre de los campos
+</p>
+</div>
+<ul>
+<li>Con esto se abre una nueva pestaña que contiene los valores de la columna seleccionada para filtrar, para el ejemplo se selección Medellín y finalmente Aceptar.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:valoresdelcampo-fig"></span>
+<img src="Imágenes/conexiondatos6.jpg" alt="Valores de la columna seleccionada" width="60%" />
+<p class="caption">
+Figura 2.17: Valores de la columna seleccionada
+</p>
+</div>
+<p>Ahora la vista previa de la base se modificó, solo contiene las observaciones en las cuales se cumple el filtro aplicado, es decir donde Sede Nombre Adm sea Medellín.</p>
+<p>Este mismo tipo de filtros se puede aplicar a medidas, definiendo un intervalo para los valores o seleccionando un valor mínimo o máximo o un calculo especial.</p>
 </div>
 <div id="analisisdedatos" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> Análisis de datos</h3>
