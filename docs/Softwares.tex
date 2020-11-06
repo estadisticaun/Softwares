@@ -843,6 +843,99 @@ En la parte inferior del área de trabajo se ubican 5 compartimientos, el primer
 \hypertarget{conexiuxf3n-a-fuentes-de-datos}{%
 \subsection{Conexión a fuentes de datos}\label{conexiuxf3n-a-fuentes-de-datos}}
 
+Antes de poder crear y analizar los datos debe conectar Tableau a estos, en este caso la conexión se hará a través de un archivo de Excel, inicialmente se hará la conexión a las bases de datos de estudiantes graduados a nivel de micro datos para mostrar las funcionalidades de unión que tiene Tableau, para hacer estas conexiones debe seguir estos pasos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Abrir Tableau desde el acceso directo creado en su escritorio al momento de la instalación, la pantalla que se debe ver es la mostrada en la figura \ref{fig:paginaprincipal-fig}.
+\item
+  Hacer clic en el botón ``Microsoft Excel'' si su archivo posee este formato, al hacer clic en este botón se abre una ventana que permite navegar a través de las carpetas de su equipo para ubicar la localización de las bases de datos. Debe seleccionar una de las bases y dar clic en el botón ``Abrir''.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/conexiondatos1} 
+
+}
+
+\caption{Navegación entre carpetas}\label{fig:carpetas-fig}
+\end{figure}
+
+Con esta conexión a la fuente de datos se obtiene la siguiente pantalla
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/conexiondatos2} 
+
+}
+
+\caption{Vista previa de la conexión}\label{fig:pantallaconexiondatos-fig}
+\end{figure}
+
+En el panel lateral izquierdo encontrara el nombre del archivo al que se conecto en este caso ``P2009 Graduados'', debajo de esto se ubican las hojas que componen el archivo para esta base solo se tiene una hoja llamada ``P2009G'', luego se encuentra un botón llamado ``Nueva unión''. La parte central de la conexión a datos es el lienzo en blanco dispuesto en la parte superior allí se deben arrastrar las hojas a las que se quiere conectar, en la parte inferior se encuentra una vista previa de la base de datos, los campos marcados con ``\#'' indica que son medidas, ``Abc'' indica que el campo es una dimensión y finalmente las variables relacionadas con ubicaciones geográficas como latitud y longitud tiene como icono un globo terráqueo, haciendo clic sobre estos iconos se puede editar el tipo de dato, por ejemplo la variable Snies Sede Mat Tableau la tomo como una medida cuando en realidad esta variable hace referencia a la categorización establecida para las sedes de la universidad, la podemos editar dando clic en el icono ``\#'' y en el menú desplegable seleccionar Cadena.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/conexiondatos3} 
+
+}
+
+\caption{Cambiar el tipo de un campo}\label{fig:cambiartipocampo-fig}
+\end{figure}
+
+En la esquina superior derecha del lienzo, se observa una etiqueta llamada Filtros y un botón añadir, al hacer clic en este botón se abre un cuadro de diálogo que permite añadir, editar o eliminar filtros, a modo de ejemplo se creara un filtro que seleccione únicamente las filas en las que el campo Sede Nombre Adm sea Medellín,
+
+\begin{itemize}
+\item
+  Clic en el botón añadir ubicado en la parte superior derecha del lienzo.
+\item
+  En el cuadro de dialogo hacer clic en ``Añadir''.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/conexiondatos4} 
+
+}
+
+\caption{Crear un filtro}\label{fig:crearfiltro-fig}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Terminado el paso anterior se abre una nueva ventana que contiene el nombre de todas las columnas de la base de datos, aquí se debe seleccionar la columna por la que se quiere filtrar, en este caso Sede Nombre Adm y dar clic en aceptar.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imágenes/conexiondatos5} 
+
+}
+
+\caption{Nombre de los campos}\label{fig:nombrecamposfiltro-fig}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Con esto se abre una nueva pestaña que contiene los valores de la columna seleccionada para filtrar, para el ejemplo se selección Medellín y finalmente Aceptar.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/conexiondatos6} 
+
+}
+
+\caption{Valores de la columna seleccionada}\label{fig:valoresdelcampo-fig}
+\end{figure}
+
+Ahora la vista previa de la base se modificó, solo contiene las observaciones en las cuales se cumple el filtro aplicado, es decir donde Sede Nombre Adm sea Medellín.
+
+Este mismo tipo de filtros se puede aplicar a medidas, definiendo un intervalo para los valores o seleccionando un valor mínimo o máximo o un calculo especial.
+
 \hypertarget{analisisdedatos}{%
 \subsection{Análisis de datos}\label{analisisdedatos}}
 

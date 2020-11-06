@@ -11,6 +11,12 @@ fig:ventanacreacion-fig
 fig:analisis-fig
 fig:marcas-fig
 fig:mostrarme-fig
+fig:carpetas-fig
+fig:pantallaconexiondatos-fig
+fig:cambiartipocampo-fig
+fig:crearfiltro-fig
+fig:nombrecamposfiltro-fig
+fig:valoresdelcampo-fig
 intro
 tableau
 generalidades
@@ -30,9 +36,7 @@ flourish
 example-one
 example-two
 conclu
-fig:carpetas-fig
-fig:pantallaconexiondatos-fig
-fig:cambiartipocampo-fig
-fig:crearfiltro-fig
-fig:nombrecamposfiltro-fig
-fig:valoresdelcampo-fig
+fig:hojas-fig
+fig:unionarrastrar-fig
+fig:unionnueva-fig
+fig:nuevascolumnas-fig
