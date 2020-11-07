@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-06" />
+<meta name="date" content="2020-11-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -277,6 +277,92 @@ Figura 2.20: Unión: Método Nueva unión
 Figura 2.21: Columnas Nuevas
 </p>
 </div>
+<p>Siguiendo con un análisis detallado de lo mostrado por Tableau en la vista previa del conjunto de datos, se observan columnas problemáticas, la variable Ciu_Nac presenta una combinación de números y texto como se muestra en la figura <a href="2-3-flujo-de-trabajo.html#fig:columaciunac-fig">2.22</a>, existe una función llamada división personalizada que se puede ver al hacer clic en el menú desplegable de la columna, dicha función necesita un separador para hacer la división pero en este caso no es posible usarla ya que no existe separador alguno entre el numero y el texto, esto en un problema que no puede solucionarse desde Tableau.</p>
+<div class="figure" style="text-align: center"><span id="fig:columaciunac-fig"></span>
+<img src="Imágenes/conexiondatos11.jpg" alt="Problema columna Ciu_Nac" width="80%" />
+<p class="caption">
+Figura 2.22: Problema columna Ciu_Nac
+</p>
+</div>
+<p>En este mismo menú desplegable se encuentra una opción llamada Describir, al dar clic en esta opción Tableau abre una ventana que muestra una descripción corta de la base de datos, algo similar a la función summary() de R. En la figura <a href="2-3-flujo-de-trabajo.html#fig:descripcion-fig">2.23</a> se muestra la descripción de la variable Dep_Nac, esta permite visualizar el tipo de campo en este caso es dicreto, contiene valores faltantes y en la parte inferior muestra una lista de los miembros más dominantes en este caso 20 de los 31 miembros totales.</p>
+<div class="figure" style="text-align: center"><span id="fig:descripcion-fig"></span>
+<img src="Imágenes/conexiondatos12.jpg" alt="Descripción columna Dep_Nac" width="80%" />
+<p class="caption">
+Figura 2.23: Descripción columna Dep_Nac
+</p>
+</div>
+<p>Hacia las ultimas columnas de la base de datos nos encontramos con un campo llamado Programa_S, esta compuesto por el nombre del programa y la sede a la que pertenece estos dos atributos se encuentran separados por un guion, en este caso particular si es posible usar la función División, ya que el campo posee un separador.</p>
+<p>Hacer clic en el menú desplegable de la columna de interés y seleccionar División.</p>
+<div class="figure" style="text-align: center"><span id="fig:división-fig"></span>
+<img src="Imágenes/conexiondatos13.jpg" alt="División de columnas" width="50%" />
+<p class="caption">
+Figura 2.24: División de columnas
+</p>
+</div>
+<p>Con esto se obtiene una nueva columna llamada Programa_S División 1 que contiene el nombre del programa, es decir que elimino todo lo que se encontraba a la derecha del guion (sede), como se puede observar en la descripción de esta nueva variable.</p>
+<div class="figure" style="text-align: center"><span id="fig:divisióndescripcion-fig"></span>
+<img src="Imágenes/conexiondatos14.jpg" alt="Descripción de división" width="80%" />
+<p class="caption">
+Figura 2.25: Descripción de división
+</p>
+</div>
+<p>En el caso en que se quiera obtener ambas columnas, es decir una columna que contenga el programa y otra que contenga la sede es necesario usar División Personalizada, que también se encuentra en el menú desplegable de la columna.</p>
+<ol style="list-style-type: decimal">
+<li>Hacer clic en el menú desplegable de la columna y seleccionar división personalizada.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:divisiónpersonalizada-fig"></span>
+<img src="Imágenes/conexiondatos15.jpg" alt="División personalizada" width="50%" />
+<p class="caption">
+Figura 2.26: División personalizada
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>En el campo Usar separador escribir – que es el separador de la columna de interés, en el campo División Desactivada se debe seleccionar Todas, para poder obtener las columnas de programa y Sede.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:divisiónpersonalizadapasos-fig"></span>
+<img src="Imágenes/conexiondatos16.jpg" alt="Ventana de división personalizada" width="50%" />
+<p class="caption">
+Figura 2.27: Ventana de división personalizada
+</p>
+</div>
+<p>Finalmente se obtiene tres columnas una que contiene el programa, otra la sede y una que aparentemente posee los espacios.</p>
+<div class="figure" style="text-align: center"><span id="fig:camposdivididospersonalizado-fig"></span>
+<img src="Imágenes/conexiondatos17.jpg" alt="Campos divididos" width="60%" />
+<p class="caption">
+Figura 2.28: Campos divididos
+</p>
+</div>
+<p>En este caso se considera correcto eliminar la columna División 3 ya que la información relevante de la columna original se encuentra almacenada en los campos llamados División 1 y 2.</p>
+<p>Una funcionalidad importante que también que se ubica en el menú desplegable de las columnas de tipo numérico como Edad_Mod es Crear grupos que permite agrupar las edades de los graduados en categorías, algo similar a los que se tiene en la columna Cat_Edad.</p>
+<ol style="list-style-type: decimal">
+<li>Hacer clic en el menú desplegable de la columna Edad_Mod y seleccionar Crear grupos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:creargrupos-fig"></span>
+<img src="Imágenes/conexiondatos18.jpg" alt="Crear grupos" width="40%" />
+<p class="caption">
+Figura 2.29: Crear grupos
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>El primer grupo estará conformado por las edades de 23 o menos años, para esto con ctrl sostenido y clic seleccionamos las edades que cumplen esta condición, luego clic en Grupo y se edita el nombre del grupo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:crearprimergrupo-fig"></span>
+<img src="Imágenes/conexiondatos19.jpg" alt="Creación de grupos de edad" width="50%" />
+<p class="caption">
+Figura 2.30: Creación de grupos de edad
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Repita el paso anterior hasta crear las categorías de edad que considere pertinentes y luego de clic en Aceptar, con esto se obtiene una columna llamada Edad_Mod (grupo), que asigna a cada observación el grupo que pertenece.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:gruposedad-fig"></span>
+<img src="Imágenes/conexiondatos20.jpg" alt="Agrupamiento de la columna Edad_Mod" width="30%" />
+<p class="caption">
+Figura 2.31: Agrupamiento de la columna Edad_Mod
+</p>
+</div>
+<p>Para el campo Estrato_Orig también es posible crear grupos para obtener la categorización mostrada en el campo Estrato.</p>
+<p>Tableau no permite hacer una limpieza y preparación de los datos, por tal razón la limpieza del conjunto de datos se realizo en R, se eliminaron columnas innecesarias, esto se podía hacer desde Tableau con la opción de ocultar columnas en la vista previa del archivo de datos, pero se decidió hacer en R ya que era necesario analizar la cantidad de valores faltantes por columnas y en base a esto se eliminaron; también se corrigieron espacios, mayúsculas, números y ortografía de algunas columnas de cadenas de caracteres ya que tenían varios valores que en realidad eran iguales pero por tildes, espacios o mayúsculas se contaban como diferentes. Se realizo una unión de todas las bases ya que se tenían a nivel de microdatos, el archivo a conectar con Tableau es llamado “Datos.xlsx”.</p>
 </div>
 <div id="analisisdedatos" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> Análisis de datos</h3>

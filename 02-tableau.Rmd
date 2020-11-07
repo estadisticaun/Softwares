@@ -385,6 +385,70 @@ Tableau crea dos columnas adicionales a las que contiene a la base que ayuda a l
 ```{r nuevascolumnas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Columnas Nuevas', out.width='80%'}
 knitr::include_graphics("Imágenes/conexiondatos10.jpg")
 ```
+Siguiendo con un análisis detallado de lo mostrado por Tableau en la vista previa del conjunto de datos, se observan columnas problemáticas, la variable Ciu_Nac presenta una combinación de números y texto como se muestra en la figura \@ref(fig:columaciunac-fig), existe una función llamada división personalizada que se puede ver al hacer clic en el menú desplegable de la columna, dicha función necesita un separador para hacer la división pero en este caso no es posible usarla ya que no existe separador alguno entre el numero y el texto, esto en un problema que no puede solucionarse desde Tableau. 
+
+```{r columaciunac-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Problema columna Ciu_Nac', out.width='80%'}
+knitr::include_graphics("Imágenes/conexiondatos11.jpg")
+```
+
+En este mismo menú desplegable se encuentra una opción llamada Describir, al dar clic en esta opción Tableau abre una ventana que muestra una descripción corta de la base de datos, algo similar a la función summary() de R. En la figura \@ref(fig:descripcion-fig) se muestra la descripción de la variable Dep_Nac, esta permite visualizar el tipo de campo en este caso es dicreto, contiene valores faltantes y en la parte inferior muestra una lista de los miembros más dominantes en este caso 20 de los 31 miembros totales. 
+
+```{r descripcion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción columna Dep_Nac', out.width='80%'}
+knitr::include_graphics("Imágenes/conexiondatos12.jpg")
+```
+Hacia las ultimas columnas de la base de datos nos encontramos con un campo llamado Programa_S, esta compuesto por el nombre del programa y la sede a la que pertenece estos dos atributos se encuentran separados por un guion, en este caso particular si es posible usar la función División, ya que el campo posee un separador.
+
+Hacer clic en el menú desplegable de la columna de interés y seleccionar División. 
+
+```{r división-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='División de columnas', out.width='50%'}
+knitr::include_graphics("Imágenes/conexiondatos13.jpg")
+```
+
+Con esto se obtiene una nueva columna llamada Programa_S División 1 que contiene el nombre del programa, es decir que elimino todo lo que se encontraba a la derecha del guion (sede), como se puede observar en la descripción de esta nueva variable. 
+
+```{r divisióndescripcion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción de división', out.width='80%'}
+knitr::include_graphics("Imágenes/conexiondatos14.jpg")
+```
+En el caso en que se quiera obtener ambas columnas, es decir una columna que contenga el programa y otra que contenga la sede es necesario usar División Personalizada, que también se encuentra en el menú desplegable de la columna. 
+
+1.	Hacer clic en el menú desplegable de la columna y seleccionar división personalizada. 
+
+```{r divisiónpersonalizada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='División personalizada', out.width='50%'}
+knitr::include_graphics("Imágenes/conexiondatos15.jpg")
+```
+
+2.	En el campo Usar separador escribir – que es el separador de la columna de interés, en el campo División Desactivada se debe seleccionar Todas, para poder obtener las columnas de programa y Sede.
+
+```{r divisiónpersonalizadapasos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ventana de división personalizada', out.width='50%'}
+knitr::include_graphics("Imágenes/conexiondatos16.jpg")
+```
+Finalmente se obtiene tres columnas una que contiene el programa, otra la sede y una que aparentemente posee los espacios.
+
+```{r camposdivididospersonalizado-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Campos divididos', out.width='60%'}
+knitr::include_graphics("Imágenes/conexiondatos17.jpg")
+```
+En este caso se considera correcto eliminar la columna División 3 ya que la información relevante de la columna original se encuentra almacenada en los campos llamados División 1 y 2. 
+
+Una funcionalidad importante que también que se ubica en el menú desplegable de las columnas de tipo numérico como Edad_Mod es Crear grupos que permite agrupar las edades de los graduados en categorías, algo similar a los que se tiene en la columna Cat_Edad. 
+
+1.	Hacer clic en el menú desplegable de la columna Edad_Mod y seleccionar Crear grupos.
+
+```{r creargrupos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear grupos', out.width='40%'}
+knitr::include_graphics("Imágenes/conexiondatos18.jpg")
+```
+2.	El primer grupo estará conformado por las edades de 23 o menos años, para esto con ctrl sostenido y clic seleccionamos las edades que cumplen esta condición, luego clic en Grupo y se edita el nombre del grupo.
+
+```{r crearprimergrupo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Creación de grupos de edad', out.width='50%'}
+knitr::include_graphics("Imágenes/conexiondatos19.jpg")
+```
+3.	Repita el paso anterior hasta crear las categorías de edad que considere pertinentes y luego de clic en Aceptar, con esto se obtiene una columna llamada Edad_Mod (grupo), que asigna a cada observación el grupo que pertenece.
+
+```{r gruposedad-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agrupamiento de la columna Edad_Mod', out.width='30%'}
+knitr::include_graphics("Imágenes/conexiondatos20.jpg")
+```
+Para el campo Estrato_Orig también es posible crear grupos para obtener la categorización mostrada en el campo Estrato. 
+
+Tableau no permite hacer una limpieza y preparación de los datos, por tal razón la limpieza del conjunto de datos se realizo en R, se eliminaron columnas innecesarias, esto se podía hacer desde Tableau con la opción de ocultar columnas en la vista previa del archivo de datos, pero se decidió hacer en R ya que era necesario analizar la cantidad de valores faltantes por columnas y en base a esto se eliminaron; también se corrigieron espacios, mayúsculas, números y ortografía de algunas columnas de cadenas de caracteres ya que tenían varios valores que en realidad eran iguales pero por tildes, espacios o mayúsculas se contaban como diferentes. Se realizo una unión de todas las bases ya que se tenían a nivel de microdatos, el archivo a conectar con Tableau es llamado “Datos.xlsx”.
 
 ### Análisis de datos {#analisisdedatos}
 

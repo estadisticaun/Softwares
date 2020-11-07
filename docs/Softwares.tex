@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-05}
+\date{2020-11-06}
 
 \begin{document}
 \maketitle
@@ -934,7 +934,78 @@ En la esquina superior derecha del lienzo, se observa una etiqueta llamada Filtr
 
 Ahora la vista previa de la base se modificó, solo contiene las observaciones en las cuales se cumple el filtro aplicado, es decir donde Sede Nombre Adm sea Medellín.
 
-Este mismo tipo de filtros se puede aplicar a medidas, definiendo un intervalo para los valores o seleccionando un valor mínimo o máximo o un calculo especial.
+Este mismo tipo de filtros se puede aplicar a medidas, definiendo un intervalo para los valores o seleccionando un valor mínimo o máximo o un cálculo especial.
+Otra opción ofrecida por Tableau es hacer uniones entre tablas de datos, esto es útil cuando se tiene la información en distintas bases de datos con la misma estructura como en este caso que se tiene la información de estudiantes graduados desde el año 2009 hasta el 2020 semestre 1 a nivel de microdatos, es decir los archivos están separados.
+
+Existen dos métodos básicos para combinar conjuntos de datos en Tableau la unión de columnas y la unión de filas, se pueden combinar las columnas de dos conjuntos de datos o bien filas de dos o mas conjuntos de datos, primero debe conectarse a las tablas que desea combinar cabe aclarar que estas tablas deben pertenecer al mismo archivo, en este caso como se está usando archivos Excel las tablas a unir deben ser dos hojas del archivo, a modo de ejemplo se creara un archivo en Excel que contenga en una hoja la información de los graduados en el año 2009 y en otra hoja los registros de los graduados en el año 2010 y se hará la conexión a los datos, cuando realice dicha conexión en el panel lateral izquierdo se ubica el nombre del archivo Excel, en este caso llamado ``P2009-2010 Graduados'' y más abajo el nombre de las dos hojas que contiene dicho archivo llamadas ``P2009G'' y ``P2010G'', como se ilustra en la figura \ref{fig:hojas-fig}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/conexiondatos7} 
+
+}
+
+\caption{Nombre del archivo y hojas}\label{fig:hojas-fig}
+\end{figure}
+
+La unión por columnas es útil cuando se quiere trabajar con dos columnas que se encuentran en diferentes conjuntos de datos, existen cuatro formas de realizar las uniones por columnas:
+
+\begin{itemize}
+\item
+  Interior: devuelve únicamente los registros que están presentes en ambas tablas.
+\item
+  Izquierda: devuelve todos los registros de la tabla de la izquierda y solo los registros que coinciden con la tabla de la derecha.
+\item
+  Derecha: devuelve todos los registros de la tabla de la derecha y solo los registros que coinciden con la tabla de la izquierda.
+\item
+  Exterior: devuelve todos los registros de ambas tablas.
+\end{itemize}
+
+En los conjuntos de datos que se están usando todos tienen las mismas columnas por lo que el interés se centra en realizar unión por filas y no por columnas para realizar este tipo de unión se tiene dos opciones:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Arrastrar y soltar; este método consiste en arrastrar la primera hoja al lienzo, arrastrar la otra hoja que se quiere unir y no soltar hasta que aparezca el cuadro ``Unión de filas'' en color naranja, solo se debe soltar la hoja cuando este cuadro aparezca.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/conexiondatos8} 
+
+}
+
+\caption{Unión: Método de arrastrar y soltar}\label{fig:unionarrastrar-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Usando el panel ``Nueva unión''; este panel se encuentra ubicado en el lateral izquierdo justo debajo del nombre de las hojas como se muestra en la figura \ref{fig:hojas-fig}. Para usar esta opción se debe hacer doble clic en este panel, se abre una ventana en la cual se debe asegurar que este seleccionado Especifico (manual), se deben arrastrar las hojas a unir al espacio en blanco que tiene esta ventana, finalmente hacer clic en Aceptar.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/conexiondatos9} 
+
+}
+
+\caption{Unión: Método Nueva unión}\label{fig:unionnueva-fig}
+\end{figure}
+
+Tableau crea dos columnas adicionales a las que contiene a la base que ayuda a la identificación de la hoja y tabla a la que pertenecen las observaciones; si se edita la cantidad de filas que se muestra en la vista previa del conjunto de datos se puede observar los registros de ambas hojas.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/conexiondatos10} 
+
+}
+
+\caption{Columnas Nuevas}\label{fig:nuevascolumnas-fig}
+\end{figure}
 
 \hypertarget{analisisdedatos}{%
 \subsection{Análisis de datos}\label{analisisdedatos}}
