@@ -448,8 +448,34 @@ knitr::include_graphics("Imágenes/conexiondatos20.jpg")
 ```
 Para el campo Estrato_Orig también es posible crear grupos para obtener la categorización mostrada en el campo Estrato. 
 
-Tableau no permite hacer una limpieza y preparación de los datos, por tal razón la limpieza del conjunto de datos se realizo en R, se eliminaron columnas innecesarias, esto se podía hacer desde Tableau con la opción de ocultar columnas en la vista previa del archivo de datos, pero se decidió hacer en R ya que era necesario analizar la cantidad de valores faltantes por columnas y en base a esto se eliminaron; también se corrigieron espacios, mayúsculas, números y ortografía de algunas columnas de cadenas de caracteres ya que tenían varios valores que en realidad eran iguales pero por tildes, espacios o mayúsculas se contaban como diferentes. Se realizo una unión de todas las bases ya que se tenían a nivel de microdatos, el archivo a conectar con Tableau es llamado “Datos.xlsx”.
+Tableau no permite hacer una limpieza y preparación de datos, por tal razón la limpieza del conjunto de datos se realizo en R, se eliminaron columnas innecesarias, esto se podía hacer desde Tableau con la opción de ocultar columnas en la vista previa del archivo de datos, pero se decidió hacer en R ya que era necesario analizar la cantidad de valores faltantes por columnas y en base a esto se eliminaron; también se corrigieron espacios, mayúsculas, números y ortografía de algunas columnas de cadenas de caracteres ya que tenían varios valores que en realidad eran iguales pero por tildes, espacios o mayúsculas se contaban como diferentes. Se realizo una unión de todas las bases ya que se tenían a nivel de microdatos, el archivo a conectar con Tableau es llamado “Datos.xlsx”.
+
+La primera observación al conectarse al conjunto de datos Datos.xlsx es que hay algunas columnas que no se tomaron como debería, por ejemplo, las variables relacionadas con la ubicación geográfica Latitud y longitud de la cuidad de nacimiento, para esto se debe,
+
+1.	Hacer clic en el icono “Abc” y en el menú que se despliega seleccionar Número(decimal).
+
+```{r geograficas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar tipo de columna', out.width='40%'}
+knitr::include_graphics("Imágenes/conexiondatos21.jpg")
+```
+
+2.	Cuando el icono del campo sea “#”, hacer clic nuevamente en este icono y seleccionar Función geográfica, luego clic en latitud para el caso de la variable Lat_Ciu_Nac y longitud para la otra variable. 
+
+```{r geograficolatitud-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Convertir a latitud un campo', out.width='40%'}
+knitr::include_graphics("Imágenes/conexiondatos22.jpg")
+```
+La variable Edad_Mod debe ser numérica y no una dimensión discreta, por tanto se debe editar seleccionando Número (entero), la variable Snies_Progra es numérica y debe ser discreta ya que se refiere a una categorización de los programas, edítela seleccionando Cadena en el menú desplegable del icono “#”.  Luego de tener la base de datos lista hacer clic en Hoja1, recuadro que aparece en la parte inferior izquierda. Ya en el lienzo de trabajo en el panel lateral izquierdo en Tablas se ubican el nombre de todas las columnas de la fuente de datos como se mencionó en la sección \@ref(formadenavegacion), recuerde que los iconos azules se refieren a dimensiones y los verdes a medidas, en la parte inferior de este panel se encuentran ubicados cuatro variables numéricas dos de ellas son Semestre y Snies_Progra que eran originales del conjunto de datos, pero hay otros dos campos llamados Datos (Recuento) y Valores de medias, estos dos campos fueron creados de manera automática por Tableau; Datos (Recuento) se refiere al total de filas de la base de datos en este caso $101.840$, Valores de medida contiene un recuento de las dos variables numéricas leídas por Tableau, el Semestre y el total de datos, la suma de semestre es $151.469$. 
+
+```{r tablas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Nombre de columnas desde el panel Tablas', out.width='20%'}
+knitr::include_graphics("Imágenes/conexiondatos24.jpg")
+```
+Realmente estas variables no son de interés en el análisis por lo que se ocultara Datos (Recuento) haciendo clic en el menú desplegable dl campo y seleccionando ocultar, el campo Valores de medidas no es posible ocultarlo o eliminarlo, se dejara allí pero no se usara como campo para la realización de gráficos. 
+
+```{r ocultarcolumnas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ocultar columnas innecesarias', out.width='40%'}
+knitr::include_graphics("Imágenes/conexiondatos23.jpg")
+```
+Luego de verificar que los campos hayan sido leídos correctamente por Tableau es momento de iniciar con las visualizaciones.
 
 ### Análisis de datos {#analisisdedatos}
+
 
 ### Compartir las visualizaciones
