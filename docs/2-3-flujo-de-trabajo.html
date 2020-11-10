@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-08" />
+<meta name="date" content="2020-11-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -396,10 +396,130 @@ Figura 2.34: Nombre de columnas desde el panel Tablas
 Figura 2.35: Ocultar columnas innecesarias
 </p>
 </div>
-<p>Luego de verificar que los campos hayan sido leídos correctamente por Tableau es momento de iniciar con las visualizaciones.</p>
+<p>El campo Semestre debe ser arrastrado hacia la parte superior para convertirlo en dimensión, luego de verificar que los campos hayan sido leídos correctamente por Tableau es momento de iniciar con las visualizaciones.</p>
 </div>
 <div id="analisisdedatos" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> Análisis de datos</h3>
+<p>Se iniciara con gráficos similares a los presentados en la sección cifras generales y graduados la página de las <a href="http://estadisticas.unal.edu.co/home/">estadísticas</a> de la Universidad Nacional, en principio se hará un gráfico de líneas que muestre la evolución histórica de los estudiantes graduados en los periodos de 2009-1 a 2020-1.</p>
+<ol style="list-style-type: decimal">
+<li>Tome la columna Year-Semester, arrástrela hasta el estante columnas, tome nuevamente este campo y arrástrelo al estante filas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1lineas-fig"></span>
+<img src="Imágenes/analisis1.jpg" alt="Campos en los estantes columnas y filas" width="80%" />
+<p class="caption">
+Figura 2.36: Campos en los estantes columnas y filas
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>En el campo Year-Semester ubicado en el estande filas, haga clic en el menú desplegable y seleccione medida y recuento.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2lineas-fig"></span>
+<img src="Imágenes/analisis2.jpg" alt="Editar agregación en el estante filas" width="60%" />
+<p class="caption">
+Figura 2.37: Editar agregación en el estante filas
+</p>
+</div>
+<p>Con esto se obtiene un grafico de barras, donde cada barra representa el periodo y la altura de dicha barra en la cantidad de estudiantes graduados en ese periodo.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Se quiere realizar un gráfico de líneas y no de barras, para cambiarlo en el estante marcas haga clic en el menú desplegable que en el momento se encuentra en “Automático” y seleccione línea.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3lineas-fig"></span>
+<img src="Imágenes/analisis3.jpg" alt="Cambiar la marca Automático por Línea" width="60%" />
+<p class="caption">
+Figura 2.38: Cambiar la marca Automático por Línea
+</p>
+</div>
+<p>Hasta el momento la visualización se ve de esta manera.</p>
+<div class="figure" style="text-align: center"><span id="fig:paso3-1lineas-fig"></span>
+<img src="Imágenes/analisis4.jpg" alt="Vista previa de la viasualización" width="80%" />
+<p class="caption">
+Figura 2.39: Vista previa de la viasualización
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Observe que hay un espacio vacío en el lienzo para ajustar la visualización a todo el lienzo, ubíquese en la barra de herramientas y haga clic en el menú desplegable de “Estándar” y seleccione “Ajustar anchura”, con esto el grafico de líneas ocupara todo el lienzo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4lineas-fig"></span>
+<img src="Imágenes/analisis5.jpg" alt="Ajustar tamaño de la visualización" width="20%" />
+<p class="caption">
+Figura 2.40: Ajustar tamaño de la visualización
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:paso4-1lineas-fig"></span>
+<img src="Imágenes/analisis6.jpg" alt="Vista en el lienzo completo" width="80%" />
+<p class="caption">
+Figura 2.41: Vista en el lienzo completo
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Observe que hay detalles como el título del gráfico, títulos de los ejes que no están claros, para agregar un título a la visualización hay dos opciones:</li>
+</ol>
+<ul>
+<li><p>Asignar un nombre a la hoja de trabajo en la parte inferior izquierda donde dice hoja 1, para esto haga doble clic sobre Hoja 1 y escriba el titulo que desea para su visualización, por ejemplo, evolución histórica del total de estudiantes graduados.</p></li>
+<li><p>Hacer clic derecho en el título de la visualización que en este momento es hoja 1 y seleccionar editar título, con esto se abre un cuadro de dialogo que permite escribir y editar el tipo de fuente, tamaño y color del texto.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:paso5-11lineas-fig"></span>
+<img src="Imágenes/analisis7.jpg" alt="Editar título de la vista" width="60%" />
+<p class="caption">
+Figura 2.42: Editar título de la vista
+</p>
+</div>
+<p>Elimine el texto <Nombre de la hoja> y escriba Evolución histórica del total de estudiantes graduados.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Para editar el título del eje Y, haga clic derecho sobre el y seleccione editar eje, en el cuadro de dialogo cambie el título del eje por Número de estudiantes graduados y para el subtítulo haga clic en el cuadro Automático y escriba k: miles en el espacio para subtítulo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6-11lineas-fig"></span>
+<img src="Imágenes/analisis8.jpg" alt="Editar eje Y" width="20%" />
+<p class="caption">
+Figura 2.43: Editar eje Y
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:paso6-2lineas-fig"></span>
+<img src="Imágenes/analisis9.jpg" alt="Editar título del eje Y" width="40%" />
+<p class="caption">
+Figura 2.44: Editar título del eje Y
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Para el eje X que en este caso es llamado Year Semester no es posible editarlo como el caso del eje Y por tanto se debe ocultar, para esto haga clic derecho sobre esta etiqueta y seleccione Ocultar etiquetas de campo para columnas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7lineas-fig"></span>
+<img src="Imágenes/analisis10.jpg" alt="Ocultar título del eje X" width="60%" />
+<p class="caption">
+Figura 2.45: Ocultar título del eje X
+</p>
+</div>
+<p>Se obtiene la siguiente visualización.</p>
+<div class="figure" style="text-align: center"><span id="fig:paso7-1lineas-fig"></span>
+<img src="Imágenes/analisis11.jpg" alt="Vista previa de la visualización con algunas ediciones" width="80%" />
+<p class="caption">
+Figura 2.46: Vista previa de la visualización con algunas ediciones
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Cuando se pasa el puntero por la línea, aparece un cuadro que contiene la información del periodo y el recuento de estudiantes graduados, pero la información en este cuadro no coincide con el nombre del eje Y.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8-1lineas-fig"></span>
+<img src="Imágenes/analisis12.jpg" alt="Descripción emergente" width="40%" />
+<p class="caption">
+Figura 2.47: Descripción emergente
+</p>
+</div>
+<p>Para que esta descripción sea más clara se debe cambiar Year Smester por Periodo y Recuento de Year Semester por Número de estudiantes graduados, en la tarjeta marcas haga clic en el recuadro que dice descripción emergente, con esto se abre una ventana que contiene la información del recuadro mostrado en la figura @ref(fig:paso8.1lineas-fig), en este cuadro cambie cambiar Year Smester por Periodo, Recuento de Year Semester por Número de estudiantes graduados y luego clic en Aceptar.</p>
+<div class="figure" style="text-align: center">
+<img src="Imágenes/analisis13.jpg" alt="Editar información de la dscripción emergente" width="70%" />
+<p class="caption">
+(#fig:paso8.2lineas-fig)Editar información de la dscripción emergente
+</p>
+</div>
+<p>Ahora la descripción emergente de la visualización es mucho más clara.</p>
+<div class="figure" style="text-align: center">
+<img src="Imágenes/analisis14.jpg" alt="Descripción emergente editada" width="40%" />
+<p class="caption">
+(#fig:paso8.3lineas-fig)Descripción emergente editada
+</p>
+</div>
+<p>Estos son los pasos básicos para hacer que las visualizaciones creadas en Tableau se vean claras y estéticas.</p>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">
 <h3><span class="header-section-number">2.3.3</span> Compartir las visualizaciones</h3>

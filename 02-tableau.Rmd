@@ -473,9 +473,91 @@ Realmente estas variables no son de interés en el análisis por lo que se ocult
 ```{r ocultarcolumnas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ocultar columnas innecesarias', out.width='40%'}
 knitr::include_graphics("Imágenes/conexiondatos23.jpg")
 ```
-Luego de verificar que los campos hayan sido leídos correctamente por Tableau es momento de iniciar con las visualizaciones.
+El campo Semestre debe ser arrastrado hacia la parte superior para convertirlo en dimensión, luego de verificar que los campos hayan sido leídos correctamente por Tableau es momento de iniciar con las visualizaciones.
 
 ### Análisis de datos {#analisisdedatos}
 
+Se iniciara con gráficos similares a los presentados en la sección cifras generales y graduados la página de las [estadísticas](http://estadisticas.unal.edu.co/home/) de la Universidad Nacional, en principio se hará un gráfico de líneas que muestre la evolución histórica de los estudiantes graduados en los periodos de 2009-1 a 2020-1. 
+
+1.	Tome la columna Year-Semester, arrástrela hasta el estante columnas, tome nuevamente este campo y arrástrelo al estante filas.
+
+```{r paso1lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Campos en los estantes columnas y filas', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis1.jpg")
+```
+2.	En el campo Year-Semester ubicado en el estande filas, haga clic en el menú desplegable y seleccione medida y recuento. 
+
+```{r paso2lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar agregación en el estante filas', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis2.jpg")
+```
+Con esto se obtiene un grafico de barras, donde cada barra representa el periodo y la altura de dicha barra en la cantidad de estudiantes graduados en ese periodo. 
+
+3.	Se quiere realizar un gráfico de líneas y no de barras, para cambiarlo en el estante marcas haga clic en el menú desplegable que en el momento se encuentra en “Automático” y seleccione línea. 
+
+```{r paso3lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar la marca Automático por Línea', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis3.jpg")
+```
+Hasta el momento la visualización se ve de esta manera.
+
+```{r paso3-1lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa de la viasualización', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis4.jpg")
+```
+4.	Observe que hay un espacio vacío en el lienzo para ajustar la visualización a todo el lienzo, ubíquese en la barra de herramientas y haga clic en el menú desplegable de “Estándar” y seleccione “Ajustar anchura”, con esto el grafico de líneas ocupara todo el lienzo. 
+
+```{r paso4lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ajustar tamaño de la visualización', out.width='20%'}
+knitr::include_graphics("Imágenes/analisis5.jpg")
+```
+```{r paso4-1lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista en el lienzo completo', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis6.jpg")
+```
+5.	Observe que hay detalles como el título del gráfico, títulos de los ejes que no están claros, para agregar un título a la visualización hay dos opciones:
+
+   -	Asignar un nombre a la hoja de trabajo en la parte inferior izquierda donde dice hoja 1, para esto haga doble clic sobre Hoja 1 y escriba el titulo que desea para su visualización, por ejemplo, evolución histórica del total de estudiantes graduados. 
+
+   -	Hacer clic derecho en el título de la visualización que en este momento es hoja 1 y seleccionar editar título, con esto se abre un cuadro de dialogo que permite escribir y editar el tipo de fuente, tamaño y color del texto. 
+   
+```{r paso5-11lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar título de la vista', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis7.jpg")
+```
+Elimine el texto <Nombre de la hoja> y escriba Evolución histórica del total de estudiantes graduados. 
+
+6. Para editar el título del eje Y, haga clic derecho sobre el y seleccione editar eje, en el cuadro de dialogo cambie el título del eje por Número de estudiantes graduados y para el subtítulo haga clic en el cuadro Automático y escriba k: miles en el espacio para subtítulo.
+
+```{r paso6-11lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar eje Y', out.width='20%'}
+knitr::include_graphics("Imágenes/analisis8.jpg")
+```
+
+```{r paso6-2lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar título del eje Y', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis9.jpg")
+```
+
+7. Para el eje X que en este caso es llamado Year Semester no es posible editarlo como el caso del eje Y por tanto se debe ocultar, para esto haga clic derecho sobre esta etiqueta y seleccione Ocultar etiquetas de campo para columnas.
+
+```{r paso7lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ocultar título del eje X', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis10.jpg")
+```
+
+Se obtiene la siguiente visualización.
+
+```{r paso7-1lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa de la visualización con algunas ediciones', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis11.jpg")
+```
+
+8. Cuando se pasa el puntero por la línea, aparece un cuadro que contiene la información del periodo y el recuento de estudiantes graduados, pero la información en este cuadro no coincide con el nombre del eje Y. 
+
+```{r paso8-1lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción emergente', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis12.jpg")
+```
+Para que esta descripción sea más clara se debe cambiar Year Smester por Periodo y Recuento de Year Semester por Número de estudiantes graduados, en la tarjeta marcas haga clic en el recuadro que dice descripción emergente, con esto se abre una ventana que contiene la información del recuadro mostrado en la figura \@ref(fig:paso8.1lineas-fig), en este cuadro cambie cambiar Year Smester por Periodo, Recuento de Year Semester por Número de estudiantes graduados y luego clic en Aceptar.
+
+```{r paso8.2lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar información de la dscripción emergente', out.width='70%'}
+knitr::include_graphics("Imágenes/analisis13.jpg")
+```
+Ahora la descripción emergente de la visualización es mucho más clara. 
+
+```{r paso8.3lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción emergente editada', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis14.jpg")
+```
+
+Estos son los pasos básicos para hacer que las visualizaciones creadas en Tableau se vean claras y estéticas. 
 
 ### Compartir las visualizaciones
