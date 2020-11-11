@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-08}
+\date{2020-11-10}
 
 \begin{document}
 \maketitle
@@ -1212,10 +1212,221 @@ Realmente estas variables no son de interés en el análisis por lo que se ocult
 \caption{Ocultar columnas innecesarias}\label{fig:ocultarcolumnas-fig}
 \end{figure}
 
-Luego de verificar que los campos hayan sido leídos correctamente por Tableau es momento de iniciar con las visualizaciones.
+El campo Semestre debe ser arrastrado hacia la parte superior para convertirlo en dimensión, luego de verificar que los campos hayan sido leídos correctamente por Tableau es momento de iniciar con las visualizaciones.
 
 \hypertarget{analisisdedatos}{%
 \subsection{Análisis de datos}\label{analisisdedatos}}
+
+Se iniciara con gráficos similares a los presentados en la sección cifras generales y graduados la página de las \href{http://estadisticas.unal.edu.co/home/}{estadísticas} de la Universidad Nacional, en principio se hará un gráfico de líneas que muestre la evolución histórica de los estudiantes graduados en los periodos de 2009-1 a 2020-1.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Tome la columna Year-Semester, arrástrela hasta el estante columnas, tome nuevamente este campo y arrástrelo al estante filas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis1} 
+
+}
+
+\caption{Campos en los estantes columnas y filas}\label{fig:paso1lineas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  En el campo Year-Semester ubicado en el estande filas, haga clic en el menú desplegable y seleccione medida y recuento.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis2} 
+
+}
+
+\caption{Editar agregación en el estante filas}\label{fig:paso2lineas-fig}
+\end{figure}
+
+Con esto se obtiene un grafico de barras, donde cada barra representa el periodo y la altura de dicha barra en la cantidad de estudiantes graduados en ese periodo.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Se quiere realizar un gráfico de líneas y no de barras, para cambiarlo en el estante marcas haga clic en el menú desplegable que en el momento se encuentra en ``Automático'' y seleccione línea.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis3} 
+
+}
+
+\caption{Cambiar la marca Automático por Línea}\label{fig:paso3lineas-fig}
+\end{figure}
+
+Hasta el momento la visualización se ve de esta manera.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis4} 
+
+}
+
+\caption{Vista previa de la viasualización}\label{fig:paso3-1lineas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Observe que hay un espacio vacío en el lienzo para ajustar la visualización a todo el lienzo, ubíquese en la barra de herramientas y haga clic en el menú desplegable de ``Estándar'' y seleccione ``Ajustar anchura'', con esto el grafico de líneas ocupara todo el lienzo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/analisis5} 
+
+}
+
+\caption{Ajustar tamaño de la visualización}\label{fig:paso4lineas-fig}
+\end{figure}
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis6} 
+
+}
+
+\caption{Vista en el lienzo completo}\label{fig:paso4-1lineas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Observe que hay detalles como el título del gráfico, títulos de los ejes que no están claros, para agregar un título a la visualización hay dos opciones:
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Asignar un nombre a la hoja de trabajo en la parte inferior izquierda donde dice hoja 1, para esto haga doble clic sobre Hoja 1 y escriba el titulo que desea para su visualización, por ejemplo, evolución histórica del total de estudiantes graduados.
+\item
+  Hacer clic derecho en el título de la visualización que en este momento es hoja 1 y seleccionar editar título, con esto se abre un cuadro de dialogo que permite escribir y editar el tipo de fuente, tamaño y color del texto.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis7} 
+
+}
+
+\caption{Editar título de la vista}\label{fig:paso5-11lineas-fig}
+\end{figure}
+
+Elimine el texto y escriba Evolución histórica del total de estudiantes graduados.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Para editar el título del eje Y, haga clic derecho sobre el y seleccione editar eje, en el cuadro de dialogo cambie el título del eje por Número de estudiantes graduados y para el subtítulo haga clic en el cuadro Automático y escriba k: miles en el espacio para subtítulo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/analisis8} 
+
+}
+
+\caption{Editar eje Y}\label{fig:paso6-11lineas-fig}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/analisis9} 
+
+}
+
+\caption{Editar título del eje Y}\label{fig:paso6-2lineas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Para el eje X que en este caso es llamado Year Semester no es posible editarlo como el caso del eje Y por tanto se debe ocultar, para esto haga clic derecho sobre esta etiqueta y seleccione Ocultar etiquetas de campo para columnas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis10} 
+
+}
+
+\caption{Ocultar título del eje X}\label{fig:paso7lineas-fig}
+\end{figure}
+
+Se obtiene la siguiente visualización.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis11} 
+
+}
+
+\caption{Vista previa de la visualización con algunas ediciones}\label{fig:paso7-1lineas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Cuando se pasa el puntero por la línea, aparece un cuadro que contiene la información del periodo y el recuento de estudiantes graduados, pero la información en este cuadro no coincide con el nombre del eje Y.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/analisis12} 
+
+}
+
+\caption{Descripción emergente}\label{fig:paso8-1lineas-fig}
+\end{figure}
+
+Para que esta descripción sea más clara se debe cambiar Year Smester por Periodo y Recuento de Year Semester por Número de estudiantes graduados, en la tarjeta marcas haga clic en el recuadro que dice descripción emergente, con esto se abre una ventana que contiene la información del recuadro mostrado en la figura @ref(fig:paso8.1lineas-fig), en este cuadro cambie cambiar Year Smester por Periodo, Recuento de Year Semester por Número de estudiantes graduados y luego clic en Aceptar.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{Imágenes/analisis13} 
+
+}
+
+\caption{Editar información de la dscripción emergente}(\#fig:paso8.2lineas-fig)
+\end{figure}
+
+Ahora la descripción emergente de la visualización es mucho más clara.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/analisis14} 
+
+}
+
+\caption{Descripción emergente editada}(\#fig:paso8.3lineas-fig)
+\end{figure}
+
+Estos son los pasos básicos para hacer que las visualizaciones creadas en Tableau se vean claras y estéticas.
 
 \hypertarget{compartir-las-visualizaciones}{%
 \subsection{Compartir las visualizaciones}\label{compartir-las-visualizaciones}}

@@ -477,6 +477,8 @@ El campo Semestre debe ser arrastrado hacia la parte superior para convertirlo e
 
 ### Análisis de datos {#analisisdedatos}
 
+#### Gráfico de líneas {#graficodelineas}
+
 Se iniciara con gráficos similares a los presentados en la sección cifras generales y graduados la página de las [estadísticas](http://estadisticas.unal.edu.co/home/) de la Universidad Nacional, en principio se hará un gráfico de líneas que muestre la evolución histórica de los estudiantes graduados en los periodos de 2009-1 a 2020-1. 
 
 1.	Tome la columna Year-Semester, arrástrela hasta el estante columnas, tome nuevamente este campo y arrástrelo al estante filas.
@@ -547,17 +549,54 @@ knitr::include_graphics("Imágenes/analisis11.jpg")
 ```{r paso8-1lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción emergente', out.width='40%'}
 knitr::include_graphics("Imágenes/analisis12.jpg")
 ```
-Para que esta descripción sea más clara se debe cambiar Year Smester por Periodo y Recuento de Year Semester por Número de estudiantes graduados, en la tarjeta marcas haga clic en el recuadro que dice descripción emergente, con esto se abre una ventana que contiene la información del recuadro mostrado en la figura \@ref(fig:paso8.1lineas-fig), en este cuadro cambie cambiar Year Smester por Periodo, Recuento de Year Semester por Número de estudiantes graduados y luego clic en Aceptar.
+Para que esta descripción sea más clara se debe cambiar Year Smester por Periodo y Recuento de Year Semester por Número de estudiantes graduados, en la tarjeta marcas haga clic en el recuadro que dice descripción emergente, con esto se abre una ventana que contiene la información del recuadro mostrado en la figura \@ref(fig:paso8-1lineas-fig), en este cuadro cambie cambiar Year Smester por Periodo, Recuento de Year Semester por Número de estudiantes graduados y luego clic en Aceptar.
 
-```{r paso8.2lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar información de la dscripción emergente', out.width='70%'}
+```{r paso8-2lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar información de la dscripción emergente', out.width='70%'}
 knitr::include_graphics("Imágenes/analisis13.jpg")
 ```
 Ahora la descripción emergente de la visualización es mucho más clara. 
 
-```{r paso8.3lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción emergente editada', out.width='40%'}
+```{r paso8-3lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción emergente editada', out.width='40%'}
 knitr::include_graphics("Imágenes/analisis14.jpg")
 ```
 
 Estos son los pasos básicos para hacer que las visualizaciones creadas en Tableau se vean claras y estéticas. 
+
+#### Gráfico de líneas segmentado por una dimensión {#graficodelineassegmentado}
+
+La siguiente visualización que se encuentra en la página de estadísticas de la Universidad Nacional de Colombia, en un gráfico de líneas por modalidad de formación, una tabla que contiene la misma información y un gráfico circular que contiene la información por modalidad de formación para el periodo actual es decir 2020-1.
+
+1.	Repita los pasos 1,2, 3, 4 presentados en @\ref(graficodelineas).
+2.	En el paso 5 mostrado en la sección @\ref(graficodelineas), en el nombre de la hoja escriba Serie y en el titulo de la visualización escriba Evolución del número de estudiantes graduados por modalidad de formación. 
+3.	Edite los ejes X y Y como se mostro en los pasos 6 y 7 de @\ref(graficodelineas).
+4.	Arrastre el campo Tipo Nivel a color en el estante Marcas, con esto se crean dos líneas en el gráfico, una para los estudiantes graduados de Pregrado y otra para los graduados de Postgrado.
+```{r paso4lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas por Tipo Nivel', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis15.jpg")
+```
+5.	Para cambiar los colores, clic en color, editar colores; en la ventana emergente que se abre seleccione Postgrado y clic en el color naranja, seleccione Pregrado y clic en el color verde, finalmente clic en aceptar.
+```{r paso5lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar colores', out.width='20%'}
+knitr::include_graphics("Imágenes/analisis16.jpg")
+```
+```{r paso5-1lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de colores a Tipo Nivel', out.width='45%'}
+knitr::include_graphics("Imágenes/analisis17.jpg")
+```
+6.	En la leyenda de colores ubicada en el panel letarl derecho de la visualizacion, como se muestra en la figura @\ref(fig:paso4lineassegmentada-fig), haga clic en el menú desplegable y seleccione Editar título,  en el cuadro de texto borre Tipo Nivel y escriba Modalidad de formación y clic en aceptar.
+
+```{r paso6lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar título de leyenda de colores', out.width='20%'}
+knitr::include_graphics("Imágenes/analisis18.jpg")
+```
+```{r paso6-1lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de título a leyenda de colores', out.width='45%'}
+knitr::include_graphics("Imágenes/analisis19.jpg")
+```
+
+7.	Finalmente, la tarjeta de descripción emergente no es clara por lo que es necesario editarla, para esto siga el paso 8 de @\ref(graficoddelineas); cambiando Tipo Nivel por Modalidad de formación, Year Semester por Periodo y Recuento de Year Smester por Total Graduados. 
+
+
+
+La visualización obtenida es:
+
+```{r lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Visualización de la evolución de estudiantes graduados por modalidad de formación', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis20.jpg")
+```
 
 ### Compartir las visualizaciones

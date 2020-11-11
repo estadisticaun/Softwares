@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-10" />
+<meta name="date" content="2020-11-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -400,6 +400,8 @@ Figura 2.35: Ocultar columnas innecesarias
 </div>
 <div id="analisisdedatos" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> Análisis de datos</h3>
+<div id="graficodelineas" class="section level4">
+<h4><span class="header-section-number">2.3.2.1</span> Gráfico de líneas</h4>
 <p>Se iniciara con gráficos similares a los presentados en la sección cifras generales y graduados la página de las <a href="http://estadisticas.unal.edu.co/home/">estadísticas</a> de la Universidad Nacional, en principio se hará un gráfico de líneas que muestre la evolución histórica de los estudiantes graduados en los periodos de 2009-1 a 2020-1.</p>
 <ol style="list-style-type: decimal">
 <li>Tome la columna Year-Semester, arrástrela hasta el estante columnas, tome nuevamente este campo y arrástrelo al estante filas.</li>
@@ -505,21 +507,74 @@ Figura 2.46: Vista previa de la visualización con algunas ediciones
 Figura 2.47: Descripción emergente
 </p>
 </div>
-<p>Para que esta descripción sea más clara se debe cambiar Year Smester por Periodo y Recuento de Year Semester por Número de estudiantes graduados, en la tarjeta marcas haga clic en el recuadro que dice descripción emergente, con esto se abre una ventana que contiene la información del recuadro mostrado en la figura @ref(fig:paso8.1lineas-fig), en este cuadro cambie cambiar Year Smester por Periodo, Recuento de Year Semester por Número de estudiantes graduados y luego clic en Aceptar.</p>
-<div class="figure" style="text-align: center">
+<p>Para que esta descripción sea más clara se debe cambiar Year Smester por Periodo y Recuento de Year Semester por Número de estudiantes graduados, en la tarjeta marcas haga clic en el recuadro que dice descripción emergente, con esto se abre una ventana que contiene la información del recuadro mostrado en la figura <a href="2-3-flujo-de-trabajo.html#fig:paso8-1lineas-fig">2.47</a>, en este cuadro cambie cambiar Year Smester por Periodo, Recuento de Year Semester por Número de estudiantes graduados y luego clic en Aceptar.</p>
+<div class="figure" style="text-align: center"><span id="fig:paso8-2lineas-fig"></span>
 <img src="Imágenes/analisis13.jpg" alt="Editar información de la dscripción emergente" width="70%" />
 <p class="caption">
-(#fig:paso8.2lineas-fig)Editar información de la dscripción emergente
+Figura 2.48: Editar información de la dscripción emergente
 </p>
 </div>
 <p>Ahora la descripción emergente de la visualización es mucho más clara.</p>
-<div class="figure" style="text-align: center">
+<div class="figure" style="text-align: center"><span id="fig:paso8-3lineas-fig"></span>
 <img src="Imágenes/analisis14.jpg" alt="Descripción emergente editada" width="40%" />
 <p class="caption">
-(#fig:paso8.3lineas-fig)Descripción emergente editada
+Figura 2.49: Descripción emergente editada
 </p>
 </div>
 <p>Estos son los pasos básicos para hacer que las visualizaciones creadas en Tableau se vean claras y estéticas.</p>
+</div>
+<div id="graficodelineassegmentado" class="section level4">
+<h4><span class="header-section-number">2.3.2.2</span> Gráfico de líneas segmentado por una dimensión</h4>
+<p>La siguiente visualización que se encuentra en la página de estadísticas de la Universidad Nacional de Colombia, en un gráfico de líneas por modalidad de formación, una tabla que contiene la misma información y un gráfico circular que contiene la información por modalidad de formación para el periodo actual es decir 2020-1.</p>
+<ol style="list-style-type: decimal">
+<li>Repita los pasos 1,2, 3, 4 presentados en @(graficodelineas).</li>
+<li>En el paso 5 mostrado en la sección @(graficodelineas), en el nombre de la hoja escriba Serie y en el titulo de la visualización escriba Evolución del número de estudiantes graduados por modalidad de formación.</li>
+<li>Edite los ejes X y Y como se mostro en los pasos 6 y 7 de @(graficodelineas).</li>
+<li>Arrastre el campo Tipo Nivel a color en el estante Marcas, con esto se crean dos líneas en el gráfico, una para los estudiantes graduados de Pregrado y otra para los graduados de Postgrado.
+<div class="figure" style="text-align: center"><span id="fig:paso4lineassegmentada-fig"></span>
+<img src="Imágenes/analisis15.jpg" alt="Gráfico de líneas por Tipo Nivel" width="80%" />
+<p class="caption">
+Figura 2.50: Gráfico de líneas por Tipo Nivel
+</p>
+</div></li>
+<li>Para cambiar los colores, clic en color, editar colores; en la ventana emergente que se abre seleccione Postgrado y clic en el color naranja, seleccione Pregrado y clic en el color verde, finalmente clic en aceptar.
+<div class="figure" style="text-align: center"><span id="fig:paso5lineassegmentada-fig"></span>
+<img src="Imágenes/analisis16.jpg" alt="Editar colores" width="20%" />
+<p class="caption">
+Figura 2.51: Editar colores
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:paso5-1lineassegmentada-fig"></span>
+<img src="Imágenes/analisis17.jpg" alt="Asignación de colores a Tipo Nivel" width="45%" />
+<p class="caption">
+Figura 2.52: Asignación de colores a Tipo Nivel
+</p>
+</div></li>
+<li>En la leyenda de colores ubicada en el panel letarl derecho de la visualizacion, como se muestra en la figura @(fig:paso4lineassegmentada-fig), haga clic en el menú desplegable y seleccione Editar título, en el cuadro de texto borre Tipo Nivel y escriba Modalidad de formación y clic en aceptar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6lineassegmentada-fig"></span>
+<img src="Imágenes/analisis18.jpg" alt="Editar título de leyenda de colores" width="20%" />
+<p class="caption">
+Figura 2.53: Editar título de leyenda de colores
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:paso6-1lineassegmentada-fig"></span>
+<img src="Imágenes/analisis19.jpg" alt="Asignación de título a leyenda de colores" width="45%" />
+<p class="caption">
+Figura 2.54: Asignación de título a leyenda de colores
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Finalmente, la tarjeta de descripción emergente no es clara por lo que es necesario editarla, para esto siga el paso 8 de @(graficoddelineas); cambiando Tipo Nivel por Modalidad de formación, Year Semester por Periodo y Recuento de Year Smester por Total Graduados.</li>
+</ol>
+<p>La visualización obtenida es:</p>
+<div class="figure" style="text-align: center"><span id="fig:lineassegmentada-fig"></span>
+<img src="Imágenes/analisis20.jpg" alt="Visualización de la evolución de estudiantes graduados por modalidad de formación" width="80%" />
+<p class="caption">
+Figura 2.55: Visualización de la evolución de estudiantes graduados por modalidad de formación
+</p>
+</div>
+</div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">
 <h3><span class="header-section-number">2.3.3</span> Compartir las visualizaciones</h3>
