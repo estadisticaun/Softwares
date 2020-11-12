@@ -77,3 +77,14 @@ flourish
 example-one
 example-two
 conclu
+fig:duplicarhoja-fig
+fig:lineassegmentadoporduplicacion-fig
+fig:lineassegmentadodescripcion-fig
+fig:crearcampocalculadopaso1-fig
+fig:crearcampocalculadopaso1-1-fig
+fig:etiquetas-fig
+fig:crearcalculodetabla-fig
+fig:editarcalculodetabla-fig
+fig:etiquetasenporcentaje-fig
+fig:añadircalculodetablaadescripcion-fig
+fig:descripcionconporcentaje-fig

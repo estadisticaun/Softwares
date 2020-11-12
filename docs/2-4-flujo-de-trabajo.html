@@ -555,7 +555,7 @@ Figura 2.52: Asignación de colores a Tipo Nivel
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>En la leyenda de colores ubicada en el panel letarl derecho de la visualizacion, como se muestra en la figura <a href="2-4-flujo-de-trabajo.html#fig:paso4lineassegmentada-fig">2.50</a>, haga clic en el menú desplegable y seleccione Editar título, en el cuadro de texto borre Tipo Nivel y escriba Modalidad de formación y clic en aceptar.</li>
+<li>En la leyenda de colores ubicada en el panel letaral derecho de la visualizacion, como se muestra en la figura <a href="2-4-flujo-de-trabajo.html#fig:paso4lineassegmentada-fig">2.50</a>, haga clic en el menú desplegable y seleccione Editar título, en el cuadro de texto borre Tipo Nivel y escriba Modalidad de formación y clic en aceptar.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso6lineassegmentada-fig"></span>
 <img src="Imágenes/analisis18.jpg" alt="Editar título de leyenda de colores" width="20%" />
@@ -577,6 +577,98 @@ Figura 2.54: Asignación de título a leyenda de colores
 <img src="Imágenes/analisis20.jpg" alt="Visualización de la evolución de estudiantes graduados por modalidad de formación" width="80%" />
 <p class="caption">
 Figura 2.55: Visualización de la evolución de estudiantes graduados por modalidad de formación
+</p>
+</div>
+<p>Otra opción para crear esta vista de líneas segmentada es duplicando la visualización creada en la sección anterior, es decir el grafico de líneas, para duplicar esta vista ubíquese en la hoja llamada Evolución histórica del total de estudiantes graduados y en la barra de herramientas haga clic en el icono que tiene dos hojas, con esto se crea una nueva hoja que contiene un duplicado del grafico de líneas.</p>
+<div class="figure" style="text-align: center"><span id="fig:duplicarhoja-fig"></span>
+<img src="Imágenes/analisis21.jpg" alt="Duplicar hojas de trabajo" width="80%" />
+<p class="caption">
+Figura 2.56: Duplicar hojas de trabajo
+</p>
+</div>
+<p>El título de a visualización y de la hoja duplicada es Evolución histórica del total de estudiantes graduados (2), por lo que debe cambiar el nombre de la hoja a Serie y el título de visualización a Evolución del número de estudiantes graduados por modalidad de formación. Finalmente repita los pasos 4, 5 y 6 mostrados en <a href="2-4-flujo-de-trabajo.html#graficodelineassegmentado">2.4.2.2</a>, la visualización se ve de esta manera.</p>
+<div class="figure" style="text-align: center"><span id="fig:lineassegmentadoporduplicacion-fig"></span>
+<img src="Imágenes/analisis22.jpg" alt="Gráfico de líneas segmentado" width="80%" />
+<p class="caption">
+Figura 2.57: Gráfico de líneas segmentado
+</p>
+</div>
+<p>Note que la descripción emergente no muestra la modalidad de formación a la que pertenece cada estudiante graduado por lo tanto se debe editar, agregando “Modalidad de formación: <Tipo Nivel>” donde : y <Tipo Nivel> se encuentran separados con un Tab; Modalidad de formación: debe ser escrito en el gris más oscuro disponible en la paleta y <Tipo Nivel> en negro.</p>
+<div class="figure" style="text-align: center"><span id="fig:lineassegmentadodescripcion-fig"></span>
+<img src="Imágenes/analisis23.jpg" alt="Editar descripción emergente" width="60%" />
+<p class="caption">
+Figura 2.58: Editar descripción emergente
+</p>
+</div>
+<p>Finalmente se obtiene la visualización presentada en la figura <a href="2-4-flujo-de-trabajo.html#fig:lineassegmentada-fig">2.55</a>.</p>
+<p>Si se observa detalladamente la descripción emergente de la visualización presentada en la página de las estadísticas de la Universidad se identifica que contiene el porcentaje de graduados por modalidad para añadir esto a la descripción emergente se debe:</p>
+<ol style="list-style-type: decimal">
+<li>Crear un campo calculado, haciendo clic en el menú desplegable ubicado entre Datos y Tablas, seleccionar Crear campo calculado, asignar un nombre útil al cálculo por ejemplo Conteo de estudiantes graduados por periodo, en el panel en blanco escriba COUNT([Year Semester]) y clic en Aceptar. Con esto se obtiene un nuevo campo que se ubica en la parte inferior del panel Tablas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:crearcampocalculadopaso1-fig"></span>
+<img src="Imágenes/analisis24.jpg" alt="Crear campo calculado" width="30%" />
+<p class="caption">
+Figura 2.59: Crear campo calculado
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:crearcampocalculadopaso1-1-fig"></span>
+<img src="Imágenes/analisis25.jpg" alt="Edición del campo calculado" width="60%" />
+<p class="caption">
+Figura 2.60: Edición del campo calculado
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Luego tener el campo calculado creado debe arrastrarlo a la tarjeta etiqueta ubicada en el estante Marcas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:etiquetas-fig"></span>
+<img src="Imágenes/analisis26.jpg" alt="Etiquetas del total de estudiantes graduados" width="80%" />
+<p class="caption">
+Figura 2.61: Etiquetas del total de estudiantes graduados
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>En el menú desplegable del campo AGG(Conteo de estudiantes graduados por periodo), seleccione Añadir calculo de tabla.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:crearcalculodetabla-fig"></span>
+<img src="Imágenes/analisis27.jpg" alt="Añadir cálculo de tabla" width="30%" />
+<p class="caption">
+Figura 2.62: Añadir cálculo de tabla
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>En la ventana calculo de tablas en tipo de cálculo seleccione Porcentaje del total y en Calcular usando seleccione Tabla (abajo) y cierre la ventana.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:editarcalculodetabla-fig"></span>
+<img src="Imágenes/analisis28.jpg" alt="Seleccionar cálculo y alcance" width="40%" />
+<p class="caption">
+Figura 2.63: Seleccionar cálculo y alcance
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Ahora la visualización muestra el porcentaje de estudiantes graduados por modalidad de formación, por ejemplo, para el periodo 2009-1 el <span class="math inline">\(60.77\%\)</span> de los graduados son fueron de pregrado y el restante <span class="math inline">\(30.33\%\)</span> de postgrado.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:etiquetasenporcentaje-fig"></span>
+<img src="Imágenes/analisis31.jpg" alt="Visualización con etiquetas de porcentaje" width="80%" />
+<p class="caption">
+Figura 2.64: Visualización con etiquetas de porcentaje
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Para que estas etiquetas no se muestren sobre la línea si no en la tarjeta de descripción emergente Luego tener el campo calculado creado haga clic sobre descripción emergente y agregue esta línea de texto “Porcentaje del total: &lt;% de total AGG(Conteo de estudiantes graduados por periodo)&gt;”, edite el color y el tamaño para que coincida con lo demás que contiene esta tarjeta y clic en Aceptar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:añadircalculodetablaadescripcion-fig"></span>
+<img src="Imágenes/analisis29.jpg" alt="Añadir cálculo de tabla a la descripción emergente" width="80%" />
+<p class="caption">
+Figura 2.65: Añadir cálculo de tabla a la descripción emergente
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Haga clic en la tarjeta Etiqueta del estante marcas y desactive la opción Mostrar etiquetas de marca; finalmente la visualización se ve como se deseaba.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:descripcionconporcentaje-fig"></span>
+<img src="Imágenes/analisis30.jpg" alt="Visualizacion segmentada y con porcentajes" width="80%" />
+<p class="caption">
+Figura 2.66: Visualizacion segmentada y con porcentajes
 </p>
 </div>
 </div>

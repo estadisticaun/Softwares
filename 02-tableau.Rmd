@@ -589,7 +589,7 @@ knitr::include_graphics("Imágenes/analisis16.jpg")
 knitr::include_graphics("Imágenes/analisis17.jpg")
 ```
 
-6.	En la leyenda de colores ubicada en el panel letarl derecho de la visualizacion, como se muestra en la figura \@ref(fig:paso4lineassegmentada-fig), haga clic en el menú desplegable y seleccione Editar título,  en el cuadro de texto borre Tipo Nivel y escriba Modalidad de formación y clic en aceptar.
+6.	En la leyenda de colores ubicada en el panel letaral derecho de la visualizacion, como se muestra en la figura \@ref(fig:paso4lineassegmentada-fig), haga clic en el menú desplegable y seleccione Editar título,  en el cuadro de texto borre Tipo Nivel y escriba Modalidad de formación y clic en aceptar.
 
 ```{r paso6lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar título de leyenda de colores', out.width='20%'}
 knitr::include_graphics("Imágenes/analisis18.jpg")
@@ -605,6 +605,70 @@ La visualización obtenida es:
 
 ```{r lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Visualización de la evolución de estudiantes graduados por modalidad de formación', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis20.jpg")
+```
+Otra opción para crear esta vista de líneas segmentada es duplicando la visualización creada en la sección anterior, es decir el grafico de líneas, para duplicar esta vista ubíquese en la hoja llamada Evolución histórica del total de estudiantes graduados y en la barra de herramientas haga clic en el icono que tiene dos hojas, con esto se crea una nueva hoja que contiene un duplicado del grafico de líneas.
+
+```{r duplicarhoja-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Duplicar hojas de trabajo', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis21.jpg")
+```
+
+El título de a visualización y de la hoja duplicada es Evolución histórica del total de estudiantes graduados (2), por lo que debe cambiar el nombre de la hoja a Serie y el título de visualización a Evolución del número de estudiantes graduados por modalidad de formación. Finalmente repita los pasos 4, 5 y 6 mostrados en \@ref(graficodelineassegmentado), la visualización se ve de esta manera.
+
+```{r lineassegmentadoporduplicacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas segmentado', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis22.jpg")
+```
+Note que la descripción emergente no muestra la modalidad de formación a la que pertenece cada estudiante graduado por lo tanto se debe editar, agregando “Modalidad de formación: <Tipo Nivel>” donde :  y <Tipo Nivel> se encuentran separados con un Tab; Modalidad de formación: debe ser escrito en el gris más oscuro disponible en la paleta y <Tipo Nivel> en negro. 
+
+```{r lineassegmentadodescripcion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar descripción emergente', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis23.jpg")
+```
+Finalmente se obtiene la visualización presentada en la figura \@ref(fig:lineassegmentada-fig). 
+
+Si se observa detalladamente la descripción emergente de la visualización presentada en la página de las estadísticas de la Universidad se identifica que contiene el porcentaje de graduados por modalidad para añadir esto a la descripción emergente se debe:
+
+1.	Crear un campo calculado, haciendo clic en el menú desplegable ubicado entre Datos y Tablas, seleccionar Crear campo calculado, asignar un nombre útil al cálculo por ejemplo Conteo de estudiantes graduados por periodo, en el panel en blanco escriba COUNT([Year Semester]) y clic en Aceptar. Con esto se obtiene un nuevo campo que se ubica en la parte inferior del panel Tablas. 
+
+```{r crearcampocalculadopaso1-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear campo calculado', out.width='30%'}
+knitr::include_graphics("Imágenes/analisis24.jpg")
+```
+
+```{r crearcampocalculadopaso1-1-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Edición del campo calculado', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis25.jpg")
+```
+
+2.	Luego tener el campo calculado creado debe arrastrarlo a la tarjeta etiqueta ubicada en el estante Marcas.
+
+```{r etiquetas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Etiquetas del total de estudiantes graduados', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis26.jpg")
+```
+
+3.	En el menú desplegable del campo AGG(Conteo de estudiantes graduados por periodo), seleccione Añadir calculo de tabla. 
+
+```{r crearcalculodetabla-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir cálculo de tabla', out.width='30%'}
+knitr::include_graphics("Imágenes/analisis27.jpg")
+```
+
+4.	En la ventana calculo de tablas en tipo de cálculo seleccione Porcentaje del total y en Calcular usando seleccione Tabla (abajo) y cierre la ventana.
+
+```{r editarcalculodetabla-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Seleccionar cálculo y alcance', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis28.jpg")
+```
+
+5.	Ahora la visualización muestra el porcentaje de estudiantes graduados por modalidad de formación, por ejemplo, para el periodo 2009-1 el $60.77\%$ de los graduados son fueron de pregrado y el restante $30.33\%$ de postgrado. 
+
+```{r etiquetasenporcentaje-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Visualización con etiquetas de porcentaje', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis31.jpg")
+```
+
+6.	Para que estas etiquetas no se muestren sobre la línea si no en la tarjeta de descripción emergente Luego tener el campo calculado creado haga clic sobre descripción emergente y agregue esta línea de texto “Porcentaje del total: <% de total AGG(Conteo de estudiantes graduados por periodo)>”, edite el color y el tamaño para que coincida con lo demás que contiene esta tarjeta y clic en Aceptar.
+
+```{r añadircalculodetablaadescripcion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir cálculo de tabla a la descripción emergente', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis29.jpg")
+```
+6.	Haga clic en la tarjeta Etiqueta del estante marcas y desactive la opción Mostrar etiquetas de marca; finalmente la visualización se ve como se deseaba. 
+
+```{r descripcionconporcentaje-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Visualizacion segmentada y con porcentajes', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis30.jpg")
 ```
 
 ### Compartir las visualizaciones
