@@ -102,7 +102,7 @@ En Internet es posible encontrar multitud de usuarios que comparten su trabajo y
 
 Para mayor información acerca de los precios puede visitar [Tableau Pricing](https://www.tableau.com/pricing/individual).
 
-### Compartir el trabajo realizado en Tableau
+### Compartir el trabajo realizado en Tableau {#compartirtrabajo}
 
 Cuando se usa Tableau Desktop, hay varias formas de guardar y compartir el trabajo realizado:
 
@@ -223,21 +223,7 @@ Al crear, editar e interactuar con vistas en Tableau Server o Tableau Online, ex
     
 3. Guardar cambios como una vista personalizada: una vista personalizada no cambia la original, pero está relacionada con ella. Si la vista original se actualiza o se vuelve a publicar, la vista personalizada también se actualiza. También puede elegir si sus vistas personalizadas son visibles para otros usuarios (públicas) o solo para usted (privadas).
 
-Cuando se usa Tableau Public solo se tiene la opción de guardar el libro de trabajo en el repositorio público. El proceso de la versión de escritorio de Tableau Public se realiza mediante los siguientes pasos:
-
-   1. Dirigirse a la página principal de [Tableau Public](https://public.tableau.com/en-us/s/), ingrese un correo electrónico con el cual quiere vincular su descarga y cuenta de Tableau Public, luego clic en "DOWNLOAD THE APP", inmediantamente se inicia la descarga.
-   
-```{r descargapublic-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descarga de Tableau Public', out.width='80%'}
-knitr::include_graphics("Imágenes/descargapublic.JPG")
-```
-   
-   2. Una vez se complete la descarga abra el archivo, lea los términos de licencia, selecciones "He leído y acepto los términos de acuerdo de licencia" y finalmente clic en "Instalar".
-
-```{r descarga2-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descarga de Tableau Public', out.width='60%'}
-knitr::include_graphics("Imágenes/descarga2.JPG")
-```
-
-   3. Cuando términe el proceso de instalación se creará un acceso directo en el escirtorio a la aplicación, una vez creadas las visualizaciones puede continuar con el proceso de publicación del trabajo, para el cual debe seguir estos pasos:
+Cuando se usa Tableau Public solo se tiene la opción de guardar el libro de trabajo en el repositorio público, para el cual debe seguir estos pasos:
 
    1. Con su libro de trabajo abierto en Tableau Desktop Public Edition, seleccione Archivo > Guardar en Tableau Public como...
    
@@ -265,6 +251,24 @@ knitr::include_graphics("Imágenes/Imagen4.png")
 ``` 
 
 Para obtener más información acerca de los pasos de publicación del trabajo puede visitar [Ayuda de Tableau](https://help.tableau.com/current/pro/desktop/en-us/save_savework.htm).
+
+## Instalación de Tableau Desktop Public
+
+El proceso de instalación de la versión de escritorio de Tableau Public se realiza mediante los siguientes pasos:
+
+   1. Dirigirse a la página principal de [Tableau Public](https://public.tableau.com/en-us/s/), ingrese un correo electrónico con el cual quiere vincular su descarga y cuenta de Tableau Public, luego clic en "DOWNLOAD THE APP", inmediantamente se inicia la descarga.
+   
+```{r descargapublic-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descarga de Tableau Public', out.width='80%'}
+knitr::include_graphics("Imágenes/descargapublic.JPG")
+```
+   
+   2. Una vez se complete la descarga abra el archivo, lea los términos de licencia, selecciones "He leído y acepto los términos de acuerdo de licencia" y finalmente clic en "Instalar".
+
+```{r descarga2-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descarga de Tableau Public', out.width='60%'}
+knitr::include_graphics("Imágenes/descarga2.JPG")
+```
+
+   3. Cuando términe el proceso de instalación se creará un acceso directo en el escirtorio a la aplicación, una vez creadas las visualizaciones puede continuar con el proceso de publicación del trabajo mostrado en la sección \@ref(compartirtrabajo). 
 
 ## Forma de navegación {#formadenavegacion}
 
@@ -566,32 +570,36 @@ Estos son los pasos básicos para hacer que las visualizaciones creadas en Table
 
 La siguiente visualización que se encuentra en la página de estadísticas de la Universidad Nacional de Colombia, en un gráfico de líneas por modalidad de formación, una tabla que contiene la misma información y un gráfico circular que contiene la información por modalidad de formación para el periodo actual es decir 2020-1.
 
-1.	Repita los pasos 1,2, 3, 4 presentados en @\ref(graficodelineas).
-2.	En el paso 5 mostrado en la sección @\ref(graficodelineas), en el nombre de la hoja escriba Serie y en el titulo de la visualización escriba Evolución del número de estudiantes graduados por modalidad de formación. 
-3.	Edite los ejes X y Y como se mostro en los pasos 6 y 7 de @\ref(graficodelineas).
+1.	Repita los pasos 1, 2, 3, 4 presentados en \@ref(graficodelineas).
+2.	En el paso 5 mostrado en la sección \@ref(graficodelineas), en el nombre de la hoja escriba Serie y en el titulo de la visualización escriba Evolución del número de estudiantes graduados por modalidad de formación. 
+3.	Edite los ejes X y Y como se mostro en los pasos 6 y 7 de \@ref(graficodelineas).
 4.	Arrastre el campo Tipo Nivel a color en el estante Marcas, con esto se crean dos líneas en el gráfico, una para los estudiantes graduados de Pregrado y otra para los graduados de Postgrado.
+
 ```{r paso4lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas por Tipo Nivel', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis15.jpg")
 ```
+
 5.	Para cambiar los colores, clic en color, editar colores; en la ventana emergente que se abre seleccione Postgrado y clic en el color naranja, seleccione Pregrado y clic en el color verde, finalmente clic en aceptar.
+
 ```{r paso5lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar colores', out.width='20%'}
 knitr::include_graphics("Imágenes/analisis16.jpg")
 ```
+
 ```{r paso5-1lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de colores a Tipo Nivel', out.width='45%'}
 knitr::include_graphics("Imágenes/analisis17.jpg")
 ```
-6.	En la leyenda de colores ubicada en el panel letarl derecho de la visualizacion, como se muestra en la figura @\ref(fig:paso4lineassegmentada-fig), haga clic en el menú desplegable y seleccione Editar título,  en el cuadro de texto borre Tipo Nivel y escriba Modalidad de formación y clic en aceptar.
+
+6.	En la leyenda de colores ubicada en el panel letarl derecho de la visualizacion, como se muestra en la figura \@ref(fig:paso4lineassegmentada-fig), haga clic en el menú desplegable y seleccione Editar título,  en el cuadro de texto borre Tipo Nivel y escriba Modalidad de formación y clic en aceptar.
 
 ```{r paso6lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar título de leyenda de colores', out.width='20%'}
 knitr::include_graphics("Imágenes/analisis18.jpg")
 ```
+
 ```{r paso6-1lineassegmentada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de título a leyenda de colores', out.width='45%'}
 knitr::include_graphics("Imágenes/analisis19.jpg")
 ```
 
-7.	Finalmente, la tarjeta de descripción emergente no es clara por lo que es necesario editarla, para esto siga el paso 8 de @\ref(graficoddelineas); cambiando Tipo Nivel por Modalidad de formación, Year Semester por Periodo y Recuento de Year Smester por Total Graduados. 
-
-
+7.	Finalmente, la tarjeta de descripción emergente no es clara por lo que es necesario editarla, para esto siga el paso 8 de \@ref(graficodelineas); cambiando Tipo Nivel por Modalidad de formación, Year Semester por Periodo y Recuento de Year Smester por Total Graduados. 
 
 La visualización obtenida es:
 
