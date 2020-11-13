@@ -772,6 +772,57 @@ knitr::include_graphics("Imágenes/analisis42.jpg")
 ```{r graficocircularfinal-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico circular para el periodo 2020-1', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis43.jpg")
 ```
+#### Gráfico de barras {#graficodebarras}
 
+Estos gráficos son útiles para representar las frecuencias de las clases de alguna variable de interés, en este caso se realizará un gráfico de barras horizontales que muestre la frecuencia y el porcentaje de estudiantes graduados por nivel de formación para el periodo 2020-1.
 
+1.	Cree una nueva hoja de trabajo y llámela Distribución de estudiantes graduados por nivel de formación, periodo 2020-1.
+
+2.	Arrastre el campo Nivel a filas y arrástrelo nuevamente desde el panel Tablas al estante columnas. 
+
+3.	En el menú desplegable del campo Nivel ubicado en el estante columnas seleccione medida y luego recuento como se mostro en el paso 2 de \@ref(graficodelineas). Debe obtener un grafico como este, 
+
+```{r paso3graficobarras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de barras', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis44.jpg")
+```
+
+4.	Ajuste el tamaño de la vista seleccionando vista completa en la barra de herramientas. 
+
+5.	Arrastre el campo Nivel a la tarjeta color ubicada en el estante marcas.
+
+6.	Edite los colores de cada barra como se mostro en el paso 5 de \@ref(graficodelineassegmentado). Asigne el color verde a Pregrado, rojo a maestría, azul a especialización, amarillo a especialidades medicas y gris a doctorado.
+
+7.	Luego haga clic en el botón que señala orden descendente ubicado en la barra de herramientas. Hasta el momento su visualización debe verse así,
+
+```{r paso7graficobarras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de barras con colores asignados', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis45.jpg")
+```
+
+8.	Observe que el recuento de nivel se esta haciendo para todos los periodos que contiene la base es decir desde 2009-1 hasta el 2020-1, para que solo muestre los del periodo actual debe añadir un filtro con el campo Year Semester y seleccionar únicamente el periodo de interés, no es necesario que muestre el filtro. 
+
+9.	Edite el eje x cambiando el título, escriba como título Número de graduados; también edite la descripción emergente cambiando Recuento de nivel por Número de graduados.
+
+10.	Como etiqueta de cada barra se debería mostrar el total de estudiantes graduados en ese nivel, para esto arrastre el campo Nivel a la tarjeta etiqueta, en el menú desplegable del campo seleccione Medida y luego recuento. 
+
+```{r paso10graficobarras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de barras con etiquetas', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis46.jpg")
+```
+
+11.	Es importante que en la descripción emergente se muestre el porcentaje de cada nivel de formación, para esto arrastre el campo Nivel a la tarjeta descripción emergente en el menú desplegable seleccione media y recuento.
+
+```{r paso11graficobarras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir porcentaje a descripción emergente', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis47.jpg")
+```
+12.	Haga clic en este mismo menú después de haber realizado en el paso anterior y seleccione añadir cálculo de tabla, en la ventana de cálculos de tabla en Tipo de cálculo seleccione Porcentaje del total y en calcular usando seleccione Tabla (abajo), en este momento la descripción emergente se ve así, 
+
+```{r paso12graficobarras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Edición de la descripción emergente', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis48.jpg")
+```
+13.	Cambie Recuento de nivel por Número de graduados y % de total Recuento de nivel junto con Tabla (abajo) por Porcentaje y de clic en aceptar. 
+
+El gráfico de barras horizontales para el nivel de formación para el periodo 2020-1 se muestra a continuación.
+
+```{r graficobarras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de barras por nivel de formación, periodo 2020-1', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis49.jpg")
+```
 ### Compartir las visualizaciones
