@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-12" />
+<meta name="date" content="2020-11-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -595,7 +595,7 @@ Figura 2.57: Gráfico de líneas segmentado
 </div>
 <p>Note que la descripción emergente no muestra la modalidad de formación a la que pertenece cada estudiante graduado por lo tanto se debe editar, agregando “Modalidad de formación: <Tipo Nivel>” donde : y <Tipo Nivel> se encuentran separados con un Tab; Modalidad de formación: debe ser escrito en el gris más oscuro disponible en la paleta y <Tipo Nivel> en negro.</p>
 <div class="figure" style="text-align: center"><span id="fig:lineassegmentadodescripcion-fig"></span>
-<img src="Imágenes/analisis23.jpg" alt="Editar descripción emergente" width="60%" />
+<img src="Imágenes/analisis23.jpg" alt="Editar descripción emergente" width="80%" />
 <p class="caption">
 Figura 2.58: Editar descripción emergente
 </p>
@@ -669,6 +669,75 @@ Figura 2.65: Añadir cálculo de tabla a la descripción emergente
 <img src="Imágenes/analisis30.jpg" alt="Visualizacion segmentada y con porcentajes" width="80%" />
 <p class="caption">
 Figura 2.66: Visualizacion segmentada y con porcentajes
+</p>
+</div>
+</div>
+<div id="tablas-de-texto" class="section level4">
+<h4><span class="header-section-number">2.4.2.3</span> Tablas de texto</h4>
+<p>Una forma útil y clara de mostrar los datos es usar tablas de texto, en este caso se presentara la forma de hacer una tabla de texto que contenga la información del número de estudiantes graduados por modalidad de formación.</p>
+<ol style="list-style-type: decimal">
+<li><p>Agregue una nueva hoja de trabajo y cambie el nombre por Tabla.</p></li>
+<li><p>Arrastre el campo Tipo Nivel al estante Columnas, los campos Year y Semestre cámbielos a cadena haciendo clic en el icono # y luego seleccione Cadena, arrastre estos campos modificados al estante filas, primero Year y luego Semestre.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2tablatexto-fig"></span>
+<img src="Imágenes/analisis32.jpg" alt="Arrastrar campos para crear tablas de texto" width="80%" />
+<p class="caption">
+Figura 2.67: Arrastrar campos para crear tablas de texto
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Ajuste el tamaño de la vista en la barra de herramientas seleccionando Vista completa.</p></li>
+<li><p>Arrastre el campo Recuento por periodo a la tarjeta Texto en el estante marcas.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4tablatexto-fig"></span>
+<img src="Imágenes/analisis33.jpg" alt="Añadir el texto a la tabla" width="80%" />
+<p class="caption">
+Figura 2.68: Añadir el texto a la tabla
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Los nombres de los campos utilizados en la vista no tienen nombres adecuados, por lo que se deben cambiar, desde el panel lateral Tablas seleccionando el menú desplegable del campo y haciendo clic en cambiar nombre, por ejemplo, Year debe ser cambiado por Año y Tipo Nivel por Modalidad de Formación.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5tablatexto-fig"></span>
+<img src="Imágenes/analisis34.jpg" alt="Editar nombres de los campos" width="40%" />
+<p class="caption">
+Figura 2.69: Editar nombres de los campos
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>El uso de filtros es útil para permitir que el usuario seleccione los años o semestres específicos que desea ver en la tabla, por lo cual se añadirá un filtro con el campo Año y otro con el campo Semestre. Arrastre el campo Año al estante filtro y en la ventana asegúrese de que todos los años estén seleccionados y luego haga clic en aceptar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6tablatexto-fig"></span>
+<img src="Imágenes/analisis35.jpg" alt="Añadir filtro" width="45%" />
+<p class="caption">
+Figura 2.70: Añadir filtro
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>En el estante Filtros haga clic en el menú desplegable del campo Año y seleccione mostrar filtro, con esto aparece una tarjeta en el panel lateral derecho que contiene el filtro.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7tablatexto-fig"></span>
+<img src="Imágenes/analisis36.jpg" alt="Mostrar el filtro" width="30%" />
+<p class="caption">
+Figura 2.71: Mostrar el filtro
+</p>
+</div>
+<p>La tabla de texto se visualiza de esta manera.</p>
+<div class="figure" style="text-align: center"><span id="fig:paso7-1tablatexto-fig"></span>
+<img src="Imágenes/analisis37.jpg" alt="Vista previa de la tabla de texto" width="80%" />
+<p class="caption">
+Figura 2.72: Vista previa de la tabla de texto
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li><p>En el panel lateral derecho esta el filtro que permite seleccionar los valores de años que el usuario desea ver, repita el paso 6 y 7 para crear un filtro con el campo semestre.</p></li>
+<li><p>Cambie el título de la visualización por Evolución del número de estudiantes graduados por modalidad de formación.</p></li>
+</ol>
+<p>Finalmente se muestra la visualización obtenida que permite al usuario seleccionar diferentes valores para el campo año y semestre.</p>
+<div class="figure" style="text-align: center"><span id="fig:tablatexto-fig"></span>
+<img src="Imágenes/analisis38.jpg" alt="Tabla de texto con filtros" width="80%" />
+<p class="caption">
+Figura 2.73: Tabla de texto con filtros
 </p>
 </div>
 </div>

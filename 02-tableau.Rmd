@@ -671,4 +671,57 @@ knitr::include_graphics("Imágenes/analisis29.jpg")
 knitr::include_graphics("Imágenes/analisis30.jpg")
 ```
 
+#### Tablas de texto
+
+Una forma útil y clara de mostrar los datos es usar tablas de texto, en este caso se presentara la forma de hacer una tabla de texto que contenga la información del número de estudiantes graduados por modalidad de formación. 
+
+1.	Agregue una nueva hoja de trabajo y cambie el nombre por Tabla.
+
+2.	Arrastre el campo Tipo Nivel al estante Columnas, los campos Year y Semestre cámbielos a cadena haciendo clic en el icono # y luego seleccione Cadena, arrastre estos campos modificados al estante filas, primero Year y luego Semestre. 
+
+```{r paso2tablatexto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Arrastrar campos para crear tablas de texto', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis32.jpg")
+```
+
+3.	Ajuste el tamaño de la vista en la barra de herramientas seleccionando Vista completa. 
+
+4.	Arrastre el campo Recuento por periodo a la tarjeta Texto en el estante marcas. 
+
+```{r paso4tablatexto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir el texto a la tabla', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis33.jpg")
+```
+
+5.	Los nombres de los campos utilizados en la vista no tienen nombres adecuados, por lo que se deben cambiar, desde el panel lateral Tablas seleccionando el menú desplegable del campo y haciendo clic en cambiar nombre, por ejemplo, Year debe ser cambiado por Año y Tipo Nivel por Modalidad de Formación.
+
+```{r paso5tablatexto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar nombres de los campos', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis34.jpg")
+```
+
+6.	El uso de filtros es útil para permitir que el usuario seleccione los años o semestres específicos que desea ver en la tabla, por lo cual se añadirá un filtro con el campo Año y otro con el campo Semestre. Arrastre el campo Año al estante filtro y en la ventana asegúrese de que todos los años estén seleccionados y luego haga clic en aceptar. 
+
+```{r paso6tablatexto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir filtro', out.width='45%'}
+knitr::include_graphics("Imágenes/analisis35.jpg")
+```
+
+7.	En el estante Filtros haga clic en el menú desplegable del campo Año y seleccione mostrar filtro, con esto aparece una tarjeta en el panel lateral derecho que contiene el filtro. 
+
+```{r paso7tablatexto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Mostrar el filtro', out.width='30%'}
+knitr::include_graphics("Imágenes/analisis36.jpg")
+```
+
+La tabla de texto se visualiza de esta manera.
+
+```{r paso7-1tablatexto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa de la tabla de texto', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis37.jpg")
+```
+
+8.	En el panel lateral derecho esta el filtro que permite seleccionar los valores de años que el usuario desea ver, repita el paso 6 y 7 para crear un filtro con el campo semestre. 
+
+9.	Cambie el título de la visualización por Evolución del número de estudiantes graduados por modalidad de formación.
+
+Finalmente se muestra la visualización obtenida que permite al usuario seleccionar diferentes valores para el campo año y semestre. 
+
+```{r tablatexto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tabla de texto con filtros', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis38.jpg")
+```
 ### Compartir las visualizaciones

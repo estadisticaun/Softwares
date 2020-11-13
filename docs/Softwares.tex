@@ -1500,7 +1500,7 @@ La siguiente visualización que se encuentra en la página de estadísticas de l
 \setcounter{enumi}{5}
 \tightlist
 \item
-  En la leyenda de colores ubicada en el panel letarl derecho de la visualizacion, como se muestra en la figura \ref{fig:paso4lineassegmentada-fig}, haga clic en el menú desplegable y seleccione Editar título, en el cuadro de texto borre Tipo Nivel y escriba Modalidad de formación y clic en aceptar.
+  En la leyenda de colores ubicada en el panel letaral derecho de la visualizacion, como se muestra en la figura \ref{fig:paso4lineassegmentada-fig}, haga clic en el menú desplegable y seleccione Editar título, en el cuadro de texto borre Tipo Nivel y escriba Modalidad de formación y clic en aceptar.
 \end{enumerate}
 
 \begin{figure}
@@ -1538,6 +1538,170 @@ La visualización obtenida es:
 }
 
 \caption{Visualización de la evolución de estudiantes graduados por modalidad de formación}\label{fig:lineassegmentada-fig}
+\end{figure}
+
+Otra opción para crear esta vista de líneas segmentada es duplicando la visualización creada en la sección anterior, es decir el grafico de líneas, para duplicar esta vista ubíquese en la hoja llamada Evolución histórica del total de estudiantes graduados y en la barra de herramientas haga clic en el icono que tiene dos hojas, con esto se crea una nueva hoja que contiene un duplicado del grafico de líneas.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis21} 
+
+}
+
+\caption{Duplicar hojas de trabajo}\label{fig:duplicarhoja-fig}
+\end{figure}
+
+El título de a visualización y de la hoja duplicada es Evolución histórica del total de estudiantes graduados (2), por lo que debe cambiar el nombre de la hoja a Serie y el título de visualización a Evolución del número de estudiantes graduados por modalidad de formación. Finalmente repita los pasos 4, 5 y 6 mostrados en \ref{graficodelineassegmentado}, la visualización se ve de esta manera.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis22} 
+
+}
+
+\caption{Gráfico de líneas segmentado}\label{fig:lineassegmentadoporduplicacion-fig}
+\end{figure}
+
+Note que la descripción emergente no muestra la modalidad de formación a la que pertenece cada estudiante graduado por lo tanto se debe editar, agregando ``Modalidad de formación: '' donde : y se encuentran separados con un Tab; Modalidad de formación: debe ser escrito en el gris más oscuro disponible en la paleta y en negro.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis23} 
+
+}
+
+\caption{Editar descripción emergente}\label{fig:lineassegmentadodescripcion-fig}
+\end{figure}
+
+Finalmente se obtiene la visualización presentada en la figura \ref{fig:lineassegmentada-fig}.
+
+Si se observa detalladamente la descripción emergente de la visualización presentada en la página de las estadísticas de la Universidad se identifica que contiene el porcentaje de graduados por modalidad para añadir esto a la descripción emergente se debe:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Crear un campo calculado, haciendo clic en el menú desplegable ubicado entre Datos y Tablas, seleccionar Crear campo calculado, asignar un nombre útil al cálculo por ejemplo Conteo de estudiantes graduados por periodo, en el panel en blanco escriba COUNT({[}Year Semester{]}) y clic en Aceptar. Con esto se obtiene un nuevo campo que se ubica en la parte inferior del panel Tablas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/analisis24} 
+
+}
+
+\caption{Crear campo calculado}\label{fig:crearcampocalculadopaso1-fig}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis25} 
+
+}
+
+\caption{Edición del campo calculado}\label{fig:crearcampocalculadopaso1-1-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Luego tener el campo calculado creado debe arrastrarlo a la tarjeta etiqueta ubicada en el estante Marcas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis26} 
+
+}
+
+\caption{Etiquetas del total de estudiantes graduados}\label{fig:etiquetas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  En el menú desplegable del campo AGG(Conteo de estudiantes graduados por periodo), seleccione Añadir calculo de tabla.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/analisis27} 
+
+}
+
+\caption{Añadir cálculo de tabla}\label{fig:crearcalculodetabla-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  En la ventana calculo de tablas en tipo de cálculo seleccione Porcentaje del total y en Calcular usando seleccione Tabla (abajo) y cierre la ventana.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/analisis28} 
+
+}
+
+\caption{Seleccionar cálculo y alcance}\label{fig:editarcalculodetabla-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Ahora la visualización muestra el porcentaje de estudiantes graduados por modalidad de formación, por ejemplo, para el periodo 2009-1 el \(60.77\%\) de los graduados son fueron de pregrado y el restante \(30.33\%\) de postgrado.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis31} 
+
+}
+
+\caption{Visualización con etiquetas de porcentaje}\label{fig:etiquetasenporcentaje-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Para que estas etiquetas no se muestren sobre la línea si no en la tarjeta de descripción emergente Luego tener el campo calculado creado haga clic sobre descripción emergente y agregue esta línea de texto ``Porcentaje del total: \textless\% de total AGG(Conteo de estudiantes graduados por periodo)\textgreater{}'', edite el color y el tamaño para que coincida con lo demás que contiene esta tarjeta y clic en Aceptar.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis29} 
+
+}
+
+\caption{Añadir cálculo de tabla a la descripción emergente}\label{fig:añadircalculodetablaadescripcion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Haga clic en la tarjeta Etiqueta del estante marcas y desactive la opción Mostrar etiquetas de marca; finalmente la visualización se ve como se deseaba.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis30} 
+
+}
+
+\caption{Visualizacion segmentada y con porcentajes}\label{fig:descripcionconporcentaje-fig}
 \end{figure}
 
 \hypertarget{compartir-las-visualizaciones}{%
