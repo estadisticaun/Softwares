@@ -741,6 +741,62 @@ Figura 2.73: Tabla de texto con filtros
 </p>
 </div>
 </div>
+<div id="gráfico-circular" class="section level4">
+<h4><span class="header-section-number">2.4.2.4</span> Gráfico circular</h4>
+<p>Los gráficos circulares son un recurso estadístico muy utilizado para representar porcentajes y proporciones, en este caso se hará un grafico circular que permita ver la distribución del total de estudiantes graduados por modalidad de formación para el periodo actual es decir 2020-1.</p>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva hoja de trabajo y llámela Distribución de graduados por modalidad de formación, periodo 2020-1.</p></li>
+<li><p>Arrastre el campo modalidad de formación a la tarjeta Color ubicada en el estante marcas.</p></li>
+<li><p>Cambie la forma de Automático a circular en el menú desplegable de este mismo estante.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:cambiarmarcaparagraficotorta-fig"></span>
+<img src="Imágenes/analisis39.jpg" alt="Cambiar marca por circular" width="20%" />
+<p class="caption">
+Figura 2.74: Cambiar marca por circular
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Arrastre el campo calculado llamado Recuento por modalidad de formación a la tarjeta ángulo.</p></li>
+<li><p>Ajuste el tamaño de la vista seleccionando Vista completa en la barra de herramientas, la visualización debe versa de esta manera.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:graficocircular-fig"></span>
+<img src="Imágenes/analisis40.jpg" alt="Vista previa grafico circular" width="80%" />
+<p class="caption">
+Figura 2.75: Vista previa grafico circular
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Se deben añadir etiquetas que indiquen la modalidad de formación correspondiente a cada color, para esto arrastre el campo Modalidad de formación a la tarjeta etiquetas.</p></li>
+<li><p>Es importante visualizar los porcentajes que corresponden a cada modalidad, para esto se creara un nuevo campo calculado que contenga el conteo de los graduados por modalidad, como se mostro en <a href="2-4-flujo-de-trabajo.html#graficodelineassegmentado">2.4.2.2</a> y llámelo Recuento por modalidad de formación.</p></li>
+<li><p>Arrastre el campo calculado creado a la tarjeta etiqueta, se obtiene una etiqueta en el gráfico que muestra la cantidad de estudiantes graduados para todos los periodos por el nivel de formación.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8graficocircular-fig"></span>
+<img src="Imágenes/analisis41.jpg" alt="Añadir etiquetas" width="80%" />
+<p class="caption">
+Figura 2.76: Añadir etiquetas
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li><p>Se desea que esta visualización solo muestre los datos del periodo 2020-1, para esto cree un filtro con el campo Year semestre y seleccione únicamente el periodo 2020-1, no es necesario que muestre el filtro.</p></li>
+<li><p>En realidad, no interesa que la visualización muestre el número de estudiantes graduados por nivel si no el porcentaje de esto, para esto se debe añadir un calculo de tabla en la etiqueta del campo calculado, haga clic en el menú desplegable del ultimo campo del estante Marcas y seleccione Añadir calculo de tabla.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso10graficocircular-fig"></span>
+<img src="Imágenes/analisis42.jpg" alt="Añadir cálculo de tabla a las etiquetas" width="30%" />
+<p class="caption">
+Figura 2.77: Añadir cálculo de tabla a las etiquetas
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li><p>En la venta de cálculos de tablas, en Tipo de cálculo seleccione Porcentaje del total y calcular usando seleccione Tabla (a lo largo).</p></li>
+<li><p>Se debe editar la decepción emergente para que sea mas clara, cambie % de total Recuento por modalidad de formación junto con Tabla (a lo largo) por Porcentaje y Recuento por periodo por Número de graduados. Finalmente, se obtiene un gráfico circular que muestra el porcentaje de graduados por modalidad de formación y con una descripción emergente clara.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:graficocircularfinal-fig"></span>
+<img src="Imágenes/analisis43.jpg" alt="Gráfico circular para el periodo 2020-1" width="80%" />
+<p class="caption">
+Figura 2.78: Gráfico circular para el periodo 2020-1
+</p>
+</div>
+</div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">
 <h3><span class="header-section-number">2.4.3</span> Compartir las visualizaciones</h3>

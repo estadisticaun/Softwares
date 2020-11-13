@@ -724,4 +724,54 @@ Finalmente se muestra la visualización obtenida que permite al usuario seleccio
 ```{r tablatexto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tabla de texto con filtros', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis38.jpg")
 ```
+
+#### Gráfico circular 
+
+Los gráficos circulares son un recurso estadístico muy utilizado para representar porcentajes y proporciones, en este caso se hará un grafico circular que permita ver la distribución del total de estudiantes graduados por modalidad de formación para el periodo actual es decir 2020-1.
+
+1.	Cree una nueva hoja de trabajo y llámela Distribución de graduados por modalidad de formación, periodo 2020-1. 
+
+2.	Arrastre el campo modalidad de formación a la tarjeta Color ubicada en el estante marcas. 
+
+3.	Cambie la forma de Automático a circular en el menú desplegable de este mismo estante. 
+
+```{r cambiarmarcaparagraficotorta-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar marca por circular', out.width='20%'}
+knitr::include_graphics("Imágenes/analisis39.jpg")
+```
+
+4.	Arrastre el campo calculado llamado Recuento por modalidad de formación a la tarjeta ángulo. 
+
+5.	Ajuste el tamaño de la vista seleccionando Vista completa en la barra de herramientas, la visualización debe versa de esta manera.
+
+```{r graficocircular-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa grafico circular', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis40.jpg")
+```
+
+6.	Se deben añadir etiquetas que indiquen la modalidad de formación correspondiente a cada color, para esto arrastre el campo Modalidad de formación a la tarjeta etiquetas.
+
+7.	Es importante visualizar los porcentajes que corresponden a cada modalidad, para esto se creara un nuevo campo calculado que contenga el conteo de los graduados por modalidad, como se mostro en \@ref(graficodelineassegmentado) y llámelo Recuento por modalidad de formación.
+
+8.	Arrastre el campo calculado creado a la tarjeta etiqueta, se obtiene una etiqueta en el gráfico que muestra la cantidad de estudiantes graduados para todos los periodos por el nivel de formación. 
+
+```{r paso8graficocircular-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir etiquetas', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis41.jpg")
+```
+
+9.	Se desea que esta visualización solo muestre los datos del periodo 2020-1, para esto cree un filtro con el campo Year semestre y seleccione únicamente el periodo 2020-1, no es necesario que muestre el filtro.
+
+10.	En realidad, no interesa que la visualización muestre el número de estudiantes graduados por nivel si no el porcentaje de esto, para esto se debe añadir un calculo de tabla en la etiqueta del campo calculado, haga clic en el menú desplegable del ultimo campo del estante Marcas y seleccione Añadir calculo de tabla. 
+
+```{r paso10graficocircular-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir cálculo de tabla a las etiquetas', out.width='30%'}
+knitr::include_graphics("Imágenes/analisis42.jpg")
+```
+
+11.	En la venta de cálculos de tablas, en Tipo de cálculo seleccione Porcentaje del total y calcular usando seleccione Tabla (a lo largo).
+
+12.	Se debe editar la decepción emergente para que sea mas clara, cambie % de total Recuento por modalidad de formación junto con Tabla (a lo largo) por Porcentaje y Recuento por periodo por Número de graduados. Finalmente, se obtiene un gráfico circular que muestra el porcentaje de graduados por modalidad de formación y con una descripción emergente clara. 
+
+```{r graficocircularfinal-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico circular para el periodo 2020-1', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis43.jpg")
+```
+
+
 ### Compartir las visualizaciones

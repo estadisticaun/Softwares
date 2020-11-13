@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-12}
+\date{2020-11-13}
 
 \begin{document}
 \maketitle
@@ -1702,6 +1702,128 @@ Si se observa detalladamente la descripción emergente de la visualización pres
 }
 
 \caption{Visualizacion segmentada y con porcentajes}\label{fig:descripcionconporcentaje-fig}
+\end{figure}
+
+\hypertarget{tablas-de-texto}{%
+\subsubsection{Tablas de texto}\label{tablas-de-texto}}
+
+Una forma útil y clara de mostrar los datos es usar tablas de texto, en este caso se presentara la forma de hacer una tabla de texto que contenga la información del número de estudiantes graduados por modalidad de formación.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Agregue una nueva hoja de trabajo y cambie el nombre por Tabla.
+\item
+  Arrastre el campo Tipo Nivel al estante Columnas, los campos Year y Semestre cámbielos a cadena haciendo clic en el icono \# y luego seleccione Cadena, arrastre estos campos modificados al estante filas, primero Year y luego Semestre.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis32} 
+
+}
+
+\caption{Arrastrar campos para crear tablas de texto}\label{fig:paso2tablatexto-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Ajuste el tamaño de la vista en la barra de herramientas seleccionando Vista completa.
+\item
+  Arrastre el campo Recuento por periodo a la tarjeta Texto en el estante marcas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis33} 
+
+}
+
+\caption{Añadir el texto a la tabla}\label{fig:paso4tablatexto-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Los nombres de los campos utilizados en la vista no tienen nombres adecuados, por lo que se deben cambiar, desde el panel lateral Tablas seleccionando el menú desplegable del campo y haciendo clic en cambiar nombre, por ejemplo, Year debe ser cambiado por Año y Tipo Nivel por Modalidad de Formación.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/analisis34} 
+
+}
+
+\caption{Editar nombres de los campos}\label{fig:paso5tablatexto-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  El uso de filtros es útil para permitir que el usuario seleccione los años o semestres específicos que desea ver en la tabla, por lo cual se añadirá un filtro con el campo Año y otro con el campo Semestre. Arrastre el campo Año al estante filtro y en la ventana asegúrese de que todos los años estén seleccionados y luego haga clic en aceptar.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.45\linewidth]{Imágenes/analisis35} 
+
+}
+
+\caption{Añadir filtro}\label{fig:paso6tablatexto-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  En el estante Filtros haga clic en el menú desplegable del campo Año y seleccione mostrar filtro, con esto aparece una tarjeta en el panel lateral derecho que contiene el filtro.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/analisis36} 
+
+}
+
+\caption{Mostrar el filtro}\label{fig:paso7tablatexto-fig}
+\end{figure}
+
+La tabla de texto se visualiza de esta manera.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis37} 
+
+}
+
+\caption{Vista previa de la tabla de texto}\label{fig:paso7-1tablatexto-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\item
+  En el panel lateral derecho esta el filtro que permite seleccionar los valores de años que el usuario desea ver, repita el paso 6 y 7 para crear un filtro con el campo semestre.
+\item
+  Cambie el título de la visualización por Evolución del número de estudiantes graduados por modalidad de formación.
+\end{enumerate}
+
+Finalmente se muestra la visualización obtenida que permite al usuario seleccionar diferentes valores para el campo año y semestre.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis38} 
+
+}
+
+\caption{Tabla de texto con filtros}\label{fig:tablatexto-fig}
 \end{figure}
 
 \hypertarget{compartir-las-visualizaciones}{%
