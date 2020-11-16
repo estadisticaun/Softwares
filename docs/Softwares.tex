@@ -1924,6 +1924,125 @@ Los gráficos circulares son un recurso estadístico muy utilizado para represen
 \caption{Gráfico circular para el periodo 2020-1}\label{fig:graficocircularfinal-fig}
 \end{figure}
 
+\hypertarget{graficodebarras}{%
+\subsubsection{Gráfico de barras}\label{graficodebarras}}
+
+Estos gráficos son útiles para representar las frecuencias de las clases de alguna variable de interés, en este caso se realizará un gráfico de barras horizontales que muestre la frecuencia y el porcentaje de estudiantes graduados por nivel de formación para el periodo 2020-1.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Cree una nueva hoja de trabajo y llámela Distribución de estudiantes graduados por nivel de formación, periodo 2020-1.
+\item
+  Arrastre el campo Nivel a filas y arrástrelo nuevamente desde el panel Tablas al estante columnas.
+\item
+  En el menú desplegable del campo Nivel ubicado en el estante columnas seleccione medida y luego recuento como se mostro en el paso 2 de \ref{graficodelineas}. Debe obtener un grafico como este,
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis44} 
+
+}
+
+\caption{Gráfico de barras}\label{fig:paso3graficobarras-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Ajuste el tamaño de la vista seleccionando vista completa en la barra de herramientas.
+\item
+  Arrastre el campo Nivel a la tarjeta color ubicada en el estante marcas.
+\item
+  Edite los colores de cada barra como se mostro en el paso 5 de \ref{graficodelineassegmentado}. Asigne el color verde a Pregrado, rojo a maestría, azul a especialización, amarillo a especialidades medicas y gris a doctorado.
+\item
+  Luego haga clic en el botón que señala orden descendente ubicado en la barra de herramientas. Hasta el momento su visualización debe verse así,
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis45} 
+
+}
+
+\caption{Gráfico de barras con colores asignados}\label{fig:paso7graficobarras-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\item
+  Observe que el recuento de nivel se esta haciendo para todos los periodos que contiene la base es decir desde 2009-1 hasta el 2020-1, para que solo muestre los del periodo actual debe añadir un filtro con el campo Year Semester y seleccionar únicamente el periodo de interés, no es necesario que muestre el filtro.
+\item
+  Edite el eje x cambiando el título, escriba como título Número de graduados; también edite la descripción emergente cambiando Recuento de nivel por Número de graduados.
+\item
+  Como etiqueta de cada barra se debería mostrar el total de estudiantes graduados en ese nivel, para esto arrastre el campo Nivel a la tarjeta etiqueta, en el menú desplegable del campo seleccione Medida y luego recuento.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis46} 
+
+}
+
+\caption{Gráfico de barras con etiquetas}\label{fig:paso10graficobarras-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Es importante que en la descripción emergente se muestre el porcentaje de cada nivel de formación, para esto arrastre el campo Nivel a la tarjeta descripción emergente en el menú desplegable seleccione media y recuento.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/analisis47} 
+
+}
+
+\caption{Añadir porcentaje a descripción emergente}\label{fig:paso11graficobarras-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  Haga clic en este mismo menú después de haber realizado en el paso anterior y seleccione añadir cálculo de tabla, en la ventana de cálculos de tabla en Tipo de cálculo seleccione Porcentaje del total y en calcular usando seleccione Tabla (abajo), en este momento la descripción emergente se ve así,
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis48} 
+
+}
+
+\caption{Edición de la descripción emergente}\label{fig:paso12graficobarras-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  Cambie Recuento de nivel por Número de graduados y \% de total Recuento de nivel junto con Tabla (abajo) por Porcentaje y de clic en aceptar.
+\end{enumerate}
+
+El gráfico de barras horizontales para el nivel de formación para el periodo 2020-1 se muestra a continuación.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis49} 
+
+}
+
+\caption{Gráfico de barras por nivel de formación, periodo 2020-1}\label{fig:graficobarras-fig}
+\end{figure}
+
 \hypertarget{compartir-las-visualizaciones}{%
 \subsection{Compartir las visualizaciones}\label{compartir-las-visualizaciones}}
 

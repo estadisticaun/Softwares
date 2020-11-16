@@ -725,7 +725,7 @@ Finalmente se muestra la visualización obtenida que permite al usuario seleccio
 knitr::include_graphics("Imágenes/analisis38.jpg")
 ```
 
-#### Gráfico circular 
+#### Gráfico circular {#graficocircular}
 
 Los gráficos circulares son un recurso estadístico muy utilizado para representar porcentajes y proporciones, en este caso se hará un grafico circular que permita ver la distribución del total de estudiantes graduados por modalidad de formación para el periodo actual es decir 2020-1.
 
@@ -825,4 +825,43 @@ El gráfico de barras horizontales para el nivel de formación para el periodo 2
 ```{r graficobarras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de barras por nivel de formación, periodo 2020-1', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis49.jpg")
 ```
+
+#### Mapas de árbol {#mapasdearbol}
+
+Estos mapas usan rectángulos anidados para mostrar datos jerárquicos como parte de un todo. La forma cuadrada permite comparar más fácilmente tamaños relativos, para crear un mapa de árbol es necesario una medida y una dimensión. En este caso se hará un mapa de árbol que permita identificar cual sede de la Universidad Nacional tuvo más graduados a lo largo de los periodos que se tienen en la base de datos. 
+
+1.	Cree una nueva hoja de trabajo y llámela Distribución de graduados por sede de admisión.
+
+2.	Arrastre el campo Sede Nombre Adm a la tarjeta color y nuevamente desde el panel tablas arrastre este mismo campo a la tarjeta tamaño.
+
+```{r paso2mapaarbol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir los campos a la tarjeta marcas', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis50.jpg")
+```
+
+3.	En el menú desplegable de los campos ubicados en el estante marcas, seleccione medida y recuento, para ambas variables.
+
+4.	Arrastre nuevamente Sede Nombre Adm a la tarjeta Detalles.
+
+```{r paso4mapaarbol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Mapa de árbol base', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis51.jpg")
+```
+
+5.	El cuadrado mas grande y en el azul más fuerte identifica a la sede con mas graduados, que en este caso es la sede Bogotá, esta información se ubica en la descripción emergente, pero es necesario ubicarla como etiquetas de los cuadrados para que la visualización sea mas clara, para esto arrastre Sede Nombre Adm a la tarjeta etiqueta, presione la tecla ctrl y clic sobre alguno de los dos campos en verde ubicados en marcas y arrástrelo hasta etiqueta. Ahora su visualización muestra la sede de admisión y el total de estudiantes graduados.
+
+```{r paso5mapaarbol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir etiquetas al mapa de árbol', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis52.jpg")
+```
+
+6.	Los mapas de árbol son útiles para mostrar porcentajes del total, para esto repita los pasos 10 y 11 de \@ref(graficocircular). 
+
+7.	Edite la descripción emergente para que el nombre de los campos sea más claro; cambie Sede Nombre Adm por Sede de admisión, Recuento de Sede Nombre Adm por Número de estudiantes graduados y % de total Recuento de Sede Nombre Adm junto con Tabla (a lo largo) por porcentaje. 
+
+8.	Edite el nombre de la tarjeta ubicada en el lateral derecho haciendo clic en el menú desplegable y seleccione editar título, el nuevo título es Número de estudiantes graduados.
+
+El mapa de árbol obtenido es claro y consistente con la información que se desea visualizar:
+
+```{r mapaarbol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Mapa de árbol por sede de admisión', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis53.jpg")
+```
+
 ### Compartir las visualizaciones
