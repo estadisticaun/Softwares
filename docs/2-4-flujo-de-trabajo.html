@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-17" />
+<meta name="date" content="2020-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1018,6 +1018,62 @@ Figura 2.98: Gráfico de control con interacción de cantidad de desviciones est
 </p>
 </div>
 <p>Cabe aclarar que lo observado en este gráfico de control tiene una información de trasfondo que puede hacer que las conclusiones obtenidas no sean completamente ciertas.</p>
+<p>Ahora se realizará este mismo gráfico de control, pero discriminado por Sede de Matricula es decir la sede en la cual matricularon el último semestre del programa.</p>
+<ol style="list-style-type: decimal">
+<li><p>Duplique la hoja de trabajo que contiene el gráfico de control general.</p></li>
+<li><p>Cambie el nombre de la hoja duplicada por Gráfico de control por sede de matrícula.</p></li>
+<li><p>Arrastre el campo Sede Nombre Mat al estante filas, ubíquelo al lado izquierdo de las dos medidas que ya se tienen en este estante.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3controlsede-fig"></span>
+<img src="Imágenes/analisis64.jpg" alt="Añadir campo Sede de matrícula a la visualización" width="80%" />
+<p class="caption">
+Figura 2.99: Añadir campo Sede de matrícula a la visualización
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Es necesario ajustar el tamaño a Vista completa y reducir la magnitud de los puntos, esto último lo puede hacer desde la tarjeta tamaño ubicada en el estante marcas.</p></li>
+<li><p>Oculte el encabezado del eje Y, también oculte el encabezado ubicado en la parte superior del nombre de la sede de matrícula.</p></li>
+</ol>
+<p>Se obtiene una visualización que permite ver el comportamiento de los graduados a través de un periodo de tiempo discriminado por la sede de matrícula.</p>
+<div class="figure" style="text-align: center"><span id="fig:controlsede-fig"></span>
+<img src="Imágenes/analisis65.jpg" alt="Gráfico de control por sede de matrícula" width="80%" />
+<p class="caption">
+Figura 2.100: Gráfico de control por sede de matrícula
+</p>
+</div>
+<p>Observe que para sede Caribe hay periodos en los cuales no se graduaron estudiantes, esto puede ser una causa de los puntos fuera del limite de control en la figura <a href="2-4-flujo-de-trabajo.html#fig:graficodecontrol-fig">2.98</a>.</p>
+<p>También es de vital importancia visualizar este comportamiento a nivel de facultades para cada sede, ya que no todas las facultades poseen el mismo número de graduados y por ende puede causar que el número de estudiantes graduados de la sede a al que pertenece esa facultad este por encima o por debajo de los límites de control.</p>
+<ol style="list-style-type: decimal">
+<li><p>Duplique esta última visualización creada y llame a esta hoja duplicada Gráfico de control por facultad.</p></li>
+<li><p>Retire el campo Sede Nombre Mat del estante filas y llévelo al estante filtros, seleccione todas las sedes y haga clic en aceptar.</p></li>
+<li><p>En el menú desplegable del filtro seleccione mostrar filtro, en este momento su visualización debe verse de esta manera.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3controlfacultad-fig"></span>
+<img src="Imágenes/analisis66.jpg" alt="Filtrar por sede de matrícula" width="80%" />
+<p class="caption">
+Figura 2.101: Filtrar por sede de matrícula
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Como solo se quiere mostrar una sede a la vez es necesario editar la lista desplegable del filtro que se ubica en el panel lateral derecho, haga clic en el menú desplegable y seleccione Valor Individual (lista).</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4controlfacultad-fig"></span>
+<img src="Imágenes/analisis68.jpg" alt="Edición del control de filtro" width="20%" />
+<p class="caption">
+Figura 2.102: Edición del control de filtro
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Edite el titulo del filtro, ponga como nuevo titulo Sede de matrícula.</p></li>
+<li><p>Arrastre la variable Facultad al estante filas, ubíquelo al lado izquierdo de las dos medidas que ya se tienen en este estante.</p></li>
+</ol>
+<p>Por ejemplo, si selecciona sede Palmira y 2 desviaciones estándar, su gráfico de control se ve de la siguiente manera.</p>
+<div class="figure" style="text-align: center"><span id="fig:controlfacultad-fig"></span>
+<img src="Imágenes/analisis69.jpg" alt="Gráfico de control por facultad" width="80%" />
+<p class="caption">
+Figura 2.103: Gráfico de control por facultad
+</p>
+</div>
 </div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">

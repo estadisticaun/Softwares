@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-16}
+\date{2020-11-17}
 
 \begin{document}
 \maketitle
@@ -2121,6 +2121,212 @@ El mapa de árbol obtenido es claro y consistente con la información que se des
 
 \caption{Mapa de árbol por sede de admisión}\label{fig:mapaarbol-fig}
 \end{figure}
+
+\hypertarget{graficodecontrol}{%
+\subsubsection{Gráfico de control}\label{graficodecontrol}}
+
+Este tipo de gráficos se usan para evaluar cómo cambia un proceso en el tiempo. Se parecen mucho a los gráficos de líneas sencillos, pero se debe agregar una línea de promedio, un límite de control inferior y uno superior. Estos gráficos son una herramienta estadística de control de procesos, para determinar si un proceso de fabricación comercial está dentro o fuera de los límites.
+En este caso se considera importante visualizar si los graduados a través del tiempo siguen un proceso controlado, cabe resaltar que este proceso se puede ver afectado por muchos factores tales como la deserción, paros estudiantiles, la sede, considerando únicamente la sede de matrícula; la facultad y el programa a que pertenecen; se hará un gráfico general y luego un desglose de esta información mencionada para tener más claridad sobre el comportamiento de estas cifras.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Duplique la hoja que contiene el gráfico de líneas mostrado en \ref{graficodelineas}.
+\item
+  Cambie el nombre de la hoja duplicada por Gráfico de control general.
+\item
+  Arrastre el campo calculado llamado Recuento por periodo al lado derecho del campo ubicado en el estante filas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis54} 
+
+}
+
+\caption{Añadir campo calculado al estante filas}\label{fig:paso3graficodecontrol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  En el menú desplegable del campo AGG(Recuento por periodo) seleccione Eje doble.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis55} 
+
+}
+
+\caption{Asignar eje dole}\label{fig:paso4graficodecontrol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  En el estante marcas cambie línea por círculos para el campo AGG(Recuento por periodo).
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis56} 
+
+}
+
+\caption{Asignar marca circular}\label{fig:paso5graficodecontrol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  Oculte la tarjeta ubicada en el lateral derecho.
+\item
+  Asigne el mismo color tanto a las líneas como a los puntos, en este caso ambas se dejarán en color azul.
+\item
+  Haga clic en el panel Análisis ubicado en el lateral izquierdo, en personalizado arrastre línea de referencia a la visualización y suéltela sobre panel.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis57} 
+
+}
+
+\caption{Añadir línea de referencia}\label{fig:paso8graficodecontrol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  En la ventana emergente asegúrese que en el campo valor este CNT(Year Semester) y promedio, puede agregar intervalos de confianza y dar formato a la línea, en este caso no es necesario ya que solo se debe agregar la línea de promedio.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis58} 
+
+}
+
+\caption{Editar línea de referencia}\label{fig:paso9graficodecontrol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Es momento de implementar un parámetro que permita al usuario controlar cuantas desviaciones estándar por debajo y por encima del promedio se ubicaran los límites. En el menú del panel tablas seleccione crear parámetro, en la ventana emergente asigne el nombre de Desviaciones estándar al parámetro, tipo de dato cámbielo por entero, en valores permitidos seleccione lista y añada los valores de 1, 2 y 3, finalmente haga clic en aceptar.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis59} 
+
+}
+
+\caption{Crear parámetro para desviaciones estándar}\label{fig:paso10graficodecontrol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Los límites inferior y superior serán campos calculados, nuevamente el menú del panel tablas seleccione crear campo calculado asigne el nombre de Límite superior y escriba \textbf{WINDOW\_AVG(COUNT({[}Year Semester{]})) + WINDOW\_STDEV(COUNT({[}Year Semester{]})) * {[}Desviaciones estándar{]}}
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis60} 
+
+}
+
+\caption{Límite superior}\label{fig:paso11graficodecontrol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\item
+  Para el límite inferior repita el paso anterior, pero en lugar de sumar la desviación estándar la debe restar.
+\item
+  Agregue los limites de control a la tarjeta detalle ubicada en el estante marcas.
+\item
+  Nuevamente desde el panel Análisis en personalizado arrastre banda de referencia hacia la visualización y suéltela en panel.
+\item
+  En la ventana emergente, en la sección banda desde para valor asigne límite inferior y mínimo, en la etiqueta seleccione ninguno; para la sección banda hasta para valor asigne límite superior y máximo, en la etiqueta seleccione ninguno, para el formato de la imagen seleccione línea punteada en color gris oscuro y un relleno gris más claro.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis61} 
+
+}
+
+\caption{Editar banda de referencia}\label{fig:paso15graficodecontrol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{15}
+\tightlist
+\item
+  Para tener aun mas claridad en la vista e creara un campo calculado que identifique si el punto esta fuera o dentro de los límites de control. Cree un nuevo campo calculado y asigne el nombre de ``¿Está dentro del límite de control?'' y en el espacio en blanco escriba
+\end{enumerate}
+
+\textbf{IF COUNT({[}Year Semester{]}) \textgreater{} {[}Límite superior{]}}
+
+\textbf{or COUNT({[}Year Semester{]}) \textless{} {[}Límite inferior{]}}
+
+\textbf{THEN ``No'' ELSE ``Si''}
+
+\textbf{END}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{16}
+\tightlist
+\item
+  Asignar este campo calculado a la tarjeta colores del conteo que tiene como forma círculos, de el color rojo a la categoría No y verde a Si.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis62} 
+
+}
+
+\caption{Gráfico de control con una desviación estándar}\label{fig:paso17graficodecontrol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{17}
+\tightlist
+\item
+  Muestre el control del parámetro creado en el paso 10, haciendo clic derecho sobre el parámetro que se encuentra ubicado en la parte inferior del panel tablas y seleccionando Mostrar parámetro.
+\end{enumerate}
+
+Finalmente, la visualización obtenida permite identificar en que periodos se observa desviaciones fuertes en el número de graduados y el parámetro permite al usuario controlar cuantas desviaciones estándar se aginan a los límites.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis63} 
+
+}
+
+\caption{Gráfico de control con interacción de cantidad de desviciones estándar}\label{fig:graficodecontrol-fig}
+\end{figure}
+
+Cabe aclarar que lo observado en este gráfico de control tiene una información de trasfondo que puede hacer que las conclusiones obtenidas no sean completamente ciertas.
 
 \hypertarget{compartir-las-visualizaciones}{%
 \subsection{Compartir las visualizaciones}\label{compartir-las-visualizaciones}}
