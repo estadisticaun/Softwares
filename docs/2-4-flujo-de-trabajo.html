@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -900,13 +900,124 @@ Figura 2.87: Añadir etiquetas al mapa de árbol
 <li><p>Edite la descripción emergente para que el nombre de los campos sea más claro; cambie Sede Nombre Adm por Sede de admisión, Recuento de Sede Nombre Adm por Número de estudiantes graduados y % de total Recuento de Sede Nombre Adm junto con Tabla (a lo largo) por porcentaje.</p></li>
 <li><p>Edite el nombre de la tarjeta ubicada en el lateral derecho haciendo clic en el menú desplegable y seleccione editar título, el nuevo título es Número de estudiantes graduados.</p></li>
 </ol>
-<p>El mapa de árbol obtenido es claro y consistente con la información que se dese visualizar:</p>
+<p>El mapa de árbol obtenido es claro y consistente con la información que se desea visualizar:</p>
 <div class="figure" style="text-align: center"><span id="fig:mapaarbol-fig"></span>
 <img src="Imágenes/analisis53.jpg" alt="Mapa de árbol por sede de admisión" width="80%" />
 <p class="caption">
 Figura 2.88: Mapa de árbol por sede de admisión
 </p>
 </div>
+</div>
+<div id="graficodecontrol" class="section level4">
+<h4><span class="header-section-number">2.4.2.7</span> Gráfico de control</h4>
+<p>Este tipo de gráficos se usan para evaluar cómo cambia un proceso en el tiempo. Se parecen mucho a los gráficos de líneas sencillos, pero se debe agregar una línea de promedio, un límite de control inferior y uno superior. Estos gráficos son una herramienta estadística de control de procesos, para determinar si un proceso de fabricación comercial está dentro o fuera de los límites.
+En este caso se considera importante visualizar si los graduados a través del tiempo siguen un proceso controlado, cabe resaltar que este proceso se puede ver afectado por muchos factores tales como la deserción, paros estudiantiles, la sede, considerando únicamente la sede de matrícula; la facultad y el programa a que pertenecen; se hará un gráfico general y luego un desglose de esta información mencionada para tener más claridad sobre el comportamiento de estas cifras.</p>
+<ol style="list-style-type: decimal">
+<li><p>Duplique la hoja que contiene el gráfico de líneas mostrado en <a href="2-4-flujo-de-trabajo.html#graficodelineas">2.4.2.1</a>.</p></li>
+<li><p>Cambie el nombre de la hoja duplicada por Gráfico de control general.</p></li>
+<li><p>Arrastre el campo calculado llamado Recuento por periodo al lado derecho del campo ubicado en el estante filas.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3graficodecontrol-fig"></span>
+<img src="Imágenes/analisis54.jpg" alt="Añadir campo calculado al estante filas" width="80%" />
+<p class="caption">
+Figura 2.89: Añadir campo calculado al estante filas
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>En el menú desplegable del campo AGG(Recuento por periodo) seleccione Eje doble.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4graficodecontrol-fig"></span>
+<img src="Imágenes/analisis55.jpg" alt="Asignar eje dole" width="80%" />
+<p class="caption">
+Figura 2.90: Asignar eje dole
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>En el estante marcas cambie línea por círculos para el campo AGG(Recuento por periodo).</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5graficodecontrol-fig"></span>
+<img src="Imágenes/analisis56.jpg" alt="Asignar marca circular" width="80%" />
+<p class="caption">
+Figura 2.91: Asignar marca circular
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Oculte la tarjeta ubicada en el lateral derecho.</p></li>
+<li><p>Asigne el mismo color tanto a las líneas como a los puntos, en este caso ambas se dejarán en color azul.</p></li>
+<li><p>Haga clic en el panel Análisis ubicado en el lateral izquierdo, en personalizado arrastre línea de referencia a la visualización y suéltela sobre panel.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8graficodecontrol-fig"></span>
+<img src="Imágenes/analisis57.jpg" alt="Añadir línea de referencia" width="80%" />
+<p class="caption">
+Figura 2.92: Añadir línea de referencia
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>En la ventana emergente asegúrese que en el campo valor este CNT(Year Semester) y promedio, puede agregar intervalos de confianza y dar formato a la línea, en este caso no es necesario ya que solo se debe agregar la línea de promedio.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso9graficodecontrol-fig"></span>
+<img src="Imágenes/analisis58.jpg" alt="Editar línea de referencia" width="60%" />
+<p class="caption">
+Figura 2.93: Editar línea de referencia
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>Es momento de implementar un parámetro que permita al usuario controlar cuantas desviaciones estándar por debajo y por encima del promedio se ubicaran los límites. En el menú del panel tablas seleccione crear parámetro, en la ventana emergente asigne el nombre de Desviaciones estándar al parámetro, tipo de dato cámbielo por entero, en valores permitidos seleccione lista y añada los valores de 1, 2 y 3, finalmente haga clic en aceptar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso10graficodecontrol-fig"></span>
+<img src="Imágenes/analisis59.jpg" alt="Crear parámetro para desviaciones estándar" width="60%" />
+<p class="caption">
+Figura 2.94: Crear parámetro para desviaciones estándar
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>Los límites inferior y superior serán campos calculados, nuevamente el menú del panel tablas seleccione crear campo calculado asigne el nombre de Límite superior y escriba <strong>WINDOW_AVG(COUNT([Year Semester])) + WINDOW_STDEV(COUNT([Year Semester])) * [Desviaciones estándar]</strong></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso11graficodecontrol-fig"></span>
+<img src="Imágenes/analisis60.jpg" alt="Límite superior" width="60%" />
+<p class="caption">
+Figura 2.95: Límite superior
+</p>
+</div>
+<ol start="12" style="list-style-type: decimal">
+<li><p>Para el límite inferior repita el paso anterior, pero en lugar de sumar la desviación estándar la debe restar.</p></li>
+<li><p>Agregue los limites de control a la tarjeta detalle ubicada en el estante marcas.</p></li>
+<li><p>Nuevamente desde el panel Análisis en personalizado arrastre banda de referencia hacia la visualización y suéltela en panel.</p></li>
+<li><p>En la ventana emergente, en la sección banda desde para valor asigne límite inferior y mínimo, en la etiqueta seleccione ninguno; para la sección banda hasta para valor asigne límite superior y máximo, en la etiqueta seleccione ninguno, para el formato de la imagen seleccione línea punteada en color gris oscuro y un relleno gris más claro.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso15graficodecontrol-fig"></span>
+<img src="Imágenes/analisis61.jpg" alt="Editar banda de referencia" width="60%" />
+<p class="caption">
+Figura 2.96: Editar banda de referencia
+</p>
+</div>
+<ol start="16" style="list-style-type: decimal">
+<li>Para tener aun mas claridad en la vista e creara un campo calculado que identifique si el punto esta fuera o dentro de los límites de control. Cree un nuevo campo calculado y asigne el nombre de “¿Está dentro del límite de control?” y en el espacio en blanco escriba</li>
+</ol>
+<p><strong>IF COUNT([Year Semester]) &gt; [Límite superior]</strong></p>
+<p><strong>or COUNT([Year Semester]) &lt; [Límite inferior]</strong></p>
+<p><strong>THEN “No” ELSE “Si”</strong></p>
+<p><strong>END</strong></p>
+<ol start="17" style="list-style-type: decimal">
+<li>Asignar este campo calculado a la tarjeta colores del conteo que tiene como forma círculos, de el color rojo a la categoría No y verde a Si.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso17graficodecontrol-fig"></span>
+<img src="Imágenes/analisis62.jpg" alt="Gráfico de control con una desviación estándar" width="80%" />
+<p class="caption">
+Figura 2.97: Gráfico de control con una desviación estándar
+</p>
+</div>
+<ol start="18" style="list-style-type: decimal">
+<li>Muestre el control del parámetro creado en el paso 10, haciendo clic derecho sobre el parámetro que se encuentra ubicado en la parte inferior del panel tablas y seleccionando Mostrar parámetro.</li>
+</ol>
+<p>Finalmente, la visualización obtenida permite identificar en que periodos se observa desviaciones fuertes en el número de graduados y el parámetro permite al usuario controlar cuantas desviaciones estándar se aginan a los límites.</p>
+<div class="figure" style="text-align: center"><span id="fig:graficodecontrol-fig"></span>
+<img src="Imágenes/analisis63.jpg" alt="Gráfico de control con interacción de cantidad de desviciones estándar" width="80%" />
+<p class="caption">
+Figura 2.98: Gráfico de control con interacción de cantidad de desviciones estándar
+</p>
+</div>
+<p>Cabe aclarar que lo observado en este gráfico de control tiene una información de trasfondo que puede hacer que las conclusiones obtenidas no sean completamente ciertas.</p>
 </div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">

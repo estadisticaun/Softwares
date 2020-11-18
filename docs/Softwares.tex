@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-13}
+\date{2020-11-16}
 
 \begin{document}
 \maketitle
@@ -1826,8 +1826,8 @@ Finalmente se muestra la visualización obtenida que permite al usuario seleccio
 \caption{Tabla de texto con filtros}\label{fig:tablatexto-fig}
 \end{figure}
 
-\hypertarget{gruxe1fico-circular}{%
-\subsubsection{Gráfico circular}\label{gruxe1fico-circular}}
+\hypertarget{graficocircular}{%
+\subsubsection{Gráfico circular}\label{graficocircular}}
 
 Los gráficos circulares son un recurso estadístico muy utilizado para representar porcentajes y proporciones, en este caso se hará un grafico circular que permita ver la distribución del total de estudiantes graduados por modalidad de formación para el periodo actual es decir 2020-1.
 
@@ -2041,6 +2041,85 @@ El gráfico de barras horizontales para el nivel de formación para el periodo 2
 }
 
 \caption{Gráfico de barras por nivel de formación, periodo 2020-1}\label{fig:graficobarras-fig}
+\end{figure}
+
+\hypertarget{mapasdearbol}{%
+\subsubsection{Mapas de árbol}\label{mapasdearbol}}
+
+Estos mapas usan rectángulos anidados para mostrar datos jerárquicos como parte de un todo. La forma cuadrada permite comparar más fácilmente tamaños relativos, para crear un mapa de árbol es necesario una medida y una dimensión. En este caso se hará un mapa de árbol que permita identificar cual sede de la Universidad Nacional tuvo más graduados a lo largo de los periodos que se tienen en la base de datos.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Cree una nueva hoja de trabajo y llámela Distribución de graduados por sede de admisión.
+\item
+  Arrastre el campo Sede Nombre Adm a la tarjeta color y nuevamente desde el panel tablas arrastre este mismo campo a la tarjeta tamaño.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis50} 
+
+}
+
+\caption{Añadir los campos a la tarjeta marcas}\label{fig:paso2mapaarbol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  En el menú desplegable de los campos ubicados en el estante marcas, seleccione medida y recuento, para ambas variables.
+\item
+  Arrastre nuevamente Sede Nombre Adm a la tarjeta Detalles.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis51} 
+
+}
+
+\caption{Mapa de árbol base}\label{fig:paso4mapaarbol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  El cuadrado mas grande y en el azul más fuerte identifica a la sede con mas graduados, que en este caso es la sede Bogotá, esta información se ubica en la descripción emergente, pero es necesario ubicarla como etiquetas de los cuadrados para que la visualización sea mas clara, para esto arrastre Sede Nombre Adm a la tarjeta etiqueta, presione la tecla ctrl y clic sobre alguno de los dos campos en verde ubicados en marcas y arrástrelo hasta etiqueta. Ahora su visualización muestra la sede de admisión y el total de estudiantes graduados.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis52} 
+
+}
+
+\caption{Añadir etiquetas al mapa de árbol}\label{fig:paso5mapaarbol-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  Los mapas de árbol son útiles para mostrar porcentajes del total, para esto repita los pasos 10 y 11 de \ref{graficocircular}.
+\item
+  Edite la descripción emergente para que el nombre de los campos sea más claro; cambie Sede Nombre Adm por Sede de admisión, Recuento de Sede Nombre Adm por Número de estudiantes graduados y \% de total Recuento de Sede Nombre Adm junto con Tabla (a lo largo) por porcentaje.
+\item
+  Edite el nombre de la tarjeta ubicada en el lateral derecho haciendo clic en el menú desplegable y seleccione editar título, el nuevo título es Número de estudiantes graduados.
+\end{enumerate}
+
+El mapa de árbol obtenido es claro y consistente con la información que se desea visualizar:
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis53} 
+
+}
+
+\caption{Mapa de árbol por sede de admisión}\label{fig:mapaarbol-fig}
 \end{figure}
 
 \hypertarget{compartir-las-visualizaciones}{%

@@ -863,5 +863,96 @@ El mapa de árbol obtenido es claro y consistente con la información que se des
 ```{r mapaarbol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Mapa de árbol por sede de admisión', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis53.jpg")
 ```
+#### Gráfico de control {#graficodecontrol}
+
+Este tipo de gráficos se usan para evaluar cómo cambia un proceso en el tiempo. Se parecen mucho a los gráficos de líneas sencillos, pero se debe agregar una línea de promedio, un límite de control inferior y uno superior. Estos gráficos son una herramienta estadística de control de procesos, para determinar si un proceso de fabricación comercial está dentro o fuera de los límites. 
+En este caso se considera importante visualizar si los graduados a través del tiempo siguen un proceso controlado, cabe resaltar que este proceso se puede ver afectado por muchos factores tales como la deserción, paros estudiantiles, la sede, considerando únicamente la sede de matrícula; la facultad y el programa a que pertenecen; se hará un gráfico general y luego un desglose de esta información mencionada para tener más claridad sobre el comportamiento de estas cifras.
+
+1.	Duplique la hoja que contiene el gráfico de líneas mostrado en \@ref(graficodelineas).
+
+2.	Cambie el nombre de la hoja duplicada por Gráfico de control general.
+
+3.	Arrastre el campo calculado llamado Recuento por periodo al lado derecho del campo ubicado en el estante filas.
+
+```{r paso3graficodecontrol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir campo calculado al estante filas', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis54.jpg")
+```
+
+4.	En el menú desplegable del campo AGG(Recuento por periodo) seleccione Eje doble.
+
+```{r paso4graficodecontrol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar eje dole', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis55.jpg")
+```
+
+5.	En el estante marcas cambie línea por círculos para el campo AGG(Recuento por periodo).
+
+```{r paso5graficodecontrol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar marca circular', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis56.jpg")
+```
+
+6.	Oculte la tarjeta ubicada en el lateral derecho. 
+
+7.	Asigne el mismo color tanto a las líneas como a los puntos, en este caso ambas se dejarán en color azul. 
+
+8.	Haga clic en el panel Análisis ubicado en el lateral izquierdo, en personalizado arrastre línea de referencia a la visualización y suéltela sobre panel. 
+
+```{r paso8graficodecontrol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir línea de referencia', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis57.jpg")
+```
+
+9.	En la ventana emergente asegúrese que en el campo valor este CNT(Year Semester) y promedio, puede agregar intervalos de confianza y dar formato a la línea, en este caso no es necesario ya que solo se debe agregar la línea de promedio. 
+
+```{r paso9graficodecontrol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar línea de referencia', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis58.jpg")
+```
+
+10.	Es momento de implementar un parámetro que permita al usuario controlar cuantas desviaciones estándar por debajo y por encima del promedio se ubicaran los límites. En el menú del panel tablas seleccione crear parámetro, en la ventana emergente asigne el nombre de Desviaciones estándar al parámetro, tipo de dato cámbielo por entero, en valores permitidos seleccione lista y añada los valores de 1, 2 y 3, finalmente haga clic en aceptar.
+
+```{r paso10graficodecontrol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear parámetro para desviaciones estándar', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis59.jpg")
+```
+
+11.	Los límites inferior y superior serán campos calculados,  nuevamente el menú del panel tablas seleccione crear campo calculado asigne el nombre de Límite superior y escriba **WINDOW_AVG(COUNT([Year Semester])) + WINDOW_STDEV(COUNT([Year Semester])) * [Desviaciones estándar]**
+
+```{r paso11graficodecontrol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Límite superior', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis60.jpg")
+```
+
+12.	Para el límite inferior repita el paso anterior, pero en lugar de sumar la desviación estándar la debe restar. 
+
+13.	Agregue los limites de control a la tarjeta detalle ubicada en el estante marcas.
+
+14.	Nuevamente desde el panel Análisis en personalizado arrastre banda de referencia hacia la visualización y suéltela en panel. 
+
+15.	 En la ventana emergente, en la sección banda desde para valor asigne límite inferior y mínimo, en la etiqueta seleccione ninguno; para la sección banda hasta para valor asigne límite superior y máximo, en la etiqueta seleccione ninguno, para el formato de la imagen seleccione línea punteada en color gris oscuro y un relleno gris más claro.
+
+```{r paso15graficodecontrol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar banda de referencia', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis61.jpg")
+```
+
+16.	Para tener aun mas claridad en la vista e creara un campo calculado que identifique si el punto esta fuera o dentro de los límites de control. Cree un nuevo campo calculado y asigne el nombre de “¿Está dentro del límite de control?” y en el espacio en blanco escriba
+
+**IF COUNT([Year Semester]) > [Límite superior]**
+
+**or COUNT([Year Semester]) < [Límite inferior]**
+
+**THEN "No" ELSE "Si"**
+
+**END**
+
+17.	Asignar este campo calculado a la tarjeta colores del conteo que tiene como forma círculos, de el color rojo a la categoría No y verde a Si. 
+
+```{r paso17graficodecontrol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de control con una desviación estándar', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis62.jpg")
+```
+
+18.	Muestre el control del parámetro creado en el paso 10, haciendo clic derecho sobre el parámetro que se encuentra ubicado en la parte inferior del panel tablas y seleccionando Mostrar parámetro. 
+
+Finalmente, la visualización obtenida permite identificar en que periodos se observa desviaciones fuertes en el número de graduados y el parámetro permite al usuario controlar cuantas desviaciones estándar se aginan a los límites. 
+
+```{r graficodecontrol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de control con interacción de cantidad de desviciones estándar', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis63.jpg")
+```
+Cabe aclarar que lo observado en este gráfico de control tiene una información de trasfondo que puede hacer que las conclusiones obtenidas no sean completamente ciertas. 
 
 ### Compartir las visualizaciones
