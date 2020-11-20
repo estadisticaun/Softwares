@@ -98,6 +98,11 @@ fig:paso11graficodecontrol-fig
 fig:paso15graficodecontrol-fig
 fig:paso17graficodecontrol-fig
 fig:graficodecontrol-fig
+fig:paso3controlsede-fig
+fig:controlsede-fig
+fig:paso3controlfacultad-fig
+fig:paso4controlfacultad-fig
+fig:controlfacultad-fig
 intro
 tableau
 generalidades
@@ -125,8 +130,10 @@ flourish
 example-one
 example-two
 conclu
-fig:paso3controlsede-fig
-fig:controlsede-fig
-fig:paso3controlfacultad-fig
-fig:paso4controlfacultad-fig
-fig:controlfacultad-fig
+fig:paso4graficopendiente-fig
+fig:paso7graficopendiente-fig
+fig:graficopendienteamazonia-fig
+fig:paso1graficopendientebogota-fig
+fig:paso2graficopendientebogota-fig
+fig:graficopendientebogota-fig
+graficopendientes

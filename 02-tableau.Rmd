@@ -1007,6 +1007,77 @@ Por ejemplo, si selecciona sede Palmira y 2 desviaciones estándar, su gráfico 
 knitr::include_graphics("Imágenes/analisis69.jpg")
 ```
 
+ Es claro que la cantidad de graduados de la facultad de Ingeniería y administración tiene una tendencia de asenso y su promedio es superior a la facultad de Ciencias Agropecuarias. La facultad de ciencias agropecuarias no presenta una alta variabilidad en el número de graduados por periodo en la ventana de tiempo analizada.
+
+#### Gráfico de pendientes {#graficopendientes}
+
+Estos gráficos muestran los cambios en la clasificación o la posición de una dimensión desde un punto de inicio hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo.
+Para los datos que se están analizando este tipo de gráficos pueden ser utilizados para mostrar la cantidad de estudiantes graduados por año de cada programa de las distintas sedes de matrícula, teniendo como año de inicio el 2009 y año final el 2019, cabe aclarar que el conjunto de datos posee registros para el año 2020 pero solo para el 1 semestre, por tanto, la comparación no será equitativa ya que no se tienen registros para los dos semestres del año como en el caso de 2009. Para crear un grafico de pendientes siga estos pasos, 
+
+1.	Cree una nueva hoja de trabajo y llámela Gráfico de pendientes para la sede Amazonía.
+
+2.	Arrastre el campo Año al campo columnas y nuevamente desde el panel tablas arrástrelo al estante filas, allí seleccione medida y recuento. 
+
+3.	Cambie la marca por línea, ajuste la visualización a vista completa.
+
+4.	Añada la variable año al estante filas y seleccione únicamente los años 2009 y 2019 ya que son los años que se quieren visualizar en el gráfico de pendiente. Hasta el momento su visualización se ve de esta manera, 
+
+```{r paso4graficopendiente-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Filtrar la visualización por los años deseados', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis70.jpg")
+```
+
+5.	Se quiere visualizar la sede Amazonía, por tanto, añada el campo Sede Nombre Mat a filtros y seleccione Amazonía.
+
+6.	Añada programa a la tarjeta color del estante marcas. 
+
+7.	En la advertencia seleccione añadir todos los miembros.
+
+```{r paso7graficopendiente-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir todos los miembros', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis71.jpg")
+```
+
+8.	Quite la selección de mostrar encabezado en eje y, haciendo clic derecho sobre este eje.
+
+9.	Nuevamente arrastre el campo Año a la tarjeta etiqueta ubicada en el estante marcas, seleccione medida y recuento ene l menú desplegable del campo. 
+
+10.	Edite la descripción emergente cambiando Recuento de Año por Número de graduados. 
+
+La visualización obtenida es muy simple, ya que para esta sede no se tienen programas específicos. 
+
+```{r graficopendienteamazonia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de pendiente para la sede Amazonía', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis72.jpg")
+```
+
+Para realizar la visualización para las demás sedes únicamente debe duplicar la vista anterior y cambiar el nombre de la hoja por la sede a la que pertenece, en el campo Sede Nombre Mat ubicado en la tarjeta filtros, haga clic derecho y seleccione editar filtro, en la ventana emergente seleccione Bogotá. 
+
+```{r paso1graficopendientebogota-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Filtrar por sede Bogotá', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis73.jpg")
+```
+
+La gráfica en este momento es poco entendible ya que la para la sede Bogotá hay muchos programas y se están mezclando las dos modalidades de formación por lo que es útil agregar un filtro que permita seleccionar la modalidad que se quiere ver. Añada el campo modalidad de formación al estante filtros, seleccione ambas modalidades y haga clic en aceptar; muestre el filtro y seleccione valor individual (lista), si selecciona pregrado en modalidad de formación su visualización se ve así.
+
+```{r paso2graficopendientebogota-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir filtro de modalidad de formación', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis74.jpg")
+```
+
+Note que aún hay saturación en la gráfica, el ultimo desglose que se puede hacer es filtrar la visualización por las facultades. Añada el campo Facultad al estante filtros, seleccione todas las facultades, muestre el filtro y finalmente seleccione valor individual (lista), a modo de ejemplo seleccione la facultad de ciencias, su visualización se verá así.
+
+```{r graficopendientebogota-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de pendiente para la sede Bogotá', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis75.jpg")
+```
+
+Esta visualización permite identificar que los programas de estadística, física, geología, biología y farmacia han aumentado en la cantidad de estudiantes graduados, mientras que los demás programas de los que se tienen registro que ofrece la facultad de ciencias han disminuido en el número de estudiantes graduados, cabe aclarar que en eta visualización no se esta teniendo en cuenta lo que sucede con estos programas en los años intermedios. 
+
+Para las demás sedes de la universidad puede duplicar la ultima hoja creada, cambiar su nombre por la sede a la que pertenece y en el filtro Sede Nombre Mat seleccionar la sede que quiere visualizar, al final obtendrá 6 gráficos de pendientes, uno para cada sede, estas hojas de trabajo podrán ser reunidas en una historia, este procedimiento se mostrara en la siguiente sección.
+
+
+
+
+
+
+
+
+
 
 
 

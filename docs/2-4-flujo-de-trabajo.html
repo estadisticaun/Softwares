@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-18" />
+<meta name="date" content="2020-11-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1074,6 +1074,70 @@ Figura 2.102: Edición del control de filtro
 Figura 2.103: Gráfico de control por facultad
 </p>
 </div>
+<p>Es claro que la cantidad de graduados de la facultad de Ingeniería y administración tiene una tendencia de asenso y su promedio es superior a la facultad de Ciencias Agropecuarias. La facultad de ciencias agropecuarias no presenta una alta variabilidad en el número de graduados por periodo en la ventana de tiempo analizada.</p>
+</div>
+<div id="graficopendientes" class="section level4">
+<h4><span class="header-section-number">2.4.2.8</span> Gráfico de pendientes</h4>
+<p>Estos gráficos muestran los cambios en la clasificación o la posición de una dimensión desde un punto de inicio hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo.
+Para los datos que se están analizando este tipo de gráficos pueden ser utilizados para mostrar la cantidad de estudiantes graduados por año de cada programa de las distintas sedes de matrícula, teniendo como año de inicio el 2009 y año final el 2019, cabe aclarar que el conjunto de datos posee registros para el año 2020 pero solo para el 1 semestre, por tanto, la comparación no será equitativa ya que no se tienen registros para los dos semestres del año como en el caso de 2009. Para crear un grafico de pendientes siga estos pasos,</p>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva hoja de trabajo y llámela Gráfico de pendientes para la sede Amazonía.</p></li>
+<li><p>Arrastre el campo Año al campo columnas y nuevamente desde el panel tablas arrástrelo al estante filas, allí seleccione medida y recuento.</p></li>
+<li><p>Cambie la marca por línea, ajuste la visualización a vista completa.</p></li>
+<li><p>Añada la variable año al estante filas y seleccione únicamente los años 2009 y 2019 ya que son los años que se quieren visualizar en el gráfico de pendiente. Hasta el momento su visualización se ve de esta manera,</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4graficopendiente-fig"></span>
+<img src="Imágenes/analisis70.jpg" alt="Filtrar la visualización por los años deseados" width="80%" />
+<p class="caption">
+Figura 2.104: Filtrar la visualización por los años deseados
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Se quiere visualizar la sede Amazonía, por tanto, añada el campo Sede Nombre Mat a filtros y seleccione Amazonía.</p></li>
+<li><p>Añada programa a la tarjeta color del estante marcas.</p></li>
+<li><p>En la advertencia seleccione añadir todos los miembros.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7graficopendiente-fig"></span>
+<img src="Imágenes/analisis71.jpg" alt="Añadir todos los miembros" width="60%" />
+<p class="caption">
+Figura 2.105: Añadir todos los miembros
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li><p>Quite la selección de mostrar encabezado en eje y, haciendo clic derecho sobre este eje.</p></li>
+<li><p>Nuevamente arrastre el campo Año a la tarjeta etiqueta ubicada en el estante marcas, seleccione medida y recuento ene l menú desplegable del campo.</p></li>
+<li><p>Edite la descripción emergente cambiando Recuento de Año por Número de graduados.</p></li>
+</ol>
+<p>La visualización obtenida es muy simple, ya que para esta sede no se tienen programas específicos.</p>
+<div class="figure" style="text-align: center"><span id="fig:graficopendienteamazonia-fig"></span>
+<img src="Imágenes/analisis72.jpg" alt="Gráfico de pendiente para la sede Amazonía" width="80%" />
+<p class="caption">
+Figura 2.106: Gráfico de pendiente para la sede Amazonía
+</p>
+</div>
+<p>Para realizar la visualización para las demás sedes únicamente debe duplicar la vista anterior y cambiar el nombre de la hoja por la sede a la que pertenece, en el campo Sede Nombre Mat ubicado en la tarjeta filtros, haga clic derecho y seleccione editar filtro, en la ventana emergente seleccione Bogotá.</p>
+<div class="figure" style="text-align: center"><span id="fig:paso1graficopendientebogota-fig"></span>
+<img src="Imágenes/analisis73.jpg" alt="Filtrar por sede Bogotá" width="80%" />
+<p class="caption">
+Figura 2.107: Filtrar por sede Bogotá
+</p>
+</div>
+<p>La gráfica en este momento es poco entendible ya que la para la sede Bogotá hay muchos programas y se están mezclando las dos modalidades de formación por lo que es útil agregar un filtro que permita seleccionar la modalidad que se quiere ver. Añada el campo modalidad de formación al estante filtros, seleccione ambas modalidades y haga clic en aceptar; muestre el filtro y seleccione valor individual (lista), si selecciona pregrado en modalidad de formación su visualización se ve así.</p>
+<div class="figure" style="text-align: center"><span id="fig:paso2graficopendientebogota-fig"></span>
+<img src="Imágenes/analisis74.jpg" alt="Añadir filtro de modalidad de formación" width="80%" />
+<p class="caption">
+Figura 2.108: Añadir filtro de modalidad de formación
+</p>
+</div>
+<p>Note que aún hay saturación en la gráfica, el ultimo desglose que se puede hacer es filtrar la visualización por las facultades. Añada el campo Facultad al estante filtros, seleccione todas las facultades, muestre el filtro y finalmente seleccione valor individual (lista), a modo de ejemplo seleccione la facultad de ciencias, su visualización se verá así.</p>
+<div class="figure" style="text-align: center"><span id="fig:graficopendientebogota-fig"></span>
+<img src="Imágenes/analisis75.jpg" alt="Gráfico de pendiente para la sede Bogotá" width="80%" />
+<p class="caption">
+Figura 2.109: Gráfico de pendiente para la sede Bogotá
+</p>
+</div>
+<p>Esta visualización permite identificar que los programas de estadística, física, geología, biología y farmacia han aumentado en la cantidad de estudiantes graduados, mientras que los demás programas de los que se tienen registro que ofrece la facultad de ciencias han disminuido en el número de estudiantes graduados, cabe aclarar que en eta visualización no se esta teniendo en cuenta lo que sucede con estos programas en los años intermedios.</p>
+<p>Para las demás sedes de la universidad puede duplicar la ultima hoja creada, cambiar su nombre por la sede a la que pertenece y en el filtro Sede Nombre Mat seleccionar la sede que quiere visualizar, al final obtendrá 6 gráficos de pendientes, uno para cada sede, estas hojas de trabajo podrán ser reunidas en una historia, este procedimiento se mostrara en la siguiente sección.</p>
 </div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">

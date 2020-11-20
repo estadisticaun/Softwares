@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-17}
+\date{2020-11-18}
 
 \begin{document}
 \maketitle
@@ -2327,6 +2327,109 @@ Finalmente, la visualización obtenida permite identificar en que periodos se ob
 \end{figure}
 
 Cabe aclarar que lo observado en este gráfico de control tiene una información de trasfondo que puede hacer que las conclusiones obtenidas no sean completamente ciertas.
+
+Ahora se realizará este mismo gráfico de control, pero discriminado por Sede de Matricula es decir la sede en la cual matricularon el último semestre del programa.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Duplique la hoja de trabajo que contiene el gráfico de control general.
+\item
+  Cambie el nombre de la hoja duplicada por Gráfico de control por sede de matrícula.
+\item
+  Arrastre el campo Sede Nombre Mat al estante filas, ubíquelo al lado izquierdo de las dos medidas que ya se tienen en este estante.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis64} 
+
+}
+
+\caption{Añadir campo Sede de matrícula a la visualización}\label{fig:paso3controlsede-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Es necesario ajustar el tamaño a Vista completa y reducir la magnitud de los puntos, esto último lo puede hacer desde la tarjeta tamaño ubicada en el estante marcas.
+\item
+  Oculte el encabezado del eje Y, también oculte el encabezado ubicado en la parte superior del nombre de la sede de matrícula.
+\end{enumerate}
+
+Se obtiene una visualización que permite ver el comportamiento de los graduados a través de un periodo de tiempo discriminado por la sede de matrícula.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis65} 
+
+}
+
+\caption{Gráfico de control por sede de matrícula}\label{fig:controlsede-fig}
+\end{figure}
+
+Observe que para sede Caribe hay periodos en los cuales no se graduaron estudiantes, esto puede ser una causa de los puntos fuera del limite de control en la figura \ref{fig:graficodecontrol-fig}.
+
+También es de vital importancia visualizar este comportamiento a nivel de facultades para cada sede, ya que no todas las facultades poseen el mismo número de graduados y por ende puede causar que el número de estudiantes graduados de la sede a al que pertenece esa facultad este por encima o por debajo de los límites de control.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Duplique esta última visualización creada y llame a esta hoja duplicada Gráfico de control por facultad.
+\item
+  Retire el campo Sede Nombre Mat del estante filas y llévelo al estante filtros, seleccione todas las sedes y haga clic en aceptar.
+\item
+  En el menú desplegable del filtro seleccione mostrar filtro, en este momento su visualización debe verse de esta manera.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis66} 
+
+}
+
+\caption{Filtrar por sede de matrícula}\label{fig:paso3controlfacultad-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Como solo se quiere mostrar una sede a la vez es necesario editar la lista desplegable del filtro que se ubica en el panel lateral derecho, haga clic en el menú desplegable y seleccione Valor Individual (lista).
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/analisis68} 
+
+}
+
+\caption{Edición del control de filtro}\label{fig:paso4controlfacultad-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  Edite el titulo del filtro, ponga como nuevo titulo Sede de matrícula.
+\item
+  Arrastre la variable Facultad al estante filas, ubíquelo al lado izquierdo de las dos medidas que ya se tienen en este estante.
+\end{enumerate}
+
+Por ejemplo, si selecciona sede Palmira y 2 desviaciones estándar, su gráfico de control se ve de la siguiente manera.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis69} 
+
+}
+
+\caption{Gráfico de control por facultad}\label{fig:controlfacultad-fig}
+\end{figure}
+
+Es claro que la cantidad de graduados de la facultad de Ingeniería y administración tiene una tendencia de asenso y su promedio es superior a la facultad de Ciencias Agropecuarias. La facultad de ciencias agropecuarias no presenta una alta variabilidad en el número de graduados por periodo en la ventana de tiempo analizada.
 
 \hypertarget{compartir-las-visualizaciones}{%
 \subsection{Compartir las visualizaciones}\label{compartir-las-visualizaciones}}
