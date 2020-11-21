@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-18}
+\date{2020-11-19}
 
 \begin{document}
 \maketitle
@@ -2430,6 +2430,112 @@ Por ejemplo, si selecciona sede Palmira y 2 desviaciones estándar, su gráfico 
 \end{figure}
 
 Es claro que la cantidad de graduados de la facultad de Ingeniería y administración tiene una tendencia de asenso y su promedio es superior a la facultad de Ciencias Agropecuarias. La facultad de ciencias agropecuarias no presenta una alta variabilidad en el número de graduados por periodo en la ventana de tiempo analizada.
+
+\hypertarget{graficopendientes}{%
+\subsubsection{Gráfico de pendientes}\label{graficopendientes}}
+
+Estos gráficos muestran los cambios en la clasificación o la posición de una dimensión desde un punto de inicio hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo.
+Para los datos que se están analizando este tipo de gráficos pueden ser utilizados para mostrar la cantidad de estudiantes graduados por año de cada programa de las distintas sedes de matrícula, teniendo como año de inicio el 2009 y año final el 2019, cabe aclarar que el conjunto de datos posee registros para el año 2020 pero solo para el 1 semestre, por tanto, la comparación no será equitativa ya que no se tienen registros para los dos semestres del año como en el caso de 2009. Para crear un grafico de pendientes siga estos pasos,
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Cree una nueva hoja de trabajo y llámela Gráfico de pendientes para la sede Amazonía.
+\item
+  Arrastre el campo Año al campo columnas y nuevamente desde el panel tablas arrástrelo al estante filas, allí seleccione medida y recuento.
+\item
+  Cambie la marca por línea, ajuste la visualización a vista completa.
+\item
+  Añada la variable año al estante filas y seleccione únicamente los años 2009 y 2019 ya que son los años que se quieren visualizar en el gráfico de pendiente. Hasta el momento su visualización se ve de esta manera,
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis70} 
+
+}
+
+\caption{Filtrar la visualización por los años deseados}\label{fig:paso4graficopendiente-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  Se quiere visualizar la sede Amazonía, por tanto, añada el campo Sede Nombre Mat a filtros y seleccione Amazonía.
+\item
+  Añada programa a la tarjeta color del estante marcas.
+\item
+  En la advertencia seleccione añadir todos los miembros.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis71} 
+
+}
+
+\caption{Añadir todos los miembros}\label{fig:paso7graficopendiente-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\item
+  Quite la selección de mostrar encabezado en eje y, haciendo clic derecho sobre este eje.
+\item
+  Nuevamente arrastre el campo Año a la tarjeta etiqueta ubicada en el estante marcas, seleccione medida y recuento ene l menú desplegable del campo.
+\item
+  Edite la descripción emergente cambiando Recuento de Año por Número de graduados.
+\end{enumerate}
+
+La visualización obtenida es muy simple, ya que para esta sede no se tienen programas específicos.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis72} 
+
+}
+
+\caption{Gráfico de pendiente para la sede Amazonía}\label{fig:graficopendienteamazonia-fig}
+\end{figure}
+
+Para realizar la visualización para las demás sedes únicamente debe duplicar la vista anterior y cambiar el nombre de la hoja por la sede a la que pertenece, en el campo Sede Nombre Mat ubicado en la tarjeta filtros, haga clic derecho y seleccione editar filtro, en la ventana emergente seleccione Bogotá.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis73} 
+
+}
+
+\caption{Filtrar por sede Bogotá}\label{fig:paso1graficopendientebogota-fig}
+\end{figure}
+
+La gráfica en este momento es poco entendible ya que la para la sede Bogotá hay muchos programas y se están mezclando las dos modalidades de formación por lo que es útil agregar un filtro que permita seleccionar la modalidad que se quiere ver. Añada el campo modalidad de formación al estante filtros, seleccione ambas modalidades y haga clic en aceptar; muestre el filtro y seleccione valor individual (lista), si selecciona pregrado en modalidad de formación su visualización se ve así.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis74} 
+
+}
+
+\caption{Añadir filtro de modalidad de formación}\label{fig:paso2graficopendientebogota-fig}
+\end{figure}
+
+Note que aún hay saturación en la gráfica, el ultimo desglose que se puede hacer es filtrar la visualización por las facultades. Añada el campo Facultad al estante filtros, seleccione todas las facultades, muestre el filtro y finalmente seleccione valor individual (lista), a modo de ejemplo seleccione la facultad de ciencias, su visualización se verá así.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis75} 
+
+}
+
+\caption{Gráfico de pendiente para la sede Bogotá}\label{fig:graficopendientebogota-fig}
+\end{figure}
+
+Esta visualización permite identificar que los programas de estadística, física, geología, biología y farmacia han aumentado en la cantidad de estudiantes graduados, mientras que los demás programas de los que se tienen registro que ofrece la facultad de ciencias han disminuido en el número de estudiantes graduados, cabe aclarar que en eta visualización no se esta teniendo en cuenta lo que sucede con estos programas en los años intermedios.
+
+Para las demás sedes de la universidad puede duplicar la ultima hoja creada, cambiar su nombre por la sede a la que pertenece y en el filtro Sede Nombre Mat seleccionar la sede que quiere visualizar, al final obtendrá 6 gráficos de pendientes, uno para cada sede, estas hojas de trabajo podrán ser reunidas en una historia, este procedimiento se mostrara en la siguiente sección.
 
 \hypertarget{compartir-las-visualizaciones}{%
 \subsection{Compartir las visualizaciones}\label{compartir-las-visualizaciones}}

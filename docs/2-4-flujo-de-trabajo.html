@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-19" />
+<meta name="date" content="2020-11-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1136,7 +1136,37 @@ Figura 2.108: Añadir filtro de modalidad de formación
 Figura 2.109: Gráfico de pendiente para la sede Bogotá
 </p>
 </div>
-<p>Esta visualización permite identificar que los programas de estadística, física, geología, biología y farmacia han aumentado en la cantidad de estudiantes graduados, mientras que los demás programas de los que se tienen registro que ofrece la facultad de ciencias han disminuido en el número de estudiantes graduados, cabe aclarar que en eta visualización no se esta teniendo en cuenta lo que sucede con estos programas en los años intermedios.</p>
+<p>Esta visualización permite identificar que los programas de estadística, física, geología, biología y farmacia han aumentado en la cantidad de estudiantes graduados, mientras que los demás programas de los que se tienen registro que ofrece la facultad de ciencias han disminuido en el número de estudiantes graduados, cabe aclarar que en esta visualización no se esta teniendo en cuenta lo que sucede con estos programas en los años intermedios.</p>
+<p>Observe que en el lateral derecho donde se muestra el filtro de facultad se están mostrando todas las facultades que posee la universidad, cuando en realidad solo interesa mostrar las 12 facultades que pertenecen a la sede Bogotá, esto sucede ya que Tableau de manera predeterminada calcula los filtros de manera independiente, es decir, cada filtro accede a todas las filas con independencia de la existencia de otros filtros, para solucionar esto existen los filtros de contexto, el filtro que defina como contexto tendrá acceso a todas las filas del conjunto de datos mientras que los otros filtros dependerán del filtro de contexto, es decir que solo tienen acceso a las filas que cumplen el filtro de contexto.</p>
+<p>En este caso añadir el campo Sede Nombre Mat como filtro de contexto será de gran utilidad ya que el filtro facultad dependerá de los registros que coincidan con la sede seleccionada.</p>
+<p>Para crear el filtro de contexto haga clic en el menú desplegable del campo Sede Nombre Mat y seleccione añadir a contexto.</p>
+<div class="figure" style="text-align: center"><span id="fig:contextobogota-fig"></span>
+<img src="Imágenes/analisis76.jpg" alt="Añadir filtro de contexto" width="20%" />
+<p class="caption">
+Figura 2.110: Añadir filtro de contexto
+</p>
+</div>
+El campo sede se tornará de color gris y quedará al inicio de los demás filtros.
+<div class="figure" style="text-align: center"><span id="fig:1contextobogota-fig"></span>
+<img src="Imágenes/analisis77.jpg" alt="Filtro de contexto" width="20%" />
+<p class="caption">
+Figura 2.111: Filtro de contexto
+</p>
+</div>
+<p>Ahora debe ser editado el filtro facultad desde el menú desplegable de la leyenda del filtro, en el panel lateral derecho muestre el menú desplegable del filtro facultad y seleccione Todos los valores en contexto.</p>
+<div class="figure" style="text-align: center"><span id="fig:facultadcontextobogota-fig"></span>
+<img src="Imágenes/analisis78.jpg" alt="Edición filtro Facultad" width="30%" />
+<p class="caption">
+Figura 2.112: Edición filtro Facultad
+</p>
+</div>
+<p>Ahora el gráfico de pendientes para la sede Bogotá solo contiene las facultades que pertenecen a dicha sede.</p>
+<div class="figure" style="text-align: center"><span id="fig:graficopendientecontextobogota-fig"></span>
+<img src="Imágenes/analisis79.jpg" alt="Gráfico de pendientes sede Bogotá con filtro de contexto" width="80%" />
+<p class="caption">
+Figura 2.113: Gráfico de pendientes sede Bogotá con filtro de contexto
+</p>
+</div>
 <p>Para las demás sedes de la universidad puede duplicar la ultima hoja creada, cambiar su nombre por la sede a la que pertenece y en el filtro Sede Nombre Mat seleccionar la sede que quiere visualizar, al final obtendrá 6 gráficos de pendientes, uno para cada sede, estas hojas de trabajo podrán ser reunidas en una historia, este procedimiento se mostrara en la siguiente sección.</p>
 </div>
 </div>
