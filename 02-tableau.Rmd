@@ -863,6 +863,39 @@ El mapa de árbol obtenido es claro y consistente con la información que se des
 ```{r mapaarbol-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Mapa de árbol por sede de admisión', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis53.jpg")
 ```
+
+Una variación de los mapas de árbol que también permite mostrar la jerarquía que existe en los datos son el gráfico de burbujas y nube de palabras. 
+
+Para realizar un grafico de burbujas duplique la hoja distribución de graduados por sede de admisión y llámela Gráfico de burbujas para la distribución de graduados por sede de admisión, luego haga clic en el botón Mostrarme y seleccione burbujas agrupadas.
+
+```{r 1burbujas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de burbujas base por sede de admisión', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis80.jpg")
+```
+
+Note que la descripción emergente no está clara por lo que es necesario cambie Sede Nombre Adm por Sede de admisión, Recuento de Sede Nombre Adm por Número de estudiantes graduados y % de total Recuento de Sede Nombre Adm junto con Sede Nombre Adm por porcentaje; duplique el campo correspondiente a color y llévelo a etiqueta, ajuste el tamaño de la visualización a vista completa, edite el titulo de la leyenda de la clave de color, asigne como nuevo título porcentaje.  Finalmente, su visualización al igual que el mapa de árbol permite identificar cual sede de la Universidad Nacional tuvo más graduados a lo largo de los periodos registrados en el conjunto de datos.
+
+```{r burbujas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de burbujas por sede de admisión', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis81.jpg")
+```
+
+La otra forma de visualizar la distribución de los estudiantes graduados es usando una nube de palabras, esta muestra la frecuencia de uso. Nuevamente duplique la hoja en la que se creo el mapa de árbol y llámela Nube de palabras para la distribución de graduados por sede de admisión, en el estante marcas cambie automático por texto.
+
+```{r nubepalabras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico base de nube de palabras por sede de admisión', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis82.jpg")
+```
+
+En este tipo de gráficos no es conveniente mostrar el porcentaje, ya que el enfoque se debe dar al nombre de la sede, arrastre el campo CNT(Sede Nombre Adm) de la tarjeta etiqueta a la tarjeta detalles.
+
+```{r nubepalabraseditada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Nube de palabras por sede de admisión, sin porcentaje', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis83.jpg")
+```
+
+Note que de la descripción emergente se elimino el campo que mostraba el porcentaje, para recuperarlo en la descripción emergente al lado de Porcentaje escriba <% de total CNT(Sede Nombre Adm)>, que es la expresión que usa Tableau para calcular el Porcentaje.
+
+```{r nubepalabrasfinal-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Nube de palabras por sede de admisión', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis84.jpg")
+```
+
 #### Gráfico de control {#graficodecontrol}
 
 Este tipo de gráficos se usan para evaluar cómo cambia un proceso en el tiempo. Se parecen mucho a los gráficos de líneas sencillos, pero se debe agregar una línea de promedio, un límite de control inferior y uno superior. Estos gráficos son una herramienta estadística de control de procesos, para determinar si un proceso de fabricación comercial está dentro o fuera de los límites. 

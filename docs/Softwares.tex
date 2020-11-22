@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-19}
+\date{2020-11-21}
 
 \begin{document}
 \maketitle
@@ -2533,7 +2533,55 @@ Note que aún hay saturación en la gráfica, el ultimo desglose que se puede ha
 \caption{Gráfico de pendiente para la sede Bogotá}\label{fig:graficopendientebogota-fig}
 \end{figure}
 
-Esta visualización permite identificar que los programas de estadística, física, geología, biología y farmacia han aumentado en la cantidad de estudiantes graduados, mientras que los demás programas de los que se tienen registro que ofrece la facultad de ciencias han disminuido en el número de estudiantes graduados, cabe aclarar que en eta visualización no se esta teniendo en cuenta lo que sucede con estos programas en los años intermedios.
+Esta visualización permite identificar que los programas de estadística, física, geología, biología y farmacia han aumentado en la cantidad de estudiantes graduados, mientras que los demás programas de los que se tienen registro que ofrece la facultad de ciencias han disminuido en el número de estudiantes graduados, cabe aclarar que en esta visualización no se esta teniendo en cuenta lo que sucede con estos programas en los años intermedios.
+
+Observe que en el lateral derecho donde se muestra el filtro de facultad se están mostrando todas las facultades que posee la universidad, cuando en realidad solo interesa mostrar las 12 facultades que pertenecen a la sede Bogotá, esto sucede ya que Tableau de manera predeterminada calcula los filtros de manera independiente, es decir, cada filtro accede a todas las filas con independencia de la existencia de otros filtros, para solucionar esto existen los filtros de contexto, el filtro que defina como contexto tendrá acceso a todas las filas del conjunto de datos mientras que los otros filtros dependerán del filtro de contexto, es decir que solo tienen acceso a las filas que cumplen el filtro de contexto.
+
+En este caso añadir el campo Sede Nombre Mat como filtro de contexto será de gran utilidad ya que el filtro facultad dependerá de los registros que coincidan con la sede seleccionada.
+
+Para crear el filtro de contexto haga clic en el menú desplegable del campo Sede Nombre Mat y seleccione añadir a contexto.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/analisis76} 
+
+}
+
+\caption{Añadir filtro de contexto}\label{fig:contextobogota-fig}
+\end{figure}
+
+El campo sede se tornará de color gris y quedará al inicio de los demás filtros.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/analisis77} 
+
+}
+
+\caption{Filtro de contexto}\label{fig:1contextobogota-fig}
+\end{figure}
+
+Ahora debe ser editado el filtro facultad desde el menú desplegable de la leyenda del filtro, en el panel lateral derecho muestre el menú desplegable del filtro facultad y seleccione Todos los valores en contexto.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/analisis78} 
+
+}
+
+\caption{Edición filtro Facultad}\label{fig:facultadcontextobogota-fig}
+\end{figure}
+
+Ahora el gráfico de pendientes para la sede Bogotá solo contiene las facultades que pertenecen a dicha sede.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis79} 
+
+}
+
+\caption{Gráfico de pendientes sede Bogotá con filtro de contexto}\label{fig:graficopendientecontextobogota-fig}
+\end{figure}
 
 Para las demás sedes de la universidad puede duplicar la ultima hoja creada, cambiar su nombre por la sede a la que pertenece y en el filtro Sede Nombre Mat seleccionar la sede que quiere visualizar, al final obtendrá 6 gráficos de pendientes, uno para cada sede, estas hojas de trabajo podrán ser reunidas en una historia, este procedimiento se mostrara en la siguiente sección.
 

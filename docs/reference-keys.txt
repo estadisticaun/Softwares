@@ -109,6 +109,10 @@ fig:graficopendienteamazonia-fig
 fig:paso1graficopendientebogota-fig
 fig:paso2graficopendientebogota-fig
 fig:graficopendientebogota-fig
+fig:contextobogota-fig
+fig:1contextobogota-fig
+fig:facultadcontextobogota-fig
+fig:graficopendientecontextobogota-fig
 intro
 tableau
 generalidades
@@ -137,7 +141,8 @@ flourish
 example-one
 example-two
 conclu
-fig:contextobogota-fig
-fig:1contextobogota-fig
-fig:facultadcontextobogota-fig
-fig:graficopendientecontextobogota-fig
+fig:1burbujas-fig
+fig:burbujas-fig
+fig:nubepalabras-fig
+fig:nubepalabraseditada-fig
+fig:nubepalabrasfinal-fig

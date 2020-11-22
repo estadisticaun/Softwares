@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-21" />
+<meta name="date" content="2020-11-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -907,6 +907,42 @@ Figura 2.87: Añadir etiquetas al mapa de árbol
 Figura 2.88: Mapa de árbol por sede de admisión
 </p>
 </div>
+<p>Una variación de los mapas de árbol que también permite mostrar la jerarquía que existe en los datos son el gráfico de burbujas y nube de palabras.</p>
+<p>Para realizar un grafico de burbujas duplique la hoja distribución de graduados por sede de admisión y llámela Gráfico de burbujas para la distribución de graduados por sede de admisión, luego haga clic en el botón Mostrarme y seleccione burbujas agrupadas.</p>
+<div class="figure" style="text-align: center"><span id="fig:1burbujas-fig"></span>
+<img src="Imágenes/analisis80.jpg" alt="Gráfico de burbujas base por sede de admisión" width="80%" />
+<p class="caption">
+Figura 2.89: Gráfico de burbujas base por sede de admisión
+</p>
+</div>
+<p>Note que la descripción emergente no está clara por lo que es necesario cambie Sede Nombre Adm por Sede de admisión, Recuento de Sede Nombre Adm por Número de estudiantes graduados y % de total Recuento de Sede Nombre Adm junto con Sede Nombre Adm por porcentaje; duplique el campo correspondiente a color y llévelo a etiqueta, ajuste el tamaño de la visualización a vista completa, edite el titulo de la leyenda de la clave de color, asigne como nuevo título porcentaje. Finalmente, su visualización al igual que el mapa de árbol permite identificar cual sede de la Universidad Nacional tuvo más graduados a lo largo de los periodos registrados en el conjunto de datos.</p>
+<div class="figure" style="text-align: center"><span id="fig:burbujas-fig"></span>
+<img src="Imágenes/analisis81.jpg" alt="Gráfico de burbujas por sede de admisión" width="80%" />
+<p class="caption">
+Figura 2.90: Gráfico de burbujas por sede de admisión
+</p>
+</div>
+<p>La otra forma de visualizar la distribución de los estudiantes graduados es usando una nube de palabras, esta muestra la frecuencia de uso. Nuevamente duplique la hoja en la que se creo el mapa de árbol y llámela Nube de palabras para la distribución de graduados por sede de admisión, en el estante marcas cambie automático por texto.</p>
+<div class="figure" style="text-align: center"><span id="fig:nubepalabras-fig"></span>
+<img src="Imágenes/analisis82.jpg" alt="Gráfico base de nube de palabras por sede de admisión" width="80%" />
+<p class="caption">
+Figura 2.91: Gráfico base de nube de palabras por sede de admisión
+</p>
+</div>
+<p>En este tipo de gráficos no es conveniente mostrar el porcentaje, ya que el enfoque se debe dar al nombre de la sede, arrastre el campo CNT(Sede Nombre Adm) de la tarjeta etiqueta a la tarjeta detalles.</p>
+<div class="figure" style="text-align: center"><span id="fig:nubepalabraseditada-fig"></span>
+<img src="Imágenes/analisis83.jpg" alt="Nube de palabras por sede de admisión, sin porcentaje" width="80%" />
+<p class="caption">
+Figura 2.92: Nube de palabras por sede de admisión, sin porcentaje
+</p>
+</div>
+<p>Note que de la descripción emergente se elimino el campo que mostraba el porcentaje, para recuperarlo en la descripción emergente al lado de Porcentaje escriba &lt;% de total CNT(Sede Nombre Adm)&gt;, que es la expresión que usa Tableau para calcular el Porcentaje.</p>
+<div class="figure" style="text-align: center"><span id="fig:nubepalabrasfinal-fig"></span>
+<img src="Imágenes/analisis84.jpg" alt="Nube de palabras por sede de admisión" width="80%" />
+<p class="caption">
+Figura 2.93: Nube de palabras por sede de admisión
+</p>
+</div>
 </div>
 <div id="graficodecontrol" class="section level4">
 <h4><span class="header-section-number">2.4.2.7</span> Gráfico de control</h4>
@@ -920,7 +956,7 @@ En este caso se considera importante visualizar si los graduados a través del t
 <div class="figure" style="text-align: center"><span id="fig:paso3graficodecontrol-fig"></span>
 <img src="Imágenes/analisis54.jpg" alt="Añadir campo calculado al estante filas" width="80%" />
 <p class="caption">
-Figura 2.89: Añadir campo calculado al estante filas
+Figura 2.94: Añadir campo calculado al estante filas
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -929,7 +965,7 @@ Figura 2.89: Añadir campo calculado al estante filas
 <div class="figure" style="text-align: center"><span id="fig:paso4graficodecontrol-fig"></span>
 <img src="Imágenes/analisis55.jpg" alt="Asignar eje dole" width="80%" />
 <p class="caption">
-Figura 2.90: Asignar eje dole
+Figura 2.95: Asignar eje dole
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -938,7 +974,7 @@ Figura 2.90: Asignar eje dole
 <div class="figure" style="text-align: center"><span id="fig:paso5graficodecontrol-fig"></span>
 <img src="Imágenes/analisis56.jpg" alt="Asignar marca circular" width="80%" />
 <p class="caption">
-Figura 2.91: Asignar marca circular
+Figura 2.96: Asignar marca circular
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
@@ -949,7 +985,7 @@ Figura 2.91: Asignar marca circular
 <div class="figure" style="text-align: center"><span id="fig:paso8graficodecontrol-fig"></span>
 <img src="Imágenes/analisis57.jpg" alt="Añadir línea de referencia" width="80%" />
 <p class="caption">
-Figura 2.92: Añadir línea de referencia
+Figura 2.97: Añadir línea de referencia
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
@@ -958,7 +994,7 @@ Figura 2.92: Añadir línea de referencia
 <div class="figure" style="text-align: center"><span id="fig:paso9graficodecontrol-fig"></span>
 <img src="Imágenes/analisis58.jpg" alt="Editar línea de referencia" width="60%" />
 <p class="caption">
-Figura 2.93: Editar línea de referencia
+Figura 2.98: Editar línea de referencia
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
@@ -967,7 +1003,7 @@ Figura 2.93: Editar línea de referencia
 <div class="figure" style="text-align: center"><span id="fig:paso10graficodecontrol-fig"></span>
 <img src="Imágenes/analisis59.jpg" alt="Crear parámetro para desviaciones estándar" width="60%" />
 <p class="caption">
-Figura 2.94: Crear parámetro para desviaciones estándar
+Figura 2.99: Crear parámetro para desviaciones estándar
 </p>
 </div>
 <ol start="11" style="list-style-type: decimal">
@@ -976,7 +1012,7 @@ Figura 2.94: Crear parámetro para desviaciones estándar
 <div class="figure" style="text-align: center"><span id="fig:paso11graficodecontrol-fig"></span>
 <img src="Imágenes/analisis60.jpg" alt="Límite superior" width="60%" />
 <p class="caption">
-Figura 2.95: Límite superior
+Figura 2.100: Límite superior
 </p>
 </div>
 <ol start="12" style="list-style-type: decimal">
@@ -988,7 +1024,7 @@ Figura 2.95: Límite superior
 <div class="figure" style="text-align: center"><span id="fig:paso15graficodecontrol-fig"></span>
 <img src="Imágenes/analisis61.jpg" alt="Editar banda de referencia" width="60%" />
 <p class="caption">
-Figura 2.96: Editar banda de referencia
+Figura 2.101: Editar banda de referencia
 </p>
 </div>
 <ol start="16" style="list-style-type: decimal">
@@ -1004,7 +1040,7 @@ Figura 2.96: Editar banda de referencia
 <div class="figure" style="text-align: center"><span id="fig:paso17graficodecontrol-fig"></span>
 <img src="Imágenes/analisis62.jpg" alt="Gráfico de control con una desviación estándar" width="80%" />
 <p class="caption">
-Figura 2.97: Gráfico de control con una desviación estándar
+Figura 2.102: Gráfico de control con una desviación estándar
 </p>
 </div>
 <ol start="18" style="list-style-type: decimal">
@@ -1014,7 +1050,7 @@ Figura 2.97: Gráfico de control con una desviación estándar
 <div class="figure" style="text-align: center"><span id="fig:graficodecontrol-fig"></span>
 <img src="Imágenes/analisis63.jpg" alt="Gráfico de control con interacción de cantidad de desviciones estándar" width="80%" />
 <p class="caption">
-Figura 2.98: Gráfico de control con interacción de cantidad de desviciones estándar
+Figura 2.103: Gráfico de control con interacción de cantidad de desviciones estándar
 </p>
 </div>
 <p>Cabe aclarar que lo observado en este gráfico de control tiene una información de trasfondo que puede hacer que las conclusiones obtenidas no sean completamente ciertas.</p>
@@ -1027,7 +1063,7 @@ Figura 2.98: Gráfico de control con interacción de cantidad de desviciones est
 <div class="figure" style="text-align: center"><span id="fig:paso3controlsede-fig"></span>
 <img src="Imágenes/analisis64.jpg" alt="Añadir campo Sede de matrícula a la visualización" width="80%" />
 <p class="caption">
-Figura 2.99: Añadir campo Sede de matrícula a la visualización
+Figura 2.104: Añadir campo Sede de matrícula a la visualización
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -1038,10 +1074,10 @@ Figura 2.99: Añadir campo Sede de matrícula a la visualización
 <div class="figure" style="text-align: center"><span id="fig:controlsede-fig"></span>
 <img src="Imágenes/analisis65.jpg" alt="Gráfico de control por sede de matrícula" width="80%" />
 <p class="caption">
-Figura 2.100: Gráfico de control por sede de matrícula
+Figura 2.105: Gráfico de control por sede de matrícula
 </p>
 </div>
-<p>Observe que para sede Caribe hay periodos en los cuales no se graduaron estudiantes, esto puede ser una causa de los puntos fuera del limite de control en la figura <a href="2-4-flujo-de-trabajo.html#fig:graficodecontrol-fig">2.98</a>.</p>
+<p>Observe que para sede Caribe hay periodos en los cuales no se graduaron estudiantes, esto puede ser una causa de los puntos fuera del limite de control en la figura <a href="2-4-flujo-de-trabajo.html#fig:graficodecontrol-fig">2.103</a>.</p>
 <p>También es de vital importancia visualizar este comportamiento a nivel de facultades para cada sede, ya que no todas las facultades poseen el mismo número de graduados y por ende puede causar que el número de estudiantes graduados de la sede a al que pertenece esa facultad este por encima o por debajo de los límites de control.</p>
 <ol style="list-style-type: decimal">
 <li><p>Duplique esta última visualización creada y llame a esta hoja duplicada Gráfico de control por facultad.</p></li>
@@ -1051,7 +1087,7 @@ Figura 2.100: Gráfico de control por sede de matrícula
 <div class="figure" style="text-align: center"><span id="fig:paso3controlfacultad-fig"></span>
 <img src="Imágenes/analisis66.jpg" alt="Filtrar por sede de matrícula" width="80%" />
 <p class="caption">
-Figura 2.101: Filtrar por sede de matrícula
+Figura 2.106: Filtrar por sede de matrícula
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -1060,7 +1096,7 @@ Figura 2.101: Filtrar por sede de matrícula
 <div class="figure" style="text-align: center"><span id="fig:paso4controlfacultad-fig"></span>
 <img src="Imágenes/analisis68.jpg" alt="Edición del control de filtro" width="20%" />
 <p class="caption">
-Figura 2.102: Edición del control de filtro
+Figura 2.107: Edición del control de filtro
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -1071,7 +1107,7 @@ Figura 2.102: Edición del control de filtro
 <div class="figure" style="text-align: center"><span id="fig:controlfacultad-fig"></span>
 <img src="Imágenes/analisis69.jpg" alt="Gráfico de control por facultad" width="80%" />
 <p class="caption">
-Figura 2.103: Gráfico de control por facultad
+Figura 2.108: Gráfico de control por facultad
 </p>
 </div>
 <p>Es claro que la cantidad de graduados de la facultad de Ingeniería y administración tiene una tendencia de asenso y su promedio es superior a la facultad de Ciencias Agropecuarias. La facultad de ciencias agropecuarias no presenta una alta variabilidad en el número de graduados por periodo en la ventana de tiempo analizada.</p>
@@ -1089,7 +1125,7 @@ Para los datos que se están analizando este tipo de gráficos pueden ser utiliz
 <div class="figure" style="text-align: center"><span id="fig:paso4graficopendiente-fig"></span>
 <img src="Imágenes/analisis70.jpg" alt="Filtrar la visualización por los años deseados" width="80%" />
 <p class="caption">
-Figura 2.104: Filtrar la visualización por los años deseados
+Figura 2.109: Filtrar la visualización por los años deseados
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -1100,7 +1136,7 @@ Figura 2.104: Filtrar la visualización por los años deseados
 <div class="figure" style="text-align: center"><span id="fig:paso7graficopendiente-fig"></span>
 <img src="Imágenes/analisis71.jpg" alt="Añadir todos los miembros" width="60%" />
 <p class="caption">
-Figura 2.105: Añadir todos los miembros
+Figura 2.110: Añadir todos los miembros
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
@@ -1112,28 +1148,28 @@ Figura 2.105: Añadir todos los miembros
 <div class="figure" style="text-align: center"><span id="fig:graficopendienteamazonia-fig"></span>
 <img src="Imágenes/analisis72.jpg" alt="Gráfico de pendiente para la sede Amazonía" width="80%" />
 <p class="caption">
-Figura 2.106: Gráfico de pendiente para la sede Amazonía
+Figura 2.111: Gráfico de pendiente para la sede Amazonía
 </p>
 </div>
 <p>Para realizar la visualización para las demás sedes únicamente debe duplicar la vista anterior y cambiar el nombre de la hoja por la sede a la que pertenece, en el campo Sede Nombre Mat ubicado en la tarjeta filtros, haga clic derecho y seleccione editar filtro, en la ventana emergente seleccione Bogotá.</p>
 <div class="figure" style="text-align: center"><span id="fig:paso1graficopendientebogota-fig"></span>
 <img src="Imágenes/analisis73.jpg" alt="Filtrar por sede Bogotá" width="80%" />
 <p class="caption">
-Figura 2.107: Filtrar por sede Bogotá
+Figura 2.112: Filtrar por sede Bogotá
 </p>
 </div>
 <p>La gráfica en este momento es poco entendible ya que la para la sede Bogotá hay muchos programas y se están mezclando las dos modalidades de formación por lo que es útil agregar un filtro que permita seleccionar la modalidad que se quiere ver. Añada el campo modalidad de formación al estante filtros, seleccione ambas modalidades y haga clic en aceptar; muestre el filtro y seleccione valor individual (lista), si selecciona pregrado en modalidad de formación su visualización se ve así.</p>
 <div class="figure" style="text-align: center"><span id="fig:paso2graficopendientebogota-fig"></span>
 <img src="Imágenes/analisis74.jpg" alt="Añadir filtro de modalidad de formación" width="80%" />
 <p class="caption">
-Figura 2.108: Añadir filtro de modalidad de formación
+Figura 2.113: Añadir filtro de modalidad de formación
 </p>
 </div>
 <p>Note que aún hay saturación en la gráfica, el ultimo desglose que se puede hacer es filtrar la visualización por las facultades. Añada el campo Facultad al estante filtros, seleccione todas las facultades, muestre el filtro y finalmente seleccione valor individual (lista), a modo de ejemplo seleccione la facultad de ciencias, su visualización se verá así.</p>
 <div class="figure" style="text-align: center"><span id="fig:graficopendientebogota-fig"></span>
 <img src="Imágenes/analisis75.jpg" alt="Gráfico de pendiente para la sede Bogotá" width="80%" />
 <p class="caption">
-Figura 2.109: Gráfico de pendiente para la sede Bogotá
+Figura 2.114: Gráfico de pendiente para la sede Bogotá
 </p>
 </div>
 <p>Esta visualización permite identificar que los programas de estadística, física, geología, biología y farmacia han aumentado en la cantidad de estudiantes graduados, mientras que los demás programas de los que se tienen registro que ofrece la facultad de ciencias han disminuido en el número de estudiantes graduados, cabe aclarar que en esta visualización no se esta teniendo en cuenta lo que sucede con estos programas en los años intermedios.</p>
@@ -1143,28 +1179,28 @@ Figura 2.109: Gráfico de pendiente para la sede Bogotá
 <div class="figure" style="text-align: center"><span id="fig:contextobogota-fig"></span>
 <img src="Imágenes/analisis76.jpg" alt="Añadir filtro de contexto" width="20%" />
 <p class="caption">
-Figura 2.110: Añadir filtro de contexto
+Figura 2.115: Añadir filtro de contexto
 </p>
 </div>
 El campo sede se tornará de color gris y quedará al inicio de los demás filtros.
 <div class="figure" style="text-align: center"><span id="fig:1contextobogota-fig"></span>
 <img src="Imágenes/analisis77.jpg" alt="Filtro de contexto" width="20%" />
 <p class="caption">
-Figura 2.111: Filtro de contexto
+Figura 2.116: Filtro de contexto
 </p>
 </div>
 <p>Ahora debe ser editado el filtro facultad desde el menú desplegable de la leyenda del filtro, en el panel lateral derecho muestre el menú desplegable del filtro facultad y seleccione Todos los valores en contexto.</p>
 <div class="figure" style="text-align: center"><span id="fig:facultadcontextobogota-fig"></span>
 <img src="Imágenes/analisis78.jpg" alt="Edición filtro Facultad" width="30%" />
 <p class="caption">
-Figura 2.112: Edición filtro Facultad
+Figura 2.117: Edición filtro Facultad
 </p>
 </div>
 <p>Ahora el gráfico de pendientes para la sede Bogotá solo contiene las facultades que pertenecen a dicha sede.</p>
 <div class="figure" style="text-align: center"><span id="fig:graficopendientecontextobogota-fig"></span>
 <img src="Imágenes/analisis79.jpg" alt="Gráfico de pendientes sede Bogotá con filtro de contexto" width="80%" />
 <p class="caption">
-Figura 2.113: Gráfico de pendientes sede Bogotá con filtro de contexto
+Figura 2.118: Gráfico de pendientes sede Bogotá con filtro de contexto
 </p>
 </div>
 <p>Para las demás sedes de la universidad puede duplicar la ultima hoja creada, cambiar su nombre por la sede a la que pertenece y en el filtro Sede Nombre Mat seleccionar la sede que quiere visualizar, al final obtendrá 6 gráficos de pendientes, uno para cada sede, estas hojas de trabajo podrán ser reunidas en una historia, este procedimiento se mostrara en la siguiente sección.</p>
