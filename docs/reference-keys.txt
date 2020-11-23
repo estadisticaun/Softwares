@@ -88,6 +88,11 @@ fig:paso2mapaarbol-fig
 fig:paso4mapaarbol-fig
 fig:paso5mapaarbol-fig
 fig:mapaarbol-fig
+fig:1burbujas-fig
+fig:burbujas-fig
+fig:nubepalabras-fig
+fig:nubepalabraseditada-fig
+fig:nubepalabrasfinal-fig
 fig:paso3graficodecontrol-fig
 fig:paso4graficodecontrol-fig
 fig:paso5graficodecontrol-fig
@@ -141,8 +146,9 @@ flourish
 example-one
 example-two
 conclu
-fig:1burbujas-fig
-fig:burbujas-fig
-fig:nubepalabras-fig
-fig:nubepalabraseditada-fig
-fig:nubepalabrasfinal-fig
+fig:campocalculadometas-fig
+fig:paso3graficobala-fig
+fig:paso6graficobala-fig
+fig:paso8graficobala-fig
+fig:graficobala-fig
+gráfico-de-bala

@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-21}
+\date{2020-11-22}
 
 \begin{document}
 \maketitle
@@ -2120,6 +2120,63 @@ El mapa de árbol obtenido es claro y consistente con la información que se des
 }
 
 \caption{Mapa de árbol por sede de admisión}\label{fig:mapaarbol-fig}
+\end{figure}
+
+Una variación de los mapas de árbol que también permite mostrar la jerarquía que existe en los datos son el gráfico de burbujas y nube de palabras.
+
+Para realizar un grafico de burbujas duplique la hoja distribución de graduados por sede de admisión y llámela Gráfico de burbujas para la distribución de graduados por sede de admisión, luego haga clic en el botón Mostrarme y seleccione burbujas agrupadas.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis80} 
+
+}
+
+\caption{Gráfico de burbujas base por sede de admisión}\label{fig:1burbujas-fig}
+\end{figure}
+
+Note que la descripción emergente no está clara por lo que es necesario cambie Sede Nombre Adm por Sede de admisión, Recuento de Sede Nombre Adm por Número de estudiantes graduados y \% de total Recuento de Sede Nombre Adm junto con Sede Nombre Adm por porcentaje; duplique el campo correspondiente a color y llévelo a etiqueta, ajuste el tamaño de la visualización a vista completa, edite el titulo de la leyenda de la clave de color, asigne como nuevo título porcentaje. Finalmente, su visualización al igual que el mapa de árbol permite identificar cual sede de la Universidad Nacional tuvo más graduados a lo largo de los periodos registrados en el conjunto de datos.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis81} 
+
+}
+
+\caption{Gráfico de burbujas por sede de admisión}\label{fig:burbujas-fig}
+\end{figure}
+
+La otra forma de visualizar la distribución de los estudiantes graduados es usando una nube de palabras, esta muestra la frecuencia de uso. Nuevamente duplique la hoja en la que se creo el mapa de árbol y llámela Nube de palabras para la distribución de graduados por sede de admisión, en el estante marcas cambie automático por texto.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis82} 
+
+}
+
+\caption{Gráfico base de nube de palabras por sede de admisión}\label{fig:nubepalabras-fig}
+\end{figure}
+
+En este tipo de gráficos no es conveniente mostrar el porcentaje, ya que el enfoque se debe dar al nombre de la sede, arrastre el campo CNT(Sede Nombre Adm) de la tarjeta etiqueta a la tarjeta detalles.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis83} 
+
+}
+
+\caption{Nube de palabras por sede de admisión, sin porcentaje}\label{fig:nubepalabraseditada-fig}
+\end{figure}
+
+Note que de la descripción emergente se elimino el campo que mostraba el porcentaje, para recuperarlo en la descripción emergente al lado de Porcentaje escriba \textless\% de total CNT(Sede Nombre Adm)\textgreater, que es la expresión que usa Tableau para calcular el Porcentaje.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis84} 
+
+}
+
+\caption{Nube de palabras por sede de admisión}\label{fig:nubepalabrasfinal-fig}
 \end{figure}
 
 \hypertarget{graficodecontrol}{%

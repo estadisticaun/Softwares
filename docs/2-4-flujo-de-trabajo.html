@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-22" />
+<meta name="date" content="2020-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1204,6 +1204,67 @@ Figura 2.118: Gráfico de pendientes sede Bogotá con filtro de contexto
 </p>
 </div>
 <p>Para las demás sedes de la universidad puede duplicar la ultima hoja creada, cambiar su nombre por la sede a la que pertenece y en el filtro Sede Nombre Mat seleccionar la sede que quiere visualizar, al final obtendrá 6 gráficos de pendientes, uno para cada sede, estas hojas de trabajo podrán ser reunidas en una historia, este procedimiento se mostrara en la siguiente sección.</p>
+</div>
+<div id="gráfico-de-bala" class="section level4">
+<h4><span class="header-section-number">2.4.2.9</span> Gráfico de bala</h4>
+<p>Este tipo de gráficos son una manera son una buena manera de mostrar la progresión en etapas hacia una meta, en este caso es de interés mostrar como avanza el número de graduados por Sede de matrícula hacia una meta establecida para cada una, estos valores objetivos se tomarán de manera arbitraria, para la sede Amazonía será 200, para Bogotá 65.000, Caribe tendrá un valor objetivo igual a 60, para Manizales 13.000, para la sede Medellín 23.000, finalmente el valor de meta para la sede Palmira será de 6.000.</p>
+<p>La base de datos original no posee un campo que contenga estos valores de meta, por lo tanto es necesario la creación de un campo calculado que asigne el valor de meta a cada sede, para cree una nuevo campo calculado y como nombre asigne Meta de graduados, la expresión clave para asignar el valor de meta según la sede será IF y también se hará uso de una función que identifique si la Sede empieza por ciertas letras que se le indican, dentro del campo calculado escriba lo siguiente:</p>
+<p><strong>IF STARTSWITH([Sede Nombre Mat], “Ama”) THEN “200” </strong></p>
+<p><strong>ELSEIF STARTSWITH([Sede Nombre Mat], “Bo”) THEN “65000”</strong></p>
+<p><strong>ELSEIF STARTSWITH([Sede Nombre Mat], “Ca”) THEN “60”</strong></p>
+<p><strong>ELSEIF STARTSWITH([Sede Nombre Mat], “Ma”) THEN “13000”</strong></p>
+<p><strong>ELSEIF STARTSWITH([Sede Nombre Mat], “Me”) THEN “23000”</strong></p>
+<p><strong>ELSE “6000” END</strong></p>
+<p>Por ejemplo, en el primero renglón se le esta indicando que si el campo Sede Nombre Mat inicia con “Ama” asigne como meta 200, finalmente haga clic en Aceptar para guardar el campo.</p>
+<div class="figure" style="text-align: center"><span id="fig:campocalculadometas-fig"></span>
+<img src="Imágenes/analisis85.jpg" alt="Crear campo calculado con metas por sede" width="70%" />
+<p class="caption">
+Figura 2.119: Crear campo calculado con metas por sede
+</p>
+</div>
+<p>Este campo se guardo como cadena y en realidad es un número entero, cambie el tipo de dato por Número (entero), haciendo clic sobre el icono Abc de Meta de graduados y seleccione Número (entero), debe notar que el icono del campo ahora es “#”. Después de haber creado el campo calculado y cambiar el tipo de dato, es momento de iniciar con la creación del gráfico de bala.</p>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva hoja de trabajo y cambie su nombre por Gráfico de bala.</p></li>
+<li><p>Arrastre el campo Meta graduados a la tarjeta detalles del estante marcas, en el menú desplegable del campo seleccione Continuo.</p></li>
+<li><p>Añada Year Semester a columnas y seleccione medida y recuento, el campo Sede Nombre Mat debe se asignado a filas, ajuste el tamaño de la visualización seleccionando vista completa.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3graficobala-fig"></span>
+<img src="Imágenes/analisis86.jpg" alt="Paso 3 para la creación de un gráfico de barras" width="80%" />
+<p class="caption">
+Figura 2.120: Paso 3 para la creación de un gráfico de barras
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Edite la descripción emergente para que sea clara y concisa, también edite el eje x cambiando el titulo por Número de estudiantes graduados, oculte la etiqueta del eje y.</p></li>
+<li><p>Es momento de añadir la línea de referencia que representa la meta por sede, para esto haga clic en el panel análisis en el lateral izquierdo, en personalizado arrastre línea de referencia hacia la vista y suéltela sobre celda, es necesario hacerlo sobre celda y no en las otras opciones que brinda ya que la meta de graduados es diferente para cada sede.</p></li>
+<li><p>En la ventada de edición de la línea, para valor seleccione Meta de graduados y promedio, asegúrese que etiqueta este en ninguno, para la descripción emergente seleccione personalizado y en el espacio del lado derecho escriba Meta de graduados =, en botón del al lado con el símbolo &gt; seleccione valor por último haga clic en aceptar para guardar los cambios.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6graficobala-fig"></span>
+<img src="Imágenes/analisis87.jpg" alt="Edición de la línea de referencia para las metas" width="60%" />
+<p class="caption">
+Figura 2.121: Edición de la línea de referencia para las metas
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Es momento de añadir una banda de referencia que muestre los porcentajes <span class="math inline">\(50, 75 ~ y ~100\)</span>, nuevamente desde el panel análisis y personalizado arrastre banda de referencia y suéltela en celda.</p></li>
+<li><p>En la ventana seleccione Distribución, en el menú desplegable de valor seleccione porcentaje, en el espacio de porcentajes escriba <span class="math inline">\(50;75;100\)</span>, en porcentaje de seleccione Meda de graduados y promedio.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8graficobala-fig"></span>
+<img src="Imágenes/analisis88.jpg" alt="Edición de la banda de referencia para las metas" width="60%" />
+<p class="caption">
+Figura 2.122: Edición de la banda de referencia para las metas
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Para el campo etiqueta seleccione ninguno y para la descripción emergente seleccione automático.</li>
+</ol>
+<p>La visualización obtenida presenta el avance de cada sede hacia la meta de estudiantes graduados, cada tono de gris indica el percentil, por ejemplo, el gris más oscuro representa el percentil <span class="math inline">\(50\)</span>. Estas metas fueron tomadas de manera arbitraria teniendo en cuenta la cantidad de estudiantes graduados por sede en todos los periodos para los cuales se tienen registro en el conjunto de datos</p>
+<div class="figure" style="text-align: center"><span id="fig:graficobala-fig"></span>
+<img src="Imágenes/analisis89.jpg" alt="Gráfico de bala por sede de matrícula" width="80%" />
+<p class="caption">
+Figura 2.123: Gráfico de bala por sede de matrícula
+</p>
+</div>
 </div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">
