@@ -1130,7 +1130,8 @@ knitr::include_graphics("Imágenes/analisis79.jpg")
 
 Para las demás sedes de la universidad puede duplicar la ultima hoja creada, cambiar su nombre por la sede a la que pertenece y en el filtro Sede Nombre Mat seleccionar la sede que quiere visualizar, al final obtendrá 6 gráficos de pendientes, uno para cada sede, estas hojas de trabajo podrán ser reunidas en una historia, este procedimiento se mostrara en la siguiente sección.
 
-#### Gráfico de bala 
+#### Gráfico de bala {#graficobala}
+
 Este tipo de gráficos son una manera son una buena manera de mostrar la progresión en etapas hacia una meta, en este caso es de interés mostrar como avanza el número de graduados por Sede de matrícula hacia una meta establecida para cada una, estos valores objetivos se tomarán de manera arbitraria, para la sede Amazonía será 200, para Bogotá 65.000, Caribe tendrá un valor objetivo igual a 60, para Manizales 13.000, para la sede Medellín 23.000, finalmente el valor de meta para la sede Palmira será de 6.000.
 
 La base de datos original no posee un campo que contenga estos valores de meta, por lo tanto es necesario la creación de un campo calculado que asigne el valor de meta a cada sede, para cree una nuevo campo calculado y como nombre asigne Meta de graduados, la expresión clave para asignar el valor de meta según la sede será IF y también se hará uso de una función que identifique si la Sede empieza por ciertas letras que se le indican, dentro del campo calculado escriba lo siguiente:
@@ -1189,7 +1190,7 @@ La visualización obtenida presenta el avance de cada sede hacia la meta de estu
 knitr::include_graphics("Imágenes/analisis89.jpg")
 ```
 
-#### Histogramas
+#### Histogramas {#histograma}
 
 Los histogramas son una representación gráfica de una variable en forma de barras, son útiles ya que proporcionan una vista general de la distribución de la población o de la muestra respecto a una característica, en este caso es útil mostrar el histograma para la variable edad ya que da una idea al usuario de la distribución de las edades que tiene los estudiantes que se graduaron en los periodos registrados en el conjunto de datos. Para crear un histograma siga estos pasos.
 
@@ -1206,34 +1207,44 @@ knitr::include_graphics("Imágenes/analisis90.jpg")
 ```{r paso3histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar agrupaciones', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis91.jpg")
 ```
-4.	En el panel tablas se crea un nuevo campo que contiene las agrupaciones, arrastre el campo Edad Mod al estante filas, arrastre Agrupaciones para edad a columnas, en el menú desplegable del campo que ubico en filas seleccione medida y recuento; y para el campo en columnas seleccione continuo, su histograma debe verse así.
 
-```{r paso4histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma con un valor nulo', out.width='80%'}
+4.  Añada el campo Edad mod al estante filtros, seleccione todos los valores y clic en aceptar. 
+
+5.	En el menú desplegable del campo ubicado en filtros seleccione continuo se abrirá una ventana que permite editar el filtro seleccione intervalo de valores, cambie 11 por 15 y 118 por 70, esto con el fin de descartar esas edades atípicas ya que existe la posibilidad de que sean errores de digitación en los registros de la base de datos. 
+
+```{r paso5histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Filtrar valores atípicos de edad', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis92.jpg")
 ```
 
-5.	Haga clic en 1 nulo que aparece en la esquina inferior derecha y seleccione filtrar datos, para que la vista no tenga en cuenta el valor nulo que contiene la base de datos.
+6. Arrastre el campo Edad Mod al estante filas, arrastre Agrupaciones para edad a columnas, en el menú desplegable del campo que ubico en filas seleccione medida y recuento; y para el campo en columnas seleccione continuo, su histograma debe verse así.
 
-6.	Haga clic derecho en el eje x y seleccione editar eje, en titulo escriba Edad; en la pestaña Marcas de graduación seleccione fijo, origen de graduación cero e intervalo de graduación cinco para marcas de graduación principal.
-
-```{r paso6histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar eje x de agrupaciones', out.width='40%'}
+```{r paso6histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma con un valor nulo', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis93.jpg")
 ```
+7.	Haga clic derecho en el eje x y seleccione editar eje, en titulo escriba Edad; en la pestaña Marcas de graduación seleccione fijo, origen de graduación cero e intervalo de graduación cinco para marcas de graduación principal.
 
-7.	Cambie el titulo del eje y por Número de graduados y edite la descripción emergente. 
+```{r paso7histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar eje x de agrupaciones', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis94.jpg")
+```
+
+8.	Cambie el titulo del eje y por Número de graduados y edite la descripción emergente. 
 
 El histograma obtenido permite concluir que las edades de los estudiantes graduados se concentran en el intervalo de 20 a 30 años.
 
 ```{r histogramabase-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma general para las edades', out.width='80%'}
-knitr::include_graphics("Imágenes/analisis94.jpg")
+knitr::include_graphics("Imágenes/analisis95.jpg")
 ```
 
-Existe la posibilidad de añadir un filtro que permita visualizar este histograma para la sede de matrícula, y así evidenciar si la concentración de edades es la misma para todas las sedes de las cuales se tiene registro. Arrastre el campo Sede Nombre Mat al estante filtro, seleccione todas las sedes, muestre el filtro, cambie el nombre de la leyenda del filtro por Sede de matrícula, también seleccione valor individual (lista).
+Existe la posibilidad de añadir un filtro que permita visualizar este histograma para la sede de matrícula, y así evidenciar si la concentración de edades es la misma para todas las sedes de las cuales se tiene registro. Arrastre el campo Sede Nombre Mat al estante filtro, seleccione todas las sedes, muestre el filtro, cambie el nombre de la leyenda del filtro por Sede de matrícula, también seleccione valor individual (lista). Por ejemplo, si se selecciona como sede de matricula a Caribe se evidencia que la concentración de edades se traslada al intervalo de 30 a 35 años.
+
+```{r histogramafiltrosede-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma por sede para las edades', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis96.jpg")
+```
 
 Otro factor que puede afectar esta distribución de edades es la modalidad de formación, se esperaría que para pregrado las personas sean más jóvenes que para postgrado, para añadir este nivel de detalle arrastre el campo modalidad de formación al estante columnas y suéltelo al lado izquierdo del campo agrupaciones para edad, también añada este campo a color. 
 
 ```{r histogramafiltrosedemodalidad-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma por sede y modalidad de formación para las edades', out.width='80%'}
-knitr::include_graphics("Imágenes/analisis95.jpg")
+knitr::include_graphics("Imágenes/analisis97.jpg")
 ```
 
 ### Compartir las visualizaciones
