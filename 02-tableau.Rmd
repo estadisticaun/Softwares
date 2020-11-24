@@ -1189,4 +1189,51 @@ La visualización obtenida presenta el avance de cada sede hacia la meta de estu
 knitr::include_graphics("Imágenes/analisis89.jpg")
 ```
 
+#### Histogramas
+
+Los histogramas son una representación gráfica de una variable en forma de barras, son útiles ya que proporcionan una vista general de la distribución de la población o de la muestra respecto a una característica, en este caso es útil mostrar el histograma para la variable edad ya que da una idea al usuario de la distribución de las edades que tiene los estudiantes que se graduaron en los periodos registrados en el conjunto de datos. Para crear un histograma siga estos pasos.
+
+1.	Cree una nueva hoja de trabajo y cambie su nombre por Histograma para edades.
+
+2.	Haga clic derecho sobre el campo Edad Mod, seleccione crear y Agrupaciones.
+
+```{r paso2histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear agrupaciones', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis90.jpg")
+```
+
+3.	En la ventana para editar las agrupaciones como nombre del campo escriba Agrupaciones para edad, Tableau sugiere que el tamaño de las agrupaciones es $7.8$, pero no es tamaño adecuado ya que los registros para la variable edad son números enteros, por tanto, el tamaño será $5$, finalmente haga clic en aceptar.
+
+```{r paso3histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar agrupaciones', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis91.jpg")
+```
+4.	En el panel tablas se crea un nuevo campo que contiene las agrupaciones, arrastre el campo Edad Mod al estante filas, arrastre Agrupaciones para edad a columnas, en el menú desplegable del campo que ubico en filas seleccione medida y recuento; y para el campo en columnas seleccione continuo, su histograma debe verse así.
+
+```{r paso4histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma con un valor nulo', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis92.jpg")
+```
+
+5.	Haga clic en 1 nulo que aparece en la esquina inferior derecha y seleccione filtrar datos, para que la vista no tenga en cuenta el valor nulo que contiene la base de datos.
+
+6.	Haga clic derecho en el eje x y seleccione editar eje, en titulo escriba Edad; en la pestaña Marcas de graduación seleccione fijo, origen de graduación cero e intervalo de graduación cinco para marcas de graduación principal.
+
+```{r paso6histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar eje x de agrupaciones', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis93.jpg")
+```
+
+7.	Cambie el titulo del eje y por Número de graduados y edite la descripción emergente. 
+
+El histograma obtenido permite concluir que las edades de los estudiantes graduados se concentran en el intervalo de 20 a 30 años.
+
+```{r histogramabase-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma general para las edades', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis94.jpg")
+```
+
+Existe la posibilidad de añadir un filtro que permita visualizar este histograma para la sede de matrícula, y así evidenciar si la concentración de edades es la misma para todas las sedes de las cuales se tiene registro. Arrastre el campo Sede Nombre Mat al estante filtro, seleccione todas las sedes, muestre el filtro, cambie el nombre de la leyenda del filtro por Sede de matrícula, también seleccione valor individual (lista).
+
+Otro factor que puede afectar esta distribución de edades es la modalidad de formación, se esperaría que para pregrado las personas sean más jóvenes que para postgrado, para añadir este nivel de detalle arrastre el campo modalidad de formación al estante columnas y suéltelo al lado izquierdo del campo agrupaciones para edad, también añada este campo a color. 
+
+```{r histogramafiltrosedemodalidad-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma por sede y modalidad de formación para las edades', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis95.jpg")
+```
+
 ### Compartir las visualizaciones

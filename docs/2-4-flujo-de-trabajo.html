@@ -1266,6 +1266,66 @@ Figura 2.123: Gráfico de bala por sede de matrícula
 </p>
 </div>
 </div>
+<div id="histogramas" class="section level4">
+<h4><span class="header-section-number">2.4.2.10</span> Histogramas</h4>
+<p>Los histogramas son una representación gráfica de una variable en forma de barras, son útiles ya que proporcionan una vista general de la distribución de la población o de la muestra respecto a una característica, en este caso es útil mostrar el histograma para la variable edad ya que da una idea al usuario de la distribución de las edades que tiene los estudiantes que se graduaron en los periodos registrados en el conjunto de datos. Para crear un histograma siga estos pasos.</p>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva hoja de trabajo y cambie su nombre por Histograma para edades.</p></li>
+<li><p>Haga clic derecho sobre el campo Edad Mod, seleccione crear y Agrupaciones.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2histograma-fig"></span>
+<img src="Imágenes/analisis90.jpg" alt="Crear agrupaciones" width="60%" />
+<p class="caption">
+Figura 2.124: Crear agrupaciones
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>En la ventana para editar las agrupaciones como nombre del campo escriba Agrupaciones para edad, Tableau sugiere que el tamaño de las agrupaciones es <span class="math inline">\(7.8\)</span>, pero no es tamaño adecuado ya que los registros para la variable edad son números enteros, por tanto, el tamaño será <span class="math inline">\(5\)</span>, finalmente haga clic en aceptar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3histograma-fig"></span>
+<img src="Imágenes/analisis91.jpg" alt="Editar agrupaciones" width="60%" />
+<p class="caption">
+Figura 2.125: Editar agrupaciones
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>En el panel tablas se crea un nuevo campo que contiene las agrupaciones, arrastre el campo Edad Mod al estante filas, arrastre Agrupaciones para edad a columnas, en el menú desplegable del campo que ubico en filas seleccione medida y recuento; y para el campo en columnas seleccione continuo, su histograma debe verse así.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4histograma-fig"></span>
+<img src="Imágenes/analisis92.jpg" alt="Histograma con un valor nulo" width="80%" />
+<p class="caption">
+Figura 2.126: Histograma con un valor nulo
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Haga clic en 1 nulo que aparece en la esquina inferior derecha y seleccione filtrar datos, para que la vista no tenga en cuenta el valor nulo que contiene la base de datos.</p></li>
+<li><p>Haga clic derecho en el eje x y seleccione editar eje, en titulo escriba Edad; en la pestaña Marcas de graduación seleccione fijo, origen de graduación cero e intervalo de graduación cinco para marcas de graduación principal.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6histograma-fig"></span>
+<img src="Imágenes/analisis93.jpg" alt="Editar eje x de agrupaciones" width="40%" />
+<p class="caption">
+Figura 2.127: Editar eje x de agrupaciones
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Cambie el titulo del eje y por Número de graduados y edite la descripción emergente.</li>
+</ol>
+<p>El histograma obtenido permite concluir que las edades de los estudiantes graduados se concentran en el intervalo de 20 a 30 años.</p>
+<div class="figure" style="text-align: center"><span id="fig:histogramabase-fig"></span>
+<img src="Imágenes/analisis94.jpg" alt="Histograma general para las edades" width="80%" />
+<p class="caption">
+Figura 2.128: Histograma general para las edades
+</p>
+</div>
+<p>Existe la posibilidad de añadir un filtro que permita visualizar este histograma para la sede de matrícula, y así evidenciar si la concentración de edades es la misma para todas las sedes de las cuales se tiene registro. Arrastre el campo Sede Nombre Mat al estante filtro, seleccione todas las sedes, muestre el filtro, cambie el nombre de la leyenda del filtro por Sede de matrícula, también seleccione valor individual (lista).</p>
+<p>Otro factor que puede afectar esta distribución de edades es la modalidad de formación, se esperaría que para pregrado las personas sean más jóvenes que para postgrado, para añadir este nivel de detalle arrastre el campo modalidad de formación al estante columnas y suéltelo al lado izquierdo del campo agrupaciones para edad, también añada este campo a color.</p>
+<div class="figure" style="text-align: center"><span id="fig:histogramafiltrosedemodalidad-fig"></span>
+<img src="Imágenes/analisis95.jpg" alt="Histograma por sede y modalidad de formación para las edades" width="80%" />
+<p class="caption">
+Figura 2.129: Histograma por sede y modalidad de formación para las edades
+</p>
+</div>
+</div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">
 <h3><span class="header-section-number">2.4.3</span> Compartir las visualizaciones</h3>

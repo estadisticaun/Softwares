@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-22}
+\date{2020-11-23}
 
 \begin{document}
 \maketitle
@@ -2641,6 +2641,114 @@ Ahora el gráfico de pendientes para la sede Bogotá solo contiene las facultade
 \end{figure}
 
 Para las demás sedes de la universidad puede duplicar la ultima hoja creada, cambiar su nombre por la sede a la que pertenece y en el filtro Sede Nombre Mat seleccionar la sede que quiere visualizar, al final obtendrá 6 gráficos de pendientes, uno para cada sede, estas hojas de trabajo podrán ser reunidas en una historia, este procedimiento se mostrara en la siguiente sección.
+
+\hypertarget{gruxe1fico-de-bala}{%
+\subsubsection{Gráfico de bala}\label{gruxe1fico-de-bala}}
+
+Este tipo de gráficos son una manera son una buena manera de mostrar la progresión en etapas hacia una meta, en este caso es de interés mostrar como avanza el número de graduados por Sede de matrícula hacia una meta establecida para cada una, estos valores objetivos se tomarán de manera arbitraria, para la sede Amazonía será 200, para Bogotá 65.000, Caribe tendrá un valor objetivo igual a 60, para Manizales 13.000, para la sede Medellín 23.000, finalmente el valor de meta para la sede Palmira será de 6.000.
+
+La base de datos original no posee un campo que contenga estos valores de meta, por lo tanto es necesario la creación de un campo calculado que asigne el valor de meta a cada sede, para cree una nuevo campo calculado y como nombre asigne Meta de graduados, la expresión clave para asignar el valor de meta según la sede será IF y también se hará uso de una función que identifique si la Sede empieza por ciertas letras que se le indican, dentro del campo calculado escriba lo siguiente:
+
+\textbf{IF STARTSWITH({[}Sede Nombre Mat{]}, ``Ama'') THEN ``200'' }
+
+\textbf{ELSEIF STARTSWITH({[}Sede Nombre Mat{]}, ``Bo'') THEN ``65000''}
+
+\textbf{ELSEIF STARTSWITH({[}Sede Nombre Mat{]}, ``Ca'') THEN ``60''}
+
+\textbf{ELSEIF STARTSWITH({[}Sede Nombre Mat{]}, ``Ma'') THEN ``13000''}
+
+\textbf{ELSEIF STARTSWITH({[}Sede Nombre Mat{]}, ``Me'') THEN ``23000''}
+
+\textbf{ELSE ``6000'' END}
+
+Por ejemplo, en el primero renglón se le esta indicando que si el campo Sede Nombre Mat inicia con ``Ama'' asigne como meta 200, finalmente haga clic en Aceptar para guardar el campo.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{Imágenes/analisis85} 
+
+}
+
+\caption{Crear campo calculado con metas por sede}\label{fig:campocalculadometas-fig}
+\end{figure}
+
+Este campo se guardo como cadena y en realidad es un número entero, cambie el tipo de dato por Número (entero), haciendo clic sobre el icono Abc de Meta de graduados y seleccione Número (entero), debe notar que el icono del campo ahora es ``\#''. Después de haber creado el campo calculado y cambiar el tipo de dato, es momento de iniciar con la creación del gráfico de bala.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Cree una nueva hoja de trabajo y cambie su nombre por Gráfico de bala.
+\item
+  Arrastre el campo Meta graduados a la tarjeta detalles del estante marcas, en el menú desplegable del campo seleccione Continuo.
+\item
+  Añada Year Semester a columnas y seleccione medida y recuento, el campo Sede Nombre Mat debe se asignado a filas, ajuste el tamaño de la visualización seleccionando vista completa.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis86} 
+
+}
+
+\caption{Paso 3 para la creación de un gráfico de barras}\label{fig:paso3graficobala-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Edite la descripción emergente para que sea clara y concisa, también edite el eje x cambiando el titulo por Número de estudiantes graduados, oculte la etiqueta del eje y.
+\item
+  Es momento de añadir la línea de referencia que representa la meta por sede, para esto haga clic en el panel análisis en el lateral izquierdo, en personalizado arrastre línea de referencia hacia la vista y suéltela sobre celda, es necesario hacerlo sobre celda y no en las otras opciones que brinda ya que la meta de graduados es diferente para cada sede.
+\item
+  En la ventada de edición de la línea, para valor seleccione Meta de graduados y promedio, asegúrese que etiqueta este en ninguno, para la descripción emergente seleccione personalizado y en el espacio del lado derecho escriba Meta de graduados =, en botón del al lado con el símbolo \textgreater{} seleccione valor por último haga clic en aceptar para guardar los cambios.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis87} 
+
+}
+
+\caption{Edición de la línea de referencia para las metas}\label{fig:paso6graficobala-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\item
+  Es momento de añadir una banda de referencia que muestre los porcentajes \(50, 75 ~ y ~100\), nuevamente desde el panel análisis y personalizado arrastre banda de referencia y suéltela en celda.
+\item
+  En la ventana seleccione Distribución, en el menú desplegable de valor seleccione porcentaje, en el espacio de porcentajes escriba \(50;75;100\), en porcentaje de seleccione Meda de graduados y promedio.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis88} 
+
+}
+
+\caption{Edición de la banda de referencia para las metas}\label{fig:paso8graficobala-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Para el campo etiqueta seleccione ninguno y para la descripción emergente seleccione automático.
+\end{enumerate}
+
+La visualización obtenida presenta el avance de cada sede hacia la meta de estudiantes graduados, cada tono de gris indica el percentil, por ejemplo, el gris más oscuro representa el percentil \(50\). Estas metas fueron tomadas de manera arbitraria teniendo en cuenta la cantidad de estudiantes graduados por sede en todos los periodos para los cuales se tienen registro en el conjunto de datos
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis89} 
+
+}
+
+\caption{Gráfico de bala por sede de matrícula}\label{fig:graficobala-fig}
+\end{figure}
 
 \hypertarget{compartir-las-visualizaciones}{%
 \subsection{Compartir las visualizaciones}\label{compartir-las-visualizaciones}}
