@@ -1341,6 +1341,60 @@ Figura 2.131: Histograma por sede y modalidad de formación para las edades
 </p>
 </div>
 </div>
+<div id="boxplot" class="section level4">
+<h4><span class="header-section-number">2.4.2.11</span> Box-plot</h4>
+<p>Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable, permite la identificación de posibles valores atípicos. Para el conjunto de datos que se esta trabajando puede ser de interés realizar un box-plot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta.</p>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva hoja de trabajo y cambie su nombre por Boxplot para edad.</p></li>
+<li><p>Repita los pasos 4 y 5 del histograma mostrados en <a href="2-4-flujo-de-trabajo.html#histograma">2.4.2.10</a>.</p></li>
+<li><p>Añada el campo Sede Nombre Mat al estante filtros, seleccione todo, muestre el filtro y cambie el modo de selección de la sede a Valor individual (lista), cambie el titulo de la leyenda por Sede de matrícula.</p></li>
+<li><p>Añada el campo Nivel al estante columnas y Edad Mod a filas clic derecho sobre este último campo, seleccione medida y promedio.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4boxplot-fig"></span>
+<img src="Imágenes/analisis98.jpg" alt="Paso 4 para la creación de un boxplot" width="80%" />
+<p class="caption">
+Figura 2.132: Paso 4 para la creación de un boxplot
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Añada los campos Sede Nombre Mat y Year Semester a la tarjeta detalles.</p></li>
+<li><p>Haga clic en el botón Mostrarme y seleccione diagramas de campos o valores.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6boxplot-fig"></span>
+<img src="Imágenes/analisis99.jpg" alt="Uso del botón Mostrarme" width="80%" />
+<p class="caption">
+Figura 2.133: Uso del botón Mostrarme
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Añada el campo Nivel a la tarjeta colores en el estante marcas y ajuste el tamaño de la vista a vista completa.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7boxplot-fig"></span>
+<img src="Imágenes/analisis100.jpg" alt="Añadir color por nivel de formación" width="80%" />
+<p class="caption">
+Figura 2.134: Añadir color por nivel de formación
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Cada punto de la visualización representa el promedio de las edades por periodo para cada nivel de formación según la sede que se elija en el filtro, es de interés mostrar las edades una a una y no el promedio para esto es necesario desagregar las medidas. Haga clic en la pestaña análisis y haga clic en Agregar medidas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8boxplot-fig"></span>
+<img src="Imágenes/analisis101.jpg" alt="Desagregar medidas" width="40%" />
+<p class="caption">
+Figura 2.135: Desagregar medidas
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>El eje Y de la visualización cambiara, ya que no representa el promedio de la edad si no la edad de cada estudiante. Finalmente edite la descripción emergente.</li>
+</ol>
+<p>El gráfico realizado permite identificar la distribución de las edades por nivel de formación y realizar un filtro para la sede que se desea mostrar. Por ejemplo si se selecciona la sede Bogotá se observa un punto por debajo del límite inferior, al leer la descripción emergente de este punto se identifica que fue registrado para el periodo 2009-2 y la edad del estudiantes de 15 años, esto puede deberse a errores al momento de digitar la información en la base de datos.</p>
+<div class="figure" style="text-align: center"><span id="fig:boxplot-fig"></span>
+<img src="Imágenes/analisis102.jpg" alt="Boxplot para edad por sede y nivel de formación" width="80%" />
+<p class="caption">
+Figura 2.136: Boxplot para edad por sede y nivel de formación
+</p>
+</div>
+</div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">
 <h3><span class="header-section-number">2.4.3</span> Compartir las visualizaciones</h3>

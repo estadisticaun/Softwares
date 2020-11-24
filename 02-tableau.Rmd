@@ -1247,4 +1247,57 @@ Otro factor que puede afectar esta distribución de edades es la modalidad de fo
 knitr::include_graphics("Imágenes/analisis97.jpg")
 ```
 
+#### Box-plot {#boxplot}
+
+Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable, permite la identificación de posibles valores atípicos. Para el conjunto de datos que se esta trabajando puede ser de interés realizar un box-plot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta.
+
+1.	Cree una nueva hoja de trabajo y cambie su nombre por Boxplot para edad.
+
+2.	Repita los pasos 4 y 5 del histograma mostrados en \@ref(histograma).
+
+3.	Añada el campo Sede Nombre Mat al estante filtros, seleccione todo, muestre el filtro y cambie el modo de selección de la sede a Valor individual (lista), cambie el titulo de la leyenda por Sede de matrícula.
+
+4.	Añada el campo Nivel al estante columnas y Edad Mod a filas clic derecho sobre este último campo, seleccione medida y promedio. 
+
+```{r paso4boxplot-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Paso 4 para la creación de un boxplot', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis98.jpg")
+```
+
+5.	Añada los campos Sede Nombre Mat y Year Semester a la tarjeta detalles.
+
+6.	Haga clic en el botón Mostrarme y seleccione diagramas de campos o valores. 
+
+```{r paso6boxplot-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Uso del botón Mostrarme', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis99.jpg")
+```
+
+7.	Añada el campo Nivel a la tarjeta colores en el estante marcas y ajuste el tamaño de la vista a vista completa.
+
+```{r paso7boxplot-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir color por nivel de formación', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis100.jpg")
+```
+
+8.	Cada punto de la visualización representa el promedio de las edades por periodo para cada nivel de formación según la sede que se elija en el filtro, es de interés mostrar las edades una a una y no el promedio para esto es necesario desagregar las medidas. Haga clic en la pestaña análisis y haga clic en Agregar medidas.
+
+```{r paso8boxplot-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Desagregar medidas', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis101.jpg")
+```
+
+9.	El eje Y de la visualización cambiara, ya que no representa el promedio de la edad si no la edad de cada estudiante. Finalmente edite la descripción emergente.
+
+El gráfico realizado permite identificar la distribución de las edades por nivel de formación y realizar un filtro para la sede que se desea mostrar. Por ejemplo si se selecciona la sede Bogotá se observa un punto por debajo del límite inferior, al leer la descripción emergente de este punto se identifica que fue registrado para el periodo 2009-2 y la edad del estudiantes de 15 años, esto puede deberse a errores al momento de digitar la información en la base de datos. 
+
+```{r boxplot-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Boxplot para edad por sede y nivel de formación', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis102.jpg")
+```
+
+
+
+
+
+
+
+
+
+
 ### Compartir las visualizaciones
