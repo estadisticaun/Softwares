@@ -1464,6 +1464,73 @@ Figura 2.142: Editar adecuadamente la descripción emergente
 Figura 2.143: Total por departamento, periodo 2020-1
 </p>
 </div>
+<p>También es posible crear un mapa para mostrar el total de estudiantes graduados por municipio para el periodo 2020-1.</p>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva hoja de trabajo y asigne como nombre Total por municipio, periodo 2020-1.</p></li>
+<li><p>Arrastre el campo Ciu Nac y Dep Nac a detalle, obtendrá el mapa de Colombia con puntos que simbolizan cada ciudad para la que se tiene registros, en la esquina inferior encontrara el número de ciudades que Tableau no logro identificar que en este caso son 31, haga clic sobre ese botón y seleccione editar ubicaciones. Es posible que muchas ubicaciones no coincidan por tildes o mayúsculas por lo que es necesario ir asignando las ubicaciones. Por ejemplo, Cartagena de indias no se reconoció correctamente ya que la base interna de Tableau contiene solo Cartagena, por lo tanto, asigne Cartagena a Cartagena de Indias como ubicación coincidente, de esta manera asigne los demás que Tableau no logro reconocer.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2mapeomunicipios-fig"></span>
+<img src="Imágenes/analisis110.jpg" alt="Editar ubicaciones para ciudades" width="60%" />
+<p class="caption">
+Figura 2.144: Editar ubicaciones para ciudades
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Después de asignar todos los municipios conocidos haga clic en aceptar, es posible que aun queden valores desconocidos, los cuales pertenecen a valores faltantes en los datos por lo tanto haga clic sobre el botón de desconocido y seleccione Filtrar datos.</p></li>
+<li><p>Nuevamente cambie la marca de automático a mapa para que las áreas se rellenen y añada el filtro de Year Semester seleccionando únicamente el periodo 2020-1.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4mapeomunicipios-fig"></span>
+<img src="Imágenes/analisis111.jpg" alt="Rellenar el mapa por ciudades" width="80%" />
+<p class="caption">
+Figura 2.145: Rellenar el mapa por ciudades
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>El mapa se ve con muchos espacios ya que solo se rellenan las áreas de las ciudades que pertenecen al periodo 2020-1. Añada el campo Ciu Nac a color y seleccione medida y recuento.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5mapeomunicipios-fig"></span>
+<img src="Imágenes/analisis112.jpg" alt="Añadir color por ciudades" width="80%" />
+<p class="caption">
+Figura 2.146: Añadir color por ciudades
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>En la pestaña mapa seleccione capas de mapa.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6mapeomunicipios-fig"></span>
+<img src="Imágenes/analisis113.jpg" alt="Editar las capas del mapa" width="40%" />
+<p class="caption">
+Figura 2.147: Editar las capas del mapa
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Se mostrará un panel en el lateral izquierdo que permite seleccionar los atributos que se quieren mostrar en el mapa, en este caso se selecciona Nombres de estados/ provincias y Nombres de condados, esto hará que el mapa muestre el nombre de los municipios.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7mapeomunicipios-fig"></span>
+<img src="Imágenes/analisis114.jpg" alt="Agregar nombres de municipios" width="80%" />
+<p class="caption">
+Figura 2.148: Agregar nombres de municipios
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Edite la descripción emergente para que le quede de la siguiente manera.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8mapeomunicipios-fig"></span>
+<img src="Imágenes/analisis115.jpg" alt="Editar la descipción emergenete" width="60%" />
+<p class="caption">
+Figura 2.149: Editar la descipción emergenete
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Por último, edite el título de la leyenda de color.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:mapeomunicipios-fig"></span>
+<img src="Imágenes/analisis116.jpg" alt="Total por municipio, periodo 2020-1" width="80%" />
+<p class="caption">
+Figura 2.150: Total por municipio, periodo 2020-1
+</p>
+</div>
+<p>Este mapa permite visualizar el municipio de nacimiento de los estudiantes graduados en el periodo 2020-1, por ejemplo 2 de los estudiantes nacieron en Inírida (Guainía).</p>
 </div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">

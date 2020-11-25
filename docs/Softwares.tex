@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-24}
+\date{2020-11-25}
 
 \begin{document}
 \maketitle
@@ -2977,6 +2977,131 @@ El gráfico realizado permite identificar la distribución de las edades por niv
 }
 
 \caption{Boxplot para edad por sede y nivel de formación}\label{fig:boxplot-fig}
+\end{figure}
+
+\hypertarget{mapeodatos}{%
+\subsubsection{Mapeo de datos}\label{mapeodatos}}
+
+La georreferenciación es una herramienta más apropiadas cuando se desea mostrar la procedencia de los registros a nivel de ciudad, municipio o departamento; en el conjunto de datos que se esta trabajando se tiene información sobre la longitud y la latitud de la ciudad de nacimiento, el nombre de la ciudad y el departamento de los estudiantes.
+
+Inicialmente se deben asignar funciones geográficas a los campos que contienen el departamento y la ciudad de nacimiento ya que estas fueron leídas por Tableau como cadenas, haga clic sobre el icono ``Abc'' del campo Ciu Nac, seleccione función geográfica y Provincia/Municipio/Condado.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/analisis103} 
+
+}
+
+\caption{Asignación de función geográfica}\label{fig:funciongeografica-fig}
+\end{figure}
+
+Para el campo Dep Nac realice el mismo proceso, pero como función geográfica seleccione CC.AA./Estado/Provincia/Dpto. Debe notar que los iconos de estos campos cambiaron de ``Abc'' a un globo terráqueo que significa que ahora son variables con funciones geográficas.
+
+Luego de tener listas las variables a usar es momento de hacer mapas, inicialmente se hará un mapa que contenga el total de graduados por departamento para el periodo 2020-1.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  En una nueva hoja de trabajo llamada Total por departamento, periodo 2020-1 arrastre el campo Dep Nac a la tarjeta detalle, Tableau genera automáticamente los valores de latitud y longitud para los departamentos.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis104} 
+
+}
+
+\caption{Mapa base por departamentos}\label{fig:paso1mapeo-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Haga clic en el botón 1 desconocido ubicado en la esquina inferior derecha, seleccione editar ubicaciones, se abrirá un cuadro de dialogo que permite identificar cual es el departamento que no coincide con los nombres que Tableau tiene internamente, se observa que la ubicación que no coincide es ``NA'', es decir los datos vacíos.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis105} 
+
+}
+
+\caption{Editar ubicaciones}\label{fig:paso2mapeo-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Como son datos vacíos no es posible asignar una ubicación coincidente por lo tanto cierre el cuadro de dialogo mostrado en el paso anterior, nuevamente haga clic en el botón 1 desconocido y seleccione filtrar datos, esto con el fin de eliminar esos datos vacíos.
+\item
+  En Marcas cambie automático por Mapa, esto lo que hace es rellenar el área que pertenece a cada departamento y no tener un solo punto por departamento.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis106} 
+
+}
+
+\caption{Asignar áreas por departamento}\label{fig:paso4mapeo-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Añada el campo Dep Nac a la tarjeta etiqueta, también debe añadirlo a color, en color seleccione medida y recuento.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis107} 
+
+}
+
+\caption{Agregar color y etiquetas}\label{fig:paso5mapeo-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  Interesa mostrar los registros para el periodo 2020-1, para esto arrastre el campo Year Semester al estante filtros y seleccione únicamente el periodo 2020-1.
+\item
+  Edite la descripción emergente para que le quede de esta manera.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis108} 
+
+}
+
+\caption{Editar adecuadamente la descripción emergente}\label{fig:paso7mapeo-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Edite el titulo de la leyenda de color por Total de graduados.
+\end{enumerate}
+
+A continuación, se presenta la visualización obtenida, la cual permite identificar la cantidad de graduados por departamento para el periodo 2020-1, por ejemplo, para este periodo se graduaron 2 estudiantes provenientes del departamento de Vichada.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis109} 
+
+}
+
+\caption{Total por departamento, periodo 2020-1}\label{fig:mapeodepartamentos-fig}
 \end{figure}
 
 \hypertarget{compartir-las-visualizaciones}{%

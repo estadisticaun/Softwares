@@ -1347,4 +1347,52 @@ A continuación, se presenta la visualización obtenida, la cual permite identif
 knitr::include_graphics("Imágenes/analisis109.jpg")
 ```
 
+También es posible crear un mapa para mostrar el total de estudiantes graduados por municipio para el periodo 2020-1.
+
+1.	Cree una nueva hoja de trabajo y asigne como nombre Total por municipio, periodo 2020-1.
+
+2.	Arrastre el campo Ciu Nac y Dep Nac a detalle, obtendrá el mapa de Colombia con puntos que simbolizan cada ciudad para la que se tiene registros, en la esquina inferior encontrara el número de ciudades que Tableau no logro identificar que en este caso son 31, haga clic sobre ese botón y seleccione editar ubicaciones. Es posible que muchas ubicaciones no coincidan por tildes o mayúsculas por lo que es necesario ir asignando las ubicaciones. Por ejemplo, Cartagena de indias no se reconoció correctamente ya que la base interna de Tableau contiene solo Cartagena, por lo tanto, asigne Cartagena a Cartagena de Indias como ubicación coincidente, de esta manera asigne los demás que Tableau no logro reconocer.
+
+```{r paso2mapeomunicipios-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar ubicaciones para ciudades', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis110.jpg")
+```
+
+3.	Después de asignar todos los municipios conocidos haga clic en aceptar, es posible que aun queden valores desconocidos, los cuales pertenecen a valores faltantes en los datos por lo tanto haga clic sobre el botón de desconocido y seleccione Filtrar datos.
+
+4.	Nuevamente cambie la marca de automático a mapa para que las áreas se rellenen y añada el filtro de Year Semester seleccionando únicamente el periodo 2020-1.
+
+```{r paso4mapeomunicipios-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Rellenar el mapa por ciudades', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis111.jpg")
+```
+5.	El mapa se ve con muchos espacios ya que solo se rellenan las áreas de las ciudades que pertenecen al periodo 2020-1. Añada el campo Ciu Nac a color y seleccione medida y recuento.
+
+```{r paso5mapeomunicipios-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir color por ciudades', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis112.jpg")
+```
+
+6.	En la pestaña mapa seleccione capas de mapa.
+
+```{r paso6mapeomunicipios-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar las capas del mapa', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis113.jpg")
+```
+
+7.	Se mostrará un panel en el lateral izquierdo que permite seleccionar los atributos que se quieren mostrar en el mapa, en este caso se selecciona Nombres de estados/ provincias y Nombres de condados, esto hará que el mapa muestre el nombre de los municipios.
+
+```{r paso7mapeomunicipios-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar nombres de municipios', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis114.jpg")
+```
+
+8.	Edite la descripción emergente para que le quede de la siguiente manera.
+
+```{r paso8mapeomunicipios-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar la descipción emergenete', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis115.jpg")
+```
+
+9.	Por último, edite el título de la leyenda de color. 
+
+```{r mapeomunicipios-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Total por municipio, periodo 2020-1', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis116.jpg")
+```
+Este mapa permite visualizar el municipio de nacimiento de los estudiantes graduados en el periodo 2020-1, por ejemplo 2 de los estudiantes nacieron en Inírida (Guainía).
+
 ### Compartir las visualizaciones
