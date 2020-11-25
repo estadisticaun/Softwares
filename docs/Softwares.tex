@@ -2882,6 +2882,103 @@ Otro factor que puede afectar esta distribución de edades es la modalidad de fo
 \caption{Histograma por sede y modalidad de formación para las edades}\label{fig:histogramafiltrosedemodalidad-fig}
 \end{figure}
 
+\hypertarget{boxplot}{%
+\subsubsection{Box-plot}\label{boxplot}}
+
+Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable, permite la identificación de posibles valores atípicos. Para el conjunto de datos que se esta trabajando puede ser de interés realizar un box-plot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Cree una nueva hoja de trabajo y cambie su nombre por Boxplot para edad.
+\item
+  Repita los pasos 4 y 5 del histograma mostrados en \ref{histograma}.
+\item
+  Añada el campo Sede Nombre Mat al estante filtros, seleccione todo, muestre el filtro y cambie el modo de selección de la sede a Valor individual (lista), cambie el titulo de la leyenda por Sede de matrícula.
+\item
+  Añada el campo Nivel al estante columnas y Edad Mod a filas clic derecho sobre este último campo, seleccione medida y promedio.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis98} 
+
+}
+
+\caption{Paso 4 para la creación de un boxplot}\label{fig:paso4boxplot-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  Añada los campos Sede Nombre Mat y Year Semester a la tarjeta detalles.
+\item
+  Haga clic en el botón Mostrarme y seleccione diagramas de campos o valores.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis99} 
+
+}
+
+\caption{Uso del botón Mostrarme}\label{fig:paso6boxplot-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Añada el campo Nivel a la tarjeta colores en el estante marcas y ajuste el tamaño de la vista a vista completa.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis100} 
+
+}
+
+\caption{Añadir color por nivel de formación}\label{fig:paso7boxplot-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Cada punto de la visualización representa el promedio de las edades por periodo para cada nivel de formación según la sede que se elija en el filtro, es de interés mostrar las edades una a una y no el promedio para esto es necesario desagregar las medidas. Haga clic en la pestaña análisis y haga clic en Agregar medidas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/analisis101} 
+
+}
+
+\caption{Desagregar medidas}\label{fig:paso8boxplot-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  El eje Y de la visualización cambiara, ya que no representa el promedio de la edad si no la edad de cada estudiante. Finalmente edite la descripción emergente.
+\end{enumerate}
+
+El gráfico realizado permite identificar la distribución de las edades por nivel de formación y realizar un filtro para la sede que se desea mostrar. Por ejemplo si se selecciona la sede Bogotá se observa un punto por debajo del límite inferior, al leer la descripción emergente de este punto se identifica que fue registrado para el periodo 2009-2 y la edad del estudiantes de 15 años, esto puede deberse a errores al momento de digitar la información en la base de datos.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis102} 
+
+}
+
+\caption{Boxplot para edad por sede y nivel de formación}\label{fig:boxplot-fig}
+\end{figure}
+
 \hypertarget{compartir-las-visualizaciones}{%
 \subsection{Compartir las visualizaciones}\label{compartir-las-visualizaciones}}
 

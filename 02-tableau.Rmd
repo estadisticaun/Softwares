@@ -1291,13 +1291,60 @@ El gráfico realizado permite identificar la distribución de las edades por niv
 knitr::include_graphics("Imágenes/analisis102.jpg")
 ```
 
+#### Mapeo de datos {#mapeodatos}
 
+La georreferenciación es una herramienta más apropiadas cuando se desea mostrar la procedencia de los registros a nivel de ciudad, municipio o departamento; en el conjunto de datos que se esta trabajando se tiene información sobre la longitud y la latitud de la ciudad de nacimiento, el nombre de la ciudad y el departamento de los estudiantes. 
 
+Inicialmente se deben asignar funciones geográficas a los campos que contienen el departamento y la ciudad de nacimiento ya que estas fueron leídas por Tableau como cadenas, haga clic sobre el icono “Abc” del campo Ciu Nac, seleccione función geográfica y Provincia/Municipio/Condado.
 
+```{r funciongeografica-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de función geográfica', out.width='40%'}
+knitr::include_graphics("Imágenes/analisis103.png")
+```
 
+Para el campo Dep Nac realice el mismo proceso, pero como función geográfica seleccione CC.AA./Estado/Provincia/Dpto. Debe notar que los iconos de estos campos cambiaron de “Abc” a un globo terráqueo que significa que ahora son variables con funciones geográficas. 
 
+Luego de tener listas las variables a usar es momento de hacer mapas, inicialmente se hará un mapa que contenga el total de graduados por departamento para el periodo 2020-1.
 
+1.	En una nueva hoja de trabajo llamada Total por departamento, periodo 2020-1 arrastre el campo Dep Nac a la tarjeta detalle, Tableau genera automáticamente los valores de latitud y longitud para los departamentos. 
 
+```{r paso1mapeo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Mapa base por departamentos', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis104.jpg")
+```
 
+2.	Haga clic en el botón 1 desconocido ubicado en la esquina inferior derecha, seleccione editar ubicaciones, se abrirá un cuadro de dialogo que permite identificar cual es el departamento que no coincide con los nombres que Tableau tiene internamente, se observa que la ubicación que no coincide es “NA”, es decir los datos vacíos.
+
+```{r paso2mapeo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar ubicaciones', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis105.jpg")
+```
+
+3.	Como son datos vacíos no es posible asignar una ubicación coincidente por lo tanto cierre el cuadro de dialogo mostrado en el paso anterior, nuevamente haga clic en el botón 1 desconocido y seleccione filtrar datos, esto con el fin de eliminar esos datos vacíos.
+
+4.	En Marcas cambie automático por Mapa, esto lo que hace es rellenar el área que pertenece a cada departamento y no tener un solo punto por departamento.
+
+```{r paso4mapeo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar áreas por departamento', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis106.jpg")
+```
+
+5.	Añada el campo Dep Nac a la tarjeta etiqueta, también debe añadirlo a color, en color seleccione medida y recuento. 
+
+```{r paso5mapeo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar color y etiquetas', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis107.jpg")
+```
+
+6.	Interesa mostrar los registros para el periodo 2020-1, para esto arrastre el campo Year Semester al estante filtros y seleccione únicamente el periodo 2020-1.
+
+7.	Edite la descripción emergente para que le quede de esta manera.
+
+```{r paso7mapeo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar adecuadamente la descripción emergente', out.width='60%'}
+knitr::include_graphics("Imágenes/analisis108.jpg")
+```
+
+8.	Edite el titulo de la leyenda de color por Total de graduados.
+
+A continuación, se presenta la visualización obtenida, la cual permite identificar la cantidad de graduados por departamento para el periodo 2020-1, por ejemplo, para este periodo se graduaron 2 estudiantes provenientes del departamento de Vichada.
+
+```{r mapeodepartamentos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Total por departamento, periodo 2020-1', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis109.jpg")
+```
 
 ### Compartir las visualizaciones

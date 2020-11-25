@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-24" />
+<meta name="date" content="2020-11-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1392,6 +1392,76 @@ Figura 2.135: Desagregar medidas
 <img src="Imágenes/analisis102.jpg" alt="Boxplot para edad por sede y nivel de formación" width="80%" />
 <p class="caption">
 Figura 2.136: Boxplot para edad por sede y nivel de formación
+</p>
+</div>
+</div>
+<div id="mapeodatos" class="section level4">
+<h4><span class="header-section-number">2.4.2.12</span> Mapeo de datos</h4>
+<p>La georreferenciación es una herramienta más apropiadas cuando se desea mostrar la procedencia de los registros a nivel de ciudad, municipio o departamento; en el conjunto de datos que se esta trabajando se tiene información sobre la longitud y la latitud de la ciudad de nacimiento, el nombre de la ciudad y el departamento de los estudiantes.</p>
+<p>Inicialmente se deben asignar funciones geográficas a los campos que contienen el departamento y la ciudad de nacimiento ya que estas fueron leídas por Tableau como cadenas, haga clic sobre el icono “Abc” del campo Ciu Nac, seleccione función geográfica y Provincia/Municipio/Condado.</p>
+<div class="figure" style="text-align: center"><span id="fig:funciongeografica-fig"></span>
+<img src="Imágenes/analisis103.png" alt="Asignación de función geográfica" width="40%" />
+<p class="caption">
+Figura 2.137: Asignación de función geográfica
+</p>
+</div>
+<p>Para el campo Dep Nac realice el mismo proceso, pero como función geográfica seleccione CC.AA./Estado/Provincia/Dpto. Debe notar que los iconos de estos campos cambiaron de “Abc” a un globo terráqueo que significa que ahora son variables con funciones geográficas.</p>
+<p>Luego de tener listas las variables a usar es momento de hacer mapas, inicialmente se hará un mapa que contenga el total de graduados por departamento para el periodo 2020-1.</p>
+<ol style="list-style-type: decimal">
+<li>En una nueva hoja de trabajo llamada Total por departamento, periodo 2020-1 arrastre el campo Dep Nac a la tarjeta detalle, Tableau genera automáticamente los valores de latitud y longitud para los departamentos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1mapeo-fig"></span>
+<img src="Imágenes/analisis104.jpg" alt="Mapa base por departamentos" width="80%" />
+<p class="caption">
+Figura 2.138: Mapa base por departamentos
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Haga clic en el botón 1 desconocido ubicado en la esquina inferior derecha, seleccione editar ubicaciones, se abrirá un cuadro de dialogo que permite identificar cual es el departamento que no coincide con los nombres que Tableau tiene internamente, se observa que la ubicación que no coincide es “NA”, es decir los datos vacíos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2mapeo-fig"></span>
+<img src="Imágenes/analisis105.jpg" alt="Editar ubicaciones" width="60%" />
+<p class="caption">
+Figura 2.139: Editar ubicaciones
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Como son datos vacíos no es posible asignar una ubicación coincidente por lo tanto cierre el cuadro de dialogo mostrado en el paso anterior, nuevamente haga clic en el botón 1 desconocido y seleccione filtrar datos, esto con el fin de eliminar esos datos vacíos.</p></li>
+<li><p>En Marcas cambie automático por Mapa, esto lo que hace es rellenar el área que pertenece a cada departamento y no tener un solo punto por departamento.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4mapeo-fig"></span>
+<img src="Imágenes/analisis106.jpg" alt="Asignar áreas por departamento" width="80%" />
+<p class="caption">
+Figura 2.140: Asignar áreas por departamento
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Añada el campo Dep Nac a la tarjeta etiqueta, también debe añadirlo a color, en color seleccione medida y recuento.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5mapeo-fig"></span>
+<img src="Imágenes/analisis107.jpg" alt="Agregar color y etiquetas" width="80%" />
+<p class="caption">
+Figura 2.141: Agregar color y etiquetas
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Interesa mostrar los registros para el periodo 2020-1, para esto arrastre el campo Year Semester al estante filtros y seleccione únicamente el periodo 2020-1.</p></li>
+<li><p>Edite la descripción emergente para que le quede de esta manera.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7mapeo-fig"></span>
+<img src="Imágenes/analisis108.jpg" alt="Editar adecuadamente la descripción emergente" width="60%" />
+<p class="caption">
+Figura 2.142: Editar adecuadamente la descripción emergente
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Edite el titulo de la leyenda de color por Total de graduados.</li>
+</ol>
+<p>A continuación, se presenta la visualización obtenida, la cual permite identificar la cantidad de graduados por departamento para el periodo 2020-1, por ejemplo, para este periodo se graduaron 2 estudiantes provenientes del departamento de Vichada.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapeodepartamentos-fig"></span>
+<img src="Imágenes/analisis109.jpg" alt="Total por departamento, periodo 2020-1" width="80%" />
+<p class="caption">
+Figura 2.143: Total por departamento, periodo 2020-1
 </p>
 </div>
 </div>
