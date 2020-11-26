@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-25}
+\date{2020-11-26}
 
 \begin{document}
 \maketitle
@@ -3227,6 +3227,167 @@ También es posible crear un mapa para mostrar el total de estudiantes graduados
 \end{figure}
 
 Este mapa permite visualizar el municipio de nacimiento de los estudiantes graduados en el periodo 2020-1, por ejemplo 2 de los estudiantes nacieron en Inírida (Guainía).
+
+\hypertarget{dispersion}{%
+\subsubsection{Gráfico de dispersión}\label{dispersion}}
+
+Estos gráficos permiten identificar las relaciones existentes entre dos variables numéricas, en Tableau pueden ser creados agregando una medida al estante filas y otra al estante columnas, es posible añadir dimensiones para agregar detalle a su vista. El conjunto de datos con el cual se realizaron todas las visualizaciones anteriores no posee dos variables numéricas que permitan hacer gráficos de dispersión por esto es necesario conectarse a una nueva fuente de datos, se hará en un libro nuevo ya que a pesar de ser gráficos importantes no están relacionados con el conjunto trabajado anteriormente, para crear un nuevo libro de trabajo haga clic en archivo y seleccione nuevo.
+
+Conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos.
+1. A la hoja uno de trabajo llámela Diagrama de dispersión para ventas y beneficios.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Arrastre el campo Sales a filas y el campo Profit a columnas y ajuste el tamaño de la vista.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis117} 
+
+}
+
+\caption{Diagrama de dispersión base}\label{fig:paso2dispersion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Por defectos Tableau usa la agregación de suma para las medidas numéricas para mostrar todos los puntos se deben desagregar las medidas, haga clic en la pestaña análisis y seleccione agregar medidas. Después de hacer eso su visualización contendrá todos los puntos para ventas y beneficios.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis118} 
+
+}
+
+\caption{Diagrama de dispersión con medidas desagregadas}\label{fig:paso3dispersion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Este diagrama de dispersión tiene una mezcla de tres categorías de productos, por lo tanto, para agregar más detalle a la vista añada el campo Category a la tarjeta color.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis119} 
+
+}
+
+\caption{Añadir color según categoría}\label{fig:paso4dispersion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Tableau permite añadir líneas de tendencia que representarían modelos de regresión lineal simple, desde el panel análisis en personalizado arrastre línea de tendencia y suéltela en lineal, observe que Tableau proporciona mas opciones tales como logarítmica, exponencial, polinómica y potencia.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis120} 
+
+}
+
+\caption{Opciones de línea de tendencia}\label{fig:paso5dispersion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Se agregarán tres modelos de regresión ya que la vista esta dividida en las categorías de los productos, para que la vista se divida y sea más clara añada el campo Category a columnas y ubíquelo a la derecha de Profit.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis121} 
+
+}
+
+\caption{Dividir el eje según la categoría del producto}\label{fig:paso6dispersion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  La descripción emergente de las líneas de tendencia ajustadas da información sobre la ecuación del modelo, la mediada de \(R^2\) y \(valor-p\), valores útiles para realizar análisis estadísticos.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis122} 
+
+}
+
+\caption{Descripción emergente de la línea de tendencia}\label{fig:paso7dispersion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Haciendo clic derecho sobre una de las líneas de tendencia y seleccionando describir línea de tendencia se abrirá un cuadro de dialogo que permite visualizar la ecuación del modelo, sus coeficientes, desviaciones estándar, valores del estadístico t y valores P.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis123} 
+
+}
+
+\caption{Describir línea de tendencia}\label{fig:paso8dispersion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Haciendo clic derecho sobre una de las líneas de tendencia y seleccionando describir modelo de tendencia se abrirá un cuadro de dialogo que hace una descripción de como fue ajustado el modelo general.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis124} 
+
+}
+
+\caption{Describir modelo de tendencia}\label{fig:paso9dispersion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Para editar el modelo de regresión ajustado, haga clic sobre una línea de tendencia y seleccione editar, en la ventaja emergente que se abre encontrara diferentes opciones, como cambiar el tipo de modelo, hacer que los modelos se calculen de manera independiente según una dimensión y agregar objetes visuales como bandas de confianza.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/analisis125} 
+
+}
+
+\caption{Opciones de líneas de tendencia}\label{fig:paso10dispersion-fig}
+\end{figure}
 
 \hypertarget{compartir-las-visualizaciones}{%
 \subsection{Compartir las visualizaciones}\label{compartir-las-visualizaciones}}

@@ -1420,7 +1420,7 @@ knitr::include_graphics("Imágenes/analisis118.jpg")
 knitr::include_graphics("Imágenes/analisis119.jpg")
 ```
 
-5.	Tableau permite añadir líneas de tendencia que representarían modelos de regresión lineal simple, desde el panel análisis en personalizado arrastre línea de tendencia y suéltela en lineal, observe que Tableau proporciona mas opciones tales como logarítmica, exponencial, polinómica y potencia. 
+5.	Tableau permite añadir líneas de tendencia que representarían modelos de regresión lineal simple, desde el panel análisis en modelo arrastre línea de tendencia y suéltela en lineal, observe que Tableau proporciona más opciones tales como logarítmica, exponencial, polinómica y potencia. 
 
 ```{r paso5dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones de línea de tendencia', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis120.jpg")
@@ -1454,6 +1454,56 @@ knitr::include_graphics("Imágenes/analisis124.jpg")
 
 ```{r paso10dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones de líneas de tendencia', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis125.jpg")
+```
+
+#### Pronósticos para series de tiempo univariadas
+
+Tableau permite generar pronósticos para una serie de tiempo, para esto es necesario tener un campo con el tipo fecha y como mínimo una medida, se inicia con un gráfico de líneas básico y se añade el pronóstico.
+
+1.	Cree una nueva hoja de trabajo y asigne como nombre evolución histórica de las ventas.
+
+2.	Arrastre el campo Order Date a columnas y Sales a filas, ajuste el tamaño a Vista completa.
+
+```{r paso2pronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas base con fecha discreta', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis126.jpg")
+```
+
+3.	En el menú desplegable del campo ubicado en columnas seleccione mes, observe que hay dos opciones para año, trimestre y mes, el primer bloque toma esto como discreto, por ejemplo, mes acumularía las ventas por mes de todos los años, pero si se selecciona mes del segundo bloque las fechas se trabajaran como continuas, es decir que se grafica cada mes de cada año. 
+
+```{r paso3pronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones del campo fecha', out.width='30%'}
+knitr::include_graphics("Imágenes/analisis127.jpg")
+```
+
+4.	Obtendrá una serie de tiempo mensual para las ventas.
+
+```{r paso4pronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Serie de tiempo mensual para las ventas', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis128.jpg")
+```
+
+5.	Es momento de añadir el pronostico de ventas, haga clic en el panel análisis y desde modelo arrastre pronostico y suéltelo en añadir pronostico.
+
+```{r paso5pronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Serie de tiempo mensual para las ventas con pronóstico', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis129.jpg")
+```
+
+Note que Tableau automáticamente añade una leyenda de color que indica cuales son las observaciones reales y las estimaciones, por defecto la línea de pronósticos se añada con un intervalo de confianza del $95\%$, esto puede ser editado al hacer clic sobre un punto de la línea de pronostico y seleccionando editar, se abre un cuadro de dialogo que permite editar el pronóstico, es posible editar la duración del mismo, elegir la fuente de datos, decidir cuando meses se quieren ignorar para la realización del pronóstico, elegir el modelo y seleccionar el tamaño del intervalo de confianza. Para obtener información más detalla acerca de las opciones puede hacer clic en Obtener más información sobre las opciones de pronóstico, el cual lo llevara a la pagina de ayuda de Tableau y le proporcionara información detallada sobre las opciones. 
+
+```{r opcionespronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones de pronóstico', out.width='50%'}
+knitr::include_graphics("Imágenes/analisis130.jpg")
+```
+
+La descripción del pronóstico puede ser obtenida haciendo clic derecho sobre la estimación seleccionar pronóstico y describir pronostico, se abrirá una ventana con dos pestañas una de resumen y otra de modelos.
+
+La pestaña de resumen contiene una descripción general de los modelos de pronóstico que Tableau ha creado, también los patrones generales que encontró en los datos. 	Para obtener información mas detalla sobre lo que contiene esta pestaña puede hacer clic en Obtener más información sobre el resumen de pronósticos.
+
+```{r resumenpronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Describir pronóstico - resumen', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis131.jpg")
+```
+
+La pestaña modelos presenta información mas detalla sobre el modelo de pronóstico que Tableau ha creado; contiene el nivel, tendencia, temporada, métricas de calidad y coeficientes de suavizado, si se añada una dimensión a la vista se genera una fila en la tabla por cada nivel de la dimensión. Nuevamente se encuentra disponible el botón para obtener información mas detallada sobre los modelos de pronósticos.
+
+```{r modelospronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Describir pronóstico - modelos', out.width='80%'}
+knitr::include_graphics("Imágenes/analisis132.jpg")
 ```
 
 ### Compartir las visualizaciones
