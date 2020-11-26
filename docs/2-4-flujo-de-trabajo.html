@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-25" />
+<meta name="date" content="2020-11-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1531,6 +1531,93 @@ Figura 2.150: Total por municipio, periodo 2020-1
 </p>
 </div>
 <p>Este mapa permite visualizar el municipio de nacimiento de los estudiantes graduados en el periodo 2020-1, por ejemplo 2 de los estudiantes nacieron en Inírida (Guainía).</p>
+</div>
+<div id="dispersion" class="section level4">
+<h4><span class="header-section-number">2.4.2.13</span> Gráfico de dispersión</h4>
+<p>Estos gráficos permiten identificar las relaciones existentes entre dos variables numéricas, en Tableau pueden ser creados agregando una medida al estante filas y otra al estante columnas, es posible añadir dimensiones para agregar detalle a su vista. El conjunto de datos con el cual se realizaron todas las visualizaciones anteriores no posee dos variables numéricas que permitan hacer gráficos de dispersión por esto es necesario conectarse a una nueva fuente de datos, se hará en un libro nuevo ya que a pesar de ser gráficos importantes no están relacionados con el conjunto trabajado anteriormente, para crear un nuevo libro de trabajo haga clic en archivo y seleccione nuevo.</p>
+<p>Conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos.
+1. A la hoja uno de trabajo llámela Diagrama de dispersión para ventas y beneficios.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Arrastre el campo Sales a filas y el campo Profit a columnas y ajuste el tamaño de la vista.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2dispersion-fig"></span>
+<img src="Imágenes/analisis117.jpg" alt="Diagrama de dispersión base" width="80%" />
+<p class="caption">
+Figura 2.151: Diagrama de dispersión base
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Por defectos Tableau usa la agregación de suma para las medidas numéricas para mostrar todos los puntos se deben desagregar las medidas, haga clic en la pestaña análisis y seleccione agregar medidas. Después de hacer eso su visualización contendrá todos los puntos para ventas y beneficios.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3dispersion-fig"></span>
+<img src="Imágenes/analisis118.jpg" alt="Diagrama de dispersión con medidas desagregadas" width="80%" />
+<p class="caption">
+Figura 2.152: Diagrama de dispersión con medidas desagregadas
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Este diagrama de dispersión tiene una mezcla de tres categorías de productos, por lo tanto, para agregar más detalle a la vista añada el campo Category a la tarjeta color.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4dispersion-fig"></span>
+<img src="Imágenes/analisis119.jpg" alt="Añadir color según categoría" width="80%" />
+<p class="caption">
+Figura 2.153: Añadir color según categoría
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Tableau permite añadir líneas de tendencia que representarían modelos de regresión lineal simple, desde el panel análisis en personalizado arrastre línea de tendencia y suéltela en lineal, observe que Tableau proporciona mas opciones tales como logarítmica, exponencial, polinómica y potencia.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5dispersion-fig"></span>
+<img src="Imágenes/analisis120.jpg" alt="Opciones de línea de tendencia" width="80%" />
+<p class="caption">
+Figura 2.154: Opciones de línea de tendencia
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Se agregarán tres modelos de regresión ya que la vista esta dividida en las categorías de los productos, para que la vista se divida y sea más clara añada el campo Category a columnas y ubíquelo a la derecha de Profit.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6dispersion-fig"></span>
+<img src="Imágenes/analisis121.jpg" alt="Dividir el eje según la categoría del producto" width="80%" />
+<p class="caption">
+Figura 2.155: Dividir el eje según la categoría del producto
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>La descripción emergente de las líneas de tendencia ajustadas da información sobre la ecuación del modelo, la mediada de <span class="math inline">\(R^2\)</span> y <span class="math inline">\(valor-p\)</span>, valores útiles para realizar análisis estadísticos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7dispersion-fig"></span>
+<img src="Imágenes/analisis122.jpg" alt="Descripción emergente de la línea de tendencia" width="80%" />
+<p class="caption">
+Figura 2.156: Descripción emergente de la línea de tendencia
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Haciendo clic derecho sobre una de las líneas de tendencia y seleccionando describir línea de tendencia se abrirá un cuadro de dialogo que permite visualizar la ecuación del modelo, sus coeficientes, desviaciones estándar, valores del estadístico t y valores P.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8dispersion-fig"></span>
+<img src="Imágenes/analisis123.jpg" alt="Describir línea de tendencia" width="60%" />
+<p class="caption">
+Figura 2.157: Describir línea de tendencia
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Haciendo clic derecho sobre una de las líneas de tendencia y seleccionando describir modelo de tendencia se abrirá un cuadro de dialogo que hace una descripción de como fue ajustado el modelo general.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso9dispersion-fig"></span>
+<img src="Imágenes/analisis124.jpg" alt="Describir modelo de tendencia" width="80%" />
+<p class="caption">
+Figura 2.158: Describir modelo de tendencia
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>Para editar el modelo de regresión ajustado, haga clic sobre una línea de tendencia y seleccione editar, en la ventaja emergente que se abre encontrara diferentes opciones, como cambiar el tipo de modelo, hacer que los modelos se calculen de manera independiente según una dimensión y agregar objetes visuales como bandas de confianza.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso10dispersion-fig"></span>
+<img src="Imágenes/analisis125.jpg" alt="Opciones de líneas de tendencia" width="60%" />
+<p class="caption">
+Figura 2.159: Opciones de líneas de tendencia
+</p>
+</div>
 </div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">
