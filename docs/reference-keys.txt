@@ -200,3 +200,13 @@ flourish
 example-one
 example-two
 conclu
+fig:paso2tablero-fig
+fig:paso3tablero-fig
+fig:paso4tablero-fig
+fig:paso7tablero-fig
+fig:paso8tablero-fig
+fig:paso9tablero-fig
+fig:paso10tablero-fig
+fig:paso11tablero-fig
+fig:tableromodalidaddeformacion-fig
+crear-un-dashboard

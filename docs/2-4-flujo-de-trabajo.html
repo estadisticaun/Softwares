@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-11-26" />
+<meta name="date" content="2020-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1681,11 +1681,105 @@ Figura 2.165: Describir pronóstico - resumen
 Figura 2.166: Describir pronóstico - modelos
 </p>
 </div>
+<p>Después de crear todos los objetos visuales necesarios para implementar tableros e historias, es necesario dar formato al libro de trabajo en cuanto a fuentes, tamaño y color de títulos de hojas de trabajo, tableros e historias y descripciones emergentes, con el fin de que el libro de trabajo contemple la misma fuente en todas sus hojas.</p>
+<p>Haga clic en el botón formato y seleccione libro de trabajo, en el panel derecho se ubican fuentes y líneas, aumente el tamaño de los títulos de las hojas de trabajo seleccionando tamaño <span class="math inline">\(18\)</span>, color negro y negrilla, haga lo mismo para los títulos de tableros e historias, si quiere puede cambiar el tipo de fuente, en ese caso se dejan los predeterminados por Tableau.</p>
 </div>
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">
 <h3><span class="header-section-number">2.4.3</span> Compartir las visualizaciones</h3>
+<p>Las visualizaciones creadas usando la versión de escritorio de Tableau Public pueden ser compartidas como hojas individuales, dashboard o historias, en este caso se crearán dashboard que luego se integran a historias para replicar la forma de visualización que se publica en la página de estadísticas <a href="http://estadisticas.unal.edu.co/home/">estadísticas</a> de la Universidad Nacional de Colombia en la pestaña cifras generales y graduados. Es necesario crear ocho tableros con las visualizaciones que se crearon anteriormente y luego se incluirán en una historia con ocho puntos.</p>
+<div id="crear-un-dashboard" class="section level4">
+<h4><span class="header-section-number">2.4.3.1</span> Crear un dashboard</h4>
+<p>Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales, graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard, es posible agregar esta hoja directamente a la historia.</p>
+<p>La siguiente visualización presenta una combinación de una serie de tiempo, una tabla de texto y un diagrama circular con la distribución de los estudiantes graduados en el periodo actual. Todas estas visualizaciones ya fueron creadas, pero es necesario agregar un botón que permita intercambiar entre la serie y la tabla.</p>
+<ol style="list-style-type: decimal">
+<li><p>Diríjase a la hoja de trabajo llamada serie, haga clic en el menú desplegable ubicado entre datos y tablas y seleccione crear parámetro.</p></li>
+<li><p>En el cuadro de dialogo escriba como nombre del parámetro Seleccione visualización, tipo de datos seleccione cadena, en valores permitidos seleccione lista, finalmente en Lista de valores, escriba serie como el primer valor y, a continuación, tabla que son las dos visualizaciones que se desean integrar al dashboard.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2tablero-fig"></span>
+<img src="Imágenes/compartir1.jpg" alt="Editar parámetro de selección de visualizaciones" width="60%" />
+<p class="caption">
+Figura 2.167: Editar parámetro de selección de visualizaciones
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Ahora se debe crear un campo calculado que incluya el parámetro, cree un nuevo campo calculado llámelo, Mostar hoja, en el cuadro de texto de la fórmula, escriba el nombre del parámetro que creo anteriormente y haga clic en aceptar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3tablero-fig"></span>
+<img src="Imágenes/compartir2.jpg" alt="Crear campo calculado con el parámetro" width="60%" />
+<p class="caption">
+Figura 2.168: Crear campo calculado con el parámetro
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Añada el campo calculado creado en el paso anterior al estante filtros, seleccione personalizar lista de valores escriba serie en el cuadro de texto y haga clic en el botón añadir elemento y clic en aceptar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4tablero-fig"></span>
+<img src="Imágenes/compartir3.jpg" alt="Editar filtro del campo calculado" width="60%" />
+<p class="caption">
+Figura 2.169: Editar filtro del campo calculado
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Repita el paso anterior para todas las hojas que desee añadir al dashboard.</p></li>
+<li><p>Muestre el parámetro haciendo clic en el menú desplegable del mismo y seleccione mostrar parámetro, para todas hojas en las que añadió el campo calculado al estante filtro.</p></li>
+<li><p>Cree un nuevo dashboard, ajuste el tamaño a automático, desde el panel hojas arrastre la hoja que contiene el gráfico circular para la distribución de graduados por modalidad de formación para el periodo actual.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7tablero-fig"></span>
+<img src="Imágenes/compartir4.jpg" alt="Añadir una visualización al dashboard" width="80%" />
+<p class="caption">
+Figura 2.170: Añadir una visualización al dashboard
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Desde el panel objetos arrastre un contendor de trazado vertical hasta el dashboard y suéltelo sobre el rectángulo gris que ocupa la mitad izquierda del tablero.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8tablero-fig"></span>
+<img src="Imágenes/compartir5.jpg" alt="Agregar un contenedor de trazado vertical" width="80%" />
+<p class="caption">
+Figura 2.171: Agregar un contenedor de trazado vertical
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Arrastre la hoja Serie al contenedor, arrastre también la hoja que contiene la tabla de texto y suéltela sobre el rectángulo gris claro que se crea debajo del titulo de la serie.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso9tablero-fig"></span>
+<img src="Imágenes/compartir6.jpg" alt="Agregar vistas al contenedor de trazado vertical" width="80%" />
+<p class="caption">
+Figura 2.172: Agregar vistas al contenedor de trazado vertical
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>Debe ocultar los tirulos de las hojas puestas sobre el contendor, haga clic sobre el titulo de la serie, seleccione mas opciones y luego título, esto debe hacerlo también para la hoja tabla.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso10tablero-fig"></span>
+<img src="Imágenes/compartir7.jpg" alt="Ocultar títulos" width="80%" />
+<p class="caption">
+Figura 2.173: Ocultar títulos
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>Desde el panel objetos arrastre texto y suéltelo en la parte superior del contenedor.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso11tablero-fig"></span>
+<img src="Imágenes/compartir8.jpg" alt="Agregar cuadro de texto" width="80%" />
+<p class="caption">
+Figura 2.174: Agregar cuadro de texto
+</p>
+</div>
+<ol start="12" style="list-style-type: decimal">
+<li><p>En el cuadro de dialogo editar texto escriba evolución historia del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a <span class="math inline">\(18\)</span>, seleccione negrilla y centrar el texto.</p></li>
+<li><p>Cambie el nombre del dashboard a modalidad de formación, recuerde que los filtros de semestre y año únicamente aplican cuando el parámetro seleccione visualización se encuentra en tabla.</p></li>
+</ol>
+<p>A continuación, se presenta el dashboard obtenido que proporciona información clara sobre la modalidad de formación y permite intercambiar entre la serie y la tabla de texto.</p>
+<div class="figure" style="text-align: center"><span id="fig:tableromodalidaddeformacion-fig"></span>
+<img src="Imágenes/compartir9.jpg" alt="Dashboard para modalidad de formación" width="80%" />
+<p class="caption">
+Figura 2.175: Dashboard para modalidad de formación
+</p>
+</div>
 
+</div>
 </div>
 </div>
 <!-- </div> -->

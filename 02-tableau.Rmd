@@ -1507,8 +1507,76 @@ knitr::include_graphics("Imágenes/analisis132.jpg")
 ```
 Después de crear todos los objetos visuales necesarios para implementar tableros e historias, es necesario dar formato al libro de trabajo en cuanto a fuentes, tamaño y color de títulos de hojas de trabajo, tableros e historias y descripciones emergentes, con el fin de que el libro de trabajo contemple la misma fuente en todas sus hojas. 
 
-Haga clic en el botón formato y seleccione libro de trabajo, en el panel derecho se ubican fuentes y líneas, aumente el tamaño de los títulos de las hojas de trabajo seleccionando tamaño 18, color negro y negrilla, haga lo mismo para los títulos de tableros e historias, si quiere puede cambiar el tipo de fuente, en ese caso se dejan los predeterminados por Tableau. 
-
-
+Haga clic en el botón formato y seleccione libro de trabajo, en el panel derecho se ubican fuentes y líneas, aumente el tamaño de los títulos de las hojas de trabajo seleccionando tamaño $18$, color negro y negrilla, haga lo mismo para los títulos de tableros e historias, si quiere puede cambiar el tipo de fuente, en ese caso se dejan los predeterminados por Tableau. 
 
 ### Compartir las visualizaciones
+
+Las visualizaciones creadas usando la versión de escritorio de Tableau Public pueden ser compartidas como hojas individuales, dashboard o historias, en este caso se crearán dashboard que luego se integran a historias para replicar la forma de visualización que se publica en la página de estadísticas [estadísticas](http://estadisticas.unal.edu.co/home/) de la Universidad Nacional de Colombia en la pestaña cifras generales y graduados. Es necesario crear ocho tableros con las visualizaciones que se crearon anteriormente y luego se incluirán en una historia con ocho puntos. 
+
+#### Crear un dashboard
+
+Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales, graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard, es posible agregar esta hoja directamente a la historia.
+
+La siguiente visualización presenta una combinación de una serie de tiempo, una tabla de texto y un diagrama circular con la distribución de los estudiantes graduados en el periodo actual. Todas estas visualizaciones ya fueron creadas, pero es necesario agregar un botón que permita intercambiar entre la serie y la tabla. 
+
+1.	Diríjase a la hoja de trabajo llamada serie, haga clic en el menú desplegable ubicado entre datos y tablas y seleccione crear parámetro. 
+
+2.	En el cuadro de dialogo escriba como nombre del parámetro Seleccione visualización, tipo de datos seleccione cadena, en valores permitidos seleccione lista, finalmente en Lista de valores, escriba serie como el primer valor y, a continuación, tabla que son las dos visualizaciones que se desean integrar al dashboard. 
+
+```{r paso2tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar parámetro de selección de visualizaciones', out.width='60%'}
+knitr::include_graphics("Imágenes/compartir1.jpg")
+```
+
+3.	Ahora se debe crear un campo calculado que incluya el parámetro, cree un nuevo campo calculado llámelo, Mostar hoja, en el cuadro de texto de la fórmula, escriba el nombre del parámetro que creo anteriormente y haga clic en aceptar. 
+
+```{r paso3tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear campo calculado con el parámetro', out.width='60%'}
+knitr::include_graphics("Imágenes/compartir2.jpg")
+```
+4.	Añada el campo calculado creado en el paso anterior al estante filtros, seleccione personalizar lista de valores escriba serie en el cuadro de texto y haga clic en el botón añadir elemento y clic en aceptar. 
+
+```{r paso4tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar filtro del campo calculado', out.width='60%'}
+knitr::include_graphics("Imágenes/compartir3.jpg")
+```
+
+5.	 Repita el paso anterior para todas las hojas que desee añadir al dashboard. 
+
+6.	Muestre el parámetro haciendo clic en el menú desplegable del mismo y seleccione mostrar parámetro, para todas hojas en las que añadió el campo calculado al estante filtro.
+
+7.	Cree un nuevo dashboard, ajuste el tamaño a automático, desde el panel hojas arrastre la hoja que contiene el gráfico circular para la distribución de graduados por modalidad de formación para el periodo actual.
+
+```{r paso7tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir una visualización al dashboard', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir4.jpg")
+```
+
+8.	Desde el panel objetos arrastre un contendor de trazado vertical hasta el dashboard y suéltelo sobre el rectángulo gris que ocupa la mitad izquierda del tablero.
+
+```{r paso8tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar un contenedor de trazado vertical', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir5.jpg")
+```
+9.	Arrastre la hoja Serie al contenedor, arrastre también la hoja que contiene la tabla de texto y suéltela sobre el rectángulo gris claro que se crea debajo del titulo de la serie. 
+
+```{r paso9tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar vistas al contenedor de trazado vertical', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir6.jpg")
+```
+
+10.	Debe ocultar los tirulos de las hojas puestas sobre el contendor, haga clic sobre el titulo de la serie, seleccione mas opciones y luego título, esto debe hacerlo también para la hoja tabla.
+
+```{r paso10tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ocultar títulos', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir7.jpg")
+```
+
+11.	Desde el panel objetos arrastre texto y suéltelo en la parte superior del contenedor. 
+
+```{r paso11tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar cuadro de texto', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir8.jpg")
+```
+
+12.	En el cuadro de dialogo editar texto escriba evolución historia del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a $18$, seleccione negrilla y centrar el texto. 
+
+13.	Cambie el nombre del dashboard a modalidad de formación, recuerde que los filtros de semestre y año únicamente aplican cuando el parámetro seleccione visualización se encuentra en tabla. 
+
+A continuación, se presenta el dashboard obtenido que proporciona información clara sobre la modalidad de formación y permite intercambiar entre la serie y la tabla de texto.
+
+```{r tableromodalidaddeformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard para modalidad de formación', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir9.jpg")
+```
