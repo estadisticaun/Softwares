@@ -1505,5 +1505,10 @@ La pestaña modelos presenta información mas detalla sobre el modelo de pronós
 ```{r modelospronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Describir pronóstico - modelos', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis132.jpg")
 ```
+Después de crear todos los objetos visuales necesarios para implementar tableros e historias, es necesario dar formato al libro de trabajo en cuanto a fuentes, tamaño y color de títulos de hojas de trabajo, tableros e historias y descripciones emergentes, con el fin de que el libro de trabajo contemple la misma fuente en todas sus hojas. 
+
+Haga clic en el botón formato y seleccione libro de trabajo, en el panel derecho se ubican fuentes y líneas, aumente el tamaño de los títulos de las hojas de trabajo seleccionando tamaño 18, color negro y negrilla, haga lo mismo para los títulos de tableros e historias, si quiere puede cambiar el tipo de fuente, en ese caso se dejan los predeterminados por Tableau. 
+
+
 
 ### Compartir las visualizaciones

@@ -3292,7 +3292,7 @@ Conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Order
 \setcounter{enumi}{4}
 \tightlist
 \item
-  Tableau permite añadir líneas de tendencia que representarían modelos de regresión lineal simple, desde el panel análisis en personalizado arrastre línea de tendencia y suéltela en lineal, observe que Tableau proporciona mas opciones tales como logarítmica, exponencial, polinómica y potencia.
+  Tableau permite añadir líneas de tendencia que representarían modelos de regresión lineal simple, desde el panel análisis en modelo arrastre línea de tendencia y suéltela en lineal, observe que Tableau proporciona más opciones tales como logarítmica, exponencial, polinómica y potencia.
 \end{enumerate}
 
 \begin{figure}
@@ -3387,6 +3387,114 @@ Conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Order
 }
 
 \caption{Opciones de líneas de tendencia}\label{fig:paso10dispersion-fig}
+\end{figure}
+
+\hypertarget{pronuxf3sticos-para-series-de-tiempo-univariadas}{%
+\subsubsection{Pronósticos para series de tiempo univariadas}\label{pronuxf3sticos-para-series-de-tiempo-univariadas}}
+
+Tableau permite generar pronósticos para una serie de tiempo, para esto es necesario tener un campo con el tipo fecha y como mínimo una medida, se inicia con un gráfico de líneas básico y se añade el pronóstico.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Cree una nueva hoja de trabajo y asigne como nombre evolución histórica de las ventas.
+\item
+  Arrastre el campo Order Date a columnas y Sales a filas, ajuste el tamaño a Vista completa.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis126} 
+
+}
+
+\caption{Gráfico de líneas base con fecha discreta}\label{fig:paso2pronosticos-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  En el menú desplegable del campo ubicado en columnas seleccione mes, observe que hay dos opciones para año, trimestre y mes, el primer bloque toma esto como discreto, por ejemplo, mes acumularía las ventas por mes de todos los años, pero si se selecciona mes del segundo bloque las fechas se trabajaran como continuas, es decir que se grafica cada mes de cada año.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/analisis127} 
+
+}
+
+\caption{Opciones del campo fecha}\label{fig:paso3pronosticos-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Obtendrá una serie de tiempo mensual para las ventas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis128} 
+
+}
+
+\caption{Serie de tiempo mensual para las ventas}\label{fig:paso4pronosticos-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Es momento de añadir el pronostico de ventas, haga clic en el panel análisis y desde modelo arrastre pronostico y suéltelo en añadir pronostico.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis129} 
+
+}
+
+\caption{Serie de tiempo mensual para las ventas con pronóstico}\label{fig:paso5pronosticos-fig}
+\end{figure}
+
+Note que Tableau automáticamente añade una leyenda de color que indica cuales son las observaciones reales y las estimaciones, por defecto la línea de pronósticos se añada con un intervalo de confianza del \(95\%\), esto puede ser editado al hacer clic sobre un punto de la línea de pronostico y seleccionando editar, se abre un cuadro de dialogo que permite editar el pronóstico, es posible editar la duración del mismo, elegir la fuente de datos, decidir cuando meses se quieren ignorar para la realización del pronóstico, elegir el modelo y seleccionar el tamaño del intervalo de confianza. Para obtener información más detalla acerca de las opciones puede hacer clic en Obtener más información sobre las opciones de pronóstico, el cual lo llevara a la pagina de ayuda de Tableau y le proporcionara información detallada sobre las opciones.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imágenes/analisis130} 
+
+}
+
+\caption{Opciones de pronóstico}\label{fig:opcionespronosticos-fig}
+\end{figure}
+
+La descripción del pronóstico puede ser obtenida haciendo clic derecho sobre la estimación seleccionar pronóstico y describir pronostico, se abrirá una ventana con dos pestañas una de resumen y otra de modelos.
+
+La pestaña de resumen contiene una descripción general de los modelos de pronóstico que Tableau ha creado, también los patrones generales que encontró en los datos. Para obtener información mas detalla sobre lo que contiene esta pestaña puede hacer clic en Obtener más información sobre el resumen de pronósticos.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis131} 
+
+}
+
+\caption{Describir pronóstico - resumen}\label{fig:resumenpronosticos-fig}
+\end{figure}
+
+La pestaña modelos presenta información mas detalla sobre el modelo de pronóstico que Tableau ha creado; contiene el nivel, tendencia, temporada, métricas de calidad y coeficientes de suavizado, si se añada una dimensión a la vista se genera una fila en la tabla por cada nivel de la dimensión. Nuevamente se encuentra disponible el botón para obtener información mas detallada sobre los modelos de pronósticos.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/analisis132} 
+
+}
+
+\caption{Describir pronóstico - modelos}\label{fig:modelospronosticos-fig}
 \end{figure}
 
 \hypertarget{compartir-las-visualizaciones}{%
