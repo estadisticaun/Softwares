@@ -1580,3 +1580,52 @@ A continuación, se presenta el dashboard obtenido que proporciona información 
 ```{r tableromodalidaddeformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard para modalidad de formación', out.width='80%'}
 knitr::include_graphics("Imágenes/compartir9.jpg")
 ```
+
+Oculte las hojas que ha usado en el dashboard anterior con el fin de que la barra de hojas de la parte inferior no se sature, haga clic derecho sobre el nombre de la hoja de trabajo y seleccione ocultar. 
+
+El siguiente dashboard a realizar corresponde a las estadísticas por nivel de formación, debe crear todos los objetos visuales que involucra este dashboard e incorporarlos al tablero como se mostro anteriormente, el dashboard para nuvel de formación debe verse así,
+
+```{r tableroniveldefromacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard para nivel de formación', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir10.jpg")
+```
+
+Para el tablero que contiene las estadísticas por sede de admisión se decide no usar el gráfico de barras y en su lugar incluir el mapa de árbol, con el fin de mostrar visualizaciones diferentes pero que informan de manera clara.
+
+```{r tablerosedeadmision-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard para sede de admisión', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir11.jpg")
+```
+
+Tablero para nacionalidad.
+
+```{r tableronacionalidad-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard para nacionalidad', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir12.jpg")
+```
+
+Estadísticas para lugar de nacimiento.
+
+```{r tablerolugardenacimiento-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard para lugar de nacimiento', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir13.jpg")
+```
+El siguiente tablero presenta las estadísticas por sexo de los estudiantes graduados.
+
+```{r tablerosexo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard por sexo', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir14.jpg")
+```
+
+Finalmente se realiza el dashboard con las estadísticas por áreas del conocimeinto.
+
+```{r tableroareasconocimiento-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard por áreas del conocimiento SNIES', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir15.jpg")
+```
+
+
+
+
+
+
+
+
+
+
+
+

@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-11-26}
+\date{2020-11-30}
 
 \begin{document}
 \maketitle
@@ -3497,8 +3497,180 @@ La pestaña modelos presenta información mas detalla sobre el modelo de pronós
 \caption{Describir pronóstico - modelos}\label{fig:modelospronosticos-fig}
 \end{figure}
 
+Después de crear todos los objetos visuales necesarios para implementar tableros e historias, es necesario dar formato al libro de trabajo en cuanto a fuentes, tamaño y color de títulos de hojas de trabajo, tableros e historias y descripciones emergentes, con el fin de que el libro de trabajo contemple la misma fuente en todas sus hojas.
+
+Haga clic en el botón formato y seleccione libro de trabajo, en el panel derecho se ubican fuentes y líneas, aumente el tamaño de los títulos de las hojas de trabajo seleccionando tamaño \(18\), color negro y negrilla, haga lo mismo para los títulos de tableros e historias, si quiere puede cambiar el tipo de fuente, en ese caso se dejan los predeterminados por Tableau.
+
 \hypertarget{compartir-las-visualizaciones}{%
 \subsection{Compartir las visualizaciones}\label{compartir-las-visualizaciones}}
+
+Las visualizaciones creadas usando la versión de escritorio de Tableau Public pueden ser compartidas como hojas individuales, dashboard o historias, en este caso se crearán dashboard que luego se integran a historias para replicar la forma de visualización que se publica en la página de estadísticas \href{http://estadisticas.unal.edu.co/home/}{estadísticas} de la Universidad Nacional de Colombia en la pestaña cifras generales y graduados. Es necesario crear ocho tableros con las visualizaciones que se crearon anteriormente y luego se incluirán en una historia con ocho puntos.
+
+\hypertarget{crear-un-dashboard}{%
+\subsubsection{Crear un dashboard}\label{crear-un-dashboard}}
+
+Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales, graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard, es posible agregar esta hoja directamente a la historia.
+
+La siguiente visualización presenta una combinación de una serie de tiempo, una tabla de texto y un diagrama circular con la distribución de los estudiantes graduados en el periodo actual. Todas estas visualizaciones ya fueron creadas, pero es necesario agregar un botón que permita intercambiar entre la serie y la tabla.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Diríjase a la hoja de trabajo llamada serie, haga clic en el menú desplegable ubicado entre datos y tablas y seleccione crear parámetro.
+\item
+  En el cuadro de dialogo escriba como nombre del parámetro Seleccione visualización, tipo de datos seleccione cadena, en valores permitidos seleccione lista, finalmente en Lista de valores, escriba serie como el primer valor y, a continuación, tabla que son las dos visualizaciones que se desean integrar al dashboard.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir1} 
+
+}
+
+\caption{Editar parámetro de selección de visualizaciones}\label{fig:paso2tablero-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Ahora se debe crear un campo calculado que incluya el parámetro, cree un nuevo campo calculado llámelo, Mostar hoja, en el cuadro de texto de la fórmula, escriba el nombre del parámetro que creo anteriormente y haga clic en aceptar.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir2} 
+
+}
+
+\caption{Crear campo calculado con el parámetro}\label{fig:paso3tablero-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Añada el campo calculado creado en el paso anterior al estante filtros, seleccione personalizar lista de valores escriba serie en el cuadro de texto y haga clic en el botón añadir elemento y clic en aceptar.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir3} 
+
+}
+
+\caption{Editar filtro del campo calculado}\label{fig:paso4tablero-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  Repita el paso anterior para todas las hojas que desee añadir al dashboard.
+\item
+  Muestre el parámetro haciendo clic en el menú desplegable del mismo y seleccione mostrar parámetro, para todas hojas en las que añadió el campo calculado al estante filtro.
+\item
+  Cree un nuevo dashboard, ajuste el tamaño a automático, desde el panel hojas arrastre la hoja que contiene el gráfico circular para la distribución de graduados por modalidad de formación para el periodo actual.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir4} 
+
+}
+
+\caption{Añadir una visualización al dashboard}\label{fig:paso7tablero-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Desde el panel objetos arrastre un contendor de trazado vertical hasta el dashboard y suéltelo sobre el rectángulo gris que ocupa la mitad izquierda del tablero.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir5} 
+
+}
+
+\caption{Agregar un contenedor de trazado vertical}\label{fig:paso8tablero-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Arrastre la hoja Serie al contenedor, arrastre también la hoja que contiene la tabla de texto y suéltela sobre el rectángulo gris claro que se crea debajo del titulo de la serie.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir6} 
+
+}
+
+\caption{Agregar vistas al contenedor de trazado vertical}\label{fig:paso9tablero-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Debe ocultar los tirulos de las hojas puestas sobre el contendor, haga clic sobre el titulo de la serie, seleccione mas opciones y luego título, esto debe hacerlo también para la hoja tabla.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir7} 
+
+}
+
+\caption{Ocultar títulos}\label{fig:paso10tablero-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Desde el panel objetos arrastre texto y suéltelo en la parte superior del contenedor.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir8} 
+
+}
+
+\caption{Agregar cuadro de texto}\label{fig:paso11tablero-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\item
+  En el cuadro de dialogo editar texto escriba evolución historia del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a \(18\), seleccione negrilla y centrar el texto.
+\item
+  Cambie el nombre del dashboard a modalidad de formación, recuerde que los filtros de semestre y año únicamente aplican cuando el parámetro seleccione visualización se encuentra en tabla.
+\end{enumerate}
+
+A continuación, se presenta el dashboard obtenido que proporciona información clara sobre la modalidad de formación y permite intercambiar entre la serie y la tabla de texto.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir9} 
+
+}
+
+\caption{Dashboard para modalidad de formación}\label{fig:tableromodalidaddeformacion-fig}
+\end{figure}
 
 \hypertarget{powerbi}{%
 \chapter{Power BI}\label{powerbi}}
