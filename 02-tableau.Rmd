@@ -1571,7 +1571,7 @@ knitr::include_graphics("Imágenes/compartir7.jpg")
 knitr::include_graphics("Imágenes/compartir8.jpg")
 ```
 
-12.	En el cuadro de dialogo editar texto escriba evolución historia del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a $18$, seleccione negrilla y centrar el texto. 
+12.	En el cuadro de dialogo editar texto escriba evolución histórica del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a $18$, seleccione negrilla y centrar el texto. 
 
 13.	Cambie el nombre del dashboard a modalidad de formación, recuerde que los filtros de semestre y año únicamente aplican cuando el parámetro seleccione visualización se encuentra en tabla. 
 
@@ -1618,14 +1618,52 @@ Finalmente se realiza el dashboard con las estadísticas por áreas del conocime
 knitr::include_graphics("Imágenes/compartir15.jpg")
 ```
 
+#### Crear una historia 
 
+Como ya se menciono una historia es una secuencia de vistas o dashboards que se utilizan en forma conjunta para mostrar información, en este caso se hará uso de las historias para mostrar una secuencia de las visualizaciones y dashboards creados anteriormente y lograr una estructura similar a la mostrada en la página web de las estadísticas de la Universidad. 
 
+1.	Haga clic en el icono de historia en la barra inferior donde se ubican los tableros creados, asigne como nombre a la nueva historia Graduados.
 
+2.	Ajuste el tamaño para que ocupe toda la pantalla del dispositivo.
 
+```{r paso2compartir-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear una historia', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir16.jpg")
+```
 
+3.	En el cuadro gris añada como subtitulo Evolución graduados, en el panel lateral izquierdo en la pestaña historia encontrar un botón que tiene el texto En blanco, dicho botón es usado para crear mas puntos en la historia, haga clic allí hasta tener $8$ puntos en la historia. Añada estos subtítulos a los puntos de la historia en este orden Modalidad de formación, Nivel de formación, Sede de admisión, Nacionalidad, Lugar de nacimiento, Sexo, Áreas del conocimiento.
 
+4.	En el primer punto de la historia agrega la hoja llamada Evolución histórica del total de estudiantes graduados.
 
+```{r paso4compartir-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir una visualización a la historia', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir17.jpg")
+```
 
+5.	Observe que al agregar hojas a una historia estas se agregan sin el título, para agregar un título o una descripción de la visualización que se esta presentando, en el panel lateral derecho se ubica una opción llamada Arrastrar a añadir texto, arrástrela hacia la visualización y en el cuadro de dialogo escriba evolución histórica del total de estudiantes graduados, como fuente seleccione Tableau Light, tamaño 18, negrilla y centrada.
 
+```{r paso5compartir-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir texto', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir18.jpg")
+```
+6.	A los demás puntos de las historias añada los tableros que fueron creados en la sección anterior. 
 
+7.	Haga clic en la pestaña formato ubicada sobre la barra de herramientas y seleccione historia. 
 
+```{r paso7compartir-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de la historia', out.width='20%'}
+knitr::include_graphics("Imágenes/compartir19.jpg")
+```
+
+8.	Se despliega un menú en el panel lateral izquierdo que permite formatear el aspecto de la historia, en la sección navegador haga clic en fuente, aumente el tamaño de la fuente y seleccione negrilla; ahora haga clic en sombreado y más colores, agregue este código hexadecimal que coincide con el color usado en la página web “$#636363$”.
+
+9.	Finalmente, en objetos de texto seleccione ninguno para el sombreado y para el borde.
+
+Se obtiene una historia que permite navegar entre los diferentes dashboards que contienen información sobre las estadísticas generales de la Universidad.
+
+```{r historiagraduados-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Historia: graduados', out.width='80%'}
+knitr::include_graphics("Imágenes/compartir20.jpg")
+```
+
+Oculte todos los dashboards involucrados en la historia, haga clic en la pestaña archivo y seleccione guardan en Tableau Public como…
+
+```{r guardarlibroddetrabajo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Guardar el libro de trabajo', out.width='60%'}
+knitr::include_graphics("Imágenes/compartir21.jpg")
+```
+Asigne un título al libro de trabajo y haga clic en guardar, con esto se abrirá una pestaña en su navegador que contiene la visualización publicada en su cuenta de Tableau Public, puede hacer clic en botón compartir y copiar el código para insertar en alguna página web o el enlace.
