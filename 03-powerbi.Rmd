@@ -54,6 +54,15 @@ Existe una gran comunidad de expertos y usuarios de Power BI a nivel mundial, qu
 
 ### Principales desventajas de Power BI
 
+- No tiene la capacidad de publicar informes con todos los datos asociados, lo cual significa que algunos datos pueden quedar fuera de las visualizaciones.
+
+- Limitaciones de fuentes de datos para la versión gratuita.
+
+- Limites de GB para las versiones no premium.
+
+- Interfaz más compleja, pero de gran utilidad. 
+
+
 ### Productos de Power BI
 
 - [Power BI Desktop](https://powerbi.microsoft.com/es-es/desktop/): es una aplicación de escritorio gratuita, se puede instalar directamente el su equipo y ayuda a explorar los datos de manera profunda y avanzada.
@@ -84,4 +93,17 @@ Existe una gran comunidad de expertos y usuarios de Power BI a nivel mundial, qu
    * Permite Almacenar datos de Power BI en Azure Data Lake Storage Gen2.
    * Seguridad y cifrado de datos.
    * Modelado de datos basado en IA usando AutoML, Cognitive Services y Azure Machine Learning.
+   
+### Compartir el trabajo realizado en Power BI
 
+Cuando se trabaja con la versión Pro o Premium se tiene diversas formas de compartir y colaborar con las personas de la organización. 
+
+-	Guardar el área de trabajo de forma local en su computadora, haciendo clic en archivo, guardar como, añadir un nombre para el archivo y finalmente clic en guardar.
+
+-	Publicar informe en el servicio de Power BI, hacer clic en archivo y seleccionar publicar, se abre un cuadro de dialogo pidiendo el inicio de sesión en el servicio de Power BI.
+
+-	Insertar informes en paginas web, esto es posible hacerlo usando [SharePoint Online](https://docs.microsoft.com/es-es/power-bi/collaborate-share/service-embed-report-spo) o directamente en una [página web](https://docs.microsoft.com/es-es/power-bi/collaborate-share/service-embed-secure) al extraer la URL del informe.
+
+-	Imprimir o guardar en formato PDF, haciendo clic en archivo, seleccionar exportar y finalmente exportar a PDF. 
+
+Al usar la versión gratuita de Power BI, es decir el producto Power BI Desktop solo es posible guardar el área de trabajo de manera local y exportar los informes como PDF.  
