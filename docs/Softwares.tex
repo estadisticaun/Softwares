@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-12-01}
+\date{2020-12-02}
 
 \begin{document}
 \maketitle
@@ -3656,7 +3656,7 @@ La siguiente visualización presenta una combinación de una serie de tiempo, un
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{11}
 \item
-  En el cuadro de dialogo editar texto escriba evolución historia del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a \(18\), seleccione negrilla y centrar el texto.
+  En el cuadro de dialogo editar texto escriba evolución histórica del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a \(18\), seleccione negrilla y centrar el texto.
 \item
   Cambie el nombre del dashboard a modalidad de formación, recuerde que los filtros de semestre y año únicamente aplican cuando el parámetro seleccione visualización se encuentra en tabla.
 \end{enumerate}
@@ -3739,6 +3739,114 @@ Finalmente se realiza el dashboard con las estadísticas por áreas del conocime
 
 \caption{Dashboard por áreas del conocimiento SNIES}\label{fig:tableroareasconocimiento-fig}
 \end{figure}
+
+\hypertarget{crear-una-historia}{%
+\subsubsection{Crear una historia}\label{crear-una-historia}}
+
+Como ya se menciono una historia es una secuencia de vistas o dashboards que se utilizan en forma conjunta para mostrar información, en este caso se hará uso de las historias para mostrar una secuencia de las visualizaciones y dashboards creados anteriormente y lograr una estructura similar a la mostrada en la página web de las estadísticas de la Universidad.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Haga clic en el icono de historia en la barra inferior donde se ubican los tableros creados, asigne como nombre a la nueva historia Graduados.
+\item
+  Ajuste el tamaño para que ocupe toda la pantalla del dispositivo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir16} 
+
+}
+
+\caption{Crear una historia}\label{fig:paso2compartir-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  En el cuadro gris añada como subtitulo Evolución graduados, en el panel lateral izquierdo en la pestaña historia encontrar un botón que tiene el texto En blanco, dicho botón es usado para crear mas puntos en la historia, haga clic allí hasta tener \(8\) puntos en la historia. Añada estos subtítulos a los puntos de la historia en este orden Modalidad de formación, Nivel de formación, Sede de admisión, Nacionalidad, Lugar de nacimiento, Sexo, Áreas del conocimiento.
+\item
+  En el primer punto de la historia agrega la hoja llamada Evolución histórica del total de estudiantes graduados.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir17} 
+
+}
+
+\caption{Añadir una visualización a la historia}\label{fig:paso4compartir-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Observe que al agregar hojas a una historia estas se agregan sin el título, para agregar un título o una descripción de la visualización que se esta presentando, en el panel lateral derecho se ubica una opción llamada Arrastrar a añadir texto, arrástrela hacia la visualización y en el cuadro de dialogo escriba evolución histórica del total de estudiantes graduados, como fuente seleccione Tableau Light, tamaño 18, negrilla y centrada.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir18} 
+
+}
+
+\caption{Añadir texto}\label{fig:paso5compartir-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  A los demás puntos de las historias añada los tableros que fueron creados en la sección anterior.
+\item
+  Haga clic en la pestaña formato ubicada sobre la barra de herramientas y seleccione historia.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/compartir19} 
+
+}
+
+\caption{Formato de la historia}\label{fig:paso7compartir-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\item
+  Se despliega un menú en el panel lateral izquierdo que permite formatear el aspecto de la historia, en la sección navegador haga clic en fuente, aumente el tamaño de la fuente y seleccione negrilla; ahora haga clic en sombreado y más colores, agregue este código hexadecimal que coincide con el color usado en la página web ``\#636363''.
+\item
+  Finalmente, en objetos de texto seleccione ninguno para el sombreado y para el borde.
+\end{enumerate}
+
+Se obtiene una historia que permite navegar entre los diferentes dashboards que contienen información sobre las estadísticas generales de la Universidad.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir20} 
+
+}
+
+\caption{Historia: graduados}\label{fig:historiagraduados-fig}
+\end{figure}
+
+Oculte todos los dashboards involucrados en la historia, haga clic en la pestaña archivo y seleccione guardan en Tableau Public como\ldots{}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir21} 
+
+}
+
+\caption{Guardar el libro de trabajo}\label{fig:guardarlibroddetrabajo-fig}
+\end{figure}
+
+Asigne un título al libro de trabajo y haga clic en guardar, con esto se abrirá una pestaña en su navegador que contiene la visualización publicada en su cuenta de Tableau Public, puede hacer clic en botón compartir y copiar el código para insertar en alguna página web o el enlace.
 
 \hypertarget{powerbi}{%
 \chapter{Power BI}\label{powerbi}}

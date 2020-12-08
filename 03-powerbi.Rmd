@@ -1,3 +1,87 @@
 # Power BI {#powerbi}
 
-We describe our methods in this chapter.
+## Generalidades {#generalidadespowerbi}
+
+### ¿Qué es Power BI?
+
+Microsoft Power BI es una colección de servicios de software, aplicaciones y conectores que ayudan a las organizaciones a recopilar, administrar y analizar datos de una variedad de fuentes, a través de una interfaz fácil de usar. Funcionan en conjunto para convertir sus fuentes de datos no relacionadas en conocimientos coherentes, visualmente inmersivos e interactivos. Ya sea que sus datos sean un simple libro de trabajo de Microsoft Excel o una colección de almacenes de datos híbridos locales y basados en la nube, Power BI le permite conectarse fácilmente a sus fuentes de datos, limpiar y modelar sus datos sin afectar la fuente subyacente, visualizar o descubrir lo que es importante para compartirlo con su organización.
+
+Esta aplicación fue concebida originalmente por Thierry D'Hers y Amir Netz del equipo de SQL Server Reporting Services en Microsoft. Fue diseñado originalmente por Ron George en el verano de 2010 y nombrado Proyecto Crescent, estaba disponible inicialmente para su descarga pública el 11 de julio de 2011 incluido con SQL Server Codename Denali. Más tarde renombrado a Power BI, Microsoft lo dio a conocer en septiembre de 2013 como Power BI para Office 365. La primera versión de Power BI se basó en complementos de Microsoft Excel: Power Query, Power Pivot y Power View. Con el tiempo, Microsoft también agregó muchas características adicionales como preguntas y respuestas, conectividad de datos de nivel empresarial y opciones de seguridad a través de las puertas de enlace de Power BI. Power BI fue lanzado por primera vez al público en general el 24 de julio de 2015. 
+
+En febrero de 2019, Gartner confirmó a Microsoft como líder en el “Cuadrante Mágico de Gartner 2019 para Análisis y Plataforma de Inteligencia de Negocios” como resultado de las capacidades de la plataforma Power BI. Esto representó el duodécimo año consecutivo de reconocimiento de Microsoft como proveedor líder en esta categoría cuadrante mágico (a partir de 3 años antes de que se creara esta herramienta).
+
+### Principales ventajas de Power BI
+
+- Intuitiva y fácil de usar
+
+Permite crear informes y paneles básicos sin conocimientos técnicos, sobre todo en la versión Desktop. Aunque a medida que se profundice en la herramienta es necesario poseer una formación para extraer el máximo provecho de esta herramienta.
+
+- Integración perfecta con Microsoft Excel
+
+Es posible exportar y conectar fácilmente los datos de Excel con los paneles de Power Bi; esto es una gran ventaja, ya que muchas empresas usan hojas de cálculo de Excel como herramienta de análisis de datos.
+
+- Permite hacer múltiples análisis complejos en un solo panel
+
+Logrando una visualización única y muy atractiva. Además, los paneles se pueden publicar y compartir con toda la organización, lo que ayuda a fomentar la cultura de análisis de datos e inteligencia empresarial en la organización.
+
+
+- Se actualiza constantemente
+
+Esto genera un análisis de datos en tiempo real, permite a las organizaciones tomar decisiones basadas en lo que ocurre en el momento.
+
+- Incorpora herramientas de Power View y Power Map
+
+Lo cual permite visualizar imágenes y gráficos en tres dimensiones y visualización de datos en mapas geográficos. Existe una integración con ArcGIS Maps de ESRI, la compañía líder mundial en geomarketing, lo que permite un análisis espacial avanzado. Los mapas de ArcGIS incorporan capas de información sociodemográfica y otras variables, para proporcionar contexto a los datos y relacionar la ubicación con otras variables críticas.
+
+- Herramienta de inteligencia artificial
+
+No solo analiza lo que ha sucedido en el pasado y lo que esta ocurriendo en la actualidad dentro de la organización, además permite detectar tendencias y hacer predicciones de lo que puede pasar a futuro. 
+
+- Almacena la información en la nube de Azure
+
+Microsoft Azure es una plataforma de cloud computing o servicio en la nube alojado en la red global de centros de datos de Microsoft. Esto permite el acceso a los datos y paneles de Power BI desde cualquier lugar y dispositivo, con total seguridad y privacidad.
+
+- Es compatible con múltiples fuentes de datos, Power BI soporta diferentes fuentes de datos, algunas de ellas son:
+   * Ficheros Excel, CSV, PDF, etc.
+   * Bases de datos relacionadas como SQL Server, MySQL, Oracle, entre otras.
+   * Servicios de Azure.
+   * Fuentes online como Google Analytics, etc.
+   * Algunos conectores a servicios Web.
+
+- Tiene una gran comunidad
+
+Existe una gran comunidad de expertos y usuarios de Power BI a nivel mundial, que ayudan a resolver todas las dudas en miles de artículos foros y blogs, [Power BI Community]( https://community.powerbi.com/#).
+
+### Principales desventajas de Power BI
+
+### Productos de Power BI
+
+- [Power BI Desktop](https://powerbi.microsoft.com/es-es/desktop/): es una aplicación de escritorio gratuita, se puede instalar directamente el su equipo y ayuda a explorar los datos de manera profunda y avanzada.
+   * Las visualizaciones creadas son guardadas de manera local.
+   * Múltiples conexiones a orígenes de datos tanto locales como basados en la nube tales como Dynamics 365, Salesforce, Azure SQL DB, Excel y SharePoint.
+   * Preparación de datos a través de la herramienta Power Query.
+   * Uso del lenguaje natural que permite hacer preguntas a Power BI sobre sus datos.
+   * Uso del lenguaje DAX, para la creación de funciones como medidas rápidas, agrupación, entre otras.
+   * [Recursos de aprendizaje guiado]( https://docs.microsoft.com/en-us/learn/)
+   * Ejemplos de [código](https://docs.microsoft.com/en-us/samples/browse/) de las herramientas y tecnologías de Microsoft.
+
+- [Power BI Pro](https://powerbi.microsoft.com/es-es/power-bi-pro/): es una licencia de Power BI que posee funciones más extensas que la versión gratuita. 
+   * Permite la colaboración entre miembros de un equipo mediante la creación de grupos de trabajo. 
+   * Crear publicar y ver paquetes de contenido organizativo: de manera que periódicamente y las personas que desees reciban alertas con información y datos de preparados. 
+   * Control de acceso a los datos con seguridad de nivel de fila para usuarios y grupos. 
+   * Infinidad de conexión a fuentes de datos. 
+   * El tamaño máximo de un conjunto de datos individual es de 1GB.
+   * Posee un almacenamiento máximo de 10GB por usuario.
+   * Cuenta con servicio en la nube.
+   * Inserción de contenido en otras interfaces, como las de Teams, SharePoint u otras aplicaciones SaaS.
+
+- [Power BI Premium](https://powerbi.microsoft.com/es-es/power-bi-premium/): es una extensión de Power BI Pro que ofrece la posibilidad de obtener un mejor y más fiable rendimiento. 
+   * Inteligencia de negocio para empresas.
+   * Análisis de macrodatos, informes en la nube y en el entorno local.
+   * Recursos de almacenamiento y proceso en la nube dedicados.
+   * El tamaño máximo de un conjunto de datos individual es de 10GB.
+   * Posee un almacenamiento máximo de 100 TB.
+   * Permite Almacenar datos de Power BI en Azure Data Lake Storage Gen2.
+   * Seguridad y cifrado de datos.
+   * Modelado de datos basado en IA usando AutoML, Cognitive Services y Azure Machine Learning.
+
