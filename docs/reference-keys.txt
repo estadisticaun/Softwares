@@ -224,8 +224,12 @@ qué-es-power-bi
 principales-ventajas-de-power-bi
 principales-desventajas-de-power-bi
 productos-de-power-bi
+compartir-el-trabajo-realizado-en-power-bi
 flourish
 example-one
 example-two
 conclu
-compartir-el-trabajo-realizado-en-power-bi
+fig:guardarinforme-fig
+fig:guardararchivo2-fig
+fig:exportarinforme-fig
+instalación-de-power-bi-desktop

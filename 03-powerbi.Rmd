@@ -100,10 +100,25 @@ Cuando se trabaja con la versión Pro o Premium se tiene diversas formas de comp
 
 -	Guardar el área de trabajo de forma local en su computadora, haciendo clic en archivo, guardar como, añadir un nombre para el archivo y finalmente clic en guardar.
 
+```{r guardarinforme-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Guardar informe como archivo local', out.width='60%'}
+knitr::include_graphics("Imágenes/powerbi1.jpg")
+```
+
+```{r guardararchivo2-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar nombre al archivo para guardarlo', out.width='60%'}
+knitr::include_graphics("Imágenes/powerbi2.jpg")
+```
+
 -	Publicar informe en el servicio de Power BI, hacer clic en archivo y seleccionar publicar, se abre un cuadro de dialogo pidiendo el inicio de sesión en el servicio de Power BI.
 
 -	Insertar informes en paginas web, esto es posible hacerlo usando [SharePoint Online](https://docs.microsoft.com/es-es/power-bi/collaborate-share/service-embed-report-spo) o directamente en una [página web](https://docs.microsoft.com/es-es/power-bi/collaborate-share/service-embed-secure) al extraer la URL del informe.
 
 -	Imprimir o guardar en formato PDF, haciendo clic en archivo, seleccionar exportar y finalmente exportar a PDF. 
 
+```{r exportarinforme-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Exportar informe a PDF', out.width='60%'}
+knitr::include_graphics("Imágenes/powerbi3.jpg")
+```
+
 Al usar la versión gratuita de Power BI, es decir el producto Power BI Desktop solo es posible guardar el área de trabajo de manera local y exportar los informes como PDF.  
+
+## Instalación de Power BI Desktop
+
