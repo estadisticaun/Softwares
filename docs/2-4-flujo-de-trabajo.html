@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-12-08" />
+<meta name="date" content="2020-12-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,6 +161,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.4" data-path="3-1-generalidadespowerbi.html"><a href="3-1-generalidadespowerbi.html#productos-de-power-bi"><i class="fa fa-check"></i><b>3.1.4</b> Productos de Power BI</a></li>
 <li class="chapter" data-level="3.1.5" data-path="3-1-generalidadespowerbi.html"><a href="3-1-generalidadespowerbi.html#compartir-el-trabajo-realizado-en-power-bi"><i class="fa fa-check"></i><b>3.1.5</b> Compartir el trabajo realizado en Power BI</a></li>
 </ul></li>
+<li class="chapter" data-level="3.2" data-path="3-2-instalación-de-power-bi-desktop.html"><a href="3-2-instalación-de-power-bi-desktop.html"><i class="fa fa-check"></i><b>3.2</b> Instalación de Power BI Desktop</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="4-flourish.html"><a href="4-flourish.html"><i class="fa fa-check"></i><b>4</b> Flourish</a><ul>
 <li class="chapter" data-level="4.1" data-path="4-1-example-one.html"><a href="4-1-example-one.html"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
@@ -1698,7 +1699,71 @@ Figura 2.166: Describir pronóstico - modelos
 <p>Las visualizaciones creadas usando la versión de escritorio de Tableau Public pueden ser compartidas como hojas individuales, dashboard o historias, en este caso se crearán dashboard que luego se integran a historias para replicar la forma de visualización que se publica en la página de estadísticas <a href="http://estadisticas.unal.edu.co/home/">estadísticas</a> de la Universidad Nacional de Colombia en la pestaña cifras generales y graduados. Es necesario crear ocho tableros con las visualizaciones que se crearon anteriormente y luego se incluirán en una historia con ocho puntos.</p>
 <div id="crear-un-dashboard" class="section level4">
 <h4><span class="header-section-number">2.4.3.1</span> Crear un dashboard</h4>
-<p>Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales, graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard, es posible agregar esta hoja directamente a la historia.</p>
+<p>Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales, graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard y es posible agregar esta hoja directamente a la historia. Sin embargo, se quiere añadir una funcionalidad que permita ver los metadatos asociados a las cifras generales que fueron analizadas.</p>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva hoja de trabajo y llámela Metadatos.</p></li>
+<li><p>Cree un nuevo parámetro u signe como nombre Ver metadatos, seleccione cadena y lista, en valores escriba Ver metadatos y clic en aceptar para guardar los cambios.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:parametrometadatos-fig"></span>
+<img src="Imágenes/compartir8.jpg" alt="Crear parámetro para metadatos" width="60%" />
+<p class="caption">
+Figura 2.167: Crear parámetro para metadatos
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Cree un nuevo campo calculado y llámelo Metadatos, en el espacio en blanco escriba [Ver metadatos] y haga clic en aceptar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:campocalculadometadatos-fig"></span>
+<img src="Imágenes/compartir9.jpg" alt="Crear campo calculado para metadatos" width="60%" />
+<p class="caption">
+Figura 2.168: Crear campo calculado para metadatos
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Arrastre este campo calculado que creo a la tarjeta texto ubicada en el estante Marcas, haga clic en esta tarjeta y modifique le tamaño del texto a 18, finalmente, ajuste la anchura desde la barra de herramientas, finalmente asigne como nombre del dashboard Evolución graduados.</p></li>
+<li><p>Cree un nuevo dashboard, ajuste el tamaño a automático, desde el panel hojas arrastre la hoja que contiene la evolución del total de estudiantes graduados.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:evolucion-fig"></span>
+<img src="Imágenes/compartir10.jpg" alt="Agregar hoja de evolución de graduados" width="80%" />
+<p class="caption">
+Figura 2.169: Agregar hoja de evolución de graduados
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Añada la hoja llamada Metadatos y suéltela en la esquina superior derecha, oculte el título de esta hoja.</p></li>
+<li><p>Haga clic en el botón dashboard ubicado en la parte superior cerca a la barra de herramientas y seleccione Acciones.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:agregaraccion-fig"></span>
+<img src="Imágenes/compartir11.jpg" alt="Agregar acciones a un dashboard" width="60%" />
+<p class="caption">
+Figura 2.170: Agregar acciones a un dashboard
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>En el cuadro de dialogo Acciones haga clic en Añadir acción y seleccione URL.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:editaraccion-fig"></span>
+<img src="Imágenes/compartir12.jpg" alt="Elegir acción de URL" width="60%" />
+<p class="caption">
+Figura 2.171: Elegir acción de URL
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>En el campo nombre escriba Metadatos, como hoja de origen establezca el dashboard llamado Evolución graduados y únicamente seleccione la hoja llamada metadatos, en la ejecución de la acción haga clic en seleccionar, en el campo URL pegue el enlace asociado a los metadatos ubicados en la página web de las estadísticas oficiales de la Universidad Nacional, por último, clic en aceptar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:editaraccionURL-fig"></span>
+<img src="Imágenes/compartir13.jpg" alt="Editar acción de URL" width="60%" />
+<p class="caption">
+Figura 2.172: Editar acción de URL
+</p>
+</div>
+<p>Finalmente obtendrá un dashboard que permite visualizar la evolución de los estudiantes graduados en la Universidad Nacional de Colombia, con un botón ubicado en la esquina superior izquierda que permite ir a los metadatos alojados en la página web de las estadísticas de la Universidad.</p>
+<div class="figure" style="text-align: center"><span id="fig:tableroevolucion-fig"></span>
+<img src="Imágenes/compartir14.jpg" alt="Dashboard para la evolución del total de graduados" width="80%" />
+<p class="caption">
+Figura 2.173: Dashboard para la evolución del total de graduados
+</p>
+</div>
 <p>La siguiente visualización presenta una combinación de una serie de tiempo, una tabla de texto y un diagrama circular con la distribución de los estudiantes graduados en el periodo actual. Todas estas visualizaciones ya fueron creadas, pero es necesario agregar un botón que permita intercambiar entre la serie y la tabla.</p>
 <ol style="list-style-type: decimal">
 <li><p>Diríjase a la hoja de trabajo llamada serie, haga clic en el menú desplegable ubicado entre datos y tablas y seleccione crear parámetro.</p></li>
@@ -1707,7 +1772,7 @@ Figura 2.166: Describir pronóstico - modelos
 <div class="figure" style="text-align: center"><span id="fig:paso2tablero-fig"></span>
 <img src="Imágenes/compartir1.jpg" alt="Editar parámetro de selección de visualizaciones" width="60%" />
 <p class="caption">
-Figura 2.167: Editar parámetro de selección de visualizaciones
+Figura 2.174: Editar parámetro de selección de visualizaciones
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -1716,7 +1781,7 @@ Figura 2.167: Editar parámetro de selección de visualizaciones
 <div class="figure" style="text-align: center"><span id="fig:paso3tablero-fig"></span>
 <img src="Imágenes/compartir2.jpg" alt="Crear campo calculado con el parámetro" width="60%" />
 <p class="caption">
-Figura 2.168: Crear campo calculado con el parámetro
+Figura 2.175: Crear campo calculado con el parámetro
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -1725,7 +1790,7 @@ Figura 2.168: Crear campo calculado con el parámetro
 <div class="figure" style="text-align: center"><span id="fig:paso4tablero-fig"></span>
 <img src="Imágenes/compartir3.jpg" alt="Editar filtro del campo calculado" width="60%" />
 <p class="caption">
-Figura 2.169: Editar filtro del campo calculado
+Figura 2.176: Editar filtro del campo calculado
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -1736,97 +1801,98 @@ Figura 2.169: Editar filtro del campo calculado
 <div class="figure" style="text-align: center"><span id="fig:paso7tablero-fig"></span>
 <img src="Imágenes/compartir4.jpg" alt="Añadir una visualización al dashboard" width="80%" />
 <p class="caption">
-Figura 2.170: Añadir una visualización al dashboard
+Figura 2.177: Añadir una visualización al dashboard
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
 <li>Desde el panel objetos arrastre un contendor de trazado vertical hasta el dashboard y suéltelo sobre el rectángulo gris que ocupa la mitad izquierda del tablero.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso8tablero-fig"></span>
-<img src="Imágenes/compartir5.jpg" alt="Agregar un contenedor de trazado vertical" width="80%" />
+<img src="Imágenes/compartir6.jpg" alt="Agregar un contenedor de trazado vertical" width="80%" />
 <p class="caption">
-Figura 2.171: Agregar un contenedor de trazado vertical
+Figura 2.178: Agregar un contenedor de trazado vertical
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
 <li>Arrastre la hoja Serie al contenedor, arrastre también la hoja que contiene la tabla de texto y suéltela sobre el rectángulo gris claro que se crea debajo del titulo de la serie.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso9tablero-fig"></span>
-<img src="Imágenes/compartir6.jpg" alt="Agregar vistas al contenedor de trazado vertical" width="80%" />
+<img src="Imágenes/compartir7.jpg" alt="Agregar vistas al contenedor de trazado vertical" width="80%" />
 <p class="caption">
-Figura 2.172: Agregar vistas al contenedor de trazado vertical
+Figura 2.179: Agregar vistas al contenedor de trazado vertical
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>Debe ocultar los tirulos de las hojas puestas sobre el contendor, haga clic sobre el titulo de la serie, seleccione mas opciones y luego título, esto debe hacerlo también para la hoja tabla.</li>
+<li>Debe ocultar los títulos de las hojas puestas sobre el contendor, haga clic sobre el titulo de la serie, seleccione más opciones y luego título, esto debe hacerlo también para la hoja tabla.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso10tablero-fig"></span>
-<img src="Imágenes/compartir7.jpg" alt="Ocultar títulos" width="80%" />
+<img src="Imágenes/compartir15.jpg" alt="Ocultar títulos" width="80%" />
 <p class="caption">
-Figura 2.173: Ocultar títulos
+Figura 2.180: Ocultar títulos
 </p>
 </div>
 <ol start="11" style="list-style-type: decimal">
 <li>Desde el panel objetos arrastre texto y suéltelo en la parte superior del contenedor.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso11tablero-fig"></span>
-<img src="Imágenes/compartir8.jpg" alt="Agregar cuadro de texto" width="80%" />
+<img src="Imágenes/compartir16.jpg" alt="Agregar cuadro de texto" width="80%" />
 <p class="caption">
-Figura 2.174: Agregar cuadro de texto
+Figura 2.181: Agregar cuadro de texto
 </p>
 </div>
 <ol start="12" style="list-style-type: decimal">
 <li><p>En el cuadro de dialogo editar texto escriba evolución histórica del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a <span class="math inline">\(18\)</span>, seleccione negrilla y centrar el texto.</p></li>
-<li><p>Cambie el nombre del dashboard a modalidad de formación, recuerde que los filtros de semestre y año únicamente aplican cuando el parámetro seleccione visualización se encuentra en tabla.</p></li>
+<li><p>Cambie el nombre del dashboard a modalidad de formación, por comodidad y facilidad se eliminaron los filtros de la hoja tabla.</p></li>
+<li><p>Agregue una acción de filtro como se mostro anteriormente.</p></li>
 </ol>
-<p>A continuación, se presenta el dashboard obtenido que proporciona información clara sobre la modalidad de formación y permite intercambiar entre la serie y la tabla de texto.</p>
+<p>A continuación, se presenta el dashboard obtenido que proporciona información clara sobre la modalidad de formación, permite intercambiar entre la serie y la tabla de texto y al hacer clic sobre Ver metadatos permite ir a los metadatos asociados a estas visualizaciones.</p>
 <div class="figure" style="text-align: center"><span id="fig:tableromodalidaddeformacion-fig"></span>
-<img src="Imágenes/compartir9.jpg" alt="Dashboard para modalidad de formación" width="80%" />
+<img src="Imágenes/compartir17.jpg" alt="Dashboard para modalidad de formación" width="80%" />
 <p class="caption">
-Figura 2.175: Dashboard para modalidad de formación
+Figura 2.182: Dashboard para modalidad de formación
 </p>
 </div>
 <p>Oculte las hojas que ha usado en el dashboard anterior con el fin de que la barra de hojas de la parte inferior no se sature, haga clic derecho sobre el nombre de la hoja de trabajo y seleccione ocultar.</p>
 <p>El siguiente dashboard a realizar corresponde a las estadísticas por nivel de formación, debe crear todos los objetos visuales que involucra este dashboard e incorporarlos al tablero como se mostro anteriormente, el dashboard para nuvel de formación debe verse así,</p>
 <div class="figure" style="text-align: center"><span id="fig:tableroniveldefromacion-fig"></span>
-<img src="Imágenes/compartir10.jpg" alt="Dashboard para nivel de formación" width="80%" />
+<img src="Imágenes/compartir18.jpg" alt="Dashboard para nivel de formación" width="80%" />
 <p class="caption">
-Figura 2.176: Dashboard para nivel de formación
+Figura 2.183: Dashboard para nivel de formación
 </p>
 </div>
 <p>Para el tablero que contiene las estadísticas por sede de admisión se decide no usar el gráfico de barras y en su lugar incluir el mapa de árbol, con el fin de mostrar visualizaciones diferentes pero que informan de manera clara.</p>
 <div class="figure" style="text-align: center"><span id="fig:tablerosedeadmision-fig"></span>
-<img src="Imágenes/compartir11.jpg" alt="Dashboard para sede de admisión" width="80%" />
+<img src="Imágenes/compartir19.jpg" alt="Dashboard para sede de admisión" width="80%" />
 <p class="caption">
-Figura 2.177: Dashboard para sede de admisión
+Figura 2.184: Dashboard para sede de admisión
 </p>
 </div>
 <p>Tablero para nacionalidad.</p>
 <div class="figure" style="text-align: center"><span id="fig:tableronacionalidad-fig"></span>
-<img src="Imágenes/compartir12.jpg" alt="Dashboard para nacionalidad" width="80%" />
+<img src="Imágenes/compartir20.jpg" alt="Dashboard para nacionalidad" width="80%" />
 <p class="caption">
-Figura 2.178: Dashboard para nacionalidad
+Figura 2.185: Dashboard para nacionalidad
 </p>
 </div>
 <p>Estadísticas para lugar de nacimiento.</p>
 <div class="figure" style="text-align: center"><span id="fig:tablerolugardenacimiento-fig"></span>
-<img src="Imágenes/compartir13.jpg" alt="Dashboard para lugar de nacimiento" width="80%" />
+<img src="Imágenes/compartir21.jpg" alt="Dashboard para lugar de nacimiento" width="80%" />
 <p class="caption">
-Figura 2.179: Dashboard para lugar de nacimiento
+Figura 2.186: Dashboard para lugar de nacimiento
 </p>
 </div>
 <p>El siguiente tablero presenta las estadísticas por sexo de los estudiantes graduados.</p>
 <div class="figure" style="text-align: center"><span id="fig:tablerosexo-fig"></span>
-<img src="Imágenes/compartir14.jpg" alt="Dashboard por sexo" width="80%" />
+<img src="Imágenes/compartir22.jpg" alt="Dashboard por sexo" width="80%" />
 <p class="caption">
-Figura 2.180: Dashboard por sexo
+Figura 2.187: Dashboard por sexo
 </p>
 </div>
 <p>Finalmente se realiza el dashboard con las estadísticas por áreas del conocimeinto.</p>
 <div class="figure" style="text-align: center"><span id="fig:tableroareasconocimiento-fig"></span>
-<img src="Imágenes/compartir15.jpg" alt="Dashboard por áreas del conocimiento SNIES" width="80%" />
+<img src="Imágenes/compartir23.jpg" alt="Dashboard por áreas del conocimiento SNIES" width="80%" />
 <p class="caption">
-Figura 2.181: Dashboard por áreas del conocimiento SNIES
+Figura 2.188: Dashboard por áreas del conocimiento SNIES
 </p>
 </div>
 </div>
@@ -1836,58 +1902,40 @@ Figura 2.181: Dashboard por áreas del conocimiento SNIES
 <ol style="list-style-type: decimal">
 <li><p>Haga clic en el icono de historia en la barra inferior donde se ubican los tableros creados, asigne como nombre a la nueva historia Graduados.</p></li>
 <li><p>Ajuste el tamaño para que ocupe toda la pantalla del dispositivo.</p></li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:paso2compartir-fig"></span>
-<img src="Imágenes/compartir16.jpg" alt="Crear una historia" width="80%" />
-<p class="caption">
-Figura 2.182: Crear una historia
-</p>
-</div>
-<ol start="3" style="list-style-type: decimal">
-<li><p>En el cuadro gris añada como subtitulo Evolución graduados, en el panel lateral izquierdo en la pestaña historia encontrar un botón que tiene el texto En blanco, dicho botón es usado para crear mas puntos en la historia, haga clic allí hasta tener <span class="math inline">\(8\)</span> puntos en la historia. Añada estos subtítulos a los puntos de la historia en este orden Modalidad de formación, Nivel de formación, Sede de admisión, Nacionalidad, Lugar de nacimiento, Sexo, Áreas del conocimiento.</p></li>
-<li><p>En el primer punto de la historia agrega la hoja llamada Evolución histórica del total de estudiantes graduados.</p></li>
+<li><p>En el cuadro gris añada como subtitulo Evolución graduados, en el panel lateral izquierdo en la pestaña historia encontrará un botón que tiene el texto En blanco, dicho botón es usado para crear más puntos en la historia, haga clic allí hasta tener <span class="math inline">\(8\)</span> puntos en la historia. Añada estos subtítulos a los puntos de la historia en este orden Modalidad de formación, Nivel de formación, Sede de admisión, Nacionalidad, Lugar de nacimiento, Sexo, Áreas del conocimiento.</p></li>
+<li><p>En el primer punto de la historia agregue el dashboard llamado Evolución graduados.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso4compartir-fig"></span>
-<img src="Imágenes/compartir17.jpg" alt="Añadir una visualización a la historia" width="80%" />
+<img src="Imágenes/compartir24.jpg" alt="Añadir una visualización a la historia" width="80%" />
 <p class="caption">
-Figura 2.183: Añadir una visualización a la historia
+Figura 2.189: Añadir una visualización a la historia
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>Observe que al agregar hojas a una historia estas se agregan sin el título, para agregar un título o una descripción de la visualización que se esta presentando, en el panel lateral derecho se ubica una opción llamada Arrastrar a añadir texto, arrástrela hacia la visualización y en el cuadro de dialogo escriba evolución histórica del total de estudiantes graduados, como fuente seleccione Tableau Light, tamaño 18, negrilla y centrada.</li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:paso5compartir-fig"></span>
-<img src="Imágenes/compartir18.jpg" alt="Añadir texto" width="80%" />
-<p class="caption">
-Figura 2.184: Añadir texto
-</p>
-</div>
-<ol start="6" style="list-style-type: decimal">
 <li><p>A los demás puntos de las historias añada los tableros que fueron creados en la sección anterior.</p></li>
 <li><p>Haga clic en la pestaña formato ubicada sobre la barra de herramientas y seleccione historia.</p></li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:paso7compartir-fig"></span>
-<img src="Imágenes/compartir19.jpg" alt="Formato de la historia" width="20%" />
+<div class="figure" style="text-align: center"><span id="fig:paso6compartir-fig"></span>
+<img src="Imágenes/compartir25.jpg" alt="Formato de la historia" width="20%" />
 <p class="caption">
-Figura 2.185: Formato de la historia
+Figura 2.190: Formato de la historia
 </p>
 </div>
-<ol start="8" style="list-style-type: decimal">
-<li><p>Se despliega un menú en el panel lateral izquierdo que permite formatear el aspecto de la historia, en la sección navegador haga clic en fuente, aumente el tamaño de la fuente y seleccione negrilla; ahora haga clic en sombreado y más colores, agregue este código hexadecimal que coincide con el color usado en la página web “#636363”.</p></li>
-<li><p>Finalmente, en objetos de texto seleccione ninguno para el sombreado y para el borde.</p></li>
+<ol start="7" style="list-style-type: decimal">
+<li>Se despliega un menú en el panel lateral izquierdo que permite formatear el aspecto de la historia, en la sección navegador haga clic en fuente, aumente el tamaño de la fuente y seleccione negrilla; ahora haga clic en sombreado y más colores, agregue este código hexadecimal que coincide con el color usado en la página web “#636363”.</li>
 </ol>
 <p>Se obtiene una historia que permite navegar entre los diferentes dashboards que contienen información sobre las estadísticas generales de la Universidad.</p>
 <div class="figure" style="text-align: center"><span id="fig:historiagraduados-fig"></span>
-<img src="Imágenes/compartir20.jpg" alt="Historia: graduados" width="80%" />
+<img src="Imágenes/compartir26.jpg" alt="Historia: graduados" width="80%" />
 <p class="caption">
-Figura 2.186: Historia: graduados
+Figura 2.191: Historia: graduados
 </p>
 </div>
 <p>Oculte todos los dashboards involucrados en la historia, haga clic en la pestaña archivo y seleccione guardan en Tableau Public como…</p>
 <div class="figure" style="text-align: center"><span id="fig:guardarlibroddetrabajo-fig"></span>
-<img src="Imágenes/compartir21.jpg" alt="Guardar el libro de trabajo" width="60%" />
+<img src="Imágenes/compartir27.jpg" alt="Guardar el libro de trabajo" width="60%" />
 <p class="caption">
-Figura 2.187: Guardar el libro de trabajo
+Figura 2.192: Guardar el libro de trabajo
 </p>
 </div>
 <p>Asigne un título al libro de trabajo y haga clic en guardar, con esto se abrirá una pestaña en su navegador que contiene la visualización publicada en su cuenta de Tableau Public, puede hacer clic en botón compartir y copiar el código para insertar en alguna página web o el enlace.</p>
