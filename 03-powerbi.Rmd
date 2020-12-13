@@ -122,3 +122,38 @@ Al usar la versión gratuita de Power BI, es decir el producto Power BI Desktop 
 
 ## Instalación de Power BI Desktop
 
+La descarga de este software de visualización se realiza desde la [aplicación de la tienda de Windows](https://aka.ms/pbidesktopstore), hacer clic en instalar.
+
+```{r instalacionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Instalar Power BI', out.width='60%'}
+knitr::include_graphics("Imágenes/powerbi4.jpg")
+```
+
+Cuando se complete la descarga haga clic en iniciar, de esta manera ya tiene el software e su computador y se actualizara automáticamente.
+
+## Forma de navegación {#formadenavegacionpower}
+
+Al momento de iniciar Power BI esta es la pantalla con la que se encuentra, aparece un cuadro de dialogo de introducción que en su panel lateral izquierdo contiene pestañas para conectarse a fuentes de datos, proyectos realizados con el software y la opción de abrir otros informes; en el panel central se muestra la opción para iniciar sesión y comprar licencias pagas de Power BI; finalmente, el panel derecho posee información sobre novedades, blogs, foros y tutoriales útiles sobre el uso de esta herramienta de visualización.
+
+```{r pantallainicialpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Pantalla inicial de Power BI', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi5.jpg")
+```
+
+Cierre este cuadro de dialogo introductorio para explorar el entorno de creación, dicho entorno se verá así:
+
+```{r entornocreacionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Entorno de creación', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi6.jpg")
+```
+
+Contiene $5$ espacios principales que le permitirán crear informes con diferentes visualizaciones, el panel superior denominado $1$ contiene algunos botones útiles tales como Archivo que permite guardar y exportar los informes creados, inicio que contiene herramientas asociadas a los informes como al conexión a fuentes de datos, transformación de datos, insertar elementos visuales, cuadros de texto entre otros, una sección llamada cálculos que permite crear medidas y finalmente el botón publicar. El botón insertar contiene opciones para insertar diferentes elementos, la pestaña modelado contiene herramientas para editar relaciones, cálculos, creación de parámetros, seguridad y preguntas y respuestas; la pestaña ver contiene elementos de diseño de página como temas, diseño para móvil, opciones de página y mostrar algunos paneles que se usen para crear visualizaciones; por ultimo se ubica la pestaña ayuda, dicha pestaña posee información sobre el software, aprendizaje guiado, videos tutoriales, soporte técnico, documentación, ejemplos y la comunidad de Power BI.
+
+La sección número $2$ representa la vista de informe o lienzo, este es el espacio donde se crean y organizan las visualizaciones, si hace clic en el icono de datos se encontrará con la tabla de datos a la que se encuentra conectado, finalmente el icono de modelo administra las relaciones existentes entre diversas fuentes de datos en el caso en que usted este conectado a varias fuentes y estas tengan alguna relación. La barra denominada área $3$ es la pestaña de páginas, la cual permite navegar entre paginas y crear nuevas.
+
+En el contenedor número $4$ se ubican las visualizaciones que se pueden crear con Power BI, debajo de las opciones de visualización se ubican dos campos uno llamado valores y otro llamado formato con un icono de rodillo, el primer campo contiene los estantes para ubicar las variables en los ejes X y Y, estos estantes cambian dependiendo de la visualización que se elija; el campo formato permite editar el color de los elementos en la visualización, titulo, leyendas, entre otras opciones.
+
+Finalmente, en el panel campos se ubica el nombre de todas las variables que contenga la base de datos, dichas variables se dividen en categóricas y numéricas, las categóricas no tienen icono asociado, mientras que las variables numéricas tienen asociadas un icono de $\Sigma$, como se muestra a continuación.
+
+```{r campospowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Campos', out.width='20%'}
+knitr::include_graphics("Imágenes/powerbi7.jpg")
+```
+
+Observe entonces que los campos Estado, Localidad, Localidad2, Localidad3 y país con categóricos, mientras que los demás campos que contiene esa fuente son numéricos y se les asigna el icono mencionado anteriormente.

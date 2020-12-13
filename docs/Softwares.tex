@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-12-09}
+\date{2020-12-11}
 
 \begin{document}
 \maketitle
@@ -3509,7 +3509,122 @@ Las visualizaciones creadas usando la versión de escritorio de Tableau Public p
 \hypertarget{crear-un-dashboard}{%
 \subsubsection{Crear un dashboard}\label{crear-un-dashboard}}
 
-Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales, graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard, es posible agregar esta hoja directamente a la historia.
+Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales, graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard y es posible agregar esta hoja directamente a la historia. Sin embargo, se quiere añadir una funcionalidad que permita ver los metadatos asociados a las cifras generales que fueron analizadas.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Cree una nueva hoja de trabajo y llámela Metadatos.
+\item
+  Cree un nuevo parámetro u signe como nombre Ver metadatos, seleccione cadena y lista, en valores escriba Ver metadatos y clic en aceptar para guardar los cambios.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir8} 
+
+}
+
+\caption{Crear parámetro para metadatos}\label{fig:parametrometadatos-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Cree un nuevo campo calculado y llámelo Metadatos, en el espacio en blanco escriba {[}Ver metadatos{]} y haga clic en aceptar.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir9} 
+
+}
+
+\caption{Crear campo calculado para metadatos}\label{fig:campocalculadometadatos-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Arrastre este campo calculado que creo a la tarjeta texto ubicada en el estante Marcas, haga clic en esta tarjeta y modifique le tamaño del texto a 18, finalmente, ajuste la anchura desde la barra de herramientas, finalmente asigne como nombre del dashboard Evolución graduados.
+\item
+  Cree un nuevo dashboard, ajuste el tamaño a automático, desde el panel hojas arrastre la hoja que contiene la evolución del total de estudiantes graduados.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir10} 
+
+}
+
+\caption{Agregar hoja de evolución de graduados}\label{fig:evolucion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  Añada la hoja llamada Metadatos y suéltela en la esquina superior derecha, oculte el título de esta hoja.
+\item
+  Haga clic en el botón dashboard ubicado en la parte superior cerca a la barra de herramientas y seleccione Acciones.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir11} 
+
+}
+
+\caption{Agregar acciones a un dashboard}\label{fig:agregaraccion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  En el cuadro de dialogo Acciones haga clic en Añadir acción y seleccione URL.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir12} 
+
+}
+
+\caption{Elegir acción de URL}\label{fig:editaraccion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  En el campo nombre escriba Metadatos, como hoja de origen establezca el dashboard llamado Evolución graduados y únicamente seleccione la hoja llamada metadatos, en la ejecución de la acción haga clic en seleccionar, en el campo URL pegue el enlace asociado a los metadatos ubicados en la página web de las estadísticas oficiales de la Universidad Nacional, por último, clic en aceptar.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir13} 
+
+}
+
+\caption{Editar acción de URL}\label{fig:editaraccionURL-fig}
+\end{figure}
+
+Finalmente obtendrá un dashboard que permite visualizar la evolución de los estudiantes graduados en la Universidad Nacional de Colombia, con un botón ubicado en la esquina superior izquierda que permite ir a los metadatos alojados en la página web de las estadísticas de la Universidad.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir14} 
+
+}
+
+\caption{Dashboard para la evolución del total de graduados}\label{fig:tableroevolucion-fig}
+\end{figure}
 
 La siguiente visualización presenta una combinación de una serie de tiempo, una tabla de texto y un diagrama circular con la distribución de los estudiantes graduados en el periodo actual. Todas estas visualizaciones ya fueron creadas, pero es necesario agregar un botón que permita intercambiar entre la serie y la tabla.
 
@@ -3594,7 +3709,7 @@ La siguiente visualización presenta una combinación de una serie de tiempo, un
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir5} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir6} 
 
 }
 
@@ -3611,7 +3726,7 @@ La siguiente visualización presenta una combinación de una serie de tiempo, un
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir6} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir7} 
 
 }
 
@@ -3623,12 +3738,12 @@ La siguiente visualización presenta una combinación de una serie de tiempo, un
 \setcounter{enumi}{9}
 \tightlist
 \item
-  Debe ocultar los tirulos de las hojas puestas sobre el contendor, haga clic sobre el titulo de la serie, seleccione mas opciones y luego título, esto debe hacerlo también para la hoja tabla.
+  Debe ocultar los títulos de las hojas puestas sobre el contendor, haga clic sobre el titulo de la serie, seleccione más opciones y luego título, esto debe hacerlo también para la hoja tabla.
 \end{enumerate}
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir7} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir15} 
 
 }
 
@@ -3645,7 +3760,7 @@ La siguiente visualización presenta una combinación de una serie de tiempo, un
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir8} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir16} 
 
 }
 
@@ -3658,14 +3773,16 @@ La siguiente visualización presenta una combinación de una serie de tiempo, un
 \item
   En el cuadro de dialogo editar texto escriba evolución histórica del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a \(18\), seleccione negrilla y centrar el texto.
 \item
-  Cambie el nombre del dashboard a modalidad de formación, recuerde que los filtros de semestre y año únicamente aplican cuando el parámetro seleccione visualización se encuentra en tabla.
+  Cambie el nombre del dashboard a modalidad de formación, por comodidad y facilidad se eliminaron los filtros de la hoja tabla.
+\item
+  Agregue una acción de filtro como se mostro anteriormente.
 \end{enumerate}
 
-A continuación, se presenta el dashboard obtenido que proporciona información clara sobre la modalidad de formación y permite intercambiar entre la serie y la tabla de texto.
+A continuación, se presenta el dashboard obtenido que proporciona información clara sobre la modalidad de formación, permite intercambiar entre la serie y la tabla de texto y al hacer clic sobre Ver metadatos permite ir a los metadatos asociados a estas visualizaciones.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir9} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir17} 
 
 }
 
@@ -3678,7 +3795,7 @@ El siguiente dashboard a realizar corresponde a las estadísticas por nivel de f
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir10} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir18} 
 
 }
 
@@ -3689,7 +3806,7 @@ Para el tablero que contiene las estadísticas por sede de admisión se decide n
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir11} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir19} 
 
 }
 
@@ -3700,7 +3817,7 @@ Tablero para nacionalidad.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir12} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir20} 
 
 }
 
@@ -3711,7 +3828,7 @@ Estadísticas para lugar de nacimiento.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir13} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir21} 
 
 }
 
@@ -3722,7 +3839,7 @@ El siguiente tablero presenta las estadísticas por sexo de los estudiantes grad
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir14} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir22} 
 
 }
 
@@ -3733,7 +3850,7 @@ Finalmente se realiza el dashboard con las estadísticas por áreas del conocime
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir15} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir23} 
 
 }
 
@@ -3751,29 +3868,15 @@ Como ya se menciono una historia es una secuencia de vistas o dashboards que se 
   Haga clic en el icono de historia en la barra inferior donde se ubican los tableros creados, asigne como nombre a la nueva historia Graduados.
 \item
   Ajuste el tamaño para que ocupe toda la pantalla del dispositivo.
+\item
+  En el cuadro gris añada como subtitulo Evolución graduados, en el panel lateral izquierdo en la pestaña historia encontrará un botón que tiene el texto En blanco, dicho botón es usado para crear más puntos en la historia, haga clic allí hasta tener \(8\) puntos en la historia. Añada estos subtítulos a los puntos de la historia en este orden Modalidad de formación, Nivel de formación, Sede de admisión, Nacionalidad, Lugar de nacimiento, Sexo, Áreas del conocimiento.
+\item
+  En el primer punto de la historia agregue el dashboard llamado Evolución graduados.
 \end{enumerate}
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir16} 
-
-}
-
-\caption{Crear una historia}\label{fig:paso2compartir-fig}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\item
-  En el cuadro gris añada como subtitulo Evolución graduados, en el panel lateral izquierdo en la pestaña historia encontrar un botón que tiene el texto En blanco, dicho botón es usado para crear mas puntos en la historia, haga clic allí hasta tener \(8\) puntos en la historia. Añada estos subtítulos a los puntos de la historia en este orden Modalidad de formación, Nivel de formación, Sede de admisión, Nacionalidad, Lugar de nacimiento, Sexo, Áreas del conocimiento.
-\item
-  En el primer punto de la historia agrega la hoja llamada Evolución histórica del total de estudiantes graduados.
-\end{enumerate}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir17} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir24} 
 
 }
 
@@ -3783,23 +3886,6 @@ Como ya se menciono una historia es una secuencia de vistas o dashboards que se 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{4}
-\tightlist
-\item
-  Observe que al agregar hojas a una historia estas se agregan sin el título, para agregar un título o una descripción de la visualización que se esta presentando, en el panel lateral derecho se ubica una opción llamada Arrastrar a añadir texto, arrástrela hacia la visualización y en el cuadro de dialogo escriba evolución histórica del total de estudiantes graduados, como fuente seleccione Tableau Light, tamaño 18, negrilla y centrada.
-\end{enumerate}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir18} 
-
-}
-
-\caption{Añadir texto}\label{fig:paso5compartir-fig}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
 \item
   A los demás puntos de las historias añada los tableros que fueron creados en la sección anterior.
 \item
@@ -3808,27 +3894,26 @@ Como ya se menciono una historia es una secuencia de vistas o dashboards que se 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.2\linewidth]{Imágenes/compartir19} 
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/compartir25} 
 
 }
 
-\caption{Formato de la historia}\label{fig:paso7compartir-fig}
+\caption{Formato de la historia}\label{fig:paso6compartir-fig}
 \end{figure}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{7}
+\setcounter{enumi}{6}
+\tightlist
 \item
   Se despliega un menú en el panel lateral izquierdo que permite formatear el aspecto de la historia, en la sección navegador haga clic en fuente, aumente el tamaño de la fuente y seleccione negrilla; ahora haga clic en sombreado y más colores, agregue este código hexadecimal que coincide con el color usado en la página web ``\#636363''.
-\item
-  Finalmente, en objetos de texto seleccione ninguno para el sombreado y para el borde.
 \end{enumerate}
 
 Se obtiene una historia que permite navegar entre los diferentes dashboards que contienen información sobre las estadísticas generales de la Universidad.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir20} 
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/compartir26} 
 
 }
 
@@ -3839,7 +3924,7 @@ Oculte todos los dashboards involucrados en la historia, haga clic en la pestañ
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir21} 
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/compartir27} 
 
 }
 
