@@ -5,9 +5,15 @@ library(dplyr)
 
 #LECTURA Y UNION DE BASES DE DATOS
 Graduados <- data.frame()
-for(archivo in list.files()) {
-  if(grepl("Graduados", archivo, fixed = T)){
-    Graduados <- rbind(Graduados, read_excel(archivo))
+for(archivo in list.files("C:/Users/camil/Escritorio/Estudiante Auxiliar/Softwares")) {
+  if(str_detect(archivo, "P\\d{4,5} Graduados")){
+    Graduados <- rbind(
+      Graduados, 
+      read_excel(
+        str_c(
+          "C:/Users/camil/Escritorio/Estudiante Auxiliar/Softwares", 
+          archivo, 
+          sep = "/")))
   }
 }
 
@@ -55,7 +61,7 @@ Graduados$CIU_NAC <- chartr('áéíóúñ','aeioun', Graduados$CIU_NAC)
 Graduados$CIU_NAC <- capitalize(Graduados$CIU_NAC)
 ciunac <- Graduados %>% group_by(CIU_NAC) %>% count()
 Graduados$NIVEL <- str_replace_all(Graduados$NIVEL,"Especialidades (m|M)édicas",
-                  "Especialidades Médicas")
+                                   "Especialidades Médicas")
 edad <- Graduados %>% group_by(EDAD_MOD) %>% count()
 cat_edad <- Graduados %>% group_by(CAT_EDAD) %>% count()
 estrato <- Graduados %>% group_by(ESTRATO_ORIG) %>% count()
@@ -64,7 +70,7 @@ Graduados$SEDE_NOMBRE_MAT <- str_replace_all(Graduados$SEDE_NOMBRE_MAT,
                                              "Amazon(í|i)a", "Amazonía")
 peama_andina <- Graduados %>% group_by(ADM_PEAMA_ANDINA) %>% count()
 Graduados$TIPO_ADM <- str_replace_all(Graduados$TIPO_ADM,
-                                             "PEAM?A", "PEAMA")
+                                      "PEAM?A", "PEAMA")
 paes <- Graduados %>% group_by(PAES) %>% count()
 peama <- Graduados %>% group_by(PEAMA) %>% count()
 convenio <- Graduados %>% group_by(CONVENIO) %>% count()
@@ -187,16 +193,16 @@ Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Estudios Urbano - Regionales")
 
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
-                                     "Fisioterapia\\sDel\\sDeporte( Y | Y La |la )?Actividad\\sFisica",
-                                     "Fisioterapia Del Deporte Y La Actividad Fisica")
+                                      "Fisioterapia\\sDel\\sDeporte( Y | Y La |la )?Actividad\\sFisica",
+                                      "Fisioterapia Del Deporte Y La Actividad Fisica")
 
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Geomorfologia De Suelos", 
                                       "Geomorfologia Y Suelos")
 
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
-                                     "Gestion Cultural,?\\s(Con\\s)?Enfasis\\s(En\\s)?Planeacion(\\sY\\s)?(P|p)oliticas\\sC(ulturales)?",
-                                     "Gestion Cultural Con Enfasis En Planeacion Y Politicas Culturales")
+                                      "Gestion Cultural,?\\s(Con\\s)?Enfasis\\s(En\\s)?Planeacion(\\sY\\s)?(P|p)oliticas\\sC(ulturales)?",
+                                      "Gestion Cultural Con Enfasis En Planeacion Y Politicas Culturales")
 
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Gestion Cultural(\\sY\\s)?(C|c)omunicativa", 

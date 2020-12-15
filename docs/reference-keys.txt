@@ -195,6 +195,10 @@ fig:guardarlibroddetrabajo-fig
 fig:guardarinforme-fig
 fig:guardararchivo2-fig
 fig:exportarinforme-fig
+fig:instalacionpowerbi-fig
+fig:pantallainicialpowerbi-fig
+fig:entornocreacionpowerbi-fig
+fig:campospowerbi-fig
 intro
 tableau
 generalidades
@@ -234,12 +238,8 @@ principales-desventajas-de-power-bi
 productos-de-power-bi
 compartir-el-trabajo-realizado-en-power-bi
 instalación-de-power-bi-desktop
+formadenavegacionpower
 flourish
 example-one
 example-two
 conclu
-fig:instalacionpowerbi-fig
-fig:pantallainicialpowerbi-fig
-fig:entornocreacionpowerbi-fig
-fig:campospowerbi-fig
-formadenavegacionpower
