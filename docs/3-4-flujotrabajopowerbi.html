@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 3 Power BI | Softwares para la visualización estadística</title>
-  <meta name="description" content="Capítulo 3 Power BI | Softwares para la visualización estadística" />
+  <title>3.4 Flujo de trabajo | Softwares para la visualización estadística</title>
+  <meta name="description" content="3.4 Flujo de trabajo | Softwares para la visualización estadística" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 3 Power BI | Softwares para la visualización estadística" />
+  <meta property="og:title" content="3.4 Flujo de trabajo | Softwares para la visualización estadística" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 3 Power BI | Softwares para la visualización estadística" />
+  <meta name="twitter:title" content="3.4 Flujo de trabajo | Softwares para la visualización estadística" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="2-4-flujo-de-trabajo.html"/>
-<link rel="next" href="3-1-generalidadespowerbi.html"/>
+<link rel="prev" href="3-3-formadenavegacionpower.html"/>
+<link rel="next" href="4-flourish.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -190,16 +190,146 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="powerbi" class="section level1">
-<h1><span class="header-section-number">Capítulo 3</span> Power BI</h1>
+<div id="flujotrabajopowerbi" class="section level2">
+<h2><span class="header-section-number">3.4</span> Flujo de trabajo</h2>
+<div id="conexionfuentesdatospowerbi" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Conexión a fuentes de datos</h3>
+<p>Antes de iniciar con la creación de visualizaciones y el análisis de datos debe conectar Power BI a estos, este software de visualización permite conectarse a muchos tipos de fuentes de datos, incluidas bases de datos locales, libros de trabajo de Microsoft Excel y servicios en la nube, puede explorar todas las opciones de conexión haciendo clic en obtener datos en la pantalla introductoria de Power BI.</p>
+<div class="figure" style="text-align: center"><span id="fig:obtenerdatospbi-fig"></span>
+<img src="Imágenes/powerbi8.jpg" alt="Obtener datos" width="60%" />
+<p class="caption">
+Figura 3.8: Obtener datos
+</p>
 </div>
+<p>En este caso la conexión a datos se hará a través de un archivo Excel, inicialmente se hará la conexión a las bases de datos de estudiantes graduados a nivel de microdatos para explorar algunas funcionalidades del panel Power Query.</p>
+<ol style="list-style-type: decimal">
+<li>Abrir Power BI y hacer clic en obtener datos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:conexiondatos1-fig"></span>
+<img src="Imágenes/powerbi9.jpg" alt="Pantalla inicial" width="80%" />
+<p class="caption">
+Figura 3.9: Pantalla inicial
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>En el cuadro de dialogo Obtener datos debe seleccionar Excel y hacer clic en conectar, al hacer esto se abre un cuadro de dialogo que permite navegar a través de las carpetas de su equipo para ubicar la localización de las bases de datos. Debe seleccionar una de las bases y dar clic en botón “Abrir”.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:conexiondatos2-fig"></span>
+<img src="Imágenes/powerbi10.jpg" alt="Navegación entre carpetas" width="60%" />
+<p class="caption">
+Figura 3.10: Navegación entre carpetas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Completado el paso anterior se abre un nuevo cuadro de dialogo llamado Navegar que en su panel izquierdo se ubica una lista de las hojas de trabajo que componen el archivo Excel, debe seleccionar una y luego hacer clic en Cargar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:conexiondatos3-fig"></span>
+<img src="Imágenes/powerbi11.jpg" alt="Navegador" width="80%" />
+<p class="caption">
+Figura 3.11: Navegador
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Después de cargados los datos haga clic en Transformar datos, ubicado en la barra de herramientas, obtendrá una nueva ventana llamada Editor de Power Query que permite realizar algunas transformaciones sobre la base de datos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:conexiondatos4-fig"></span>
+<img src="Imágenes/powerbi12.jpg" alt="Panel Power Query" width="80%" />
+<p class="caption">
+Figura 3.12: Panel Power Query
+</p>
+</div>
+<p>Este editor en su barra de herramientas contiene botones útiles que permiten interactuar con los datos, como transformaciones, creación de nuevas columnas, herramientas y ayuda. En el panel lateral izquierdo encontrara una lista de las tablas a las que se encuentra conectado, en este caso la hoja del archivo Excel a la cual se realizó la conexión es “P2009G”, en la parte central del editor se ubica una vista previa de los datos, por último, el panel Configuración de la consulta muestra las propiedades y los pasos aplicados para transformar la base de datos.</p>
+<p>Observe que cada columna tiene asociado un icono que indica si es una variable numérica o de texto, puede editar este tipo de datos haciendo clic sobre el icono y seleccionando el tipo de dato, por ejemplo, la columna semestre debe cambiarse de numérica a texto.</p>
+<div class="figure" style="text-align: center"><span id="fig:cambiartipodato-fig"></span>
+<img src="Imágenes/powerbi13.jpg" alt="Cambiar tipo de dato" width="30%" />
+<p class="caption">
+Figura 3.13: Cambiar tipo de dato
+</p>
+</div>
+<p>Al hacer clic en el menú desplegable de cada variable encontrara información sobre los datos que contiene, opciones de orden como ascendente y descendente, eliminar vacíos y añadir filtros de texto, muy similar a lo encontrado en Excel cuando se quiere aplicar filtros a los datos. En la pestaña filtros de texto se tiene diversas opciones para filtrar los datos que permiten especificar si es igual o no, el inicio o final, entre otras opciones.</p>
+<div class="figure" style="text-align: center"><span id="fig:opcionesfiltrado-fig"></span>
+<img src="Imágenes/powerbi14.jpg" alt="Menú de cada variable" width="50%" />
+<p class="caption">
+Figura 3.14: Menú de cada variable
+</p>
+</div>
+<p>A modo de ejemplo puede seleccionar únicamente Antioquia y obtendrá una base de datos que solo contiene las observaciones en las cuales se cumple el filtro aplicado, es decir donde DEP_NAC sea Antioquia.</p>
+<p>Haciendo clic derecho sobre el nombre de una variable se despliega un menú con diversas opciones, entre ellas copiar, quitar, duplicar, reemplazar, dividir, agrupar, entre otras; como se muestra en la figura <a href="3-4-flujotrabajopowerbi.html#fig:opcionesdecolumna-fig">3.15</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:opcionesdecolumna-fig"></span>
+<img src="Imágenes/powerbi15.jpg" alt="Opciones de cada variable" width="40%" />
+<p class="caption">
+Figura 3.15: Opciones de cada variable
+</p>
+</div>
+<p>Al final de la base de datos se agregaron dos columnas llamadas columna56 y columna57 respectivamente, es necesario eliminarlas ya que no hacen parte del conjunto de variables a analizar, para esto haga clic derecho sobre el nombre de la columna y seleccione quitar.</p>
+<div class="figure" style="text-align: center"><span id="fig:quitarcolumnas-fig"></span>
+<img src="Imágenes/powerbi16.jpg" alt="Eliminar columnas" width="50%" />
+<p class="caption">
+Figura 3.16: Eliminar columnas
+</p>
+</div>
+<p>La opción dividir columna presenta diferentes alternativas para realizar divisiones de columna tales como división por un delimitador, número de caracteres, posiciones y algunas opciones de texto como mayúsculas, minúsculas y dígitos; tal y como se muestra en la figura <a href="3-4-flujotrabajopowerbi.html#fig:opcionesdedivision-fig">3.17</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:opcionesdedivision-fig"></span>
+<img src="Imágenes/powerbi20.jpg" alt="Alternativas para dividir columnas" width="40%" />
+<p class="caption">
+Figura 3.17: Alternativas para dividir columnas
+</p>
+</div>
+<p>La siguiente columna que presenta problemas es la llamada CIU_NAC puesto que presenta una combinación de números y texto, para solucionar esto se debe usar la opción de división de dígito a no dígito.</p>
+<ul>
+<li>Haga clic derecho sobre la columna, en el menú desplegable seleccione dividir columna y de dígito a no dígito.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:dividirdigitoanodigito-fig"></span>
+<img src="Imágenes/powerbi21.jpg" alt="Dividir columnas usando de dígito a no dígito" width="70%" />
+<p class="caption">
+Figura 3.18: Dividir columnas usando de dígito a no dígito
+</p>
+</div>
+<p>Con esto se obtienen dos columnas, una de ellas contiene el número que en este caso corresponde al código del departamento y la otra variable contiene el nombre, tal y como se muestra en la figura <a href="3-4-flujotrabajopowerbi.html#fig:columnasdivididas-fig">3.19</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:columnasdivididas-fig"></span>
+<img src="Imágenes/powerbi22.jpg" alt="Vista previa de la columna Ciudad dividida" width="80%" />
+<p class="caption">
+Figura 3.19: Vista previa de la columna Ciudad dividida
+</p>
+</div>
+<p>Un detalle importante es que el primer registro que pertenece a la ciudad de Sopó no contenía números por lo tanto para esta fila no se hizo la división.</p>
+<p>Cuando se tiene un separador en la columna es útil usar la división de columna por delimitador, en este caso la variable PROGRAMA_S se compone del nombre del programa y la sede a la que pertenece, estos dos atributos se encuentran separados por un guion el cual se usara como delimitador para realizar la división.</p>
+<ul>
+<li>Haga clic derecho sobre la columna de interés, seleccione división y por delimitador.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:columnasdivididasdelimitador-fig"></span>
+<img src="Imágenes/powerbi17.jpg" alt="Dividir columnas usando un delimitador" width="70%" />
+<p class="caption">
+Figura 3.20: Dividir columnas usando un delimitador
+</p>
+</div>
+<ul>
+<li>En la ventana emergente llamada dividir columna por delimitador seleccione personalizado y escriba un – en el siguiente espacio, por último, en la sección dividir en seleccione cada aparición del delimitador.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:configuraciondeldelimitador-fig"></span>
+<img src="Imágenes/powerbi18.jpg" alt="Configuración del delimitador" width="80%" />
+<p class="caption">
+Figura 3.21: Configuración del delimitador
+</p>
+</div>
+<p>Al seleccionar cada aparición del delimitador se obtienen dos columnas, una de ellas contiene el programa y la otra la sede a la que pertenece.</p>
+<div class="figure" style="text-align: center"><span id="fig:columnadivididacondelimitador-fig"></span>
+<img src="Imágenes/powerbi19.jpg" alt="Columna programa- sede dividida" width="80%" />
+<p class="caption">
+Figura 3.22: Columna programa- sede dividida
+</p>
+</div>
+
+</div>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="2-4-flujo-de-trabajo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="3-1-generalidadespowerbi.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="3-3-formadenavegacionpower.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="4-flourish.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
