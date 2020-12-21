@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-12-18}
+\date{2020-12-21}
 
 \begin{document}
 \maketitle
@@ -4442,6 +4442,104 @@ Al seleccionar cada aparición del delimitador se obtienen dos columnas, una de 
 
 \caption{Columna programa- sede dividida}\label{fig:columnadivididacondelimitador-fig}
 \end{figure}
+
+La creación de grupos debe realizarse usando la pestaña agregar columnas y seleccionando columna condicional.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/powerbi23} 
+
+}
+
+\caption{Crear columna condicional}\label{fig:columnacondicional-fig}
+\end{figure}
+
+Como muestra la descripción de esta opción lo que permite es crear una nueva columna que agrega los vaolres de manera condicional de una columna que se seleccione, en este caso la variable de interés es EDAD\_MOD, se crearan grupos para categorizar las edades. En la ventana emergente llamada agregar columna condicional se deben especificar las condiciones por las cuales se quiere agrupar, en ese caso debe llenar los campos como se muestra en la figura \ref{fig:agregarcolumnacondicional-fig}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi24} 
+
+}
+
+\caption{Agregar columna condicional}\label{fig:agregarcolumnacondicional-fig}
+\end{figure}
+
+Al finalizar esta operación se crea una nueva columna llamada Grupo edad que contiene los grupos creados para la variable edad, dichos grupos fueron asignados de manera correcta y contiene algunos errores debido a que existen valores faltantes en la columna agrupada.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi25} 
+
+}
+
+\caption{Columna grupo edad}\label{fig:columnacondicionalfinal-fig}
+\end{figure}
+
+Otra funcionalidad importante que presenta el editor Power Query es la unión de bases de datos, estas alternativas se ubican en la barra de herramientas y el botón Combinar, las opciones disponibles son combinar consultas y anexar consultas, la primera permite hacer uniones por columna y la segunda permite hacer uniones por filas.
+
+Las uniones por columna son útiles cuando se quiere trabajar con dos columnas que se encuentran en diferentes conjuntos de datos, existen seis opciones de realizar las uniones por columnas:
+
+\begin{itemize}
+\tightlist
+\item
+  Externa izquierda: devuelve todos los registros de la tabla izquierda y solo los registros que coinciden con la tabla de la derecha
+\item
+  Externa derecha: devuelve todos los registros de la tabla derecha y solo los registros que coinciden con la tabla de la izquierda.
+\item
+  Externa completa: devuelve todos los registros de ambas tablas.
+\item
+  Interna: devuelve únicamente los registros que están en ambas tablas.
+\item
+  Anti izquierda: devuelve únicamente los registros de la tabla izquierda.
+\item
+  Anti derecha: devuelve únicamente los registros de la tabla derecha.
+\end{itemize}
+
+Los conjuntos de datos que se quieren analizar contienen las mismas columnas por lo que el interés se centra en realizar uniones por filas, se debe realizar la conexión a todas las fuentes de datos usando el botón nuevo origen, seleccionar Excel y cargar los datos, en el panel lateral izquierdo debe tener la lista de tablas a las que se conectó, como se muestra en la figura \ref{fig:listamicrodatos-fig}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi26} 
+
+}
+
+\caption{Lista de tablas}\label{fig:listamicrodatos-fig}
+\end{figure}
+
+Ahora para realizar la unión de todas las tablas debe:
+
+\begin{itemize}
+\tightlist
+\item
+  Hacer clic en el botón combinar ubicado en la barra de herramientas hacia el lado derecho, seleccionar anexar consultas y anexar consultas para crear una nueva.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/powerbi27} 
+
+}
+
+\caption{Combinar tablas de datos}\label{fig:combinardatos-fig}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  En la ventana Anexar seleccione tres o mas tablas, en el panel tablas disponibles haga clic sobre cada tabla y clic sobre el botón agregar, por ultimo haga clic en el botón aceptar para guardar los campos.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/powerbi28} 
+
+}
+
+\caption{Anexar datos}\label{fig:anexardatos-fig}
+\end{figure}
+
+En el panel Consultas obtendrá una nueva tabla llamada Anexar1 la cual posee la unión de todas las tablas a las que se tienen acceso, dicha tabla contiene \(101.841\) registros y 55 columnas.
 
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}

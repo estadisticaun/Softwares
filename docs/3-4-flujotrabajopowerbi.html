@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-12-18" />
+<meta name="date" content="2020-12-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -319,6 +319,64 @@ Figura 3.21: Configuración del delimitador
 Figura 3.22: Columna programa- sede dividida
 </p>
 </div>
+<p>La creación de grupos debe realizarse usando la pestaña agregar columnas y seleccionando columna condicional.</p>
+<div class="figure" style="text-align: center"><span id="fig:columnacondicional-fig"></span>
+<img src="Imágenes/powerbi23.jpg" alt="Crear columna condicional" width="40%" />
+<p class="caption">
+Figura 3.23: Crear columna condicional
+</p>
+</div>
+<p>Como muestra la descripción de esta opción lo que permite es crear una nueva columna que agrega los vaolres de manera condicional de una columna que se seleccione, en este caso la variable de interés es EDAD_MOD, se crearan grupos para categorizar las edades. En la ventana emergente llamada agregar columna condicional se deben especificar las condiciones por las cuales se quiere agrupar, en ese caso debe llenar los campos como se muestra en la figura <a href="3-4-flujotrabajopowerbi.html#fig:agregarcolumnacondicional-fig">3.24</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:agregarcolumnacondicional-fig"></span>
+<img src="Imágenes/powerbi24.jpg" alt="Agregar columna condicional" width="80%" />
+<p class="caption">
+Figura 3.24: Agregar columna condicional
+</p>
+</div>
+<p>Al finalizar esta operación se crea una nueva columna llamada Grupo edad que contiene los grupos creados para la variable edad, dichos grupos fueron asignados de manera correcta y contiene algunos errores debido a que existen valores faltantes en la columna agrupada.</p>
+<div class="figure" style="text-align: center"><span id="fig:columnacondicionalfinal-fig"></span>
+<img src="Imágenes/powerbi25.jpg" alt="Columna grupo edad" width="80%" />
+<p class="caption">
+Figura 3.25: Columna grupo edad
+</p>
+</div>
+<p>Otra funcionalidad importante que presenta el editor Power Query es la unión de bases de datos, estas alternativas se ubican en la barra de herramientas y el botón Combinar, las opciones disponibles son combinar consultas y anexar consultas, la primera permite hacer uniones por columna y la segunda permite hacer uniones por filas.</p>
+<p>Las uniones por columna son útiles cuando se quiere trabajar con dos columnas que se encuentran en diferentes conjuntos de datos, existen seis opciones de realizar las uniones por columnas:</p>
+<ul>
+<li>Externa izquierda: devuelve todos los registros de la tabla izquierda y solo los registros que coinciden con la tabla de la derecha</li>
+<li>Externa derecha: devuelve todos los registros de la tabla derecha y solo los registros que coinciden con la tabla de la izquierda.</li>
+<li>Externa completa: devuelve todos los registros de ambas tablas.</li>
+<li>Interna: devuelve únicamente los registros que están en ambas tablas.</li>
+<li>Anti izquierda: devuelve únicamente los registros de la tabla izquierda.</li>
+<li>Anti derecha: devuelve únicamente los registros de la tabla derecha.</li>
+</ul>
+<p>Los conjuntos de datos que se quieren analizar contienen las mismas columnas por lo que el interés se centra en realizar uniones por filas, se debe realizar la conexión a todas las fuentes de datos usando el botón nuevo origen, seleccionar Excel y cargar los datos, en el panel lateral izquierdo debe tener la lista de tablas a las que se conectó, como se muestra en la figura <a href="3-4-flujotrabajopowerbi.html#fig:listamicrodatos-fig">3.26</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:listamicrodatos-fig"></span>
+<img src="Imágenes/powerbi26.jpg" alt="Lista de tablas" width="80%" />
+<p class="caption">
+Figura 3.26: Lista de tablas
+</p>
+</div>
+<p>Ahora para realizar la unión de todas las tablas debe:</p>
+<ul>
+<li>Hacer clic en el botón combinar ubicado en la barra de herramientas hacia el lado derecho, seleccionar anexar consultas y anexar consultas para crear una nueva.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:combinardatos-fig"></span>
+<img src="Imágenes/powerbi27.jpg" alt="Combinar tablas de datos" width="35%" />
+<p class="caption">
+Figura 3.27: Combinar tablas de datos
+</p>
+</div>
+<ul>
+<li>En la ventana Anexar seleccione tres o mas tablas, en el panel tablas disponibles haga clic sobre cada tabla y clic sobre el botón agregar, por ultimo haga clic en el botón aceptar para guardar los campos.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:anexardatos-fig"></span>
+<img src="Imágenes/powerbi28.jpg" alt="Anexar datos" width="80%" />
+<p class="caption">
+Figura 3.28: Anexar datos
+</p>
+</div>
+<p>En el panel Consultas obtendrá una nueva tabla llamada Anexar1 la cual posee la unión de todas las tablas a las que se tienen acceso, dicha tabla contiene <span class="math inline">\(101.841\)</span> registros y 55 columnas.</p>
 
 </div>
 </div>
