@@ -264,19 +264,53 @@ Al seleccionar cada aparición del delimitador se obtienen dos columnas, una de 
 knitr::include_graphics("Imágenes/powerbi19.jpg")
 ```
 
+La creación de grupos debe realizarse usando la pestaña agregar columnas y seleccionando columna condicional.
 
+```{r columnacondicional-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear columna condicional', out.width='20%'}
+knitr::include_graphics("Imágenes/powerbi23.jpg")
+```
 
+Como muestra la descripción de esta opción lo que permite es crear una nueva columna que agrega los vaolres de manera condicional de una columna que se seleccione, en este caso la variable de interés es EDAD_MOD, se crearan grupos para categorizar las edades. En la ventana emergente llamada agregar columna condicional se deben especificar las condiciones por las cuales se quiere agrupar, en ese caso debe llenar los campos como se muestra en la figura \@ref(fig:agregarcolumnacondicional-fig).
 
+```{r agregarcolumnacondicional-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar columna condicional', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi24.jpg")
+```
 
+Al finalizar esta operación se crea una nueva columna llamada Grupo edad que contiene los grupos creados para la variable edad, dichos grupos fueron asignados de manera correcta y contiene algunos errores debido a que existen valores faltantes en la columna agrupada.
 
+```{r columnacondicionalfinal-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Columna grupo edad', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi25.jpg")
+```
 
+Otra funcionalidad importante que presenta el editor Power Query es la unión de bases de datos, estas alternativas se ubican en la barra de herramientas y el botón Combinar, las opciones disponibles son combinar consultas y anexar consultas, la primera permite hacer uniones por columna y la segunda permite hacer uniones por filas.
 
+Las uniones por columna son útiles cuando se quiere trabajar con dos columnas que se encuentran en diferentes conjuntos de datos, existen seis opciones de realizar las uniones por columnas:
 
+-	Externa izquierda: devuelve todos los registros de la tabla izquierda y solo los registros que coinciden con la tabla de la derecha
+-	Externa derecha: devuelve todos los registros de la tabla derecha y solo los registros que coinciden con la tabla de la izquierda.
+-	Externa completa: devuelve todos los registros de ambas tablas.
+-	Interna: devuelve únicamente los registros que están en ambas tablas.
+-	Anti izquierda: devuelve únicamente los registros de la tabla izquierda.
+-	Anti derecha: devuelve únicamente los registros de la tabla derecha.
 
+Los conjuntos de datos que se quieren analizar contienen las mismas columnas por lo que el interés se centra en realizar uniones por filas, se debe realizar la conexión a todas las fuentes de datos usando el botón nuevo origen, seleccionar Excel y cargar los datos, en el panel lateral izquierdo debe tener la lista de tablas a las que se conectó, como se muestra en la figura \@ref(fig:listamicrodatos-fig).
 
+```{r listamicrodatos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Lista de tablas', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi26.jpg")
+```
 
+Ahora para realizar la unión de todas las tablas debe:
 
+-	Hacer clic en el botón combinar ubicado en la barra de herramientas hacia el lado derecho, seleccionar anexar consultas y anexar consultas para crear una nueva. 
 
+```{r combinardatos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Combinar tablas de datos', out.width='40%'}
+knitr::include_graphics("Imágenes/powerbi27.jpg")
+```
 
+-	En la ventana Anexar seleccione tres o mas tablas, en el panel tablas disponibles haga clic sobre cada tabla y clic sobre el botón agregar, por ultimo haga clic en el botón aceptar para guardar los campos.
 
+```{r anexardatos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Anexar datos', out.width='40%'}
+knitr::include_graphics("Imágenes/powerbi28.jpg")
+```
 
+En el panel Consultas obtendrá una nueva tabla llamada Anexar1 la cual posee la unión de todas las tablas a las que se tienen acceso, dicha tabla contiene $101.841$ registros y 55 columnas.
