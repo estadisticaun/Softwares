@@ -266,3 +266,8 @@ flourish
 example-one
 example-two
 conclu
+fig:opcionesyconfiguracion-fig
+fig:opcionesyconfiguracionR-fig
+fig:obtenerdatosR-fig
+fig:scriptdeR-fig
+fig:Navegador-fig

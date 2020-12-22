@@ -313,4 +313,46 @@ knitr::include_graphics("Imágenes/powerbi27.jpg")
 knitr::include_graphics("Imágenes/powerbi28.jpg")
 ```
 
-En el panel Consultas obtendrá una nueva tabla llamada Anexar1 la cual posee la unión de todas las tablas a las que se tienen acceso, dicha tabla contiene $101.841$ registros y 55 columnas.
+En el panel Consultas obtendrá una nueva tabla llamada Anexar1 la cual posee la unión de todas las tablas a las que se tienen acceso, dicha tabla contiene $101.841$ registros y $55$ columnas.
+
+Como se menciono en la de sección de Tableau los datos requieren una limpieza y preparación la cual se realizo desde R, dentro de los orígenes de datos disponibles en Power BI existe la opción de cargar scripts de R, por lo tanto, se usará esta forma de conexión a datos para cargar el conjunto de datos limpio y listo para realizar análisis.
+
+Inicialmente es necesario verificar que Power BI se encuentre conectado a la versión en la que fue creado el script de R que se desea ejecutar, para esto debe:
+
+1.	Abrir Power BI Desktop, cerrar la ventana introductoria, seguido de esto hacer clic en archivo, seleccionar opciones y configuración y nuevamente clic en opciones.
+
+```{r opcionesyconfiguracion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones y configuración', out.width='70%'}
+knitr::include_graphics("Imágenes/powerbi29.jpg")
+```
+
+2.	Se abrirá una ventana emergente con las opciones de configuración disponibles, en el panel global seleccione scripts de R, luego de esto en el panel lateral derecho asegúrese de que el directorio se ubique en la versión en la cual fue creada el script y como IDE de R se ubique R Studio.
+
+```{r opcionesyconfiguracionR-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones de script de R', out.width='70%'}
+knitr::include_graphics("Imágenes/powerbi30.jpg")
+```
+
+Cuando ya se han realizado las configuraciones necesarias haga clic en obtener datos y seleccione otras, script de R y clic en conectar.
+
+```{r obtenerdatosR-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Obtener datos de script de R', out.width='60%'}
+knitr::include_graphics("Imágenes/powerbi31.jpg")
+```
+
+Después de completado el paso anterior se abrirá una ventana llamada Script de R en la cual debe escribir su código R, dicho código puede ser copiado del archivo llamado Datacleaning.R ubicado en el repositorio de trabajo, debe tener cuidado de no copiar la última línea ya que en esa se extrae el archivo en CSV y no es necesario hacerlo ya que la tabla queda guardada en el entorno R.
+
+```{r scriptdeR-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Script de R', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi32.jpg")
+```
+
+Al hacer clic en aceptar para guardar los cambios Power BI iniciara la conexión con R para ejecutar las líneas de código escritas, nuevamente se abre una ventana llamada navegar que incluye todas las tablas almacenadas en el ambiente R, la que se debe usar es la llamada Graduados que contiene la unión de todas las tablas ordenadas y preparadas para el análisis, haga clic sobre esta tabla y finalmente clic en cargar.
+
+```{r Navegador-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Navegador', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi33.jpg")
+```
+
+Cuando se han cargado los datos en el panel campos se ubicarán todas las variables que contiene el conjunto de datos al que se encuentra conectado, haga clic en transformar datos con el fin de verificar el tipo de cada variable y hacer los cambios que sean necesarios, luego de verificar y realizar los cambios necesarios es momento de iniciar con las visualizaciones.
+
+
+
+
+
+
