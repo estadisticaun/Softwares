@@ -165,6 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3" data-path="3-3-formadenavegacionpower.html"><a href="3-3-formadenavegacionpower.html"><i class="fa fa-check"></i><b>3.3</b> Forma de navegación</a></li>
 <li class="chapter" data-level="3.4" data-path="3-4-flujotrabajopowerbi.html"><a href="3-4-flujotrabajopowerbi.html"><i class="fa fa-check"></i><b>3.4</b> Flujo de trabajo</a><ul>
 <li class="chapter" data-level="3.4.1" data-path="3-4-flujotrabajopowerbi.html"><a href="3-4-flujotrabajopowerbi.html#conexionfuentesdatospowerbi"><i class="fa fa-check"></i><b>3.4.1</b> Conexión a fuentes de datos</a></li>
+<li class="chapter" data-level="3.4.2" data-path="3-4-flujotrabajopowerbi.html"><a href="3-4-flujotrabajopowerbi.html#analisisdatospowerbi"><i class="fa fa-check"></i><b>3.4.2</b> Análisis de datos</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="4-flourish.html"><a href="4-flourish.html"><i class="fa fa-check"></i><b>4</b> Flourish</a><ul>
@@ -419,7 +420,99 @@ Figura 3.33: Navegador
 </p>
 </div>
 <p>Cuando se han cargado los datos en el panel campos se ubicarán todas las variables que contiene el conjunto de datos al que se encuentra conectado, haga clic en transformar datos con el fin de verificar el tipo de cada variable y hacer los cambios que sean necesarios, luego de verificar y realizar los cambios necesarios es momento de iniciar con las visualizaciones.</p>
+</div>
+<div id="analisisdatospowerbi" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Análisis de datos</h3>
+<div id="graficolineaspowerbi" class="section level4">
+<h4><span class="header-section-number">3.4.2.1</span> Gráfico de líneas</h4>
+<p>Nuevamente se iniciarán con gráficos similares a los presentados en la sección cifras generales y graduados la página de las <a href="http://estadisticas.unal.edu.co/home/">estadísticas</a> de la Universidad Nacional de Colombia, en principio se hará un gráfico de líneas que muestre la evolución histórica de los estudiantes graduados en los periodos de 2009-1 a 2020-1. Una de las principales diferencias entre Tableau y Power BI es que en el primero se crean los objetos visuales de manera individual en hojas de trabajo y luego son combinadas en un dashboard o historias, el lienzo de Power BI es directamente un dashboard, por lo que cada objeto será creado sobre un tablero.</p>
+<ol style="list-style-type: decimal">
+<li><p>Cambie el nombre del lienzo de trabajo por Evolución graduados.</p></li>
+<li><p>Desde el panel visualizaciones haga clic sobre el icono de gráfico de líneas.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:Agregargraficolineas-fig"></span>
+<img src="Imágenes/powerbi34.jpg" alt="Gráfico de líneas" width="20%" />
+<p class="caption">
+Figura 3.34: Gráfico de líneas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Amplié el grafico para que ocupe todo el lienzo, debe notar que se agregan opciones de eje, leyenda, valores, valores secundarios e información sobre herramientas en el panel visualizaciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi35.jpg" alt="Gráfico de líneas en blanco" width="100%" />
+<p class="caption">
+Figura 3.35: Gráfico de líneas en blanco
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Arrastre el campo YEAR_SEMESTER al estante eje y nuevamente desde el panel campos debe arrastrarlo al estante valores.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi36.jpg" alt="Gráfico de líneas en blanco" width="100%" />
+<p class="caption">
+Figura 3.36: Gráfico de líneas en blanco
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Al observar a detalle la visualización se identifica que el orden del eje x no es el debido, ya que debe ser un orden cronológico que inicia en el periodo 2009-1 y termina en 2020-1, para corregir esto haga clic en los tres puntos ubicados en la esquina superior derecha, seleccione ordenar por y finalmente YEAR_SEMESTER.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi37.jpg" alt="Ordenar por" width="100%" />
+<p class="caption">
+Figura 3.37: Ordenar por
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>La visualización obtenida ordena el eje x de manera descendente, es decir, inicia en el periodo 2020-1 y finaliza en 2009-1, para modificar esto nuevamente haga clic en los tres puntos y seleccione orden ascendente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi38.jpg" alt="Ordenar de manera ascendente" width="90%" />
+<p class="caption">
+Figura 3.38: Ordenar de manera ascendente
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Es momento de editar el título de la visualización y de los ejes, por lo que debe hacer clic en el rodillo ubicado en el panel visualizaciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi39.jpg" alt="Formato de la visualización" width="20%" />
+<p class="caption">
+Figura 3.39: Formato de la visualización
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Haga clic en la pestaña eje x y en la sección título del eje escriba Periodo y aumente el tamaño del texto a 16pt, de manera similar edite el titulo del eje y.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi40.jpg" alt="Editar el eje X" width="20%" />
+<p class="caption">
+Figura 3.40: Editar el eje X
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li><p>La pestaña título permite editar el título de la visualización, por tanto, haga clic sobre esta pestaña y el espacio texto del título escriba Evolución histórica del total de estudiantes graduados, seleccione alineación central y aumente el tamaño hasta 25pt.</p></li>
+<li><p>Haga clic sobre la pestaña colores de datos, despliegue el menú de colores y seleccione color personalizado y escriba “1F82C3” que corresponde al color azul usado en la página web de estadísticas de la Universidad Nacional, hasta el momento su visualización debe verse así.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso10lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi41.jpg" alt="Evolución histórica de estudiantes graduados" width="80%" />
+<p class="caption">
+Figura 3.41: Evolución histórica de estudiantes graduados
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>Note que la descripción emergente no es clara, ubíquese en la sección campos, debajo de visualizaciones, haga doble clic sobre Recuento YEAR_SEMESTER y escriba Total.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso11lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi42.jpg" alt="Edición de la descripción emergente" width="100%" />
+<p class="caption">
+Figura 3.42: Edición de la descripción emergente
+</p>
+</div>
+<p>Con eso se finaliza el primer dashboard que se encuentra en la página de estadísticas de la Universidad Nacional.</p>
+<p>El siguiente dashboard involucra un gráfico de líneas segmentado por una dimensión, un cuadro de texto y un gráfico circular, inicialmente se creará el gráfico de líneas segmentado por una dimensión.</p>
 
+</div>
 </div>
 </div>
 <!-- </div> -->
