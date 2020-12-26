@@ -451,13 +451,13 @@ Cuando se trata de analizar cifras es importante visualizar las cantidades como 
 
 2.	Haciendo clic derecho sobre la tabla graduados seleccione duplicar. Imagen powerbi72.
 
-```{r paso2porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Duplicar tablas', out.width='60%'}
+```{r paso2porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Duplicar tablas', out.width='40%'}
 knitr::include_graphics("Imágenes/powerbi72.jpg")
 ```
 
 3.	Cambie el nombre de tabla duplicada por Agrupación1, haga clic sobre le botón Agrupar por ubicado en la barra de herramientas del edito Power Query.
 
-```{r paso3porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agrupar tabla', out.width='80%'}
+```{r paso3porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agrupar tabla', out.width='100%'}
 knitr::include_graphics("Imágenes/powerbi73.jpg")
 ```
 
@@ -469,7 +469,7 @@ knitr::include_graphics("Imágenes/powerbi74.jpg")
 
 5.	Obtendrá una tabla que contiene el conteo de estudiantes graduados de pregrado y postgrado por cada periodo.
 
-```{r paso5porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tabla agrupación1', out.width='70%'}
+```{r paso5porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tabla agrupación1', out.width='80%'}
 knitr::include_graphics("Imágenes/powerbi75.jpg")
 ```
 
@@ -480,6 +480,166 @@ knitr::include_graphics("Imágenes/powerbi75.jpg")
 ```{r paso7porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Configurar la segunda agrupación', out.width='70%'}
 knitr::include_graphics("Imágenes/powerbi76.jpg")
 ```
+
+8.	Ubíquese en la tabla llamada agrupación1, haga clic sobre combinar y seleccione combinar consultas para crear una nueva.
+
+```{r paso8porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Combinar consultas para crear una nueva', out.width='50%'}
+knitr::include_graphics("Imágenes/powerbi77.jpg")
+```
+
+9.	En la ventana combinar, seleccione la tabla agrupación2 en el segundo campo, el tipo de combinación debe ser externa izquierda y debe hacer clic sobre la columna YEAR_SEMESTER de ambas tablas de datos.
+
+```{r paso9porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Configurar la combinación', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi78.jpg")
+```
+
+10.	En el panel consultas encontrara una nueva tabla llamada combinar1, cambie el nombre de esta tabla por Modalidadformación, debe verse algo así dicha tabla.
+
+```{r paso10porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tablas combinadas', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi79.jpg")
+```
+
+11.	Note que la columna Agrupación2, no presenta las cifras que debería, haga clic sobre el icono ubicado a la derecha del nombre de dicha columna y seleccione únicamente cantidad semestre, cambie el nombre de esta columna por Cantidad semestre.
+
+```{r paso11porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Expandir segunda agrupación', out.width='50%'}
+knitr::include_graphics("Imágenes/powerbi80.jpg")
+```
+12.	Haga clic en la pestaña agregar columna y seleccione columna personalizada.
+
+```{r paso12porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear columna personalizada', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi81.jpg")
+```
+
+13.	En el cuadro de dialogo columna personalizada cambie el nombre de la nueva columna por Porcentaje, al lateral de formula se ubica un cuadro llamado columnas disponibles que contiene las columnas que se tienen disponibles en la tabla de datos, haga clic sobre cantidad y luego en el botón insertar, escriba el símbolo de división /, luego seleccione cantidad semestre e insértela a la formula.
+
+```{r paso13porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Configurar columna personalizada', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi82.jpg")
+```
+
+14.	Cambie el tipo de dato de la columna porcentaje a número decimal.
+
+La tabla llamada Modalidadformación debe verse de la siguiente manera.
+
+```{r tablamodalidadformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tabla modalidad de formación', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi83.jpg")
+```
+
+Por último, haga clic sobre el botón cerrar y aplicar ubicado debajo de archivo en la barra de herramientas. 
+
+De nuevo en la ventana de Power BI debe observar que en el panel campos se ubican cuatro tablas, las dos agrupaciones, la tabla de modalidadformación y graduados, para mayor comodidad oculte las dos agrupaciones haciendo clic derecho sobre cada una de ellas y seleccionando ocultar.
+
+Es momento de incluir los porcentajes calculados en el gráfico de líneas, para esto haga clic sobre el grafico de líneas, debe reemplazar los campos YEAR_SEMESTER  y TIPO_NIVEL por estos mismos campos, pero de la tabla Modalidadformación, en el estante valores elimine el campo que está allí y arrastre la variable Cantidad a dicho estante, finalmente debe agregar el campo Porcentaje a información sobre herramientas.
+
+```{r taableromodalidadformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas con la tabla creada', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi84.jpg")
+```
+
+Ordene nuevamente el eje de forma ascendente y por la variable YEAR_SEMESTER como se había hecho anteriormente, cambie el color de los datos, naranja para postgrado y verde para pregrado. Para cambiar el formato de la variable porcentaje haga doble clic sobre dicha variable, en formato seleccione porcentaje, su dashboard se verá así.
+
+```{r formatoporcentaje-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir formato de porcentaje', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi85.jpg")
+```
+
+#### Tabla de texto
+
+Se creará una tabla de texto que contenga la información del número de estudiantes graduados por modalidad de formación, se trabajara sobre el dashboard que contiene el gráfico de líneas segmentado por una dimensión.
+
+1.	Haga clic sobre la equina inferior izquierda del lienzo de trabajo y sobre el panel visualizaciones haga clic sobre matriz.
+
+```{r paso1matriz-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir matriz', out.width='20%'}
+knitr::include_graphics("Imágenes/powerbi46.jpg")
+```
+
+2.	Al estante filas agregue el campo YEAR_SEMESTER, al estante columnas TIPO_NIVEL, nuevamente este ultimo campo al estante valores, pero en su menú desplegable debe seleccionar recuento. 
+
+```{r paso2matriz-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar campos a los estantes', out.width='20%'}
+knitr::include_graphics("Imágenes/powerbi47.jpg")
+```
+
+3.	Haga doble clic en el campo ubicado en el estante filas y escriba Periodo.
+
+4.	Amplié el tamaño de las columnas para que ocupen todo el ancho de la visualización, esto se hace de manera similar a como se amplía el tamaño de una columna en Word.
+
+5.	Haga clic sobre el icono del rodillo que se refiere al formato de la vista, haciendo clic sobre la pestaña cuadricula active las cuadriculas tanto verticales como horizontales y aumente su grosor a tres; como color de esquema establezca un color gris levemente oscuro, finalmente, aumente el tamaño del texto a 16pt.
+
+6.	Ubíquese sobre la pestaña título y actívelo, en el estante llamado texto del título escriba Total de estudiantes graduados por modalidad de formación, use color de fuente negro, alienación central y un tamaño de 25pt. 
+
+Se obtiene una tabla de texto con el total de estudiantes graduados para cada periodo por modalidad de formación, su dashboard hasta este momento debe verse así:
+
+```{r paso6matriz-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tabla de texto para modalidad de formación', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi49.jpg")
+```
+
+Si se observa con detalle este tablero en la página de estadísticas de la Universidad Nacional se identifica una alternancia entre la serie de tiempo y la tabla de texto que se activa por medio de dos botones, para hacer esta alternancia de gráficos en Power BI se debe hacer uso de las herramientas de botones, selección, marcadores y acciones.
+
+1.	Mueva la serie de tiempo hacia el lateral derecho y agrande ambas vistas para que ocupen todo el lienzo.
+
+```{r paso1alternancia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tabla de texto y serie para modalidad de formación', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi50.jpg")
+```
+
+2.	Disminuya un poco el tamaño de ambas vistas con el fin de dejar un espacio en la parte superior para ubicar los botones de alternancia de visualizaciones.
+
+```{r paso2alternancia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Espacio para los botones', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi51.jpg")
+```
+
+3.	En la barra de herramientas haga clic sobre la pestaña insertar, seleccione botones e inserte dos botones en blanco.
+
+```{r paso3alternancia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Insertar botones', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi52.jpg")
+```
+
+4.	Edite el tamaño de ambos botones para que ocupen la parte superior de la tabla de texto, como se muestra a continuación.
+
+```{r paso4alternancia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Acomodar botones de alternancia', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi53.jpg")
+```
+
+5.	Ubíquese en el panel visualizaciones y active la pestaña texto de botón, sobre el rectángulo para escribir el texto, escriba Serie, use color negro, finalmente aumente el tamaño del texto a 18pt.
+
+```{r paso5alternancia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir texto a los botones', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi54.jpg")
+```
+
+6.	Active la pestaña título y escriba como titulo Serie, desactive el título, esto con el fin de que no quede información duplicada en el botón, pero que al momento de usarlos para crear los marcadores sea fácil identificarlos.
+
+7.	Repita los pasos 5 y 6 para el segundo botón, recuerde que este hará referencia a la tabla de texto.
+
+8.	Haga clic sobre la pestaña ver de la barra de herramientas y active selección y marcadores.
+
+```{r paso8alternancia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Activar marcadores y selección', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi55.jpg")
+```
+9.	Observe que en panel selección se ubican cuatro elementos visuales, Tabla y serie hacen referencia a los botones creados, los otros dos objetos identifican la serie y la tabla de texto. El ojo que se ubica a la derecha del título de las visualizaciones permite ocultar el gráfico, en primer lugar, se ocultara la tabla de texto haciendo uso del botón con icono de ojo, seguido de esto debe hacer clic sobre agregar que se encuentra en el panel marcadores, cambie el nombre del marcador a Serie y haga clic sobre el menú desplegable del marcador y seleccione actualizar. 
+
+```{r paso9alternancia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Actualiazar marcador', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi56.jpg")
+```
+
+10.	Repita el paso anterior, pero oculte la serie y cree el marcador con el nombre de Tabla. Luego de esto cierre estos dos paneles. 
+
+11.	Haga clic sobre el botón Serie, active la pestaña Acción, en tipo seleccione marcador y en marcador elija serie.
+
+```{r paso11alternancia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Activar acción de marcador para el botón', out.width='15%'}
+knitr::include_graphics("Imágenes/powerbi57.jpg")
+```
+
+12.	Repita el paso anterior para el botón Tabla, asignando como marcador tabla.
+
+13.	Al hacer clic sobre el botón serie mientras se mantiene oprimida la tecla ctrl, se muestra el grafico de la evolución de estudiantes graduados por modalidad de formación y se oculta la tabla de texto.
+
+```{r paso13alternancia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Uso de los botones para alternar gráficos', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi58.jpg")
+```
+
+14.	Debe mover el grafico de líneas al lateral izquierdo, para que se sobreponga a la tabla de texto.
+
+
+
+
+
+
 
 
 

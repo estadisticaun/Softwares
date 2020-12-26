@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-12-22" />
+<meta name="date" content="2020-12-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -511,6 +511,292 @@ Figura 3.42: Edición de la descripción emergente
 </div>
 <p>Con eso se finaliza el primer dashboard que se encuentra en la página de estadísticas de la Universidad Nacional.</p>
 <p>El siguiente dashboard involucra un gráfico de líneas segmentado por una dimensión, un cuadro de texto y un gráfico circular, inicialmente se creará el gráfico de líneas segmentado por una dimensión.</p>
+</div>
+<div id="graficodelineassegmentadopowerbi" class="section level4">
+<h4><span class="header-section-number">3.4.2.2</span> Gráfico de líneas segmentado por una dimensión</h4>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva página de trabajo, cambie su nombre por Modalidad de formación y repita el paso 2 del gráfico anterior.</p></li>
+<li><p>Amplié el tamaño de la visualización para que ocupe la mitad superior izquierda del lienzo de trabajo, agregue el campo YEAR_SEMESTER al estante eje y el campo TIPO_NIVEL a leyenda y valores.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2lineassegmentadobi-fig"></span>
+<img src="Imágenes/powerbi43.jpg" alt="Gráfico de líneas segmentado por una dimensión" width="100%" />
+<p class="caption">
+Figura 3.43: Gráfico de líneas segmentado por una dimensión
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Repita los pasos 5 y 6 del gráfico anterior que ordenan el eje x.</p></li>
+<li><p>Edite los títulos de la visualización como se mostro en los pasos 7, 8 y 9 del grafico creado anteriormente.</p></li>
+<li><p>Para los colores de datos seleccione color personalizado y en la categoría postgrado escriba “F15A24”, para la categoría pregrado asigne el color “8CC63F”.</p></li>
+<li><p>Haga clic sobre la pestaña leyenda y desactive el título.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6lineassegmentadobi-fig"></span>
+<img src="Imágenes/powerbi44.jpg" alt="Desactivar título de leyenda" width="20%" />
+<p class="caption">
+Figura 3.44: Desactivar título de leyenda
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Desde esta misma pestaña en estilo seleccione línea y marcadores, en la sección posición ubicada ala inicio de esta pestaña elija centro inferior, su visualización debe verse así.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7lineassegmentadobi-fig"></span>
+<img src="Imágenes/powerbi45.jpg" alt="Gráfico de líneas por modalidad de formación" width="80%" />
+<p class="caption">
+Figura 3.45: Gráfico de líneas por modalidad de formación
+</p>
+</div>
+<p>Cuando se trata de analizar cifras es importante visualizar las cantidades como porcentajes, la forma de trabajar porcentajes en Power BI no es tan fácil e intuitiva como en Tableau, especialmente en este gráfico que los porcentajes no son calculados sobre un total general si no sobre el número de estudiantes graduados en cada periodo; para añadir este porcentaje a las visualizaciones se creara una nueva tabla de datos.</p>
+<ol style="list-style-type: decimal">
+<li><p>Haga clic sobre el botón transformar datos.</p></li>
+<li><p>Haciendo clic derecho sobre la tabla graduados seleccione duplicar. Imagen powerbi72.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2porcentajes-fig"></span>
+<img src="Imágenes/powerbi72.jpg" alt="Duplicar tablas" width="40%" />
+<p class="caption">
+Figura 3.46: Duplicar tablas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Cambie el nombre de tabla duplicada por Agrupación1, haga clic sobre le botón Agrupar por ubicado en la barra de herramientas del edito Power Query.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3porcentajes-fig"></span>
+<img src="Imágenes/powerbi73.jpg" alt="Agrupar tabla" width="100%" />
+<p class="caption">
+Figura 3.47: Agrupar tabla
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>En el cuadro de dialogo agrupar por seleccione uso avanzado, use el campo YEAR_SEMESTER, haga clic sobre agregar agrupación y use el campo TIPO_NIVEL, como nombre de la columna escriba Cantidad, verifique que la operación sea recuento de filas, luego de esto clic en aceptar para guardar los cambios.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4porcentajes-fig"></span>
+<img src="Imágenes/powerbi74.jpg" alt="Configurar la agrupación" width="70%" />
+<p class="caption">
+Figura 3.48: Configurar la agrupación
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Obtendrá una tabla que contiene el conteo de estudiantes graduados de pregrado y postgrado por cada periodo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5porcentajes-fig"></span>
+<img src="Imágenes/powerbi75.jpg" alt="Tabla agrupación1" width="80%" />
+<p class="caption">
+Figura 3.49: Tabla agrupación1
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Repita el paso 2 y cambie el nombre de la tabla duplicada por agrupación2.</p></li>
+<li><p>Haga clic sobre agrupar por, seleccione básico y use el campo YEAR_SEMESTER, el nombre de la nueva columna será cantidad semestre, nuevamente debe verificar que la operación sea recuento de filas, finalmente clic en aceptar.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7porcentajes-fig"></span>
+<img src="Imágenes/powerbi76.jpg" alt="Configurar la segunda agrupación" width="70%" />
+<p class="caption">
+Figura 3.50: Configurar la segunda agrupación
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Ubíquese en la tabla llamada agrupación1, haga clic sobre combinar y seleccione combinar consultas para crear una nueva.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8porcentajes-fig"></span>
+<img src="Imágenes/powerbi77.jpg" alt="Combinar consultas para crear una nueva" width="50%" />
+<p class="caption">
+Figura 3.51: Combinar consultas para crear una nueva
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>En la ventana combinar, seleccione la tabla agrupación2 en el segundo campo, el tipo de combinación debe ser externa izquierda y debe hacer clic sobre la columna YEAR_SEMESTER de ambas tablas de datos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso9porcentajes-fig"></span>
+<img src="Imágenes/powerbi78.jpg" alt="Configurar la combinación" width="80%" />
+<p class="caption">
+Figura 3.52: Configurar la combinación
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>En el panel consultas encontrara una nueva tabla llamada combinar1, cambie el nombre de esta tabla por Modalidadformación, debe verse algo así dicha tabla.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso10porcentajes-fig"></span>
+<img src="Imágenes/powerbi79.jpg" alt="Tablas combinadas" width="100%" />
+<p class="caption">
+Figura 3.53: Tablas combinadas
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>Note que la columna Agrupación2, no presenta las cifras que debería, haga clic sobre el icono ubicado a la derecha del nombre de dicha columna y seleccione únicamente cantidad semestre, cambie el nombre de esta columna por Cantidad semestre.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso11porcentajes-fig"></span>
+<img src="Imágenes/powerbi80.jpg" alt="Expandir segunda agrupación" width="50%" />
+<p class="caption">
+Figura 3.54: Expandir segunda agrupación
+</p>
+</div>
+<ol start="12" style="list-style-type: decimal">
+<li>Haga clic en la pestaña agregar columna y seleccione columna personalizada.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso12porcentajes-fig"></span>
+<img src="Imágenes/powerbi81.jpg" alt="Crear columna personalizada" width="100%" />
+<p class="caption">
+Figura 3.55: Crear columna personalizada
+</p>
+</div>
+<ol start="13" style="list-style-type: decimal">
+<li>En el cuadro de dialogo columna personalizada cambie el nombre de la nueva columna por Porcentaje, al lateral de formula se ubica un cuadro llamado columnas disponibles que contiene las columnas que se tienen disponibles en la tabla de datos, haga clic sobre cantidad y luego en el botón insertar, escriba el símbolo de división /, luego seleccione cantidad semestre e insértela a la formula.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso13porcentajes-fig"></span>
+<img src="Imágenes/powerbi82.jpg" alt="Configurar columna personalizada" width="80%" />
+<p class="caption">
+Figura 3.56: Configurar columna personalizada
+</p>
+</div>
+<ol start="14" style="list-style-type: decimal">
+<li>Cambie el tipo de dato de la columna porcentaje a número decimal.</li>
+</ol>
+<p>La tabla llamada Modalidadformación debe verse de la siguiente manera.</p>
+<div class="figure" style="text-align: center"><span id="fig:tablamodalidadformacion-fig"></span>
+<img src="Imágenes/powerbi83.jpg" alt="Tabla modalidad de formación" width="100%" />
+<p class="caption">
+Figura 3.57: Tabla modalidad de formación
+</p>
+</div>
+<p>Por último, haga clic sobre el botón cerrar y aplicar ubicado debajo de archivo en la barra de herramientas.</p>
+<p>De nuevo en la ventana de Power BI debe observar que en el panel campos se ubican cuatro tablas, las dos agrupaciones, la tabla de modalidadformación y graduados, para mayor comodidad oculte las dos agrupaciones haciendo clic derecho sobre cada una de ellas y seleccionando ocultar.</p>
+<p>Es momento de incluir los porcentajes calculados en el gráfico de líneas, para esto haga clic sobre el grafico de líneas, debe reemplazar los campos YEAR_SEMESTER y TIPO_NIVEL por estos mismos campos, pero de la tabla Modalidadformación, en el estante valores elimine el campo que está allí y arrastre la variable Cantidad a dicho estante, finalmente debe agregar el campo Porcentaje a información sobre herramientas.</p>
+<div class="figure" style="text-align: center"><span id="fig:taableromodalidadformacion-fig"></span>
+<img src="Imágenes/powerbi84.jpg" alt="Gráfico de líneas con la tabla creada" width="100%" />
+<p class="caption">
+Figura 3.58: Gráfico de líneas con la tabla creada
+</p>
+</div>
+<p>Ordene nuevamente el eje de forma ascendente y por la variable YEAR_SEMESTER como se había hecho anteriormente, cambie el color de los datos, naranja para postgrado y verde para pregrado. Para cambiar el formato de la variable porcentaje haga doble clic sobre dicha variable, en formato seleccione porcentaje, su dashboard se verá así.</p>
+<div class="figure" style="text-align: center"><span id="fig:formatoporcentaje-fig"></span>
+<img src="Imágenes/powerbi85.jpg" alt="Añadir formato de porcentaje" width="100%" />
+<p class="caption">
+Figura 3.59: Añadir formato de porcentaje
+</p>
+</div>
+</div>
+<div id="tabla-de-texto" class="section level4">
+<h4><span class="header-section-number">3.4.2.3</span> Tabla de texto</h4>
+<p>Se creará una tabla de texto que contenga la información del número de estudiantes graduados por modalidad de formación, se trabajara sobre el dashboard que contiene el gráfico de líneas segmentado por una dimensión.</p>
+<ol style="list-style-type: decimal">
+<li>Haga clic sobre la equina inferior izquierda del lienzo de trabajo y sobre el panel visualizaciones haga clic sobre matriz.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1matriz-fig"></span>
+<img src="Imágenes/powerbi46.jpg" alt="Añadir matriz" width="20%" />
+<p class="caption">
+Figura 3.60: Añadir matriz
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Al estante filas agregue el campo YEAR_SEMESTER, al estante columnas TIPO_NIVEL, nuevamente este ultimo campo al estante valores, pero en su menú desplegable debe seleccionar recuento.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2matriz-fig"></span>
+<img src="Imágenes/powerbi47.jpg" alt="Agregar campos a los estantes" width="20%" />
+<p class="caption">
+Figura 3.61: Agregar campos a los estantes
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Haga doble clic en el campo ubicado en el estante filas y escriba Periodo.</p></li>
+<li><p>Amplié el tamaño de las columnas para que ocupen todo el ancho de la visualización, esto se hace de manera similar a como se amplía el tamaño de una columna en Word.</p></li>
+<li><p>Haga clic sobre el icono del rodillo que se refiere al formato de la vista, haciendo clic sobre la pestaña cuadricula active las cuadriculas tanto verticales como horizontales y aumente su grosor a tres; como color de esquema establezca un color gris levemente oscuro, finalmente, aumente el tamaño del texto a 16pt.</p></li>
+<li><p>Ubíquese sobre la pestaña título y actívelo, en el estante llamado texto del título escriba Total de estudiantes graduados por modalidad de formación, use color de fuente negro, alienación central y un tamaño de 25pt.</p></li>
+</ol>
+<p>Se obtiene una tabla de texto con el total de estudiantes graduados para cada periodo por modalidad de formación, su dashboard hasta este momento debe verse así:</p>
+<div class="figure" style="text-align: center"><span id="fig:paso6matriz-fig"></span>
+<img src="Imágenes/powerbi49.jpg" alt="Tabla de texto para modalidad de formación" width="80%" />
+<p class="caption">
+Figura 3.62: Tabla de texto para modalidad de formación
+</p>
+</div>
+<p>Si se observa con detalle este tablero en la página de estadísticas de la Universidad Nacional se identifica una alternancia entre la serie de tiempo y la tabla de texto que se activa por medio de dos botones, para hacer esta alternancia de gráficos en Power BI se debe hacer uso de las herramientas de botones, selección, marcadores y acciones.</p>
+<ol style="list-style-type: decimal">
+<li>Mueva la serie de tiempo hacia el lateral derecho y agrande ambas vistas para que ocupen todo el lienzo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1alternancia-fig"></span>
+<img src="Imágenes/powerbi50.jpg" alt="Tabla de texto y serie para modalidad de formación" width="80%" />
+<p class="caption">
+Figura 3.63: Tabla de texto y serie para modalidad de formación
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Disminuya un poco el tamaño de ambas vistas con el fin de dejar un espacio en la parte superior para ubicar los botones de alternancia de visualizaciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2alternancia-fig"></span>
+<img src="Imágenes/powerbi51.jpg" alt="Espacio para los botones" width="100%" />
+<p class="caption">
+Figura 3.64: Espacio para los botones
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>En la barra de herramientas haga clic sobre la pestaña insertar, seleccione botones e inserte dos botones en blanco.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3alternancia-fig"></span>
+<img src="Imágenes/powerbi52.jpg" alt="Insertar botones" width="80%" />
+<p class="caption">
+Figura 3.65: Insertar botones
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Edite el tamaño de ambos botones para que ocupen la parte superior de la tabla de texto, como se muestra a continuación.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4alternancia-fig"></span>
+<img src="Imágenes/powerbi53.jpg" alt="Acomodar botones de alternancia" width="90%" />
+<p class="caption">
+Figura 3.66: Acomodar botones de alternancia
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Ubíquese en el panel visualizaciones y active la pestaña texto de botón, sobre el rectángulo para escribir el texto, escriba Serie, use color negro, finalmente aumente el tamaño del texto a 18pt.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5alternancia-fig"></span>
+<img src="Imágenes/powerbi54.jpg" alt="Añadir texto a los botones" width="90%" />
+<p class="caption">
+Figura 3.67: Añadir texto a los botones
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Active la pestaña título y escriba como titulo Serie, desactive el título, esto con el fin de que no quede información duplicada en el botón, pero que al momento de usarlos para crear los marcadores sea fácil identificarlos.</p></li>
+<li><p>Repita los pasos 5 y 6 para el segundo botón, recuerde que este hará referencia a la tabla de texto.</p></li>
+<li><p>Haga clic sobre la pestaña ver de la barra de herramientas y active selección y marcadores.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8alternancia-fig"></span>
+<img src="Imágenes/powerbi55.jpg" alt="Activar marcadores y selección" width="100%" />
+<p class="caption">
+Figura 3.68: Activar marcadores y selección
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Observe que en panel selección se ubican cuatro elementos visuales, Tabla y serie hacen referencia a los botones creados, los otros dos objetos identifican la serie y la tabla de texto. El ojo que se ubica a la derecha del título de las visualizaciones permite ocultar el gráfico, en primer lugar, se ocultara la tabla de texto haciendo uso del botón con icono de ojo, seguido de esto debe hacer clic sobre agregar que se encuentra en el panel marcadores, cambie el nombre del marcador a Serie y haga clic sobre el menú desplegable del marcador y seleccione actualizar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso9alternancia-fig"></span>
+<img src="Imágenes/powerbi56.jpg" alt="Actualiazar marcador" width="100%" />
+<p class="caption">
+Figura 3.69: Actualiazar marcador
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li><p>Repita el paso anterior, pero oculte la serie y cree el marcador con el nombre de Tabla. Luego de esto cierre estos dos paneles.</p></li>
+<li><p>Haga clic sobre el botón Serie, active la pestaña Acción, en tipo seleccione marcador y en marcador elija serie.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso11alternancia-fig"></span>
+<img src="Imágenes/powerbi57.jpg" alt="Activar acción de marcador para el botón" width="15%" />
+<p class="caption">
+Figura 3.70: Activar acción de marcador para el botón
+</p>
+</div>
+<ol start="12" style="list-style-type: decimal">
+<li><p>Repita el paso anterior para el botón Tabla, asignando como marcador tabla.</p></li>
+<li><p>Al hacer clic sobre el botón serie mientras se mantiene oprimida la tecla ctrl, se muestra el grafico de la evolución de estudiantes graduados por modalidad de formación y se oculta la tabla de texto.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso13alternancia-fig"></span>
+<img src="Imágenes/powerbi58.jpg" alt="Uso de los botones para alternar gráficos" width="100%" />
+<p class="caption">
+Figura 3.71: Uso de los botones para alternar gráficos
+</p>
+</div>
+<ol start="14" style="list-style-type: decimal">
+<li>Debe mover el grafico de líneas al lateral izquierdo, para que se sobreponga a la tabla de texto.</li>
+</ol>
 
 </div>
 </div>

@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-12-22}
+\date{2020-12-25}
 
 \begin{document}
 \maketitle
@@ -4778,6 +4778,300 @@ Nuevamente se iniciarán con gráficos similares a los presentados en la secció
 Con eso se finaliza el primer dashboard que se encuentra en la página de estadísticas de la Universidad Nacional.
 
 El siguiente dashboard involucra un gráfico de líneas segmentado por una dimensión, un cuadro de texto y un gráfico circular, inicialmente se creará el gráfico de líneas segmentado por una dimensión.
+
+\hypertarget{graficodelineassegmentadopowerbi}{%
+\subsubsection{Gráfico de líneas segmentado por una dimensión}\label{graficodelineassegmentadopowerbi}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Cree una nueva página de trabajo, cambie su nombre por Modalidad de formación y repita el paso 2 del gráfico anterior.
+\item
+  Amplié el tamaño de la visualización para que ocupe la mitad superior izquierda del lienzo de trabajo, agregue el campo YEAR\_SEMESTER al estante eje y el campo TIPO\_NIVEL a leyenda y valores.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi43} 
+
+}
+
+\caption{Gráfico de líneas segmentado por una dimensión}\label{fig:paso2lineassegmentadobi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Repita los pasos 5 y 6 del gráfico anterior que ordenan el eje x.
+\item
+  Edite los títulos de la visualización como se mostro en los pasos 7, 8 y 9 del grafico creado anteriormente.
+\item
+  Para los colores de datos seleccione color personalizado y en la categoría postgrado escriba ``F15A24'', para la categoría pregrado asigne el color ``8CC63F''.
+\item
+  Haga clic sobre la pestaña leyenda y desactive el título.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/powerbi44} 
+
+}
+
+\caption{Desactivar título de leyenda}\label{fig:paso6lineassegmentadobi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Desde esta misma pestaña en estilo seleccione línea y marcadores, en la sección posición ubicada ala inicio de esta pestaña elija centro inferior, su visualización debe verse así.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi45} 
+
+}
+
+\caption{Gráfico de líneas por modalidad de formación}\label{fig:paso7lineassegmentadobi-fig}
+\end{figure}
+
+Cuando se trata de analizar cifras es importante visualizar las cantidades como porcentajes, la forma de trabajar porcentajes en Power BI no es tan fácil e intuitiva como en Tableau, especialmente en este gráfico que los porcentajes no son calculados sobre un total general si no sobre el número de estudiantes graduados en cada periodo; para añadir este porcentaje a las visualizaciones se creara una nueva tabla de datos.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Haga clic sobre el botón transformar datos.
+\item
+  Haciendo clic derecho sobre la tabla graduados seleccione duplicar. Imagen powerbi72.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/powerbi72} 
+
+}
+
+\caption{Duplicar tablas}\label{fig:paso2porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Cambie el nombre de tabla duplicada por Agrupación1, haga clic sobre le botón Agrupar por ubicado en la barra de herramientas del edito Power Query.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi73} 
+
+}
+
+\caption{Agrupar tabla}\label{fig:paso3porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  En el cuadro de dialogo agrupar por seleccione uso avanzado, use el campo YEAR\_SEMESTER, haga clic sobre agregar agrupación y use el campo TIPO\_NIVEL, como nombre de la columna escriba Cantidad, verifique que la operación sea recuento de filas, luego de esto clic en aceptar para guardar los cambios.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{Imágenes/powerbi74} 
+
+}
+
+\caption{Configurar la agrupación}\label{fig:paso4porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Obtendrá una tabla que contiene el conteo de estudiantes graduados de pregrado y postgrado por cada periodo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi75} 
+
+}
+
+\caption{Tabla agrupación1}\label{fig:paso5porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  Repita el paso 2 y cambie el nombre de la tabla duplicada por agrupación2.
+\item
+  Haga clic sobre agrupar por, seleccione básico y use el campo YEAR\_SEMESTER, el nombre de la nueva columna será cantidad semestre, nuevamente debe verificar que la operación sea recuento de filas, finalmente clic en aceptar.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{Imágenes/powerbi76} 
+
+}
+
+\caption{Configurar la segunda agrupación}\label{fig:paso7porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Ubíquese en la tabla llamada agrupación1, haga clic sobre combinar y seleccione combinar consultas para crear una nueva.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imágenes/powerbi77} 
+
+}
+
+\caption{Combinar consultas para crear una nueva}\label{fig:paso8porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  En la ventana combinar, seleccione la tabla agrupación2 en el segundo campo, el tipo de combinación debe ser externa izquierda y debe hacer clic sobre la columna YEAR\_SEMESTER de ambas tablas de datos.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi78} 
+
+}
+
+\caption{Configurar la combinación}\label{fig:paso9porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  En el panel consultas encontrara una nueva tabla llamada combinar1, cambie el nombre de esta tabla por Modalidadformación, debe verse algo así dicha tabla.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi79} 
+
+}
+
+\caption{Tablas combinadas}\label{fig:paso10porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Note que la columna Agrupación2, no presenta las cifras que debería, haga clic sobre el icono ubicado a la derecha del nombre de dicha columna y seleccione únicamente cantidad semestre, cambie el nombre de esta columna por Cantidad semestre.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imágenes/powerbi80} 
+
+}
+
+\caption{Expandir segunda agrupación}\label{fig:paso11porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  Haga clic en la pestaña agregar columna y seleccione columna personalizada.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi81} 
+
+}
+
+\caption{Crear columna personalizada}\label{fig:paso12porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  En el cuadro de dialogo columna personalizada cambie el nombre de la nueva columna por Porcentaje, al lateral de formula se ubica un cuadro llamado columnas disponibles que contiene las columnas que se tienen disponibles en la tabla de datos, haga clic sobre cantidad y luego en el botón insertar, escriba el símbolo de división /, luego seleccione cantidad semestre e insértela a la formula.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi82} 
+
+}
+
+\caption{Configurar columna personalizada}\label{fig:paso13porcentajes-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\tightlist
+\item
+  Cambie el tipo de dato de la columna porcentaje a número decimal.
+\end{enumerate}
+
+La tabla llamada Modalidadformación debe verse de la siguiente manera.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi83} 
+
+}
+
+\caption{Tabla modalidad de formación}\label{fig:tablamodalidadformacion-fig}
+\end{figure}
+
+Por último, haga clic sobre el botón cerrar y aplicar ubicado debajo de archivo en la barra de herramientas.
+
+De nuevo en la ventana de Power BI debe observar que en el panel campos se ubican cuatro tablas, las dos agrupaciones, la tabla de modalidadformación y graduados, para mayor comodidad oculte las dos agrupaciones haciendo clic derecho sobre cada una de ellas y seleccionando ocultar.
+
+Es momento de incluir los porcentajes calculados en el gráfico de líneas, para esto haga clic sobre el grafico de líneas, debe reemplazar los campos YEAR\_SEMESTER y TIPO\_NIVEL por estos mismos campos, pero de la tabla Modalidadformación, en el estante valores elimine el campo que está allí y arrastre la variable Cantidad a dicho estante, finalmente debe agregar el campo Porcentaje a información sobre herramientas.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi84} 
+
+}
+
+\caption{Gráfico de líneas con la tabla creada}\label{fig:taableromodalidadformacion-fig}
+\end{figure}
+
+Ordene nuevamente el eje de forma ascendente y por la variable YEAR\_SEMESTER como se había hecho anteriormente, cambie el color de los datos, naranja para postgrado y verde para pregrado. Para cambiar el formato de la variable porcentaje haga doble clic sobre dicha variable, en formato seleccione porcentaje, su dashboard se verá así.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi85} 
+
+}
+
+\caption{Añadir formato de porcentaje}\label{fig:formatoporcentaje-fig}
+\end{figure}
 
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}
