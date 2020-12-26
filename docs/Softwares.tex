@@ -4613,6 +4613,172 @@ Al hacer clic en aceptar para guardar los cambios Power BI iniciara la conexión
 
 Cuando se han cargado los datos en el panel campos se ubicarán todas las variables que contiene el conjunto de datos al que se encuentra conectado, haga clic en transformar datos con el fin de verificar el tipo de cada variable y hacer los cambios que sean necesarios, luego de verificar y realizar los cambios necesarios es momento de iniciar con las visualizaciones.
 
+\hypertarget{analisisdatospowerbi}{%
+\subsection{Análisis de datos}\label{analisisdatospowerbi}}
+
+\hypertarget{graficolineaspowerbi}{%
+\subsubsection{Gráfico de líneas}\label{graficolineaspowerbi}}
+
+Nuevamente se iniciarán con gráficos similares a los presentados en la sección cifras generales y graduados la página de las \href{http://estadisticas.unal.edu.co/home/}{estadísticas} de la Universidad Nacional de Colombia, en principio se hará un gráfico de líneas que muestre la evolución histórica de los estudiantes graduados en los periodos de 2009-1 a 2020-1. Una de las principales diferencias entre Tableau y Power BI es que en el primero se crean los objetos visuales de manera individual en hojas de trabajo y luego son combinadas en un dashboard o historias, el lienzo de Power BI es directamente un dashboard, por lo que cada objeto será creado sobre un tablero.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Cambie el nombre del lienzo de trabajo por Evolución graduados.
+\item
+  Desde el panel visualizaciones haga clic sobre el icono de gráfico de líneas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/powerbi34} 
+
+}
+
+\caption{Gráfico de líneas}\label{fig:Agregargraficolineas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Amplié el grafico para que ocupe todo el lienzo, debe notar que se agregan opciones de eje, leyenda, valores, valores secundarios e información sobre herramientas en el panel visualizaciones.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi35} 
+
+}
+
+\caption{Gráfico de líneas en blanco}\label{fig:paso3lineaspowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Arrastre el campo YEAR\_SEMESTER al estante eje y nuevamente desde el panel campos debe arrastrarlo al estante valores.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi36} 
+
+}
+
+\caption{Gráfico de líneas en blanco}\label{fig:paso4lineaspowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Al observar a detalle la visualización se identifica que el orden del eje x no es el debido, ya que debe ser un orden cronológico que inicia en el periodo 2009-1 y termina en 2020-1, para corregir esto haga clic en los tres puntos ubicados en la esquina superior derecha, seleccione ordenar por y finalmente YEAR\_SEMESTER.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi37} 
+
+}
+
+\caption{Ordenar por}\label{fig:paso5lineaspowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  La visualización obtenida ordena el eje x de manera descendente, es decir, inicia en el periodo 2020-1 y finaliza en 2009-1, para modificar esto nuevamente haga clic en los tres puntos y seleccione orden ascendente.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi38} 
+
+}
+
+\caption{Ordenar de manera ascendente}\label{fig:paso6lineaspowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Es momento de editar el título de la visualización y de los ejes, por lo que debe hacer clic en el rodillo ubicado en el panel visualizaciones.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/powerbi39} 
+
+}
+
+\caption{Formato de la visualización}\label{fig:paso7lineaspowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Haga clic en la pestaña eje x y en la sección título del eje escriba Periodo y aumente el tamaño del texto a 16pt, de manera similar edite el titulo del eje y.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/powerbi40} 
+
+}
+
+\caption{Editar el eje X}\label{fig:paso8lineaspowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\item
+  La pestaña título permite editar el título de la visualización, por tanto, haga clic sobre esta pestaña y el espacio texto del título escriba Evolución histórica del total de estudiantes graduados, seleccione alineación central y aumente el tamaño hasta 25pt.
+\item
+  Haga clic sobre la pestaña colores de datos, despliegue el menú de colores y seleccione color personalizado y escriba ``1F82C3'' que corresponde al color azul usado en la página web de estadísticas de la Universidad Nacional, hasta el momento su visualización debe verse así.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi41} 
+
+}
+
+\caption{Evolución histórica de estudiantes graduados}\label{fig:paso10lineaspowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Note que la descripción emergente no es clara, ubíquese en la sección campos, debajo de visualizaciones, haga doble clic sobre Recuento YEAR\_SEMESTER y escriba Total.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi42} 
+
+}
+
+\caption{Edición de la descripción emergente}\label{fig:paso11lineaspowerbi-fig}
+\end{figure}
+
+Con eso se finaliza el primer dashboard que se encuentra en la página de estadísticas de la Universidad Nacional.
+
+El siguiente dashboard involucra un gráfico de líneas segmentado por una dimensión, un cuadro de texto y un gráfico circular, inicialmente se creará el gráfico de líneas segmentado por una dimensión.
+
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}
 

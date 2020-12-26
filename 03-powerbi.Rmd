@@ -417,4 +417,71 @@ Con eso se finaliza el primer dashboard que se encuentra en la página de estad�
 
 El siguiente dashboard involucra un gráfico de líneas segmentado por una dimensión, un cuadro de texto y un gráfico circular, inicialmente se creará el gráfico de líneas segmentado por una dimensión.
 
+#### Gráfico de líneas segmentado por una dimensión {#graficodelineassegmentadopowerbi}
+
+1.	Cree una nueva página de trabajo, cambie su nombre por Modalidad de formación y repita el paso 2 del gráfico anterior.
+
+2.	Amplié el tamaño de la visualización para que ocupe la mitad superior izquierda del lienzo de trabajo, agregue el campo YEAR_SEMESTER al estante eje y el campo TIPO_NIVEL a leyenda y valores.
+
+```{r paso2lineassegmentadobi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas segmentado por una dimensión', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi43.jpg")
+```
+
+3.	Repita los pasos 5 y 6 del gráfico anterior que ordenan el eje x.
+
+4.	Edite los títulos de la visualización como se mostro en los pasos 7, 8 y 9 del grafico creado anteriormente.
+
+5.	Para los colores de datos seleccione color personalizado y en la categoría postgrado escriba “F15A24”, para la categoría pregrado asigne el color “8CC63F”.
+
+6.	Haga clic sobre la pestaña leyenda y desactive el título.
+
+```{r paso6lineassegmentadobi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Desactivar título de leyenda', out.width='20%'}
+knitr::include_graphics("Imágenes/powerbi44.jpg")
+```
+
+7.	Desde esta misma pestaña en estilo seleccione línea y marcadores, en la sección posición ubicada ala inicio de esta pestaña elija centro inferior, su visualización debe verse así.
+
+```{r paso7lineassegmentadobi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas por modalidad de formación', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi45.jpg")
+```
+
+Cuando se trata de analizar cifras es importante visualizar las cantidades como porcentajes, la forma de trabajar porcentajes en Power BI no es tan fácil e intuitiva como en Tableau, especialmente en este gráfico que los porcentajes no son calculados sobre un total general si no sobre el número de estudiantes graduados en cada periodo; para añadir este porcentaje a las visualizaciones se creara una nueva tabla de datos. 
+
+1.	Haga clic sobre el botón transformar datos.
+
+2.	Haciendo clic derecho sobre la tabla graduados seleccione duplicar. Imagen powerbi72.
+
+```{r paso2porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Duplicar tablas', out.width='60%'}
+knitr::include_graphics("Imágenes/powerbi72.jpg")
+```
+
+3.	Cambie el nombre de tabla duplicada por Agrupación1, haga clic sobre le botón Agrupar por ubicado en la barra de herramientas del edito Power Query.
+
+```{r paso3porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agrupar tabla', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi73.jpg")
+```
+
+4.	En el cuadro de dialogo agrupar por seleccione uso avanzado, use el campo YEAR_SEMESTER, haga clic sobre agregar agrupación y use el campo TIPO_NIVEL, como nombre de la columna escriba Cantidad, verifique que la operación sea recuento de filas, luego de esto clic en aceptar para guardar los cambios.
+
+```{r paso4porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Configurar la agrupación', out.width='70%'}
+knitr::include_graphics("Imágenes/powerbi74.jpg")
+```
+
+5.	Obtendrá una tabla que contiene el conteo de estudiantes graduados de pregrado y postgrado por cada periodo.
+
+```{r paso5porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tabla agrupación1', out.width='70%'}
+knitr::include_graphics("Imágenes/powerbi75.jpg")
+```
+
+6.	Repita el paso 2 y cambie el nombre de la tabla duplicada por agrupación2.
+
+7.	Haga clic sobre agrupar por, seleccione básico y use el campo YEAR_SEMESTER, el nombre de la nueva columna será cantidad semestre, nuevamente debe verificar que la operación sea recuento de filas, finalmente clic en aceptar.
+
+```{r paso7porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Configurar la segunda agrupación', out.width='70%'}
+knitr::include_graphics("Imágenes/powerbi76.jpg")
+```
+
+
+
+
 
