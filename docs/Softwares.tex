@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-12-25}
+\date{2020-12-26}
 
 \begin{document}
 \maketitle
@@ -5072,6 +5072,235 @@ Ordene nuevamente el eje de forma ascendente y por la variable YEAR\_SEMESTER co
 
 \caption{Añadir formato de porcentaje}\label{fig:formatoporcentaje-fig}
 \end{figure}
+
+\hypertarget{tabla-de-texto}{%
+\subsubsection{Tabla de texto}\label{tabla-de-texto}}
+
+Se creará una tabla de texto que contenga la información del número de estudiantes graduados por modalidad de formación, se trabajara sobre el dashboard que contiene el gráfico de líneas segmentado por una dimensión.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Haga clic sobre la equina inferior izquierda del lienzo de trabajo y sobre el panel visualizaciones haga clic sobre matriz.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/powerbi46} 
+
+}
+
+\caption{Añadir matriz}\label{fig:paso1matriz-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Al estante filas agregue el campo YEAR\_SEMESTER, al estante columnas TIPO\_NIVEL, nuevamente este ultimo campo al estante valores, pero en su menú desplegable debe seleccionar recuento.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/powerbi47} 
+
+}
+
+\caption{Agregar campos a los estantes}\label{fig:paso2matriz-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Haga doble clic en el campo ubicado en el estante filas y escriba Periodo.
+\item
+  Amplié el tamaño de las columnas para que ocupen todo el ancho de la visualización, esto se hace de manera similar a como se amplía el tamaño de una columna en Word.
+\item
+  Haga clic sobre el icono del rodillo que se refiere al formato de la vista, haciendo clic sobre la pestaña cuadricula active las cuadriculas tanto verticales como horizontales y aumente su grosor a tres; como color de esquema establezca un color gris levemente oscuro, finalmente, aumente el tamaño del texto a 16pt.
+\item
+  Ubíquese sobre la pestaña título y actívelo, en el estante llamado texto del título escriba Total de estudiantes graduados por modalidad de formación, use color de fuente negro, alienación central y un tamaño de 25pt.
+\end{enumerate}
+
+Se obtiene una tabla de texto con el total de estudiantes graduados para cada periodo por modalidad de formación, su dashboard hasta este momento debe verse así:
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi49} 
+
+}
+
+\caption{Tabla de texto para modalidad de formación}\label{fig:paso6matriz-fig}
+\end{figure}
+
+Si se observa con detalle este tablero en la página de estadísticas de la Universidad Nacional se identifica una alternancia entre la serie de tiempo y la tabla de texto que se activa por medio de dos botones, para hacer esta alternancia de gráficos en Power BI se debe hacer uso de las herramientas de botones, selección, marcadores y acciones.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Mueva la serie de tiempo hacia el lateral derecho y agrande ambas vistas para que ocupen todo el lienzo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi50} 
+
+}
+
+\caption{Tabla de texto y serie para modalidad de formación}\label{fig:paso1alternancia-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Disminuya un poco el tamaño de ambas vistas con el fin de dejar un espacio en la parte superior para ubicar los botones de alternancia de visualizaciones.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi51} 
+
+}
+
+\caption{Espacio para los botones}\label{fig:paso2alternancia-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  En la barra de herramientas haga clic sobre la pestaña insertar, seleccione botones e inserte dos botones en blanco.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi52} 
+
+}
+
+\caption{Insertar botones}\label{fig:paso3alternancia-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Edite el tamaño de ambos botones para que ocupen la parte superior de la tabla de texto, como se muestra a continuación.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi53} 
+
+}
+
+\caption{Acomodar botones de alternancia}\label{fig:paso4alternancia-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Ubíquese en el panel visualizaciones y active la pestaña texto de botón, sobre el rectángulo para escribir el texto, escriba Serie, use color negro, finalmente aumente el tamaño del texto a 18pt.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi54} 
+
+}
+
+\caption{Añadir texto a los botones}\label{fig:paso5alternancia-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  Active la pestaña título y escriba como titulo Serie, desactive el título, esto con el fin de que no quede información duplicada en el botón, pero que al momento de usarlos para crear los marcadores sea fácil identificarlos.
+\item
+  Repita los pasos 5 y 6 para el segundo botón, recuerde que este hará referencia a la tabla de texto.
+\item
+  Haga clic sobre la pestaña ver de la barra de herramientas y active selección y marcadores.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi55} 
+
+}
+
+\caption{Activar marcadores y selección}\label{fig:paso8alternancia-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Observe que en panel selección se ubican cuatro elementos visuales, Tabla y serie hacen referencia a los botones creados, los otros dos objetos identifican la serie y la tabla de texto. El ojo que se ubica a la derecha del título de las visualizaciones permite ocultar el gráfico, en primer lugar, se ocultara la tabla de texto haciendo uso del botón con icono de ojo, seguido de esto debe hacer clic sobre agregar que se encuentra en el panel marcadores, cambie el nombre del marcador a Serie y haga clic sobre el menú desplegable del marcador y seleccione actualizar.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi56} 
+
+}
+
+\caption{Actualiazar marcador}\label{fig:paso9alternancia-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\item
+  Repita el paso anterior, pero oculte la serie y cree el marcador con el nombre de Tabla. Luego de esto cierre estos dos paneles.
+\item
+  Haga clic sobre el botón Serie, active la pestaña Acción, en tipo seleccione marcador y en marcador elija serie.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.15\linewidth]{Imágenes/powerbi57} 
+
+}
+
+\caption{Activar acción de marcador para el botón}\label{fig:paso11alternancia-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\item
+  Repita el paso anterior para el botón Tabla, asignando como marcador tabla.
+\item
+  Al hacer clic sobre el botón serie mientras se mantiene oprimida la tecla ctrl, se muestra el grafico de la evolución de estudiantes graduados por modalidad de formación y se oculta la tabla de texto.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi58} 
+
+}
+
+\caption{Uso de los botones para alternar gráficos}\label{fig:paso13alternancia-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\tightlist
+\item
+  Debe mover el grafico de líneas al lateral izquierdo, para que se sobreponga a la tabla de texto.
+\end{enumerate}
 
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}

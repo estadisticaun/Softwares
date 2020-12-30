@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-12-26" />
+<meta name="date" content="2020-12-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -797,6 +797,130 @@ Figura 3.71: Uso de los botones para alternar gráficos
 <ol start="14" style="list-style-type: decimal">
 <li>Debe mover el grafico de líneas al lateral izquierdo, para que se sobreponga a la tabla de texto.</li>
 </ol>
+</div>
+<div id="gráfico-circular" class="section level4">
+<h4><span class="header-section-number">3.4.2.4</span> Gráfico circular</h4>
+<p>El dashboard que se está realizando contiene un gráfico circular que permite visualizar la distribución del total de estudiantes graduados por modalidad de formación para el último periodo del que se tiene registro, es decir 2020-1.</p>
+<ol style="list-style-type: decimal">
+<li><p>Ubíquese en la parte en blanco del lienzo de trabajo y sobre el panel visualizaciones haga clic en grafico circular.</p></li>
+<li><p>Al estante leyenda arrastre el campo TIPO_NIVEL y también asígnelo al estante valores.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2circular-fig"></span>
+<img src="Imágenes/powerbi59.jpg" alt="Crear un gráfico circular" width="90%" />
+<p class="caption">
+Figura 3.72: Crear un gráfico circular
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Desde formato cambie la posición de la leyenda a centro inferior, desactive el título y aumente le tamaño del texto a 12pt.</p></li>
+<li><p>Cambie le titulo del grafico por Distribución de graduados por modalidad de formación, periodo 2020-1; color negro, tamaño 25pt y alineación central, todo esto desde la pestaña título.</p></li>
+<li><p>Repita el paso 5 mostrado en <a href="3-4-flujotrabajopowerbi.html#graficodelineassegmentadopowerbi">3.4.2.2</a>, para cambiar el color de los datos.</p></li>
+<li><p>En la pestaña etiquetas y estilo seleccioné Categoría, porcentaje del total, color negro y tamaño de letra 15pt, por último, amplié el grafico de torta hacia arriba para ocupar todo el lateral derecho del lienzo.</p></li>
+<li><p>Despliegue el panel filtros y arrastre el campo YEAR_SEMESTER, seguido de esto seleccione únicamente el periodo 2020-1.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7circular-fig"></span>
+<img src="Imágenes/powerbi60.jpg" alt="Filtrar por el periodo 2020-1" width="90%" />
+<p class="caption">
+Figura 3.73: Filtrar por el periodo 2020-1
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Por último, cambie el nombre de los campos leyenda y valores por Modalidad de formación y Número de graduados respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8circular-fig"></span>
+<img src="Imágenes/powerbi61.jpg" alt="Cambiar nombre de los estantes leyenda y valores" width="90%" />
+<p class="caption">
+Figura 3.74: Cambiar nombre de los estantes leyenda y valores
+</p>
+</div>
+<p>Después de creados los objetos visuales sobre el lienzo se obtiene un dashboard útil e informativo con interactividad entre dos de los gráficos construidos.</p>
+<div class="figure" style="text-align: center"><span id="fig:dashboardmodalidadformacion-fig"></span>
+<img src="Imágenes/powerbi62.jpg" alt="Dashboard modalidad de formación" width="90%" />
+<p class="caption">
+Figura 3.75: Dashboard modalidad de formación
+</p>
+</div>
+<p>El siguiente dashboard presentado en la página de estadísticas de la Universidad Nacional contiene información sobre el nivel de formación de los estudiantes graduados, al igual que el creado anteriormente contiene tres gráficos uno de líneas, una tabla de texto y un gráfico de barras y alternancia entre el gráfico de líneas y la tabla de texto; como estos dos primeros objetos ya fueron creados para otros campos replique los pasos, pero usando el campo NIVEL, al final debe obtener dos gráficos que se pueden alternar usando los botones Serie y Tabla.</p>
+<div class="figure" style="text-align: center"><span id="fig:evolucionnivelformacion-fig"></span>
+<img src="Imágenes/powerbi63.jpg" alt="Evolución del número de estudiantes graduados por nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.76: Evolución del número de estudiantes graduados por nivel de formación
+</p>
+</div>
+<p>Es momento de realizar un gráfico de barras para observar la distribución de graduados por modalidad de formación en el periodo 2020-1, para crear dicho gráfico debe seguir estos pasos.</p>
+<ol style="list-style-type: decimal">
+<li>Ubíquese en lateral derecho del lienzo que se encuentra blanco, luego en el panel visualizaciones haga clic sobre grafico de barras agrupadas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1barras-fig"></span>
+<img src="Imágenes/powerbi64.jpg" alt="Agregar gráfico de barras agrupadas" width="90%" />
+<p class="caption">
+Figura 3.77: Agregar gráfico de barras agrupadas
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Agregue los campos NIVEL a los estantes eje y valores.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2barras-fig"></span>
+<img src="Imágenes/powerbi65.jpg" alt="Gráfico de barras para nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.78: Gráfico de barras para nivel de formación
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Edite los colores de los datos asignando “8CC63F”, “C1272D”, “3FC1F8”, “FBB03B”, “6D6666” a Pregrado, Maestría, Especialización, Especialidades médicas y doctorado respectivamente; repita el paso 7 de gráfico circular para seleccionar únicamente el periodo 2020-1.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3barras-fig"></span>
+<img src="Imágenes/powerbi66.jpg" alt="Editar colores" width="90%" />
+<p class="caption">
+Figura 3.79: Editar colores
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Cambie le título del gráfico por Distribución de graduados por nivel de formación, periodo 2020-1; el título del eje x debe ser Número de graduados, desactive el título del eje y, aumente a 12pt el tamaño del texto y seleccione color negro para el texto de este eje.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4barras-fig"></span>
+<img src="Imágenes/powerbi67.jpg" alt="Editar título del gráfico de barras" width="90%" />
+<p class="caption">
+Figura 3.80: Editar título del gráfico de barras
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Active la pestaña etiquetas, seleccione color negro, en mostrar unidades seleccione ninguno, seleccione posición extremo exterior y aumente el tamaño del texto a 12pt.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5barras-fig"></span>
+<img src="Imágenes/powerbi68.jpg" alt="Agregar etiquetas para cada barra" width="90%" />
+<p class="caption">
+Figura 3.81: Agregar etiquetas para cada barra
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Ubicado nuevamente en campos del panel visualizaciones debe hacer doble clic sobre el estante eje y valores para cambiar sus títulos por Nivel y Número de graduados respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6barras-fig"></span>
+<img src="Imágenes/powerbi69.jpg" alt="Cambiar título de los estantes" width="90%" />
+<p class="caption">
+Figura 3.82: Cambiar título de los estantes
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Es muy útil mostrar los porcentajes de cada nivel de formación para esto agregue el campo nivel al estante información sobre herramientas, en su menú desplegable seleccione recuento, luego de nuevo haga clic en su menú desplegable y seleccione mostrar valor como y luego elija porcentaje de total general.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7barras-fig"></span>
+<img src="Imágenes/powerbi70.jpg" alt="Mostrar cantidad como porcentaje del total" width="90%" />
+<p class="caption">
+Figura 3.83: Mostrar cantidad como porcentaje del total
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Haga doble clic sobre el campo ubicado en información sobre herramientas y escriba porcentaje.</li>
+</ol>
+<p>Finalmente se obtiene un dashboard con información útil y muy clara sobre el comportamiento del número de estudiantes graduados por nivel de formación, dicho dashboard se muestra a continuación.</p>
+<div class="figure" style="text-align: center"><span id="fig:tableronivelformacion-fig"></span>
+<img src="Imágenes/powerbi71.jpg" alt="Dashboard para nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.84: Dashboard para nivel de formación
+</p>
+</div>
 
 </div>
 </div>

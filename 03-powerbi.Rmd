@@ -635,13 +635,98 @@ knitr::include_graphics("Imágenes/powerbi58.jpg")
 
 14.	Debe mover el grafico de líneas al lateral izquierdo, para que se sobreponga a la tabla de texto.
 
+#### Gráfico circular
 
+El dashboard que se está realizando contiene un gráfico circular que permite visualizar la distribución del total de estudiantes graduados por modalidad de formación para el último periodo del que se tiene registro, es decir 2020-1.
 
+1.	Ubíquese en la parte en blanco del lienzo de trabajo y sobre el panel visualizaciones haga clic en grafico circular. 
 
+2.	Al estante leyenda arrastre el campo TIPO_NIVEL y también asígnelo al estante valores. 
 
+```{r paso2circular-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear un gráfico circular', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi59.jpg")
+```
 
+3.	Desde formato cambie la posición de la leyenda a centro inferior, desactive el título y aumente le tamaño del texto a 12pt.
 
+4.	Cambie le titulo del grafico por Distribución de graduados por modalidad de formación, periodo 2020-1; color negro, tamaño 25pt y alineación central, todo esto desde la pestaña título.
 
+5.	Repita el paso 5 mostrado en \@ref(graficodelineassegmentadopowerbi), para cambiar el color de los datos. 
 
+6.	En la pestaña etiquetas y estilo seleccioné Categoría, porcentaje del total, color negro y tamaño de letra 15pt, por último, amplié el grafico de torta hacia arriba para ocupar todo el lateral derecho del lienzo.
 
+7.	Despliegue el panel filtros y arrastre el campo YEAR_SEMESTER, seguido de esto seleccione únicamente el periodo 2020-1.
 
+```{r paso7circular-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Filtrar por el periodo 2020-1', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi60.jpg")
+```
+
+8.	Por último, cambie el nombre de los campos leyenda y valores por Modalidad de formación y Número de graduados respectivamente.
+
+```{r paso8circular-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar nombre de los estantes leyenda y valores', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi61.jpg")
+```
+
+Después de creados los objetos visuales sobre el lienzo se obtiene un dashboard útil e informativo con interactividad entre dos de los gráficos construidos.
+
+```{r dashboardmodalidadformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard modalidad de formación', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi62.jpg")
+```
+
+El siguiente dashboard presentado en la página de estadísticas de la Universidad Nacional contiene información sobre el nivel de formación de los estudiantes graduados, al igual que el creado anteriormente contiene tres gráficos uno de líneas, una tabla de texto y un gráfico de barras y alternancia entre el gráfico de líneas y la tabla de texto; como estos dos primeros objetos ya fueron creados para otros campos replique los pasos, pero usando el campo NIVEL, al final debe obtener dos gráficos que se pueden alternar usando los botones Serie y Tabla.
+
+```{r evolucionnivelformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Evolución del número de estudiantes graduados por nivel de formación', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi63.jpg")
+```
+
+Es momento de realizar un gráfico de barras para observar la distribución de graduados por modalidad de formación en el periodo 2020-1, para crear dicho gráfico debe seguir estos pasos.
+
+1.	Ubíquese en lateral derecho del lienzo que se encuentra blanco, luego en el panel visualizaciones haga clic sobre grafico de barras agrupadas.
+
+```{r paso1barras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar gráfico de barras agrupadas', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi64.jpg")
+```
+
+2.	Agregue los campos NIVEL a los estantes eje y valores.
+
+```{r paso2barras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de barras para nivel de formación', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi65.jpg")
+```
+
+3.	Edite los colores de los datos asignando “8CC63F”, “C1272D”, “3FC1F8”, “FBB03B”, “6D6666” a Pregrado, Maestría, Especialización, Especialidades médicas y doctorado respectivamente; repita el paso 7 de gráfico circular para seleccionar únicamente el periodo 2020-1.
+
+```{r paso3barras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar colores', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi66.jpg")
+```
+
+4.	Cambie le título del gráfico por Distribución de graduados por nivel de formación, periodo 2020-1; el título del eje x debe ser Número de graduados, desactive el título del eje y, aumente a 12pt el tamaño del texto y seleccione color negro para el texto de este eje.
+
+```{r paso4barras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar título del gráfico de barras', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi67.jpg")
+```
+
+5.	Active la pestaña etiquetas, seleccione color negro, en mostrar unidades seleccione ninguno, seleccione posición extremo exterior y aumente el tamaño del texto a 12pt.
+
+```{r paso5barras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar etiquetas para cada barra', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi68.jpg")
+```
+
+6.	Ubicado nuevamente en campos del panel visualizaciones debe hacer doble clic sobre el estante eje y valores para cambiar sus títulos por Nivel y Número de graduados respectivamente.
+
+```{r paso6barras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar título de los estantes', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi69.jpg")
+```
+
+7.	Es muy útil mostrar los porcentajes de cada nivel de formación para esto agregue el campo nivel al estante información sobre herramientas, en su menú desplegable seleccione recuento, luego de nuevo haga clic en su menú desplegable y seleccione mostrar valor como y luego elija porcentaje de total general.
+
+```{r paso7barras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Mostrar cantidad como porcentaje del total', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi70.jpg")
+```
+
+8.	Haga doble clic sobre el campo ubicado en información sobre herramientas y escriba porcentaje.
+
+Finalmente se obtiene un dashboard con información útil y muy clara sobre el comportamiento del número de estudiantes graduados por nivel de formación, dicho dashboard se muestra a continuación.
+
+```{r tableronivelformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard para nivel de formación', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi71.jpg")
+```
