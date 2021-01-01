@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2020-12-29" />
+<meta name="date" content="2021-01-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -674,7 +674,7 @@ Figura 3.59: Añadir formato de porcentaje
 </p>
 </div>
 </div>
-<div id="tabla-de-texto" class="section level4">
+<div id="tabladetextopowerbi" class="section level4">
 <h4><span class="header-section-number">3.4.2.3</span> Tabla de texto</h4>
 <p>Se creará una tabla de texto que contenga la información del número de estudiantes graduados por modalidad de formación, se trabajara sobre el dashboard que contiene el gráfico de líneas segmentado por una dimensión.</p>
 <ol style="list-style-type: decimal">
@@ -921,6 +921,137 @@ Figura 3.83: Mostrar cantidad como porcentaje del total
 Figura 3.84: Dashboard para nivel de formación
 </p>
 </div>
+</div>
+<div id="barrasapiladas" class="section level4">
+<h4><span class="header-section-number">3.4.2.5</span> Gráfico de barras apiladas</h4>
+<p>Este tipo de gráficos es útil para comparar valores de categorías respecto a un total, y ver como estas categorías se comportan según un segundo criterio segmentación, en este tipo de visualizaciones se trabaja con un valor base a mostrar en la gráfica mediante una barra horizontal, un criterio de segmentación principal (según el cual se dividirá la barra anterior en tantas como valores tome el campo que defina este criterio) y otro criterio secundario que controla la división de las diferentes barras.
+La base de datos con la cual se esta trabajando posee diversas variables categóricas, en especial para este gráfico se usarán los campos Sede de matrícula y nivel de formación.</p>
+<ol style="list-style-type: decimal">
+<li><p>Agregue una nueva página de trabajo y llámela nivel de formación por sede y facultad.</p></li>
+<li><p>Desde el panel visualizaciones haga clic sobre el icono del gráfico de barras apiladas.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2barrasapiladas-fig"></span>
+<img src="Imágenes/powerbi86.jpg" alt="Agregar gráfico de barras apiladas" width="30%" />
+<p class="caption">
+Figura 3.85: Agregar gráfico de barras apiladas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Amplié la visualización para que ocupe todo el lienzo de trabajo, añada el campo SEDE_NOMBRE_MAT al estante eje y el campo NIVEL a leyenda y valores.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3barrasapiladas-fig"></span>
+<img src="Imágenes/powerbi87.jpg" alt="Barras apiladas sede de matrícula" width="90%" />
+<p class="caption">
+Figura 3.86: Barras apiladas sede de matrícula
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Haciendo clic sobre el rodillo para dar formato al gráfico y en la pestaña leyenda desactive el título, seleccione como posición centro inferior y aumente el tamaño del texto a 12pt.</p></li>
+<li><p>Sobre la pestaña del eje y cambie el color del texto por negro y tamaño 12pt, el color del título también debe ser negro, en el espacio para título debe escribir Sede y aumentar el tamaño a 16pt.</p></li>
+<li><p>Para el eje x el título debe ser número de graduados en color negro y tamaño 16pt, también debe seleccionar ninguno en la opción mostrar unidades.</p></li>
+<li><p>Edite los colores de los datos como se realizo en el paso 9 del gráfico de barras; cambie el título del gráfico por Sede y desactívelo, también active el borde de la visualización y seleccione color negro para dicho borde.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7barrasapiladas-fig"></span>
+<img src="Imágenes/powerbi88.jpg" alt="Gráfico de barras apiladas para la sede de matrícula" width="90%" />
+<p class="caption">
+Figura 3.87: Gráfico de barras apiladas para la sede de matrícula
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Por último, debe editar los nombres de los campos ubicados en los estantes con el fin de hacer el gráfico más estético, SEDE_NOMBRE_MAT debe ser cambiado por Sede, NIVEL por Nivel y Recuento NIVEL por Número de graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8barrasapiladas-fig"></span>
+<img src="Imágenes/powerbi89.jpg" alt="Gráfico de barras apiladas para la sede de matrícula con descripción emergente clara" width="90%" />
+<p class="caption">
+Figura 3.88: Gráfico de barras apiladas para la sede de matrícula con descripción emergente clara
+</p>
+</div>
+<p>Observe que el número de estudiantes graduados no se esta presentado en formato de miles, es decir, en la imagen mostrada anteriormente el número de graduados debe verse como 13.999 y no 13999 por esto se creara una nueva columna que tome el valor de 1, ya que al ser una columna numérica se tiene la posibilidad de darle formato de número.</p>
+<ol style="list-style-type: decimal">
+<li>Haga clic sobre la pestaña modelado y seleccione nueva columna.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1crearconteo-fig"></span>
+<img src="Imágenes/powerbi90.jpg" alt="Crear nueva columna" width="90%" />
+<p class="caption">
+Figura 3.89: Crear nueva columna
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>En la línea resultante cambie Columna = por Conteo = 1, haga clic sobre la coma ubicada en la pestaña formato, por último, haga clic sobre el chulo para guardar los cambios.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2crearconteo-fig"></span>
+<img src="Imágenes/powerbi91.jpg" alt="Editar el formato de la nueva columna" width="90%" />
+<p class="caption">
+Figura 3.90: Editar el formato de la nueva columna
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Elimine el campo Número de graduados del estante valores y arrastre canteo a dicho campo, nuevamente cambie el nombre por Número de graduados, ahora la descripción emergente de la visualización se verá así.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3crearconteo-fig"></span>
+<img src="Imágenes/powerbi92.jpg" alt="Barras apiladas con la columna conteo" width="90%" />
+<p class="caption">
+Figura 3.91: Barras apiladas con la columna conteo
+</p>
+</div>
+<p>Hasta el momento el grafico de barras apiladas es de utilidad para identificar como se distribuyen o comportan los diferentes niveles de formación dentro de cada sede, pero como no todas las sedes poseen las mismas facultades o programas se realizará un gráfico igual al anterior, pero con el campo facultad, con el fin de proporcionar información más detallada.</p>
+<div class="figure" style="text-align: center"><span id="fig:barrasapiladasfacultad-fig"></span>
+<img src="Imágenes/powerbi93.jpg" alt="Gráfico de barras apiladas por facultad" width="90%" />
+<p class="caption">
+Figura 3.92: Gráfico de barras apiladas por facultad
+</p>
+</div>
+<p>Repita los pasos mostrados en la sección <a href="3-4-flujotrabajopowerbi.html#tabladetextopowerbi">3.4.2.3</a> para crear botones que permitan la alternancia entre estos dos gráficos, ubique ambos gráficos en el lateral derecho y los botones de alternancia en la parte superior de estos, también debe dejar un espacio en la parte superior para agregar un título general al dashboard ya que no se esta agregando título a cada gráfico.</p>
+<div class="figure" style="text-align: center"><span id="fig:alternanciaentrebarrasapiladas-fig"></span>
+<img src="Imágenes/powerbi94.jpg" alt="Alternancia entre los gráficos de barras" width="90%" />
+<p class="caption">
+Figura 3.93: Alternancia entre los gráficos de barras
+</p>
+</div>
+<p>Con estos botones y marcadores se debe tener algo de cuidado ya que al agregar nuevo gráficos al tablero y alternar con los botones que se han creado los nuevos gráficos pueden verse afectados, por lo que es importante actualizar los marcadores cada que se añaden visualizaciones al tablero.</p>
+</div>
+<div id="gráficoanillos" class="section level4">
+<h4><span class="header-section-number">3.4.2.6</span> Grafico de anillos</h4>
+<p>Estos gráficos son bastante similares a los gráficos circulares, son útiles para representar proporciones y porcentajes. En este caso se usará para mostrar la distribución de los programas dentro de la Universidad Nacional, como son muchos programas se hará un filtro del estilo Top N para mostrar únicamente los 5 programas con más estudiantes graduados.</p>
+<ol style="list-style-type: decimal">
+<li>Se trabajará sobre el mismo lienzo en el que se realizaron los gráficos de barras apiladas usando el lateral derecho que se encuentra libre, haga clic sobre el icono de grafico de anillos ubicado en el panel visualizaciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1anillos-fig"></span>
+<img src="Imágenes/powerbi95.jpg" alt="Añadir gráfico de anillos" width="25%" />
+<p class="caption">
+Figura 3.94: Añadir gráfico de anillos
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Agregue los campos PROGRAMA y Conteo a los estantes leyenda y valores respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2anillos-fig"></span>
+<img src="Imágenes/powerbi96.jpg" alt="Gráfico de anillos por programa" width="90%" />
+<p class="caption">
+Figura 3.95: Gráfico de anillos por programa
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Como era de esperarse el gráfico esta completamente saturado debido a la gran cantidad de programas que ofrece la Universidad, haga clic sobre el panel filtros, despliegue el estante programa, seleccione Top N en tipo de filtro, asegúrese de que los elementos a mostrar sean los superiores y escriba 5, para mostrar los 5 programas superiores, arrastre el campo PROGRAMA al estante por valor y seleccione recuento; por último, clic en aplicar filtro.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3anillos-fig"></span>
+<img src="Imágenes/powerbi97.jpg" alt="Añadir filtro para el campo programa" width="90%" />
+<p class="caption">
+Figura 3.96: Añadir filtro para el campo programa
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Es momento de dar formato al gráfico de anillos, en primer lugar, desactive la leyenda, en etiquetas seleccione como estilo todas las etiquetas de detalle en color negro y tamaño 12pt, en el campo mostrar unidades seleccione ninguno; finalmente desactive el título de la visualización y active el borde.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4anillos-fig"></span>
+<img src="Imágenes/powerbi98.jpg" alt="Dar formato al gráfico de anillos" width="90%" />
+<p class="caption">
+Figura 3.97: Dar formato al gráfico de anillos
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Cambie los nombres de los estantes por Programa y Número de graduados, no olvide actualizar los marcadores.</li>
+</ol>
 
 </div>
 </div>
