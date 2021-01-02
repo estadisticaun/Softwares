@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2020-12-29}
+\date{2021-01-01}
 
 \begin{document}
 \maketitle
@@ -5073,8 +5073,8 @@ Ordene nuevamente el eje de forma ascendente y por la variable YEAR\_SEMESTER co
 \caption{Añadir formato de porcentaje}\label{fig:formatoporcentaje-fig}
 \end{figure}
 
-\hypertarget{tabla-de-texto}{%
-\subsubsection{Tabla de texto}\label{tabla-de-texto}}
+\hypertarget{tabladetextopowerbi}{%
+\subsubsection{Tabla de texto}\label{tabladetextopowerbi}}
 
 Se creará una tabla de texto que contenga la información del número de estudiantes graduados por modalidad de formación, se trabajara sobre el dashboard que contiene el gráfico de líneas segmentado por una dimensión.
 
@@ -5525,6 +5525,241 @@ Finalmente se obtiene un dashboard con información útil y muy clara sobre el c
 
 \caption{Dashboard para nivel de formación}\label{fig:tableronivelformacion-fig}
 \end{figure}
+
+\hypertarget{barrasapiladas}{%
+\subsubsection{Gráfico de barras apiladas}\label{barrasapiladas}}
+
+Este tipo de gráficos es útil para comparar valores de categorías respecto a un total, y ver como estas categorías se comportan según un segundo criterio segmentación, en este tipo de visualizaciones se trabaja con un valor base a mostrar en la gráfica mediante una barra horizontal, un criterio de segmentación principal (según el cual se dividirá la barra anterior en tantas como valores tome el campo que defina este criterio) y otro criterio secundario que controla la división de las diferentes barras.
+La base de datos con la cual se esta trabajando posee diversas variables categóricas, en especial para este gráfico se usarán los campos Sede de matrícula y nivel de formación.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Agregue una nueva página de trabajo y llámela nivel de formación por sede y facultad.
+\item
+  Desde el panel visualizaciones haga clic sobre el icono del gráfico de barras apiladas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/powerbi86} 
+
+}
+
+\caption{Agregar gráfico de barras apiladas}\label{fig:paso2barrasapiladas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Amplié la visualización para que ocupe todo el lienzo de trabajo, añada el campo SEDE\_NOMBRE\_MAT al estante eje y el campo NIVEL a leyenda y valores.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi87} 
+
+}
+
+\caption{Barras apiladas sede de matrícula}\label{fig:paso3barrasapiladas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Haciendo clic sobre el rodillo para dar formato al gráfico y en la pestaña leyenda desactive el título, seleccione como posición centro inferior y aumente el tamaño del texto a 12pt.
+\item
+  Sobre la pestaña del eje y cambie el color del texto por negro y tamaño 12pt, el color del título también debe ser negro, en el espacio para título debe escribir Sede y aumentar el tamaño a 16pt.
+\item
+  Para el eje x el título debe ser número de graduados en color negro y tamaño 16pt, también debe seleccionar ninguno en la opción mostrar unidades.
+\item
+  Edite los colores de los datos como se realizo en el paso 9 del gráfico de barras; cambie el título del gráfico por Sede y desactívelo, también active el borde de la visualización y seleccione color negro para dicho borde.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi88} 
+
+}
+
+\caption{Gráfico de barras apiladas para la sede de matrícula}\label{fig:paso7barrasapiladas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Por último, debe editar los nombres de los campos ubicados en los estantes con el fin de hacer el gráfico más estético, SEDE\_NOMBRE\_MAT debe ser cambiado por Sede, NIVEL por Nivel y Recuento NIVEL por Número de graduados.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi89} 
+
+}
+
+\caption{Gráfico de barras apiladas para la sede de matrícula con descripción emergente clara}\label{fig:paso8barrasapiladas-fig}
+\end{figure}
+
+Observe que el número de estudiantes graduados no se esta presentado en formato de miles, es decir, en la imagen mostrada anteriormente el número de graduados debe verse como 13.999 y no 13999 por esto se creara una nueva columna que tome el valor de 1, ya que al ser una columna numérica se tiene la posibilidad de darle formato de número.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Haga clic sobre la pestaña modelado y seleccione nueva columna.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi90} 
+
+}
+
+\caption{Crear nueva columna}\label{fig:paso1crearconteo-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  En la línea resultante cambie Columna = por Conteo = 1, haga clic sobre la coma ubicada en la pestaña formato, por último, haga clic sobre el chulo para guardar los cambios.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi91} 
+
+}
+
+\caption{Editar el formato de la nueva columna}\label{fig:paso2crearconteo-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Elimine el campo Número de graduados del estante valores y arrastre canteo a dicho campo, nuevamente cambie el nombre por Número de graduados, ahora la descripción emergente de la visualización se verá así.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi92} 
+
+}
+
+\caption{Barras apiladas con la columna conteo}\label{fig:paso3crearconteo-fig}
+\end{figure}
+
+Hasta el momento el grafico de barras apiladas es de utilidad para identificar como se distribuyen o comportan los diferentes niveles de formación dentro de cada sede, pero como no todas las sedes poseen las mismas facultades o programas se realizará un gráfico igual al anterior, pero con el campo facultad, con el fin de proporcionar información más detallada.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi93} 
+
+}
+
+\caption{Gráfico de barras apiladas por facultad}\label{fig:barrasapiladasfacultad-fig}
+\end{figure}
+
+Repita los pasos mostrados en la sección \ref{tabladetextopowerbi} para crear botones que permitan la alternancia entre estos dos gráficos, ubique ambos gráficos en el lateral derecho y los botones de alternancia en la parte superior de estos, también debe dejar un espacio en la parte superior para agregar un título general al dashboard ya que no se esta agregando título a cada gráfico.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi94} 
+
+}
+
+\caption{Alternancia entre los gráficos de barras}\label{fig:alternanciaentrebarrasapiladas-fig}
+\end{figure}
+
+Con estos botones y marcadores se debe tener algo de cuidado ya que al agregar nuevo gráficos al tablero y alternar con los botones que se han creado los nuevos gráficos pueden verse afectados, por lo que es importante actualizar los marcadores cada que se añaden visualizaciones al tablero.
+
+\hypertarget{gruxe1ficoanillos}{%
+\subsubsection{Grafico de anillos}\label{gruxe1ficoanillos}}
+
+Estos gráficos son bastante similares a los gráficos circulares, son útiles para representar proporciones y porcentajes. En este caso se usará para mostrar la distribución de los programas dentro de la Universidad Nacional, como son muchos programas se hará un filtro del estilo Top N para mostrar únicamente los 5 programas con más estudiantes graduados.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Se trabajará sobre el mismo lienzo en el que se realizaron los gráficos de barras apiladas usando el lateral derecho que se encuentra libre, haga clic sobre el icono de grafico de anillos ubicado en el panel visualizaciones.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.25\linewidth]{Imágenes/powerbi95} 
+
+}
+
+\caption{Añadir gráfico de anillos}\label{fig:paso1anillos-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Agregue los campos PROGRAMA y Conteo a los estantes leyenda y valores respectivamente.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi96} 
+
+}
+
+\caption{Gráfico de anillos por programa}\label{fig:paso2anillos-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Como era de esperarse el gráfico esta completamente saturado debido a la gran cantidad de programas que ofrece la Universidad, haga clic sobre el panel filtros, despliegue el estante programa, seleccione Top N en tipo de filtro, asegúrese de que los elementos a mostrar sean los superiores y escriba 5, para mostrar los 5 programas superiores, arrastre el campo PROGRAMA al estante por valor y seleccione recuento; por último, clic en aplicar filtro.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi97} 
+
+}
+
+\caption{Añadir filtro para el campo programa}\label{fig:paso3anillos-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Es momento de dar formato al gráfico de anillos, en primer lugar, desactive la leyenda, en etiquetas seleccione como estilo todas las etiquetas de detalle en color negro y tamaño 12pt, en el campo mostrar unidades seleccione ninguno; finalmente desactive el título de la visualización y active el borde.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi98} 
+
+}
+
+\caption{Dar formato al gráfico de anillos}\label{fig:paso4anillos-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Cambie los nombres de los estantes por Programa y Número de graduados, no olvide actualizar los marcadores.
+\end{enumerate}
 
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}

@@ -831,3 +831,74 @@ knitr::include_graphics("Imágenes/powerbi98.jpg")
 ```
 
 5.	Cambie los nombres de los estantes por Programa y Número de graduados, no olvide actualizar los marcadores.
+
+#### Segmentación de datos {#segementaciondatospowerbi}
+La segmentación de datos es una forma alternativa de filtro que limita la parte del conjunto de datos que se muestra en otras visualizaciones del informe, en este caso se añadirán tres segmentaciones para permitir al usuario seleccionar la sede, facultad y nivel de formación para el cual quiere ver los programas con más alumnos graduados.
+
+1.	Disminuya un poco el tamaño del gráfico de anillos para dejar un espacio en blanco en el lateral izquierdo; luego desde el panel visualizaciones haga clic sobre segmentación de datos.
+
+```{r paso1segmentacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir segemtación de datos', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi99.jpg")
+```
+
+2.	Añada SEDE_NOMBRE_MAT al estante campos de la segmentación.
+
+```{r paso2segmentacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar un campo para realizar la segmentación', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi100.jpg")
+```
+
+3.	Haga clic sobre la flecha ubicada al lado de Sede_Nombre_Mat en la segmentación de datos y seleccione menú desplegable.
+
+```{r paso3segmentacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar de lista a menú desplegable', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi101.jpg")
+```
+
+4.	Para dar formato a esta segmentación, en controles de selección active la opción de mostrar seleccionar todo, desactive el encabezado, active el título y escriba seleccione sede en tamaño 16pt, color negro y alineación central, para los elementos también use color negro y tamaño 12pt; por último, active el borde.
+
+```{r paso4segmentacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Segementación por sede matrícula', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi102.jpg")
+```
+
+Agregue otras dos segmentaciones de datos, pero con las variables facultad y nivel, su dashboard debe verse de esta manera:
+
+```{r segmentacionessedefacultadnivel-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Segementación por sede matrícula, facultad y nivel de formación', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi103.jpg")
+```
+
+Las matrices son tablas de texto que ayudan a presentar de una manera útil e informativa un resumen de los datos que se usan en las visualizaciones, se añadirá una en la parte inferior de la segmentación y el gráfico de anillos, la cual tendrá en sus filas los campos SEDE_NOMBRE_MAT y FACULTAD, en columnas NIVEL y en valores conteo.
+
+```{r matrizparanivel-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Matriz', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi104.jpg")
+```
+
+En el espacio vacío ubicado entre la matriz y la segmentación de datos se agregara una tarjeta que indique el total de estudiantes graduados según los filtros o segmentaciones aplicadas.
+
+1.	Haga clic sobre la tarjeta ubicada en el panel visualizaciones y ubíquela en el espacio vacío y en estante campos de dicha tarjeta agregue la columna conteo.
+
+```{r paso1tarjeta-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar tarjeta al dashboard', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi105.jpg")
+```
+
+2.	Para darle formato a la tarjeta creada desactive la etiqueta, active el título y escriba Número de graduados, color negro, alineación central y tamaño 16pt; en la pestaña etiqueta de datos seleccione color negro, la opción mostrar unidades debe ser ninguno y disminuya el tamaño del texto hasta que la cifra de estudiantes graduados se vea completa.
+
+```{r paso2tarjeta-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tarjeta con el número de estudiantes graduados', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi106.jpg")
+```
+
+En este momento el dashboard contiene todos los elementos visuales para que sea útil y fácil de usar, pero cuando se usan segmentaciones de datos no siempre es necesario que dichas segmentaciones afecten a los objetos que se tienen en el tablero, en este caso en especial el filtro para seleccionar sede puede afectar a todas las visualizaciones excepto al gráfico de barras apiladas por sede, para editar esto debe hacer clic sobre la segemnetación seleccionar sede, luego clic en formato y seleccionar editar relaciones.
+
+```{r editarinteracciones-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar interacciones de las segmentaciones', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi107.jpg")
+```
+
+Al hacer clic sobre editar interacciones se activan una serie de iconos de filtro y prohibido en cada visualización, en este caso se quiere que no afecte a las barras apiladas por sede, por lo que debe hacer clic sobre el icono de prohibido para este gráfico. 
+
+```{r editarinteraccionessedeybarrasapiladassede-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cancelar la interacción entre la segementación de  sede y el gráfico de barras apiladas', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi108.jpg")
+```
+
+Repita esta operación para que el filtro de seleccionar facultad y nivel de formación afecten únicamente al gráfico de anillos y la matriz. Finalmente se debe ubicar un título en la parte superior del dashboard, en la pestaña insertar seleccione cuadro de texto y ubíquelo en la parte superior en blanco y escriba Distribución de graduados a nivel de facultad y sede.
+
+```{r tablerodistribucuondegraduadossedeyfacultad-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Distribución de graduados a nivel de sede y facultad', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi109.jpg")
+```
