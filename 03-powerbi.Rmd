@@ -902,3 +902,50 @@ Repita esta operación para que el filtro de seleccionar facultad y nivel de for
 ```{r tablerodistribucuondegraduadossedeyfacultad-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Distribución de graduados a nivel de sede y facultad', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi109.jpg")
 ```
+
+#### Gráfico de cascada {#graficocascada}
+
+Los gráficos de cascada muestran un total acumulado a medida que Power BI suma y resta valores, son útiles para comprender como un valor inicial se ve afectado por una serie de cambios positivos y negativos. En este gráfico las columnas están codificados por colores que permiten identificar rápidamente aumentos o disminuciones, son de gran utilidad cuando se tienen cambios para una medida a lo largo del tiempo, como una serie o diferentes categorías.
+
+Dentro de la Universidad es importante visualizar el comportamiento del número de estudiantes graduados a través de los periodos ya que en cada periodo se presentan circunstancias como deserción, paros estudiantiles, entre otros que pueden afectar drásticamente la cantidad de estudiantes que se gradúan en cada periodo, incluso la misma sede puede afectar esta cifra; por tanto, se usara la variable YEAR_SEMESTER, SEDE_NOMBRE_ADM y Conteo para crear un gráfico de cascada.
+
+1.	Añada una nueva página al informe, la cual tendrá como nombre Sede de admisión.
+
+2.	Desde el panel visualizaciones haga clic sobre gráfico de cascada.
+
+```{r paso2cascada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir gráfico de cascada', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi110.jpg")
+```
+
+3.	Agregue las variables YEAR_SEMESTER, SEDE_NOMBRE_ADM y conteo a los estantes categoría, desglose y valores respectivamente.
+
+```{r paso3cascada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar variables al gráfico', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi111.jpg")
+```
+4.	Note que el eje x no posee el orden cronológico correcto por lo que es necesario ordenarlo como se mostró en \@ref(graficolineaspowerbi).
+
+```{r paso4cascada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ordenar el eje x', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi111.jpg")
+```
+
+5.	Es momento de dar formato al gráfico, por lo cual se cambiará la posición de la leyenda a centro inferior y se aumentará su tamaño a 12pt.
+
+6.	El título del eje x debe ser Periodo en color negro y tamaño 16pt, similar para el eje y pero el título es Número de graduados, para las unidades de este eje seleccione ninguno; por último, desactive el título de la visualización y active el borde.
+
+```{r paso6cascada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato del gráfico', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi113.jpg")
+```
+
+7.	Cambie el nombre de las variables ubicadas en los estantes categoría, desglose y valores por Periodo, Sede de admisión y Número de graduados respectivamente.
+
+```{r paso7cascada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar nombre de los campos usados', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi114.jpg")
+```
+
+Hasta el momento el gráfico permite visualizar el cambio por periodo de cada sede, por ejemplo, el cambio para la sede Bogotá en los periodos 2010-1 a 2010-2 es de 1.517 estudiantes es decir que hubo una disminución del 44.09%, a pesar de que le gráfico es informativo se encuentra saturado ya que se tiene registro para doce años en cada sede, para solucionar esto debe agregar una segmentación de datos para la sede de admisión, similar a como se mostró en \@ref(segementaciondatospowerbi), también agregue una tarjeta con la variable conteo.
+
+```{r graficocascada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de cascada por sede de admisión', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi115.jpg")
+```
+
+Al seleccionar la sede Amazonía se identifican 5 periodos consecutivos de aumento de estudiantes graduados, seguido de una disminución fuerte en el periodo 2012-1, el total de estudiantes graduados para esta sede en todos los periodos es de 271.

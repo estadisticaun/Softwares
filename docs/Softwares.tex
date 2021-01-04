@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-01-01}
+\date{2021-01-02}
 
 \begin{document}
 \maketitle
@@ -5760,6 +5760,168 @@ Estos gráficos son bastante similares a los gráficos circulares, son útiles p
 \item
   Cambie los nombres de los estantes por Programa y Número de graduados, no olvide actualizar los marcadores.
 \end{enumerate}
+
+\hypertarget{segementaciondatospowerbi}{%
+\subsubsection{Segmentación de datos}\label{segementaciondatospowerbi}}
+
+La segmentación de datos es una forma alternativa de filtro que limita la parte del conjunto de datos que se muestra en otras visualizaciones del informe, en este caso se añadirán tres segmentaciones para permitir al usuario seleccionar la sede, facultad y nivel de formación para el cual quiere ver los programas con más alumnos graduados.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Disminuya un poco el tamaño del gráfico de anillos para dejar un espacio en blanco en el lateral izquierdo; luego desde el panel visualizaciones haga clic sobre segmentación de datos.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi99} 
+
+}
+
+\caption{Añadir segemtación de datos}\label{fig:paso1segmentacion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Añada SEDE\_NOMBRE\_MAT al estante campos de la segmentación.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi100} 
+
+}
+
+\caption{Asignar un campo para realizar la segmentación}\label{fig:paso2segmentacion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Haga clic sobre la flecha ubicada al lado de Sede\_Nombre\_Mat en la segmentación de datos y seleccione menú desplegable.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi101} 
+
+}
+
+\caption{Cambiar de lista a menú desplegable}\label{fig:paso3segmentacion-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Para dar formato a esta segmentación, en controles de selección active la opción de mostrar seleccionar todo, desactive el encabezado, active el título y escriba seleccione sede en tamaño 16pt, color negro y alineación central, para los elementos también use color negro y tamaño 12pt; por último, active el borde.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi102} 
+
+}
+
+\caption{Segementación por sede matrícula}\label{fig:paso4segmentacion-fig}
+\end{figure}
+
+Agregue otras dos segmentaciones de datos, pero con las variables facultad y nivel, su dashboard debe verse de esta manera:
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi103} 
+
+}
+
+\caption{Segementación por sede matrícula, facultad y nivel de formación}\label{fig:segmentacionessedefacultadnivel-fig}
+\end{figure}
+
+Las matrices son tablas de texto que ayudan a presentar de una manera útil e informativa un resumen de los datos que se usan en las visualizaciones, se añadirá una en la parte inferior de la segmentación y el gráfico de anillos, la cual tendrá en sus filas los campos SEDE\_NOMBRE\_MAT y FACULTAD, en columnas NIVEL y en valores conteo.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi104} 
+
+}
+
+\caption{Matriz}\label{fig:matrizparanivel-fig}
+\end{figure}
+
+En el espacio vacío ubicado entre la matriz y la segmentación de datos se agregara una tarjeta que indique el total de estudiantes graduados según los filtros o segmentaciones aplicadas.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Haga clic sobre la tarjeta ubicada en el panel visualizaciones y ubíquela en el espacio vacío y en estante campos de dicha tarjeta agregue la columna conteo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi105} 
+
+}
+
+\caption{Agregar tarjeta al dashboard}\label{fig:paso1tarjeta-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Para darle formato a la tarjeta creada desactive la etiqueta, active el título y escriba Número de graduados, color negro, alineación central y tamaño 16pt; en la pestaña etiqueta de datos seleccione color negro, la opción mostrar unidades debe ser ninguno y disminuya el tamaño del texto hasta que la cifra de estudiantes graduados se vea completa.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi106} 
+
+}
+
+\caption{Tarjeta con el número de estudiantes graduados}\label{fig:paso2tarjeta-fig}
+\end{figure}
+
+En este momento el dashboard contiene todos los elementos visuales para que sea útil y fácil de usar, pero cuando se usan segmentaciones de datos no siempre es necesario que dichas segmentaciones afecten a los objetos que se tienen en el tablero, en este caso en especial el filtro para seleccionar sede puede afectar a todas las visualizaciones excepto al gráfico de barras apiladas por sede, para editar esto debe hacer clic sobre la segemnetación seleccionar sede, luego clic en formato y seleccionar editar relaciones.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi107} 
+
+}
+
+\caption{Editar interacciones de las segmentaciones}\label{fig:editarinteracciones-fig}
+\end{figure}
+
+Al hacer clic sobre editar interacciones se activan una serie de iconos de filtro y prohibido en cada visualización, en este caso se quiere que no afecte a las barras apiladas por sede, por lo que debe hacer clic sobre el icono de prohibido para este gráfico.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi108} 
+
+}
+
+\caption{Cancelar la interacción entre la segementación de  sede y el gráfico de barras apiladas}\label{fig:editarinteraccionessedeybarrasapiladassede-fig}
+\end{figure}
+
+Repita esta operación para que el filtro de seleccionar facultad y nivel de formación afecten únicamente al gráfico de anillos y la matriz. Finalmente se debe ubicar un título en la parte superior del dashboard, en la pestaña insertar seleccione cuadro de texto y ubíquelo en la parte superior en blanco y escriba Distribución de graduados a nivel de facultad y sede.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi109} 
+
+}
+
+\caption{Distribución de graduados a nivel de sede y facultad}\label{fig:tablerodistribucuondegraduadossedeyfacultad-fig}
+\end{figure}
 
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}

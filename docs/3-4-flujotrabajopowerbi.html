@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-01-02" />
+<meta name="date" content="2021-01-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1144,6 +1144,65 @@ Figura 3.107: Cancelar la interacción entre la segementación de sede y el grá
 <img src="Imágenes/powerbi109.jpg" alt="Distribución de graduados a nivel de sede y facultad" width="90%" />
 <p class="caption">
 Figura 3.108: Distribución de graduados a nivel de sede y facultad
+</p>
+</div>
+</div>
+<div id="graficocascada" class="section level4">
+<h4><span class="header-section-number">3.4.2.8</span> Gráfico de cascada</h4>
+<p>Los gráficos de cascada muestran un total acumulado a medida que Power BI suma y resta valores, son útiles para comprender como un valor inicial se ve afectado por una serie de cambios positivos y negativos. En este gráfico las columnas están codificados por colores que permiten identificar rápidamente aumentos o disminuciones, son de gran utilidad cuando se tienen cambios para una medida a lo largo del tiempo, como una serie o diferentes categorías.</p>
+<p>Dentro de la Universidad es importante visualizar el comportamiento del número de estudiantes graduados a través de los periodos ya que en cada periodo se presentan circunstancias como deserción, paros estudiantiles, entre otros que pueden afectar drásticamente la cantidad de estudiantes que se gradúan en cada periodo, incluso la misma sede puede afectar esta cifra; por tanto, se usara la variable YEAR_SEMESTER, SEDE_NOMBRE_ADM y Conteo para crear un gráfico de cascada.</p>
+<ol style="list-style-type: decimal">
+<li><p>Añada una nueva página al informe, la cual tendrá como nombre Sede de admisión.</p></li>
+<li><p>Desde el panel visualizaciones haga clic sobre gráfico de cascada.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2cascada-fig"></span>
+<img src="Imágenes/powerbi110.jpg" alt="Añadir gráfico de cascada" width="90%" />
+<p class="caption">
+Figura 3.109: Añadir gráfico de cascada
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Agregue las variables YEAR_SEMESTER, SEDE_NOMBRE_ADM y conteo a los estantes categoría, desglose y valores respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3cascada-fig"></span>
+<img src="Imágenes/powerbi111.jpg" alt="Agregar variables al gráfico" width="90%" />
+<p class="caption">
+Figura 3.110: Agregar variables al gráfico
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Note que el eje x no posee el orden cronológico correcto por lo que es necesario ordenarlo como se mostró en <a href="3-4-flujotrabajopowerbi.html#graficolineaspowerbi">3.4.2.1</a>.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4cascada-fig"></span>
+<img src="Imágenes/powerbi111.jpg" alt="Ordenar el eje x" width="90%" />
+<p class="caption">
+Figura 3.111: Ordenar el eje x
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Es momento de dar formato al gráfico, por lo cual se cambiará la posición de la leyenda a centro inferior y se aumentará su tamaño a 12pt.</p></li>
+<li><p>El título del eje x debe ser Periodo en color negro y tamaño 16pt, similar para el eje y pero el título es Número de graduados, para las unidades de este eje seleccione ninguno; por último, desactive el título de la visualización y active el borde.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6cascada-fig"></span>
+<img src="Imágenes/powerbi113.jpg" alt="Formato del gráfico" width="90%" />
+<p class="caption">
+Figura 3.112: Formato del gráfico
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Cambie el nombre de las variables ubicadas en los estantes categoría, desglose y valores por Periodo, Sede de admisión y Número de graduados respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7cascada-fig"></span>
+<img src="Imágenes/powerbi114.jpg" alt="Cambiar nombre de los campos usados" width="90%" />
+<p class="caption">
+Figura 3.113: Cambiar nombre de los campos usados
+</p>
+</div>
+<p>Hasta el momento el gráfico permite visualizar el cambio por periodo de cada sede, por ejemplo, el cambio para la sede Bogotá en los periodos 2010-1 a 2010-2 es de 1.517 estudiantes es decir que hubo una disminución del 44.09%, a pesar de que le gráfico es informativo se encuentra saturado ya que se tiene registro para doce años en cada sede, para solucionar esto debe agregar una segmentación de datos para la sede de admisión, similar a como se mostró en <a href="3-4-flujotrabajopowerbi.html#segementaciondatospowerbi">3.4.2.7</a>, también agregue una tarjeta con la variable conteo.</p>
+<div class="figure" style="text-align: center"><span id="fig:graficocascada-fig"></span>
+<img src="Imágenes/powerbi115.jpg" alt="Gráfico de cascada por sede de admisión" width="90%" />
+<p class="caption">
+Figura 3.114: Gráfico de cascada por sede de admisión
 </p>
 </div>
 
