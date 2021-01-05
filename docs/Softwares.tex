@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-01-04}
+\date{2021-01-05}
 
 \begin{document}
 \maketitle
@@ -6028,6 +6028,122 @@ Hasta el momento el gráfico permite visualizar el cambio por periodo de cada se
 \end{figure}
 
 Al seleccionar la sede Amazonía se identifican 5 periodos consecutivos de aumento de estudiantes graduados, seguido de una disminución fuerte en el periodo 2012-1, el total de estudiantes graduados para esta sede en todos los periodos es de 271.
+
+\hypertarget{graficodeareaspowerbi}{%
+\subsubsection{Gráfico de áreas}\label{graficodeareaspowerbi}}
+
+Este tipo de gráficos son un gráfico de líneas en el que el área entre la línea y el eje aparece sombreada con un color; son usados para visualizar el comportamiento de una medida a lo largo del tiempo, en este caso se realizara un gráfico de área que permite observar el total acumulado del número de graduados por sede de admisión.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Trabajando sobre el mismo dashboard en el que se creo el gráfico de cascada agregue el gráfico de áreas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi116} 
+
+}
+
+\caption{Agregar gráfico de áreas}\label{fig:paso1graficoareas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Es necesario crear una nueva medida que realice la suma acumulada del número de estudiantes graduados por periodo, para esto haga clic sobre el botón Nueva medida ubicado en la barra de herramientas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi119} 
+
+}
+
+\caption{Crear una nueva medida}\label{fig:paso2graficoareas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  En este punto en necesario escribir una formula DAX que realice el calculo deseado, se usaran 7 funciones DAX, en el recuadro que se abre al seleccionar nueva medida debe escribir la formula y seleccionar coma en el recuadro de formato:
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi120} 
+
+}
+
+\caption{Escribir la nueva medida}\label{fig:paso3graficoareas-fig}
+\end{figure}
+
+La función CALCULATE evalúa una expresión en un contexto que es modificado por los filtros que se ceden como argumentos, en este caso la expresión que evalúa es SUM, es decir, que suma la columna conteo de la base de datos graduados, seguido de la expresión se aplica la función FILTER, dicha función devuelve una tabla que representa un subconjunto de otra tabla, su sintaxis incluye una tabla y el filtro a aplicar, en este caso para definir la tabla se usa la función ALLSELECTED que omite los filtros que se hayan aplicado, pero dicha omisión es solo aplicada dentro de la visualización en la que se ejecuta; para definir el filtro se usa la función ISONORAFTER, que es una función booleana que emula el comportamiento de una cláusula ``Comenzar en'' y devuelve verdadero para una fila que cumple con todos los parámetros de condición; en primer lugar se indica la columna a la que se quiere aplicar la función, en este caso YEAR\_SEMESTER, seguido de la función MAX que encuentra el valor más grande de la misma columna y por último se le indica el orden de clasificación, DESC que señala orden descendente. Para obtener más información sobre las funciones DAX puede ingresar a \href{https://docs.microsoft.com/en-us/dax/}{referencia de la función DAX}.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Luego de tener la formula DAX haga clic sobre el icono de chulo para guardarla; agregue los campos YEAR\_SEMESTER, SEDE\_NOMBRE\_ADM y Total acumulado por periodo a los estantes eje, leyenda y valores respectivamente.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi121} 
+
+}
+
+\caption{Añadir variables a los estantes del gráfico}\label{fig:paso4graficoareas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Debe ordenar el eje x como se mostró en secciones anteriores, cambie el nombre de los campos ubicados en los estantes del gráfico por Periodo, Sede de admisión, Total acumulado de graduados.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi122} 
+
+}
+
+\caption{Cambiar nombre de las variables}\label{fig:paso5graficoareas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Para dar formato al gráfico siga los pasos que ya se han mencionado para la leyenda y los ejes, el color de los datos debe ser modificado, asigne los colores ``5BC0DE'', ``8CC63F'', ``C1272D'', ``0071BC'', ``F15A24'', ``FBB03B'', ``93278F'', a las sedes Amazonía, Bogotá, Caribe, Manizales, Medellín, Orinoquía y Palmira respectivamente.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi123} 
+
+}
+
+\caption{Dar formato y color a los datos}\label{fig:paso6graficoareas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Por último, desactive el título del gráfico y active el borde.
+\end{enumerate}
 
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}

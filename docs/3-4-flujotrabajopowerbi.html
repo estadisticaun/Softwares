@@ -1268,6 +1268,78 @@ Figura 3.120: Dar formato y color a los datos
 <ol start="7" style="list-style-type: decimal">
 <li>Por último, desactive el título del gráfico y active el borde.</li>
 </ol>
+</div>
+<div id="gráfico-de-la-barra-de-herramientas" class="section level4">
+<h4><span class="header-section-number">3.4.2.10</span> Gráfico de la barra de herramientas</h4>
+<p>Este tipo de gráficos son útiles para visualizar y detectar rápidamente que categoría de datos tiene la clasificación más alta (el valor mayor). Los gráficos de barra de herramientas con eficaces para mostrar un cambio de clasificación, con el intervalo más alto (valor) en la parte superior de cada periodo de tiempo.
+El dashboard en construcción contiene gráficos útiles que permiten visualizar los periodos de cambio de por sede y también su total acumulado de graduados, es momento de agregar un gráfico como el de barra de herramientas que a demás de permitir visualizar la evolución también permitirá identificar la clasificación de estas sedes por cada periodo.</p>
+<ol style="list-style-type: decimal">
+<li>Libere un espacio en la parte inferior del lienzo de trabajo y desde el panel visualizaciones seleccione gráfico de la barra de herramientas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1graficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi124.jpg" alt="Añadir gráfico de la barra de herramientas al tablero" width="100%" />
+<p class="caption">
+Figura 3.121: Añadir gráfico de la barra de herramientas al tablero
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Agregue los campos YEAR_SEMESTER, SEDE_NOMBRE_ADM y conteo a los estantes eje, leyenda y valores respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2graficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi125.jpg" alt="Agregar variables al gráfico" width="90%" />
+<p class="caption">
+Figura 3.122: Agregar variables al gráfico
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Nuevamente debe ordenar el eje x y cambiar el nombre de los campos por Periodo, Sede de admisión y Número de graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3graficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi126.jpg" alt="Orden del eje x y cambio de nombre a variables" width="90%" />
+<p class="caption">
+Figura 3.123: Orden del eje x y cambio de nombre a variables
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Hasta el momento el gráfico es de gran utilidad para visualizar la evolución del número de estudiantes graduados y la clasificación por sedes. Replique los pasos realizados en secciones anteriores para dar formato al gráfico y el paso 6 de <a href="3-4-flujotrabajopowerbi.html#graficodeareaspowerbi">3.4.2.9</a> para dar color a los datos, finalmente, desactive el título del gráfico y active el título.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4graficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi127.jpg" alt="Formato y color de datos gráfico de cascada" width="90%" />
+<p class="caption">
+Figura 3.124: Formato y color de datos gráfico de cascada
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Observe que este gráfico no posee eje Y, por lo que es importante activar las etiquetas para visualizar la cantidad de estudiantes graduados en cada periodo, para esto en la pestaña formato active las etiquetas, enmostrar unidades seleccione ninguno, la orientación será vertical, active texto de desbordamiento, por último, aumente el tamaño del texto a 12pt.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5graficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi128.jpg" alt="Activar etiquetas" width="90%" />
+<p class="caption">
+Figura 3.125: Activar etiquetas
+</p>
+</div>
+<p>Como detalles finales del tablero se de agregar un matriz que en sus filas tendrá las variables YEAR y SEMETRE, en columnas SEDE_NOMBRE_ADM y en valores la variable conteo; finalmente se deben agregar tres botones que permitan alternar los gráficos de áreas, gráfico de la barra de herramientas y el gráfico de cascada, por comodidad y estética se decide activar el título de los gráficos, para el gráfico de la barra de herramientas el título debe ser Clasificación histórica de las sedes; para el gráfico de áreas debe ser evolución acumulada y por último para el gráfico de cascada será análisis periodo a periodo.</p>
+<div class="figure" style="text-align: center"><span id="fig:detallesgraficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi129.jpg" alt="Botones, matriz y títulos de los gráficos" width="90%" />
+<p class="caption">
+Figura 3.126: Botones, matriz y títulos de los gráficos
+</p>
+</div>
+<p>Al final del panel izquierdo se ubica un espacio en blanco el cual será usado para añadir un botón con acción de URL que permita al usuario ir a los metadatos que se ubican en la página web de las estadísticas de la Universidad Nacional, agregue un botón en blanco y active la pestaña acción, como tipo seleccione URL web y pegue la URL de los metadatos.</p>
+<div class="figure" style="text-align: center"><span id="fig:botonurlgraficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi130.jpg" alt="Añadir un botón con acción de URL web" width="90%" />
+<p class="caption">
+Figura 3.127: Añadir un botón con acción de URL web
+</p>
+</div>
+<p>Añada un texto al botón que diga Ver metadatos, cambie el tamaño y la alineación del texto para que coincida con los botones creados anteriormente.</p>
+<p>De esta manera se da por terminado este dashboard que analiza el número de estudiantes graduados por sede de admisión a través de tres gráficos y una tabla de texto, permite interactividad con el usuario al tener una segmentación de datos y botones que permiten la alternancia entre gráficos y un vínculo web.</p>
+<div class="figure" style="text-align: center"><span id="fig:tablerosededeadmision-fig"></span>
+<img src="Imágenes/powerbi131.jpg" alt="Dashboard: Sede de admisión" width="90%" />
+<p class="caption">
+Figura 3.128: Dashboard: Sede de admisión
+</p>
+</div>
 
 </div>
 </div>
