@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-01-02}
+\date{2021-01-04}
 
 \begin{document}
 \maketitle
@@ -5922,6 +5922,112 @@ Repita esta operación para que el filtro de seleccionar facultad y nivel de for
 
 \caption{Distribución de graduados a nivel de sede y facultad}\label{fig:tablerodistribucuondegraduadossedeyfacultad-fig}
 \end{figure}
+
+\hypertarget{graficocascada}{%
+\subsubsection{Gráfico de cascada}\label{graficocascada}}
+
+Los gráficos de cascada muestran un total acumulado a medida que Power BI suma y resta valores, son útiles para comprender como un valor inicial se ve afectado por una serie de cambios positivos y negativos. En este gráfico las columnas están codificados por colores que permiten identificar rápidamente aumentos o disminuciones, son de gran utilidad cuando se tienen cambios para una medida a lo largo del tiempo, como una serie o diferentes categorías.
+
+Dentro de la Universidad es importante visualizar el comportamiento del número de estudiantes graduados a través de los periodos ya que en cada periodo se presentan circunstancias como deserción, paros estudiantiles, entre otros que pueden afectar drásticamente la cantidad de estudiantes que se gradúan en cada periodo, incluso la misma sede puede afectar esta cifra; por tanto, se usara la variable YEAR\_SEMESTER, SEDE\_NOMBRE\_ADM y Conteo para crear un gráfico de cascada.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Añada una nueva página al informe, la cual tendrá como nombre Sede de admisión.
+\item
+  Desde el panel visualizaciones haga clic sobre gráfico de cascada.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi110} 
+
+}
+
+\caption{Añadir gráfico de cascada}\label{fig:paso2cascada-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Agregue las variables YEAR\_SEMESTER, SEDE\_NOMBRE\_ADM y conteo a los estantes categoría, desglose y valores respectivamente.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi111} 
+
+}
+
+\caption{Agregar variables al gráfico}\label{fig:paso3cascada-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Note que el eje x no posee el orden cronológico correcto por lo que es necesario ordenarlo como se mostró en \ref{graficolineaspowerbi}.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi111} 
+
+}
+
+\caption{Ordenar el eje x}\label{fig:paso4cascada-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  Es momento de dar formato al gráfico, por lo cual se cambiará la posición de la leyenda a centro inferior y se aumentará su tamaño a 12pt.
+\item
+  El título del eje x debe ser Periodo en color negro y tamaño 16pt, similar para el eje y pero el título es Número de graduados, para las unidades de este eje seleccione ninguno; por último, desactive el título de la visualización y active el borde.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi113} 
+
+}
+
+\caption{Formato del gráfico}\label{fig:paso6cascada-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Cambie el nombre de las variables ubicadas en los estantes categoría, desglose y valores por Periodo, Sede de admisión y Número de graduados respectivamente.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi114} 
+
+}
+
+\caption{Cambiar nombre de los campos usados}\label{fig:paso7cascada-fig}
+\end{figure}
+
+Hasta el momento el gráfico permite visualizar el cambio por periodo de cada sede, por ejemplo, el cambio para la sede Bogotá en los periodos 2010-1 a 2010-2 es de 1.517 estudiantes es decir que hubo una disminución del 44.09\%, a pesar de que le gráfico es informativo se encuentra saturado ya que se tiene registro para doce años en cada sede, para solucionar esto debe agregar una segmentación de datos para la sede de admisión, similar a como se mostró en \ref{segementaciondatospowerbi}, también agregue una tarjeta con la variable conteo.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi115} 
+
+}
+
+\caption{Gráfico de cascada por sede de admisión}\label{fig:graficocascada-fig}
+\end{figure}
+
+Al seleccionar la sede Amazonía se identifican 5 periodos consecutivos de aumento de estudiantes graduados, seguido de una disminución fuerte en el periodo 2012-1, el total de estudiantes graduados para esta sede en todos los periodos es de 271.
 
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}

@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-01-04" />
+<meta name="date" content="2021-01-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1205,6 +1205,69 @@ Figura 3.113: Cambiar nombre de los campos usados
 Figura 3.114: Gráfico de cascada por sede de admisión
 </p>
 </div>
+<p>Al seleccionar la sede Amazonía se identifican 5 periodos consecutivos de aumento de estudiantes graduados, seguido de una disminución fuerte en el periodo 2012-1, el total de estudiantes graduados para esta sede en todos los periodos es de 271.</p>
+</div>
+<div id="graficodeareaspowerbi" class="section level4">
+<h4><span class="header-section-number">3.4.2.9</span> Gráfico de áreas</h4>
+<p>Este tipo de gráficos son un gráfico de líneas en el que el área entre la línea y el eje aparece sombreada con un color; son usados para visualizar el comportamiento de una medida a lo largo del tiempo, en este caso se realizara un gráfico de área que permite observar el total acumulado del número de graduados por sede de admisión.</p>
+<ol style="list-style-type: decimal">
+<li>Trabajando sobre el mismo dashboard en el que se creo el gráfico de cascada agregue el gráfico de áreas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1graficoareas-fig"></span>
+<img src="Imágenes/powerbi116.jpg" alt="Agregar gráfico de áreas" width="90%" />
+<p class="caption">
+Figura 3.115: Agregar gráfico de áreas
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Es necesario crear una nueva medida que realice la suma acumulada del número de estudiantes graduados por periodo, para esto haga clic sobre el botón Nueva medida ubicado en la barra de herramientas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2graficoareas-fig"></span>
+<img src="Imágenes/powerbi119.jpg" alt="Crear una nueva medida" width="90%" />
+<p class="caption">
+Figura 3.116: Crear una nueva medida
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>En este punto en necesario escribir una formula DAX que realice el calculo deseado, se usaran 7 funciones DAX, en el recuadro que se abre al seleccionar nueva medida debe escribir la formula y seleccionar coma en el recuadro de formato:</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3graficoareas-fig"></span>
+<img src="Imágenes/powerbi120.jpg" alt="Escribir la nueva medida" width="100%" />
+<p class="caption">
+Figura 3.117: Escribir la nueva medida
+</p>
+</div>
+<p>La función CALCULATE evalúa una expresión en un contexto que es modificado por los filtros que se ceden como argumentos, en este caso la expresión que evalúa es SUM, es decir, que suma la columna conteo de la base de datos graduados, seguido de la expresión se aplica la función FILTER, dicha función devuelve una tabla que representa un subconjunto de otra tabla, su sintaxis incluye una tabla y el filtro a aplicar, en este caso para definir la tabla se usa la función ALLSELECTED que omite los filtros que se hayan aplicado, pero dicha omisión es solo aplicada dentro de la visualización en la que se ejecuta; para definir el filtro se usa la función ISONORAFTER, que es una función booleana que emula el comportamiento de una cláusula “Comenzar en” y devuelve verdadero para una fila que cumple con todos los parámetros de condición; en primer lugar se indica la columna a la que se quiere aplicar la función, en este caso YEAR_SEMESTER, seguido de la función MAX que encuentra el valor más grande de la misma columna y por último se le indica el orden de clasificación, DESC que señala orden descendente. Para obtener más información sobre las funciones DAX puede ingresar a <a href="https://docs.microsoft.com/en-us/dax/">referencia de la función DAX</a>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Luego de tener la formula DAX haga clic sobre el icono de chulo para guardarla; agregue los campos YEAR_SEMESTER, SEDE_NOMBRE_ADM y Total acumulado por periodo a los estantes eje, leyenda y valores respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4graficoareas-fig"></span>
+<img src="Imágenes/powerbi121.jpg" alt="Añadir variables a los estantes del gráfico" width="90%" />
+<p class="caption">
+Figura 3.118: Añadir variables a los estantes del gráfico
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Debe ordenar el eje x como se mostró en secciones anteriores, cambie el nombre de los campos ubicados en los estantes del gráfico por Periodo, Sede de admisión, Total acumulado de graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5graficoareas-fig"></span>
+<img src="Imágenes/powerbi122.jpg" alt="Cambiar nombre de las variables" width="90%" />
+<p class="caption">
+Figura 3.119: Cambiar nombre de las variables
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Para dar formato al gráfico siga los pasos que ya se han mencionado para la leyenda y los ejes, el color de los datos debe ser modificado, asigne los colores “5BC0DE”, “8CC63F”, “C1272D”, “0071BC”, “F15A24”, “FBB03B”, “93278F”, a las sedes Amazonía, Bogotá, Caribe, Manizales, Medellín, Orinoquía y Palmira respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6graficoareas-fig"></span>
+<img src="Imágenes/powerbi123.jpg" alt="Dar formato y color a los datos" width="90%" />
+<p class="caption">
+Figura 3.120: Dar formato y color a los datos
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Por último, desactive el título del gráfico y active el borde.</li>
+</ol>
 
 </div>
 </div>

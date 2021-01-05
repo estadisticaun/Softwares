@@ -949,3 +949,47 @@ knitr::include_graphics("Imágenes/powerbi115.jpg")
 ```
 
 Al seleccionar la sede Amazonía se identifican 5 periodos consecutivos de aumento de estudiantes graduados, seguido de una disminución fuerte en el periodo 2012-1, el total de estudiantes graduados para esta sede en todos los periodos es de 271.
+
+#### Gráfico de áreas {#graficodeareaspowerbi}
+
+Este tipo de gráficos son un gráfico de líneas en el que el área entre la línea y el eje aparece sombreada con un color; son usados para visualizar el comportamiento de una medida a lo largo del tiempo, en este caso se realizara un gráfico de área que permite observar el total acumulado del número de graduados por sede de admisión.
+
+1.	Trabajando sobre el mismo dashboard en el que se creo el gráfico de cascada agregue el gráfico de áreas.
+
+```{r paso1graficoareas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar gráfico de áreas', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi116.jpg")
+```
+
+2.	Es necesario crear una nueva medida que realice la suma acumulada del número de estudiantes graduados por periodo, para esto haga clic sobre el botón Nueva medida ubicado en la barra de herramientas.
+
+```{r paso2graficoareas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear una nueva medida', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi119.jpg")
+```
+
+3.	En este punto en necesario escribir una formula DAX que realice el calculo deseado, se usaran 7 funciones DAX, en el recuadro que se abre al seleccionar nueva medida debe escribir la formula y seleccionar coma en el recuadro de formato:
+
+```{r paso3graficoareas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Escribir la nueva medida', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi120.jpg")
+```
+
+La función CALCULATE evalúa una expresión en un contexto que es modificado por los filtros que se ceden como argumentos, en este caso la expresión que evalúa es SUM, es decir, que suma la columna conteo de la base de datos graduados, seguido de la expresión se aplica la función FILTER, dicha función devuelve una tabla que representa un subconjunto de otra tabla, su sintaxis incluye una tabla y el filtro a aplicar, en este caso para definir la tabla se usa la función ALLSELECTED que omite los filtros que se hayan aplicado, pero dicha omisión es solo aplicada dentro de la visualización en la que se ejecuta; para definir el filtro se usa la función ISONORAFTER, que es una función booleana que emula el comportamiento de una cláusula “Comenzar en” y devuelve verdadero para una fila que cumple con todos los parámetros de condición; en primer lugar se indica la columna a la que se quiere aplicar la función, en este caso YEAR_SEMESTER, seguido de la función MAX que encuentra el valor más grande de la misma columna y por último se le indica el orden de clasificación, DESC que señala orden descendente. Para obtener más información sobre las funciones DAX puede ingresar a [referencia de la función DAX](https://docs.microsoft.com/en-us/dax/).
+
+4.	Luego de tener la formula DAX haga clic sobre el icono de chulo para guardarla; agregue los campos YEAR_SEMESTER, SEDE_NOMBRE_ADM y Total acumulado por periodo a los estantes eje, leyenda y valores respectivamente.
+
+```{r paso4graficoareas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir variables a los estantes del gráfico', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi121.jpg")
+```
+
+5.	Debe ordenar el eje x como se mostró en secciones anteriores, cambie el nombre de los campos ubicados en los estantes del gráfico por Periodo, Sede de admisión, Total acumulado de graduados.
+
+```{r paso5graficoareas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar nombre de las variables', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi122.jpg")
+```
+
+6.	Para dar formato al gráfico siga los pasos que ya se han mencionado para la leyenda y los ejes, el color de los datos debe ser modificado, asigne los colores “5BC0DE”, “8CC63F”, “C1272D”, “0071BC”, “F15A24”, “FBB03B”, “93278F”, a las sedes Amazonía, Bogotá, Caribe, Manizales, Medellín, Orinoquía y Palmira respectivamente.
+
+```{r paso6graficoareas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dar formato y color a los datos', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi123.jpg")
+```
+
+7.	Por último, desactive el título del gráfico y active el borde.
