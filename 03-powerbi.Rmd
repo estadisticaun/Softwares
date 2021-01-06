@@ -1049,5 +1049,74 @@ De esta manera se da por terminado este dashboard que analiza el número de estu
 knitr::include_graphics("Imágenes/powerbi131.jpg")
 ```
 
+#### Medidores 
+Este tipo de gráficos poseen un arco circular y muestran un valor único que mide el progreso hacia un objetivo o indicador clave de rendimiento. En este caso el gráfico de medidor será usado para analizar como las sedes de la Universidad Nacional se comportan a nivel de porcentaje de graduados por periodo; inicialmente se identifica que porcentaje del total de graduados corresponde a cada sede, cabe aclarar que se tomara en cuenta la sede de matrícula, para después usar este valor como porcentaje de meta o valor de destino de la sede en el periodo que se seleccione.
 
+Agregue los campos SEDE_NOMBRE_MAT y Conteo al estante valores en una nueva página de trabajo, no es necesario editar o dar formato a esta visualización ya que solo será una guía.
 
+```{r verconteiporsedematricula-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Conteo por sede de matrícula', out.width='50%'}
+knitr::include_graphics("Imágenes/powerbi132.jpg")
+```
+
+En el menú desplegable de la variable conteo seleccione mostrar valor como porcentaje del total general.
+
+```{r verporcentajeporsedematricula-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Porcetaje por sede de matrícula', out.width='50%'}
+knitr::include_graphics("Imágenes/powerbi133.jpg")
+```
+
+Observe que la sede Amazonía ocupa el $0.11\%$ del total de graduados, es decir que a nivel de periodo este valor de porcentaje será tomado como el valor de meta, por ejemplo, si en el periodo 2009-1 se graduaron 4956 estudiantes se espera que el $0.11\%$ de esos estudiantes corresponda a sede de matrícula Amazonía. Como para cada sede el porcentaje esperado es diferente se hará uso del Editor Power Query para crear una nueva base de datos que contenga las columnas necesarias para crear el gráfico de medidor como se desea.
+
+1.	Haga clic en el botón transformar datos y duplique la tabla Graduados.
+
+2.	Cambie el nombre de la tabla duplicada por Agrupación por periodo y matrícula, luego haga clic en botón agrupar por.
+
+```{r agruparporperiodosede-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Porcentaje por sede de matrícula', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi134.jpg")
+```
+
+3.	En la ventana agrupar por seleccione uso avanzado, elija el campo YEAR_SEMESTER, haga clic sobre agregar agrupación y elija la variable SEDE_NOMBRE_MAT, como nombre de matrícula escriba Total sede y periodo.
+
+```{r agruparporperiodosedematricula-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agrupar por periodo y sede de matrícula', out.width='70%'}
+knitr::include_graphics("Imágenes/powerbi135.jpg")
+```
+
+4.	Se obtiene una tabla que muestra el total de estudiantes graduados en cada periodo por sede, por ejemplo, para el periodo 2009-1 se observa que 3323 estudiantes se graduaron teniendo como sede de matrícula a Bogotá.
+
+```{r agrpacionporperiodoymatricula-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agrupación por periodo y matrícula', out.width='60%'}
+knitr::include_graphics("Imágenes/powerbi136.jpg")
+```
+
+5.	Nuevamente duplique la tabla graduados, cambie su nombre por Agrupación periodo, seleccione agrupar por, en la ventana elija el campo YEAR_SEMESTER y como nombre de la columna escriba Total por periodo. Obtendrá una tabla que contiene el total de estudiantes graduados por periodo, por ejemplo, para el periodo 2009-1 se graduaron 4956 estudiantes.
+
+```{r agruparporperiodoa-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agrupación por periodo', out.width='50%'}
+knitr::include_graphics("Imágenes/powerbi137.jpg")
+```
+
+6.	Es momento de combinar las agrupaciones creadas anteriormente para esto haga clic sobre le botón combinar y seleccione combinar consultas, sobre la ventana combinar elija como segunda tabla Agrupación por periodo y matricula, de ambas tablas seleccione la variable YEAR_SEMESTER.
+
+```{r combinaragrupaciones-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Combinar las agrupaciones', out.width='70%'}
+knitr::include_graphics("Imágenes/powerbi138.jpg")
+```
+
+7.	Expanda la columna agrupación por periodo y matricula por las columnas SEDE_NOMBRE_MAT y Total sede y periodo.
+
+```{r expandiragrupacionperiodoymatricla-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Expandir la tabla agrupación por periodo y matrícula', out.width='70%'}
+knitr::include_graphics("Imágenes/powerbi139.jpg")
+```
+
+8.	Cambie el nombre de estas dos nuevas columnas por SEDE_NOMBRE_MAT y Total por sede y periodo, mueva la variable SEDE_NOMBRE_MAT a la derecha de YEAR_SEMESTER.
+
+```{r cambiarnombreyordenarcolumnas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar nombre y ordenar columnas', out.width='65%'}
+knitr::include_graphics("Imágenes/powerbi140.jpg")
+```
+9.	Hasta el momento se tiene el total de estudiantes graduados en cada periodo y también el total de estudiantes graduados en cada periodo por sede, la idea es trabajar los valores con porcentajes por tanto se debe añadir una columna que contenga el porcentaje que representan cada sede sobre el total de cada periodo, por ejemplo, que porcentaje es 3323 de 4956 que fue el total de graduados en el periodo 2009-1. Para realizar este calculo se agrega una columna personalizada la cual debe llamarse Porcentaje periodo y en la formula debe dividir la columna Total sede y periodo por la columna Total por periodo.
+
+```{r columnapersonalizadadeporcentajeperiodo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear columna personalizada para calcular el porcentaje por periodo', out.width='80%'}
+knitr::include_graphics("Imágenes/powerbi141.jpg")
+```
+
+10.	Cambie el tipo de dato de la nueva columna a porcentaje, esta columna representan en porcentaje la cantidad de estudiantes graduados en un periodo por sede, por ejemplo, $67.05\%$ representa el porcentaje del total de estudiantes graduados en el periodo 2009-1 que corresponden a la sede Bogotá.
+
+```{r columnapersonalizadadeporcentajeperiodocambiaraporcetaje-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar tipo de dato a porcentaje', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi142.jpg")
+```

@@ -6145,6 +6145,131 @@ La función CALCULATE evalúa una expresión en un contexto que es modificado po
   Por último, desactive el título del gráfico y active el borde.
 \end{enumerate}
 
+\hypertarget{gruxe1fico-de-la-barra-de-herramientas}{%
+\subsubsection{Gráfico de la barra de herramientas}\label{gruxe1fico-de-la-barra-de-herramientas}}
+
+Este tipo de gráficos son útiles para visualizar y detectar rápidamente que categoría de datos tiene la clasificación más alta (el valor mayor). Los gráficos de barra de herramientas con eficaces para mostrar un cambio de clasificación, con el intervalo más alto (valor) en la parte superior de cada periodo de tiempo.
+El dashboard en construcción contiene gráficos útiles que permiten visualizar los periodos de cambio de por sede y también su total acumulado de graduados, es momento de agregar un gráfico como el de barra de herramientas que a demás de permitir visualizar la evolución también permitirá identificar la clasificación de estas sedes por cada periodo.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Libere un espacio en la parte inferior del lienzo de trabajo y desde el panel visualizaciones seleccione gráfico de la barra de herramientas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi124} 
+
+}
+
+\caption{Añadir gráfico de la barra de herramientas al tablero}\label{fig:paso1graficobarradeherramientas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Agregue los campos YEAR\_SEMESTER, SEDE\_NOMBRE\_ADM y conteo a los estantes eje, leyenda y valores respectivamente.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi125} 
+
+}
+
+\caption{Agregar variables al gráfico}\label{fig:paso2graficobarradeherramientas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Nuevamente debe ordenar el eje x y cambiar el nombre de los campos por Periodo, Sede de admisión y Número de graduados.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi126} 
+
+}
+
+\caption{Orden del eje x y cambio de nombre a variables}\label{fig:paso3graficobarradeherramientas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Hasta el momento el gráfico es de gran utilidad para visualizar la evolución del número de estudiantes graduados y la clasificación por sedes. Replique los pasos realizados en secciones anteriores para dar formato al gráfico y el paso 6 de \ref{graficodeareaspowerbi} para dar color a los datos, finalmente, desactive el título del gráfico y active el título.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi127} 
+
+}
+
+\caption{Formato y color de datos gráfico de cascada}\label{fig:paso4graficobarradeherramientas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Observe que este gráfico no posee eje Y, por lo que es importante activar las etiquetas para visualizar la cantidad de estudiantes graduados en cada periodo, para esto en la pestaña formato active las etiquetas, enmostrar unidades seleccione ninguno, la orientación será vertical, active texto de desbordamiento, por último, aumente el tamaño del texto a 12pt.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi128} 
+
+}
+
+\caption{Activar etiquetas}\label{fig:paso5graficobarradeherramientas-fig}
+\end{figure}
+
+Como detalles finales del tablero se de agregar un matriz que en sus filas tendrá las variables YEAR y SEMETRE, en columnas SEDE\_NOMBRE\_ADM y en valores la variable conteo; finalmente se deben agregar tres botones que permitan alternar los gráficos de áreas, gráfico de la barra de herramientas y el gráfico de cascada, por comodidad y estética se decide activar el título de los gráficos, para el gráfico de la barra de herramientas el título debe ser Clasificación histórica de las sedes; para el gráfico de áreas debe ser evolución acumulada y por último para el gráfico de cascada será análisis periodo a periodo.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi129} 
+
+}
+
+\caption{Botones, matriz y títulos de los gráficos}\label{fig:detallesgraficobarradeherramientas-fig}
+\end{figure}
+
+Al final del panel izquierdo se ubica un espacio en blanco el cual será usado para añadir un botón con acción de URL que permita al usuario ir a los metadatos que se ubican en la página web de las estadísticas de la Universidad Nacional, agregue un botón en blanco y active la pestaña acción, como tipo seleccione URL web y pegue la URL de los metadatos.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi130} 
+
+}
+
+\caption{Añadir un botón con acción de URL web}\label{fig:botonurlgraficobarradeherramientas-fig}
+\end{figure}
+
+Añada un texto al botón que diga Ver metadatos, cambie el tamaño y la alineación del texto para que coincida con los botones creados anteriormente.
+
+De esta manera se da por terminado este dashboard que analiza el número de estudiantes graduados por sede de admisión a través de tres gráficos y una tabla de texto, permite interactividad con el usuario al tener una segmentación de datos y botones que permiten la alternancia entre gráficos y un vínculo web.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi131} 
+
+}
+
+\caption{Dashboard: Sede de admisión}\label{fig:tablerosededeadmision-fig}
+\end{figure}
+
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}
 
