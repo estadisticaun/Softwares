@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-01-05}
+\date{2021-01-06}
 
 \begin{document}
 \maketitle
@@ -6268,6 +6268,188 @@ De esta manera se da por terminado este dashboard que analiza el número de estu
 }
 
 \caption{Dashboard: Sede de admisión}\label{fig:tablerosededeadmision-fig}
+\end{figure}
+
+\hypertarget{medidores}{%
+\subsubsection{Medidores}\label{medidores}}
+
+Este tipo de gráficos poseen un arco circular y muestran un valor único que mide el progreso hacia un objetivo o indicador clave de rendimiento. En este caso el gráfico de medidor será usado para analizar como las sedes de la Universidad Nacional se comportan a nivel de porcentaje de graduados por periodo; inicialmente se identifica que porcentaje del total de graduados corresponde a cada sede, cabe aclarar que se tomara en cuenta la sede de matrícula, para después usar este valor como porcentaje de meta o valor de destino de la sede en el periodo que se seleccione.
+
+Agregue los campos SEDE\_NOMBRE\_MAT y Conteo al estante valores en una nueva página de trabajo, no es necesario editar o dar formato a esta visualización ya que solo será una guía.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imágenes/powerbi132} 
+
+}
+
+\caption{Conteo por sede de matrícula}\label{fig:verconteiporsedematricula-fig}
+\end{figure}
+
+En el menú desplegable de la variable conteo seleccione mostrar valor como porcentaje del total general.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imágenes/powerbi133} 
+
+}
+
+\caption{Porcetaje por sede de matrícula}\label{fig:verporcentajeporsedematricula-fig}
+\end{figure}
+
+Observe que la sede Amazonía ocupa el \(0.11\%\) del total de graduados, es decir que a nivel de periodo este valor de porcentaje será tomado como el valor de meta, por ejemplo, si en el periodo 2009-1 se graduaron 4956 estudiantes se espera que el \(0.11\%\) de esos estudiantes corresponda a sede de matrícula Amazonía. Como para cada sede el porcentaje esperado es diferente se hará uso del Editor Power Query para crear una nueva base de datos que contenga las columnas necesarias para crear el gráfico de medidor como se desea.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Haga clic en el botón transformar datos y duplique la tabla Graduados.
+\item
+  Cambie el nombre de la tabla duplicada por Agrupación por periodo y matrícula, luego haga clic en botón agrupar por.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi134} 
+
+}
+
+\caption{Porcentaje por sede de matrícula}\label{fig:agruparporperiodosede-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  En la ventana agrupar por seleccione uso avanzado, elija el campo YEAR\_SEMESTER, haga clic sobre agregar agrupación y elija la variable SEDE\_NOMBRE\_MAT, como nombre de matrícula escriba Total sede y periodo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{Imágenes/powerbi135} 
+
+}
+
+\caption{Agrupar por periodo y sede de matrícula}\label{fig:agruparporperiodosedematricula-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Se obtiene una tabla que muestra el total de estudiantes graduados en cada periodo por sede, por ejemplo, para el periodo 2009-1 se observa que 3323 estudiantes se graduaron teniendo como sede de matrícula a Bogotá.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/powerbi136} 
+
+}
+
+\caption{Agrupación por periodo y matrícula}\label{fig:agrpacionporperiodoymatricula-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Nuevamente duplique la tabla graduados, cambie su nombre por Agrupación periodo, seleccione agrupar por, en la ventana elija el campo YEAR\_SEMESTER y como nombre de la columna escriba Total por periodo. Obtendrá una tabla que contiene el total de estudiantes graduados por periodo, por ejemplo, para el periodo 2009-1 se graduaron 4956 estudiantes.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Imágenes/powerbi137} 
+
+}
+
+\caption{Agrupación por periodo}\label{fig:agruparporperiodoa-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Es momento de combinar las agrupaciones creadas anteriormente para esto haga clic sobre le botón combinar y seleccione combinar consultas, sobre la ventana combinar elija como segunda tabla Agrupación por periodo y matricula, de ambas tablas seleccione la variable YEAR\_SEMESTER.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{Imágenes/powerbi138} 
+
+}
+
+\caption{Combinar las agrupaciones}\label{fig:combinaragrupaciones-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Expanda la columna agrupación por periodo y matricula por las columnas SEDE\_NOMBRE\_MAT y Total sede y periodo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{Imágenes/powerbi139} 
+
+}
+
+\caption{Expandir la tabla agrupación por periodo y matrícula}\label{fig:expandiragrupacionperiodoymatricla-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Cambie el nombre de estas dos nuevas columnas por SEDE\_NOMBRE\_MAT y Total por sede y periodo, mueva la variable SEDE\_NOMBRE\_MAT a la derecha de YEAR\_SEMESTER.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.65\linewidth]{Imágenes/powerbi140} 
+
+}
+
+\caption{Cambiar nombre y ordenar columnas}\label{fig:cambiarnombreyordenarcolumnas-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Hasta el momento se tiene el total de estudiantes graduados en cada periodo y también el total de estudiantes graduados en cada periodo por sede, la idea es trabajar los valores con porcentajes por tanto se debe añadir una columna que contenga el porcentaje que representan cada sede sobre el total de cada periodo, por ejemplo, que porcentaje es 3323 de 4956 que fue el total de graduados en el periodo 2009-1. Para realizar este calculo se agrega una columna personalizada la cual debe llamarse Porcentaje periodo y en la formula debe dividir la columna Total sede y periodo por la columna Total por periodo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi141} 
+
+}
+
+\caption{Crear columna personalizada para calcular el porcentaje por periodo}\label{fig:columnapersonalizadadeporcentajeperiodo-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Cambie el tipo de dato de la nueva columna a porcentaje, esta columna representan en porcentaje la cantidad de estudiantes graduados en un periodo por sede, por ejemplo, \(67.05\%\) representa el porcentaje del total de estudiantes graduados en el periodo 2009-1 que corresponden a la sede Bogotá.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi142} 
+
+}
+
+\caption{Cambiar tipo de dato a porcentaje}\label{fig:columnapersonalizadadeporcentajeperiodocambiaraporcetaje-fig}
 \end{figure}
 
 \hypertarget{flourish}{%

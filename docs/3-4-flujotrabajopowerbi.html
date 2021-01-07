@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-01-06" />
+<meta name="date" content="2021-01-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1370,7 +1370,7 @@ Figura 3.131: Porcentaje por sede de matrícula
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>En la ventana agrupar por seleccione uso avanzado, elija el campo YEAR_SEMESTER, haga clic sobre agregar agrupación y elija la variable SEDE_NOMBRE_MAT, como nombre de matrícula escriba Total sede y periodo.</li>
+<li>En la ventana agrupar por seleccione uso avanzado, elija el campo YEAR_SEMESTER, haga clic sobre agregar agrupación y elija la variable SEDE_NOMBRE_MAT, como nombre de columna escriba Total sede y periodo.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:agruparporperiodosedematricula-fig"></span>
 <img src="Imágenes/powerbi135.jpg" alt="Agrupar por periodo y sede de matrícula" width="70%" />
@@ -1415,7 +1415,7 @@ Figura 3.136: Expandir la tabla agrupación por periodo y matrícula
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>Cambie el nombre de estas dos nuevas columnas por SEDE_NOMBRE_MAT y Total por sede y periodo, mueva la variable SEDE_NOMBRE_MAT a la derecha de YEAR_SEMESTER.</li>
+<li>Cambie el nombre de estas dos nuevas columnas por SEDE_NOMBRE_MAT y Total por sede y periodo, mueva la variable SEDE_NOMBRE_MAT a la derecha de YEAR_SEMESTER y cambie el nombre de la tabla por DatosMedidor.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:cambiarnombreyordenarcolumnas-fig"></span>
 <img src="Imágenes/powerbi140.jpg" alt="Cambiar nombre y ordenar columnas" width="65%" />
@@ -1424,7 +1424,7 @@ Figura 3.137: Cambiar nombre y ordenar columnas
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>Hasta el momento se tiene el total de estudiantes graduados en cada periodo y también el total de estudiantes graduados en cada periodo por sede, la idea es trabajar los valores con porcentajes por tanto se debe añadir una columna que contenga el porcentaje que representan cada sede sobre el total de cada periodo, por ejemplo, que porcentaje es 3323 de 4956 que fue el total de graduados en el periodo 2009-1. Para realizar este calculo se agrega una columna personalizada la cual debe llamarse Porcentaje periodo y en la formula debe dividir la columna Total sede y periodo por la columna Total por periodo.</li>
+<li>Hasta el momento se tiene el total de estudiantes graduados en cada periodo y también el total de estudiantes graduados en cada periodo y cada sede, la idea es trabajar los valores con porcentajes por tanto se debe añadir una columna que contenga el porcentaje que representa cada sede sobre el total de cada periodo, por ejemplo, que porcentaje es 3323 (cantidad de graduados sede Bogotá periodo 2009-1) de 4956 que fue el total de graduados en el periodo 2009-1. Para realizar este calculo se agrega una columna personalizada la cual debe llamarse Porcentaje periodo y en la formula debe dividir la columna Total sede y periodo por la columna Total por periodo.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:columnapersonalizadadeporcentajeperiodo-fig"></span>
 <img src="Imágenes/powerbi141.jpg" alt="Crear columna personalizada para calcular el porcentaje por periodo" width="80%" />
@@ -1433,12 +1433,189 @@ Figura 3.138: Crear columna personalizada para calcular el porcentaje por period
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>Cambie el tipo de dato de la nueva columna a porcentaje, esta columna representan en porcentaje la cantidad de estudiantes graduados en un periodo por sede, por ejemplo, <span class="math inline">\(67.05\%\)</span> representa el porcentaje del total de estudiantes graduados en el periodo 2009-1 que corresponden a la sede Bogotá.</li>
+<li>Cambie el tipo de dato de la nueva columna a porcentaje, esta columna representa en porcentaje la cantidad de estudiantes graduados en un periodo por sede, por ejemplo, <span class="math inline">\(67.05\%\)</span> representa el porcentaje del total de estudiantes graduados en el periodo 2009-1 que corresponden a la sede Bogotá.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:columnapersonalizadadeporcentajeperiodocambiaraporcetaje-fig"></span>
 <img src="Imágenes/powerbi142.jpg" alt="Cambiar tipo de dato a porcentaje" width="90%" />
 <p class="caption">
 Figura 3.139: Cambiar tipo de dato a porcentaje
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>En este momento ya se tiene establecido el valor en porcentaje y conteo que toma cada sede en cada uno de sus periodos, hace falta agregar el valor de destino o meta tanto en porcentaje como en conteo para cada sede y en cada uno de los periodos. Recuerde que dicho porcentaje se estable a partir de la proporción del total que ocupa cada sede, a modo de ejemplo este valor debe ser <span class="math inline">\(62.03\%\)</span> para la sede Bogotá y en conteo este valor debe ser 3074, esto por que este es el valor que representa el porcentaje de meta del total de graduados en el periodo 2009-1. Se iniciará agregando la variable con el total de graduados por sede, independiente del periodo, para esto, duplique la tabla de graduados, cambie el nombre por Agrupación sede, seleccione agrupar por, elija la variable SEDDE_NOMBRE_MAT, la columna nueva debe llamarse Total por sede.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:agrupacionporsede-fig"></span>
+<img src="Imágenes/powerbi143.jpg" alt="Agrupación por sede" width="60%" />
+<p class="caption">
+Figura 3.140: Agrupación por sede
+</p>
+</div>
+<ol start="12" style="list-style-type: decimal">
+<li>Ubíquese nuevamente sobre la tabla DatosMedidor y realice la combinación de esta con la tabla Agrupación sede, dicha combinación debe ser hecha usando la columna SEDE_NOMBRE_MAT; expanda la nueva columna por la variable Total por sede, cambie el nombre de esta misma por Total por sede.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:combinaciondatosmedidoryagrupacionsede-fig"></span>
+<img src="Imágenes/powerbi144.jpg" alt="Combinación de tablas DatosMedidor y Agrupación por sede" width="90%" />
+<p class="caption">
+Figura 3.141: Combinación de tablas DatosMedidor y Agrupación por sede
+</p>
+</div>
+<ol start="13" style="list-style-type: decimal">
+<li><p>Para calcular el porcentaje que ocupa cada sede del total es necesario incluir una nueva columna que contenga el total de registros de la base de datos Graduados para que sea el divisor de la columna Total por sede, para esto duplique nuevamente la tabla Graduados y cambie su nombre por Total.</p></li>
+<li><p>Agregue una nueva columna llamada Cantidad y en la formula escriba 1.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:crearcolumnacantidadentotal-fig"></span>
+<img src="Imágenes/powerbi145.jpg" alt="Crear columna personalizada de cantidad" width="80%" />
+<p class="caption">
+Figura 3.142: Crear columna personalizada de cantidad
+</p>
+</div>
+<ol start="15" style="list-style-type: decimal">
+<li>Ahora debe agrupar la tabla por esta columna que acaba de crear, obtendrá una tabla con dos columnas una de ellas es cantidad que tendrá el número 1 y la segunda corresponde a Total en este caso 101840 que coincide con el total de registros que contiene la base de datos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:tabladetotal-fig"></span>
+<img src="Imágenes/powerbi146.jpg" alt="Tabla de total" width="60%" />
+<p class="caption">
+Figura 3.143: Tabla de total
+</p>
+</div>
+<ol start="16" style="list-style-type: decimal">
+<li>Diríjase a la tabla DatosMedidor y cree una nueva columna igual a la mostrada en el paso 14, luego debe combinar esta tabla con Total usando la columna Cantidad ya que es la columna que ambas tablas poseen.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:combinardatoscontotal-fig"></span>
+<img src="Imágenes/powerbi147.jpg" alt="Combinación de DatosMedidor con Total" width="90%" />
+<p class="caption">
+Figura 3.144: Combinación de DatosMedidor con Total
+</p>
+</div>
+<ol start="17" style="list-style-type: decimal">
+<li>Debe expandir la última columna por la variable Total y cambie su nombre por Total, quite la columna Cantidad, lleve la columna Porcentaje periodo al final y la columna Total ubíquela al lado derecho de la variable SEDE_NOMBRE_MAT.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:expandirportotal-fig"></span>
+<img src="Imágenes/powerbi148.jpg" alt="Expandir por Total y reordenar columnas" width="90%" />
+<p class="caption">
+Figura 3.145: Expandir por Total y reordenar columnas
+</p>
+</div>
+<ol start="18" style="list-style-type: decimal">
+<li>Es momento de agregar una nueva columna que represente el porcentaje que ocupa cada sede sobre el total, añada una nueva columna personalizada, asigne como nombre Porcentaje de meta y en la formula debe dividir Total por sede sobre Total.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:porcentajedemeta-fig"></span>
+<img src="Imágenes/powerbi149.jpg" alt="Crear columna de porcentaje de meta" width="80%" />
+<p class="caption">
+Figura 3.146: Crear columna de porcentaje de meta
+</p>
+</div>
+<ol start="19" style="list-style-type: decimal">
+<li>Cambie el tipo de dato a porcentaje, la interpretación de estos dos porcentajes es sencilla, porcentaje periodo representa el porcentaje que ocupo cada sede del total de graduados en cada periodo y porcentaje de meta representa el porcentaje de graduados que debía ocupar. Por ejemplo, la primera fila representa el periodo 2009-1 y la sede Bogotá, en este caso esta sede ocupo el <span class="math inline">\(67.05\%\)</span> del total de graduados en ese periodo, cuando en realidad se esperada que solo ocupara el <span class="math inline">\(62.03%\)</span>, es decir, que se superó la meta.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:porccentajedemetaenlabase-fig"></span>
+<img src="Imágenes/powerbi150.jpg" alt="Porcentaje de meta" width="90%" />
+<p class="caption">
+Figura 3.147: Porcentaje de meta
+</p>
+</div>
+<ol start="20" style="list-style-type: decimal">
+<li>En este momento el único valor faltante es el valor de meta, pero en conteo, para esto agregue una nueva columna personalizada llamada Total meta, en su fórmula debe multiplicar las columnas Porcentaje de meta y Total por periodo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:totaldemeta-fig"></span>
+<img src="Imágenes/powerbi151.jpg" alt="Crear columna de total de meta" width="80%" />
+<p class="caption">
+Figura 3.148: Crear columna de total de meta
+</p>
+</div>
+<ol start="21" style="list-style-type: decimal">
+<li>Cambie el tipo de dato de esta última columna a número entero, ubique esta variable al lado derecho de Total por sede y periodo. La interpretación de esta columna es equivalente a la de Porcentaje periodo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:totaldemetaenlabasededatos-fig"></span>
+<img src="Imágenes/powerbi152.jpg" alt="Total meta" width="90%" />
+<p class="caption">
+Figura 3.149: Total meta
+</p>
+</div>
+<ol start="22" style="list-style-type: decimal">
+<li>Finalmente debe hacer clic en cerrar y aplicar para guardar la base de datos y usarla posteriormente en la creación de los medidores. Ya ubicado en el lienzo de trabajo se observa que en el panel Campos se tienen 5 tablas de la cuales solo interesan 3 que son Graduados, Modalidadfromación y DatosMedidor, las demás que corresponden a las agrupaciones deben ser ocultadas.</li>
+</ol>
+<p>En este punto ya se tiene la base de datos construida de una manera que permite crear el gráfico de medidor como se desea, elimine la tabla que se realizo al inicio de esta sección y cambie el nombre de la pagina de trabajo por Metas por sede de matrícula. Ahora para crear el gráfico de medidores debe seguir estos pasos.</p>
+<ol style="list-style-type: decimal">
+<li>Desde el panel visualizaciones haga clic sobre Medidor.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1medidor-fig"></span>
+<img src="Imágenes/powerbi153.jpg" alt="Añadir medidor al lienzo" width="90%" />
+<p class="caption">
+Figura 3.150: Añadir medidor al lienzo
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Añada los campos Porcentaje periodo y Porcentaje de meta a los estantes Valor y Valor de destino respectivamente, los campos Total por sede y periodo y Total meta deben ubicarse en la tarjeta Información sobre herramientas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2medidor-fig"></span>
+<img src="Imágenes/powerbi154.jpg" alt="Agregar campos a los estantes del medidor" width="90%" />
+<p class="caption">
+Figura 3.151: Agregar campos a los estantes del medidor
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Debe cambiar el nombre los campos agregados a la visualización por Porcentaje real, Porcentaje esperado, Número de estudiantes graduados y Número esperado de estudiantes graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3medidor-fig"></span>
+<img src="Imágenes/powerbi155.jpg" alt="Cambiar el formato de los totales" width="90%" />
+<p class="caption">
+Figura 3.152: Cambiar el formato de los totales
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Para dar formato a este gráfico haga clic sobre la columna Total meta ubicada en el panel campos y haga clic sobre la coma ubicada en formato; repita esta operación para Total sede y periodo.</p></li>
+<li><p>En este momento la visualización se está calculando de manera general y la idea inicial es ver este progreso a nivel de sede y periodo, por tanto, es necesario agregar dos segmentaciones de datos una con el campo SEDE_NOMBRE_MAT y otra con YEAR_SEMESTER, recuerde darte el formato mostrado en secciones anteriores y activar la selección única.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5medidor-fig"></span>
+<img src="Imágenes/powerbi156.jpg" alt="Agregar segmentaciones" width="90%" />
+<p class="caption">
+Figura 3.153: Agregar segmentaciones
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Los valores que se muestran en el medidor los cuales corresponden a Porcentaje periodo y Porcentaje de meta deben tener formato de porcentaje, para esto haga clic sobre uno de ellos y seleccione el icono de porcentaje ubicado en formato, repita lo mismo para el otro valor. Si selecciona sede Bogotá y periodo 2009-1, obtendrá el siguiente tablero, el cual permite identificar que en dicho periodo la sede seleccionada supero la meta propuesta.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6medidor-fig"></span>
+<img src="Imágenes/powerbi157.jpg" alt="Cambiar formato de porcentajes" width="90%" />
+<p class="caption">
+Figura 3.154: Cambiar formato de porcentajes
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Es momento de dar formato al medidor, para esto en la pestaña colores de datos asigne el color “5BC0DE” al relleno y para la meta seleccione color negro. El color de las etiquetas y destino debe ser negro y el tamaño del texto 14pt; cambie el color de la pestaña valor del globo a negro; el título de la visualización será Indicador de estudiantes graduados en color negro, alineación central y tamaño 25pt, finalmente debe activar el borde.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7medidor-fig"></span>
+<img src="Imágenes/powerbi158.jpg" alt="Formato del medidor" width="90%" />
+<p class="caption">
+Figura 3.155: Formato del medidor
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>En el espacio en blanco ubicado en el lateral izquierdo debe agregar un grafico circular que permita identificar la distribución de las sedes de matrícula por periodo, añada el gráfico circular y asigne los campos SEDE_NOMBRE_MAT y Conteo a los estantes leyenda y valores respectivamente, estos campos los debe tomar de la base de datos Graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8medidor-fig"></span>
+<img src="Imágenes/powerbi159.jpg" alt="Agregar gráfico circular" width="90%" />
+<p class="caption">
+Figura 3.156: Agregar gráfico circular
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Note que este último gráfico esta siendo afectado por las segmentaciones que se han realizado, la única segmentación que debe afectar este gráfico es la de periodo, por tanto, debe editar la interacción entre la segmentación de sede y el gráfico circular.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso9medidor-fig"></span>
+<img src="Imágenes/powerbi160.jpg" alt="Eliminar interacción entre la segmentación sede y el gráfico circular" width="90%" />
+<p class="caption">
+Figura 3.157: Eliminar interacción entre la segmentación sede y el gráfico circular
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>Para dar formato a este último gráfico debe desactivar la leyenda, asignar los colores de datos mostrados en la sección (hacer referencia gráfico de áreas), para la pestaña etiquetas seleccione todas las etiquetas de detalle, en color negro y tamaño 12pt, como título debe escribir Distribución de graduados por sede en color negro, tamaño 25pt y alineación central; finalmente cambie el título de los campos SEDE_NOMBRE_MAT por Sede de matrícula y Conteo por Número de estudiantes graduados; también debe activar el borde.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:tablerofinalmetasporsededematricula-fig"></span>
+<img src="Imágenes/powerbi161.jpg" alt="Dashboard: Metas por sede de matrícula" width="90%" />
+<p class="caption">
+Figura 3.158: Dashboard: Metas por sede de matrícula
 </p>
 </div>
 
