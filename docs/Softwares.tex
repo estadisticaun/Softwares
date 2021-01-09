@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-01-06}
+\date{2021-01-07}
 
 \begin{document}
 \maketitle
@@ -6321,7 +6321,7 @@ Observe que la sede Amazonía ocupa el \(0.11\%\) del total de graduados, es dec
 \setcounter{enumi}{2}
 \tightlist
 \item
-  En la ventana agrupar por seleccione uso avanzado, elija el campo YEAR\_SEMESTER, haga clic sobre agregar agrupación y elija la variable SEDE\_NOMBRE\_MAT, como nombre de matrícula escriba Total sede y periodo.
+  En la ventana agrupar por seleccione uso avanzado, elija el campo YEAR\_SEMESTER, haga clic sobre agregar agrupación y elija la variable SEDE\_NOMBRE\_MAT, como nombre de columna escriba Total sede y periodo.
 \end{enumerate}
 
 \begin{figure}
@@ -6406,7 +6406,7 @@ Observe que la sede Amazonía ocupa el \(0.11\%\) del total de graduados, es dec
 \setcounter{enumi}{7}
 \tightlist
 \item
-  Cambie el nombre de estas dos nuevas columnas por SEDE\_NOMBRE\_MAT y Total por sede y periodo, mueva la variable SEDE\_NOMBRE\_MAT a la derecha de YEAR\_SEMESTER.
+  Cambie el nombre de estas dos nuevas columnas por SEDE\_NOMBRE\_MAT y Total por sede y periodo, mueva la variable SEDE\_NOMBRE\_MAT a la derecha de YEAR\_SEMESTER y cambie el nombre de la tabla por DatosMedidor.
 \end{enumerate}
 
 \begin{figure}
@@ -6423,7 +6423,7 @@ Observe que la sede Amazonía ocupa el \(0.11\%\) del total de graduados, es dec
 \setcounter{enumi}{8}
 \tightlist
 \item
-  Hasta el momento se tiene el total de estudiantes graduados en cada periodo y también el total de estudiantes graduados en cada periodo por sede, la idea es trabajar los valores con porcentajes por tanto se debe añadir una columna que contenga el porcentaje que representan cada sede sobre el total de cada periodo, por ejemplo, que porcentaje es 3323 de 4956 que fue el total de graduados en el periodo 2009-1. Para realizar este calculo se agrega una columna personalizada la cual debe llamarse Porcentaje periodo y en la formula debe dividir la columna Total sede y periodo por la columna Total por periodo.
+  Hasta el momento se tiene el total de estudiantes graduados en cada periodo y también el total de estudiantes graduados en cada periodo y cada sede, la idea es trabajar los valores con porcentajes por tanto se debe añadir una columna que contenga el porcentaje que representa cada sede sobre el total de cada periodo, por ejemplo, que porcentaje es 3323 (cantidad de graduados sede Bogotá periodo 2009-1) de 4956 que fue el total de graduados en el periodo 2009-1. Para realizar este calculo se agrega una columna personalizada la cual debe llamarse Porcentaje periodo y en la formula debe dividir la columna Total sede y periodo por la columna Total por periodo.
 \end{enumerate}
 
 \begin{figure}
@@ -6440,7 +6440,7 @@ Observe que la sede Amazonía ocupa el \(0.11\%\) del total de graduados, es dec
 \setcounter{enumi}{9}
 \tightlist
 \item
-  Cambie el tipo de dato de la nueva columna a porcentaje, esta columna representan en porcentaje la cantidad de estudiantes graduados en un periodo por sede, por ejemplo, \(67.05\%\) representa el porcentaje del total de estudiantes graduados en el periodo 2009-1 que corresponden a la sede Bogotá.
+  Cambie el tipo de dato de la nueva columna a porcentaje, esta columna representa en porcentaje la cantidad de estudiantes graduados en un periodo por sede, por ejemplo, \(67.05\%\) representa el porcentaje del total de estudiantes graduados en el periodo 2009-1 que corresponden a la sede Bogotá.
 \end{enumerate}
 
 \begin{figure}
@@ -6450,6 +6450,341 @@ Observe que la sede Amazonía ocupa el \(0.11\%\) del total de graduados, es dec
 }
 
 \caption{Cambiar tipo de dato a porcentaje}\label{fig:columnapersonalizadadeporcentajeperiodocambiaraporcetaje-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  En este momento ya se tiene establecido el valor en porcentaje y conteo que toma cada sede en cada uno de sus periodos, hace falta agregar el valor de destino o meta tanto en porcentaje como en conteo para cada sede y en cada uno de los periodos. Recuerde que dicho porcentaje se estable a partir de la proporción del total que ocupa cada sede, a modo de ejemplo este valor debe ser \(62.03\%\) para la sede Bogotá y en conteo este valor debe ser 3074, esto por que este es el valor que representa el porcentaje de meta del total de graduados en el periodo 2009-1. Se iniciará agregando la variable con el total de graduados por sede, independiente del periodo, para esto, duplique la tabla de graduados, cambie el nombre por Agrupación sede, seleccione agrupar por, elija la variable SEDDE\_NOMBRE\_MAT, la columna nueva debe llamarse Total por sede.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/powerbi143} 
+
+}
+
+\caption{Agrupación por sede}\label{fig:agrupacionporsede-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  Ubíquese nuevamente sobre la tabla DatosMedidor y realice la combinación de esta con la tabla Agrupación sede, dicha combinación debe ser hecha usando la columna SEDE\_NOMBRE\_MAT; expanda la nueva columna por la variable Total por sede, cambie el nombre de esta misma por Total por sede.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi144} 
+
+}
+
+\caption{Combinación de tablas DatosMedidor y Agrupación por sede}\label{fig:combinaciondatosmedidoryagrupacionsede-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\item
+  Para calcular el porcentaje que ocupa cada sede del total es necesario incluir una nueva columna que contenga el total de registros de la base de datos Graduados para que sea el divisor de la columna Total por sede, para esto duplique nuevamente la tabla Graduados y cambie su nombre por Total.
+\item
+  Agregue una nueva columna llamada Cantidad y en la formula escriba 1.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi145} 
+
+}
+
+\caption{Crear columna personalizada de cantidad}\label{fig:crearcolumnacantidadentotal-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{14}
+\tightlist
+\item
+  Ahora debe agrupar la tabla por esta columna que acaba de crear, obtendrá una tabla con dos columnas una de ellas es cantidad que tendrá el número 1 y la segunda corresponde a Total en este caso 101840 que coincide con el total de registros que contiene la base de datos.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{Imágenes/powerbi146} 
+
+}
+
+\caption{Tabla de total}\label{fig:tabladetotal-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{15}
+\tightlist
+\item
+  Diríjase a la tabla DatosMedidor y cree una nueva columna igual a la mostrada en el paso 14, luego debe combinar esta tabla con Total usando la columna Cantidad ya que es la columna que ambas tablas poseen.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi147} 
+
+}
+
+\caption{Combinación de DatosMedidor con Total}\label{fig:combinardatoscontotal-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{16}
+\tightlist
+\item
+  Debe expandir la última columna por la variable Total y cambie su nombre por Total, quite la columna Cantidad, lleve la columna Porcentaje periodo al final y la columna Total ubíquela al lado derecho de la variable SEDE\_NOMBRE\_MAT.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi148} 
+
+}
+
+\caption{Expandir por Total y reordenar columnas}\label{fig:expandirportotal-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{17}
+\tightlist
+\item
+  Es momento de agregar una nueva columna que represente el porcentaje que ocupa cada sede sobre el total, añada una nueva columna personalizada, asigne como nombre Porcentaje de meta y en la formula debe dividir Total por sede sobre Total.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi149} 
+
+}
+
+\caption{Crear columna de porcentaje de meta}\label{fig:porcentajedemeta-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{18}
+\tightlist
+\item
+  Cambie el tipo de dato a porcentaje, la interpretación de estos dos porcentajes es sencilla, porcentaje periodo representa el porcentaje que ocupo cada sede del total de graduados en cada periodo y porcentaje de meta representa el porcentaje de graduados que debía ocupar. Por ejemplo, la primera fila representa el periodo 2009-1 y la sede Bogotá, en este caso esta sede ocupo el \(67.05\%\) del total de graduados en ese periodo, cuando en realidad se esperada que solo ocupara el \(62.03%
+  \), es decir, que se superó la meta.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi150} 
+
+}
+
+\caption{Porcentaje de meta}\label{fig:porccentajedemetaenlabase-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{19}
+\tightlist
+\item
+  En este momento el único valor faltante es el valor de meta, pero en conteo, para esto agregue una nueva columna personalizada llamada Total meta, en su fórmula debe multiplicar las columnas Porcentaje de meta y Total por periodo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Imágenes/powerbi151} 
+
+}
+
+\caption{Crear columna de total de meta}\label{fig:totaldemeta-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{20}
+\tightlist
+\item
+  Cambie el tipo de dato de esta última columna a número entero, ubique esta variable al lado derecho de Total por sede y periodo. La interpretación de esta columna es equivalente a la de Porcentaje periodo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi152} 
+
+}
+
+\caption{Total meta}\label{fig:totaldemetaenlabasededatos-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{21}
+\tightlist
+\item
+  Finalmente debe hacer clic en cerrar y aplicar para guardar la base de datos y usarla posteriormente en la creación de los medidores. Ya ubicado en el lienzo de trabajo se observa que en el panel Campos se tienen 5 tablas de la cuales solo interesan 3 que son Graduados, Modalidadfromación y DatosMedidor, las demás que corresponden a las agrupaciones deben ser ocultadas.
+\end{enumerate}
+
+En este punto ya se tiene la base de datos construida de una manera que permite crear el gráfico de medidor como se desea, elimine la tabla que se realizo al inicio de esta sección y cambie el nombre de la pagina de trabajo por Metas por sede de matrícula. Ahora para crear el gráfico de medidores debe seguir estos pasos.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Desde el panel visualizaciones haga clic sobre Medidor.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi153} 
+
+}
+
+\caption{Añadir medidor al lienzo}\label{fig:paso1medidor-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Añada los campos Porcentaje periodo y Porcentaje de meta a los estantes Valor y Valor de destino respectivamente, los campos Total por sede y periodo y Total meta deben ubicarse en la tarjeta Información sobre herramientas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi154} 
+
+}
+
+\caption{Agregar campos a los estantes del medidor}\label{fig:paso2medidor-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Debe cambiar el nombre los campos agregados a la visualización por Porcentaje real, Porcentaje esperado, Número de estudiantes graduados y Número esperado de estudiantes graduados.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi155} 
+
+}
+
+\caption{Cambiar el formato de los totales}\label{fig:paso3medidor-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Para dar formato a este gráfico haga clic sobre la columna Total meta ubicada en el panel campos y haga clic sobre la coma ubicada en formato; repita esta operación para Total sede y periodo.
+\item
+  En este momento la visualización se está calculando de manera general y la idea inicial es ver este progreso a nivel de sede y periodo, por tanto, es necesario agregar dos segmentaciones de datos una con el campo SEDE\_NOMBRE\_MAT y otra con YEAR\_SEMESTER, recuerde darte el formato mostrado en secciones anteriores y activar la selección única.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi156} 
+
+}
+
+\caption{Agregar segmentaciones}\label{fig:paso5medidor-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Los valores que se muestran en el medidor los cuales corresponden a Porcentaje periodo y Porcentaje de meta deben tener formato de porcentaje, para esto haga clic sobre uno de ellos y seleccione el icono de porcentaje ubicado en formato, repita lo mismo para el otro valor. Si selecciona sede Bogotá y periodo 2009-1, obtendrá el siguiente tablero, el cual permite identificar que en dicho periodo la sede seleccionada supero la meta propuesta.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi157} 
+
+}
+
+\caption{Cambiar formato de porcentajes}\label{fig:paso6medidor-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Es momento de dar formato al medidor, para esto en la pestaña colores de datos asigne el color ``5BC0DE'' al relleno y para la meta seleccione color negro. El color de las etiquetas y destino debe ser negro y el tamaño del texto 14pt; cambie el color de la pestaña valor del globo a negro; el título de la visualización será Indicador de estudiantes graduados en color negro, alineación central y tamaño 25pt, finalmente debe activar el borde.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi158} 
+
+}
+
+\caption{Formato del medidor}\label{fig:paso7medidor-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  En el espacio en blanco ubicado en el lateral izquierdo debe agregar un grafico circular que permita identificar la distribución de las sedes de matrícula por periodo, añada el gráfico circular y asigne los campos SEDE\_NOMBRE\_MAT y Conteo a los estantes leyenda y valores respectivamente, estos campos los debe tomar de la base de datos Graduados.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi159} 
+
+}
+
+\caption{Agregar gráfico circular}\label{fig:paso8medidor-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Note que este último gráfico esta siendo afectado por las segmentaciones que se han realizado, la única segmentación que debe afectar este gráfico es la de periodo, por tanto, debe editar la interacción entre la segmentación de sede y el gráfico circular.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi160} 
+
+}
+
+\caption{Eliminar interacción entre la segmentación sede y el gráfico circular}\label{fig:paso9medidor-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Para dar formato a este último gráfico debe desactivar la leyenda, asignar los colores de datos mostrados en la sección (hacer referencia gráfico de áreas), para la pestaña etiquetas seleccione todas las etiquetas de detalle, en color negro y tamaño 12pt, como título debe escribir Distribución de graduados por sede en color negro, tamaño 25pt y alineación central; finalmente cambie el título de los campos SEDE\_NOMBRE\_MAT por Sede de matrícula y Conteo por Número de estudiantes graduados; también debe activar el borde.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi161} 
+
+}
+
+\caption{Dashboard: Metas por sede de matrícula}\label{fig:tablerofinalmetasporsededematricula-fig}
 \end{figure}
 
 \hypertarget{flourish}{%

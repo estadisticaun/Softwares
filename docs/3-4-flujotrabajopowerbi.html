@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-01-07" />
+<meta name="date" content="2021-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1616,6 +1616,146 @@ Figura 3.157: Eliminar interacción entre la segmentación sede y el gráfico ci
 <img src="Imágenes/powerbi161.jpg" alt="Dashboard: Metas por sede de matrícula" width="90%" />
 <p class="caption">
 Figura 3.158: Dashboard: Metas por sede de matrícula
+</p>
+</div>
+</div>
+<div id="mapeodatospowerbi" class="section level4">
+<h4><span class="header-section-number">3.4.2.12</span> Mapeo de datos</h4>
+<p>El mapeo de datos o georreferenciación es una herramienta muy utilizada cuando se quiere mostrar la procedencia de la información; en el conjunto de datos que se esta analizando se tiene información sobre la longitud y latitud de la cuidad de nacimiento, el nombre de dicha ciudad y el departamento al que pertenece.
+El software de visualización Power Bi presenta diversas formas de realizar mapeo de datos, 3 de ellas están en los objetos predeterminados del panel visualizaciones y otro debe ser activado desde opciones y configuración.</p>
+<ul>
+<li>Mapa: este objeto visual posee un icono de globo terráqueo, es un mapa de burbujas, es decir, que al introducir coordenadas de ubicación como latitud y longitud dibuja una burbuja sobre el punto, es posible añadir una variable que determine el tamaño de ducho punto. Para realizar este tipo de mapa únicamente es necesario añadir el objeto al lienzo y agregar los campos LAT_CUI_NAC, LON_CIU_NAC a loa estantes latitud y longitud respectivamente, para el tamaño debe agregar el campo conteo.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:mapaburbujas-fig"></span>
+<img src="Imágenes/powerbi162.jpg" alt="Mapa de burbujas para cuidad de nacimiento" width="90%" />
+<p class="caption">
+Figura 3.159: Mapa de burbujas para cuidad de nacimiento
+</p>
+</div>
+<p>Observe que todas las burbujas poseen el mismo tamaño a pesar de haber especificado que la variable conteo determinara el tamaño de cada una, tampoco es posible añadir como etiqueta de cada punto la ciudad a la que pertenece. Este tipo de mapas no es muy útil en este caso ya que se tienen demasiadas coordenadas y se ve saturado.</p>
+<ul>
+<li>Mapa coroplético: este tipo de mapas usa sombras o colores para mostrar como un valor difiere en proporción a una geografía o región, es decir, que usa la frecuencia de aparición de una región o ciudad para asignar el sombreado. Posee los mismos campos que el mapa de burbujas, pero en este caso es necesario usar la ubicación en lugar de latitud y longitud, seleccione mapa coroplético en el panel visualizaciones y agregue el campo CIU_NAC al estante ubicación.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:maparelleno-fig"></span>
+<img src="Imágenes/powerbi163.jpg" alt="Mapa coroplético para cuidad de nacimiento" width="90%" />
+<p class="caption">
+Figura 3.160: Mapa coroplético para cuidad de nacimiento
+</p>
+</div>
+<p>Se identifica que las ciudades no se ubican únicamente en Colombia como debería ser, sino que están repartidas en el mundo, esto sucede ya que hay ciudades con el mismo nombre en diferentes lugares del mundo y no es posible indicarle al mapa que únicamente se quieren visualizar las ciudades que pertenecen a Colombia; a pesar de que este mapa es una buena opción ya que rellena toda el área que pertenece a una ciudad no es posible usarlo en este caso ya que no se puede especificar el país al que deben pertenecer estas ciudades.</p>
+<ul>
+<li>ArcGIS Maps for Power BI: ArcGIS es un completo sistema que permite recopilar, organizar, administrar, compartir y distribuir información geográfica, Power Bi proporciona una integración con este sistema que pretende llevar las visualizaciones de mapa a un siguiente nivel, al usar datos demográficos y mapas atractivos. Para añadir este tipo de mapas al lienzo de trabajo haga clic sobre el icono de ArcGIS en el panel visualizaciones, agregue el campo CIU_NAC al estante location y la variable conteo al estante size.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgis-fig"></span>
+<img src="Imágenes/powerbi164.jpg" alt="ArcGIS Map para cuidad de nacimiento, nivel mundial" width="90%" />
+<p class="caption">
+Figura 3.161: ArcGIS Map para cuidad de nacimiento, nivel mundial
+</p>
+</div>
+<p>Observe que nuevamente las ciudades están siendo ubicadas a nivel mundial, una ventaja de este objeto visual es que el panel formato y pestaña Location Type es posible especificar el país al que se refieren dichas ciudades, seleccione Colombia. Ahora su mapa solo posee puntos o burbujas a nivel de Colombia, a pesar de que es un mapa útil y con una ventaja sobre los mostrados anteriormente no permite sombrear o colorear todo el polígono que corresponde a cada ciudad.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgiscolombia-fig"></span>
+<img src="Imágenes/powerbi165.jpg" alt="ArcGIS Map para cuidad de nacimiento, Colombia" width="90%" />
+<p class="caption">
+Figura 3.162: ArcGIS Map para cuidad de nacimiento, Colombia
+</p>
+</div>
+<ul>
+<li>Mapa de formas: este tipo de mapas son muy similares a los coropléticos ya que se rellena con un determinado color el polígono perteneciente a cada ciudad o departamento, la diferencia radica en que son mapas personalizados que al basarse en archivos TopoJSON permiten mapear datos sobre mapas geográficos, disposición de asientos, planos de plantas y otros. Este tipo de mapas no esta habilitado en la vista previa del del panel visualizaciones por lo que es necesario activarlo.</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Haga clic sobre la pestaña archivo, luego seleccione opciones y configuración y nuevamente opciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1mapadeformas-fig"></span>
+<img src="Imágenes/powerbi166.jpg" alt="Opciones y configuración" width="60%" />
+<p class="caption">
+Figura 3.163: Opciones y configuración
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Sobre la pestaña mapas debe seleccionar características de versión preliminar y activar la opción Objeto visual Mapa de formas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2mapadeformas-fig"></span>
+<img src="Imágenes/powerbi167.jpg" alt="Activar el objeto visual Mapa de formas" width="60%" />
+<p class="caption">
+Figura 3.164: Activar el objeto visual Mapa de formas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Luego de activar el objeto visual este aparecerá en el panel visualizaciones al lado de mapas coropléticos, haga clic sobre el mapa de formas para añadirlo al lienzo y agregue el campo CIU_NAC al estante ubicación.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3mapadeformas-fig"></span>
+<img src="Imágenes/powerbi168.jpg" alt="Uso del mapa de formas" width="90%" />
+<p class="caption">
+Figura 3.165: Uso del mapa de formas
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Se obtiene un mapa de Estados Unidos con el estado de Florida coloreado ya que es la única ciudad de Colombia que coincide con una ubicación en este país, al hacer clic en formato y en la pestaña forma, se visualiza un campo llamado mapa que contiene los mapas disponibles, en dicha lista no se encuentra Colombia.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4mapadeformas-fig"></span>
+<img src="Imágenes/powerbi169.jpg" alt="Lista de mapas disponibles" width="90%" />
+<p class="caption">
+Figura 3.166: Lista de mapas disponibles
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Observe que existe la posibilidad de agregar mapa, como se menciono anteriormente estos mapas de forma se basan en archivos TopoJSON, por lo que si se desea agregar un mapa debe ser en este formato, se realizó una búsqueda de archivos en este formato para Colombia y se encontró un repositorio de <a href="https://gist.github.com/john-guerra/727e8992e9599b9d9f1dbfdc4c8e479e">GitHub</a> que almacena un Zip con un archivo JSON del mapa de Colombia con municipios y departamentos, dicho archivo ya se encuentra en el repositorio de en el cual se almacena este libro.</p></li>
+<li><p>Haga clic sobre agregar mapa y navegue entre la carpetas de su equipo hasta encontrar el archivo llamado Colombia-municipios.json y haga clic en abrir.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6mapadeformas-fig"></span>
+<img src="Imágenes/powerbi170.jpg" alt="Agregar mapa de Colombia, archivo JSON" width="60%" />
+<p class="caption">
+Figura 3.167: Agregar mapa de Colombia, archivo JSON
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>En el lienzo de trabajo se observa el mapa de Colombia que colorea en azul las ciudades de las cuales se tiene registro.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7mapadeformas-fig"></span>
+<img src="Imágenes/powerbi171.jpg" alt="Municipios de Colombia" width="90%" />
+<p class="caption">
+Figura 3.168: Municipios de Colombia
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Haga clic sobre campos ubicado debajo de visualizaciones y añada Conteo al estante saturación de color, también debe cambiar el nombre CIU_NAC por Ciudad de nacimiento y conteo por Número de estudiantes graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8mapadeformas-fig"></span>
+<img src="Imágenes/powerbi172.jpg" alt="Agregar campo a saturación de color" width="90%" />
+<p class="caption">
+Figura 3.169: Agregar campo a saturación de color
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>En la pestaña formato seleccione colores de datos, para mínimo establezca el color “D9F0A3” y valor 0, para máximo el color debe ser “006837” y valor 100.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso9mapadeformas-fig"></span>
+<img src="Imágenes/powerbi173.jpg" alt="Asignación de colores" width="90%" />
+<p class="caption">
+Figura 3.170: Asignación de colores
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>Para el grosor de color predeterminado seleccione 2, en la pestaña zoom active ampliar selección, desactive el título y active el borde.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso10mapadeformas-fig"></span>
+<img src="Imágenes/powerbi174.jpg" alt="Mapa: número de estudiantes graduados por ciudad de nacimiento" width="90%" />
+<p class="caption">
+Figura 3.171: Mapa: número de estudiantes graduados por ciudad de nacimiento
+</p>
+</div>
+<p>Una gran desventaja es que no es posible añadir etiquetas para que cada municipio tenga su nombre, repita este mapa para la variable DEP_NAC pero los colores de datos deben ser “A6BDDB” para mínimo y “045A8D” para máximo.</p>
+<div class="figure" style="text-align: center"><span id="fig:paso11mapadeformas-fig"></span>
+<img src="Imágenes/powerbi175.jpg" alt="Mapa: número de estudiantes graduados por ciudad y departamento de nacimiento" width="90%" />
+<p class="caption">
+Figura 3.172: Mapa: número de estudiantes graduados por ciudad y departamento de nacimiento
+</p>
+</div>
+<p>Finamente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno “88AD84” y disminuir su transparencia a cero. A continuación, se presenta el dashboard para lugar de nacimiento, algo simple, pero es lo que se logra hacer al usar archivos TopoJSON.</p>
+<div class="figure" style="text-align: center"><span id="fig:dashboardlugarnacimeinto-fig"></span>
+<img src="Imágenes/powerbi176.jpg" alt="Dashboard lugar de nacimiento" width="90%" />
+<p class="caption">
+Figura 3.173: Dashboard lugar de nacimiento
 </p>
 </div>
 
