@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-01-09" />
+<meta name="date" content="2021-01-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1652,11 +1652,81 @@ Figura 3.160: Mapa coroplético para cuidad de nacimiento
 Figura 3.161: ArcGIS Map para cuidad de nacimiento, nivel mundial
 </p>
 </div>
-<p>Observe que nuevamente las ciudades están siendo ubicadas a nivel mundial, una ventaja de este objeto visual es que el panel formato y pestaña Location Type es posible especificar el país al que se refieren dichas ciudades, seleccione Colombia. Ahora su mapa solo posee puntos o burbujas a nivel de Colombia, a pesar de que es un mapa útil y con una ventaja sobre los mostrados anteriormente no permite sombrear o colorear todo el polígono que corresponde a cada ciudad.</p>
+<p>Observe que nuevamente las ciudades están siendo ubicadas a nivel mundial, una ventaja de este objeto visual es que el panel formato y pestaña Location Type es posible especificar el país al que se refieren dichas ciudades, seleccione Colombia. Ahora su mapa solo posee puntos o burbujas a nivel de Colombia.</p>
 <div class="figure" style="text-align: center"><span id="fig:mapaarcgiscolombia-fig"></span>
 <img src="Imágenes/powerbi165.jpg" alt="ArcGIS Map para cuidad de nacimiento, Colombia" width="90%" />
 <p class="caption">
 Figura 3.162: ArcGIS Map para cuidad de nacimiento, Colombia
+</p>
+</div>
+<p>La idea es construir un mapa que sombree el área que pertenece a cada ciudad, desde el panel formato de Power BI no es posible hacerlo, pero desde el formato de ArcGIS se puede realizar, haga clic sobre el circulo amarillo ubicado en la esquina superior izquierda, clic sobre el cuarto icono que se refiere a la capas del mapa (Layer list), ahora debe hacer clic sobre los tres puntos ubicados en la esquina derecha de Layers y seleccionar Location Type.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgiscolombiasombrear-fig"></span>
+<img src="Imágenes/powerbi177.jpg" alt="Formato de ArcGIS" width="30%" />
+<p class="caption">
+Figura 3.163: Formato de ArcGIS
+</p>
+</div>
+<p>Ubicado en la ventana Location type debe cambiar Points por Boundaries, Departaments por Municipalities, finalmente clic en Ok.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgiscolombiasformatomunicipios-fig"></span>
+<img src="Imágenes/powerbi178.jpg" alt="Seleccionar fronteras y municipios" width="30%" />
+<p class="caption">
+Figura 3.164: Seleccionar fronteras y municipios
+</p>
+</div>
+<p>Observara que su mapa no presenta cambios, es decir que sigue representando las ciudades con burbujas, esto se debe a que el campo Size tiene asignado la variable conteo, por lo que debe mover esta variable al estante color.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgiscoloreado-fig"></span>
+<img src="Imágenes/powerbi179.jpg" alt="Agregar campo al estante color" width="100%" />
+<p class="caption">
+Figura 3.165: Agregar campo al estante color
+</p>
+</div>
+<p>La idea del dashboard para el lugar de nacimiento es mostrar la cantidad de estudiantes graduados para el periodo 2020-1, para esto despliegue el panel filtros y lleve hacia el la variable YEAR_SEMESTER, seleccione únicamente el periodo 2020-1.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgiscoloreadofiltrodeperiodo-fig"></span>
+<img src="Imágenes/powerbi182.jpg" alt="Agregar filtro del periodo 2020-1" width="100%" />
+<p class="caption">
+Figura 3.166: Agregar filtro del periodo 2020-1
+</p>
+</div>
+<p>Este tipo de visualiazación al no ser nativa de Power BI no se le da formato de color desde el rodillo como se hace en las demás, nuevamente se debe hacer desde el circulo amarillo ubicado en la esquina superior, hacer clic sobre Layer list y sobre los tres puntos, pero esta vez debe seleccionar symbology.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgiseditarsimbologia-fig"></span>
+<img src="Imágenes/powerbi180.jpg" alt="Formato de simbología" width="30%" />
+<p class="caption">
+Figura 3.167: Formato de simbología
+</p>
+</div>
+<p>Diríjase hasta la pestaña Symbol Color, asegúrese que el tipo de clasificación sea manual con seis clases y cambie el color a una gama de verdes, haciendo doble clic sobre el número de la línea divisoria en la barra de colores puede editar la ubicación de dicha línea, las divisiones deben ubicarse en 1, 2, 4, 10 y finalmente 100.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgiseditarsimbologiacolor-fig"></span>
+<img src="Imágenes/powerbi181.jpg" alt="Editar color y división del mismo" width="30%" />
+<p class="caption">
+Figura 3.168: Editar color y división del mismo
+</p>
+</div>
+<p>Cierre la pestaña Symbol color y ubíquese sobre la pestaña symbol style, seleccione color personalizado y escriba “#699682”.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgiseditarsimbologiacolorborde-fig"></span>
+<img src="Imágenes/powerbi183.jpg" alt="Editar color para el borde de los municipios" width="100%" />
+<p class="caption">
+Figura 3.169: Editar color para el borde de los municipios
+</p>
+</div>
+<p>Es momento de cambiar el nombre de las variables, CIU_NAC debe ser cambiado por Municipio y Conteo por Numero de estudiantes graduados, al hacer esto notara que vuelve a ser un mapa de burbujas, por lo tanto, repita el paso donde se cambia para que se sombree toda el área, desde el botón formato con el icono de rodillo debe desactivar el titulo y activar el borde. Se obtiene un mapa que permite visualizar la distribución de los estudiantes graduados por municipio.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgismunicipiosperiodo20201-fig"></span>
+<img src="Imágenes/powerbi184.jpg" alt="Total de estudiantes graduados por municipio, periodo 2020-1" width="100%" />
+<p class="caption">
+Figura 3.170: Total de estudiantes graduados por municipio, periodo 2020-1
+</p>
+</div>
+<p>Este mismo mapa debe ser realizado para la variable DEP_NAC, el color debe ser una gama de azules.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapaarcgismunicipiosperiododepartamento20201-fig"></span>
+<img src="Imágenes/powerbi185.jpg" alt="Total de estudiantes graduados por municipio y departamento, periodo 2020-1" width="100%" />
+<p class="caption">
+Figura 3.171: Total de estudiantes graduados por municipio y departamento, periodo 2020-1
+</p>
+</div>
+<p>Finalmente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno “88AD84” y disminuir su transparencia a cero.</p>
+<div class="figure" style="text-align: center"><span id="fig:dashboardlugardenacmiento-fig"></span>
+<img src="Imágenes/powerbi186.jpg" alt="Dashboard: Lugar de nacmiento, periodo 2020-1" width="100%" />
+<p class="caption">
+Figura 3.172: Dashboard: Lugar de nacmiento, periodo 2020-1
 </p>
 </div>
 <ul>
@@ -1668,7 +1738,7 @@ Figura 3.162: ArcGIS Map para cuidad de nacimiento, Colombia
 <div class="figure" style="text-align: center"><span id="fig:paso1mapadeformas-fig"></span>
 <img src="Imágenes/powerbi166.jpg" alt="Opciones y configuración" width="60%" />
 <p class="caption">
-Figura 3.163: Opciones y configuración
+Figura 3.173: Opciones y configuración
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -1677,7 +1747,7 @@ Figura 3.163: Opciones y configuración
 <div class="figure" style="text-align: center"><span id="fig:paso2mapadeformas-fig"></span>
 <img src="Imágenes/powerbi167.jpg" alt="Activar el objeto visual Mapa de formas" width="60%" />
 <p class="caption">
-Figura 3.164: Activar el objeto visual Mapa de formas
+Figura 3.174: Activar el objeto visual Mapa de formas
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -1686,7 +1756,7 @@ Figura 3.164: Activar el objeto visual Mapa de formas
 <div class="figure" style="text-align: center"><span id="fig:paso3mapadeformas-fig"></span>
 <img src="Imágenes/powerbi168.jpg" alt="Uso del mapa de formas" width="90%" />
 <p class="caption">
-Figura 3.165: Uso del mapa de formas
+Figura 3.175: Uso del mapa de formas
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -1695,7 +1765,7 @@ Figura 3.165: Uso del mapa de formas
 <div class="figure" style="text-align: center"><span id="fig:paso4mapadeformas-fig"></span>
 <img src="Imágenes/powerbi169.jpg" alt="Lista de mapas disponibles" width="90%" />
 <p class="caption">
-Figura 3.166: Lista de mapas disponibles
+Figura 3.176: Lista de mapas disponibles
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -1705,7 +1775,7 @@ Figura 3.166: Lista de mapas disponibles
 <div class="figure" style="text-align: center"><span id="fig:paso6mapadeformas-fig"></span>
 <img src="Imágenes/powerbi170.jpg" alt="Agregar mapa de Colombia, archivo JSON" width="60%" />
 <p class="caption">
-Figura 3.167: Agregar mapa de Colombia, archivo JSON
+Figura 3.177: Agregar mapa de Colombia, archivo JSON
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
@@ -1714,7 +1784,7 @@ Figura 3.167: Agregar mapa de Colombia, archivo JSON
 <div class="figure" style="text-align: center"><span id="fig:paso7mapadeformas-fig"></span>
 <img src="Imágenes/powerbi171.jpg" alt="Municipios de Colombia" width="90%" />
 <p class="caption">
-Figura 3.168: Municipios de Colombia
+Figura 3.178: Municipios de Colombia
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
@@ -1723,7 +1793,7 @@ Figura 3.168: Municipios de Colombia
 <div class="figure" style="text-align: center"><span id="fig:paso8mapadeformas-fig"></span>
 <img src="Imágenes/powerbi172.jpg" alt="Agregar campo a saturación de color" width="90%" />
 <p class="caption">
-Figura 3.169: Agregar campo a saturación de color
+Figura 3.179: Agregar campo a saturación de color
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
@@ -1732,7 +1802,7 @@ Figura 3.169: Agregar campo a saturación de color
 <div class="figure" style="text-align: center"><span id="fig:paso9mapadeformas-fig"></span>
 <img src="Imágenes/powerbi173.jpg" alt="Asignación de colores" width="90%" />
 <p class="caption">
-Figura 3.170: Asignación de colores
+Figura 3.180: Asignación de colores
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
@@ -1741,21 +1811,21 @@ Figura 3.170: Asignación de colores
 <div class="figure" style="text-align: center"><span id="fig:paso10mapadeformas-fig"></span>
 <img src="Imágenes/powerbi174.jpg" alt="Mapa: número de estudiantes graduados por ciudad de nacimiento" width="90%" />
 <p class="caption">
-Figura 3.171: Mapa: número de estudiantes graduados por ciudad de nacimiento
+Figura 3.181: Mapa: número de estudiantes graduados por ciudad de nacimiento
 </p>
 </div>
 <p>Una gran desventaja es que no es posible añadir etiquetas para que cada municipio tenga su nombre, repita este mapa para la variable DEP_NAC pero los colores de datos deben ser “A6BDDB” para mínimo y “045A8D” para máximo.</p>
 <div class="figure" style="text-align: center"><span id="fig:paso11mapadeformas-fig"></span>
 <img src="Imágenes/powerbi175.jpg" alt="Mapa: número de estudiantes graduados por ciudad y departamento de nacimiento" width="90%" />
 <p class="caption">
-Figura 3.172: Mapa: número de estudiantes graduados por ciudad y departamento de nacimiento
+Figura 3.182: Mapa: número de estudiantes graduados por ciudad y departamento de nacimiento
 </p>
 </div>
-<p>Finamente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno “88AD84” y disminuir su transparencia a cero. A continuación, se presenta el dashboard para lugar de nacimiento, algo simple, pero es lo que se logra hacer al usar archivos TopoJSON.</p>
+<p>Finalmente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno “88AD84” y disminuir su transparencia a cero. A continuación, se presenta el dashboard para lugar de nacimiento, algo simple, pero es lo que se logra hacer al usar archivos TopoJSON.</p>
 <div class="figure" style="text-align: center"><span id="fig:dashboardlugarnacimeinto-fig"></span>
 <img src="Imágenes/powerbi176.jpg" alt="Dashboard lugar de nacimiento" width="90%" />
 <p class="caption">
-Figura 3.173: Dashboard lugar de nacimiento
+Figura 3.183: Dashboard lugar de nacimiento
 </p>
 </div>
 

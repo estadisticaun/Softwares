@@ -1269,10 +1269,70 @@ Se identifica que las ciudades no se ubican únicamente en Colombia como deberí
 knitr::include_graphics("Imágenes/powerbi164.jpg")
 ```
 
-Observe que nuevamente las ciudades están siendo ubicadas a nivel mundial, una ventaja de este objeto visual es que el panel formato y pestaña Location Type es posible especificar el país al que se refieren dichas ciudades, seleccione Colombia. Ahora su mapa solo posee puntos o burbujas a nivel de Colombia, a pesar de que es un mapa útil y con una ventaja sobre los mostrados anteriormente no permite sombrear o colorear todo el polígono que corresponde a cada ciudad.
+Observe que nuevamente las ciudades están siendo ubicadas a nivel mundial, una ventaja de este objeto visual es que el panel formato y pestaña Location Type es posible especificar el país al que se refieren dichas ciudades, seleccione Colombia. Ahora su mapa solo posee puntos o burbujas a nivel de Colombia. 
 
 ```{r mapaarcgiscolombia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='ArcGIS Map para cuidad de nacimiento, Colombia', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi165.jpg")
+```
+
+La idea es construir un mapa que sombree el área que pertenece a cada ciudad, desde el panel formato de Power BI no es posible hacerlo, pero desde el formato de ArcGIS se puede realizar, haga clic sobre el circulo amarillo ubicado en la esquina superior izquierda, clic sobre el cuarto icono que se refiere a la capas del mapa (Layer list), ahora debe hacer clic sobre los tres puntos ubicados en la esquina derecha de Layers y seleccionar Location Type.
+
+```{r mapaarcgiscolombiasombrear-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de ArcGIS', out.width='30%'}
+knitr::include_graphics("Imágenes/powerbi177.jpg")
+```
+
+Ubicado en la ventana Location type debe cambiar Points por Boundaries, Departaments por Municipalities, finalmente clic en Ok.
+
+```{r mapaarcgiscolombiasformatomunicipios-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Seleccionar fronteras y municipios', out.width='30%'}
+knitr::include_graphics("Imágenes/powerbi178.jpg")
+```
+
+Observara que su mapa no presenta cambios, es decir que sigue representando las ciudades con burbujas, esto se debe a que el campo Size tiene asignado la variable conteo, por lo que debe mover esta variable al estante color.
+
+```{r mapaarcgiscoloreado-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar campo al estante color', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi179.jpg")
+```
+
+La idea del dashboard para el lugar de nacimiento es mostrar la cantidad de estudiantes graduados para el periodo 2020-1, para esto despliegue el panel filtros y lleve hacia el la variable YEAR_SEMESTER, seleccione únicamente el periodo 2020-1.
+
+```{r mapaarcgiscoloreadofiltrodeperiodo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar filtro del periodo 2020-1', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi182.jpg")
+```
+
+
+Este tipo de visualiazación al no ser nativa de Power BI no se le da formato de color desde el rodillo como se hace en las demás, nuevamente se debe hacer desde el circulo amarillo ubicado en la esquina superior, hacer clic sobre Layer list y sobre los tres puntos, pero esta vez debe seleccionar symbology.
+
+```{r mapaarcgiseditarsimbologia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de simbología', out.width='30%'}
+knitr::include_graphics("Imágenes/powerbi180.jpg")
+```
+Diríjase hasta la pestaña Symbol Color, asegúrese que el tipo de clasificación sea manual con seis clases y cambie el color a una gama de verdes, haciendo doble clic sobre el número de la línea divisoria en la barra de colores puede editar la ubicación de dicha línea, las divisiones deben ubicarse en 1, 2, 4, 10 y finalmente 100.
+
+```{r mapaarcgiseditarsimbologiacolor-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar color y división del mismo', out.width='30%'}
+knitr::include_graphics("Imágenes/powerbi181.jpg")
+```
+
+Cierre la pestaña Symbol color y ubíquese sobre la pestaña symbol style, seleccione color personalizado y escriba “#699682”.
+
+```{r mapaarcgiseditarsimbologiacolorborde-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar color para el borde de los municipios', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi183.jpg")
+```
+
+Es momento de cambiar el nombre de las variables, CIU_NAC debe ser cambiado por Municipio y Conteo por Numero de estudiantes graduados, al hacer esto notara que vuelve a ser un mapa de burbujas, por lo tanto, repita el paso donde se cambia para que se sombree toda el área, desde el botón formato con el icono de rodillo debe desactivar el titulo y activar el borde. Se obtiene un mapa que permite visualizar la distribución de los estudiantes graduados por municipio. 
+
+```{r mapaarcgismunicipiosperiodo20201-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Total de estudiantes graduados por municipio, periodo 2020-1', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi184.jpg")
+```
+
+Este mismo mapa debe ser realizado para la variable DEP_NAC, el color debe ser una gama de azules.
+
+```{r mapaarcgismunicipiosperiododepartamento20201-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Total de estudiantes graduados por municipio y departamento, periodo 2020-1', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi185.jpg")
+```
+
+Finalmente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno “88AD84” y disminuir su transparencia a cero.
+
+```{r dashboardlugardenacmiento-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard: Lugar de nacmiento, periodo 2020-1', out.width='100%'}
+knitr::include_graphics("Imágenes/powerbi186.jpg")
 ```
 
 -	Mapa de formas: este tipo de mapas son muy similares a los coropléticos ya que se rellena con un determinado color el polígono perteneciente a cada ciudad o departamento, la diferencia radica en que son mapas personalizados que al basarse en archivos TopoJSON permiten mapear datos sobre mapas geográficos, disposición de asientos, planos de plantas y otros. Este tipo de mapas no esta habilitado en la vista previa del del panel visualizaciones por lo que es necesario activarlo.
@@ -1339,7 +1399,7 @@ Una gran desventaja es que no es posible añadir etiquetas para que cada municip
 knitr::include_graphics("Imágenes/powerbi175.jpg")
 ```
 
-Finamente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno “88AD84” y disminuir su transparencia a cero. A continuación, se presenta el dashboard para lugar de nacimiento, algo simple, pero es lo que se logra hacer al usar archivos TopoJSON.
+Finalmente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno “88AD84” y disminuir su transparencia a cero. A continuación, se presenta el dashboard para lugar de nacimiento, algo simple, pero es lo que se logra hacer al usar archivos TopoJSON.
 
 ```{r dashboardlugarnacimeinto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard lugar de nacimiento', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi176.jpg")
