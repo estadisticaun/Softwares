@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-01-12}
+\date{2021-01-13}
 
 \begin{document}
 \maketitle
@@ -7143,6 +7143,114 @@ Finalmente debe agregar dos botones que permitan la alternancia de estos dos gr�
 
 \caption{Dashboard lugar de nacimiento}\label{fig:dashboardlugarnacimeinto-fig}
 \end{figure}
+
+\hypertarget{gruxe1fico-de-dispersiuxf3n}{%
+\subsubsection{Gráfico de dispersión}\label{gruxe1fico-de-dispersiuxf3n}}
+
+Este tipo de gráficos son útiles cuando se pretende identificar o analizar las relaciones existentes entre dos variables del tipo numérico, como se mencionó en \ref{dispersion} la base de datos con la cual se está trabajando no posee dos campos del tipo numérico para realizar este gráfico, por lo cual deberá abrir un nuevo lienzo de trabajo haciendo clic sobre archivo y seleccionando nuevo, luego de ubicarse en el nuevo lienzo de trabajo conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Llame a la página de trabajo Diagrama de dispersión y desde el panel visualizaciones seleccione gráfico de dispersión.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi187} 
+
+}
+
+\caption{Agregar gráfico de dispersión al lienzo}\label{fig:paso1dispersionpowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Agregue los campos Profit y Sales a los ejes X y Y respectivamente
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi188} 
+
+}
+
+\caption{Asignar campos a los ejes X y Y}\label{fig:paso2dispersionpowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Notara que su gráfico solo presenta un punto, esto se debe a que las medidas se encuentran agregadas, es decir que ese punto representa la suma de todas las ventas y la suma de todos los beneficios, suma es la agregación por defecto; para solucionar esto debe hacer clic en el menú desplegable de los campos Profit y Sales y seleccionar no resumir.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/powerbi189} 
+
+}
+
+\caption{No resumir medidas}\label{fig:paso3dispersionpowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Con el paso anterior se obtiene un diagrama de dispersión para cada par de puntos de beneficios y ventas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi190} 
+
+}
+
+\caption{Diagrama de dispersión para beneficios y ventas}\label{fig:paso4dispersionpowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Puede agregar el campo Category al estante leyenda para identificar las tres categorías de productos vendidos, a la derecha del icono para dar formato a las visualizaciones se ubica la pestaña analítica que permite añadir líneas de referencia, tendencia y sombreado de simetría.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.2\linewidth]{Imágenes/powerbi191} 
+
+}
+
+\caption{Panel analítica}\label{fig:paso5dispersionpowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Haga clic sobre la pestaña línea de tendencia, luego clic en agregar y finalmente desactive la opción combinar series, para obtener tres líneas de tendencia, una para cada categoría.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi192} 
+
+}
+
+\caption{Diagrama de dispersión para beneficios y ventas con líneas de tendencia por categoría}\label{fig:paso6dispersionpowerbi-fig}
+\end{figure}
+
+Esta es la manera en la que se agregan líneas de tendencia a los gráficos de dispersión, al ubicarse sobre una de las líneas no se obtiene descripción emergente o descripción de la línea, como coeficientes, significancia o medidas estadísticas útiles para verificar su calidad de ajuste.
 
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}

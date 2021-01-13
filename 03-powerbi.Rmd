@@ -1411,38 +1411,78 @@ Este tipo de gráficos son útiles cuando se pretende identificar o analizar las
 
 1.	Llame a la página de trabajo Diagrama de dispersión y desde el panel visualizaciones seleccione gráfico de dispersión.
 
-```{r paso1dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar gráfico de dispersión al lienzo', out.width='90%'}
+```{r paso1dispersionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar gráfico de dispersión al lienzo', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi187.jpg")
 ```
 
 2.	Agregue los campos Profit y Sales a los ejes X y Y respectivamente
 
-```{r paso2dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar campos a los ejes X y Y', out.width='90%'}
+```{r paso2dispersionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar campos a los ejes X y Y', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi188.jpg")
 ```
 
 3.	Notara que su gráfico solo presenta un punto, esto se debe a que las medidas se encuentran agregadas, es decir que ese punto representa la suma de todas las ventas y la suma de todos los beneficios, suma es la agregación por defecto; para solucionar esto debe hacer clic en el menú desplegable de los campos Profit y Sales y seleccionar no resumir.
 
-```{r paso3dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='No resumir medidas', out.width='30%'}
+```{r paso3dispersionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='No resumir medidas', out.width='30%'}
 knitr::include_graphics("Imágenes/powerbi189.jpg")
 ```
 
 4.	Con el paso anterior se obtiene un diagrama de dispersión para cada par de puntos de beneficios y ventas.
 
-```{r paso4dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Diagrama de dispersión para beneficios y ventas', out.width='90%'}
+```{r paso4dispersionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Diagrama de dispersión para beneficios y ventas', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi190.jpg")
 ```
 
 5.	Puede agregar el campo Category al estante leyenda para identificar las tres categorías de productos vendidos, a la derecha del icono para dar formato a las visualizaciones se ubica la pestaña analítica que permite añadir líneas de referencia, tendencia y sombreado de simetría.
 
-```{r paso5dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Panel analítica', out.width='20%'}
+```{r paso5dispersionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Panel analítica', out.width='20%'}
 knitr::include_graphics("Imágenes/powerbi191.jpg")
 ```
 
 6.	Haga clic sobre la pestaña línea de tendencia, luego clic en agregar y finalmente desactive la opción combinar series, para obtener tres líneas de tendencia, una para cada categoría.
 
-```{r paso6dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Diagrama de dispersión para beneficios y ventas con líneas de tendencia por categoría', out.width='90%'}
+```{r paso6dispersionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Diagrama de dispersión para beneficios y ventas con líneas de tendencia por categoría', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi192.jpg")
 ```
 
 Esta es la manera en la que se agregan líneas de tendencia a los gráficos de dispersión, al ubicarse sobre una de las líneas no se obtiene descripción emergente o descripción de la línea, como coeficientes, significancia o medidas estadísticas útiles para verificar su calidad de ajuste.
+
+#### Pronósticos para series de tiempo univariadas
+
+Cuando se trabaja con campos de fechas y numéricos es de gran utilidad generar pronósticos, Power BI permite generar estas predicciones nuevamente usando el panel de analítica, se inicia con un gráfico de líneas básico y se añade la predicción.
+
+1.	Añada una nueva página de trabajo y llámela evolución histórica de las ventas.
+
+2.	Agregue un gráfico de líneas que contenga la variable Order Date en el estante eje y Sales para valores.
+
+```{r paso2pronosticopowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Evolución anual de las ventas', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi193.jpg")
+```
+
+3.	Observe que en estante eje se establece una jerarquía de fecha, desde año hasta día,  es posible eliminar las que no se quieren visualizar por ejemplo eliminar año, trimestre y día para visualizar las ventas a nivel de mes, al hacer esto obtendrá un gráfico de líneas que representa las ventas por mes.
+
+```{r paso3pronosticopowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Evolución anual de las ventas', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi194.jpg")
+```
+
+4.	Otra opción es seleccionar Order Date en el menú desplegable de esta variable, con esto se obtiene un gráfico de líneas saturado ya que se está representando las ventas fecha a fecha.
+
+```{r paso4pronosticopowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Evolución de las ventas fecha por fecha', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi195.jpg")
+```
+
+5.	Seleccione nuevamente jerarquía de fechas, en el estate eje debe quedar únicamente el día.
+
+6.	Ubíquese sobre el panel analítica, al final de este panel se ubica una pestaña llamada previsión la cual permite hacer predicciones, haga clic sobre esta pestaña y sobre agregar, el pronóstico debe hacerla para 30 puntos. 
+
+```{r paso6pronosticopowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Pronóstico de las ventas para 30 días', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi196.jpg")
+```
+
+7.	Observe que al final de este recuadro gris se ubica un campo llamado estacionalidad, este permite especificar el periodo de estacionalidad que posee la serie de tiempo, a modo de ejemplo puede escribir 30 para esta opción, notara que el pronostico replicara el comportamiento de los 30 puntos reales.
+
+```{r paso7pronosticopowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Pronóstico de las ventas para 30 días agregando estacionalidad', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi197.jpg")
+```
+
+La descripción emergente indica el valor de la predicción y los limites del intervalo de confianza, así como en las líneas de tendencia no es posible encontrar información acerca del método usado para realizar el pronóstico o medidas estadísticas útiles que permitan la evaluación del mismo. 
