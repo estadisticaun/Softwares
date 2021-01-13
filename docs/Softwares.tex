@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-01-09}
+\date{2021-01-12}
 
 \begin{document}
 \maketitle
@@ -6842,7 +6842,7 @@ Se identifica que las ciudades no se ubican únicamente en Colombia como deberí
 \caption{ArcGIS Map para cuidad de nacimiento, nivel mundial}\label{fig:mapaarcgis-fig}
 \end{figure}
 
-Observe que nuevamente las ciudades están siendo ubicadas a nivel mundial, una ventaja de este objeto visual es que el panel formato y pestaña Location Type es posible especificar el país al que se refieren dichas ciudades, seleccione Colombia. Ahora su mapa solo posee puntos o burbujas a nivel de Colombia, a pesar de que es un mapa útil y con una ventaja sobre los mostrados anteriormente no permite sombrear o colorear todo el polígono que corresponde a cada ciudad.
+Observe que nuevamente las ciudades están siendo ubicadas a nivel mundial, una ventaja de este objeto visual es que el panel formato y pestaña Location Type es posible especificar el país al que se refieren dichas ciudades, seleccione Colombia. Ahora su mapa solo posee puntos o burbujas a nivel de Colombia.
 
 \begin{figure}
 
@@ -6851,6 +6851,116 @@ Observe que nuevamente las ciudades están siendo ubicadas a nivel mundial, una 
 }
 
 \caption{ArcGIS Map para cuidad de nacimiento, Colombia}\label{fig:mapaarcgiscolombia-fig}
+\end{figure}
+
+La idea es construir un mapa que sombree el área que pertenece a cada ciudad, desde el panel formato de Power BI no es posible hacerlo, pero desde el formato de ArcGIS se puede realizar, haga clic sobre el circulo amarillo ubicado en la esquina superior izquierda, clic sobre el cuarto icono que se refiere a la capas del mapa (Layer list), ahora debe hacer clic sobre los tres puntos ubicados en la esquina derecha de Layers y seleccionar Location Type.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/powerbi177} 
+
+}
+
+\caption{Formato de ArcGIS}\label{fig:mapaarcgiscolombiasombrear-fig}
+\end{figure}
+
+Ubicado en la ventana Location type debe cambiar Points por Boundaries, Departaments por Municipalities, finalmente clic en Ok.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/powerbi178} 
+
+}
+
+\caption{Seleccionar fronteras y municipios}\label{fig:mapaarcgiscolombiasformatomunicipios-fig}
+\end{figure}
+
+Observara que su mapa no presenta cambios, es decir que sigue representando las ciudades con burbujas, esto se debe a que el campo Size tiene asignado la variable conteo, por lo que debe mover esta variable al estante color.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi179} 
+
+}
+
+\caption{Agregar campo al estante color}\label{fig:mapaarcgiscoloreado-fig}
+\end{figure}
+
+La idea del dashboard para el lugar de nacimiento es mostrar la cantidad de estudiantes graduados para el periodo 2020-1, para esto despliegue el panel filtros y lleve hacia el la variable YEAR\_SEMESTER, seleccione únicamente el periodo 2020-1.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi182} 
+
+}
+
+\caption{Agregar filtro del periodo 2020-1}\label{fig:mapaarcgiscoloreadofiltrodeperiodo-fig}
+\end{figure}
+
+Este tipo de visualiazación al no ser nativa de Power BI no se le da formato de color desde el rodillo como se hace en las demás, nuevamente se debe hacer desde el circulo amarillo ubicado en la esquina superior, hacer clic sobre Layer list y sobre los tres puntos, pero esta vez debe seleccionar symbology.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/powerbi180} 
+
+}
+
+\caption{Formato de simbología}\label{fig:mapaarcgiseditarsimbologia-fig}
+\end{figure}
+
+Diríjase hasta la pestaña Symbol Color, asegúrese que el tipo de clasificación sea manual con seis clases y cambie el color a una gama de verdes, haciendo doble clic sobre el número de la línea divisoria en la barra de colores puede editar la ubicación de dicha línea, las divisiones deben ubicarse en 1, 2, 4, 10 y finalmente 100.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.3\linewidth]{Imágenes/powerbi181} 
+
+}
+
+\caption{Editar color y división del mismo}\label{fig:mapaarcgiseditarsimbologiacolor-fig}
+\end{figure}
+
+Cierre la pestaña Symbol color y ubíquese sobre la pestaña symbol style, seleccione color personalizado y escriba ``\#699682''.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi183} 
+
+}
+
+\caption{Editar color para el borde de los municipios}\label{fig:mapaarcgiseditarsimbologiacolorborde-fig}
+\end{figure}
+
+Es momento de cambiar el nombre de las variables, CIU\_NAC debe ser cambiado por Municipio y Conteo por Numero de estudiantes graduados, al hacer esto notara que vuelve a ser un mapa de burbujas, por lo tanto, repita el paso donde se cambia para que se sombree toda el área, desde el botón formato con el icono de rodillo debe desactivar el titulo y activar el borde. Se obtiene un mapa que permite visualizar la distribución de los estudiantes graduados por municipio.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi184} 
+
+}
+
+\caption{Total de estudiantes graduados por municipio, periodo 2020-1}\label{fig:mapaarcgismunicipiosperiodo20201-fig}
+\end{figure}
+
+Este mismo mapa debe ser realizado para la variable DEP\_NAC, el color debe ser una gama de azules.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi185} 
+
+}
+
+\caption{Total de estudiantes graduados por municipio y departamento, periodo 2020-1}\label{fig:mapaarcgismunicipiosperiododepartamento20201-fig}
+\end{figure}
+
+Finalmente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno ``88AD84'' y disminuir su transparencia a cero.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Imágenes/powerbi186} 
+
+}
+
+\caption{Dashboard: Lugar de nacmiento, periodo 2020-1}\label{fig:dashboardlugardenacmiento-fig}
 \end{figure}
 
 \begin{itemize}
@@ -7023,7 +7133,7 @@ Una gran desventaja es que no es posible añadir etiquetas para que cada municip
 \caption{Mapa: número de estudiantes graduados por ciudad y departamento de nacimiento}\label{fig:paso11mapadeformas-fig}
 \end{figure}
 
-Finamente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno ``88AD84'' y disminuir su transparencia a cero. A continuación, se presenta el dashboard para lugar de nacimiento, algo simple, pero es lo que se logra hacer al usar archivos TopoJSON.
+Finalmente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno ``88AD84'' y disminuir su transparencia a cero. A continuación, se presenta el dashboard para lugar de nacimiento, algo simple, pero es lo que se logra hacer al usar archivos TopoJSON.
 
 \begin{figure}
 

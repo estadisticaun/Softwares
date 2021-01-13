@@ -1404,3 +1404,45 @@ Finalmente debe agregar dos botones que permitan la alternancia de estos dos gr�
 ```{r dashboardlugarnacimeinto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard lugar de nacimiento', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi176.jpg")
 ```
+
+#### Gráfico de dispersión 
+
+Este tipo de gráficos son útiles cuando se pretende identificar o analizar las relaciones existentes entre dos variables del tipo numérico, como se mencionó en \@ref(dispersion) la base de datos con la cual se está trabajando no posee dos campos del tipo numérico para realizar este gráfico, por lo cual deberá abrir un nuevo lienzo de trabajo haciendo clic sobre archivo y seleccionando nuevo, luego de ubicarse en el nuevo lienzo de trabajo conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos.
+
+1.	Llame a la página de trabajo Diagrama de dispersión y desde el panel visualizaciones seleccione gráfico de dispersión.
+
+```{r paso1dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar gráfico de dispersión al lienzo', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi187.jpg")
+```
+
+2.	Agregue los campos Profit y Sales a los ejes X y Y respectivamente
+
+```{r paso2dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar campos a los ejes X y Y', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi188.jpg")
+```
+
+3.	Notara que su gráfico solo presenta un punto, esto se debe a que las medidas se encuentran agregadas, es decir que ese punto representa la suma de todas las ventas y la suma de todos los beneficios, suma es la agregación por defecto; para solucionar esto debe hacer clic en el menú desplegable de los campos Profit y Sales y seleccionar no resumir.
+
+```{r paso3dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='No resumir medidas', out.width='30%'}
+knitr::include_graphics("Imágenes/powerbi189.jpg")
+```
+
+4.	Con el paso anterior se obtiene un diagrama de dispersión para cada par de puntos de beneficios y ventas.
+
+```{r paso4dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Diagrama de dispersión para beneficios y ventas', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi190.jpg")
+```
+
+5.	Puede agregar el campo Category al estante leyenda para identificar las tres categorías de productos vendidos, a la derecha del icono para dar formato a las visualizaciones se ubica la pestaña analítica que permite añadir líneas de referencia, tendencia y sombreado de simetría.
+
+```{r paso5dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Panel analítica', out.width='20%'}
+knitr::include_graphics("Imágenes/powerbi191.jpg")
+```
+
+6.	Haga clic sobre la pestaña línea de tendencia, luego clic en agregar y finalmente desactive la opción combinar series, para obtener tres líneas de tendencia, una para cada categoría.
+
+```{r paso6dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Diagrama de dispersión para beneficios y ventas con líneas de tendencia por categoría', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi192.jpg")
+```
+
+Esta es la manera en la que se agregan líneas de tendencia a los gráficos de dispersión, al ubicarse sobre una de las líneas no se obtiene descripción emergente o descripción de la línea, como coeficientes, significancia o medidas estadísticas útiles para verificar su calidad de ajuste.
