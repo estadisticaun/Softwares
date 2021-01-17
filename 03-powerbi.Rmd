@@ -1405,6 +1405,86 @@ Finalmente debe agregar dos botones que permitan la alternancia de estos dos gr�
 knitr::include_graphics("Imágenes/powerbi176.jpg")
 ```
 
+#### Objeto visual de script de R
+La versión gratuita de Power BI no posee todos los gráficos básicos que un análisis estadístico exploratorio requiere, como lo son histogramas o bloxplot, pero ofrece la posibilidad de crear objetos visuales a través de scripts de R, en este caso se creara un histograma que permita visualizar la distribución de las edades por modalidad de formación, algo muy similar a lo mostrado en \@ref(histograma).
+
+1.	Cree una nueva pagina de trabajo y haga clic sobre el icono de R en el panel visualizaciones.
+
+2.	Después de agregar el objeto visual R, su lienzo de trabajo se dividirá en dos secciones, una de ellas mostrara la visualización creada a partir de un script R y la otra sección funciona como un editor de script de R que permite escribir o pegar código, inicialmente esta última sección le pedirá agregar campos al área valores, esto se debe a que Power BI creara una base de datos con los campos seleccionados.
+
+```{r paso2histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar objeto visual de R', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi198.jpg")
+```
+
+3.	Se realizará un histograma que permita identificar la distribución de edades por modalidad de formación y después se añade una segmentación que permita filtrar por la sede de matrícula, por tanto, los campos que se deben añadir al estante valores serán EDAD_MOD, TIPO_NIVEL, SEDE_NOMBRE_MAT.
+
+```{r paso3histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar campos al estante valores', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi199.jpg")
+```
+
+4.	Debe verificar que los campos agregados al estante valores no se encuentren resumidos, ya que esto hará que la base de datos no se construya como debería, haga clic sobre el menú desplegable de cada campo y seleccione no resumir. Observe que en la pestaña editor de Script R se informa sobre lo que siempre será ejecutado, se crea un conjunto de datos con los campos agregados y se eliminan las filas duplicadas.
+
+5.	El histograma se realizará con ayuda del paquete ggplot2, el código será escrito a partir de la línea siete como se muestra en la siguiente imagen.
+
+```{r paso5histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Código para crear histograma', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi200.jpg")
+```
+
+El conjunto de datos con el cual se trabaja es “dataset”, inicialmente se eliminan las filas con valores faltantes, seguido de esto se remueven los valores de edad menores a 15 años y mayores a 70 ya que se consideran posibles errores de digitación, finalmente se crea un histograma con apoyo de la librería ggplot2, dicho histograma presenta la edad en el eje x, el relleno de las barras dependerá de la modalidad de formación y el ancho de cada agrupación será de cinco.
+
+6.	Haga clic sobre el icono ejecutar script ubicado en la esquina superior derecha de la ventana de editor, al ejecutarlo obtendrá dos histogramas, uno para cada modalidad de formación.
+
+```{r paso6histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma para edad por modalidad de formación', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi201.jpg")
+```
+
+Al observar detalladamente el gráfico obtenido se identifica que este es incorrecto ya que la cantidad de estudiantes graduados es muy baja pata ambas modalidades, esto se debe a que Power BI por defecto elimina las filas duplicadas, es decir que la cantidad de datos se reduce en gran medida.
+
+Una solución a este problema es agregar una columna que funcione cono índice o identificador, que debe ser agregado con los demás campos al estante valores, con esto no se identificarán filas duplicadas y por tanto no serán removidas.
+1.	Elimine el objeto visual R creado anteriormente.
+
+2.	Haga clic sobre transformar datos, ya ubicado sobre el panel Power Query seleccione la tabla graduados, haga clic sobre agregar columna y seleccione columna de índice desde 1.
+
+```{r correccionhistograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar columna de índice', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi202.jpg")
+```
+
+3.	Luego de agregar la columna índice haga clic en archivo y luego en cerrar y aplicar.
+
+Nuevamente agregue el objeto visual R, pero ahora los campos añadir serán índice, EDAD_MOD, TIPO_NIVEL, SEDE_NOMBRE_MAT, también debe verificar que no se encuentren resumidos, finalmente escriba el código R mostrado en \@ref(fig:paso5histograma-fig), añada la instrucción scale_fill_manual(values=c("#f15a24", "#8cc63f")) separada por el singo mas (+) de la instrucción final.
+
+```{r correccionhistogramacodigo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Código para creación de histograma con colores personalizados', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi203.jpg")
+```
+
+Al ejecutar el script de R tendrá un gráfico con dos histogramas, uno para cada modalidad de formación, observe que ahora en pregrado la cantidad graduados con 25 años supera los 40.000 estudiantes. 
+
+```{r histogramapowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma para edad y modalidad de formación', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi204.jpg")
+```
+
+A pesar de que esta integración es bastante útil no es la más estética debido a que se muestra algo como una imagen del gráfico que se obtendría en R, el cual tampoco tiene descripción emergente.
+
+Como complemento a este gráfico se realizará un boxplot para las edades por nivel de formación, el código a usar se muestra a continuación.
+
+```{r codigoboxplotpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Código para crear boxplot por nivel de formación', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi205.jpg")
+```
+
+Al ejecutar el código mostrado anteriormente obtendrá un gráfico de boxplot, en el cual cada caja representa un nivel de formación y cada punto las edades de los estudiantes graduados en dichos niveles.
+
+```{r boxplotpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Boxplot para edad por nivel de formación', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi206.jpg")
+```
+
+Se observa que la mayoría de los puntos atípicos o extremos se ubican en la parte superior de los bigotes, el nivel con menor dispersión es pregrado para el cual su mediana se ubica alrededor de los 25 años, la mediana superior se ubica en el nivel doctorado, alrededor de los 40 años.
+
+Debe editar el titulo de cada una de las visualizaciones creadas, agregar una tarjeta para la segmentación con el campo SEDE_NOMBRE_MAT y botones que permitan la alternancia de gráficos, su dashboard debe verse de la siguiente manera.
+
+```{r tableroedad-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard: Edad', out.width='90%'}
+knitr::include_graphics("Imágenes/powerbi207.jpg")
+```
+
 #### Gráfico de dispersión 
 
 Este tipo de gráficos son útiles cuando se pretende identificar o analizar las relaciones existentes entre dos variables del tipo numérico, como se mencionó en \@ref(dispersion) la base de datos con la cual se está trabajando no posee dos campos del tipo numérico para realizar este gráfico, por lo cual deberá abrir un nuevo lienzo de trabajo haciendo clic sobre archivo y seleccionando nuevo, luego de ubicarse en el nuevo lienzo de trabajo conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos.

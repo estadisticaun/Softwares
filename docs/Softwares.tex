@@ -7252,6 +7252,99 @@ Este tipo de gráficos son útiles cuando se pretende identificar o analizar las
 
 Esta es la manera en la que se agregan líneas de tendencia a los gráficos de dispersión, al ubicarse sobre una de las líneas no se obtiene descripción emergente o descripción de la línea, como coeficientes, significancia o medidas estadísticas útiles para verificar su calidad de ajuste.
 
+\hypertarget{pronuxf3sticos-para-series-de-tiempo-univariadas-1}{%
+\subsubsection{Pronósticos para series de tiempo univariadas}\label{pronuxf3sticos-para-series-de-tiempo-univariadas-1}}
+
+Cuando se trabaja con campos de fechas y numéricos es de gran utilidad generar pronósticos, Power BI permite generar estas predicciones nuevamente usando el panel de analítica, se inicia con un gráfico de líneas básico y se añade la predicción.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Añada una nueva página de trabajo y llámela evolución histórica de las ventas.
+\item
+  Agregue un gráfico de líneas que contenga la variable Order Date en el estante eje y Sales para valores.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi193} 
+
+}
+
+\caption{Evolución anual de las ventas}\label{fig:paso2pronosticopowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Observe que en estante eje se establece una jerarquía de fecha, desde año hasta día, es posible eliminar las que no se quieren visualizar por ejemplo eliminar año, trimestre y día para visualizar las ventas a nivel de mes, al hacer esto obtendrá un gráfico de líneas que representa las ventas por mes.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi194} 
+
+}
+
+\caption{Evolución anual de las ventas}\label{fig:paso3pronosticopowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Otra opción es seleccionar Order Date en el menú desplegable de esta variable, con esto se obtiene un gráfico de líneas saturado ya que se está representando las ventas fecha a fecha.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi195} 
+
+}
+
+\caption{Evolución de las ventas fecha por fecha}\label{fig:paso4pronosticopowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  Seleccione nuevamente jerarquía de fechas, en el estate eje debe quedar únicamente el día.
+\item
+  Ubíquese sobre el panel analítica, al final de este panel se ubica una pestaña llamada previsión la cual permite hacer predicciones, haga clic sobre esta pestaña y sobre agregar, el pronóstico debe hacerla para 30 puntos.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi196} 
+
+}
+
+\caption{Pronóstico de las ventas para 30 días}\label{fig:paso6pronosticopowerbi-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Observe que al final de este recuadro gris se ubica un campo llamado estacionalidad, este permite especificar el periodo de estacionalidad que posee la serie de tiempo, a modo de ejemplo puede escribir 30 para esta opción, notara que el pronostico replicara el comportamiento de los 30 puntos reales.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{Imágenes/powerbi197} 
+
+}
+
+\caption{Pronóstico de las ventas para 30 días agregando estacionalidad}\label{fig:paso7pronosticopowerbi-fig}
+\end{figure}
+
+La descripción emergente indica el valor de la predicción y los limites del intervalo de confianza, así como en las líneas de tendencia no es posible encontrar información acerca del método usado para realizar el pronóstico o medidas estadísticas útiles que permitan la evaluación del mismo.
+
 \hypertarget{flourish}{%
 \chapter{Flourish}\label{flourish}}
 

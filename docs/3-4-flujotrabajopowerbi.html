@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-01-13" />
+<meta name="date" content="2021-01-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1829,8 +1829,103 @@ Figura 3.183: Dashboard lugar de nacimiento
 </p>
 </div>
 </div>
+<div id="objeto-visual-de-script-de-r" class="section level4">
+<h4><span class="header-section-number">3.4.2.13</span> Objeto visual de script de R</h4>
+<p>La versión gratuita de Power BI no posee todos los gráficos básicos que un análisis estadístico exploratorio requiere, como lo son histogramas o bloxplot, pero ofrece la posibilidad de crear objetos visuales a través de scripts de R, en este caso se creara un histograma que permita visualizar la distribución de las edades por modalidad de formación, algo muy similar a lo mostrado en <a href="2-4-flujo-de-trabajo.html#histograma">2.4.2.10</a>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva pagina de trabajo y haga clic sobre el icono de R en el panel visualizaciones.</p></li>
+<li><p>Después de agregar el objeto visual R, su lienzo de trabajo se dividirá en dos secciones, una de ellas mostrara la visualización creada a partir de un script R y la otra sección funciona como un editor de script de R que permite escribir o pegar código, inicialmente esta última sección le pedirá agregar campos al área valores, esto se debe a que Power BI creara una base de datos con los campos seleccionados.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2histograma-fig"></span>
+<img src="Imágenes/powerbi198.jpg" alt="Agregar objeto visual de R" width="90%" />
+<p class="caption">
+Figura 3.184: Agregar objeto visual de R
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Se realizará un histograma que permita identificar la distribución de edades por modalidad de formación y después se añade una segmentación que permita filtrar por la sede de matrícula, por tanto, los campos que se deben añadir al estante valores serán EDAD_MOD, TIPO_NIVEL, SEDE_NOMBRE_MAT.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3histograma-fig"></span>
+<img src="Imágenes/powerbi199.jpg" alt="Agregar campos al estante valores" width="90%" />
+<p class="caption">
+Figura 3.185: Agregar campos al estante valores
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Debe verificar que los campos agregados al estante valores no se encuentren resumidos, ya que esto hará que la base de datos no se construya como debería, haga clic sobre el menú desplegable de cada campo y seleccione no resumir. Observe que en la pestaña editor de Script R se informa sobre lo que siempre será ejecutado, se crea un conjunto de datos con los campos agregados y se eliminan las filas duplicadas.</p></li>
+<li><p>El histograma se realizará con ayuda del paquete ggplot2, el código será escrito a partir de la línea siete como se muestra en la siguiente imagen.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5histograma-fig"></span>
+<img src="Imágenes/powerbi200.jpg" alt="Código para crear histograma" width="90%" />
+<p class="caption">
+Figura 3.186: Código para crear histograma
+</p>
+</div>
+<p>El conjunto de datos con el cual se trabaja es “dataset”, inicialmente se eliminan las filas con valores faltantes, seguido de esto se remueven los valores de edad menores a 15 años y mayores a 70 ya que se consideran posibles errores de digitación, finalmente se crea un histograma con apoyo de la librería ggplot2, dicho histograma presenta la edad en el eje x, el relleno de las barras dependerá de la modalidad de formación y el ancho de cada agrupación será de cinco.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Haga clic sobre el icono ejecutar script ubicado en la esquina superior derecha de la ventana de editor, al ejecutarlo obtendrá dos histogramas, uno para cada modalidad de formación.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6histograma-fig"></span>
+<img src="Imágenes/powerbi201.jpg" alt="Histograma para edad por modalidad de formación" width="90%" />
+<p class="caption">
+Figura 3.187: Histograma para edad por modalidad de formación
+</p>
+</div>
+<p>Al observar detalladamente el gráfico obtenido se identifica que este es incorrecto ya que la cantidad de estudiantes graduados es muy baja pata ambas modalidades, esto se debe a que Power BI por defecto elimina las filas duplicadas, es decir que la cantidad de datos se reduce en gran medida.</p>
+<p>Una solución a este problema es agregar una columna que funcione cono índice o identificador, que debe ser agregado con los demás campos al estante valores, con esto no se identificarán filas duplicadas y por tanto no serán removidas.
+1. Elimine el objeto visual R creado anteriormente.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Haga clic sobre transformar datos, ya ubicado sobre el panel Power Query seleccione la tabla graduados, haga clic sobre agregar columna y seleccione columna de índice desde 1.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:correccionhistograma-fig"></span>
+<img src="Imágenes/powerbi202.jpg" alt="Agregar columna de índice" width="90%" />
+<p class="caption">
+Figura 3.188: Agregar columna de índice
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Luego de agregar la columna índice haga clic en archivo y luego en cerrar y aplicar.</li>
+</ol>
+<p>Nuevamente agregue el objeto visual R, pero ahora los campos añadir serán índice, EDAD_MOD, TIPO_NIVEL, SEDE_NOMBRE_MAT, también debe verificar que no se encuentren resumidos, finalmente escriba el código R mostrado en <a href="3-4-flujotrabajopowerbi.html#fig:paso5histograma-fig">3.186</a>, añada la instrucción scale_fill_manual(values=c(“#f15a24”, “#8cc63f”)) separada por el singo mas (+) de la instrucción final.</p>
+<div class="figure" style="text-align: center"><span id="fig:correccionhistogramacodigo-fig"></span>
+<img src="Imágenes/powerbi203.jpg" alt="Código para creación de histograma con colores personalizados" width="90%" />
+<p class="caption">
+Figura 3.189: Código para creación de histograma con colores personalizados
+</p>
+</div>
+<p>Al ejecutar el script de R tendrá un gráfico con dos histogramas, uno para cada modalidad de formación, observe que ahora en pregrado la cantidad graduados con 25 años supera los 40.000 estudiantes.</p>
+<div class="figure" style="text-align: center"><span id="fig:histogramapowerbi-fig"></span>
+<img src="Imágenes/powerbi204.jpg" alt="Histograma para edad y modalidad de formación" width="90%" />
+<p class="caption">
+Figura 3.190: Histograma para edad y modalidad de formación
+</p>
+</div>
+<p>A pesar de que esta integración es bastante útil no es la más estética debido a que se muestra algo como una imagen del gráfico que se obtendría en R, el cual tampoco tiene descripción emergente.</p>
+<p>Como complemento a este gráfico se realizará un boxplot para las edades por nivel de formación, el código a usar se muestra a continuación.</p>
+<div class="figure" style="text-align: center"><span id="fig:codigoboxplotpowerbi-fig"></span>
+<img src="Imágenes/powerbi205.jpg" alt="Código para crear boxplot por nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.191: Código para crear boxplot por nivel de formación
+</p>
+</div>
+<p>Al ejecutar el código mostrado anteriormente obtendrá un gráfico de boxplot, en el cual cada caja representa un nivel de formación y cada punto las edades de los estudiantes graduados en dichos niveles.</p>
+<div class="figure" style="text-align: center"><span id="fig:boxplotpowerbi-fig"></span>
+<img src="Imágenes/powerbi206.jpg" alt="Boxplot para edad por nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.192: Boxplot para edad por nivel de formación
+</p>
+</div>
+<p>Se observa que la mayoría de los puntos atípicos o extremos se ubican en la parte superior de los bigotes, el nivel con menor dispersión es pregrado para el cual su mediana se ubica alrededor de los 25 años, la mediana superior se ubica en el nivel doctorado, alrededor de los 40 años.</p>
+<p>Debe editar el titulo de cada una de las visualizaciones creadas, agregar una tarjeta para la segmentación con el campo SEDE_NOMBRE_MAT y botones que permitan la alternancia de gráficos, su dashboard debe verse de la siguiente manera.</p>
+<div class="figure" style="text-align: center"><span id="fig:tableroedad-fig"></span>
+<img src="Imágenes/powerbi207.jpg" alt="Dashboard: Edad" width="90%" />
+<p class="caption">
+Figura 3.193: Dashboard: Edad
+</p>
+</div>
+</div>
 <div id="gráfico-de-dispersión" class="section level4">
-<h4><span class="header-section-number">3.4.2.13</span> Gráfico de dispersión</h4>
+<h4><span class="header-section-number">3.4.2.14</span> Gráfico de dispersión</h4>
 <p>Este tipo de gráficos son útiles cuando se pretende identificar o analizar las relaciones existentes entre dos variables del tipo numérico, como se mencionó en <a href="2-4-flujo-de-trabajo.html#dispersion">2.4.2.13</a> la base de datos con la cual se está trabajando no posee dos campos del tipo numérico para realizar este gráfico, por lo cual deberá abrir un nuevo lienzo de trabajo haciendo clic sobre archivo y seleccionando nuevo, luego de ubicarse en el nuevo lienzo de trabajo conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos.</p>
 <ol style="list-style-type: decimal">
 <li>Llame a la página de trabajo Diagrama de dispersión y desde el panel visualizaciones seleccione gráfico de dispersión.</li>
@@ -1838,7 +1933,7 @@ Figura 3.183: Dashboard lugar de nacimiento
 <div class="figure" style="text-align: center"><span id="fig:paso1dispersionpowerbi-fig"></span>
 <img src="Imágenes/powerbi187.jpg" alt="Agregar gráfico de dispersión al lienzo" width="90%" />
 <p class="caption">
-Figura 3.184: Agregar gráfico de dispersión al lienzo
+Figura 3.194: Agregar gráfico de dispersión al lienzo
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -1847,7 +1942,7 @@ Figura 3.184: Agregar gráfico de dispersión al lienzo
 <div class="figure" style="text-align: center"><span id="fig:paso2dispersionpowerbi-fig"></span>
 <img src="Imágenes/powerbi188.jpg" alt="Asignar campos a los ejes X y Y" width="90%" />
 <p class="caption">
-Figura 3.185: Asignar campos a los ejes X y Y
+Figura 3.195: Asignar campos a los ejes X y Y
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -1856,7 +1951,7 @@ Figura 3.185: Asignar campos a los ejes X y Y
 <div class="figure" style="text-align: center"><span id="fig:paso3dispersionpowerbi-fig"></span>
 <img src="Imágenes/powerbi189.jpg" alt="No resumir medidas" width="30%" />
 <p class="caption">
-Figura 3.186: No resumir medidas
+Figura 3.196: No resumir medidas
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -1865,7 +1960,7 @@ Figura 3.186: No resumir medidas
 <div class="figure" style="text-align: center"><span id="fig:paso4dispersionpowerbi-fig"></span>
 <img src="Imágenes/powerbi190.jpg" alt="Diagrama de dispersión para beneficios y ventas" width="90%" />
 <p class="caption">
-Figura 3.187: Diagrama de dispersión para beneficios y ventas
+Figura 3.197: Diagrama de dispersión para beneficios y ventas
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -1874,7 +1969,7 @@ Figura 3.187: Diagrama de dispersión para beneficios y ventas
 <div class="figure" style="text-align: center"><span id="fig:paso5dispersionpowerbi-fig"></span>
 <img src="Imágenes/powerbi191.jpg" alt="Panel analítica" width="20%" />
 <p class="caption">
-Figura 3.188: Panel analítica
+Figura 3.198: Panel analítica
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
@@ -1883,13 +1978,13 @@ Figura 3.188: Panel analítica
 <div class="figure" style="text-align: center"><span id="fig:paso6dispersionpowerbi-fig"></span>
 <img src="Imágenes/powerbi192.jpg" alt="Diagrama de dispersión para beneficios y ventas con líneas de tendencia por categoría" width="90%" />
 <p class="caption">
-Figura 3.189: Diagrama de dispersión para beneficios y ventas con líneas de tendencia por categoría
+Figura 3.199: Diagrama de dispersión para beneficios y ventas con líneas de tendencia por categoría
 </p>
 </div>
 <p>Esta es la manera en la que se agregan líneas de tendencia a los gráficos de dispersión, al ubicarse sobre una de las líneas no se obtiene descripción emergente o descripción de la línea, como coeficientes, significancia o medidas estadísticas útiles para verificar su calidad de ajuste.</p>
 </div>
 <div id="pronósticos-para-series-de-tiempo-univariadas-1" class="section level4">
-<h4><span class="header-section-number">3.4.2.14</span> Pronósticos para series de tiempo univariadas</h4>
+<h4><span class="header-section-number">3.4.2.15</span> Pronósticos para series de tiempo univariadas</h4>
 <p>Cuando se trabaja con campos de fechas y numéricos es de gran utilidad generar pronósticos, Power BI permite generar estas predicciones nuevamente usando el panel de analítica, se inicia con un gráfico de líneas básico y se añade la predicción.</p>
 <ol style="list-style-type: decimal">
 <li><p>Añada una nueva página de trabajo y llámela evolución histórica de las ventas.</p></li>
@@ -1898,7 +1993,7 @@ Figura 3.189: Diagrama de dispersión para beneficios y ventas con líneas de te
 <div class="figure" style="text-align: center"><span id="fig:paso2pronosticopowerbi-fig"></span>
 <img src="Imágenes/powerbi193.jpg" alt="Evolución anual de las ventas" width="90%" />
 <p class="caption">
-Figura 3.190: Evolución anual de las ventas
+Figura 3.200: Evolución anual de las ventas
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -1907,7 +2002,7 @@ Figura 3.190: Evolución anual de las ventas
 <div class="figure" style="text-align: center"><span id="fig:paso3pronosticopowerbi-fig"></span>
 <img src="Imágenes/powerbi194.jpg" alt="Evolución anual de las ventas" width="90%" />
 <p class="caption">
-Figura 3.191: Evolución anual de las ventas
+Figura 3.201: Evolución anual de las ventas
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -1916,7 +2011,7 @@ Figura 3.191: Evolución anual de las ventas
 <div class="figure" style="text-align: center"><span id="fig:paso4pronosticopowerbi-fig"></span>
 <img src="Imágenes/powerbi195.jpg" alt="Evolución de las ventas fecha por fecha" width="90%" />
 <p class="caption">
-Figura 3.192: Evolución de las ventas fecha por fecha
+Figura 3.202: Evolución de las ventas fecha por fecha
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -1926,7 +2021,7 @@ Figura 3.192: Evolución de las ventas fecha por fecha
 <div class="figure" style="text-align: center"><span id="fig:paso6pronosticopowerbi-fig"></span>
 <img src="Imágenes/powerbi196.jpg" alt="Pronóstico de las ventas para 30 días" width="90%" />
 <p class="caption">
-Figura 3.193: Pronóstico de las ventas para 30 días
+Figura 3.203: Pronóstico de las ventas para 30 días
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
@@ -1935,7 +2030,7 @@ Figura 3.193: Pronóstico de las ventas para 30 días
 <div class="figure" style="text-align: center"><span id="fig:paso7pronosticopowerbi-fig"></span>
 <img src="Imágenes/powerbi197.jpg" alt="Pronóstico de las ventas para 30 días agregando estacionalidad" width="90%" />
 <p class="caption">
-Figura 3.194: Pronóstico de las ventas para 30 días agregando estacionalidad
+Figura 3.204: Pronóstico de las ventas para 30 días agregando estacionalidad
 </p>
 </div>
 <p>La descripción emergente indica el valor de la predicción y los limites del intervalo de confianza, así como en las líneas de tendencia no es posible encontrar información acerca del método usado para realizar el pronóstico o medidas estadísticas útiles que permitan la evaluación del mismo.</p>
