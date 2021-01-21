@@ -93,6 +93,10 @@ Existe una gran comunidad de expertos y usuarios de Power BI a nivel mundial, qu
    * Permite Almacenar datos de Power BI en Azure Data Lake Storage Gen2.
    * Seguridad y cifrado de datos.
    * Modelado de datos basado en IA usando AutoML, Cognitive Services y Azure Machine Learning.
+
+### Precios de Power BI
+
+La licencia de Power BI Pro tiene un costo de $\$9.99$ USD por usuario mensual y la versión Power BI Premium tiene un precio mensual de $\$4995$ USD por recurso de almacenamiento y calculo en la nube dedicado con suscripción anual.
    
 ### Compartir el trabajo realizado en Power BI
 
@@ -1412,13 +1416,13 @@ La versión gratuita de Power BI no posee todos los gráficos básicos que un an
 
 2.	Después de agregar el objeto visual R, su lienzo de trabajo se dividirá en dos secciones, una de ellas mostrara la visualización creada a partir de un script R y la otra sección funciona como un editor de script de R que permite escribir o pegar código, inicialmente esta última sección le pedirá agregar campos al área valores, esto se debe a que Power BI creara una base de datos con los campos seleccionados.
 
-```{r paso2histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar objeto visual de R', out.width='90%'}
+```{r paso2histogramapowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar objeto visual de R', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi198.jpg")
 ```
 
 3.	Se realizará un histograma que permita identificar la distribución de edades por modalidad de formación y después se añade una segmentación que permita filtrar por la sede de matrícula, por tanto, los campos que se deben añadir al estante valores serán EDAD_MOD, TIPO_NIVEL, SEDE_NOMBRE_MAT.
 
-```{r paso3histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar campos al estante valores', out.width='90%'}
+```{r paso3histogramapowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar campos al estante valores', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi199.jpg")
 ```
 
@@ -1426,7 +1430,7 @@ knitr::include_graphics("Imágenes/powerbi199.jpg")
 
 5.	El histograma se realizará con ayuda del paquete ggplot2, el código será escrito a partir de la línea siete como se muestra en la siguiente imagen.
 
-```{r paso5histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Código para crear histograma', out.width='90%'}
+```{r paso5histogramapowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Código para crear histograma', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi200.jpg")
 ```
 
@@ -1434,7 +1438,7 @@ El conjunto de datos con el cual se trabaja es “dataset”, inicialmente se el
 
 6.	Haga clic sobre el icono ejecutar script ubicado en la esquina superior derecha de la ventana de editor, al ejecutarlo obtendrá dos histogramas, uno para cada modalidad de formación.
 
-```{r paso6histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma para edad por modalidad de formación', out.width='90%'}
+```{r paso6histogramapowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma para edad por modalidad de formación', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi201.jpg")
 ```
 

@@ -1,0 +1,5 @@
+library(readxl)
+library(dplyr)
+Graduados <- read_xlsx("Datos.xlsx")
+evoluciongeneral <- Graduados %>% group_by(YEAR_SEMESTER) %>% count()
+write.csv(evoluciongeneral, file = "evoluciongeneral.csv", row.names = F)
