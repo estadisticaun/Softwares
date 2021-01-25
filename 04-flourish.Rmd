@@ -1,7 +1,121 @@
 # Flourish {#flourish}
 
-Some _significant_ applications are demonstrated in this chapter.
+## Generalidades {#generalidadesflourish}
 
-## Example one
+### ¿Qué es Flourish?
 
-## Example two
+Flourish es una aplicación web especializada en crear presentaciones y visualizaciones de gran impacto y utilidad a partir de datos, uno de los objetivos principales de esta compañía es explorar y explicar los datos con hermosas visualizaciones e historias, es posible publicar, presentar o descargar el trabajo realizado sin la necesidad de codificar ni instalar un software.
+
+Esta aplicación fue cofundada por Duncan Clark y Robin Houston. El primero de ellos tiene experiencia en narración de historias en periodismo de datos y publicación, mientras que Robin es matemático y desarrollador, esta pareja comenzó a trabajar en visualizaciones como un proyecto paralelo en 2012, sus primeros proyectos generaron tanto interés que decidieron crean in estudio de visualizaciones llamado Kiln. Durante los siguientes años trabajaron con diversos clientes entre los cuales se encuentran Google, la OMS y LSE, y algunos premios.  Durante todo este tiempo, Duncan y Robin trabajaron en una idea: una herramienta que permitiera a los no codificadores crear visualizaciones e historias de alta calidad sin el costo y las demoras de encargar proyectos a medida. Para 2016, tenían una visión clara para tal herramienta y nació Flourish.
+
+### Principales ventajas de Flourish
+
+- Sencillez de manejo 
+
+Para acceder a la versión gratuita es necesario la creación de una cuenta o perfil, una vez realizado esto se puede iniciar a trabajar inmediatamente, la curva de aprendizaje es muy rápida y corta, todas las visualizaciones que se pueden realizar con esta herramienta están apoyadas por ejemplos prefabricados con datos falsos, lo único que se deba hacer es adaptar nuestros datos a la forma en la que se encuentran en los ejemplos.
+
+- Capacidad de personalización
+
+Permite usar temas personalizados que se alinean con las pautas de su marca o empresa, existe la posibilidad de crear o encargar plantillas a medida usando el SDK para desarrolladores. 
+
+- Variedad de visualizaciones
+
+El portafolio ofrecido por Flourish es bastante amplio, incluye todo tipo de gráficos y mapas atractivos, ofrece desde gráficos tradicionales como barras, áreas, líneas hasta mapas en los cuales se pueden marcar tanto localidades concretas como polígonos geográficos. Una de sus funcionalidades más atractivas es incluir movimiento en los gráficos de una forma automatizada a través del uso de fechas.
+
+- Mejora continua de la plataforma
+
+La herramienta posee un [blog propio]( https://flourish.studio/blog/) en el cual se informa a los usuarios las novedades en las cuales se encuentran trabajando, una de esas novedades es la posibilidad de tomar datos en tiempo real lo que permite que los gráficos evolucionen en función de una variable temporal.
+
+- Adaptación a diversos tamaños de pantalla
+
+Las visualizaciones creadas usando Flourish funcionan en todos los tamaños de pantalla, solo es necesario generar una vista previa al momento de desarrollar los gráficos y publicarla.
+
+- Conexión a varias fuentes de datos
+
+Permite la conexión a hojas de cálculo, conexión a fuentes en vivo o integración con la API.
+
+- Sin instalación
+
+Esta aplicación no requiere instalación, ya que es completamente web solo es necesario poseer un navegador para empezar a crear.
+
+- Flujos de trabajo
+
+Los flujos de trabajo permiten al editor decidir quienes puede publicar de manera libre o quienes deben tener su aprobación.
+
+- Recurso de ayudas
+
+Todas las versiones disponen de recursos prácticos como las plantillas de gráficos y una página web de [ayuda](https://help.flourish.studio/), pero el asesoramiento y soporte técnico esta dedicado a los clientes empresariales.
+
+- Alianzas
+
+Flourish cuenta con una alianza importante con el Google News Lab con la cual se logra acceso a las condiciones premium para medios de comunicación y estudiantes.
+Facilidad para compartir el trabajo 
+Permite al usuario publicar y compartir visualizaciones o incrustarlas en un sitio web.
+
+### Principales desventajas de Flourish
+
+- Al usar la versión gratuita los trabajos realizados usando esta herramienta permanecerán públicos y cualquiera puede acceder a ellos, esto es bueno para comunicadores y medios, pero no para organizaciones que manejan información sensible.
+
+- Preparación inicial de datos.
+
+- La forma de funcionamiento se basa en plantillas prefabricadas que ayudan con la facilidad de uso, pero es posible tener que cambiar la estructura de sus datos para que se acomoden a la forma que posee cada plantilla.
+
+- No posee material de apoyo como videos o aprendizaje guiado.
+
+### Productos de Flourish 
+- Flourish Público: este producto es la versión gratuita de Flourish con la cual se puede crear, publicar y compartir visualizaciones, pero todos los datos son públicos, es una herramienta útil para explorar o de uso educativo.
+    * Todos los datos y proyectos son públicos.
+    * Compartir e insertar proyectos.
+    * Crear historias y presentaciones.
+    * Compatible con dispositivos móviles y tabletas.
+
+- Flourish Personal: es una licencia que ofrece privacidad y soporte ideal para particulares y trabajo con datos sensibles.
+    * Ofrece todos los servicios de Flourish Público.
+    * Posibilidad de mantener los datos y proyectos privados.
+    * Compartir, insertar o auto alojar con atribucuón.
+    * Soporte por correo electrónico.
+
+- Flourish Business Lite: es un plan ideal para inicios de negocio con características de marca y equipo, adicional a los servicios ofrecidos en la versión Personal, también ofrece:
+    * Incorporación de varios usuarios en equipo.
+    * Tema personalizado con fuente de Google.
+    * Publicación protegida por contraseña.
+    * Soporte prioritario.
+
+- Flourish Business Pro y Enterprise: al acceder a este producto se liberan todos los servicios y utilidades de la plataforma Flourish, sus paquetes pueden incluir:
+    * Plantillas y funciones premium.
+    * Temas personalizados en sus fuentes/estilos.
+    * Escritura de desplazamiento sin código en su CMS.
+    * Conexión a CSV en vivo o Google sheets.
+    * SDK para plantillas personalizadas privadas.
+    * Gestor de cuentas y planes de formación.
+
+### Precios de Flourish 
+La versión personal de Flourish tiene un costo de $\$69$ USD por mes y permite cancelación en cualquier momento, Business Lite posee un costo anual desde los $\$4999$ USD, finalmente la versión Business Pro y Enterprise no tiene un costo ya que los paquetes pueden ser construidos según las necesidades de la organización.
+
+### ¿Cómo compartir el trabajo?
+
+Como ya se mencionó desde la versión gratuita es posible publicar y compartir o incrustar en un sitio web y descargar los gráficos como imágenes planas, para esto en la esquina superior derecha se ubica un botón llamado Exportar y publicar, al hacer clic sobre el encontrara la opción de publicar para compartir e insertar, descargar imagen o descargar HTML, este último es válido para la versión premium o personal de Flourish.
+
+```{r compartirtrabajoflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones de exportación y publicación', out.width='40%'}
+knitr::include_graphics("Imágenes/flourish1.jpg")
+```
+
+Al hacer clic sobre Publicar para compartir e insertar aparecerá un mensaje en cual debe confirmar la publicación, luego de publicado se habilita un enlace y un código para incrustación web.
+
+```{r compartirtrabajoflourishpublicar-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones de publicación', out.width='40%'}
+knitr::include_graphics("Imágenes/flourish2.jpg")
+```
+
+También es posible descargar la imagen de la visualización creada, para esto haga clic sobre descargar imagen, en la ventana de descarga debe asignar un nombre a la imagen, seleccionar un formato y elegir un tamaño.
+
+```{r compartirtrabajoflourishdescargarimagen-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descarga de imágenes', out.width='40%'}
+knitr::include_graphics("Imágenes/flourish3.jpg")
+```
+
+### Instalación de Flourish 
+
+Para usar esta herramienta de visualización no es necesario la instalación de softwares ya que es una aplicación completamente web, lo que si es necesario es crear una cuenta o perfil para iniciar a crear gráficos y analizar los datos; debe ingresar a la página principal de [Flourish]( https://flourish.studio/) y seleccionar la opción registrarse ubicada en la esquina superior derecha. Al hacer clic sobre este botón le pedirá el inicio de sesión si ya se encuentra registrado o también inicia sesión por medio de su cuenta de Google, finalmente presenta la alternativa de inscribirse si aún no se encuentra registrado o no se desea iniciar con Google.
+
+```{r crearcuentaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Registro en Flourish', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish4.jpg")
+```

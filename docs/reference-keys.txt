@@ -433,6 +433,7 @@ qué-es-power-bi
 principales-ventajas-de-power-bi
 principales-desventajas-de-power-bi
 productos-de-power-bi
+precios-de-power-bi
 compartir-el-trabajo-realizado-en-power-bi
 instalación-de-power-bi-desktop
 formadenavegacionpower
@@ -458,4 +459,15 @@ flourish
 example-one
 example-two
 conclu
-precios-de-power-bi
+generalidadesflourish
+qué-es-flourish
+principales-ventajas-de-flourish
+principales-desventajas-de-flourish
+productos-de-flourish
+fig:compartirtrabajoflourish-fig
+fig:compartirtrabajoflourishpublicar-fig
+fig:compartirtrabajoflourishdescargarimagen-fig
+fig:crearcuentaflourish-fig
+precios-de-flourish
+cómo-compartir-el-trabajo
+instalación-de-flourish
