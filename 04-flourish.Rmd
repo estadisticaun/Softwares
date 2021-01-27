@@ -62,6 +62,8 @@ Permite al usuario publicar y compartir visualizaciones o incrustarlas en un sit
 
 - No posee material de apoyo como videos o aprendizaje guiado.
 
+- Solo permite la creación de historias tipo diapositiva y no tableros que combinen varios objetos visuales.
+
 ### Productos de Flourish 
 - Flourish Público: este producto es la versión gratuita de Flourish con la cual se puede crear, publicar y compartir visualizaciones, pero todos los datos son públicos, es una herramienta útil para explorar o de uso educativo.
     * Todos los datos y proyectos son públicos.
@@ -118,4 +120,24 @@ Para usar esta herramienta de visualización no es necesario la instalación de 
 
 ```{r crearcuentaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Registro en Flourish', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish4.jpg")
+```
+
+## Forma de navegación {#formanavegacionflourish}
+
+La pantalla inicial de Flourish cuando inicia sesión, permite administrar por carpetas los proyectos, ordenarlos y crear nuevas visualizaciones o historias, en la parte central se ubicarán los proyectos de visualización realizados.
+
+```{r pantallainicialflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Pantalla inicial', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish5.jpg")
+```
+
+El icono de interrogación ubicado en la esquina inferior derecha contiene respuestas instantáneas a preguntas comunes o básicas sobre creación de visualizaciones o historias, formas de compartir el trabajo, crear video o GIF, agregar los datos a una plantilla, entre otras; también ofrece la posibilidad de buscar el tema de interés o duda a resolver.
+
+```{r respuestasinstantaneas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Respuestas instantáneas', out.width='40%'}
+knitr::include_graphics("Imágenes/flourish6.jpg")
+```
+
+A modo de exploración de la interfaz de trabajo debe hacer clic sobre el botón nueva visualización, al hacer esto se encontrará con una galería de plantillas que incluye todo tipo de gráficos, entre los cuales se encuentran gráficos de barras, líneas, circulares, mapas y mapas en 3D, dispersión, jerarquía, tarjetas, mapas de calor, carrera de grafico de barras y líneas, gráficos de pendientes, entre muchas otras opciones.
+
+```{r galeriadeplantillas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Galería de plantillas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish7.jpg")
 ```
