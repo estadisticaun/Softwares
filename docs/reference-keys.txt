@@ -400,6 +400,9 @@ fig:compartirtrabajoflourish-fig
 fig:compartirtrabajoflourishpublicar-fig
 fig:compartirtrabajoflourishdescargarimagen-fig
 fig:crearcuentaflourish-fig
+fig:pantallainicialflourish-fig
+fig:respuestasinstantaneas-fig
+fig:galeriadeplantillas-fig
 intro
 tableau
 generalidades
@@ -468,8 +471,7 @@ productos-de-flourish
 precios-de-flourish
 cómo-compartir-el-trabajo
 instalación-de-flourish
-conclu
-fig:pantallainicialflourish-fig
-fig:respuestasinstantaneas-fig
-fig:galeriadeplantillas-fig
 formanavegacionflourish
+conclu
+fig:reemplazarvariablescontablamodalidadformacion-fig
+gráfico-de-barras

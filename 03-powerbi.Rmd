@@ -453,7 +453,7 @@ Cuando se trata de analizar cifras es importante visualizar las cantidades como 
 
 1.	Haga clic sobre el botón transformar datos.
 
-2.	Haciendo clic derecho sobre la tabla graduados seleccione duplicar. Imagen powerbi72.
+2.	Haciendo clic derecho sobre la tabla graduados seleccione duplicar.
 
 ```{r paso2porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Duplicar tablas', out.width='40%'}
 knitr::include_graphics("Imágenes/powerbi72.jpg")
@@ -534,11 +534,11 @@ De nuevo en la ventana de Power BI debe observar que en el panel campos se ubica
 
 Es momento de incluir los porcentajes calculados en el gráfico de líneas, para esto haga clic sobre el grafico de líneas, debe reemplazar los campos YEAR_SEMESTER  y TIPO_NIVEL por estos mismos campos, pero de la tabla Modalidadformación, en el estante valores elimine el campo que está allí y arrastre la variable Cantidad a dicho estante, finalmente debe agregar el campo Porcentaje a información sobre herramientas.
 
-```{r taableromodalidadformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas con la tabla creada', out.width='100%'}
+```{r reemplazarvariablescontablamodalidadformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas con la tabla creada', out.width='100%'}
 knitr::include_graphics("Imágenes/powerbi84.jpg")
 ```
 
-Ordene nuevamente el eje de forma ascendente y por la variable YEAR_SEMESTER como se había hecho anteriormente, cambie el color de los datos, naranja para postgrado y verde para pregrado. Para cambiar el formato de la variable porcentaje haga doble clic sobre dicha variable, en formato seleccione porcentaje, su dashboard se verá así.
+Para cambiar el formato de la variable porcentaje haga doble clic sobre dicha variable, en formato seleccione porcentaje, tambien debe cambiar el nombre de la variable ubicada en el estante leyenda por Modalidad de formación, su dashboard se verá así.
 
 ```{r formatoporcentaje-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir formato de porcentaje', out.width='100%'}
 knitr::include_graphics("Imágenes/powerbi85.jpg")
@@ -682,6 +682,8 @@ El siguiente dashboard presentado en la página de estadísticas de la Universid
 ```{r evolucionnivelformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Evolución del número de estudiantes graduados por nivel de formación', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi63.jpg")
 ```
+
+### Gráfico de barras
 
 Es momento de realizar un gráfico de barras para observar la distribución de graduados por modalidad de formación en el periodo 2020-1, para crear dicho gráfico debe seguir estos pasos.
 

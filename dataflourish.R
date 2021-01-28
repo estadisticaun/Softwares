@@ -31,8 +31,8 @@ modalidadformacioncircular <- Graduados %>%
   mutate(YEAR_SEMESTER = as.factor(YEAR_SEMESTER)) %>% 
   summarise(Cantidad = n()) %>% 
   mutate(Total = aggregate(Cantidad~YEAR_SEMESTER, FUN = sum)[,2]) %>%  
-  mutate(Porcentaje = round((Cantidad/Total)*100, 2))
-write.csv(modalidadformacioncircular, file = "modalidadformacioncircular.csv", 
+  mutate(Porcentaje = paste(round((Cantidad/Total)*100, 2), "%"))
+  write.csv(modalidadformacioncircular, file = "modalidadformacioncircular.csv", 
           row.names = F)
 
 #FILTRAR POR PERIODO 2020-1
