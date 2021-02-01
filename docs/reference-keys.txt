@@ -249,7 +249,7 @@ fig:paso11porcentajes-fig
 fig:paso12porcentajes-fig
 fig:paso13porcentajes-fig
 fig:tablamodalidadformacion-fig
-fig:taableromodalidadformacion-fig
+fig:reemplazarvariablescontablamodalidadformacion-fig
 fig:formatoporcentaje-fig
 fig:paso1matriz-fig
 fig:paso2matriz-fig
@@ -451,6 +451,7 @@ graficolineaspowerbi
 graficodelineassegmentadopowerbi
 tabladetextopowerbi
 gráfico-circular
+gráfico-de-barras
 barrasapiladas
 gráficoanillos
 segementaciondatospowerbi
@@ -473,5 +474,6 @@ cómo-compartir-el-trabajo
 instalación-de-flourish
 formanavegacionflourish
 conclu
-fig:reemplazarvariablescontablamodalidadformacion-fig
-gráfico-de-barras
+fig:interfazdetrabajoflourish-fig
+fig:pestañadatosflourish-fig
+fig:pestañadatossubirdatosflourish-fig
