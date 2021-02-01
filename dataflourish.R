@@ -35,7 +35,7 @@ modalidadformacioncircular <- Graduados %>%
   write.csv(modalidadformacioncircular, file = "modalidadformacioncircular.csv", 
           row.names = F)
 
-#FILTRAR POR PERIODO 2020-1
+#FILTRADO POR PERIODO 2020-1
 modalidadformacioncircularfiltrada <- Graduados %>% 
   group_by(YEAR_SEMESTER, TIPO_NIVEL) %>% 
   summarise(Cantidad = n()) %>% 
@@ -44,3 +44,13 @@ modalidadformacioncircularfiltrada <- Graduados %>%
 write.csv(modalidadformacioncircularfiltrada, 
           file = "modalidadformacioncircularfiltrada.csv", 
           row.names = F)
+
+#GRAFICO DE BARRAS (NIVEL DE FORMACION)
+nivelformacion <- Graduados %>% 
+  group_by(YEAR_SEMESTER, NIVEL) %>% 
+  summarise(Cantidad = n()) %>% 
+  mutate(Total = aggregate(Cantidad~YEAR_SEMESTER, FUN = sum)[,2]) %>% 
+  mutate(Porcentaje = paste(round((Cantidad/Total)*100, 2), "%")) %>% 
+  filter(YEAR_SEMESTER == "2020 - 1")
+write.csv(nivelformacion, file = "nivelformacion.csv", 
+          row.names = FALSE)

@@ -403,6 +403,9 @@ fig:crearcuentaflourish-fig
 fig:pantallainicialflourish-fig
 fig:respuestasinstantaneas-fig
 fig:galeriadeplantillas-fig
+fig:interfazdetrabajoflourish-fig
+fig:pestañadatosflourish-fig
+fig:pestañadatossubirdatosflourish-fig
 intro
 tableau
 generalidades
@@ -474,6 +477,3 @@ cómo-compartir-el-trabajo
 instalación-de-flourish
 formanavegacionflourish
 conclu
-fig:interfazdetrabajoflourish-fig
-fig:pestañadatosflourish-fig
-fig:pestañadatossubirdatosflourish-fig
