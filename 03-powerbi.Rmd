@@ -683,7 +683,7 @@ El siguiente dashboard presentado en la página de estadísticas de la Universid
 knitr::include_graphics("Imágenes/powerbi63.jpg")
 ```
 
-### Gráfico de barras
+#### Gráfico de barras
 
 Es momento de realizar un gráfico de barras para observar la distribución de graduados por modalidad de formación en el periodo 2020-1, para crear dicho gráfico debe seguir estos pasos.
 

@@ -11,8 +11,9 @@ write.csv(evoluciongeneral, file = "evoluciongeneral.csv", row.names = F)
 modalidadformacion <- Graduados %>% group_by(YEAR_SEMESTER, TIPO_NIVEL) %>% 
   count() %>% 
   spread(key = TIPO_NIVEL, value = n) %>% 
-  mutate(Porcentajepregrado = round((Pregrado/(Pregrado + Postgrado)*100), 2)) %>% 
-  mutate(Porcentajepostgrado = round((Postgrado/(Pregrado + Postgrado)*100),2))
+  mutate(Total = Pregrado + Postgrado) %>% 
+  mutate(Porcentajepregrado = paste(round((Pregrado/Total)*100, 2), "%")) %>% 
+  mutate(Porcentajepostgrado = paste(round((Postgrado/Total)*100, 2), "%"))
 write.csv(modalidadformacion, file = "modalidadformacion.csv", row.names = F)
 
 #TABLA (MODALIDAD DE FORMACION)
@@ -20,8 +21,8 @@ modalidadformaciontabla <- Graduados %>% group_by(YEAR, SEMESTRE, TIPO_NIVEL) %>
   count() %>% 
   spread(key = TIPO_NIVEL, value = n) %>% 
   mutate(Total = Pregrado + Postgrado) %>% 
-  mutate(Porcentajepregrado = round((Pregrado/(Pregrado + Postgrado)*100), 2)) %>% 
-  mutate(Porcentajepostgrado = round((Postgrado/(Pregrado + Postgrado)*100),2))
+  mutate(Porcentajepregrado = paste(round((Pregrado/Total)*100, 2), "%")) %>% 
+  mutate(Porcentajepostgrado = paste(round((Postgrado/Total)*100, 2), "%"))
 write.csv(modalidadformaciontabla, file = "modalidadformaciontabla.csv", 
           row.names = F)
 

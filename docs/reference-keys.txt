@@ -476,4 +476,6 @@ precios-de-flourish
 cómo-compartir-el-trabajo
 instalación-de-flourish
 formanavegacionflourish
+flujo-de-trabajo-1
+análisis-de-datos
 conclu
