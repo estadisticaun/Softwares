@@ -671,6 +671,14 @@ knitr::include_graphics("Imágenes/powerbi60.jpg")
 knitr::include_graphics("Imágenes/powerbi61.jpg")
 ```
 
+El filtro mostrado en el paso 7 es un filtro básico en el cual se debe seleccionar de manera manual el periodo que se quiere visualizar, a pesar de que funciona de manera adecuada existen alternativas para automatizarlo y lograr que cuando la base de datos sea actualizada con un nuevo periodo no se tenga que editar el filtro del gráfico para seleccionar el nuevo periodo incluido.
+
+Una de las alternativas consiste en cambiar el tipo de filtro de filtrado básico a Top N, en la sección mostrar elementos debe seleccionar superior y escribir el número 1, al estante por valor deberá arrastrar la columna YEAR_SEMESTER y en su menú desplegable elegir último, finalmente debe hacer clic sobre aplicar filtro.
+
+```{r filtrotopngraficocircular-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Uso de filtro Top N para mostrar el último periodo', out.width='40%'}
+knitr::include_graphics("Imágenes/powerbi208.jpg")
+```
+
 Después de creados los objetos visuales sobre el lienzo se obtiene un dashboard útil e informativo con interactividad entre dos de los gráficos construidos.
 
 ```{r dashboardmodalidadformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard modalidad de formación', out.width='90%'}

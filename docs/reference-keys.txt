@@ -479,3 +479,4 @@ formanavegacionflourish
 flujo-de-trabajo-1
 análisis-de-datos
 conclu
+fig:filtrotopngraficocircular-fig
