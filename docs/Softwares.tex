@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-02-02}
+\date{2021-02-08}
 
 \begin{document}
 \maketitle
@@ -5368,6 +5368,19 @@ El dashboard que se está realizando contiene un gráfico circular que permite v
 }
 
 \caption{Cambiar nombre de los estantes leyenda y valores}\label{fig:paso8circular-fig}
+\end{figure}
+
+El filtro mostrado en el paso 7 es un filtro básico en el cual se debe seleccionar de manera manual el periodo que se quiere visualizar, a pesar de que funciona de manera adecuada existen alternativas para automatizarlo y lograr que cuando la base de datos sea actualizada con un nuevo periodo no se tenga que editar el filtro del gráfico para seleccionar el nuevo periodo incluido.
+
+Una de las alternativas consiste en cambiar el tipo de filtro de filtrado básico a Top N, en la sección mostrar elementos debe seleccionar superior y escribir el número 1, al estante por valor deberá arrastrar la columna YEAR\_SEMESTER y en su menú desplegable elegir último, finalmente debe hacer clic sobre aplicar filtro.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{Imágenes/powerbi208} 
+
+}
+
+\caption{Uso de filtro Top N para mostrar el último periodo}\label{fig:filtrotopngraficocircular-fig}
 \end{figure}
 
 Después de creados los objetos visuales sobre el lienzo se obtiene un dashboard útil e informativo con interactividad entre dos de los gráficos construidos.

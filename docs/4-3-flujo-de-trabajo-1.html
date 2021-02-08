@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-02-02" />
+<meta name="date" content="2021-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -208,7 +208,146 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>El flujo de trabajo dentro de Flourish es diferente al visto en los softwares Tableau y Power BI ya que para trabajar en estos últimos inicialmente se realiza la conexión a los datos, seguido de esto se realizan las visualizaciones y por último son compartidas, la diferencia radica en que Flourish se basa en plantillas donde cada una tiene una estructura de datos propia y el flujo de trabajo se repite para cada visualización que se desee crear, el primer paso siempre será seleccionar una plantilla, luego analizar la estructura de datos y cargar un archivo con los datos que se quieren visualizar que tengan esta misma estructura, asignar las columnas a los estantes y usar las pestañas de formato para personalizar el gráfico, por esta razón se hará directamente la sección análisis de datos omitiendo la sección de conexión a datos ya que es un paso a realizar en cada una de las visualizaciones que se elaboraran.</p>
 <div id="análisis-de-datos" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Análisis de datos</h3>
+<p>Debe recordar que las visualizaciones creadas se basan en las estadísticas oficiales de la Universidad Nacional de Colombia que se presentan en su página oficial sección cifras generales y <a href="http://estadisticas.unal.edu.co/menu-principal/cifras-generales/cifras-generales/?tx_estadisticaunal_listcategorias%5Bcategoria%5D=16&amp;tx_estadisticaunal_listcategorias%5Baction%5D=show&amp;tx_estadisticaunal_listcategorias%5Bcontroller%5D=Categoria&amp;cHash=bd354edbd23f35d536276c079984177c">graduados</a>, las visualizaciones allí mostradas involucran gráficos de líneas, tablas de texto, gráficos circulares, gráficos de barras y mapas, se iniciara construyendo este tipo de visualizaciones y luego se exploran las diferentes opciones de gráficos ofrecidas por Flourish.</p>
+<div id="gráfico-de-líneas" class="section level4">
+<h4><span class="header-section-number">4.3.1.1</span> Gráfico de líneas</h4>
+<p>Lo primero que se debe hacer al seleccionar una plantilla es identificar la estructura del conjunto de datos, es de resaltar que las plantillas que pertenecen a una misma categoría en este caso líneas, barras y circulares tendrán la misma estructura y la creación de cada gráfico va a diferir en la asignación de las columnas a los ejes. En este caso la estructura del gráfico de líneas coincide con la mostrada en la imagen <a href="4-2-formanavegacionflourish.html#fig:pestanadatosflourish-fig">4.9</a>, como se mencionó anteriormente se desea visualizar la evolución del número de estudiantes graduados a través de todos los periodos de los que se tiene registro, para realizar esto es necesario crear una base de datos que en su primera columna contenga el periodo y en la segunda el conteo que representara el total de estudiantes, para esto se tendrá la ayuda de R, si desea revisar el código utilizado para la creación de las bases a usar para este software puede consultar el archivo R llamado “DataFlourish.R”. Para la creación del gráfico de líneas debe seguir estos pasos.</p>
+<ol style="list-style-type: decimal">
+<li>Luego de seleccionada la plantilla de grafico de líneas debe hacer clic sobre subir datos, navegar en las carpetas, seleccionar el archivo “evoluciongeneral.csv” y hacer clic en abrir para cargar los datos, luego de esto se presentará un aviso en su pantalla en el que se informa que los datos serán visibles públicamente debido a que se está usando la versión gratuita, debe hacer clic en el botón importar públicamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:advertenciadedatospublicosflourish-fig"></span>
+<img src="Imágenes/flourish11.jpg" alt="Advertencia de datos públicos" width="40%" />
+<p class="caption">
+Figura 4.11: Advertencia de datos públicos
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Al importar los datos obtendrá un nuevo aviso que indica la cantidad de filas que han sido cargadas y un botón que indica que le paso siguiente es asignar columnas a los estantes, la columna A debe ser asignada al estante Labels/time (Etiquetas/ tiempo) y la columna B al estante Values (Valores).</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:asignarcolumnasflourish-fig"></span>
+<img src="Imágenes/flourish12.jpg" alt="Asignación de columnas a estantes" width="85%" />
+<p class="caption">
+Figura 4.12: Asignación de columnas a estantes
+</p>
+</div>
+<p>Desde este panel de conexión a datos no es posible transformar el tipo de datos o realizar campos calculados, solo es posible insertar columnas y filas para digitarlas de manera manual, remover columnas, ordenarlas y filtrar los datos, las opciones son muy limitadas por lo cual sus datos deben tener la estructura adecuada y deseada para mostrar en las visualizaciones.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Volviendo a la pestaña avance su visualización debe verse de la siguiente manera.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:graficolineasbaseflourish-fig"></span>
+<img src="Imágenes/flourish13.jpg" alt="Gráfico de líneas base" width="85%" />
+<p class="caption">
+Figura 4.13: Gráfico de líneas base
+</p>
+</div>
+<p>Observe que se identifican algunos problemas con la descripción emergente, también se tiene una leyenda en la esquina superior izquierda que identifica el color de la línea, algo que no es necesario ya que solo se tiene una línea, con la ayuda del panel lateral derecho se corregirán estos problemas.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>La primera pestaña para explorar y dar formato al gráfico será Colors (colores), allí debe desplegar el campo paleta y seleccionar editar paleta de colores, elimine los colores que posee esta paleta dejando solo uno el cual debe reemplazar el color con “#358DC8”.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:editarpaletadecoloresflourish-fig"></span>
+<img src="Imágenes/flourish14.jpg" alt="Editar paleta de colores" width="85%" />
+<p class="caption">
+Figura 4.14: Editar paleta de colores
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>La siguiente pestaña es Líneas, puntos y áreas sobre el campo curva lineal debe seleccionar derecho, esto con el fin de eliminar la curva suave que se está presentado en el gráfico.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:fromatodelacurvaflourish-fig"></span>
+<img src="Imágenes/flourish15.jpg" alt="Cambiar el estilo de la curva" width="85%" />
+<p class="caption">
+Figura 4.15: Cambiar el estilo de la curva
+</p>
+</div>
+<p>Hacia el final de esta pestaña encontrara una sección llamada Puntos, debe asegurarse de que se encuentre en apagado para eliminar los puntos que se presentan en la visualización.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Es momento de editar los ejes, para esto haga clic sobre la pestaña eje x, en el cajón texto debe escribir Periodo y activar el botón para dar estilo, debe seleccionar negrita en color negro y tamaño 1.3.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:editarejexflourish-fig"></span>
+<img src="Imágenes/flourish16.jpg" alt="Formato y edición del eje X" width="85%" />
+<p class="caption">
+Figura 4.16: Formato y edición del eje X
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>En esta misma pestaña se ubica una sección para las etiquetas, la posición se dejará por defecto, active el botón para dar estilo, aumente el tamaño a 1 en color negro.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:editarejexetiquetasflourish-fig"></span>
+<img src="Imágenes/flourish17.jpg" alt="Formato de etiquetas del eje X" width="85%" />
+<p class="caption">
+Figura 4.17: Formato de etiquetas del eje X
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Nuevamente sobre la pestaña eje x se encuentra una sección dedicada a las marcas de graduación y líneas del eje, cambie el color de línea por “#BDC3C7”, active las líneas de cuadricula y su botón de estilo, allí debe asignar el mismo color de línea en un estilo punteado.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:marcasdegraduacionylineasdelejeflourish-fig"></span>
+<img src="Imágenes/flourish18.jpg" alt="Formato de marcas de gradaución y líneas del eje" width="85%" />
+<p class="caption">
+Figura 4.18: Formato de marcas de gradaución y líneas del eje
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Repita los pasos 6, 7 y 8 para editar el eje y, tenga en cuenta que el título de este debe ser Número de graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:formatodeambosejesflourish-fig"></span>
+<img src="Imágenes/flourish19.jpg" alt="Gráfico con ambos ejes editados" width="85%" />
+<p class="caption">
+Figura 4.19: Gráfico con ambos ejes editados
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>La pestaña fondo de la trama permite usar ya sean colores o imágenes para el fondo de la visualización, en este caso se usara un color por lo que debe activar este campo y asignar el color “#ECF0F1”.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:fondodetramaflourish-fig"></span>
+<img src="Imágenes/flourish20.jpg" alt="Asignación de un color al fondo del gráfico" width="85%" />
+<p class="caption">
+Figura 4.20: Asignación de un color al fondo del gráfico
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>La leyenda ubicada en la esquina superior izquierda debe ser desactivada usando la pestaña leyenda la cual debe establecer en apagado.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:desactivarleyendaflourish-fig"></span>
+<img src="Imágenes/flourish21.jpg" alt="Desactivar leyenda" width="85%" />
+<p class="caption">
+Figura 4.21: Desactivar leyenda
+</p>
+</div>
+<ol start="12" style="list-style-type: decimal">
+<li><p>En la imagen <a href="4-3-flujo-de-trabajo-1.html#fig:graficolineasbaseflourish-fig">4.13</a> se puede observar que la descripción emergente del gráfico no es clara y debe ser editada, inicialmente debe ir a la pestaña datos y agregar la columna A al estante información para ventanas emergentes personalizadas y regrese a la pestaña avance.</p></li>
+<li><p>Dentro de las pestañas para dar formato al gráfico se ubica una llamada ventanas emergentes, debe seleccionar contenido personalizado, escribir lo que se muestra en la siguiente imagen, activar el estilo personalizado para seleccionar color negro, alineación izquierda y un tamaño de fuente de 13.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:contenidopersonalizadoventasemergentesflourish-fig"></span>
+<img src="Imágenes/flourish24.jpg" alt="Contenido personalizado en ventanas emergentes" width="85%" />
+<p class="caption">
+Figura 4.22: Contenido personalizado en ventanas emergentes
+</p>
+</div>
+<ol start="14" style="list-style-type: decimal">
+<li>Debe asignar el color de fondo “#ECF0F1” en la sección antecedentes ubicada en diseño.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:colordefondoflourish-fig"></span>
+<img src="Imágenes/flourish22.jpg" alt="Agregar un color de fondo para toda la visualización" width="85%" />
+<p class="caption">
+Figura 4.23: Agregar un color de fondo para toda la visualización
+</p>
+</div>
+<ol start="15" style="list-style-type: decimal">
+<li>Con la pestaña encabezamiento se asigna título al gráfico creado, seleccione alineación central y como título escriba Evolución histórica del total de estudiantes graduados, active el cambio de estilo y seleccione la A mayúscula grande en talla.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:titulodelgraficoflourish-fig"></span>
+<img src="Imágenes/flourish23.jpg" alt="Añadir un título al gráfico creado" width="85%" />
+<p class="caption">
+Figura 4.24: Añadir un título al gráfico creado
+</p>
+</div>
+<ol start="16" style="list-style-type: decimal">
+<li>Por último, asigne un nombre a la visualización en el espacio ubicado en la parte superior al lado del icono de casa, dicho nombre debe ser evolución general. Cerca al botón exportar y publicar encontrara un chulo con la palabra saved que indica que los cambios en el gráfico han sido guardados.</li>
+</ol>
+<p>Después de verificado que los cambios se han guardado haga clic sobre el icono de casa para regresar a todos sus proyectos y poder crear nuevas visualizaciones usando el botón de nueva visualización.</p>
 
+</div>
 </div>
 </div>
 <!-- </div> -->

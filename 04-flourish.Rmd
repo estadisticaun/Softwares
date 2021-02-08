@@ -149,13 +149,13 @@ knitr::include_graphics("Imágenes/flourish8.jpg")
 
 El contenedor número uno, permite ir a la página inicial de Flourish mostrada en \@ref(fig:pantallainicialflourish-fig), editar el nombre del gráfico realizado, crear historia, exportar y publicar, sobre la franja gris de este mismo contenedor se ubican botones útiles para obtener vista completa en una nueva ventana, vista previa en distintos tamaños de pantalla tales como escritorio, tableta, dispositivo y tamaño personalizado, en la parte central de esta franja se ubican dos pestañas, la primera de ellas llamada avance, en la cual se ubica el gráfico que se esté creando, la siguiente pestaña es datos la cual presenta la estructura del conjunto de datos que usa esta visualización.
 
-```{r pestañadatosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Pestaña de datos', out.width='85%'}
+```{r pestanadatosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Pestaña de datos', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish9.jpg")
 ```
 
 Esta pestaña de datos se compone de dos paneles básicos, el primero de ellos contiene los datos ficticios que usa la plantilla es importante analizar la estructura que poseen estos datos, ya que la base de datos a cargar debe tener la misma, el panel lateral derecho se encuentra la opción para cargar datos, al hacer clic en la flecha o menú desplegable de esta opción se presentan dos alternativas, una de ellas para subir archivo de datos y la otra para cargar datos y fusionar.
 
-```{r pestañadatossubirdatosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Subir archivo de datos', out.width='40%'}
+```{r pestanadatossubirdatosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Subir archivo de datos', out.width='40%'}
 knitr::include_graphics("Imágenes/flourish10.jpg")
 ```
 
@@ -172,3 +172,104 @@ El flujo de trabajo dentro de Flourish es diferente al visto en los softwares Ta
 
 ### Análisis de datos
 
+Debe recordar que las visualizaciones creadas se basan en las estadísticas oficiales de la Universidad Nacional de Colombia que se presentan en su página oficial sección cifras generales y [graduados]( http://estadisticas.unal.edu.co/menu-principal/cifras-generales/cifras-generales/?tx_estadisticaunal_listcategorias%5Bcategoria%5D=16&tx_estadisticaunal_listcategorias%5Baction%5D=show&tx_estadisticaunal_listcategorias%5Bcontroller%5D=Categoria&cHash=bd354edbd23f35d536276c079984177c), las visualizaciones allí mostradas involucran gráficos de líneas, tablas de texto, gráficos circulares, gráficos de barras y mapas, se iniciara construyendo este tipo de visualizaciones y luego se exploran las diferentes opciones de gráficos ofrecidas por Flourish.
+
+#### Gráfico de líneas
+
+Lo primero que se debe hacer al seleccionar una plantilla es identificar la estructura del conjunto de datos, es de resaltar que las plantillas que pertenecen a una misma categoría en este caso líneas, barras y circulares tendrán la misma estructura y la creación de cada gráfico va a diferir en la asignación de las columnas a los ejes. En este caso la estructura del gráfico de líneas coincide con la mostrada en la imagen \@ref(fig:pestanadatosflourish-fig), como se mencionó anteriormente se desea visualizar la evolución del número de estudiantes graduados a través de todos los periodos de los que se tiene registro, para realizar esto es necesario crear una base de datos que en su primera columna contenga el periodo y en la segunda el conteo que representara el total de estudiantes, para esto se tendrá la ayuda de R, si desea revisar el código utilizado para la creación de las bases a usar para este software puede consultar el archivo R llamado “DataFlourish.R”. Para la creación del gráfico de líneas debe seguir estos pasos.
+
+1.	Luego de seleccionada la plantilla de grafico de líneas debe hacer clic sobre subir datos, navegar en las carpetas, seleccionar el archivo “evoluciongeneral.csv” y hacer clic en abrir para cargar los datos, luego de esto se presentará un aviso en su pantalla en el que se informa que los datos serán visibles públicamente debido a que se está usando la versión gratuita, debe hacer clic en el botón importar públicamente.
+
+```{r advertenciadedatospublicosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Advertencia de datos públicos', out.width='40%'}
+knitr::include_graphics("Imágenes/flourish11.jpg")
+```
+
+2.	Al importar los datos obtendrá un nuevo aviso que indica la cantidad de filas que han sido cargadas y un botón que indica que le paso siguiente es asignar columnas a los estantes, la columna A debe ser asignada al estante Labels/time (Etiquetas/ tiempo) y la columna B al estante Values (Valores).
+
+```{r asignarcolumnasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de columnas a estantes', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish12.jpg")
+```
+
+Desde este panel de conexión a datos no es posible transformar el tipo de datos o realizar campos calculados, solo es posible insertar columnas y filas para digitarlas de manera manual, remover columnas, ordenarlas y filtrar los datos, las opciones son muy limitadas por lo cual sus datos deben tener la estructura adecuada y deseada para mostrar en las visualizaciones.
+
+3.	Volviendo a la pestaña avance su visualización debe verse de la siguiente manera.
+
+```{r graficolineasbaseflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas base', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish13.jpg")
+```
+
+Observe que se identifican algunos problemas con la descripción emergente, también se tiene una leyenda en la esquina superior izquierda que identifica el color de la línea, algo que no es necesario ya que solo se tiene una línea, con la ayuda del panel lateral derecho se corregirán estos problemas.
+
+4.	La primera pestaña para explorar y dar formato al gráfico será Colors (colores), allí debe desplegar el campo paleta y seleccionar editar paleta de colores, elimine los colores que posee esta paleta dejando solo uno el cual debe reemplazar el color con “#358DC8”.
+
+```{r editarpaletadecoloresflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar paleta de colores', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish14.jpg")
+```
+
+5.	La siguiente pestaña es Líneas, puntos y áreas sobre el campo curva lineal debe seleccionar derecho, esto con el fin de eliminar la curva suave que se está presentado en el gráfico.
+
+```{r fromatodelacurvaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar el estilo de la curva', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish15.jpg")
+```
+
+Hacia el final de esta pestaña encontrara una sección llamada Puntos, debe asegurarse de que se encuentre en apagado para eliminar los puntos que se presentan en la visualización.
+
+6.	Es momento de editar los ejes, para esto haga clic sobre la pestaña eje x, en el cajón texto debe escribir Periodo y activar el botón para dar estilo, debe seleccionar negrita en color negro y tamaño 1.3.
+
+```{r editarejexflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato y edición del eje X', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish16.jpg")
+```
+
+7.	En esta misma pestaña se ubica una sección para las etiquetas, la posición se dejará por defecto, active el botón para dar estilo, aumente el tamaño a 1 en color negro.
+
+```{r editarejexetiquetasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de etiquetas del eje X', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish17.jpg")
+```
+
+8.	Nuevamente sobre la pestaña eje x se encuentra una sección dedicada a las marcas de graduación y líneas del eje, cambie el color de línea por “#BDC3C7”, active las líneas de cuadricula y su botón de estilo, allí debe asignar el mismo color de línea en un estilo punteado.
+
+```{r marcasdegraduacionylineasdelejeflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de marcas de gradaución y líneas del eje', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish18.jpg")
+```
+
+9.	Repita los pasos 6, 7 y 8 para editar el eje y, tenga en cuenta que el título de este debe ser Número de graduados.
+
+```{r formatodeambosejesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico con ambos ejes editados', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish19.jpg")
+```
+
+10.	La pestaña fondo de la trama permite usar ya sean colores o imágenes para el fondo de la visualización, en este caso se usara un color por lo que debe activar este campo y asignar el color “#ECF0F1”.
+
+```{r fondodetramaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de un color al fondo del gráfico', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish20.jpg")
+```
+
+11.	La leyenda ubicada en la esquina superior izquierda debe ser desactivada usando la pestaña leyenda la cual debe establecer en apagado.
+
+```{r desactivarleyendaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Desactivar leyenda', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish21.jpg")
+```
+
+12.	En la imagen \@ref(fig:graficolineasbaseflourish-fig) se puede observar que la descripción emergente del gráfico no es clara y debe ser editada, inicialmente debe ir a la pestaña datos y agregar la columna A al estante información para ventanas emergentes personalizadas y regrese a la pestaña avance.
+
+13.	Dentro de las pestañas para dar formato al gráfico se ubica una llamada ventanas emergentes, debe seleccionar contenido personalizado, escribir lo que se muestra en la siguiente imagen, activar el estilo personalizado para seleccionar color negro, alineación izquierda y un tamaño de fuente de 13.
+
+```{r contenidopersonalizadoventasemergentesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Contenido personalizado en ventanas emergentes', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish24.jpg")
+```
+
+14.	Debe asignar el color de fondo “#ECF0F1” en la sección antecedentes ubicada en diseño.
+
+```{r colordefondoflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar un color de fondo para toda la visualización', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish22.jpg")
+```
+
+15.	Con la pestaña encabezamiento se asigna título al gráfico creado, seleccione alineación central y como título escriba Evolución histórica del total de estudiantes graduados, active el cambio de estilo y seleccione la A mayúscula grande en talla.
+
+```{r titulodelgraficoflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir un título al gráfico creado', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish23.jpg")
+```
+
+16.	Por último, asigne un nombre a la visualización en el espacio ubicado en la parte superior al lado del icono de casa, dicho nombre debe ser evolución general. Cerca al botón exportar y publicar encontrara un chulo con la palabra saved que indica que los cambios en el gráfico han sido guardados.
+
+Después de verificado que los cambios se han guardado haga clic sobre el icono de casa para regresar a todos sus proyectos y poder crear nuevas visualizaciones usando el botón de nueva visualización.
