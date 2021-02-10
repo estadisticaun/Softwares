@@ -174,7 +174,7 @@ El flujo de trabajo dentro de Flourish es diferente al visto en los softwares Ta
 
 Debe recordar que las visualizaciones creadas se basan en las estadísticas oficiales de la Universidad Nacional de Colombia que se presentan en su página oficial sección cifras generales y [graduados]( http://estadisticas.unal.edu.co/menu-principal/cifras-generales/cifras-generales/?tx_estadisticaunal_listcategorias%5Bcategoria%5D=16&tx_estadisticaunal_listcategorias%5Baction%5D=show&tx_estadisticaunal_listcategorias%5Bcontroller%5D=Categoria&cHash=bd354edbd23f35d536276c079984177c), las visualizaciones allí mostradas involucran gráficos de líneas, tablas de texto, gráficos circulares, gráficos de barras y mapas, se iniciara construyendo este tipo de visualizaciones y luego se exploran las diferentes opciones de gráficos ofrecidas por Flourish.
 
-#### Gráfico de líneas
+#### Gráfico de líneas {#graficolineasflourish}
 
 Lo primero que se debe hacer al seleccionar una plantilla es identificar la estructura del conjunto de datos, es de resaltar que las plantillas que pertenecen a una misma categoría en este caso líneas, barras y circulares tendrán la misma estructura y la creación de cada gráfico va a diferir en la asignación de las columnas a los ejes. En este caso la estructura del gráfico de líneas coincide con la mostrada en la imagen \@ref(fig:pestanadatosflourish-fig), como se mencionó anteriormente se desea visualizar la evolución del número de estudiantes graduados a través de todos los periodos de los que se tiene registro, para realizar esto es necesario crear una base de datos que en su primera columna contenga el periodo y en la segunda el conteo que representara el total de estudiantes, para esto se tendrá la ayuda de R, si desea revisar el código utilizado para la creación de las bases a usar para este software puede consultar el archivo R llamado “DataFlourish.R”. Para la creación del gráfico de líneas debe seguir estos pasos.
 
@@ -273,3 +273,56 @@ knitr::include_graphics("Imágenes/flourish23.jpg")
 16.	Por último, asigne un nombre a la visualización en el espacio ubicado en la parte superior al lado del icono de casa, dicho nombre debe ser evolución general. Cerca al botón exportar y publicar encontrara un chulo con la palabra saved que indica que los cambios en el gráfico han sido guardados.
 
 Después de verificado que los cambios se han guardado haga clic sobre el icono de casa para regresar a todos sus proyectos y poder crear nuevas visualizaciones usando el botón de nueva visualización.
+
+#### Gráfico de líneas segmentado por una dimensión {#graficolineassegmentadoflourish}
+
+Esta visualización también pertenece a la sección de plantillas de gráficos de líneas, barras y circulares y se usara la plantilla del gráfico anterior solo que esta vez se incorpora la modalidad de formación, la base de datos a cargar debe contener mínimo tres columnas, la primera de ellas con el periodo y las siguientes dos corresponden a pregrado y postgrado, adicional a esto es de vital importancia mostrar el número de estudiantes graduados como porcentaje del total por periodo, por tal razón se generan otras dos columnas con los respetivos porcentajes para cada modalidad de formación. 
+
+1.	Elija la plantilla gráfico de líneas y cargue el archivo llamado “modalidadformacion.csv”.
+
+2.	La columna A debe ser asignada al estante Labels/time (Etiquetas/ tiempo), las columnas B y C al estante Values (Valores), finalmente todas la columnas es decir de la A a la E deben ubicarse en información para ventanas emergentes personalizadas.
+
+```{r asignaciondecamposflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar columnas a los estantes correspondienetes', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish25.jpg")
+```
+
+3.	Al regresar a la pestaña avance se encuentran algunos problemas de formato tales como colores de datos, posición de la leyenda, etiquetas y títulos, inicialmente use la pestaña colores para editar la paleta y asignar el color “#8CC63F” a pregrado y “#F15A24” a postgrado.
+
+```{r editarcoloresflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar paleta de colores', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish26.jpg")
+```
+
+4.	Debe repetir los pasos del 5 a 9 mostrados en la sección \@ref(graficolineasflourish).
+
+```{r formatodevisualizacionflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar las líneas, ejes y cuadrícula', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish27.jpg")
+```
+
+5.	Por medio de la pestaña fondo de trama use el color “#ECF0F1” como fondo de la visualización.
+
+```{r fondodetramamodalidadfromacionflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar un color al fonde de trama del gráfico', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish28.jpg")
+```
+
+6.	Sobre la pestaña leyenda es posible modificar la posición y el formato de esta, modo de leyenda se debe establecer en automático, debe apagar la opción que permite filtrar datos haciendo clic sobre la leyenda, el tamaño del texto debe ser uno y estar en negrita, hacia el final de esta pestaña se ubica la posición de la leyenda para la cual debe seleccionar abajo, las leyendas siempre se ubicaran en las esquinas, al elegir abajo se ubica en la esquina inferior izquierda.
+
+```{r cambiarposicionleyendaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar la posición de la leyenda', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish29.jpg")
+```
+7.	El contenido de las ventanas emergentes será personalizado e incluirá todas las columnas de la base de datos, en el espacio de contenido emergente debe escribir:
+
+{{YEAR_SEMESTER}}  </br>
+Pregrado: {{Pregrado}} ({{Porcentajepregrado}}%) </br>
+Postgrado: {{Postgrado}} ({{Porcentajepostgrado}}%) </br>
+
+También debe activar la opción de estilo personalizado para cambiar el color del texto a negro y aumentar el tamaño de fuente a 13.
+
+```{r paso7lineassegmentadaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Contenido personalizado para ventanas emergentes', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish49.jpg")
+```
+
+8.	Debe repetir los pasos 14, 15 y 16 del grafico de líneas, para el paso 15 el título de la visualización debe ser Evolución del número de estudiantes graduados por modalidad de formación y para el paso 16 será Modalidad de formación.
+
+```{r paso8lineassegmentadaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Evolución del número de estudiantes graduados por modalidad de formación', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish30.jpg")
+```
