@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-02-08}
+\date{2021-02-10}
 
 \begin{document}
 \maketitle
@@ -7852,8 +7852,8 @@ El flujo de trabajo dentro de Flourish es diferente al visto en los softwares Ta
 
 Debe recordar que las visualizaciones creadas se basan en las estadísticas oficiales de la Universidad Nacional de Colombia que se presentan en su página oficial sección cifras generales y \href{http://estadisticas.unal.edu.co/menu-principal/cifras-generales/cifras-generales/?tx_estadisticaunal_listcategorias\%5Bcategoria\%5D=16\&tx_estadisticaunal_listcategorias\%5Baction\%5D=show\&tx_estadisticaunal_listcategorias\%5Bcontroller\%5D=Categoria\&cHash=bd354edbd23f35d536276c079984177c}{graduados}, las visualizaciones allí mostradas involucran gráficos de líneas, tablas de texto, gráficos circulares, gráficos de barras y mapas, se iniciara construyendo este tipo de visualizaciones y luego se exploran las diferentes opciones de gráficos ofrecidas por Flourish.
 
-\hypertarget{gruxe1fico-de-luxedneas}{%
-\subsubsection{Gráfico de líneas}\label{gruxe1fico-de-luxedneas}}
+\hypertarget{graficolineasflourish}{%
+\subsubsection{Gráfico de líneas}\label{graficolineasflourish}}
 
 Lo primero que se debe hacer al seleccionar una plantilla es identificar la estructura del conjunto de datos, es de resaltar que las plantillas que pertenecen a una misma categoría en este caso líneas, barras y circulares tendrán la misma estructura y la creación de cada gráfico va a diferir en la asignación de las columnas a los ejes. En este caso la estructura del gráfico de líneas coincide con la mostrada en la imagen \ref{fig:pestanadatosflourish-fig}, como se mencionó anteriormente se desea visualizar la evolución del número de estudiantes graduados a través de todos los periodos de los que se tiene registro, para realizar esto es necesario crear una base de datos que en su primera columna contenga el periodo y en la segunda el conteo que representara el total de estudiantes, para esto se tendrá la ayuda de R, si desea revisar el código utilizado para la creación de las bases a usar para este software puede consultar el archivo R llamado ``DataFlourish.R''. Para la creación del gráfico de líneas debe seguir estos pasos.
 
@@ -8110,6 +8110,136 @@ Hacia el final de esta pestaña encontrara una sección llamada Puntos, debe ase
 \end{enumerate}
 
 Después de verificado que los cambios se han guardado haga clic sobre el icono de casa para regresar a todos sus proyectos y poder crear nuevas visualizaciones usando el botón de nueva visualización.
+
+\hypertarget{graficolineassegmentadoflourish}{%
+\subsubsection{Gráfico de líneas segmentado por una dimensión}\label{graficolineassegmentadoflourish}}
+
+Esta visualización también pertenece a la sección de plantillas de gráficos de líneas, barras y circulares y se usara la plantilla del gráfico anterior solo que esta vez se incorpora la modalidad de formación, la base de datos a cargar debe contener mínimo tres columnas, la primera de ellas con el periodo y las siguientes dos corresponden a pregrado y postgrado, adicional a esto es de vital importancia mostrar el número de estudiantes graduados como porcentaje del total por periodo, por tal razón se generan otras dos columnas con los respetivos porcentajes para cada modalidad de formación.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Elija la plantilla gráfico de líneas y cargue el archivo llamado ``modalidadformacion.csv''.
+\item
+  La columna A debe ser asignada al estante Labels/time (Etiquetas/ tiempo), las columnas B y C al estante Values (Valores), finalmente todas la columnas es decir de la A a la E deben ubicarse en información para ventanas emergentes personalizadas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish25} 
+
+}
+
+\caption{Asignar columnas a los estantes correspondienetes}\label{fig:asignaciondecamposflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Al regresar a la pestaña avance se encuentran algunos problemas de formato tales como colores de datos, posición de la leyenda, etiquetas y títulos, inicialmente use la pestaña colores para editar la paleta y asignar el color ``\#8CC63F'' a pregrado y ``\#F15A24'' a postgrado.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish26} 
+
+}
+
+\caption{Editar paleta de colores}\label{fig:editarcoloresflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Debe repetir los pasos del 5 a 9 mostrados en la sección \ref{graficolineasflourish}.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish27} 
+
+}
+
+\caption{Editar las líneas, ejes y cuadrícula}\label{fig:formatodevisualizacionflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Por medio de la pestaña fondo de trama use el color ``\#ECF0F1'' como fondo de la visualización.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish28} 
+
+}
+
+\caption{Asignar un color al fonde de trama del gráfico}\label{fig:fondodetramamodalidadfromacionflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Sobre la pestaña leyenda es posible modificar la posición y el formato de esta, modo de leyenda se debe establecer en automático, debe apagar la opción que permite filtrar datos haciendo clic sobre la leyenda, el tamaño del texto debe ser uno y estar en negrita, hacia el final de esta pestaña se ubica la posición de la leyenda para la cual debe seleccionar abajo, las leyendas siempre se ubicaran en las esquinas, al elegir abajo se ubica en la esquina inferior izquierda.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish29} 
+
+}
+
+\caption{Cambiar la posición de la leyenda}\label{fig:cambiarposicionleyendaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  El contenido de las ventanas emergentes será personalizado e incluirá todas las columnas de la base de datos, en el espacio de contenido emergente debe escribir:
+\end{enumerate}
+
+\{\{YEAR\_SEMESTER\}\}
+Pregrado: \{\{Pregrado\}\} (\{\{Porcentajepregrado\}\}\%)
+Postgrado: \{\{Postgrado\}\} (\{\{Porcentajepostgrado\}\}\%)
+
+También debe activar la opción de estilo personalizado para cambiar el color del texto a negro y aumentar el tamaño de fuente a 13.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish49} 
+
+}
+
+\caption{Contenido personalizado para ventanas emergentes}\label{fig:paso7lineassegmentadaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Debe repetir los pasos 14, 15 y 16 del grafico de líneas, para el paso 15 el título de la visualización debe ser Evolución del número de estudiantes graduados por modalidad de formación y para el paso 16 será Modalidad de formación.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish30} 
+
+}
+
+\caption{Evolución del número de estudiantes graduados por modalidad de formación}\label{fig:paso8lineassegmentadaflourish-fig}
+\end{figure}
 
 \hypertarget{conclu}{%
 \chapter{Conclusiones}\label{conclu}}

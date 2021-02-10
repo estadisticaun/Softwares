@@ -326,3 +326,51 @@ knitr::include_graphics("Imágenes/flourish49.jpg")
 ```{r paso8lineassegmentadaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Evolución del número de estudiantes graduados por modalidad de formación', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish30.jpg")
 ```
+
+#### Tabla de texto {#tablatextoflourish}
+El tablero mostrado en la página web de las estadísticas oficiales de la Universidad Nacional para la modalidad de formación se compone de tres elementos principales, un gráfico de líneas que se realizó anteriormente, una tabla de texto y por último un gráfico circular; es momento de realizar la tabla de texto la cual debe contener cuatro columnas, la primera será el año, seguida del semestre y las modalidades de formación ofrecidas por la universidad, la tabla guía o de referencia posee un botón que permite mostrar el total de los estudiantes graduados, esto no es posible de construir en Flourish por tanto el conjunto de datos a cargar contendrá cinco columnas las cuales son Año, Semestre, Pregrado, Postgrado y Total.
+
+1.	Haga clic en nueva visualización, navegue en la página de plantillas y en la sección Table elija 
+Default.
+
+```{r paso1tablatextoflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Seleccionar plantilla para tabla', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish31.jpg")
+```
+
+2.	Después de seleccionada la plantilla para realizar una tabla se identifica una funcionalidad útil e interesante para mostrar los datos, en las últimas dos columnas de la plantilla se usan mini gráficos para visualizar información, se debe identificar la estructura de datos y explorar las pestañas de formato para hacer uso de los mini gráficos.
+
+3.	Sobre la pestaña datos de puede observar que el conjunto de datos posee doce columnas de las cuales la E y F son usadas para el mini gráfico de barras, de a G hasta la L se usan para el mini gráfico de áreas, el conjunto de datos a montar tendrá siete variables, las cinco que se han mencionado anteriormente y dos más que contendrán los porcentajes de cada modalidad de formación; cargue el archivo llamado “modalidadformaciontabla.csv”.
+
+```{r paso3tablatextoflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cargar archivo de datos', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish32.jpg")
+```
+
+4.	Haciendo doble clic sobre el nombre de cada columna puede editarlo, el nombre de la primera columna debe ser Año y la segunda columna debe ser cambiada por Semestre.
+
+5.	Regrese a la sección avance y  sobre la pestaña Table elija doce como el número de filas por página.
+
+```{r paso5tablatextoflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar el número de filas por página', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish33.jpg")
+```
+
+6.	En la pestaña estilos de celda debe seleccionar centrar para la alineación horizontal.
+
+7.	La pestaña gráficos de mini barras permite agregar un pequeño gráfico de barras en una nueva columna que combina dos que ya se tengan, en este caso se usaran las columnas Porcentajepregrado y Porcentajepostgrado para generar este gráfico que se ubicara en una columna llamada Porcentaje.
+
+```{r paso7tablatextoflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar mini gráfico de barras para visualizar porcentajes', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish34.jpg")
+```
+
+8.	Sobre esta misma pestaña deberá editar la paleta de colores, los colores a usar serán “#8CC63F” y “#F15A24”, debe notar que los colores mostrado en las barras de la tabla no coinciden con los colores asignados, esto se debe a que se tiene activado el botón ampliar, por tanto, deberá desactivarlo; finalmente en la sección etiquetas debe seleccionar en línea.
+
+```{r paso8tablatextoflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar el formato de las barras', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish35.jpg")
+```
+
+9.	Active las fronteras en la pestaña diseño y asigne el color negro a las cuatro fronteras 
+
+10.	Ubíquese sobre la pestaña buscar y deshabilite esta opción, con la pestaña encabezamiento asigne el título Total estudiantes graduados por modalidad de formación en alineación central, su visualización debe verse como se muestra a continuación.
+
+```{r tablatextomodalidadfromacionflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tabla: Total de estudiantes graduados por modalidad de formación', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish36.jpg")
+```
