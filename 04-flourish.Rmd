@@ -374,3 +374,43 @@ knitr::include_graphics("Imágenes/flourish35.jpg")
 ```{r tablatextomodalidadfromacionflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Tabla: Total de estudiantes graduados por modalidad de formación', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish36.jpg")
 ```
+
+#### Gráfico circular {#graficocircularflourish}
+
+Este gráfico circular debe mostrar la distribución de estudiantes graduados por modalidad de formación para el último periodo del cual se tiene registro, para realizar esta visualización se tienen dos opciones la primera de ellas es incorporar la variable YEAR_SEMESTER como filtro de filas, esto permitiría al usuario seleccionar cualquier periodo; la segunda opción es no incluir esta variable y por tanto no generar el filtro, se realizaran ambas opciones para explorar cómo funcionan los filtros en este software.
+
+1.	Desde la galería de plantillas debe seleccionar gráfico circular, cargar la fuente de datos llamada “modalidadformacioncricular.csv”, para el estante Labels/Time debe asignar la columna B ya que esta contiene la modalidad de formación, la columna E debe ir en el estante Values debido a que se quiere mostrar los porcentajes, la columna A será usada como filtro de fila, finalmente al estante de información para ventanas emergentes personalizadas se deben asignar las columnas B y C.
+
+```{r paso1graficocircularflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Carga de datos y asignación de columnas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish37.jpg")
+```
+
+2.	Regrese a la pestaña avance y en controles y filtros explore los diferentes tipos de control disponibles, aumente el tamaño del texto a 1.2 y altura 0.6, active estilos de borde desplegable y seleccione todos los lados.
+
+```{r paso2graficocircularflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato al filtro de periodo', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish38.jpg")
+```
+
+3.	Use la pestaña colores para editar la paleta y asignar el color “#F15A24” a postgrado y “#8CC63F” a pregrado.
+
+4.	En la pestaña etiqueta debe seleccionar ambos para el campo contenido de la etiqueta, esto con el fin de mostrar tanto la modalidad de formación como el porcentaje correspondiente.
+
+```{r paso4graficocircularflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Edición de etiqueta de datos', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish39.jpg")
+```
+
+5.	Debe cambiar la ubicación de la leyenda para que esta quede en la parte inferior. El texto de la ventana emergente será personalizado y contener lo que se muestra en la siguiente imagen.
+
+```{r paso5graficocircularflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Personalización de la ventana emergente', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish40.jpg")
+```
+
+6.	Sobre la pestaña diseño active la opción fronteras y asigne color negro a todas.
+
+7.	Con ayuda de la sección encabezamiento seleccione alineación central y escriba como título Distribución de graduados por modalidad de formación, periodo, este titulo debe estar en negrita y su tamaño debe ser la A mayúscula más grande.
+
+La visualización obtenida muestra la distribución de estudiantes graduados por modalidad de formación según el periodo que el usuario seleccione en el filtro, por ejemplo, en el periodo 2018-1 el 58.9% de los estudiantes graduados pertenecían a pregrado.
+
+```{r graficocircularconfiltroflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Distibución de estudiantes graduados por modalidad de formación', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish41.jpg")
+```

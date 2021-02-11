@@ -8241,6 +8241,117 @@ También debe activar la opción de estilo personalizado para cambiar el color d
 \caption{Evolución del número de estudiantes graduados por modalidad de formación}\label{fig:paso8lineassegmentadaflourish-fig}
 \end{figure}
 
+\hypertarget{tablatextoflourish}{%
+\subsubsection{Tabla de texto}\label{tablatextoflourish}}
+
+El tablero mostrado en la página web de las estadísticas oficiales de la Universidad Nacional para la modalidad de formación se compone de tres elementos principales, un gráfico de líneas que se realizó anteriormente, una tabla de texto y por último un gráfico circular; es momento de realizar la tabla de texto la cual debe contener cuatro columnas, la primera será el año, seguida del semestre y las modalidades de formación ofrecidas por la universidad, la tabla guía o de referencia posee un botón que permite mostrar el total de los estudiantes graduados, esto no es posible de construir en Flourish por tanto el conjunto de datos a cargar contendrá cinco columnas las cuales son Año, Semestre, Pregrado, Postgrado y Total.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Haga clic en nueva visualización, navegue en la página de plantillas y en la sección Table elija
+  Default.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish31} 
+
+}
+
+\caption{Seleccionar plantilla para tabla}\label{fig:paso1tablatextoflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Después de seleccionada la plantilla para realizar una tabla se identifica una funcionalidad útil e interesante para mostrar los datos, en las últimas dos columnas de la plantilla se usan mini gráficos para visualizar información, se debe identificar la estructura de datos y explorar las pestañas de formato para hacer uso de los mini gráficos.
+\item
+  Sobre la pestaña datos de puede observar que el conjunto de datos posee doce columnas de las cuales la E y F son usadas para el mini gráfico de barras, de a G hasta la L se usan para el mini gráfico de áreas, el conjunto de datos a montar tendrá siete variables, las cinco que se han mencionado anteriormente y dos más que contendrán los porcentajes de cada modalidad de formación; cargue el archivo llamado ``modalidadformaciontabla.csv''.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish32} 
+
+}
+
+\caption{Cargar archivo de datos}\label{fig:paso3tablatextoflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Haciendo doble clic sobre el nombre de cada columna puede editarlo, el nombre de la primera columna debe ser Año y la segunda columna debe ser cambiada por Semestre.
+\item
+  Regrese a la sección avance y sobre la pestaña Table elija doce como el número de filas por página.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish33} 
+
+}
+
+\caption{Editar el número de filas por página}\label{fig:paso5tablatextoflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  En la pestaña estilos de celda debe seleccionar centrar para la alineación horizontal.
+\item
+  La pestaña gráficos de mini barras permite agregar un pequeño gráfico de barras en una nueva columna que combina dos que ya se tengan, en este caso se usaran las columnas Porcentajepregrado y Porcentajepostgrado para generar este gráfico que se ubicara en una columna llamada Porcentaje.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish34} 
+
+}
+
+\caption{Agregar mini gráfico de barras para visualizar porcentajes}\label{fig:paso7tablatextoflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Sobre esta misma pestaña deberá editar la paleta de colores, los colores a usar serán ``\#8CC63F'' y ``\#F15A24'', debe notar que los colores mostrado en las barras de la tabla no coinciden con los colores asignados, esto se debe a que se tiene activado el botón ampliar, por tanto, deberá desactivarlo; finalmente en la sección etiquetas debe seleccionar en línea.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish35} 
+
+}
+
+\caption{Editar el formato de las barras}\label{fig:paso8tablatextoflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\item
+  Active las fronteras en la pestaña diseño y asigne el color negro a las cuatro fronteras
+\item
+  Ubíquese sobre la pestaña buscar y deshabilite esta opción, con la pestaña encabezamiento asigne el título Total estudiantes graduados por modalidad de formación en alineación central, su visualización debe verse como se muestra a continuación.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish36} 
+
+}
+
+\caption{Tabla: Total de estudiantes graduados por modalidad de formación}\label{fig:tablatextomodalidadfromacionflourish-fig}
+\end{figure}
+
 \hypertarget{conclu}{%
 \chapter{Conclusiones}\label{conclu}}
 
