@@ -55,3 +55,20 @@ nivelformacion <- Graduados %>%
   filter(YEAR_SEMESTER == "2020 - 1")
 write.csv(nivelformacion, file = "nivelformacion.csv", 
           row.names = FALSE)
+
+#MAPA POR DEPARTAMENTOS
+deptos <- Graduados %>% 
+  group_by(YEAR_SEMESTER, DEP_NAC) %>% 
+  count() %>% 
+  filter(YEAR_SEMESTER == "2020 - 1")
+
+#PUNTOS MUNICIPIOS
+puntos <- Graduados %>% 
+  group_by(CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
+  count()
+
+puntos$LON_CIU_NAC <- str_replace_all(puntos$LON_CIU_NAC, 
+                                      "^(-?\\d{2})\\.?(\\d+)", "\\1.\\2")
+
+latitud <- as.data.frame(str_replace_all(Graduados$LAT_CIU_NAC, 
+                                         "^(-?\\d{1})\\.?(\\d+)", "\\1.\\2"))

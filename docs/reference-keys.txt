@@ -439,6 +439,8 @@ fig:paso2graficocircularflourish-fig
 fig:paso4graficocircularflourish-fig
 fig:paso5graficocircularflourish-fig
 fig:graficocircularconfiltroflourish-fig
+fig:graficocircularflourish-fig
+fig:graficocircularflourishsinfiltro-fig
 intro
 tableau
 generalidades
@@ -516,5 +518,3 @@ graficolineassegmentadoflourish
 tablatextoflourish
 graficocircularflourish
 conclu
-fig:graficocircularflourish-fig
-fig:graficocircularflourishsinfiltro-fig
