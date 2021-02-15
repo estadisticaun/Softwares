@@ -434,6 +434,11 @@ fig:paso5tablatextoflourish-fig
 fig:paso7tablatextoflourish-fig
 fig:paso8tablatextoflourish-fig
 fig:tablatextomodalidadfromacionflourish-fig
+fig:paso1graficocircularflourish-fig
+fig:paso2graficocircularflourish-fig
+fig:paso4graficocircularflourish-fig
+fig:paso5graficocircularflourish-fig
+fig:graficocircularconfiltroflourish-fig
 intro
 tableau
 generalidades
@@ -509,10 +514,7 @@ análisis-de-datos
 graficolineasflourish
 graficolineassegmentadoflourish
 tablatextoflourish
-conclu
-fig:paso1graficocircularflourish-fig
-fig:paso2graficocircularflourish-fig
-fig:paso4graficocircularflourish-fig
-fig:paso5graficocircularflourish-fig
-fig:graficocircularconfiltroflourish-fig
 graficocircularflourish
+conclu
+fig:graficocircularflourish-fig
+fig:graficocircularflourishsinfiltro-fig
