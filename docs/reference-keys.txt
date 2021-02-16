@@ -518,3 +518,10 @@ graficolineassegmentadoflourish
 tablatextoflourish
 graficocircularflourish
 conclu
+fig:paso3graficobarrasflourish-fig
+fig:paso4graficobarrasflourish-fig
+fig:paso6graficobarrasflourish-fig
+fig:paso7graficobarrasflourish-fig
+fig:paso8graficobarrasflourish-fig
+fig:graficobarrasflourish-fig
+gráfico-de-barras-1

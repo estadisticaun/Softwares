@@ -425,3 +425,52 @@ Lo único que deberá editar es el título agregando el periodo, es decir, Distr
 ```{r graficocircularflourishsinfiltro-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Distribución de estudiantes graduados por modalidad de formación, periodo 2020-1', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish43.jpg")
 ```
+
+#### Gráfico de barras
+
+El gráfico de barras a realizar debe mostrar la cantidad de graduados por nivel de formación para el periodo 2020-1 con su respectivo porcentaje, al igual que en el gráfico circular realizado anteriormente se tienen dos opciones una de ellas incluye un filtro dentro de la visualización que permite al usuario interactuar y elegir un periodo, y la segunda opción es no incluir este filtro y únicamente mostrar las cifras relacionadas con el periodo 2020-1, en este caso se realizara la segunda opción ya que con el gráfico anterior se identifico como funcionan los filtros.
+
+1.	Desde la galería de plantillas debe seleccionar la de gráfico de barras y cargar el archivo de datos llamado “nivelformacion.csv”.
+
+2.	La columna B debe ser asignada al estante Labels/time el cual representa cada barra, la columna Cantidad (C) debe ir en Values y finalmente las columnas B y E a información para ventanas emergentes personalizadas.
+
+3.	Ubíquese sobre la pestaña avance para visualizar el gráfico, debe observar algunos problemas con la descripción emergente, colores y leyenda.
+
+```{r paso3graficobarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de columnas a estantes disponibles', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish44.jpg")
+```
+
+4.	En la pestaña colores debe seleccionar por fila el modo de color y editar la paleta de colores, pregrado debe estar en color “#8CC63F”, Maestría en color “#C1272D”, especialización “#29ABE2”, especialidades médicas en color “#6D6666” y por último doctorado “#FBB03B”.
+
+```{r paso4graficobarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambio de paleta de colores', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish45.jpg")
+```
+
+5.	Sobre la pestaña barras debe aumentar la opacidad de la barra a 1, el estilo de la etiqueta debe ser eje, también debe activar la opción de mostrar etiquetas de puntos de datos; esta configuración debe realizarse en la pestaña etiquetas.
+
+6.	Es momento de editar los ejes para esto haga clic sobre eje X y asigne como título Número de graduados en color negro, negrita y tamaño 1.3, las etiquetas también deben estar en color negro y tamaño 1; también debe activar las líneas de cuadricula.
+
+```{r paso6graficobarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato del eje X', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish46.jpg")
+```
+
+7.	Para el eje Y las etiquetas deben tener el mismo estilo, color negro, negrita y tamaño 1; desactive la leyenda, su visualización debe verse de la siguiente manera.
+
+```{r paso7graficobarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato del eje Y', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish47.jpg")
+```
+
+8.	Las ventanas emergentes tendrán contenido personalizado con el nivel de formación, el porcentaje y el número de estudiantes graduados. 
+
+```{r paso8graficobarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ventanas emergentes personalizadas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish48.jpg")
+```
+
+9.	Active las fronteras de la visualización como ya se mostró en gráficos anteriores y como título del gráfico debe escribir Distribución de graduados por nivel de formación, periodo 2020-1. 
+
+El gráfico de barras obtenido muestra la distribución del número de estudiantes graduados por nivel de formación para el periodo 
+
+
+```{r graficobarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Distribución de graduados por nivel de formación, periodo 2020-1', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish50.jpg")
+```
