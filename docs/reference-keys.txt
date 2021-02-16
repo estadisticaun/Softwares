@@ -441,6 +441,12 @@ fig:paso5graficocircularflourish-fig
 fig:graficocircularconfiltroflourish-fig
 fig:graficocircularflourish-fig
 fig:graficocircularflourishsinfiltro-fig
+fig:paso3graficobarrasflourish-fig
+fig:paso4graficobarrasflourish-fig
+fig:paso6graficobarrasflourish-fig
+fig:paso7graficobarrasflourish-fig
+fig:paso8graficobarrasflourish-fig
+fig:graficobarrasflourish-fig
 intro
 tableau
 generalidades
@@ -517,11 +523,5 @@ graficolineasflourish
 graficolineassegmentadoflourish
 tablatextoflourish
 graficocircularflourish
-conclu
-fig:paso3graficobarrasflourish-fig
-fig:paso4graficobarrasflourish-fig
-fig:paso6graficobarrasflourish-fig
-fig:paso7graficobarrasflourish-fig
-fig:paso8graficobarrasflourish-fig
-fig:graficobarrasflourish-fig
 gráfico-de-barras-1
+conclu

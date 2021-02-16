@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-02-15}
+\date{2021-02-16}
 
 \begin{document}
 \maketitle
@@ -8465,6 +8465,118 @@ Lo único que deberá editar es el título agregando el periodo, es decir, Distr
 }
 
 \caption{Distribución de estudiantes graduados por modalidad de formación, periodo 2020-1}\label{fig:graficocircularflourishsinfiltro-fig}
+\end{figure}
+
+\hypertarget{gruxe1fico-de-barras-1}{%
+\subsubsection{Gráfico de barras}\label{gruxe1fico-de-barras-1}}
+
+El gráfico de barras a realizar debe mostrar la cantidad de graduados por nivel de formación para el periodo 2020-1 con su respectivo porcentaje, al igual que en el gráfico circular realizado anteriormente se tienen dos opciones una de ellas incluye un filtro dentro de la visualización que permite al usuario interactuar y elegir un periodo, y la segunda opción es no incluir este filtro y únicamente mostrar las cifras relacionadas con el periodo 2020-1, en este caso se realizara la segunda opción ya que con el gráfico anterior se identifico como funcionan los filtros.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Desde la galería de plantillas debe seleccionar la de gráfico de barras y cargar el archivo de datos llamado ``nivelformacion.csv''.
+\item
+  La columna B debe ser asignada al estante Labels/time el cual representa cada barra, la columna Cantidad (C) debe ir en Values y finalmente las columnas B y E a información para ventanas emergentes personalizadas.
+\item
+  Ubíquese sobre la pestaña avance para visualizar el gráfico, debe observar algunos problemas con la descripción emergente, colores y leyenda.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish44} 
+
+}
+
+\caption{Asignación de columnas a estantes disponibles}\label{fig:paso3graficobarrasflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  En la pestaña colores debe seleccionar por fila el modo de color y editar la paleta de colores, pregrado debe estar en color ``\#8CC63F'', Maestría en color ``\#C1272D'', especialización ``\#29ABE2'', especialidades médicas en color ``\#6D6666'' y por último doctorado ``\#FBB03B''.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish45} 
+
+}
+
+\caption{Cambio de paleta de colores}\label{fig:paso4graficobarrasflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\item
+  Sobre la pestaña barras debe aumentar la opacidad de la barra a 1, el estilo de la etiqueta debe ser eje, también debe activar la opción de mostrar etiquetas de puntos de datos; esta configuración debe realizarse en la pestaña etiquetas.
+\item
+  Es momento de editar los ejes para esto haga clic sobre eje X y asigne como título Número de graduados en color negro, negrita y tamaño 1.3, las etiquetas también deben estar en color negro y tamaño 1; también debe activar las líneas de cuadricula.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish46} 
+
+}
+
+\caption{Formato del eje X}\label{fig:paso6graficobarrasflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  Para el eje Y las etiquetas deben tener el mismo estilo, color negro, negrita y tamaño 1; desactive la leyenda, su visualización debe verse de la siguiente manera.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish47} 
+
+}
+
+\caption{Formato del eje Y}\label{fig:paso7graficobarrasflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  Las ventanas emergentes tendrán contenido personalizado con el nivel de formación, el porcentaje y el número de estudiantes graduados.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish48} 
+
+}
+
+\caption{Ventanas emergentes personalizadas}\label{fig:paso8graficobarrasflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Active las fronteras de la visualización como ya se mostró en gráficos anteriores y como título del gráfico debe escribir Distribución de graduados por nivel de formación, periodo 2020-1.
+\end{enumerate}
+
+El gráfico de barras obtenido muestra la distribución del número de estudiantes graduados por nivel de formación para el periodo
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish50} 
+
+}
+
+\caption{Distribución de graduados por nivel de formación, periodo 2020-1}\label{fig:graficobarrasflourish-fig}
 \end{figure}
 
 \hypertarget{conclu}{%

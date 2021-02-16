@@ -56,7 +56,7 @@ nivelformacion <- Graduados %>%
 write.csv(nivelformacion, file = "nivelformacion.csv", 
           row.names = FALSE)
 
-#MAPA POR DEPARTAMENTOS
+#MAPA POR DEPARTAMENTOS PERIOO 2020-1
 deptos <- Graduados %>% 
   group_by(YEAR_SEMESTER, DEP_NAC) %>% 
   count() %>% 
@@ -66,6 +66,8 @@ deptos <- Graduados %>%
 #PUNTOS MUNICIPIOS
 Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Bogota(|,) d.c.", 
                                      "Bogota D.C.")
+Graduados$CIU_NAC <- chartr('áéíóúü','aeiouu', Graduados$CIU_NAC)
+
 puntos <- Graduados %>% 
   group_by(CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
   count()
@@ -80,6 +82,7 @@ Graduados <- left_join(Graduados, puntos, by = "CIU_NAC")
 municipios <- Graduados %>% 
   group_by(CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
   count()
+
 write.csv(municipios, file = "municipios.csv", 
           row.names = FALSE)
 
@@ -93,13 +96,13 @@ capitales <-c("Leticia", "Medellin", "Arauca", "Barranquilla",
 
 
 #IMPORTAR Y EXPORTAR ARCHIVO JSON 
-library(rjson) 
-library(jsonlite)
-data.json <- fromJSON(file="depts.json")
+library(rjson)
+data.json <- fromJSON(file="colombiageo.json")
 x <- length(data.json$features)
 for (i in 1:x) {
   pos <- str_detect(deptos$DEP_NAC, 
-                    paste0("^", data.json$features[[i]]$properties$dpt, "$"))
+                    paste0("^", data.json$features[[i]]$properties$NOMBRE_DPT, "$"))
   data.json$features[[i]]$properties$n = as.character(deptos[pos, "n"])
 }
+library(jsonlite)
 write_json(data.json, "depts.json")
