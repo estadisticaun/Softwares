@@ -60,15 +60,46 @@ write.csv(nivelformacion, file = "nivelformacion.csv",
 deptos <- Graduados %>% 
   group_by(YEAR_SEMESTER, DEP_NAC) %>% 
   count() %>% 
-  filter(YEAR_SEMESTER == "2020 - 1")
+  filter(YEAR_SEMESTER == "2020 - 1") %>% 
+  mutate(DEP_NAC = str_to_upper(DEP_NAC, locale = "es"))
 
 #PUNTOS MUNICIPIOS
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Bogota(|,) d.c.", 
+                                     "Bogota D.C.")
 puntos <- Graduados %>% 
   group_by(CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
   count()
+puntos <- puntos[!duplicated(puntos$CIU_NAC), ]
+puntos <- puntos %>% select(-n)
 
-puntos$LON_CIU_NAC <- str_replace_all(puntos$LON_CIU_NAC, 
-                                      "^(-?\\d{2})\\.?(\\d+)", "\\1.\\2")
+Graduados <- Graduados %>% select(-c("LAT_CIU_NAC", "LON_CIU_NAC"))
 
-latitud <- as.data.frame(str_replace_all(Graduados$LAT_CIU_NAC, 
-                                         "^(-?\\d{1})\\.?(\\d+)", "\\1.\\2"))
+#UNION NETRE PUNTOS Y GRADUADOS
+Graduados <- left_join(Graduados, puntos, by = "CIU_NAC")
+
+municipios <- Graduados %>% 
+  group_by(CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
+  count()
+write.csv(municipios, file = "municipios.csv", 
+          row.names = FALSE)
+
+capitales <-c("Leticia", "Medellin", "Arauca", "Barranquilla", 
+              "Cartagena de indias", "Tunja", "Manizales", "Florencia", "Yopal", 
+              "Popayan", "Valledupar", "Quibdo", "Monteria", "Bogota D.C", 
+              "Inirida","San jose del guaviare","Neiva","Riohacha","Santa marta",
+              "Villavicencio", "Pasto", "Cucuta", "Mocoa", "Armenia", "Pereira", 
+              "San andres", "Bucaramanga", "Sincelejo", "Cali", "Mitu", 
+              "Puerto carreño")
+
+
+#IMPORTAR Y EXPORTAR ARCHIVO JSON 
+library(rjson) 
+library(jsonlite)
+data.json <- fromJSON(file="depts.json")
+x <- length(data.json$features)
+for (i in 1:x) {
+  pos <- str_detect(deptos$DEP_NAC, 
+                    paste0("^", data.json$features[[i]]$properties$dpt, "$"))
+  data.json$features[[i]]$properties$n = as.character(deptos[pos, "n"])
+}
+write_json(data.json, "depts.json")
