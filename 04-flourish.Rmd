@@ -470,7 +470,52 @@ knitr::include_graphics("Imágenes/flourish48.jpg")
 
 El gráfico de barras obtenido muestra la distribución del número de estudiantes graduados por nivel de formación para el periodo 
 
-
 ```{r graficobarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Distribución de graduados por nivel de formación, periodo 2020-1', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish50.jpg")
 ```
+
+#### Mapa de proyección {#mapadeproyecciónflourish}
+
+Esta plantilla permite crear mapas de datos con sombreado de región y/o puntos, dentro de las plantillas disponibles se encuentran algunos continentes divididos por países o regiones y algunos países fraccionado por estados o provincias, también existe una plantilla en blanco para añadir el archivo propio de datos para crear un continente o país que no se encuentre en las plantillas existentes. 
+
+Con el fin de ilustrar las capas que componen este tipo de mapas debe seleccionar la plantilla del mundo ubicada en la parte inferior de la sección mapa de proyección de la galería de plantillas de Flourish.
+
+```{r plantillasmapaproyeccionflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Galería de plantillas para mapas de proyección', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish51.jpg")
+```
+
+Esta plantilla consiste en un mapa mundial de dos capas, la primera de ellas contiene la información geométrica de los países y la segunda dibuja un punto sobre cada país que representa la población de este, también se añade una leyenda de color que identifica la región a la que pertenece cada lugar del mundo, dicha clasificación esta basada en el banco mundial (World bank region); a continuación, se presenta una imagen del ejemplo mencionado.
+
+```{r ejemplomapamundoflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ejemplo de la plantilla mundial', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish52.jpg")
+```
+
+Después de observar la visualización creada es momento de analizar la estructura de datos que permite crearla, para esto haga clic sobre la pestaña datos allí encontrara dos secciones o capas la primera de ellas llamada regiones y la segunda puntos. Los datos para ubicar en la capa de región será un archivo tipo GeoJson que debe contener un FeatureCollection y cada elemento debe ser un Polygon o MultiPolygon en coordenadas no proyectadas (WGS84). Cada característica se convertirá en una fila en la hoja de datos con la geometría en la primera columna y las propiedades en las columnas siguientes.
+
+```{r hojaregionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Hoja de datos para regiones', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish53.jpg")
+```
+
+La capa de puntos puede ser un archivo Excel o CSV y se requiere una fila por punto con al menos una columna para longitud y otra para latitud ambas deben estar en grados decimales, también es posible añadir más columnas para determinar el tamaño o color de los puntos. 
+
+```{r hojapuntosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Hoja de datos para puntos', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish54.jpg")
+```
+
+Como ya se ha mencionado en varias ocasiones la idea es realizar algunos de los gráficos presentados en la web de las estadísticas oficiales de la Universidad Nacional de Colombia, en la sección cifras generales y graduados se ubican algunos mapas que muestran el lugar de nacimiento por departamento y municipio de los estudiantes graduados en un periodo determinado, en este caso el periodo a trabajar será 2020-1.
+
+El primer mapa para realizar será el que representa el total de graduados por departamentos, para esto es necesario tener un archivo GeoJson con la geometría de cada departamento, este tipo de archivos son fáciles de conseguir en la web y dentro del repositorio donde se crea este documento ya se encuentra un archivo llamado “colombiageo.json”, cabe resaltar que este archivo fue extraído de un [repositorio de GitHub]( https://gist.github.com/john-guerra/43c7656821069d00dcbc), con la ayuda de R se crea una base de datos llamada “deptos” la cual contiene el total de estudiantes graduados por departamento en el periodo 2020-1, luego de esto se carga el archivo “colombiageo.json” y se identifica que la estructura de este es de listas y se agrega una nueva propiedad con el total de graduados que se obtuvo en la base “deptos”, finalmente el archivo modificado es exportado con formato Json y con el nombre “depts.json”.
+
+Uno de los requisitos para realizar mapas con sombreado de regiones es que el archivo GeoJson debe tener coordenadas no proyectadas, para esto se hará uso de la herramienta gratuita [mapshaper]( https://mapshaper.org/), arrastre el archivo “depts.json” a la herramienta mencionada y asegúrese de que la opción seleccionada sea detectar líneas de intersección y haga clic en importar.
+
+```{r importararchivosamapshaper-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Importar archivos a Mapshaper', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish55.jpg")
+```
+
+Luego de que el archivo sea importado deberá abrir la consola, escribir este comando “-proj wgs84” y presionar el botón enter de su teclado, luego de esto debe hacer clic sobre exportar, seleccionar formato GeoJson y clic sobre el botón exportar.
+
+```{r exportararchivosamapshaper-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Exportar archivos de Mapshaper', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish56.jpg")
+```
+
+Al finalizar el proceso mencionado anteriormente se descarga un archivo con el mismo nombre del que fue importado es decir “depts.json”, este se debe mover al repositorio sobre el cual se trabaja y cambiar el nombre por “departamentos.json” para evitar reemplazar archivos. Es de resaltar que al mostrar este proceso el repositorio ya contiene los archivos usados, es decir que no es necesario repetirlo, pero si debe tenerse en cuenta para el caso de crear otros mapas.

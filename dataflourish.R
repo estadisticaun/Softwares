@@ -56,12 +56,27 @@ nivelformacion <- Graduados %>%
 write.csv(nivelformacion, file = "nivelformacion.csv", 
           row.names = FALSE)
 
-#MAPA POR DEPARTAMENTOS PERIOO 2020-1
+#MAPA POR DEPARTAMENTOS
+
+#Departamentos periodo 2020-1
 deptos <- Graduados %>% 
   group_by(YEAR_SEMESTER, DEP_NAC) %>% 
   count() %>% 
   filter(YEAR_SEMESTER == "2020 - 1") %>% 
   mutate(DEP_NAC = str_to_upper(DEP_NAC, locale = "es"))
+
+#Importar, agregar nueva propiedad y exportar el archivo Json  
+library(rjson)
+data.json <- fromJSON(file="colombiageo.json")
+x <- length(data.json$features)
+for (i in 1:x) {
+  pos <- str_detect(deptos$DEP_NAC, 
+                    paste0("^", data.json$features[[i]]$properties$NOMBRE_DPT, "$"))
+  data.json$features[[i]]$properties$n = as.character(deptos[pos, "n"])
+}
+library(jsonlite)
+write_json(data.json, "depts.json")
+
 
 #PUNTOS MUNICIPIOS
 Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Bogota(|,) d.c.", 
@@ -80,29 +95,20 @@ Graduados <- Graduados %>% select(-c("LAT_CIU_NAC", "LON_CIU_NAC"))
 Graduados <- left_join(Graduados, puntos, by = "CIU_NAC")
 
 municipios <- Graduados %>% 
-  group_by(CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
+  group_by(CIU_NAC, LON_CIU_NAC, LAT_CIU_NAC) %>% 
   count()
 
 write.csv(municipios, file = "municipios.csv", 
           row.names = FALSE)
 
+#EXTRAER CAPITALES DE LOS DEPARTAMENTOS, DE LA BASE MUNICIPIOS
 capitales <-c("Leticia", "Medellin", "Arauca", "Barranquilla", 
               "Cartagena de indias", "Tunja", "Manizales", "Florencia", "Yopal", 
-              "Popayan", "Valledupar", "Quibdo", "Monteria", "Bogota D.C", 
+              "Popayan", "Valledupar", "Quibdo", "Monteria", "Bogota D.C.", 
               "Inirida","San jose del guaviare","Neiva","Riohacha","Santa marta",
               "Villavicencio", "Pasto", "Cucuta", "Mocoa", "Armenia", "Pereira", 
               "San andres", "Bucaramanga", "Sincelejo", "Cali", "Mitu", 
-              "Puerto carreño")
-
-
-#IMPORTAR Y EXPORTAR ARCHIVO JSON 
-library(rjson)
-data.json <- fromJSON(file="colombiageo.json")
-x <- length(data.json$features)
-for (i in 1:x) {
-  pos <- str_detect(deptos$DEP_NAC, 
-                    paste0("^", data.json$features[[i]]$properties$NOMBRE_DPT, "$"))
-  data.json$features[[i]]$properties$n = as.character(deptos[pos, "n"])
-}
-library(jsonlite)
-write_json(data.json, "depts.json")
+              "Puerto carreno", "Ibague")
+Capitales <- municipios %>% filter(CIU_NAC %in% capitales)
+write.csv(Capitales, file = "capitales.csv", 
+          row.names = FALSE)

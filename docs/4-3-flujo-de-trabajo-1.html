@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-02-16" />
+<meta name="date" content="2021-02-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -609,6 +609,55 @@ Figura 4.49: Ventanas emergentes personalizadas
 Figura 4.50: Distribución de graduados por nivel de formación, periodo 2020-1
 </p>
 </div>
+</div>
+<div id="mapadeproyecciónflourish" class="section level4">
+<h4><span class="header-section-number">4.3.1.6</span> Mapa de proyección</h4>
+<p>Esta plantilla permite crear mapas de datos con sombreado de región y/o puntos, dentro de las plantillas disponibles se encuentran algunos continentes divididos por países o regiones y algunos países fraccionado por estados o provincias, también existe una plantilla en blanco para añadir el archivo propio de datos para crear un continente o país que no se encuentre en las plantillas existentes.</p>
+<p>Con el fin de ilustrar las capas que componen este tipo de mapas debe seleccionar la plantilla del mundo ubicada en la parte inferior de la sección mapa de proyección de la galería de plantillas de Flourish.</p>
+<div class="figure" style="text-align: center"><span id="fig:plantillasmapaproyeccionflourish-fig"></span>
+<img src="Imágenes/flourish51.jpg" alt="Galería de plantillas para mapas de proyección" width="85%" />
+<p class="caption">
+Figura 4.51: Galería de plantillas para mapas de proyección
+</p>
+</div>
+<p>Esta plantilla consiste en un mapa mundial de dos capas, la primera de ellas contiene la información geométrica de los países y la segunda dibuja un punto sobre cada país que representa la población de este, también se añade una leyenda de color que identifica la región a la que pertenece cada lugar del mundo, dicha clasificación esta basada en el banco mundial (World bank region); a continuación, se presenta una imagen del ejemplo mencionado.</p>
+<div class="figure" style="text-align: center"><span id="fig:ejemplomapamundoflourish-fig"></span>
+<img src="Imágenes/flourish52.jpg" alt="Ejemplo de la plantilla mundial" width="85%" />
+<p class="caption">
+Figura 4.52: Ejemplo de la plantilla mundial
+</p>
+</div>
+<p>Después de observar la visualización creada es momento de analizar la estructura de datos que permite crearla, para esto haga clic sobre la pestaña datos allí encontrara dos secciones o capas la primera de ellas llamada regiones y la segunda puntos. Los datos para ubicar en la capa de región será un archivo tipo GeoJson que debe contener un FeatureCollection y cada elemento debe ser un Polygon o MultiPolygon en coordenadas no proyectadas (WGS84). Cada característica se convertirá en una fila en la hoja de datos con la geometría en la primera columna y las propiedades en las columnas siguientes.</p>
+<div class="figure" style="text-align: center"><span id="fig:hojaregionesflourish-fig"></span>
+<img src="Imágenes/flourish53.jpg" alt="Hoja de datos para regiones" width="85%" />
+<p class="caption">
+Figura 4.53: Hoja de datos para regiones
+</p>
+</div>
+<p>La capa de puntos puede ser un archivo Excel o CSV y se requiere una fila por punto con al menos una columna para longitud y otra para latitud ambas deben estar en grados decimales, también es posible añadir más columnas para determinar el tamaño o color de los puntos.</p>
+<div class="figure" style="text-align: center"><span id="fig:hojapuntosflourish-fig"></span>
+<img src="Imágenes/flourish54.jpg" alt="Hoja de datos para puntos" width="85%" />
+<p class="caption">
+Figura 4.54: Hoja de datos para puntos
+</p>
+</div>
+<p>Como ya se ha mencionado en varias ocasiones la idea es realizar algunos de los gráficos presentados en la web de las estadísticas oficiales de la Universidad Nacional de Colombia, en la sección cifras generales y graduados se ubican algunos mapas que muestran el lugar de nacimiento por departamento y municipio de los estudiantes graduados en un periodo determinado, en este caso el periodo a trabajar será 2020-1.</p>
+<p>El primer mapa para realizar será el que representa el total de graduados por departamentos, para esto es necesario tener un archivo GeoJson con la geometría de cada departamento, este tipo de archivos son fáciles de conseguir en la web y dentro del repositorio donde se crea este documento ya se encuentra un archivo llamado “colombiageo.json”, cabe resaltar que este archivo fue extraído de un <a href="https://gist.github.com/john-guerra/43c7656821069d00dcbc">repositorio de GitHub</a>, con la ayuda de R se crea una base de datos llamada “deptos” la cual contiene el total de estudiantes graduados por departamento en el periodo 2020-1, luego de esto se carga el archivo “colombiageo.json” y se identifica que la estructura de este es de listas y se agrega una nueva propiedad con el total de graduados que se obtuvo en la base “deptos”, finalmente el archivo modificado es exportado con formato Json y con el nombre “depts.json”.</p>
+<p>Uno de los requisitos para realizar mapas con sombreado de regiones es que el archivo GeoJson debe tener coordenadas no proyectadas, para esto se hará uso de la herramienta gratuita <a href="https://mapshaper.org/">mapshaper</a>, arrastre el archivo “depts.json” a la herramienta mencionada y asegúrese de que la opción seleccionada sea detectar líneas de intersección y haga clic en importar.</p>
+<div class="figure" style="text-align: center"><span id="fig:importararchivosamapshaper-fig"></span>
+<img src="Imágenes/flourish55.jpg" alt="Importar archivos a Mapshaper" width="85%" />
+<p class="caption">
+Figura 4.55: Importar archivos a Mapshaper
+</p>
+</div>
+<p>Luego de que el archivo sea importado deberá abrir la consola, escribir este comando “-proj wgs84” y presionar el botón enter de su teclado, luego de esto debe hacer clic sobre exportar, seleccionar formato GeoJson y clic sobre el botón exportar.</p>
+<div class="figure" style="text-align: center"><span id="fig:exportararchivosamapshaper-fig"></span>
+<img src="Imágenes/flourish56.jpg" alt="Exportar archivos de Mapshaper" width="85%" />
+<p class="caption">
+Figura 4.56: Exportar archivos de Mapshaper
+</p>
+</div>
+<p>Al finalizar el proceso mencionado anteriormente se descarga un archivo con el mismo nombre del que fue importado es decir “depts.json”, este se debe mover al repositorio sobre el cual se trabaja y cambiar el nombre por “departamentos.json” para evitar reemplazar archivos. Es de resaltar que al mostrar este proceso el repositorio ya contiene los archivos usados, es decir que no es necesario repetirlo, pero si debe tenerse en cuenta para el caso de crear otros mapas.</p>
 
 </div>
 </div>

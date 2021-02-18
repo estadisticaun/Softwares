@@ -525,3 +525,10 @@ tablatextoflourish
 graficocircularflourish
 gráfico-de-barras-1
 conclu
+fig:plantillasmapaproyeccionflourish-fig
+fig:ejemplomapamundoflourish-fig
+fig:hojaregionesflourish-fig
+fig:hojapuntosflourish-fig
+fig:importararchivosamapshaper-fig
+fig:exportararchivosamapshaper-fig
+mapadeproyecciónflourish
