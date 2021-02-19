@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-02-16}
+\date{2021-02-18}
 
 \begin{document}
 \maketitle
@@ -8578,6 +8578,83 @@ El gráfico de barras obtenido muestra la distribución del número de estudiant
 
 \caption{Distribución de graduados por nivel de formación, periodo 2020-1}\label{fig:graficobarrasflourish-fig}
 \end{figure}
+
+\hypertarget{mapadeproyecciuxf3nflourish}{%
+\subsubsection{Mapa de proyección}\label{mapadeproyecciuxf3nflourish}}
+
+Esta plantilla permite crear mapas de datos con sombreado de región y/o puntos, dentro de las plantillas disponibles se encuentran algunos continentes divididos por países o regiones y algunos países fraccionado por estados o provincias, también existe una plantilla en blanco para añadir el archivo propio de datos para crear un continente o país que no se encuentre en las plantillas existentes.
+
+Con el fin de ilustrar las capas que componen este tipo de mapas debe seleccionar la plantilla del mundo ubicada en la parte inferior de la sección mapa de proyección de la galería de plantillas de Flourish.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish51} 
+
+}
+
+\caption{Galería de plantillas para mapas de proyección}\label{fig:plantillasmapaproyeccionflourish-fig}
+\end{figure}
+
+Esta plantilla consiste en un mapa mundial de dos capas, la primera de ellas contiene la información geométrica de los países y la segunda dibuja un punto sobre cada país que representa la población de este, también se añade una leyenda de color que identifica la región a la que pertenece cada lugar del mundo, dicha clasificación esta basada en el banco mundial (World bank region); a continuación, se presenta una imagen del ejemplo mencionado.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish52} 
+
+}
+
+\caption{Ejemplo de la plantilla mundial}\label{fig:ejemplomapamundoflourish-fig}
+\end{figure}
+
+Después de observar la visualización creada es momento de analizar la estructura de datos que permite crearla, para esto haga clic sobre la pestaña datos allí encontrara dos secciones o capas la primera de ellas llamada regiones y la segunda puntos. Los datos para ubicar en la capa de región será un archivo tipo GeoJson que debe contener un FeatureCollection y cada elemento debe ser un Polygon o MultiPolygon en coordenadas no proyectadas (WGS84). Cada característica se convertirá en una fila en la hoja de datos con la geometría en la primera columna y las propiedades en las columnas siguientes.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish53} 
+
+}
+
+\caption{Hoja de datos para regiones}\label{fig:hojaregionesflourish-fig}
+\end{figure}
+
+La capa de puntos puede ser un archivo Excel o CSV y se requiere una fila por punto con al menos una columna para longitud y otra para latitud ambas deben estar en grados decimales, también es posible añadir más columnas para determinar el tamaño o color de los puntos.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish54} 
+
+}
+
+\caption{Hoja de datos para puntos}\label{fig:hojapuntosflourish-fig}
+\end{figure}
+
+Como ya se ha mencionado en varias ocasiones la idea es realizar algunos de los gráficos presentados en la web de las estadísticas oficiales de la Universidad Nacional de Colombia, en la sección cifras generales y graduados se ubican algunos mapas que muestran el lugar de nacimiento por departamento y municipio de los estudiantes graduados en un periodo determinado, en este caso el periodo a trabajar será 2020-1.
+
+El primer mapa para realizar será el que representa el total de graduados por departamentos, para esto es necesario tener un archivo GeoJson con la geometría de cada departamento, este tipo de archivos son fáciles de conseguir en la web y dentro del repositorio donde se crea este documento ya se encuentra un archivo llamado ``colombiageo.json'', cabe resaltar que este archivo fue extraído de un \href{https://gist.github.com/john-guerra/43c7656821069d00dcbc}{repositorio de GitHub}, con la ayuda de R se crea una base de datos llamada ``deptos'' la cual contiene el total de estudiantes graduados por departamento en el periodo 2020-1, luego de esto se carga el archivo ``colombiageo.json'' y se identifica que la estructura de este es de listas y se agrega una nueva propiedad con el total de graduados que se obtuvo en la base ``deptos'', finalmente el archivo modificado es exportado con formato Json y con el nombre ``depts.json''.
+
+Uno de los requisitos para realizar mapas con sombreado de regiones es que el archivo GeoJson debe tener coordenadas no proyectadas, para esto se hará uso de la herramienta gratuita \href{https://mapshaper.org/}{mapshaper}, arrastre el archivo ``depts.json'' a la herramienta mencionada y asegúrese de que la opción seleccionada sea detectar líneas de intersección y haga clic en importar.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish55} 
+
+}
+
+\caption{Importar archivos a Mapshaper}\label{fig:importararchivosamapshaper-fig}
+\end{figure}
+
+Luego de que el archivo sea importado deberá abrir la consola, escribir este comando ``-proj wgs84'' y presionar el botón enter de su teclado, luego de esto debe hacer clic sobre exportar, seleccionar formato GeoJson y clic sobre el botón exportar.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish56} 
+
+}
+
+\caption{Exportar archivos de Mapshaper}\label{fig:exportararchivosamapshaper-fig}
+\end{figure}
+
+Al finalizar el proceso mencionado anteriormente se descarga un archivo con el mismo nombre del que fue importado es decir ``depts.json'', este se debe mover al repositorio sobre el cual se trabaja y cambiar el nombre por ``departamentos.json'' para evitar reemplazar archivos. Es de resaltar que al mostrar este proceso el repositorio ya contiene los archivos usados, es decir que no es necesario repetirlo, pero si debe tenerse en cuenta para el caso de crear otros mapas.
 
 \hypertarget{conclu}{%
 \chapter{Conclusiones}\label{conclu}}

@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-02-18" />
+<meta name="date" content="2021-02-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -658,6 +658,83 @@ Figura 4.56: Exportar archivos de Mapshaper
 </p>
 </div>
 <p>Al finalizar el proceso mencionado anteriormente se descarga un archivo con el mismo nombre del que fue importado es decir “depts.json”, este se debe mover al repositorio sobre el cual se trabaja y cambiar el nombre por “departamentos.json” para evitar reemplazar archivos. Es de resaltar que al mostrar este proceso el repositorio ya contiene los archivos usados, es decir que no es necesario repetirlo, pero si debe tenerse en cuenta para el caso de crear otros mapas.</p>
+<p>Es momento de volver a Flourish, seleccionar la plantilla en blanco e importar el archivo “departamentos.json” en la sección regiones de la pestaña datos. Las columnas por usar en esta visualización son A, C y G que deben ubicarse en los estantes geometría, nombre y valor respectivamente, estas dos últimas columnas también deben ser asignadas al estante metadatos para ventanas emergentes.</p>
+<div class="figure" style="text-align: center"><span id="fig:regionesmapadeptosflourish-fig"></span>
+<img src="Imágenes/flourish57.jpg" alt="Carga de datos para la capa de regiones y asignación de columnas" width="85%" />
+<p class="caption">
+Figura 4.57: Carga de datos para la capa de regiones y asignación de columnas
+</p>
+</div>
+<p>Nuevamente sobre el archivo “DataFlourish.R” se extraen los municipios con sus respectivas latitudes, longitudes y conteo de estudiantes graduados, luego se crea un vector llamado capitales con el fin de extraer únicamente las capitales de la base municipios, únicamente se seleccionan estas ya que solo se quiere añadir un punto por departamento que representa la capital; dicha base llamada capitales es exportada y luego importada a Flourish en la sección puntos, deberá asignar las columnas A, B y C a los estantes nombre, longitud y latitud respectivamente.</p>
+<div class="figure" style="text-align: center"><span id="fig:puntosmapadeptosflourish-fig"></span>
+<img src="Imágenes/flourish58.jpg" alt="Carga de datos para la capa de puntos y asignación de columnas" width="85%" />
+<p class="caption">
+Figura 4.58: Carga de datos para la capa de puntos y asignación de columnas
+</p>
+</div>
+<p>Ahora debe regresar a la pestaña avance para comenzar a dar formato y personalizar el mapa creado, en este momento su visualización asigno un color a cada municipio dependiendo del conteo de este y posee puntos en color gris oscuro que representan cada capital.</p>
+<div class="figure" style="text-align: center"><span id="fig:vistapreviamapadeptosflourish-fig"></span>
+<img src="Imágenes/flourish59.jpg" alt="Vista previa del mapa creado" width="85%" />
+<p class="caption">
+Figura 4.59: Vista previa del mapa creado
+</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>La primera pestaña por editar será capa de puntos en la cual debe establecer el radio en dos, la opacidad de relleno debe aumentarse a uno y cambiar el color de relleno por “#C9501A”.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1mapadeptosflourish-fig"></span>
+<img src="Imágenes/flourish60.jpg" alt="Formato a la capa de puntos" width="85%" />
+<p class="caption">
+Figura 4.60: Formato a la capa de puntos
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Continuando con la capa de regiones debe asignar el color “#88AD84” a los contornos, los reflejos de trazo interior y exterior deben estar en color “#E2E4E2”, el ancho del trazo debe reducirse a 1.5.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2mapadeptosflourish-fig"></span>
+<img src="Imágenes/flourish61.jpg" alt="Formato a la capa de regiones" width="85%" />
+<p class="caption">
+Figura 4.61: Formato a la capa de regiones
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Sobre la capa de regiones se ubica una sección llamada llenar la cual se refiere al relleno de cada departamento dentro del mapa, el tipo de escala debe ser numérico, secuencial y binned, el modo de agrupamiento será de umbrales personalizados los cuales son “20; 50; 200; 1000” y se usa una paleta de azules.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3mapadeptosflourish-fig"></span>
+<img src="Imágenes/flourish62.jpg" alt="Edición del relleno de regiones" width="85%" />
+<p class="caption">
+Figura 4.62: Edición del relleno de regiones
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Debe continuar con la ventana popups y paneles en la cual debe seleccionar contenido emergente personalizado, el encabezado será el nombre del departamento y el contenido será la cantidad de graduados y para la ventana emergente de los puntos no sebe modificar nada.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4mapadeptosflourish-fig"></span>
+<img src="Imágenes/flourish63.jpg" alt="Contenido personalizado para ventanas emergentes" width="85%" />
+<p class="caption">
+Figura 4.63: Contenido personalizado para ventanas emergentes
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Otra pestaña para editar y personalizar el gráfico es caja de búsqueda, con esta se da formato a la opción de búsqueda; el texto del marcado será “Buscar…” y debe activar las opciones de mostrar sugerencias desplegables y expandir el cuadro de búsqueda.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5mapadeptosflourish-fig"></span>
+<img src="Imágenes/flourish64.jpg" alt="Formato a la caja de búsqueda" width="85%" />
+<p class="caption">
+Figura 4.64: Formato a la caja de búsqueda
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Como color de fondo debe asignar “#EFEFEF”, activar las fronteras y ponerlas en color negro, estos ajustes deben hacerse desde la pestaña diseño.</p></li>
+<li><p>Con ayuda de la pestaña encabezamiento debe escribir “Graduados 2020-1” como título con el tamaño más pequeño posible; por último, el nombre de la visualización será Total por departamentos.</p></li>
+</ol>
+<p>La visualización obtenida permite identificar la cantidad de estudiantes graduados en el periodo 2020-1 según su lugar de nacimiento, a pesar de que el grafico logra ser estético y agradable quedan faltando algunos detalles como etiquetas con el nombre del departamento y su capital.</p>
+<div class="figure" style="text-align: center"><span id="fig:mapadeptosflourish-fig"></span>
+<img src="Imágenes/flourish65.jpg" alt="Total estudiantes gradaudos por departamento en el periodo 2020-1" width="85%" />
+<p class="caption">
+Figura 4.65: Total estudiantes gradaudos por departamento en el periodo 2020-1
+</p>
+</div>
 
 </div>
 </div>
