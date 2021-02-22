@@ -574,6 +574,6 @@ knitr::include_graphics("Imágenes/flourish64.jpg")
 
 La visualización obtenida permite identificar la cantidad de estudiantes graduados en el periodo 2020-1 según su lugar de nacimiento, a pesar de que el grafico logra ser estético y agradable quedan faltando algunos detalles como etiquetas con el nombre del departamento y su capital.
 
-```{r mapadeptosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Total estudiantes gradaudos por departamento en el periodo 2020-1', out.width='85%'}
+```{r mapadeptosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Total estudiantes graduados por departamento en el periodo 2020-1', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish65.jpg")
 ```

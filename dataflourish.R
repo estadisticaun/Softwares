@@ -112,3 +112,42 @@ capitales <-c("Leticia", "Medellin", "Arauca", "Barranquilla",
 Capitales <- municipios %>% filter(CIU_NAC %in% capitales)
 write.csv(Capitales, file = "capitales.csv", 
           row.names = FALSE)
+
+#MAPA POR MUNICIPIOS
+
+#Municipios periodo 2020-1
+mps <- Graduados %>% 
+  group_by(YEAR_SEMESTER, CIU_NAC) %>% 
+  count() %>% 
+  filter(YEAR_SEMESTER == "2020 - 1") %>% 
+  mutate(CIU_NAC = str_to_upper(CIU_NAC, locale = "es"))
+
+#Importar, agregar nueva propiedad y exportar el archivo Json  
+library(rjson)
+mpios.json <- fromJSON(file="municipios.json")
+x <- length(mpios.json$features)
+for (i in 1:x) {
+  pos <- str_detect(mps$CIU_NAC, 
+                    paste0("^", mpios.json$features[[i]]$properties$name, "$"))
+  mpios.json$features[[i]]$properties$n = as.character(mps[pos, "n"])
+}
+
+
+
+library(jsonlite)
+write_json(data.json, "depts.json")
+
+
+pos <- str_detect(mps$CIU_NAC, 
+                  paste0("^", mpios.json$features[[1]]$properties$name, "$"))
+if(pos == FALSE){
+  mpios.json$features[[1]]$properties$n = 0
+}
+
+
+
+
+
+
+
+
