@@ -147,7 +147,7 @@ if(pos == FALSE){
 
 
 
-
+apartado.json <- fromJSON(file="apartado.json")
 
 
 
