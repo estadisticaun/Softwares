@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-02-22}
+\date{2021-02-23}
 
 \begin{document}
 \maketitle
@@ -854,14 +854,14 @@ En la parte inferior del área de trabajo se ubican 5 compartimientos, el primer
 \hypertarget{conexiuxf3n-a-fuentes-de-datos}{%
 \subsection{Conexión a fuentes de datos}\label{conexiuxf3n-a-fuentes-de-datos}}
 
-Antes de poder crear y analizar los datos debe conectar Tableau a estos, en este caso la conexión se hará a través de un archivo de Excel, inicialmente se hará la conexión a las bases de datos de estudiantes graduados a nivel de micro datos para mostrar las funcionalidades de unión que tiene Tableau, para hacer estas conexiones debe seguir estos pasos:
+Antes de poder crear y analizar los datos debe conectar Tableau a estos, en este caso la conexión se hará a través de un archivo de Excel, inicialmente se establece la conexión a las bases de datos de estudiantes graduados a nivel de micro datos para mostrar las funcionalidades de unión que tiene Tableau, para hacer estas conexiones debe seguir estos pasos:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
   Abrir Tableau desde el acceso directo creado en su escritorio al momento de la instalación, la pantalla que se debe ver es la mostrada en la figura \ref{fig:paginaprincipal-fig}.
 \item
-  Hacer clic en el botón ``Microsoft Excel'' si su archivo posee este formato, al hacer clic en este botón se abre una ventana que permite navegar a través de las carpetas de su equipo para ubicar la localización de las bases de datos. Debe seleccionar una de las bases y dar clic en el botón ``Abrir''.
+  Hacer clic en el botón ``Microsoft Excel'' si su archivo posee este formato, se abre una ventana que permite navegar a través de las carpetas de su equipo para ubicar las bases de datos. Debe seleccionar una de las bases y dar clic en el botón ``Abrir''.
 \end{enumerate}
 
 \begin{figure}
@@ -884,7 +884,7 @@ Con esta conexión a la fuente de datos se obtiene la siguiente pantalla
 \caption{Vista previa de la conexión}\label{fig:pantallaconexiondatos-fig}
 \end{figure}
 
-En el panel lateral izquierdo encontrara el nombre del archivo al que se conecto en este caso ``P2009 Graduados'', debajo de esto se ubican las hojas que componen el archivo para esta base solo se tiene una hoja llamada ``P2009G'', luego se encuentra un botón llamado ``Nueva unión''. La parte central de la conexión a datos es el lienzo en blanco dispuesto en la parte superior allí se deben arrastrar las hojas a las que se quiere conectar, en la parte inferior se encuentra una vista previa de la base de datos, los campos marcados con ``\#'' indica que son medidas, ``Abc'' indica que el campo es una dimensión y finalmente las variables relacionadas con ubicaciones geográficas como latitud y longitud tiene como icono un globo terráqueo, haciendo clic sobre estos iconos se puede editar el tipo de dato, por ejemplo la variable Snies Sede Mat Tableau la tomo como una medida cuando en realidad esta variable hace referencia a la categorización establecida para las sedes de la universidad, la podemos editar dando clic en el icono ``\#'' y en el menú desplegable seleccionar Cadena.
+En el panel lateral izquierdo encontrará el nombre del archivo al que se conectó en este caso ``P2009 Graduados'', debajo de esto se ubican las hojas que componen el archivo para esta base solo se tiene una hoja llamada ``P2009G'', luego se encuentra un botón llamado ``Nueva unión''. La parte central de la conexión a datos es el lienzo en blanco dispuesto en la parte superior allí se deben arrastrar las hojas a las que se quiere conectar, en la parte inferior se encuentra una vista previa de la base de datos, los campos marcados con ``\#'' indica que son medidas, ``Abc'' indica que el campo es una dimensión y finalmente las variables relacionadas con ubicaciones geográficas como latitud y longitud tiene como icono un globo terráqueo, haciendo clic sobre estos iconos se puede editar el tipo de dato, por ejemplo la variable ``Snies Sede Mat'' Tableau la tomo como una medida cuando en realidad esta variable hace referencia a la categorización establecida para las sedes de la universidad, la puede editar haciendo clic en el icono ``\#'' y en el menú desplegable seleccionar Cadena.
 
 \begin{figure}
 
@@ -895,7 +895,7 @@ En el panel lateral izquierdo encontrara el nombre del archivo al que se conecto
 \caption{Cambiar el tipo de un campo}\label{fig:cambiartipocampo-fig}
 \end{figure}
 
-En la esquina superior derecha del lienzo, se observa una etiqueta llamada Filtros y un botón añadir, al hacer clic en este botón se abre un cuadro de diálogo que permite añadir, editar o eliminar filtros, a modo de ejemplo se creara un filtro que seleccione únicamente las filas en las que el campo Sede Nombre Adm sea Medellín,
+En la esquina superior derecha del lienzo, se observa una etiqueta llamada Filtros y un botón añadir, al hacer clic en este botón se abre un cuadro de diálogo que permite añadir, editar o eliminar filtros, a modo de ejemplo se creará un filtro que seleccione únicamente las filas en las que el campo ``Sede Nombre Adm'' sea Medellín,
 
 \begin{itemize}
 \item
@@ -916,7 +916,7 @@ En la esquina superior derecha del lienzo, se observa una etiqueta llamada Filtr
 \begin{itemize}
 \tightlist
 \item
-  Terminado el paso anterior se abre una nueva ventana que contiene el nombre de todas las columnas de la base de datos, aquí se debe seleccionar la columna por la que se quiere filtrar, en este caso Sede Nombre Adm y dar clic en aceptar.
+  Terminado el paso anterior se abre una nueva ventana que contiene el nombre de todas las columnas de la base de datos, aquí se debe seleccionar la columna por la que se quiere filtrar, en este caso ``Sede Nombre Adm'' y dar clic en aceptar.
 \end{itemize}
 
 \begin{figure}
@@ -931,7 +931,7 @@ En la esquina superior derecha del lienzo, se observa una etiqueta llamada Filtr
 \begin{itemize}
 \tightlist
 \item
-  Con esto se abre una nueva pestaña que contiene los valores de la columna seleccionada para filtrar, para el ejemplo se selección Medellín y finalmente Aceptar.
+  Con esto se abre una nueva pestaña que contiene los valores de la columna seleccionada para filtrar, para el ejemplo debe seleccionar Medellín y finalmente Aceptar.
 \end{itemize}
 
 \begin{figure}
@@ -943,12 +943,12 @@ En la esquina superior derecha del lienzo, se observa una etiqueta llamada Filtr
 \caption{Valores de la columna seleccionada}\label{fig:valoresdelcampo-fig}
 \end{figure}
 
-Ahora la vista previa de la base se modificó, solo contiene las observaciones en las cuales se cumple el filtro aplicado, es decir donde Sede Nombre Adm sea Medellín.
+Ahora la vista previa de la base se modificó, solo contiene las observaciones en las cuales se cumple el filtro aplicado, es decir donde la sede de admisión sea Medellín.
 
 Este mismo tipo de filtros se puede aplicar a medidas, definiendo un intervalo para los valores o seleccionando un valor mínimo o máximo o un cálculo especial.
 Otra opción ofrecida por Tableau es hacer uniones entre tablas de datos, esto es útil cuando se tiene la información en distintas bases de datos con la misma estructura como en este caso que se tiene la información de estudiantes graduados desde el año 2009 hasta el 2020 semestre 1 a nivel de microdatos, es decir los archivos están separados.
 
-Existen dos métodos básicos para combinar conjuntos de datos en Tableau la unión de columnas y la unión de filas, se pueden combinar las columnas de dos conjuntos de datos o bien filas de dos o mas conjuntos de datos, primero debe conectarse a las tablas que desea combinar cabe aclarar que estas tablas deben pertenecer al mismo archivo, en este caso como se está usando archivos Excel las tablas a unir deben ser dos hojas del archivo, a modo de ejemplo se creara un archivo en Excel que contenga en una hoja la información de los graduados en el año 2009 y en otra hoja los registros de los graduados en el año 2010 y se hará la conexión a los datos, cuando realice dicha conexión en el panel lateral izquierdo se ubica el nombre del archivo Excel, en este caso llamado ``P2009-2010 Graduados'' y más abajo el nombre de las dos hojas que contiene dicho archivo llamadas ``P2009G'' y ``P2010G'', como se ilustra en la figura \ref{fig:hojas-fig}.
+Existen dos métodos básicos para combinar conjuntos de datos en Tableau la unión de columnas y la unión de filas, se pueden combinar las columnas de dos conjuntos de datos o bien filas de dos o más conjuntos de datos, primero debe conectarse a las tablas que desea combinar cabe aclarar que estas tablas deben pertenecer al mismo archivo, en este caso como se está usando archivos Excel las tablas a unir deben ser dos hojas del archivo, a modo de ejemplo se creara un archivo en Excel que contenga en una hoja la información de los graduados en el año 2009 y en otra hoja los registros de los graduados en el año 2010 y se hará la conexión a los datos, cuando realice dicha conexión en el panel lateral izquierdo se ubica el nombre del archivo Excel, en este caso llamado ``P2009-2010 Graduados'' y más abajo el nombre de las dos hojas que contiene dicho archivo llamadas ``P2009G'' y ``P2010G'', como se ilustra en la figura \ref{fig:hojas-fig}.
 
 \begin{figure}
 
@@ -978,7 +978,7 @@ En los conjuntos de datos que se están usando todos tienen las mismas columnas 
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Arrastrar y soltar; este método consiste en arrastrar la primera hoja al lienzo, arrastrar la otra hoja que se quiere unir y no soltar hasta que aparezca el cuadro ``Unión de filas'' en color naranja, solo se debe soltar la hoja cuando este cuadro aparezca.
+  Arrastrar y soltar; este método consiste en llevar la primera hoja al lienzo, arrastrar la otra hoja que se quiere unir y no soltar hasta que aparezca el cuadro ``Unión de filas'' en color naranja, solo se debe soltar la hoja cuando este cuadro aparezca.
 \end{enumerate}
 
 \begin{figure}
@@ -1007,7 +1007,7 @@ En los conjuntos de datos que se están usando todos tienen las mismas columnas 
 \caption{Unión: Método Nueva unión}\label{fig:unionnueva-fig}
 \end{figure}
 
-Tableau crea dos columnas adicionales a las que contiene a la base que ayuda a la identificación de la hoja y tabla a la que pertenecen las observaciones; si se edita la cantidad de filas que se muestra en la vista previa del conjunto de datos se puede observar los registros de ambas hojas.
+Tableau crea dos columnas adicionales que ayudan a la identificación de la hoja y tabla a la que pertenecen las observaciones; si se edita la cantidad de filas que se muestra en la vista previa del conjunto de datos se puede observar los registros de ambas hojas.
 
 \begin{figure}
 
@@ -1018,7 +1018,7 @@ Tableau crea dos columnas adicionales a las que contiene a la base que ayuda a l
 \caption{Columnas Nuevas}\label{fig:nuevascolumnas-fig}
 \end{figure}
 
-Siguiendo con un análisis detallado de lo mostrado por Tableau en la vista previa del conjunto de datos, se observan columnas problemáticas, la variable Ciu\_Nac presenta una combinación de números y texto como se muestra en la figura \ref{fig:columaciunac-fig}, existe una función llamada división personalizada que se puede ver al hacer clic en el menú desplegable de la columna, dicha función necesita un separador para hacer la división pero en este caso no es posible usarla ya que no existe separador alguno entre el numero y el texto, esto en un problema que no puede solucionarse desde Tableau.
+Siguiendo con un análisis detallado de lo mostrado por Tableau en la vista previa del conjunto de datos, se observan columnas problemáticas, la variable ``Ciu Nac'' presenta una combinación de números y texto como se muestra en la figura \ref{fig:columaciunac-fig}, existe una función llamada división personalizada que se puede ver al hacer clic en el menú desplegable de la columna, dicha función necesita un separador para realizar la división pero en este caso no es posible usarla ya que no existe separador alguno entre el numero y el texto, esto en un problema que no puede solucionarse desde Tableau.
 
 \textbackslash begin\{figure\}
 
@@ -1029,7 +1029,7 @@ Siguiendo con un análisis detallado de lo mostrado por Tableau en la vista prev
 \textbackslash caption\{Problema columna Ciu\_Nac\}\label{fig:columaciunac-fig}
 \textbackslash end\{figure\}
 
-En este mismo menú desplegable se encuentra una opción llamada Describir, al dar clic en esta opción Tableau abre una ventana que muestra una descripción corta de la base de datos, algo similar a la función summary() de R. En la figura \ref{fig:descripcion-fig} se muestra la descripción de la variable Dep\_Nac, esta permite visualizar el tipo de campo en este caso es dicreto, contiene valores faltantes y en la parte inferior muestra una lista de los miembros más dominantes en este caso 20 de los 31 miembros totales.
+En este mismo menú desplegable se encuentra una opción llamada Describir, al dar clic en esta opción Tableau abre una ventana que muestra una descripción corta de la columna, algo similar a la función summary() de R. En la figura \ref{fig:descripcion-fig} se muestra la descripción de la variable ``Dep Nac'', esta permite visualizar el tipo de campo que en este caso es dicreto, contiene valores faltantes y en la parte inferior muestra una lista de los miembros más dominantes en este caso 20 de los 31 miembros totales.
 
 \textbackslash begin\{figure\}
 
@@ -1039,7 +1039,8 @@ En este mismo menú desplegable se encuentra una opción llamada Describir, al d
 
 \textbackslash caption\{Descripción columna Dep\_Nac\}\label{fig:descripcion-fig}
 \textbackslash end\{figure\}
-Hacia las ultimas columnas de la base de datos nos encontramos con un campo llamado Programa\_S, esta compuesto por el nombre del programa y la sede a la que pertenece estos dos atributos se encuentran separados por un guion, en este caso particular si es posible usar la función División, ya que el campo posee un separador.
+
+Hacia las últimas columnas de la base de datos se encuentra un campo llamado ``Programa S'', el cual esta compuesto por el nombre del programa y la sede a la que pertenece estos dos atributos se encuentran separados por un guion, en este caso particular si es posible usar la función División, ya que el campo posee un separador.
 
 Hacer clic en el menú desplegable de la columna de interés y seleccionar División.
 
@@ -1052,7 +1053,7 @@ Hacer clic en el menú desplegable de la columna de interés y seleccionar Divis
 \caption{División de columnas}\label{fig:división-fig}
 \end{figure}
 
-Con esto se obtiene una nueva columna llamada Programa\_S División 1 que contiene el nombre del programa, es decir que elimino todo lo que se encontraba a la derecha del guion (sede), como se puede observar en la descripción de esta nueva variable.
+Con esto se obtiene una nueva columna llamada ``Programa\_S División 1'' que contiene el nombre del programa, es decir que elimino todo lo que se encontraba a la derecha del guion (sede), como se puede observar en la descripción de esta nueva variable.
 
 \begin{figure}
 
@@ -1086,7 +1087,7 @@ En el caso en que se quiera obtener ambas columnas, es decir una columna que con
 \setcounter{enumi}{1}
 \tightlist
 \item
-  En el campo Usar separador escribir -- que es el separador de la columna de interés, en el campo División Desactivada se debe seleccionar Todas, para poder obtener las columnas de programa y Sede.
+  En el campo Usar separador escribir ``--'' que es el separador de la columna de interés, en el campo División Desactivada se debe seleccionar Todas, para poder obtener las columnas de programa y Sede.
 \end{enumerate}
 
 \begin{figure}
@@ -1098,7 +1099,7 @@ En el caso en que se quiera obtener ambas columnas, es decir una columna que con
 \caption{Ventana de división personalizada}\label{fig:divisiónpersonalizadapasos-fig}
 \end{figure}
 
-Finalmente se obtiene tres columnas una que contiene el programa, otra la sede y una que aparentemente posee los espacios.
+Finalmente se obtienen tres columnas una que contiene el programa, otra la sede y una que aparentemente posee los espacios.
 
 \begin{figure}
 
@@ -1109,15 +1110,15 @@ Finalmente se obtiene tres columnas una que contiene el programa, otra la sede y
 \caption{Campos divididos}\label{fig:camposdivididospersonalizado-fig}
 \end{figure}
 
-En este caso se considera correcto eliminar la columna División 3 ya que la información relevante de la columna original se encuentra almacenada en los campos llamados División 1 y 2.
+En este caso se considera correcto eliminar la columna División 3 ya que la información relevante de la columna original se encuentra almacenada en los campos llamados División 1 y 2 respectivamente.
 
-Una funcionalidad importante que también que se ubica en el menú desplegable de las columnas de tipo numérico como Edad\_Mod es Crear grupos que permite agrupar las edades de los graduados en categorías, algo similar a los que se tiene en la columna Cat\_Edad.
+Una funcionalidad importante que también se ubica en el menú desplegable de las columnas de tipo numérico como ``Edad\_Mod'' es Crear grupos lo cual permite agrupar las edades de los graduados en categorías, algo similar a los que se tiene en la columna ``Cat\_Edad''.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Hacer clic en el menú desplegable de la columna Edad\_Mod y seleccionar Crear grupos.
+  Hacer clic en el menú desplegable de la columna ``Edad\_Mod'' y seleccionar Crear grupo.
 \end{enumerate}
 
 \begin{figure}
@@ -1134,7 +1135,7 @@ Una funcionalidad importante que también que se ubica en el menú desplegable d
 \setcounter{enumi}{1}
 \tightlist
 \item
-  El primer grupo estará conformado por las edades de 23 o menos años, para esto con ctrl sostenido y clic seleccionamos las edades que cumplen esta condición, luego clic en Grupo y se edita el nombre del grupo.
+  El primer grupo estará conformado por las edades de 23 o menos años, para esto con ctrl sostenido y clic seleccione las edades que cumplen esta condición, luego clic en Grupo y se edita el nombre del grupo.
 \end{enumerate}
 
 \begin{figure}
@@ -1151,7 +1152,7 @@ Una funcionalidad importante que también que se ubica en el menú desplegable d
 \setcounter{enumi}{2}
 \tightlist
 \item
-  Repita el paso anterior hasta crear las categorías de edad que considere pertinentes y luego de clic en Aceptar, con esto se obtiene una columna llamada Edad\_Mod (grupo), que asigna a cada observación el grupo que pertenece.
+  Repita el paso anterior hasta crear las categorías de edad que considere pertinentes y luego de clic en Aceptar, con esto se obtiene una columna llamada ``Edad\_Mod (grupo)'', que asigna a cada observación el grupo que pertenece.
 \end{enumerate}
 
 \textbackslash begin\{figure\}
@@ -1162,11 +1163,11 @@ Una funcionalidad importante que también que se ubica en el menú desplegable d
 
 \textbackslash caption\{Agrupamiento de la columna Edad\_Mod\}\label{fig:gruposedad-fig}
 \textbackslash end\{figure\}
-Para el campo Estrato\_Orig también es posible crear grupos para obtener la categorización mostrada en el campo Estrato.
+Para el campo ``Estrato\_Orig'' también es posible crear grupos para obtener la categorización mostrada en la columna ``Estrato''.
 
-Tableau no permite hacer una limpieza y preparación de datos, por tal razón la limpieza del conjunto de datos se realizo en R, se eliminaron columnas innecesarias, esto se podía hacer desde Tableau con la opción de ocultar columnas en la vista previa del archivo de datos, pero se decidió hacer en R ya que era necesario analizar la cantidad de valores faltantes por columnas y en base a esto se eliminaron; también se corrigieron espacios, mayúsculas, números y ortografía de algunas columnas de cadenas de caracteres ya que tenían varios valores que en realidad eran iguales pero por tildes, espacios o mayúsculas se contaban como diferentes. Se realizo una unión de todas las bases ya que se tenían a nivel de microdatos, el archivo a conectar con Tableau es llamado ``Datos.xlsx''.
+Tableau no permite hacer una limpieza y preparación de datos, por tal razón la limpieza del conjunto de datos se realizo en R, se eliminaron columnas innecesarias, esto se podía hacer desde Tableau con la opción de ocultar columnas en la vista previa del archivo de datos, pero se decidió hacer en R ya que era necesario analizar la cantidad de valores faltantes por columnas y en base a esto se eliminaron; también se corrigieron espacios, mayúsculas, números y ortografía de algunas columnas de cadenas de caracteres ya que tenían varios valores que en realidad eran iguales pero por tildes, espacios o mayúsculas se contaban como diferentes. Se realizo una unión de todas las bases que se tenían a nivel de microdatos, el archivo a conectar con Tableau es llamado ``Datos.xlsx''.
 
-La primera observación al conectarse al conjunto de datos Datos.xlsx es que hay algunas columnas que no se tomaron como debería, por ejemplo, las variables relacionadas con la ubicación geográfica Latitud y longitud de la cuidad de nacimiento, para esto se debe,
+La primera observación al conectarse al conjunto de datos ``Datos.xlsx'' es que hay algunas columnas que no se tomaron como debería, por ejemplo, las variables relacionadas con la ubicación geográfica como latitud y longitud de la cuidad de nacimiento, para esto se debe,
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1189,7 +1190,7 @@ La primera observación al conectarse al conjunto de datos Datos.xlsx es que hay
 \setcounter{enumi}{1}
 \tightlist
 \item
-  Cuando el icono del campo sea ``\#'', hacer clic nuevamente en este icono y seleccionar Función geográfica, luego clic en latitud para el caso de la variable Lat\_Ciu\_Nac y longitud para la otra variable.
+  Cuando el icono del campo sea ``\#'', hacer clic nuevamente sobre el y seleccionar Función geográfica, luego clic en latitud para el caso de la variable ``Lat\_Ciu\_Nac'' y longitud para la otra variable.
 \end{enumerate}
 
 \begin{figure}
@@ -1201,7 +1202,7 @@ La primera observación al conectarse al conjunto de datos Datos.xlsx es que hay
 \caption{Convertir a latitud un campo}\label{fig:geograficolatitud-fig}
 \end{figure}
 
-La variable Edad\_Mod debe ser numérica y no una dimensión discreta, por tanto se debe editar seleccionando Número (entero), la variable Snies\_Progra es numérica y debe ser discreta ya que se refiere a una categorización de los programas, edítela seleccionando Cadena en el menú desplegable del icono ``\#''. Luego de tener la base de datos lista hacer clic en Hoja1, recuadro que aparece en la parte inferior izquierda. Ya en el lienzo de trabajo en el panel lateral izquierdo en Tablas se ubican el nombre de todas las columnas de la fuente de datos como se mencionó en la sección \ref{formadenavegacion}, recuerde que los iconos azules se refieren a dimensiones y los verdes a medidas, en la parte inferior de este panel se encuentran ubicados cuatro variables numéricas dos de ellas son Semestre y Snies\_Progra que eran originales del conjunto de datos, pero hay otros dos campos llamados Datos (Recuento) y Valores de medias, estos dos campos fueron creados de manera automática por Tableau; Datos (Recuento) se refiere al total de filas de la base de datos en este caso \(101.840\), Valores de medida contiene un recuento de las dos variables numéricas leídas por Tableau, el Semestre y el total de datos, la suma de semestre es \(151.469\).
+La variable ``Edad\_Mod'' debe ser numérica y no una dimensión discreta, por tanto se debe editar seleccionando Número (entero), la variable ``Snies\_Progra'' es numérica y debe ser discreta ya que se refiere a una categorización de los programas, edítela seleccionando Cadena en el menú desplegable del icono ``\#''. Luego de tener la base de datos lista hacer clic en Hoja1, recuadro que aparece en la parte inferior izquierda. Ya en el lienzo de trabajo en el panel lateral izquierdo en la sección Tablas se ubica el nombre de todas las columnas de la fuente de datos como se mencionó en la sección \ref{formadenavegacion}, recuerde que los iconos azules se refieren a dimensiones y los verdes a medidas, en la parte inferior de este panel se encuentran ubicados cuatro variables numéricas dos de ellas son ``Semestre'' y ``Snies\_Progra'' que eran originales del conjunto de datos, pero hay otros dos campos llamados ``Datos (Recuento)'' y ``Valores de medidas'', estos dos campos fueron creados de manera automática por Tableau; Datos (Recuento) se refiere al total de filas de la base de datos en este caso \(101.840\), Valores de medida contiene un recuento de las dos variables numéricas leídas por Tableau, el Semestre y el total de datos, la suma de semestre es \(151.469\).
 
 \begin{figure}
 
@@ -1212,7 +1213,7 @@ La variable Edad\_Mod debe ser numérica y no una dimensión discreta, por tanto
 \caption{Nombre de columnas desde el panel Tablas}\label{fig:tablas-fig}
 \end{figure}
 
-Realmente estas variables no son de interés en el análisis por lo que se ocultara Datos (Recuento) haciendo clic en el menú desplegable dl campo y seleccionando ocultar, el campo Valores de medidas no es posible ocultarlo o eliminarlo, se dejara allí pero no se usara como campo para la realización de gráficos.
+Realmente estas variables no son de interés en el análisis por lo que se ocultará Datos (Recuento) haciendo clic en el menú desplegable del campo y seleccionando ocultar, el campo Valores de medidas no es posible ocultarlo o eliminarlo, se dejara allí pero no se usará como campo para la realización de gráficos.
 
 \begin{figure}
 

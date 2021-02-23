@@ -484,7 +484,7 @@ El campo Semestre debe ser arrastrado hacia la parte superior para convertirlo e
 
 #### Gráfico de líneas {#graficodelineas}
 
-Se iniciara con gráficos similares a los presentados en la sección cifras generales y graduados la página de las [estadísticas](http://estadisticas.unal.edu.co/home/) de la Universidad Nacional, en principio se hará un gráfico de líneas que muestre la evolución histórica de los estudiantes graduados en los periodos de 2009-1 a 2020-1. 
+Se iniciara con gráficos similares a los presentados en la sección cifras generales y graduados de la página de las [estadísticas](http://estadisticas.unal.edu.co/home/) oficiales de la Universidad Nacional, en principio se hará un gráfico de líneas que muestre la evolución histórica de los estudiantes graduados en los periodos de 2009-1 a 2020-1. 
 
 1.	Tome la columna Year-Semester, arrástrela hasta el estante columnas, tome nuevamente este campo y arrástrelo al estante filas.
 
@@ -496,7 +496,7 @@ knitr::include_graphics("Imágenes/analisis1.jpg")
 ```{r paso2lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar agregación en el estante filas', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis2.jpg")
 ```
-Con esto se obtiene un grafico de barras, donde cada barra representa el periodo y la altura de dicha barra en la cantidad de estudiantes graduados en ese periodo. 
+Con esto se obtiene un gráfico de barras, donde cada barra representa el periodo y la altura de dicha barra es la cantidad de estudiantes graduados en ese periodo. 
 
 3.	Se quiere realizar un gráfico de líneas y no de barras, para cambiarlo en el estante marcas haga clic en el menú desplegable que en el momento se encuentra en “Automático” y seleccione línea. 
 
@@ -518,16 +518,16 @@ knitr::include_graphics("Imágenes/analisis6.jpg")
 ```
 5.	Observe que hay detalles como el título del gráfico, títulos de los ejes que no están claros, para agregar un título a la visualización hay dos opciones:
 
-   -	Asignar un nombre a la hoja de trabajo en la parte inferior izquierda donde dice hoja 1, para esto haga doble clic sobre Hoja 1 y escriba el titulo que desea para su visualización, por ejemplo, evolución histórica del total de estudiantes graduados. 
+   -	Asignar un nombre a la hoja de trabajo en la parte inferior izquierda donde dice hoja 1, para esto haga doble clic sobre Hoja 1 y escriba el título que desea para su visualización, por ejemplo, evolución histórica del total de estudiantes graduados. 
 
-   -	Hacer clic derecho en el título de la visualización que en este momento es hoja 1 y seleccionar editar título, con esto se abre un cuadro de dialogo que permite escribir y editar el tipo de fuente, tamaño y color del texto. 
+   -	Hacer clic derecho en el título de la visualización que en este momento es hoja 1 y seleccionar editar título, con esto se abre un cuadro de diálogo que permite escribir y editar el tipo de fuente, tamaño y color del texto. 
    
 ```{r paso5-11lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar título de la vista', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis7.jpg")
 ```
 Elimine el texto <Nombre de la hoja> y escriba Evolución histórica del total de estudiantes graduados. 
 
-6. Para editar el título del eje Y, haga clic derecho sobre el y seleccione editar eje, en el cuadro de dialogo cambie el título del eje por Número de estudiantes graduados y para el subtítulo haga clic en el cuadro Automático y escriba k: miles en el espacio para subtítulo.
+6. Para editar el título del eje Y, haga clic derecho sobre el y seleccione editar eje, en el cuadro de diálogo cambie el título del eje por Número de estudiantes graduados y para el subtítulo haga clic en el cuadro Automático y escriba k: miles en el espacio para subtítulo.
 
 ```{r paso6-11lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar eje Y', out.width='20%'}
 knitr::include_graphics("Imágenes/analisis8.jpg")
@@ -554,7 +554,7 @@ knitr::include_graphics("Imágenes/analisis11.jpg")
 ```{r paso8-1lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción emergente', out.width='40%'}
 knitr::include_graphics("Imágenes/analisis12.jpg")
 ```
-Para que esta descripción sea más clara se debe cambiar Year Smester por Periodo y Recuento de Year Semester por Número de estudiantes graduados, en la tarjeta marcas haga clic en el recuadro que dice descripción emergente, con esto se abre una ventana que contiene la información del recuadro mostrado en la figura \@ref(fig:paso8-1lineas-fig), en este cuadro cambie cambiar Year Smester por Periodo, Recuento de Year Semester por Número de estudiantes graduados y luego clic en Aceptar.
+Para que esta descripción sea más clara se debe cambiar Year Smester por Periodo y Recuento de Year Semester por Número de estudiantes graduados, en la tarjeta marcas haga clic en el recuadro llamado descripción emergente, con esto se abre una ventana que contiene la información del recuadro mostrado en la figura \@ref(fig:paso8-1lineas-fig), en este cuadro cambie Year Semester por Periodo, Recuento de Year Semester por Número de estudiantes graduados y luego clic en Aceptar.
 
 ```{r paso8-2lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar información de la dscripción emergente', out.width='70%'}
 knitr::include_graphics("Imágenes/analisis13.jpg")
@@ -569,10 +569,10 @@ Estos son los pasos básicos para hacer que las visualizaciones creadas en Table
 
 #### Gráfico de líneas segmentado por una dimensión {#graficodelineassegmentado}
 
-La siguiente visualización que se encuentra en la página de estadísticas de la Universidad Nacional de Colombia, en un gráfico de líneas por modalidad de formación, una tabla que contiene la misma información y un gráfico circular que contiene la información por modalidad de formación para el periodo actual es decir 2020-1.
+La siguiente visualización que se encuentra en la página de estadísticas de la Universidad Nacional de Colombia, en un gráfico de líneas por modalidad de formación, una tabla que contiene la misma información y un gráfico circular que contiene la información por modalidad de formación para el periodo actual que en este caso es 2020-1.
 
 1.	Repita los pasos 1, 2, 3, 4 presentados en \@ref(graficodelineas).
-2.	En el paso 5 mostrado en la sección \@ref(graficodelineas), en el nombre de la hoja escriba Serie y en el titulo de la visualización escriba Evolución del número de estudiantes graduados por modalidad de formación. 
+2.	En el paso 5 mostrado en la sección \@ref(graficodelineas), en el nombre de la hoja escriba Serie y en el título de la visualización escriba Evolución del número de estudiantes graduados por modalidad de formación.
 3.	Edite los ejes X y Y como se mostro en los pasos 6 y 7 de \@ref(graficodelineas).
 4.	Arrastre el campo Tipo Nivel a color en el estante Marcas, con esto se crean dos líneas en el gráfico, una para los estudiantes graduados de Pregrado y otra para los graduados de Postgrado.
 
@@ -600,7 +600,7 @@ knitr::include_graphics("Imágenes/analisis18.jpg")
 knitr::include_graphics("Imágenes/analisis19.jpg")
 ```
 
-7.	Finalmente, la tarjeta de descripción emergente no es clara por lo que es necesario editarla, para esto siga el paso 8 de \@ref(graficodelineas); cambiando Tipo Nivel por Modalidad de formación, Year Semester por Periodo y Recuento de Year Smester por Total Graduados. 
+7.	Finalmente, la tarjeta de descripción emergente no es clara por lo que es necesario editarla, para esto siga el paso 8 de \@ref(graficodelineas); cambiando Tipo Nivel por Modalidad de formación, Year Semester por Periodo y Recuento de Year Semester por Total Graduados. 
 
 La visualización obtenida es:
 
@@ -627,7 +627,7 @@ Finalmente se obtiene la visualización presentada en la figura \@ref(fig:lineas
 
 Si se observa detalladamente la descripción emergente de la visualización presentada en la página de las estadísticas de la Universidad se identifica que contiene el porcentaje de graduados por modalidad para añadir esto a la descripción emergente se debe:
 
-1.	Crear un campo calculado, haciendo clic en el menú desplegable ubicado entre Datos y Tablas, seleccionar Crear campo calculado, asignar un nombre útil al cálculo por ejemplo Conteo de estudiantes graduados por periodo, en el panel en blanco escriba COUNT([Year Semester]) y clic en Aceptar. Con esto se obtiene un nuevo campo que se ubica en la parte inferior del panel Tablas. 
+1.	Crear un campo calculado, haciendo clic en el menú desplegable ubicado entre Datos y Tablas, seleccionar Crear campo calculado, asignar un nombre útil al cálculo por ejemplo Conteo de estudiantes graduados por periodo, en el panel en blanco escriba "COUNT([Year Semester])" y clic en Aceptar. Con esto se obtiene un nuevo campo que se ubica en la parte inferior del panel Tablas. 
 
 ```{r crearcampocalculadopaso1-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear campo calculado', out.width='30%'}
 knitr::include_graphics("Imágenes/analisis24.jpg")
@@ -661,7 +661,7 @@ knitr::include_graphics("Imágenes/analisis28.jpg")
 knitr::include_graphics("Imágenes/analisis31.jpg")
 ```
 
-6.	Para que estas etiquetas no se muestren sobre la línea si no en la tarjeta de descripción emergente Luego tener el campo calculado creado haga clic sobre descripción emergente y agregue esta línea de texto “Porcentaje del total: <% de total AGG(Conteo de estudiantes graduados por periodo)>”, edite el color y el tamaño para que coincida con lo demás que contiene esta tarjeta y clic en Aceptar.
+6.	Para que estas etiquetas no se muestren sobre la línea si no en la tarjeta de descripción emergente luego de tener el campo calculado creado haga clic sobre descripción emergente y agregue esta línea de texto “Porcentaje del total: <% de total AGG(Conteo de estudiantes graduados por periodo)>”, edite el color y el tamaño para que coincida con lo demás que contiene esta tarjeta y clic en Aceptar.
 
 ```{r añadircalculodetablaadescripcion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir cálculo de tabla a la descripción emergente', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis29.jpg")
@@ -692,7 +692,7 @@ knitr::include_graphics("Imágenes/analisis32.jpg")
 knitr::include_graphics("Imágenes/analisis33.jpg")
 ```
 
-5.	Los nombres de los campos utilizados en la vista no tienen nombres adecuados, por lo que se deben cambiar, desde el panel lateral Tablas seleccionando el menú desplegable del campo y haciendo clic en cambiar nombre, por ejemplo, Year debe ser cambiado por Año y Tipo Nivel por Modalidad de Formación.
+5.	Los nombres de los campos utilizados en la vista no son adecuados, por lo que se deben cambiar, desde el panel lateral Tablas seleccionando el menú desplegable del campo y haciendo clic en cambiar nombre, por ejemplo, Year debe ser cambiado por Año y Tipo Nivel por Modalidad de Formación.
 
 ```{r paso5tablatexto-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar nombres de los campos', out.width='40%'}
 knitr::include_graphics("Imágenes/analisis34.jpg")
@@ -728,7 +728,7 @@ knitr::include_graphics("Imágenes/analisis38.jpg")
 
 #### Gráfico circular {#graficocircular}
 
-Los gráficos circulares son un recurso estadístico muy utilizado para representar porcentajes y proporciones, en este caso se hará un grafico circular que permita ver la distribución del total de estudiantes graduados por modalidad de formación para el periodo actual es decir 2020-1.
+Los gráficos circulares son un recurso estadístico muy utilizado para representar porcentajes y proporciones, en este caso se hará un grafico circular que permita ver la distribución del total de estudiantes graduados por modalidad de formación para el último periodo del que se tiene registro, en este caso 2020-1.
 
 1.	Cree una nueva hoja de trabajo y llámela Distribución de graduados por modalidad de formación, periodo 2020-1. 
 
@@ -742,7 +742,7 @@ knitr::include_graphics("Imágenes/analisis39.jpg")
 
 4.	Arrastre el campo calculado llamado Recuento por modalidad de formación a la tarjeta ángulo. 
 
-5.	Ajuste el tamaño de la vista seleccionando Vista completa en la barra de herramientas, la visualización debe versa de esta manera.
+5.	Ajuste el tamaño de la vista seleccionando Vista completa en la barra de herramientas, la visualización se verá de esta manera.
 
 ```{r graficocircular-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa grafico circular', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis40.jpg")
@@ -760,15 +760,15 @@ knitr::include_graphics("Imágenes/analisis41.jpg")
 
 9.	Se desea que esta visualización solo muestre los datos del periodo 2020-1, para esto cree un filtro con el campo Year semestre y seleccione únicamente el periodo 2020-1, no es necesario que muestre el filtro.
 
-10.	En realidad, no interesa que la visualización muestre el número de estudiantes graduados por nivel si no el porcentaje de esto, para esto se debe añadir un calculo de tabla en la etiqueta del campo calculado, haga clic en el menú desplegable del ultimo campo del estante Marcas y seleccione Añadir calculo de tabla. 
+10.	En realidad, no interesa que la visualización muestre el número de estudiantes graduados por nivel si no el porcentaje de esto, para esto se debe añadir un calculo de tabla en la etiqueta del campo calculado, haga clic en el menú desplegable del último campo del estante Marcas y seleccione Añadir calculo de tabla. 
 
 ```{r paso10graficocircular-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir cálculo de tabla a las etiquetas', out.width='30%'}
 knitr::include_graphics("Imágenes/analisis42.jpg")
 ```
 
-11.	En la venta de cálculos de tablas, en Tipo de cálculo seleccione Porcentaje del total y calcular usando seleccione Tabla (a lo largo).
+11.	En la ventana de cálculos de tablas, en Tipo de cálculo seleccione Porcentaje del total y calcular usando seleccione Tabla (a lo largo).
 
-12.	Se debe editar la decepción emergente para que sea mas clara, cambie % de total Recuento por modalidad de formación junto con Tabla (a lo largo) por Porcentaje y Recuento por periodo por Número de graduados. Finalmente, se obtiene un gráfico circular que muestra el porcentaje de graduados por modalidad de formación y con una descripción emergente clara. 
+12.	Se debe editar la decepción emergente para que sea mas clara, cambie "% de total Recuento por modalidad de formación junto con Tabla (a lo largo)" por Porcentaje y Recuento por periodo por Número de graduados. Finalmente, se obtiene un gráfico circular que muestra el porcentaje de graduados por modalidad de formación y con una descripción emergente clara. 
 
 ```{r graficocircularfinal-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico circular para el periodo 2020-1', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis43.jpg")
