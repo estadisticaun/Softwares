@@ -781,7 +781,7 @@ Estos gráficos son útiles para representar las frecuencias de las clases de al
 
 2.	Arrastre el campo Nivel a filas y arrástrelo nuevamente desde el panel Tablas al estante columnas. 
 
-3.	En el menú desplegable del campo Nivel ubicado en el estante columnas seleccione medida y luego recuento como se mostro en el paso 2 de \@ref(graficodelineas). Debe obtener un grafico como este, 
+3.	En el menú desplegable del campo Nivel ubicado en el estante columnas seleccione medida y luego recuento como se mostro en el paso 2 de \@ref(graficodelineas). Debe obtener un gráfico como este, 
 
 ```{r paso3graficobarras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de barras', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis44.jpg")
@@ -791,7 +791,7 @@ knitr::include_graphics("Imágenes/analisis44.jpg")
 
 5.	Arrastre el campo Nivel a la tarjeta color ubicada en el estante marcas.
 
-6.	Edite los colores de cada barra como se mostro en el paso 5 de \@ref(graficodelineassegmentado). Asigne el color verde a Pregrado, rojo a maestría, azul a especialización, amarillo a especialidades medicas y gris a doctorado.
+6.	Edite los colores de cada barra como se mostro en el paso 5 de \@ref(graficodelineassegmentado). Asigne el color verde a pregrado, rojo a maestría, azul a especialización, amarillo a especialidades médicas y gris a doctorado.
 
 7.	Luego haga clic en el botón que señala orden descendente ubicado en la barra de herramientas. Hasta el momento su visualización debe verse así,
 
@@ -799,7 +799,7 @@ knitr::include_graphics("Imágenes/analisis44.jpg")
 knitr::include_graphics("Imágenes/analisis45.jpg")
 ```
 
-8.	Observe que el recuento de nivel se esta haciendo para todos los periodos que contiene la base es decir desde 2009-1 hasta el 2020-1, para que solo muestre los del periodo actual debe añadir un filtro con el campo Year Semester y seleccionar únicamente el periodo de interés, no es necesario que muestre el filtro. 
+8.	Observe que el recuento de nivel se esta haciendo para todos los periodos que contiene la base es decir desde 2009-1 hasta el 2020-1, para que solo muestre los graduados del periodo 2020-1 debe añadir un filtro con el campo Year Semester y seleccionar únicamente el periodo de interés, no es necesario que muestre el filtro. 
 
 9.	Edite el eje x cambiando el título, escriba como título Número de graduados; también edite la descripción emergente cambiando Recuento de nivel por Número de graduados.
 
@@ -809,7 +809,7 @@ knitr::include_graphics("Imágenes/analisis45.jpg")
 knitr::include_graphics("Imágenes/analisis46.jpg")
 ```
 
-11.	Es importante que en la descripción emergente se muestre el porcentaje de cada nivel de formación, para esto arrastre el campo Nivel a la tarjeta descripción emergente en el menú desplegable seleccione media y recuento.
+11.	Es importante que en la descripción emergente se muestre el porcentaje de cada nivel de formación, para esto arrastre el campo Nivel a la tarjeta descripción emergente en el menú desplegable seleccione medida y recuento.
 
 ```{r paso11graficobarras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir porcentaje a descripción emergente', out.width='40%'}
 knitr::include_graphics("Imágenes/analisis47.jpg")
@@ -855,7 +855,7 @@ knitr::include_graphics("Imágenes/analisis52.jpg")
 
 6.	Los mapas de árbol son útiles para mostrar porcentajes del total, para esto repita los pasos 10 y 11 de \@ref(graficocircular). 
 
-7.	Edite la descripción emergente para que el nombre de los campos sea más claro; cambie Sede Nombre Adm por Sede de admisión, Recuento de Sede Nombre Adm por Número de estudiantes graduados y % de total Recuento de Sede Nombre Adm junto con Tabla (a lo largo) por porcentaje. 
+7.	Edite la descripción emergente para que el nombre de los campos sea más claro; cambie Sede Nombre Adm por Sede de admisión, Recuento de Sede Nombre Adm por Número de estudiantes graduados y % de total Recuento de Sede Nombre Adm junto con Tabla (a lo largo) por Porcentaje. 
 
 8.	Edite el nombre de la tarjeta ubicada en el lateral derecho haciendo clic en el menú desplegable y seleccione editar título, el nuevo título es Número de estudiantes graduados.
 
@@ -873,7 +873,7 @@ Para realizar un grafico de burbujas duplique la hoja distribución de graduados
 knitr::include_graphics("Imágenes/analisis80.jpg")
 ```
 
-Note que la descripción emergente no está clara por lo que es necesario cambie Sede Nombre Adm por Sede de admisión, Recuento de Sede Nombre Adm por Número de estudiantes graduados y % de total Recuento de Sede Nombre Adm junto con Sede Nombre Adm por porcentaje; duplique el campo correspondiente a color y llévelo a etiqueta, ajuste el tamaño de la visualización a vista completa, edite el titulo de la leyenda de la clave de color, asigne como nuevo título porcentaje.  Finalmente, su visualización al igual que el mapa de árbol permite identificar cual sede de la Universidad Nacional tuvo más graduados a lo largo de los periodos registrados en el conjunto de datos.
+Note que la descripción emergente no está clara por lo que es necesario editarla, para esto cambie Sede Nombre Adm por Sede de admisión, Recuento de Sede Nombre Adm por Número de estudiantes graduados y % de total Recuento de Sede Nombre Adm junto con Sede Nombre Adm por Porcentaje; duplique el campo correspondiente a color y llévelo a etiqueta, ajuste el tamaño de la visualización a vista completa, edite el título de la leyenda de la clave de color, asigne como nuevo título porcentaje.  Finalmente, su visualización al igual que el mapa de árbol permite identificar cual sede de la Universidad Nacional tuvo más graduados a lo largo de los periodos registrados en el conjunto de datos.
 
 ```{r burbujas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de burbujas por sede de admisión', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis81.jpg")
