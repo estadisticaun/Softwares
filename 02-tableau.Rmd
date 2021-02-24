@@ -801,7 +801,7 @@ knitr::include_graphics("Imágenes/analisis45.jpg")
 
 8.	Observe que el recuento de nivel se esta haciendo para todos los periodos que contiene la base es decir desde 2009-1 hasta el 2020-1, para que solo muestre los graduados del periodo 2020-1 debe añadir un filtro con el campo Year Semester y seleccionar únicamente el periodo de interés, no es necesario que muestre el filtro. 
 
-9.	Edite el eje x cambiando el título, escriba como título Número de graduados; también edite la descripción emergente cambiando Recuento de nivel por Número de graduados.
+9.	Edite el eje X cambiando el título, escriba como título Número de graduados; también edite la descripción emergente cambiando Recuento de nivel por Número de graduados.
 
 10.	Como etiqueta de cada barra se debería mostrar el total de estudiantes graduados en ese nivel, para esto arrastre el campo Nivel a la tarjeta etiqueta, en el menú desplegable del campo seleccione Medida y luego recuento. 
 
@@ -1013,7 +1013,7 @@ knitr::include_graphics("Imágenes/analisis65.jpg")
 
 Observe que para sede Caribe hay periodos en los cuales no se graduaron estudiantes, esto puede ser una causa de los puntos fuera del limite de control en la figura \@ref(fig:graficodecontrol-fig).
 
-También es de vital importancia visualizar este comportamiento a nivel de facultades para cada sede, ya que no todas las facultades poseen el mismo número de graduados y por ende puede causar que el número de estudiantes graduados de la sede a al que pertenece esa facultad este por encima o por debajo de los límites de control.
+También es de vital importancia visualizar este comportamiento a nivel de facultades para cada sede, ya que no todas las facultades poseen el mismo número de graduados y por ende puede causar que el número de estudiantes graduados de la sede a la que pertenece esa facultad este por encima o por debajo de los límites de control.
 
 1.	Duplique esta última visualización creada y llame a esta hoja duplicada Gráfico de control por facultad. 
 
@@ -1031,9 +1031,9 @@ knitr::include_graphics("Imágenes/analisis66.jpg")
 knitr::include_graphics("Imágenes/analisis68.jpg")
 ```
 
-5.	Edite el titulo del filtro, ponga como nuevo titulo Sede de matrícula. 
+5.	Edite el título del filtro, ponga como nuevo título Sede de matrícula. 
 
-6.	Arrastre la variable Facultad al estante filas, ubíquelo al lado izquierdo de las dos medidas que ya se tienen en este estante.
+6.	Arrastre la variable Facultad al estante filas, ubíquela al lado izquierdo de las dos medidas que ya se tienen en este estante.
 
 Por ejemplo, si selecciona sede Palmira y 2 desviaciones estándar, su gráfico de control se ve de la siguiente manera. 
 
@@ -1041,16 +1041,16 @@ Por ejemplo, si selecciona sede Palmira y 2 desviaciones estándar, su gráfico 
 knitr::include_graphics("Imágenes/analisis69.jpg")
 ```
 
- Es claro que la cantidad de graduados de la facultad de Ingeniería y administración tiene una tendencia de asenso y su promedio es superior a la facultad de Ciencias Agropecuarias. La facultad de ciencias agropecuarias no presenta una alta variabilidad en el número de graduados por periodo en la ventana de tiempo analizada.
+Es claro que la cantidad de graduados de la facultad de Ingeniería y administración tiene una tendencia de asenso y su promedio es superior a la facultad de Ciencias Agropecuarias. La facultad de ciencias agropecuarias no presenta una alta variabilidad en el número de graduados por periodo en la ventana de tiempo analizada.
 
 #### Gráfico de pendientes {#graficopendientes}
 
-Estos gráficos muestran los cambios en la clasificación o la posición de una dimensión desde un punto de inicio hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo.
+Estos gráficos muestran los cambios en la clasificación o posición de una dimensión desde un punto de inicio hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo.
 Para los datos que se están analizando este tipo de gráficos pueden ser utilizados para mostrar la cantidad de estudiantes graduados por año de cada programa de las distintas sedes de matrícula, teniendo como año de inicio el 2009 y año final el 2019, cabe aclarar que el conjunto de datos posee registros para el año 2020 pero solo para el 1 semestre, por tanto, la comparación no será equitativa ya que no se tienen registros para los dos semestres del año como en el caso de 2009. Para crear un grafico de pendientes siga estos pasos, 
 
 1.	Cree una nueva hoja de trabajo y llámela Gráfico de pendientes para la sede Amazonía.
 
-2.	Arrastre el campo Año al campo columnas y nuevamente desde el panel tablas arrástrelo al estante filas, allí seleccione medida y recuento. 
+2.	Arrastre el campo Año a columnas y nuevamente desde el panel tablas arrástrelo al estante filas, allí seleccione medida y recuento. 
 
 3.	Cambie la marca por línea, ajuste la visualización a vista completa.
 
@@ -1070,9 +1070,9 @@ knitr::include_graphics("Imágenes/analisis70.jpg")
 knitr::include_graphics("Imágenes/analisis71.jpg")
 ```
 
-8.	Quite la selección de mostrar encabezado en eje y, haciendo clic derecho sobre este eje.
+8.	Quite la selección de mostrar encabezado en eje Y, haciendo clic derecho sobre este eje.
 
-9.	Nuevamente arrastre el campo Año a la tarjeta etiqueta ubicada en el estante marcas, seleccione medida y recuento ene l menú desplegable del campo. 
+9.	Nuevamente arrastre el campo Año a la tarjeta etiqueta ubicada en el estante marcas, seleccione medida y recuento en el menú desplegable del campo. 
 
 10.	Edite la descripción emergente cambiando Recuento de Año por Número de graduados. 
 
@@ -1094,7 +1094,7 @@ La gráfica en este momento es poco entendible ya que la para la sede Bogotá ha
 knitr::include_graphics("Imágenes/analisis74.jpg")
 ```
 
-Note que aún hay saturación en la gráfica, el ultimo desglose que se puede hacer es filtrar la visualización por las facultades. Añada el campo Facultad al estante filtros, seleccione todas las facultades, muestre el filtro y finalmente seleccione valor individual (lista), a modo de ejemplo seleccione la facultad de ciencias, su visualización se verá así.
+Note que aún hay saturación en la gráfica, el último desglose que se puede hacer es filtrar la visualización por las facultades. Añada el campo Facultad al estante filtros, seleccione todas las facultades, muestre el filtro y finalmente seleccione valor individual (lista), a modo de ejemplo seleccione la facultad de ciencias, su visualización se verá así.
 
 ```{r graficopendientebogota-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de pendiente para la sede Bogotá', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis75.jpg")
@@ -1133,9 +1133,9 @@ Para las demás sedes de la universidad puede duplicar la ultima hoja creada, ca
 
 #### Gráfico de bala {#graficobala}
 
-Este tipo de gráficos son una manera son una buena manera de mostrar la progresión en etapas hacia una meta, en este caso es de interés mostrar como avanza el número de graduados por Sede de matrícula hacia una meta establecida para cada una, estos valores objetivos se tomarán de manera arbitraria, para la sede Amazonía será 200, para Bogotá 65.000, Caribe tendrá un valor objetivo igual a 60, para Manizales 13.000, para la sede Medellín 23.000, finalmente el valor de meta para la sede Palmira será de 6.000.
+Este tipo de gráficos son una buena manera de mostrar la progresión en etapas hacia una meta, en este caso es de interés mostrar como avanza el número de graduados por Sede de matrícula hacia una meta establecida para cada una, estos valores objetivos se tomarán de manera arbitraria, para la sede Amazonía será 200, para Bogotá 65.000, Caribe tendrá un valor objetivo igual a 60, para Manizales 13.000, para la sede Medellín 23.000, finalmente el valor de meta para la sede Palmira será de 6.000.
 
-La base de datos original no posee un campo que contenga estos valores de meta, por lo tanto es necesario la creación de un campo calculado que asigne el valor de meta a cada sede, para cree una nuevo campo calculado y como nombre asigne Meta de graduados, la expresión clave para asignar el valor de meta según la sede será IF y también se hará uso de una función que identifique si la Sede empieza por ciertas letras que se le indican, dentro del campo calculado escriba lo siguiente:
+La base de datos original no posee un campo que contenga estos valores de meta, por lo tanto es necesario la creación de un campo calculado que asigne el valor de meta a cada sede, cree una nuevo campo calculado y como nombre asigne Meta de graduados, la expresión clave para asignar el valor de meta según la sede será IF y también se hará uso de una función que identifique si la Sede empieza por ciertas letras que se le indican, dentro del campo calculado escriba lo siguiente:
 
 **IF STARTSWITH([Sede Nombre Mat], "Ama") THEN "200" **
 
@@ -1149,7 +1149,7 @@ La base de datos original no posee un campo que contenga estos valores de meta, 
 
 **ELSE "6000" END**
 
-Por ejemplo, en el primero renglón se le esta indicando que si el campo Sede Nombre Mat inicia con “Ama” asigne como meta 200, finalmente haga clic en Aceptar para guardar el campo. 
+Por ejemplo, en el primer renglón se le esta indicando que si el campo Sede Nombre Mat inicia con “Ama” asigne como meta 200, finalmente haga clic en Aceptar para guardar el campo. 
 
 ```{r campocalculadometas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear campo calculado con metas por sede', out.width='70%'}
 knitr::include_graphics("Imágenes/analisis85.jpg")
@@ -1166,18 +1166,18 @@ Este campo se guardo como cadena y en realidad es un número entero, cambie el t
 knitr::include_graphics("Imágenes/analisis86.jpg")
 ```
 
-4.	Edite la descripción emergente para que sea clara y concisa, también edite el eje x cambiando el titulo por Número de estudiantes graduados, oculte la etiqueta del eje y.
+4.	Edite la descripción emergente para que sea clara y concisa, también edite el eje X cambiando el título por Número de estudiantes graduados, oculte la etiqueta del eje Y.
 
 5.	Es momento de añadir la línea de referencia que representa la meta por sede, para esto haga clic en el panel análisis en el lateral izquierdo, en personalizado arrastre línea de referencia hacia la vista y suéltela sobre celda, es necesario hacerlo sobre celda y no en las otras opciones que brinda ya que la meta de graduados es diferente para cada sede.
 
-6.	En la ventada de edición de la línea, para valor seleccione Meta de graduados y promedio, asegúrese que etiqueta este en ninguno, para la descripción emergente seleccione personalizado y en el espacio del lado derecho escriba Meta de graduados =, en botón del al lado con el símbolo > seleccione valor por último haga clic en aceptar para guardar los cambios.
+6.	En la ventana de edición de la línea, para valor seleccione Meta de graduados y promedio, asegúrese que etiqueta este en ninguno, para la descripción emergente seleccione personalizado y en el espacio del lado derecho escriba Meta de graduados =, en botón del al lado con el símbolo > seleccione valor, por último haga clic en aceptar para guardar los cambios.
 
 ```{r paso6graficobala-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Edición de la línea de referencia para las metas', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis87.jpg")
 ```
 7.	Es momento de añadir una banda de referencia que muestre los porcentajes $50, 75 ~ y ~100$, nuevamente desde el panel análisis y personalizado arrastre banda de referencia y suéltela en celda. 
 
-8.	En la ventana seleccione Distribución, en el menú desplegable de valor seleccione porcentaje, en el espacio de porcentajes escriba $50;75;100$, en porcentaje de seleccione Meda de graduados y promedio.
+8.	En la ventana seleccione Distribución, en el menú desplegable de valor seleccione porcentaje, en el espacio de porcentajes escriba $50;75;100$, en porcentaje de seleccione Meta de graduados y promedio.
 
 ```{r paso8graficobala-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Edición de la banda de referencia para las metas', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis88.jpg")
@@ -1203,7 +1203,7 @@ Los histogramas son una representación gráfica de una variable en forma de bar
 knitr::include_graphics("Imágenes/analisis90.jpg")
 ```
 
-3.	En la ventana para editar las agrupaciones como nombre del campo escriba Agrupaciones para edad, Tableau sugiere que el tamaño de las agrupaciones es $7.8$, pero no es tamaño adecuado ya que los registros para la variable edad son números enteros, por tanto, el tamaño será $5$, finalmente haga clic en aceptar.
+3.	En la ventana para editar las agrupaciones como nombre del campo escriba Agrupaciones para edad, Tableau sugiere que el tamaño de las agrupaciones es $7.8$, pero no es un tamaño adecuado ya que los registros para la variable edad son números enteros, por tanto, el tamaño será $5$, finalmente haga clic en aceptar.
 
 ```{r paso3histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar agrupaciones', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis91.jpg")
@@ -1222,13 +1222,13 @@ knitr::include_graphics("Imágenes/analisis92.jpg")
 ```{r paso6histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Histograma con un valor nulo', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis93.jpg")
 ```
-7.	Haga clic derecho en el eje x y seleccione editar eje, en titulo escriba Edad; en la pestaña Marcas de graduación seleccione fijo, origen de graduación cero e intervalo de graduación cinco para marcas de graduación principal.
+7.	Haga clic derecho en el eje X y seleccione editar eje, en título escriba Edad; en la pestaña Marcas de graduación seleccione fijo, origen de graduación cero e intervalo de graduación cinco para marcas de graduación principal.
 
 ```{r paso7histograma-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar eje x de agrupaciones', out.width='40%'}
 knitr::include_graphics("Imágenes/analisis94.jpg")
 ```
 
-8.	Cambie el titulo del eje y por Número de graduados y edite la descripción emergente. 
+8.	Cambie el título del eje Y por Número de graduados y edite la descripción emergente. 
 
 El histograma obtenido permite concluir que las edades de los estudiantes graduados se concentran en el intervalo de 20 a 30 años.
 
@@ -1256,7 +1256,7 @@ Estos diagramas son una herramienta estadística muy útil ya que permite visual
 
 2.	Repita los pasos 4 y 5 del histograma mostrados en \@ref(histograma).
 
-3.	Añada el campo Sede Nombre Mat al estante filtros, seleccione todo, muestre el filtro y cambie el modo de selección de la sede a Valor individual (lista), cambie el titulo de la leyenda por Sede de matrícula.
+3.	Añada el campo Sede Nombre Mat al estante filtros, seleccione todo, muestre el filtro y cambie el modo de selección de la sede a Valor individual (lista), cambie el título de la leyenda por Sede de matrícula.
 
 4.	Añada el campo Nivel al estante columnas y Edad Mod a filas clic derecho sobre este último campo, seleccione medida y promedio. 
 
@@ -1278,7 +1278,7 @@ knitr::include_graphics("Imágenes/analisis99.jpg")
 knitr::include_graphics("Imágenes/analisis100.jpg")
 ```
 
-8.	Cada punto de la visualización representa el promedio de las edades por periodo para cada nivel de formación según la sede que se elija en el filtro, es de interés mostrar las edades una a una y no el promedio para esto es necesario desagregar las medidas. Haga clic en la pestaña análisis y haga clic en Agregar medidas.
+8.	Cada punto de la visualización representa el promedio de las edades por periodo para cada nivel de formación según la sede que se elija en el filtro, es de interés mostrar las edades una a una y no el promedio para esto es necesario desagregar las medidas. Haga clic en la pestaña análisis y haga clic en Agregar medidas para desactivar la opción.
 
 ```{r paso8boxplot-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Desagregar medidas', out.width='40%'}
 knitr::include_graphics("Imágenes/analisis101.jpg")
@@ -1286,7 +1286,7 @@ knitr::include_graphics("Imágenes/analisis101.jpg")
 
 9.	El eje Y de la visualización cambiara, ya que no representa el promedio de la edad si no la edad de cada estudiante. Finalmente edite la descripción emergente.
 
-El gráfico realizado permite identificar la distribución de las edades por nivel de formación y realizar un filtro para la sede que se desea mostrar. Por ejemplo si se selecciona la sede Bogotá se observa un punto por debajo del límite inferior, al leer la descripción emergente de este punto se identifica que fue registrado para el periodo 2009-2 y la edad del estudiantes de 15 años, esto puede deberse a errores al momento de digitar la información en la base de datos. 
+El gráfico realizado permite identificar la distribución de las edades por nivel de formación y realizar un filtro para la sede que se desea mostrar. Por ejemplo si se selecciona la sede Bogotá se observa un punto por debajo del límite inferior, al leer la descripción emergente de este punto se identifica que fue registrado para el periodo 2009-2 y la edad del estudiante es de 15 años, esto puede deberse a errores al momento de digitar la información en la base de datos. 
 
 ```{r boxplot-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Boxplot para edad por sede y nivel de formación', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis102.jpg")
@@ -1294,7 +1294,7 @@ knitr::include_graphics("Imágenes/analisis102.jpg")
 
 #### Mapeo de datos {#mapeodatos}
 
-La georreferenciación es una herramienta más apropiadas cuando se desea mostrar la procedencia de los registros a nivel de ciudad, municipio o departamento; en el conjunto de datos que se esta trabajando se tiene información sobre la longitud y la latitud de la ciudad de nacimiento, el nombre de la ciudad y el departamento de los estudiantes. 
+La georreferenciación es una de las herramientas más apropiadas cuando se desea mostrar la procedencia de los registros a nivel de ciudad, municipio o departamento; en el conjunto de datos que se esta trabajando se tiene información sobre la longitud y la latitud de la ciudad de nacimiento, el nombre de la ciudad y el departamento. 
 
 Inicialmente se deben asignar funciones geográficas a los campos que contienen el departamento y la ciudad de nacimiento ya que estas fueron leídas por Tableau como cadenas, haga clic sobre el icono “Abc” del campo Ciu Nac, seleccione función geográfica y Provincia/Municipio/Condado.
 
@@ -1340,7 +1340,7 @@ knitr::include_graphics("Imágenes/analisis107.jpg")
 knitr::include_graphics("Imágenes/analisis108.jpg")
 ```
 
-8.	Edite el titulo de la leyenda de color por Total de graduados.
+8.	Edite el título de la leyenda de color por Total de graduados.
 
 A continuación, se presenta la visualización obtenida, la cual permite identificar la cantidad de graduados por departamento para el periodo 2020-1, por ejemplo, para este periodo se graduaron 2 estudiantes provenientes del departamento de Vichada.
 
@@ -1352,7 +1352,7 @@ También es posible crear un mapa para mostrar el total de estudiantes graduados
 
 1.	Cree una nueva hoja de trabajo y asigne como nombre Total por municipio, periodo 2020-1.
 
-2.	Arrastre el campo Ciu Nac y Dep Nac a detalle, obtendrá el mapa de Colombia con puntos que simbolizan cada ciudad para la que se tiene registros, en la esquina inferior encontrara el número de ciudades que Tableau no logro identificar que en este caso son 31, haga clic sobre ese botón y seleccione editar ubicaciones. Es posible que muchas ubicaciones no coincidan por tildes o mayúsculas por lo que es necesario ir asignando las ubicaciones. Por ejemplo, Cartagena de indias no se reconoció correctamente ya que la base interna de Tableau contiene solo Cartagena, por lo tanto, asigne Cartagena a Cartagena de Indias como ubicación coincidente, de esta manera asigne los demás que Tableau no logro reconocer.
+2.	Arrastre el campo Ciu Nac y Dep Nac a detalle, obtendrá el mapa de Colombia con puntos que simbolizan cada ciudad para la que se tienen registros, en la esquina inferior encontrara el número de ciudades que Tableau no logro identificar que en este caso son 31, haga clic sobre ese botón y seleccione editar ubicaciones. Es posible que muchas ubicaciones no coincidan por tildes o mayúsculas por lo que es necesario ir asignando las ubicaciones. Por ejemplo, Cartagena de indias no se reconoció correctamente ya que la base interna de Tableau contiene solo Cartagena, por lo tanto, asigne Cartagena a Cartagena de Indias como ubicación coincidente, de esta manera asigne los demás que Tableau no logro reconocer.
 
 ```{r paso2mapeomunicipios-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar ubicaciones para ciudades', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis110.jpg")
@@ -1400,7 +1400,8 @@ Este mapa permite visualizar el municipio de nacimiento de los estudiantes gradu
 
 Estos gráficos permiten identificar las relaciones existentes entre dos variables numéricas, en Tableau pueden ser creados agregando una medida al estante filas y otra al estante columnas, es posible añadir dimensiones para agregar detalle a su vista. El conjunto de datos con el cual se realizaron todas las visualizaciones anteriores no posee dos variables numéricas que permitan hacer gráficos de dispersión por esto es necesario conectarse a una nueva fuente de datos, se hará en un libro nuevo ya que a pesar de ser gráficos importantes no están relacionados con el conjunto trabajado anteriormente, para crear un nuevo libro de trabajo haga clic en archivo y seleccione nuevo. 
 
-Conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos. 
+Conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos.
+
 1.	A la hoja uno de trabajo llámela Diagrama de dispersión para ventas y beneficios.
 
 2.	Arrastre el campo Sales a filas y el campo Profit a columnas y ajuste el tamaño de la vista.
@@ -1409,7 +1410,7 @@ Conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Order
 knitr::include_graphics("Imágenes/analisis117.jpg")
 ```
 
-3.	Por defectos Tableau usa la agregación de suma para las medidas numéricas para mostrar todos los puntos se deben desagregar las medidas, haga clic en la pestaña análisis y seleccione agregar medidas. Después de hacer eso su visualización contendrá todos los puntos para ventas y beneficios.
+3.	Por defecto Tableau usa la agregación de suma para las medidas numéricas, para mostrar todos los puntos se deben desagregar las medidas, haga clic en la pestaña análisis y seleccione agregar medidas. Después de hacer eso su visualización contendrá todos los puntos para ventas y beneficios.
 
 ```{r paso3dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Diagrama de dispersión con medidas desagregadas', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis118.jpg")
@@ -1433,13 +1434,13 @@ knitr::include_graphics("Imágenes/analisis120.jpg")
 knitr::include_graphics("Imágenes/analisis121.jpg")
 ```
 
-7.	La descripción emergente de las líneas de tendencia ajustadas da información sobre la ecuación del modelo, la mediada de $R^2$ y $valor-p$, valores útiles para realizar análisis estadísticos.
+7.	La descripción emergente de las líneas de tendencia ajustadas da información sobre la ecuación del modelo, la medida de $R^2$ y $valor-p$, valores útiles para realizar análisis estadísticos.
 
 ```{r paso7dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción emergente de la línea de tendencia', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis122.jpg")
 ```
 
-8.	Haciendo clic derecho sobre una de las líneas de tendencia y seleccionando describir línea de tendencia se abrirá un cuadro de dialogo que permite visualizar la ecuación del modelo, sus coeficientes, desviaciones estándar, valores del estadístico t y valores P.
+8.	Haciendo clic derecho sobre una de las líneas de tendencia y seleccionando describir línea de tendencia se abrirá un cuadro de diálogo que permite visualizar la ecuación del modelo, sus coeficientes, desviaciones estándar, valores del estadístico t y valores P.
 
 ```{r paso8dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Describir línea de tendencia', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis123.jpg")
@@ -1451,7 +1452,7 @@ knitr::include_graphics("Imágenes/analisis123.jpg")
 knitr::include_graphics("Imágenes/analisis124.jpg")
 ```
 
-10.	Para editar el modelo de regresión ajustado, haga clic sobre una línea de tendencia y seleccione editar, en la ventaja emergente que se abre encontrara diferentes opciones, como cambiar el tipo de modelo, hacer que los modelos se calculen de manera independiente según una dimensión y agregar objetes visuales como bandas de confianza.
+10.	Para editar el modelo de regresión ajustado, haga clic sobre una línea de tendencia y seleccione editar, en la ventana emergente que se abre encontrará diferentes opciones, como cambiar el tipo de modelo, hacer que los modelos se calculen de manera independiente según una dimensión y agregar objetos visuales como bandas de confianza.
 
 ```{r paso10dispersion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones de líneas de tendencia', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis125.jpg")
@@ -1481,19 +1482,19 @@ knitr::include_graphics("Imágenes/analisis127.jpg")
 knitr::include_graphics("Imágenes/analisis128.jpg")
 ```
 
-5.	Es momento de añadir el pronostico de ventas, haga clic en el panel análisis y desde modelo arrastre pronostico y suéltelo en añadir pronostico.
+5.	Es momento de añadir el pronostico de ventas, haga clic en el panel análisis y desde modelo arrastre pronóstico y suéltelo en añadir pronóstico.
 
 ```{r paso5pronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Serie de tiempo mensual para las ventas con pronóstico', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis129.jpg")
 ```
 
-Note que Tableau automáticamente añade una leyenda de color que indica cuales son las observaciones reales y las estimaciones, por defecto la línea de pronósticos se añada con un intervalo de confianza del $95\%$, esto puede ser editado al hacer clic sobre un punto de la línea de pronostico y seleccionando editar, se abre un cuadro de dialogo que permite editar el pronóstico, es posible editar la duración del mismo, elegir la fuente de datos, decidir cuando meses se quieren ignorar para la realización del pronóstico, elegir el modelo y seleccionar el tamaño del intervalo de confianza. Para obtener información más detalla acerca de las opciones puede hacer clic en Obtener más información sobre las opciones de pronóstico, el cual lo llevara a la pagina de ayuda de Tableau y le proporcionara información detallada sobre las opciones. 
+Note que Tableau automáticamente añade una leyenda de color que indica cuales son las observaciones reales y las estimaciones, por defecto la línea de pronósticos se añade con un intervalo de confianza del $95\%$, esto puede ser editado al hacer clic sobre un punto de la línea de pronostico y seleccionando editar, se abre un cuadro de diálogo que permite editar el pronóstico, es posible editar la duración del mismo, elegir la fuente de datos, decidir cuando meses se quieren ignorar para la realización del pronóstico, elegir el modelo y seleccionar el tamaño del intervalo de confianza. Para obtener información más detalla acerca de las opciones puede hacer clic en Obtener más información sobre las opciones de pronóstico, el cual lo llevara a la pagina de ayuda de Tableau y le proporcionara información detallada sobre las opciones. 
 
 ```{r opcionespronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones de pronóstico', out.width='50%'}
 knitr::include_graphics("Imágenes/analisis130.jpg")
 ```
 
-La descripción del pronóstico puede ser obtenida haciendo clic derecho sobre la estimación seleccionar pronóstico y describir pronostico, se abrirá una ventana con dos pestañas una de resumen y otra de modelos.
+La descripción del pronóstico puede ser obtenida haciendo clic derecho sobre la estimación seleccionar pronóstico y describir pronóstico, se abrirá una ventana con dos pestañas una de resumen y otra de modelos.
 
 La pestaña de resumen contiene una descripción general de los modelos de pronóstico que Tableau ha creado, también los patrones generales que encontró en los datos. 	Para obtener información mas detalla sobre lo que contiene esta pestaña puede hacer clic en Obtener más información sobre el resumen de pronósticos.
 
@@ -1501,7 +1502,7 @@ La pestaña de resumen contiene una descripción general de los modelos de pron�
 knitr::include_graphics("Imágenes/analisis131.jpg")
 ```
 
-La pestaña modelos presenta información mas detalla sobre el modelo de pronóstico que Tableau ha creado; contiene el nivel, tendencia, temporada, métricas de calidad y coeficientes de suavizado, si se añada una dimensión a la vista se genera una fila en la tabla por cada nivel de la dimensión. Nuevamente se encuentra disponible el botón para obtener información mas detallada sobre los modelos de pronósticos.
+La pestaña modelos presenta información más detalla sobre el modelo de pronóstico que Tableau ha creado; contiene el nivel, tendencia, temporada, métricas de calidad y coeficientes de suavizado, si se añade una dimensión a la vista se genera una fila en la tabla por cada nivel de la dimensión. Nuevamente se encuentra disponible el botón para obtener información mas detallada sobre los modelos de pronósticos.
 
 ```{r modelospronosticos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Describir pronóstico - modelos', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis132.jpg")
@@ -1512,15 +1513,15 @@ Haga clic en el botón formato y seleccione libro de trabajo, en el panel derech
 
 ### Compartir las visualizaciones
 
-Las visualizaciones creadas usando la versión de escritorio de Tableau Public pueden ser compartidas como hojas individuales, dashboard o historias, en este caso se crearán dashboard que luego se integran a historias para replicar la forma de visualización que se publica en la página de estadísticas [estadísticas](http://estadisticas.unal.edu.co/home/) de la Universidad Nacional de Colombia en la pestaña cifras generales y graduados. Es necesario crear ocho tableros con las visualizaciones que se crearon anteriormente y luego se incluirán en una historia con ocho puntos. 
+Las visualizaciones creadas usando la versión de escritorio de Tableau Public pueden ser compartidas como hojas individuales, dashboard o historias, en este caso se crearán dashboard que luego se integran a historias para replicar la forma de visualización que se publica en la página de estadísticas [estadísticas](http://estadisticas.unal.edu.co/home/) de la Universidad Nacional de Colombia en la pestaña cifras generales y graduados. Es necesario crear ocho tableros con las visualizaciones que se crearon anteriormente que luego se incluirán en una historia con ocho puntos. 
 
 #### Crear un dashboard
 
-Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales, graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard y es posible agregar esta hoja directamente a la historia. Sin embargo, se quiere añadir una funcionalidad que permita ver los metadatos asociados a las cifras generales que fueron analizadas.
+Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales y graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard y es posible agregar esta hoja directamente a la historia. Sin embargo, se quiere añadir una funcionalidad que permita ver los metadatos asociados a las cifras generales que fueron analizadas.
 
 1.	Cree una nueva hoja de trabajo y llámela Metadatos.
 
-2.	Cree un nuevo parámetro u signe como nombre Ver metadatos, seleccione cadena y lista, en valores escriba Ver metadatos y clic en aceptar para guardar los cambios. 
+2.	Cree un nuevo parámetro, asigne como nombre Ver metadatos, seleccione cadena y lista, en valores escriba Ver metadatos y clic en aceptar para guardar los cambios. 
 
 ```{r parametrometadatos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear parámetro para metadatos', out.width='60%'}
 knitr::include_graphics("Imágenes/compartir8.jpg")
@@ -1570,7 +1571,7 @@ La siguiente visualización presenta una combinación de una serie de tiempo, un
 
 1.	Diríjase a la hoja de trabajo llamada serie, haga clic en el menú desplegable ubicado entre datos y tablas y seleccione crear parámetro. 
 
-2.	En el cuadro de dialogo escriba como nombre del parámetro Seleccione visualización, tipo de datos seleccione cadena, en valores permitidos seleccione lista, finalmente en Lista de valores, escriba serie como el primer valor y, a continuación, tabla que son las dos visualizaciones que se desean integrar al dashboard. 
+2.	En el cuadro de diálogo escriba como nombre del parámetro Seleccione visualización, tipo de datos seleccione cadena, en valores permitidos seleccione lista, finalmente en Lista de valores, escriba serie como el primer valor y, a continuación, tabla que son las dos visualizaciones que se desean integrar al dashboard. 
 
 ```{r paso2tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar parámetro de selección de visualizaciones', out.width='60%'}
 knitr::include_graphics("Imágenes/compartir1.jpg")
@@ -1602,13 +1603,13 @@ knitr::include_graphics("Imágenes/compartir4.jpg")
 ```{r paso8tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar un contenedor de trazado vertical', out.width='80%'}
 knitr::include_graphics("Imágenes/compartir6.jpg")
 ```
-9.	Arrastre la hoja Serie al contenedor, arrastre también la hoja que contiene la tabla de texto y suéltela sobre el rectángulo gris claro que se crea debajo del titulo de la serie. 
+9.	Arrastre la hoja Serie al contenedor, arrastre también la hoja que contiene la tabla de texto y suéltela sobre el rectángulo gris claro que se crea debajo del título de la serie. 
 
 ```{r paso9tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar vistas al contenedor de trazado vertical', out.width='80%'}
 knitr::include_graphics("Imágenes/compartir7.jpg")
 ```
 
-10.	Debe ocultar los títulos de las hojas puestas sobre el contendor, haga clic sobre el titulo de la serie, seleccione más opciones y luego título, esto debe hacerlo también para la hoja tabla.
+10.	Debe ocultar los títulos de las hojas puestas sobre el contendor, haga clic sobre el título de la serie, seleccione más opciones y luego título, esto debe hacerlo también para la hoja tabla.
 
 ```{r paso10tablero-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ocultar títulos', out.width='80%'}
 knitr::include_graphics("Imágenes/compartir15.jpg")
@@ -1620,12 +1621,12 @@ knitr::include_graphics("Imágenes/compartir15.jpg")
 knitr::include_graphics("Imágenes/compartir16.jpg")
 ```
 
-12.	En el cuadro de dialogo editar texto escriba evolución histórica del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a $18$, seleccione negrilla y centrar el texto. 
+12.	En el cuadro de diálogo editar texto escriba evolución histórica del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a $18$, seleccione negrilla y centrar el texto. 
 
 
 13.	Cambie el nombre del dashboard a modalidad de formación, por comodidad y facilidad se eliminaron los filtros de la hoja tabla.
 
-14. Agregue una acción de filtro como se mostro anteriormente.
+14. Agregue una acción de URL como se mostro anteriormente.
 
 A continuación, se presenta el dashboard obtenido que proporciona información clara sobre la modalidad de formación, permite intercambiar entre la serie y la tabla de texto y al hacer clic sobre Ver metadatos permite ir a los metadatos asociados a estas visualizaciones.
 
@@ -1635,7 +1636,7 @@ knitr::include_graphics("Imágenes/compartir17.jpg")
 
 Oculte las hojas que ha usado en el dashboard anterior con el fin de que la barra de hojas de la parte inferior no se sature, haga clic derecho sobre el nombre de la hoja de trabajo y seleccione ocultar. 
 
-El siguiente dashboard a realizar corresponde a las estadísticas por nivel de formación, debe crear todos los objetos visuales que involucra este dashboard e incorporarlos al tablero como se mostro anteriormente, el dashboard para nuvel de formación debe verse así,
+El siguiente dashboard a realizar corresponde a las estadísticas por nivel de formación, debe crear todos los objetos visuales que involucra este dashboard e incorporarlos al tablero como se mostro anteriormente, el dashboard para nivel de formación debe verse así,
 
 ```{r tableroniveldefromacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard para nivel de formación', out.width='80%'}
 knitr::include_graphics("Imágenes/compartir18.jpg")
@@ -1672,13 +1673,13 @@ knitr::include_graphics("Imágenes/compartir23.jpg")
 
 #### Crear una historia 
 
-Como ya se menciono una historia es una secuencia de vistas o dashboards que se utilizan en forma conjunta para mostrar información, en este caso se hará uso de las historias para mostrar una secuencia de las visualizaciones y dashboards creados anteriormente y lograr una estructura similar a la mostrada en la página web de las estadísticas de la Universidad. 
+Como ya se menciono una historia es una secuencia de hojas o dashboards que se utilizan en forma conjunta para mostrar información, en este caso se hará uso de las historias para mostrar una secuencia de las visualizaciones y dashboards creados anteriormente y lograr una estructura similar a la mostrada en la página web de las estadísticas de la Universidad. 
 
 1.	Haga clic en el icono de historia en la barra inferior donde se ubican los tableros creados, asigne como nombre a la nueva historia Graduados.
 
 2.	Ajuste el tamaño para que ocupe toda la pantalla del dispositivo.
 
-3.	En el cuadro gris añada como subtitulo Evolución graduados, en el panel lateral izquierdo en la pestaña historia encontrará un botón que tiene el texto En blanco, dicho botón es usado para crear más puntos en la historia, haga clic allí hasta tener $8$ puntos en la historia. Añada estos subtítulos a los puntos de la historia en este orden Modalidad de formación, Nivel de formación, Sede de admisión, Nacionalidad, Lugar de nacimiento, Sexo, Áreas del conocimiento.
+3.	En el cuadro gris añada como subtítulo Evolución graduados, en el panel lateral izquierdo en la pestaña historia encontrará un botón que tiene el texto En blanco, dicho botón es usado para crear más puntos en la historia, haga clic allí hasta tener $8$ puntos en la historia. Añada estos subtítulos a los puntos de la historia en este orden Modalidad de formación, Nivel de formación, Sede de admisión, Nacionalidad, Lugar de nacimiento, Sexo, Áreas del conocimiento.
 
 4.	En el primer punto de la historia agregue el dashboard llamado Evolución graduados.
 
@@ -1703,7 +1704,7 @@ Se obtiene una historia que permite navegar entre los diferentes dashboards que 
 knitr::include_graphics("Imágenes/compartir26.jpg")
 ```
 
-Oculte todos los dashboards involucrados en la historia, haga clic en la pestaña archivo y seleccione guardan en Tableau Public como…
+Oculte todos los dashboards involucrados en la historia, haga clic en la pestaña archivo y seleccione guardar en Tableau Public como…
 
 ```{r guardarlibroddetrabajo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Guardar el libro de trabajo', out.width='60%'}
 knitr::include_graphics("Imágenes/compartir27.jpg")
