@@ -851,7 +851,7 @@ Figura 2.80: Gráfico de barras con colores asignados
 </div>
 <ol start="8" style="list-style-type: decimal">
 <li><p>Observe que el recuento de nivel se esta haciendo para todos los periodos que contiene la base es decir desde 2009-1 hasta el 2020-1, para que solo muestre los graduados del periodo 2020-1 debe añadir un filtro con el campo Year Semester y seleccionar únicamente el periodo de interés, no es necesario que muestre el filtro.</p></li>
-<li><p>Edite el eje x cambiando el título, escriba como título Número de graduados; también edite la descripción emergente cambiando Recuento de nivel por Número de graduados.</p></li>
+<li><p>Edite el eje X cambiando el título, escriba como título Número de graduados; también edite la descripción emergente cambiando Recuento de nivel por Número de graduados.</p></li>
 <li><p>Como etiqueta de cada barra se debería mostrar el total de estudiantes graduados en ese nivel, para esto arrastre el campo Nivel a la tarjeta etiqueta, en el menú desplegable del campo seleccione Medida y luego recuento.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso10graficobarras-fig"></span>
@@ -1104,7 +1104,7 @@ Figura 2.105: Gráfico de control por sede de matrícula
 </p>
 </div>
 <p>Observe que para sede Caribe hay periodos en los cuales no se graduaron estudiantes, esto puede ser una causa de los puntos fuera del limite de control en la figura <a href="2-4-flujo-de-trabajo.html#fig:graficodecontrol-fig">2.103</a>.</p>
-<p>También es de vital importancia visualizar este comportamiento a nivel de facultades para cada sede, ya que no todas las facultades poseen el mismo número de graduados y por ende puede causar que el número de estudiantes graduados de la sede a al que pertenece esa facultad este por encima o por debajo de los límites de control.</p>
+<p>También es de vital importancia visualizar este comportamiento a nivel de facultades para cada sede, ya que no todas las facultades poseen el mismo número de graduados y por ende puede causar que el número de estudiantes graduados de la sede a la que pertenece esa facultad este por encima o por debajo de los límites de control.</p>
 <ol style="list-style-type: decimal">
 <li><p>Duplique esta última visualización creada y llame a esta hoja duplicada Gráfico de control por facultad.</p></li>
 <li><p>Retire el campo Sede Nombre Mat del estante filas y llévelo al estante filtros, seleccione todas las sedes y haga clic en aceptar.</p></li>
@@ -1126,8 +1126,8 @@ Figura 2.107: Edición del control de filtro
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li><p>Edite el titulo del filtro, ponga como nuevo titulo Sede de matrícula.</p></li>
-<li><p>Arrastre la variable Facultad al estante filas, ubíquelo al lado izquierdo de las dos medidas que ya se tienen en este estante.</p></li>
+<li><p>Edite el título del filtro, ponga como nuevo título Sede de matrícula.</p></li>
+<li><p>Arrastre la variable Facultad al estante filas, ubíquela al lado izquierdo de las dos medidas que ya se tienen en este estante.</p></li>
 </ol>
 <p>Por ejemplo, si selecciona sede Palmira y 2 desviaciones estándar, su gráfico de control se ve de la siguiente manera.</p>
 <div class="figure" style="text-align: center"><span id="fig:controlfacultad-fig"></span>
@@ -1140,11 +1140,11 @@ Figura 2.108: Gráfico de control por facultad
 </div>
 <div id="graficopendientes" class="section level4">
 <h4><span class="header-section-number">2.4.2.8</span> Gráfico de pendientes</h4>
-<p>Estos gráficos muestran los cambios en la clasificación o la posición de una dimensión desde un punto de inicio hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo.
+<p>Estos gráficos muestran los cambios en la clasificación o posición de una dimensión desde un punto de inicio hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo.
 Para los datos que se están analizando este tipo de gráficos pueden ser utilizados para mostrar la cantidad de estudiantes graduados por año de cada programa de las distintas sedes de matrícula, teniendo como año de inicio el 2009 y año final el 2019, cabe aclarar que el conjunto de datos posee registros para el año 2020 pero solo para el 1 semestre, por tanto, la comparación no será equitativa ya que no se tienen registros para los dos semestres del año como en el caso de 2009. Para crear un grafico de pendientes siga estos pasos,</p>
 <ol style="list-style-type: decimal">
 <li><p>Cree una nueva hoja de trabajo y llámela Gráfico de pendientes para la sede Amazonía.</p></li>
-<li><p>Arrastre el campo Año al campo columnas y nuevamente desde el panel tablas arrástrelo al estante filas, allí seleccione medida y recuento.</p></li>
+<li><p>Arrastre el campo Año a columnas y nuevamente desde el panel tablas arrástrelo al estante filas, allí seleccione medida y recuento.</p></li>
 <li><p>Cambie la marca por línea, ajuste la visualización a vista completa.</p></li>
 <li><p>Añada la variable año al estante filas y seleccione únicamente los años 2009 y 2019 ya que son los años que se quieren visualizar en el gráfico de pendiente. Hasta el momento su visualización se ve de esta manera,</p></li>
 </ol>
@@ -1166,8 +1166,8 @@ Figura 2.110: Añadir todos los miembros
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li><p>Quite la selección de mostrar encabezado en eje y, haciendo clic derecho sobre este eje.</p></li>
-<li><p>Nuevamente arrastre el campo Año a la tarjeta etiqueta ubicada en el estante marcas, seleccione medida y recuento ene l menú desplegable del campo.</p></li>
+<li><p>Quite la selección de mostrar encabezado en eje Y, haciendo clic derecho sobre este eje.</p></li>
+<li><p>Nuevamente arrastre el campo Año a la tarjeta etiqueta ubicada en el estante marcas, seleccione medida y recuento en el menú desplegable del campo.</p></li>
 <li><p>Edite la descripción emergente cambiando Recuento de Año por Número de graduados.</p></li>
 </ol>
 <p>La visualización obtenida es muy simple, ya que para esta sede no se tienen programas específicos.</p>
@@ -1191,7 +1191,7 @@ Figura 2.112: Filtrar por sede Bogotá
 Figura 2.113: Añadir filtro de modalidad de formación
 </p>
 </div>
-<p>Note que aún hay saturación en la gráfica, el ultimo desglose que se puede hacer es filtrar la visualización por las facultades. Añada el campo Facultad al estante filtros, seleccione todas las facultades, muestre el filtro y finalmente seleccione valor individual (lista), a modo de ejemplo seleccione la facultad de ciencias, su visualización se verá así.</p>
+<p>Note que aún hay saturación en la gráfica, el último desglose que se puede hacer es filtrar la visualización por las facultades. Añada el campo Facultad al estante filtros, seleccione todas las facultades, muestre el filtro y finalmente seleccione valor individual (lista), a modo de ejemplo seleccione la facultad de ciencias, su visualización se verá así.</p>
 <div class="figure" style="text-align: center"><span id="fig:graficopendientebogota-fig"></span>
 <img src="Imágenes/analisis75.jpg" alt="Gráfico de pendiente para la sede Bogotá" width="80%" />
 <p class="caption">
@@ -1233,15 +1233,15 @@ Figura 2.118: Gráfico de pendientes sede Bogotá con filtro de contexto
 </div>
 <div id="graficobala" class="section level4">
 <h4><span class="header-section-number">2.4.2.9</span> Gráfico de bala</h4>
-<p>Este tipo de gráficos son una manera son una buena manera de mostrar la progresión en etapas hacia una meta, en este caso es de interés mostrar como avanza el número de graduados por Sede de matrícula hacia una meta establecida para cada una, estos valores objetivos se tomarán de manera arbitraria, para la sede Amazonía será 200, para Bogotá 65.000, Caribe tendrá un valor objetivo igual a 60, para Manizales 13.000, para la sede Medellín 23.000, finalmente el valor de meta para la sede Palmira será de 6.000.</p>
-<p>La base de datos original no posee un campo que contenga estos valores de meta, por lo tanto es necesario la creación de un campo calculado que asigne el valor de meta a cada sede, para cree una nuevo campo calculado y como nombre asigne Meta de graduados, la expresión clave para asignar el valor de meta según la sede será IF y también se hará uso de una función que identifique si la Sede empieza por ciertas letras que se le indican, dentro del campo calculado escriba lo siguiente:</p>
+<p>Este tipo de gráficos son una buena manera de mostrar la progresión en etapas hacia una meta, en este caso es de interés mostrar como avanza el número de graduados por Sede de matrícula hacia una meta establecida para cada una, estos valores objetivos se tomarán de manera arbitraria, para la sede Amazonía será 200, para Bogotá 65.000, Caribe tendrá un valor objetivo igual a 60, para Manizales 13.000, para la sede Medellín 23.000, finalmente el valor de meta para la sede Palmira será de 6.000.</p>
+<p>La base de datos original no posee un campo que contenga estos valores de meta, por lo tanto es necesario la creación de un campo calculado que asigne el valor de meta a cada sede, cree una nuevo campo calculado y como nombre asigne Meta de graduados, la expresión clave para asignar el valor de meta según la sede será IF y también se hará uso de una función que identifique si la Sede empieza por ciertas letras que se le indican, dentro del campo calculado escriba lo siguiente:</p>
 <p><strong>IF STARTSWITH([Sede Nombre Mat], “Ama”) THEN “200” </strong></p>
 <p><strong>ELSEIF STARTSWITH([Sede Nombre Mat], “Bo”) THEN “65000”</strong></p>
 <p><strong>ELSEIF STARTSWITH([Sede Nombre Mat], “Ca”) THEN “60”</strong></p>
 <p><strong>ELSEIF STARTSWITH([Sede Nombre Mat], “Ma”) THEN “13000”</strong></p>
 <p><strong>ELSEIF STARTSWITH([Sede Nombre Mat], “Me”) THEN “23000”</strong></p>
 <p><strong>ELSE “6000” END</strong></p>
-<p>Por ejemplo, en el primero renglón se le esta indicando que si el campo Sede Nombre Mat inicia con “Ama” asigne como meta 200, finalmente haga clic en Aceptar para guardar el campo.</p>
+<p>Por ejemplo, en el primer renglón se le esta indicando que si el campo Sede Nombre Mat inicia con “Ama” asigne como meta 200, finalmente haga clic en Aceptar para guardar el campo.</p>
 <div class="figure" style="text-align: center"><span id="fig:campocalculadometas-fig"></span>
 <img src="Imágenes/analisis85.jpg" alt="Crear campo calculado con metas por sede" width="70%" />
 <p class="caption">
@@ -1261,9 +1261,9 @@ Figura 2.120: Paso 3 para la creación de un gráfico de barras
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li><p>Edite la descripción emergente para que sea clara y concisa, también edite el eje x cambiando el titulo por Número de estudiantes graduados, oculte la etiqueta del eje y.</p></li>
+<li><p>Edite la descripción emergente para que sea clara y concisa, también edite el eje X cambiando el título por Número de estudiantes graduados, oculte la etiqueta del eje Y.</p></li>
 <li><p>Es momento de añadir la línea de referencia que representa la meta por sede, para esto haga clic en el panel análisis en el lateral izquierdo, en personalizado arrastre línea de referencia hacia la vista y suéltela sobre celda, es necesario hacerlo sobre celda y no en las otras opciones que brinda ya que la meta de graduados es diferente para cada sede.</p></li>
-<li><p>En la ventada de edición de la línea, para valor seleccione Meta de graduados y promedio, asegúrese que etiqueta este en ninguno, para la descripción emergente seleccione personalizado y en el espacio del lado derecho escriba Meta de graduados =, en botón del al lado con el símbolo &gt; seleccione valor por último haga clic en aceptar para guardar los cambios.</p></li>
+<li><p>En la ventana de edición de la línea, para valor seleccione Meta de graduados y promedio, asegúrese que etiqueta este en ninguno, para la descripción emergente seleccione personalizado y en el espacio del lado derecho escriba Meta de graduados =, en botón del al lado con el símbolo &gt; seleccione valor, por último haga clic en aceptar para guardar los cambios.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso6graficobala-fig"></span>
 <img src="Imágenes/analisis87.jpg" alt="Edición de la línea de referencia para las metas" width="60%" />
@@ -1273,7 +1273,7 @@ Figura 2.121: Edición de la línea de referencia para las metas
 </div>
 <ol start="7" style="list-style-type: decimal">
 <li><p>Es momento de añadir una banda de referencia que muestre los porcentajes <span class="math inline">\(50, 75 ~ y ~100\)</span>, nuevamente desde el panel análisis y personalizado arrastre banda de referencia y suéltela en celda.</p></li>
-<li><p>En la ventana seleccione Distribución, en el menú desplegable de valor seleccione porcentaje, en el espacio de porcentajes escriba <span class="math inline">\(50;75;100\)</span>, en porcentaje de seleccione Meda de graduados y promedio.</p></li>
+<li><p>En la ventana seleccione Distribución, en el menú desplegable de valor seleccione porcentaje, en el espacio de porcentajes escriba <span class="math inline">\(50;75;100\)</span>, en porcentaje de seleccione Meta de graduados y promedio.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso8graficobala-fig"></span>
 <img src="Imágenes/analisis88.jpg" alt="Edición de la banda de referencia para las metas" width="60%" />
@@ -1306,7 +1306,7 @@ Figura 2.124: Crear agrupaciones
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>En la ventana para editar las agrupaciones como nombre del campo escriba Agrupaciones para edad, Tableau sugiere que el tamaño de las agrupaciones es <span class="math inline">\(7.8\)</span>, pero no es tamaño adecuado ya que los registros para la variable edad son números enteros, por tanto, el tamaño será <span class="math inline">\(5\)</span>, finalmente haga clic en aceptar.</li>
+<li>En la ventana para editar las agrupaciones como nombre del campo escriba Agrupaciones para edad, Tableau sugiere que el tamaño de las agrupaciones es <span class="math inline">\(7.8\)</span>, pero no es un tamaño adecuado ya que los registros para la variable edad son números enteros, por tanto, el tamaño será <span class="math inline">\(5\)</span>, finalmente haga clic en aceptar.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso3histograma-fig"></span>
 <img src="Imágenes/analisis91.jpg" alt="Editar agrupaciones" width="60%" />
@@ -1334,7 +1334,7 @@ Figura 2.127: Histograma con un valor nulo
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
-<li>Haga clic derecho en el eje x y seleccione editar eje, en titulo escriba Edad; en la pestaña Marcas de graduación seleccione fijo, origen de graduación cero e intervalo de graduación cinco para marcas de graduación principal.</li>
+<li>Haga clic derecho en el eje X y seleccione editar eje, en título escriba Edad; en la pestaña Marcas de graduación seleccione fijo, origen de graduación cero e intervalo de graduación cinco para marcas de graduación principal.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso7histograma-fig"></span>
 <img src="Imágenes/analisis94.jpg" alt="Editar eje x de agrupaciones" width="40%" />
@@ -1343,7 +1343,7 @@ Figura 2.128: Editar eje x de agrupaciones
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>Cambie el titulo del eje y por Número de graduados y edite la descripción emergente.</li>
+<li>Cambie el título del eje Y por Número de graduados y edite la descripción emergente.</li>
 </ol>
 <p>El histograma obtenido permite concluir que las edades de los estudiantes graduados se concentran en el intervalo de 20 a 30 años.</p>
 <div class="figure" style="text-align: center"><span id="fig:histogramabase-fig"></span>
@@ -1373,7 +1373,7 @@ Figura 2.131: Histograma por sede y modalidad de formación para las edades
 <ol style="list-style-type: decimal">
 <li><p>Cree una nueva hoja de trabajo y cambie su nombre por Boxplot para edad.</p></li>
 <li><p>Repita los pasos 4 y 5 del histograma mostrados en <a href="2-4-flujo-de-trabajo.html#histograma">2.4.2.10</a>.</p></li>
-<li><p>Añada el campo Sede Nombre Mat al estante filtros, seleccione todo, muestre el filtro y cambie el modo de selección de la sede a Valor individual (lista), cambie el titulo de la leyenda por Sede de matrícula.</p></li>
+<li><p>Añada el campo Sede Nombre Mat al estante filtros, seleccione todo, muestre el filtro y cambie el modo de selección de la sede a Valor individual (lista), cambie el título de la leyenda por Sede de matrícula.</p></li>
 <li><p>Añada el campo Nivel al estante columnas y Edad Mod a filas clic derecho sobre este último campo, seleccione medida y promedio.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso4boxplot-fig"></span>
@@ -1402,7 +1402,7 @@ Figura 2.134: Añadir color por nivel de formación
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>Cada punto de la visualización representa el promedio de las edades por periodo para cada nivel de formación según la sede que se elija en el filtro, es de interés mostrar las edades una a una y no el promedio para esto es necesario desagregar las medidas. Haga clic en la pestaña análisis y haga clic en Agregar medidas.</li>
+<li>Cada punto de la visualización representa el promedio de las edades por periodo para cada nivel de formación según la sede que se elija en el filtro, es de interés mostrar las edades una a una y no el promedio para esto es necesario desagregar las medidas. Haga clic en la pestaña análisis y haga clic en Agregar medidas para desactivar la opción.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso8boxplot-fig"></span>
 <img src="Imágenes/analisis101.jpg" alt="Desagregar medidas" width="40%" />
@@ -1413,7 +1413,7 @@ Figura 2.135: Desagregar medidas
 <ol start="9" style="list-style-type: decimal">
 <li>El eje Y de la visualización cambiara, ya que no representa el promedio de la edad si no la edad de cada estudiante. Finalmente edite la descripción emergente.</li>
 </ol>
-<p>El gráfico realizado permite identificar la distribución de las edades por nivel de formación y realizar un filtro para la sede que se desea mostrar. Por ejemplo si se selecciona la sede Bogotá se observa un punto por debajo del límite inferior, al leer la descripción emergente de este punto se identifica que fue registrado para el periodo 2009-2 y la edad del estudiantes de 15 años, esto puede deberse a errores al momento de digitar la información en la base de datos.</p>
+<p>El gráfico realizado permite identificar la distribución de las edades por nivel de formación y realizar un filtro para la sede que se desea mostrar. Por ejemplo si se selecciona la sede Bogotá se observa un punto por debajo del límite inferior, al leer la descripción emergente de este punto se identifica que fue registrado para el periodo 2009-2 y la edad del estudiante es de 15 años, esto puede deberse a errores al momento de digitar la información en la base de datos.</p>
 <div class="figure" style="text-align: center"><span id="fig:boxplot-fig"></span>
 <img src="Imágenes/analisis102.jpg" alt="Boxplot para edad por sede y nivel de formación" width="80%" />
 <p class="caption">
@@ -1423,7 +1423,7 @@ Figura 2.136: Boxplot para edad por sede y nivel de formación
 </div>
 <div id="mapeodatos" class="section level4">
 <h4><span class="header-section-number">2.4.2.12</span> Mapeo de datos</h4>
-<p>La georreferenciación es una herramienta más apropiadas cuando se desea mostrar la procedencia de los registros a nivel de ciudad, municipio o departamento; en el conjunto de datos que se esta trabajando se tiene información sobre la longitud y la latitud de la ciudad de nacimiento, el nombre de la ciudad y el departamento de los estudiantes.</p>
+<p>La georreferenciación es una de las herramientas más apropiadas cuando se desea mostrar la procedencia de los registros a nivel de ciudad, municipio o departamento; en el conjunto de datos que se esta trabajando se tiene información sobre la longitud y la latitud de la ciudad de nacimiento, el nombre de la ciudad y el departamento.</p>
 <p>Inicialmente se deben asignar funciones geográficas a los campos que contienen el departamento y la ciudad de nacimiento ya que estas fueron leídas por Tableau como cadenas, haga clic sobre el icono “Abc” del campo Ciu Nac, seleccione función geográfica y Provincia/Municipio/Condado.</p>
 <div class="figure" style="text-align: center"><span id="fig:funciongeografica-fig"></span>
 <img src="Imágenes/analisis103.png" alt="Asignación de función geográfica" width="40%" />
@@ -1481,7 +1481,7 @@ Figura 2.142: Editar adecuadamente la descripción emergente
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>Edite el titulo de la leyenda de color por Total de graduados.</li>
+<li>Edite el título de la leyenda de color por Total de graduados.</li>
 </ol>
 <p>A continuación, se presenta la visualización obtenida, la cual permite identificar la cantidad de graduados por departamento para el periodo 2020-1, por ejemplo, para este periodo se graduaron 2 estudiantes provenientes del departamento de Vichada.</p>
 <div class="figure" style="text-align: center"><span id="fig:mapeodepartamentos-fig"></span>
@@ -1493,7 +1493,7 @@ Figura 2.143: Total por departamento, periodo 2020-1
 <p>También es posible crear un mapa para mostrar el total de estudiantes graduados por municipio para el periodo 2020-1.</p>
 <ol style="list-style-type: decimal">
 <li><p>Cree una nueva hoja de trabajo y asigne como nombre Total por municipio, periodo 2020-1.</p></li>
-<li><p>Arrastre el campo Ciu Nac y Dep Nac a detalle, obtendrá el mapa de Colombia con puntos que simbolizan cada ciudad para la que se tiene registros, en la esquina inferior encontrara el número de ciudades que Tableau no logro identificar que en este caso son 31, haga clic sobre ese botón y seleccione editar ubicaciones. Es posible que muchas ubicaciones no coincidan por tildes o mayúsculas por lo que es necesario ir asignando las ubicaciones. Por ejemplo, Cartagena de indias no se reconoció correctamente ya que la base interna de Tableau contiene solo Cartagena, por lo tanto, asigne Cartagena a Cartagena de Indias como ubicación coincidente, de esta manera asigne los demás que Tableau no logro reconocer.</p></li>
+<li><p>Arrastre el campo Ciu Nac y Dep Nac a detalle, obtendrá el mapa de Colombia con puntos que simbolizan cada ciudad para la que se tienen registros, en la esquina inferior encontrara el número de ciudades que Tableau no logro identificar que en este caso son 31, haga clic sobre ese botón y seleccione editar ubicaciones. Es posible que muchas ubicaciones no coincidan por tildes o mayúsculas por lo que es necesario ir asignando las ubicaciones. Por ejemplo, Cartagena de indias no se reconoció correctamente ya que la base interna de Tableau contiene solo Cartagena, por lo tanto, asigne Cartagena a Cartagena de Indias como ubicación coincidente, de esta manera asigne los demás que Tableau no logro reconocer.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso2mapeomunicipios-fig"></span>
 <img src="Imágenes/analisis110.jpg" alt="Editar ubicaciones para ciudades" width="60%" />
@@ -1561,10 +1561,10 @@ Figura 2.150: Total por municipio, periodo 2020-1
 <div id="dispersion" class="section level4">
 <h4><span class="header-section-number">2.4.2.13</span> Gráfico de dispersión</h4>
 <p>Estos gráficos permiten identificar las relaciones existentes entre dos variables numéricas, en Tableau pueden ser creados agregando una medida al estante filas y otra al estante columnas, es posible añadir dimensiones para agregar detalle a su vista. El conjunto de datos con el cual se realizaron todas las visualizaciones anteriores no posee dos variables numéricas que permitan hacer gráficos de dispersión por esto es necesario conectarse a una nueva fuente de datos, se hará en un libro nuevo ya que a pesar de ser gráficos importantes no están relacionados con el conjunto trabajado anteriormente, para crear un nuevo libro de trabajo haga clic en archivo y seleccione nuevo.</p>
-<p>Conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos.
-1. A la hoja uno de trabajo llámela Diagrama de dispersión para ventas y beneficios.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Arrastre el campo Sales a filas y el campo Profit a columnas y ajuste el tamaño de la vista.</li>
+<p>Conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos.</p>
+<ol style="list-style-type: decimal">
+<li><p>A la hoja uno de trabajo llámela Diagrama de dispersión para ventas y beneficios.</p></li>
+<li><p>Arrastre el campo Sales a filas y el campo Profit a columnas y ajuste el tamaño de la vista.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso2dispersion-fig"></span>
 <img src="Imágenes/analisis117.jpg" alt="Diagrama de dispersión base" width="80%" />
@@ -1573,7 +1573,7 @@ Figura 2.151: Diagrama de dispersión base
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>Por defectos Tableau usa la agregación de suma para las medidas numéricas para mostrar todos los puntos se deben desagregar las medidas, haga clic en la pestaña análisis y seleccione agregar medidas. Después de hacer eso su visualización contendrá todos los puntos para ventas y beneficios.</li>
+<li>Por defecto Tableau usa la agregación de suma para las medidas numéricas, para mostrar todos los puntos se deben desagregar las medidas, haga clic en la pestaña análisis y seleccione agregar medidas. Después de hacer eso su visualización contendrá todos los puntos para ventas y beneficios.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso3dispersion-fig"></span>
 <img src="Imágenes/analisis118.jpg" alt="Diagrama de dispersión con medidas desagregadas" width="80%" />
@@ -1609,7 +1609,7 @@ Figura 2.155: Dividir el eje según la categoría del producto
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
-<li>La descripción emergente de las líneas de tendencia ajustadas da información sobre la ecuación del modelo, la mediada de <span class="math inline">\(R^2\)</span> y <span class="math inline">\(valor-p\)</span>, valores útiles para realizar análisis estadísticos.</li>
+<li>La descripción emergente de las líneas de tendencia ajustadas da información sobre la ecuación del modelo, la medida de <span class="math inline">\(R^2\)</span> y <span class="math inline">\(valor-p\)</span>, valores útiles para realizar análisis estadísticos.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso7dispersion-fig"></span>
 <img src="Imágenes/analisis122.jpg" alt="Descripción emergente de la línea de tendencia" width="80%" />
@@ -1618,7 +1618,7 @@ Figura 2.156: Descripción emergente de la línea de tendencia
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>Haciendo clic derecho sobre una de las líneas de tendencia y seleccionando describir línea de tendencia se abrirá un cuadro de dialogo que permite visualizar la ecuación del modelo, sus coeficientes, desviaciones estándar, valores del estadístico t y valores P.</li>
+<li>Haciendo clic derecho sobre una de las líneas de tendencia y seleccionando describir línea de tendencia se abrirá un cuadro de diálogo que permite visualizar la ecuación del modelo, sus coeficientes, desviaciones estándar, valores del estadístico t y valores P.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso8dispersion-fig"></span>
 <img src="Imágenes/analisis123.jpg" alt="Describir línea de tendencia" width="60%" />
@@ -1636,7 +1636,7 @@ Figura 2.158: Describir modelo de tendencia
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>Para editar el modelo de regresión ajustado, haga clic sobre una línea de tendencia y seleccione editar, en la ventaja emergente que se abre encontrara diferentes opciones, como cambiar el tipo de modelo, hacer que los modelos se calculen de manera independiente según una dimensión y agregar objetes visuales como bandas de confianza.</li>
+<li>Para editar el modelo de regresión ajustado, haga clic sobre una línea de tendencia y seleccione editar, en la ventana emergente que se abre encontrará diferentes opciones, como cambiar el tipo de modelo, hacer que los modelos se calculen de manera independiente según una dimensión y agregar objetos visuales como bandas de confianza.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso10dispersion-fig"></span>
 <img src="Imágenes/analisis125.jpg" alt="Opciones de líneas de tendencia" width="60%" />
@@ -1677,7 +1677,7 @@ Figura 2.162: Serie de tiempo mensual para las ventas
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>Es momento de añadir el pronostico de ventas, haga clic en el panel análisis y desde modelo arrastre pronostico y suéltelo en añadir pronostico.</li>
+<li>Es momento de añadir el pronostico de ventas, haga clic en el panel análisis y desde modelo arrastre pronóstico y suéltelo en añadir pronóstico.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso5pronosticos-fig"></span>
 <img src="Imágenes/analisis129.jpg" alt="Serie de tiempo mensual para las ventas con pronóstico" width="80%" />
@@ -1685,14 +1685,14 @@ Figura 2.162: Serie de tiempo mensual para las ventas
 Figura 2.163: Serie de tiempo mensual para las ventas con pronóstico
 </p>
 </div>
-<p>Note que Tableau automáticamente añade una leyenda de color que indica cuales son las observaciones reales y las estimaciones, por defecto la línea de pronósticos se añada con un intervalo de confianza del <span class="math inline">\(95\%\)</span>, esto puede ser editado al hacer clic sobre un punto de la línea de pronostico y seleccionando editar, se abre un cuadro de dialogo que permite editar el pronóstico, es posible editar la duración del mismo, elegir la fuente de datos, decidir cuando meses se quieren ignorar para la realización del pronóstico, elegir el modelo y seleccionar el tamaño del intervalo de confianza. Para obtener información más detalla acerca de las opciones puede hacer clic en Obtener más información sobre las opciones de pronóstico, el cual lo llevara a la pagina de ayuda de Tableau y le proporcionara información detallada sobre las opciones.</p>
+<p>Note que Tableau automáticamente añade una leyenda de color que indica cuales son las observaciones reales y las estimaciones, por defecto la línea de pronósticos se añade con un intervalo de confianza del <span class="math inline">\(95\%\)</span>, esto puede ser editado al hacer clic sobre un punto de la línea de pronostico y seleccionando editar, se abre un cuadro de diálogo que permite editar el pronóstico, es posible editar la duración del mismo, elegir la fuente de datos, decidir cuando meses se quieren ignorar para la realización del pronóstico, elegir el modelo y seleccionar el tamaño del intervalo de confianza. Para obtener información más detalla acerca de las opciones puede hacer clic en Obtener más información sobre las opciones de pronóstico, el cual lo llevara a la pagina de ayuda de Tableau y le proporcionara información detallada sobre las opciones.</p>
 <div class="figure" style="text-align: center"><span id="fig:opcionespronosticos-fig"></span>
 <img src="Imágenes/analisis130.jpg" alt="Opciones de pronóstico" width="50%" />
 <p class="caption">
 Figura 2.164: Opciones de pronóstico
 </p>
 </div>
-<p>La descripción del pronóstico puede ser obtenida haciendo clic derecho sobre la estimación seleccionar pronóstico y describir pronostico, se abrirá una ventana con dos pestañas una de resumen y otra de modelos.</p>
+<p>La descripción del pronóstico puede ser obtenida haciendo clic derecho sobre la estimación seleccionar pronóstico y describir pronóstico, se abrirá una ventana con dos pestañas una de resumen y otra de modelos.</p>
 <p>La pestaña de resumen contiene una descripción general de los modelos de pronóstico que Tableau ha creado, también los patrones generales que encontró en los datos. Para obtener información mas detalla sobre lo que contiene esta pestaña puede hacer clic en Obtener más información sobre el resumen de pronósticos.</p>
 <div class="figure" style="text-align: center"><span id="fig:resumenpronosticos-fig"></span>
 <img src="Imágenes/analisis131.jpg" alt="Describir pronóstico - resumen" width="80%" />
@@ -1700,7 +1700,7 @@ Figura 2.164: Opciones de pronóstico
 Figura 2.165: Describir pronóstico - resumen
 </p>
 </div>
-<p>La pestaña modelos presenta información mas detalla sobre el modelo de pronóstico que Tableau ha creado; contiene el nivel, tendencia, temporada, métricas de calidad y coeficientes de suavizado, si se añada una dimensión a la vista se genera una fila en la tabla por cada nivel de la dimensión. Nuevamente se encuentra disponible el botón para obtener información mas detallada sobre los modelos de pronósticos.</p>
+<p>La pestaña modelos presenta información más detalla sobre el modelo de pronóstico que Tableau ha creado; contiene el nivel, tendencia, temporada, métricas de calidad y coeficientes de suavizado, si se añade una dimensión a la vista se genera una fila en la tabla por cada nivel de la dimensión. Nuevamente se encuentra disponible el botón para obtener información mas detallada sobre los modelos de pronósticos.</p>
 <div class="figure" style="text-align: center"><span id="fig:modelospronosticos-fig"></span>
 <img src="Imágenes/analisis132.jpg" alt="Describir pronóstico - modelos" width="80%" />
 <p class="caption">
@@ -1713,13 +1713,13 @@ Figura 2.166: Describir pronóstico - modelos
 </div>
 <div id="compartir-las-visualizaciones" class="section level3">
 <h3><span class="header-section-number">2.4.3</span> Compartir las visualizaciones</h3>
-<p>Las visualizaciones creadas usando la versión de escritorio de Tableau Public pueden ser compartidas como hojas individuales, dashboard o historias, en este caso se crearán dashboard que luego se integran a historias para replicar la forma de visualización que se publica en la página de estadísticas <a href="http://estadisticas.unal.edu.co/home/">estadísticas</a> de la Universidad Nacional de Colombia en la pestaña cifras generales y graduados. Es necesario crear ocho tableros con las visualizaciones que se crearon anteriormente y luego se incluirán en una historia con ocho puntos.</p>
+<p>Las visualizaciones creadas usando la versión de escritorio de Tableau Public pueden ser compartidas como hojas individuales, dashboard o historias, en este caso se crearán dashboard que luego se integran a historias para replicar la forma de visualización que se publica en la página de estadísticas <a href="http://estadisticas.unal.edu.co/home/">estadísticas</a> de la Universidad Nacional de Colombia en la pestaña cifras generales y graduados. Es necesario crear ocho tableros con las visualizaciones que se crearon anteriormente que luego se incluirán en una historia con ocho puntos.</p>
 <div id="crear-un-dashboard" class="section level4">
 <h4><span class="header-section-number">2.4.3.1</span> Crear un dashboard</h4>
-<p>Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales, graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard y es posible agregar esta hoja directamente a la historia. Sin embargo, se quiere añadir una funcionalidad que permita ver los metadatos asociados a las cifras generales que fueron analizadas.</p>
+<p>Al abrir la página web de estadísticas de la universidad y seleccionar cifras generales y graduados se identifica que el primer gráfico es una serie de tiempo que presenta la evolución histórica del total de estudiantes graduados, observe que solo posee una visualización por lo que no es necesario crear un dashboard y es posible agregar esta hoja directamente a la historia. Sin embargo, se quiere añadir una funcionalidad que permita ver los metadatos asociados a las cifras generales que fueron analizadas.</p>
 <ol style="list-style-type: decimal">
 <li><p>Cree una nueva hoja de trabajo y llámela Metadatos.</p></li>
-<li><p>Cree un nuevo parámetro u signe como nombre Ver metadatos, seleccione cadena y lista, en valores escriba Ver metadatos y clic en aceptar para guardar los cambios.</p></li>
+<li><p>Cree un nuevo parámetro, asigne como nombre Ver metadatos, seleccione cadena y lista, en valores escriba Ver metadatos y clic en aceptar para guardar los cambios.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:parametrometadatos-fig"></span>
 <img src="Imágenes/compartir8.jpg" alt="Crear parámetro para metadatos" width="60%" />
@@ -1784,7 +1784,7 @@ Figura 2.173: Dashboard para la evolución del total de graduados
 <p>La siguiente visualización presenta una combinación de una serie de tiempo, una tabla de texto y un diagrama circular con la distribución de los estudiantes graduados en el periodo actual. Todas estas visualizaciones ya fueron creadas, pero es necesario agregar un botón que permita intercambiar entre la serie y la tabla.</p>
 <ol style="list-style-type: decimal">
 <li><p>Diríjase a la hoja de trabajo llamada serie, haga clic en el menú desplegable ubicado entre datos y tablas y seleccione crear parámetro.</p></li>
-<li><p>En el cuadro de dialogo escriba como nombre del parámetro Seleccione visualización, tipo de datos seleccione cadena, en valores permitidos seleccione lista, finalmente en Lista de valores, escriba serie como el primer valor y, a continuación, tabla que son las dos visualizaciones que se desean integrar al dashboard.</p></li>
+<li><p>En el cuadro de diálogo escriba como nombre del parámetro Seleccione visualización, tipo de datos seleccione cadena, en valores permitidos seleccione lista, finalmente en Lista de valores, escriba serie como el primer valor y, a continuación, tabla que son las dos visualizaciones que se desean integrar al dashboard.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso2tablero-fig"></span>
 <img src="Imágenes/compartir1.jpg" alt="Editar parámetro de selección de visualizaciones" width="60%" />
@@ -1831,7 +1831,7 @@ Figura 2.178: Agregar un contenedor de trazado vertical
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>Arrastre la hoja Serie al contenedor, arrastre también la hoja que contiene la tabla de texto y suéltela sobre el rectángulo gris claro que se crea debajo del titulo de la serie.</li>
+<li>Arrastre la hoja Serie al contenedor, arrastre también la hoja que contiene la tabla de texto y suéltela sobre el rectángulo gris claro que se crea debajo del título de la serie.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso9tablero-fig"></span>
 <img src="Imágenes/compartir7.jpg" alt="Agregar vistas al contenedor de trazado vertical" width="80%" />
@@ -1840,7 +1840,7 @@ Figura 2.179: Agregar vistas al contenedor de trazado vertical
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>Debe ocultar los títulos de las hojas puestas sobre el contendor, haga clic sobre el titulo de la serie, seleccione más opciones y luego título, esto debe hacerlo también para la hoja tabla.</li>
+<li>Debe ocultar los títulos de las hojas puestas sobre el contendor, haga clic sobre el título de la serie, seleccione más opciones y luego título, esto debe hacerlo también para la hoja tabla.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso10tablero-fig"></span>
 <img src="Imágenes/compartir15.jpg" alt="Ocultar títulos" width="80%" />
@@ -1858,9 +1858,9 @@ Figura 2.181: Agregar cuadro de texto
 </p>
 </div>
 <ol start="12" style="list-style-type: decimal">
-<li><p>En el cuadro de dialogo editar texto escriba evolución histórica del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a <span class="math inline">\(18\)</span>, seleccione negrilla y centrar el texto.</p></li>
+<li><p>En el cuadro de diálogo editar texto escriba evolución histórica del total de estudiantes graduados por modalidad de formación, ajuste el tamaño de la letra a <span class="math inline">\(18\)</span>, seleccione negrilla y centrar el texto.</p></li>
 <li><p>Cambie el nombre del dashboard a modalidad de formación, por comodidad y facilidad se eliminaron los filtros de la hoja tabla.</p></li>
-<li><p>Agregue una acción de filtro como se mostro anteriormente.</p></li>
+<li><p>Agregue una acción de URL como se mostro anteriormente.</p></li>
 </ol>
 <p>A continuación, se presenta el dashboard obtenido que proporciona información clara sobre la modalidad de formación, permite intercambiar entre la serie y la tabla de texto y al hacer clic sobre Ver metadatos permite ir a los metadatos asociados a estas visualizaciones.</p>
 <div class="figure" style="text-align: center"><span id="fig:tableromodalidaddeformacion-fig"></span>
@@ -1870,7 +1870,7 @@ Figura 2.182: Dashboard para modalidad de formación
 </p>
 </div>
 <p>Oculte las hojas que ha usado en el dashboard anterior con el fin de que la barra de hojas de la parte inferior no se sature, haga clic derecho sobre el nombre de la hoja de trabajo y seleccione ocultar.</p>
-<p>El siguiente dashboard a realizar corresponde a las estadísticas por nivel de formación, debe crear todos los objetos visuales que involucra este dashboard e incorporarlos al tablero como se mostro anteriormente, el dashboard para nuvel de formación debe verse así,</p>
+<p>El siguiente dashboard a realizar corresponde a las estadísticas por nivel de formación, debe crear todos los objetos visuales que involucra este dashboard e incorporarlos al tablero como se mostro anteriormente, el dashboard para nivel de formación debe verse así,</p>
 <div class="figure" style="text-align: center"><span id="fig:tableroniveldefromacion-fig"></span>
 <img src="Imágenes/compartir18.jpg" alt="Dashboard para nivel de formación" width="80%" />
 <p class="caption">
@@ -1915,11 +1915,11 @@ Figura 2.188: Dashboard por áreas del conocimiento SNIES
 </div>
 <div id="crear-una-historia" class="section level4">
 <h4><span class="header-section-number">2.4.3.2</span> Crear una historia</h4>
-<p>Como ya se menciono una historia es una secuencia de vistas o dashboards que se utilizan en forma conjunta para mostrar información, en este caso se hará uso de las historias para mostrar una secuencia de las visualizaciones y dashboards creados anteriormente y lograr una estructura similar a la mostrada en la página web de las estadísticas de la Universidad.</p>
+<p>Como ya se menciono una historia es una secuencia de hojas o dashboards que se utilizan en forma conjunta para mostrar información, en este caso se hará uso de las historias para mostrar una secuencia de las visualizaciones y dashboards creados anteriormente y lograr una estructura similar a la mostrada en la página web de las estadísticas de la Universidad.</p>
 <ol style="list-style-type: decimal">
 <li><p>Haga clic en el icono de historia en la barra inferior donde se ubican los tableros creados, asigne como nombre a la nueva historia Graduados.</p></li>
 <li><p>Ajuste el tamaño para que ocupe toda la pantalla del dispositivo.</p></li>
-<li><p>En el cuadro gris añada como subtitulo Evolución graduados, en el panel lateral izquierdo en la pestaña historia encontrará un botón que tiene el texto En blanco, dicho botón es usado para crear más puntos en la historia, haga clic allí hasta tener <span class="math inline">\(8\)</span> puntos en la historia. Añada estos subtítulos a los puntos de la historia en este orden Modalidad de formación, Nivel de formación, Sede de admisión, Nacionalidad, Lugar de nacimiento, Sexo, Áreas del conocimiento.</p></li>
+<li><p>En el cuadro gris añada como subtítulo Evolución graduados, en el panel lateral izquierdo en la pestaña historia encontrará un botón que tiene el texto En blanco, dicho botón es usado para crear más puntos en la historia, haga clic allí hasta tener <span class="math inline">\(8\)</span> puntos en la historia. Añada estos subtítulos a los puntos de la historia en este orden Modalidad de formación, Nivel de formación, Sede de admisión, Nacionalidad, Lugar de nacimiento, Sexo, Áreas del conocimiento.</p></li>
 <li><p>En el primer punto de la historia agregue el dashboard llamado Evolución graduados.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso4compartir-fig"></span>
@@ -1948,7 +1948,7 @@ Figura 2.190: Formato de la historia
 Figura 2.191: Historia: graduados
 </p>
 </div>
-<p>Oculte todos los dashboards involucrados en la historia, haga clic en la pestaña archivo y seleccione guardan en Tableau Public como…</p>
+<p>Oculte todos los dashboards involucrados en la historia, haga clic en la pestaña archivo y seleccione guardar en Tableau Public como…</p>
 <div class="figure" style="text-align: center"><span id="fig:guardarlibroddetrabajo-fig"></span>
 <img src="Imágenes/compartir27.jpg" alt="Guardar el libro de trabajo" width="60%" />
 <p class="caption">
