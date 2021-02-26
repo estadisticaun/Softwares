@@ -1,6 +1,7 @@
 library(readxl)
 library(dplyr)
 library(tidyverse)
+library(magrittr)
 Graduados <- read_xlsx("Datos.xlsx")
 
 #GRAFICO DE LINEAS
@@ -120,28 +121,45 @@ mps <- Graduados %>%
   group_by(YEAR_SEMESTER, DEP_NAC, CIU_NAC) %>% 
   count() %>% 
   filter(YEAR_SEMESTER == "2020 - 1") %>% 
-  mutate(CIU_NAC = str_to_upper(CIU_NAC, locale = "es"))
+  mutate(CIU_NAC = str_to_upper(CIU_NAC, locale = "es"), 
+         DEP_NAC = str_to_upper(chartr('áéíóú','aeiou', DEP_NAC), locale = "es"))
 
 #Importar, agregar nueva propiedad y exportar el archivo Json  
 library(rjson)
 mpios.json <- fromJSON(file="mpio.json")
 x <- length(mpios.json$features)
 for (i in 1:x) {
-  if(pos == FALSE){
-    mpios.json$features[[i]]$properties$n = 0
-  } else {
-    mpios.json$features[[i]]$properties$n = as.character(mps[pos, "n"])
-  }
+  pos <- str_detect(mps$CIU_NAC, 
+                    paste0("^", mpios.json$features[[i]]$properties$NOMBRE_MPI, "$"))
+  mpios.json$features[[i]]$properties$n = as.character(mps[pos, "n"])
 }
 
 
 
 library(jsonlite)
-write_json(data.json, "depts.json")
+write_json(mpios.json, "municipios.json")
+
+
+id <- c() 
+dpto <- c() 
+mpio <- c()
+for (i in 1:length(mpios.json$features)) {
+  id[i] <- i
+  dpto[i] <- mpios.json$features[[i]]$properties$NOMBRE_DPT
+  mpio[i] <- mpios.json$features[[i]]$properties$NOMBRE_MPI
+}
+basejson <- data.frame(id, dpto, mpio)
+
+union <- left_join(basejson, mps, by = c("dpto" = "DEP_NAC", "mpio" = "CIU_NAC"))
+union %<>% mutate(n = replace_na(n, 0))
 
 
 
+for (i in 1:length(union$id)) {
+  mpios.json$features[[i]]$properties$n = union[i, "n"]
+}
 
-
-
-
+union[pos]
+pos_dpt <- str_detect(union$dpto, mps$DEP_NAC[80])
+pos_ciu <- str_detect(union$mpio, mps$CIU_NAC[80])
+mpios.json$features[[i]]$properties$n = as.character(mps[pos, "n"])
