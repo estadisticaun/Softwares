@@ -2,6 +2,8 @@ library(readxl)
 library(dplyr)
 library(tidyverse)
 library(magrittr)
+library(rjson)
+library(jsonlite)
 Graduados <- read_xlsx("Datos.xlsx")
 
 #GRAFICO DE LINEAS
@@ -67,7 +69,6 @@ deptos <- Graduados %>%
   mutate(DEP_NAC = str_to_upper(DEP_NAC, locale = "es"))
 
 #Importar, agregar nueva propiedad y exportar el archivo Json  
-library(rjson)
 data.json <- fromJSON(file="colombiageo.json")
 x <- length(data.json$features)
 for (i in 1:x) {
@@ -75,7 +76,6 @@ for (i in 1:x) {
                     paste0("^", data.json$features[[i]]$properties$NOMBRE_DPT, "$"))
   data.json$features[[i]]$properties$n = as.character(deptos[pos, "n"])
 }
-library(jsonlite)
 write_json(data.json, "depts.json")
 
 
@@ -115,31 +115,22 @@ write.csv(Capitales, file = "capitales.csv",
           row.names = FALSE)
 
 #MAPA POR MUNICIPIOS
-
+Graduados$DEP_NAC <- str_replace_all(Graduados$DEP_NAC, "Bogota D.C.", "Bogota D.C")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Bogot(á|a),? d.c.", "Bogota D.C.")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Calima", "Darien")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Guadalajara de buga", "Buga")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "San andres de tumaco", "Tumaco")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Tolu viejo", "Toluviejo")
 #Municipios periodo 2020-1
 mps <- Graduados %>% 
   group_by(YEAR_SEMESTER, DEP_NAC, CIU_NAC) %>% 
   count() %>% 
   filter(YEAR_SEMESTER == "2020 - 1") %>% 
-  mutate(CIU_NAC = str_to_upper(CIU_NAC, locale = "es"), 
-         DEP_NAC = str_to_upper(chartr('áéíóú','aeiou', DEP_NAC), locale = "es"))
+  mutate(CIU_NAC = str_to_upper(chartr("áéíóúü", "aeiouu", CIU_NAC), locale = "es"), 
+         DEP_NAC = str_to_upper(DEP_NAC, locale = "es"))
 
 #Importar, agregar nueva propiedad y exportar el archivo Json  
-library(rjson)
 mpios.json <- fromJSON(file="mpio.json")
-x <- length(mpios.json$features)
-for (i in 1:x) {
-  pos <- str_detect(mps$CIU_NAC, 
-                    paste0("^", mpios.json$features[[i]]$properties$NOMBRE_MPI, "$"))
-  mpios.json$features[[i]]$properties$n = as.character(mps[pos, "n"])
-}
-
-
-
-library(jsonlite)
-write_json(mpios.json, "municipios.json")
-
-
 id <- c() 
 dpto <- c() 
 mpio <- c()
@@ -149,17 +140,11 @@ for (i in 1:length(mpios.json$features)) {
   mpio[i] <- mpios.json$features[[i]]$properties$NOMBRE_MPI
 }
 basejson <- data.frame(id, dpto, mpio)
-
 union <- left_join(basejson, mps, by = c("dpto" = "DEP_NAC", "mpio" = "CIU_NAC"))
 union %<>% mutate(n = replace_na(n, 0))
-
-
-
 for (i in 1:length(union$id)) {
   mpios.json$features[[i]]$properties$n = union[i, "n"]
 }
+write_json(mpios.json, "municipios.json")
 
-union[pos]
-pos_dpt <- str_detect(union$dpto, mps$DEP_NAC[80])
-pos_ciu <- str_detect(union$mpio, mps$CIU_NAC[80])
-mpios.json$features[[i]]$properties$n = as.character(mps[pos, "n"])
+

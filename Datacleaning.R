@@ -54,11 +54,11 @@ Graduados$DEP_NAC <-
                   "Archipiélago de san andrés, providencia y santa catalina")
 Graduados$DEP_NAC <- str_replace_all(Graduados$DEP_NAC,"Bogot(á|a)( D.C.)?",
                                      "Bogotá D.C.")
-Graduados$DEP_NAC <- chartr('áéíóúñ','aeioun', Graduados$DEP_NAC)
+Graduados$DEP_NAC <- chartr('áéíóú','aeiou', Graduados$DEP_NAC)
 depnac <- Graduados %>% group_by(DEP_NAC) %>% count()
 ciunac <- Graduados %>% group_by(CIU_NAC) %>% count()
 Graduados$CIU_NAC <- tolower(Graduados$CIU_NAC)
-Graduados$CIU_NAC <- chartr('áéíóúñ','aeioun', Graduados$CIU_NAC)
+Graduados$CIU_NAC <- chartr('áéíóú','aeiou', Graduados$CIU_NAC)
 Graduados$CIU_NAC <- capitalize(Graduados$CIU_NAC)
 ciunac <- Graduados %>% group_by(CIU_NAC) %>% count()
 Graduados$NIVEL <- str_replace_all(Graduados$NIVEL,"Especialidades (m|M)édicas",
