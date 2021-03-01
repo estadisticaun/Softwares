@@ -577,3 +577,43 @@ La visualización obtenida permite identificar la cantidad de estudiantes gradua
 ```{r mapadeptosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Total estudiantes graduados por departamento en el periodo 2020-1', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish65.jpg")
 ```
+
+El siguiente mapa a realizar contiene el total de estudiantes graduados por municipio, el archivo llamado “municipiosfinal.json” ya se encuentra listo para ser cargado a Flourish, luego de cargar el archivo debe asignar las columnas A, I, Q a los estantes geometría, nombre y valores respectivamente, las ultimas dos columnas mencionadas también deben ser añadidas al estante de datos para ventanas emergentes personalizadas, al igual que la columna G.
+
+```{r regionesmapampiosfloruish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Carga de datos para la capa de regiones y asignación de columnas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish66.jpg")
+```
+
+La capa de puntos será usada para mostrar un punto por departamento, el cual corresponde a la capital, cargue el archivo llamado “capitales.csv” a la capa de puntos y asigne los campos A, B y C a los estantes nombre, longitud y latitud respectivamente.
+
+```{r puntosmapampiosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Carga de datos para la capa de puntos y asignación de columnas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish67.jpg")
+```
+
+Después de cargados los archivos debe ir a la pestaña avance para dar formato y personalizar el mapa de municipios, en este momento su visualización asigno un color a cada municipio dependiendo del conteo de este y posee puntos en color gris oscuro que representan cada capital, algo similar a lo mostrado en \@ref(fig:vistapreviamapadeptosflourish-fig).
+
+Inicialmente debe repetir los pasos 1 y 2 mostrados anteriormente para crear el mapa por departamentos, con lo cual su visualización se vera de la siguiente manera.
+
+```{r pasos1y2mapampiosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa del mapa creado', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish68.jpg")
+```
+
+1.	Sobre la capa de regiones encontrará una sección llamada llenar con la cual puede editar el relleno de cada municipio dentro del mapa, el tipo de escala debe ser numérico, secualcial y binned, el modo de agrupamiento será umbrales personalizados los cuales serán “1; 3; 10; 100” y se usa una paleta de verdes.
+
+```{r paso1mapampiosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a la capa de regiones', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish69.jpg")
+```
+
+2.	La siguiente pestaña para editar es popups y panles, en la cual debe seleccionar contenido emergente personalizado, el encabezado será el nombre del municipio y departamento y el contenido será la cantidad de graduados y para la ventana emergente relacionada a los puntos no debe editar nada.
+
+```{r paso2mapampiosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ventanas emergentes personalizadas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish70.jpg")
+```
+
+3.	Repita los pasos 5 al 7 mostrados en la creación del mapa de departamentos.
+
+La visualización obtenida permite identificar la cantidad de estudiantes graduados en el periodo 2020-1 por municipio de nacimiento, como se mencionó anteriormente en la visualización de departamentos Flourish no permite agregar detalles como etiquetas con los respectivos departamentos y sus capitales.
+
+```{r mapampiosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Total estudiantes graduados por municipio en el periodo 2020-1', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish71.jpg")
+```

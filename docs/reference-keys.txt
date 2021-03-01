@@ -541,3 +541,9 @@ graficocircularflourish
 gráfico-de-barras-1
 mapadeproyecciónflourish
 conclu
+fig:regionesmapampiosfloruish-fig
+fig:puntosmapampiosflourish-fig
+fig:pasos1y2mapampiosflourish-fig
+fig:paso1mapampiosflourish-fig
+fig:paso2mapampiosflourish-fig
+fig:mapampiosflourish-fig
