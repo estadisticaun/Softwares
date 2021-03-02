@@ -147,4 +147,8 @@ for (i in 1:length(union$id)) {
 }
 write_json(mpios.json, "municipios.json")
 
+#MAPA DE PUNTOS 3D
+municipios3d <- Graduados %>% group_by(YEAR, LON_CIU_NAC, LAT_CIU_NAC,
+                                 DEP_NAC, CIU_NAC) %>% count()
 
+write.csv(municipios3d, "municipios3d.csv", row.names = FALSE)

@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-03-01" />
+<meta name="date" content="2021-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -783,6 +783,68 @@ Figura 4.70: Ventanas emergentes personalizadas
 <img src="Imágenes/flourish71.jpg" alt="Total estudiantes graduados por municipio en el periodo 2020-1" width="85%" />
 <p class="caption">
 Figura 4.71: Total estudiantes graduados por municipio en el periodo 2020-1
+</p>
+</div>
+</div>
+<div id="mapa3Dflourish" class="section level4">
+<h4><span class="header-section-number">4.3.1.7</span> Mapa 3D</h4>
+<p>Esta sección de plantillas permite crear mapas similares los mapas de proyección mostrados anteriormente, pero más interactivos al incluir líneas de tiempo, que permiten al usuario observar el comportamiento de los datos geográficos a través de una ventana de tiempo determinada, Flourish ofrece varias plantillas para la creación de estos mapas, en este caso la primera a explorar será la llamada “Regiones y puntos” la cual permite combinar puntos y regiones sombreadas.</p>
+<ol style="list-style-type: decimal">
+<li>Seleccione la plantilla Regiones y puntos ubicada en la sección de mapas 3D, lo primero a realizar será analizar la estructura de los datos usados en cada capa. La primera capa llamada regiones corresponde a un archivo GeoJson con la geometría y propiedades de cada país, la siguiente capa llamada puntos puede ser un archivo Excel o CSV y como mínimo debe contener las columnas latitud, longitud, fecha y nombre del lugar, la ultima capa llamada regiones de mapa insertadas no es usada en esta visualización por lo que se encuentra vacía.</li>
+</ol>
+<p>Dentro de la base de datos con la cual se esta trabajando hay columnas que identifican el lugar de nacimiento de los estudiantes graduados, por lo tanto, estas son las columnas para usar en la creación del mapa 3D, la idea es mostrar la evolución de graduados por municipio de manera anual, es decir, aparecerán puntos por municipio si en ese año hubieron graduados dicho municipio. Al usar dos capas para la creación del mapa es necesario disponer de dos bases de datos, la primera pertenece a la capa de regiones y es posible usar el archivo “municipiosfinal.json” y para la capa de puntos se construirá un archivo CSV con la ayuda de R que contenga el año, latitud, longitud, nombre del municipio y conteo de estudiantes graduados, dicho archivo es exportado y lo puede encontrar como “municipios3d.csv”.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Cargue los archivos mencionados con anterioridad a las capas correspondientes, la columna A del archivo en formato Json deben ser asignada a la geometría, la siguiente capa será puntos en la cual será hará uso de varios estantes disponibles tales como la latitud y longitud a las que debe asignar las columnas C y B, el estante escala determina el tamaño de los puntos, por lo cual se le debe asignar la columna F, sobre fecha de inicio debe ubicar la columna A, el nombre lo contiene la columna E y por ultimo debe asignar las columnas de la D a la F a ventanas emergentes personalizadas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2mapa3dflourish-fig"></span>
+<img src="Imágenes/flourish72.jpg" alt="Capa de puntos y asignación de columnas" width="85%" />
+<p class="caption">
+Figura 4.72: Capa de puntos y asignación de columnas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Regrese a la pestaña avance para dar formato y personalizar el mapa, la pestaña mapa base es el formato general del mapa, como tipo de mapa debe seleccionar vector y el estilo de mapa será “Custom: JSON”.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3mapa3dflourish-fig"></span>
+<img src="Imágenes/flourish73.jpg" alt="Formato a la pestaña mapa base" width="85%" />
+<p class="caption">
+Figura 4.73: Formato a la pestaña mapa base
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>La siguiente pestaña será Viewport e interacción, con la cual se controla el diseño y visualización inicial del mapa; sobre la ventana de visualización inicial debe establecer el tono y el soporte en 0, para los limites de la ventana gráfica y debe aumentar el zoom máximo a 22, también desactive la opción de repetir el mapa horizontalmente; por último, sobre la sección controles active el control de pantalla completa.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4mapa3dflourish-fig"></span>
+<img src="Imágenes/flourish74.jpg" alt="Personalización de visualización incial" width="85%" />
+<p class="caption">
+Figura 4.74: Personalización de visualización incial
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>En la pestaña regiones se da formato al sombreado y contorno de las regiones presentes en el mapa, elija una paleta de grises, disminuya la opacidad del relleno a 20 y aumente el ancho del contorno a 1.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5mapa3dflourish-fig"></span>
+<img src="Imágenes/flourish75.jpg" alt="Formato a la capa de regiones" width="85%" />
+<p class="caption">
+Figura 4.75: Formato a la capa de regiones
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Sobre la pestaña puntos se edita el formato de estos, inicialmente debe seleccionar como apariencia círculos y cambiar el color por “#ECF0F1”, el modo de esquema debe ser reparado, el modo de mezcla será normal y debe reducir la opacidad puntual a 50.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6mapa3dflourish-fig"></span>
+<img src="Imágenes/flourish76.jpg" alt="Formato a la capa de puntos" width="85%" />
+<p class="caption">
+Figura 4.76: Formato a la capa de puntos
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Siguiendo sobre esta misma pestaña debe editar el tamaño de los puntos, el tamaño predeterminando será 1, el mínimo será 0 y el máximo 10, nuevamente aumente el zoom máximo a 22, el formato de fecha debe ser únicamente de año, en la opción contar por debe seleccionar escala y como transición de entrada y salida debe seleccionar desteñir, finalmente la categoría de la etiqueta de respaldo será “Otros”.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7mapa3dflourish-fig"></span>
+<img src="Imágenes/flourish77.jpg" alt="Formato a la capa de puntos" width="85%" />
+<p class="caption">
+Figura 4.77: Formato a la capa de puntos
 </p>
 </div>
 
