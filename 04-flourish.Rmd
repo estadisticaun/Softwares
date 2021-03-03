@@ -661,3 +661,35 @@ knitr::include_graphics("Imágenes/flourish76.jpg")
 ```{r paso7mapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a la capa de puntos', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish77.jpg")
 ```
+
+8.	La siguiente pestaña es cronología, con la cual se puede dar formato a la línea de tiempo de la visualización; inicialmente debe desactivar la opción de cronología en bucle esto para que no se repita cada que termina, establezca las márgenes izquierdas, fondo y derecha en 0, en la sección grafico asigne como color de fondo “#ECF0F1”, la altura debe ser 4 y por último debe activar la opción de líneas curvas.
+
+```{r paso8mapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Edicón de la línea de tiempo', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish78.jpg")
+```
+
+9.	Sobre la misma pestaña de cronología encontrara una sección llamada botón de reproducción con la cual se controla el diseño del botón, en este caso únicamente debe modificar el tamaño del botón y del icono, el tamaño del botón será 1,5 y para el icono de 1; la sección tiempo y animación controla el tiempo total de duración de la línea de tiempo en segundos, los saltos entre años y la duración de desaparición o aparición de un nuevo punto, estos tiempos se deben establecer en 60, 10 y 2 respectivamente. Para la sección d agregación debe seleccionar Total y en el intervalo de tasa de agregación debe seleccionar personalizado y luego año. 
+
+```{r paso9mapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a la cronología', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish79.jpg")
+```
+
+10.	La pestaña insertar mapa permite agregar una ventana con el continente y un recuadro que indica donde esta ubicado lo que se está visualizando, debe activar las opciones de insertar mapa y rotar con cámara y también cambiar el color de los limites del recuadro por blanco.
+
+```{r paso10mapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Insertar mapa', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish80.jpg")
+```
+
+11.	El contenido de las ventanas emergentes será personalizado y debe contener el municipio, departamento y número de estudiantes graduados como se muestra a continuación.
+
+```{r paso11mapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ventanas emergentes personalizadas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish81.jpg")
+```
+
+12.	En la pestaña diseño active todos los bordes y asigne color negro a todos, también establezca el color de fondo en “#ECF0F1”; por último, active el título de la visualización, dicho título debe ser Evolución anual de estudiantes graduados por municipio. La visualización final se muestra a continuación.
+
+```{r finalmapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Evolución anual de estudiantes graduados por municipio', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish82.jpg")
+```
+
+Lo mostrado anteriormente corresponde a una imagen plana tomada de la visualización, si desea ver el gráfico de manera interactiva puede ingresar al siguiente enlace [Evolución anual de estudiantes graduados por municipio]( https://preview.flourish.studio/5441266/qIJCGuNhtsQl3VM2HFDj3P_l9X2aisp0Zju101oZAHyTJDuirtp91-loXEcoCZGY/), es de resaltar que hay momentos en los que los puntos se quedan estáticos y esto corresponde a años donde no se registró la información acerca del municipio y departamento de nacimiento del estudiante graduado, por ende estos registros se muestran en la etiqueta otro ubicada en la esquina superior derecha.
