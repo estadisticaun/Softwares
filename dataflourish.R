@@ -152,3 +152,49 @@ municipios3d <- Graduados %>% group_by(YEAR, LON_CIU_NAC, LAT_CIU_NAC,
                                  DEP_NAC, CIU_NAC) %>% count()
 
 write.csv(municipios3d, "municipios3d.csv", row.names = FALSE)
+
+#Globo de conexiones
+dpto <- c() 
+mpio <- c()
+coddepto <- c()
+codmpio <- c()
+for (i in 1:length(mpios.json$features)) {
+  id[i] <- i
+  dpto[i] <- mpios.json$features[[i]]$properties$NOMBRE_DPT
+  mpio[i] <- mpios.json$features[[i]]$properties$NOMBRE_MPI
+  coddepto[i] <- mpios.json$features[[i]]$properties$DPTO
+  codmpio[i] <- mpios.json$features[[i]]$properties$MPIO
+}
+codigos <- data.frame(dpto, coddepto, mpio, codmpio)
+municipios <- Graduados %>% 
+  group_by(DEP_NAC, CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
+  count() %>% 
+  mutate(CIU_NAC = str_to_upper(chartr("áéíóúü", "aeiouu", CIU_NAC), locale = "es"), 
+         DEP_NAC = str_to_upper(DEP_NAC, locale = "es"))
+locaciones <- left_join(codigos, municipios, by = c("dpto" = "DEP_NAC", "mpio" = "CIU_NAC"))
+locaciones %<>% mutate(n = replace_na(n, 0))
+s_amazonas <- c(NA, NA, "SEDE AMAZONIA", "s_amazonia", -4.189787, -69.938876)
+s_bogota <- c(NA, NA, "SEDE BOGOTA", "s_bogota", 4.636445, -74.082885)
+s_caribe <- c(NA, NA, "SEDE CARIBE", "s_caribe", 12.536244, -81.707912)
+s_medellin <- c(NA, NA, "SEDE MEDELLIN", "s_medellin", 6.261541, -75.577196)
+s_manizales <- c(NA, NA, "SEDE MANIZALES", "s_manizales", 5.056195, -75.490887)
+s_palmira <- c(NA, NA, "SEDE PALMIRA", "s_palmira", 3.512328, -76.307490)
+locaciones <- rbind(locaciones, s_amazonas, s_bogota, s_caribe, s_medellin,
+                    s_manizales, s_palmira)
+
+
+#VALORES: categoria, año, origen (coincidir con codigo), destino(coincidir 
+#con codigo), vallor(conteo de estudiantes)
+
+
+valores <- Graduados %>% group_by(YEAR, TIPO_NIVEL, DEP_NAC, CIU_NAC, 
+                                  SEDE_NOMBRE_MAT) %>% 
+  mutate(CIU_NAC = str_to_upper(chartr("áéíóúü", "aeiouu", CIU_NAC), locale = "es"), 
+         DEP_NAC = str_to_upper(DEP_NAC, locale = "es"),
+         SEDE_NOMBRE_MAT = str_to_upper(chartr("áéíóúü", "aeiouu", SEDE_NOMBRE_MAT), 
+                                        locale = "es")) %>% 
+  count()
+
+
+valores <- left_join(valores, codigos, by = c("DEP_NAC" = "dpto", 
+                                                    "CIU_NAC" = "mpio"))

@@ -474,6 +474,11 @@ fig:paso4mapa3dflourish-fig
 fig:paso5mapa3dflourish-fig
 fig:paso6mapa3dflourish-fig
 fig:paso7mapa3dflourish-fig
+fig:paso8mapa3dflourish-fig
+fig:paso9mapa3dflourish-fig
+fig:paso10mapa3dflourish-fig
+fig:paso11mapa3dflourish-fig
+fig:finalmapa3dflourish-fig
 intro
 tableau
 generalidades
@@ -554,8 +559,3 @@ gráfico-de-barras-1
 mapadeproyecciónflourish
 mapa3Dflourish
 conclu
-fig:paso8mapa3dflourish-fig
-fig:paso9mapa3dflourish-fig
-fig:paso10mapa3dflourish-fig
-fig:paso11mapa3dflourish-fig
-fig:finalmapa3dflourish-fig
