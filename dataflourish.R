@@ -92,13 +92,12 @@ puntos <- puntos %>% select(-n)
 
 Graduados <- Graduados %>% select(-c("LAT_CIU_NAC", "LON_CIU_NAC"))
 
-#UNION NETRE PUNTOS Y GRADUADOS
+#UNION ENTRE PUNTOS Y GRADUADOS
 Graduados <- left_join(Graduados, puntos, by = "CIU_NAC")
 
 municipios <- Graduados %>% 
   group_by(CIU_NAC, LON_CIU_NAC, LAT_CIU_NAC) %>% 
   count()
-
 write.csv(municipios, file = "municipios.csv", 
           row.names = FALSE)
 
@@ -150,10 +149,9 @@ write_json(mpios.json, "municipios.json")
 #MAPA DE PUNTOS 3D
 municipios3d <- Graduados %>% group_by(YEAR, LON_CIU_NAC, LAT_CIU_NAC,
                                  DEP_NAC, CIU_NAC) %>% count()
-
 write.csv(municipios3d, "municipios3d.csv", row.names = FALSE)
 
-#Globo de conexiones
+#GLOBO DE CONEXIONES
 dpto <- c() 
 mpio <- c()
 coddepto <- c()
@@ -169,18 +167,58 @@ codigos <- data.frame(dpto, coddepto, mpio, codmpio)
 municipios <- Graduados %>% 
   group_by(DEP_NAC, CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
   count() %>% 
-  mutate(CIU_NAC = str_to_upper(chartr("áéíóúü", "aeiouu", CIU_NAC), locale = "es"), 
+  mutate(CIU_NAC = str_to_upper(chartr("áéíóúü", "aeiouu", CIU_NAC), 
+                                locale = "es"), 
          DEP_NAC = str_to_upper(DEP_NAC, locale = "es"))
-locaciones <- left_join(codigos, municipios, by = c("dpto" = "DEP_NAC", "mpio" = "CIU_NAC"))
+locaciones <- left_join(codigos, municipios, by = c("dpto" = "DEP_NAC", 
+                                                    "mpio" = "CIU_NAC"))
 locaciones %<>% mutate(n = replace_na(n, 0))
-s_amazonas <- c(NA, NA, "SEDE AMAZONIA", "s_amazonia", -4.189787, -69.938876)
-s_bogota <- c(NA, NA, "SEDE BOGOTA", "s_bogota", 4.636445, -74.082885)
-s_caribe <- c(NA, NA, "SEDE CARIBE", "s_caribe", 12.536244, -81.707912)
-s_medellin <- c(NA, NA, "SEDE MEDELLIN", "s_medellin", 6.261541, -75.577196)
-s_manizales <- c(NA, NA, "SEDE MANIZALES", "s_manizales", 5.056195, -75.490887)
-s_palmira <- c(NA, NA, "SEDE PALMIRA", "s_palmira", 3.512328, -76.307490)
+s_amazonas <- c("AMAZONAS", 91, "SEDE AMAZONIA", "s_amazonia", -4.189787, 
+                -69.938876)
+s_bogota <- c("BOGOTA D.C", 11, "SEDE BOGOTA", "s_bogota", 4.636445, -74.082885)
+s_caribe <- c("ARCHIPIELAGO DE SAN ANDRES, PROVIDENCIA Y SANTA CANTALINA", 
+              88, "SEDE CARIBE", "s_caribe", 12.536244, -81.707912)
+s_medellin <- c("ANTIOQUIA", "05", "SEDE MEDELLIN", "s_medellin", 6.261541, 
+                -75.577196)
+s_manizales <- c("CALDAS", 17, "SEDE MANIZALES", "s_manizales", 5.056195, 
+                 -75.490887)
+s_palmira <- c("VALLE DEL CAUCA", 76, "SEDE PALMIRA", "s_palmira", 3.512328, 
+               -76.307490)
 locaciones <- rbind(locaciones, s_amazonas, s_bogota, s_caribe, s_medellin,
                     s_manizales, s_palmira)
+
+
+
+
+
+
+
+
+
+sedes <- Graduados %>%  group_by(DEP_NAC, CIU_NAC, SEDE_NOMBRE_MAT) %>% 
+  mutate(CIU_NAC = str_to_upper(chartr("áéíóúü", "aeiouu", CIU_NAC), 
+                                locale = "es"), 
+         DEP_NAC = str_to_upper(DEP_NAC, locale = "es"),
+         SEDE_NOMBRE_MAT = str_to_upper(paste("SEDE", chartr("áéíóúü", "aeiouu",
+                                                             SEDE_NOMBRE_MAT), 
+                                              " "), 
+                                        locale = "es")) %>% 
+  mutate(codsede = paste("S", substr(sedes$SEDE_NOMBRE_MAT, 6,
+                                    nchar(sedes$SEDE_NOMBRE_MAT)), 
+                         sep = "_")) %>% count()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #VALORES: categoria, año, origen (coincidir con codigo), destino(coincidir 
@@ -198,3 +236,9 @@ valores <- Graduados %>% group_by(YEAR, TIPO_NIVEL, DEP_NAC, CIU_NAC,
 
 valores <- left_join(valores, codigos, by = c("DEP_NAC" = "dpto", 
                                                     "CIU_NAC" = "mpio"))
+valores$SEDE_NOMBRE_MAT <- paste("SEDE", valores$SEDE_NOMBRE_MAT, " ")
+
+
+
+
+
