@@ -251,13 +251,12 @@ mpio <- c()
 coddepto <- c()
 codmpio <- c()
 for (i in 1:length(mpios.json$features)) {
-  id[i] <- i
   dpto[i] <- mpios.json$features[[i]]$properties$NOMBRE_DPT
   mpio[i] <- mpios.json$features[[i]]$properties$NOMBRE_MPI
   coddepto[i] <- mpios.json$features[[i]]$properties$DPTO
-  codmpio[i] <- mpios.json$features[[i]]$properties$MPIO
 }
-codigos <- data.frame(dpto, coddepto, mpio, codmpio)
+codigos <- data.frame(dpto, coddepto, mpio)
+codigos %<>% mutate(codmpio = seq(1:nrow(codigos)))
 municipios <- Graduados %>% 
   group_by(DEP_NAC, CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
   count() %>% 
