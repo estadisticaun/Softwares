@@ -254,9 +254,10 @@ for (i in 1:length(mpios.json$features)) {
   dpto[i] <- mpios.json$features[[i]]$properties$NOMBRE_DPT
   mpio[i] <- mpios.json$features[[i]]$properties$NOMBRE_MPI
   coddepto[i] <- mpios.json$features[[i]]$properties$DPTO
+  codmpio[i] <- mpios.json$features[[i]]$properties$MPIO
 }
-codigos <- data.frame(dpto, coddepto, mpio)
-codigos %<>% mutate(codmpio = seq(1:nrow(codigos)))
+codigos <- data.frame(dpto, coddepto, mpio, codmpio)
+codigos %<>% mutate(codigo = paste(coddepto, codmpio, sep = "-"))
 municipios <- Graduados %>% 
   group_by(DEP_NAC, CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
   count() %>% 
@@ -266,16 +267,21 @@ municipios <- Graduados %>%
 locaciones <- left_join(codigos, municipios, by = c("dpto" = "DEP_NAC", 
                                                     "mpio" = "CIU_NAC"))
 locaciones %<>% mutate(n = replace_na(n, 0))
-s_amazonas <- c("AMAZONAS", 91, "SEDE AMAZONIA", "s_amazonia", -4.189787, 
+s_amazonas <- c("AMAZONAS", 91, "SEDE AMAZONIA", "s_amazonia", "s_amazonia", 
+                -4.189787, 
                 -69.938876)
-s_bogota <- c("BOGOTA D.C", 11, "SEDE BOGOTA", "s_bogota", 4.636445, -74.082885)
+s_bogota <- c("BOGOTA D.C", 11, "SEDE BOGOTA", "s_bogota", "s_bogota",
+              4.636445, -74.082885)
 s_caribe <- c("ARCHIPIELAGO DE SAN ANDRES, PROVIDENCIA Y SANTA CANTALINA", 
-              88, "SEDE CARIBE", "s_caribe", 12.536244, -81.707912)
-s_medellin <- c("ANTIOQUIA", "05", "SEDE MEDELLIN", "s_medellin", 6.261541, 
+              88, "SEDE CARIBE", "s_caribe", "s_caribe", 12.536244, -81.707912)
+s_medellin <- c("ANTIOQUIA", "05", "SEDE MEDELLIN", "s_medellin", "s_medellin",
+                6.261541, 
                 -75.577196)
-s_manizales <- c("CALDAS", 17, "SEDE MANIZALES", "s_manizales", 5.056195, 
+s_manizales <- c("CALDAS", 17, "SEDE MANIZALES", "s_manizales", "s_manizales",
+                 5.056195, 
                  -75.490887)
-s_palmira <- c("VALLE DEL CAUCA", 76, "SEDE PALMIRA", "s_palmira", 3.512328, 
+s_palmira <- c("VALLE DEL CAUCA", 76, "SEDE PALMIRA", "s_palmira", "s_palmira",
+               3.512328, 
                -76.307490)
 locaciones <- rbind(locaciones, s_amazonas, s_bogota, s_caribe, s_medellin,
                     s_manizales, s_palmira)
