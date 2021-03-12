@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-03-03" />
+<meta name="date" content="2021-03-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -893,6 +893,90 @@ Figura 4.82: Evolución anual de estudiantes graduados por municipio
 </p>
 </div>
 <p>Lo mostrado anteriormente corresponde a una imagen plana tomada de la visualización, si desea ver el gráfico de manera interactiva puede ingresar al siguiente enlace <a href="https://preview.flourish.studio/5441266/qIJCGuNhtsQl3VM2HFDj3P_l9X2aisp0Zju101oZAHyTJDuirtp91-loXEcoCZGY/">Evolución anual de estudiantes graduados por municipio</a>, es de resaltar que hay momentos en los que los puntos se quedan estáticos y esto corresponde a años donde no se registró la información acerca del municipio y departamento de nacimiento del estudiante graduado, por ende estos registros se muestran en la etiqueta otro ubicada en la esquina superior derecha.</p>
+</div>
+<div id="globodeconexionesflourish" class="section level4">
+<h4><span class="header-section-number">4.3.1.8</span> Globo de conexiones</h4>
+<p>Este tipo de gráficos es de gran utilidad cuando se desea visualizar las conexiones existentes entre diferentes ciudades, regiones o países de todo el mundo; en el caso del conjunto de datos que se está trabajando será utilizado para representar los flujos entre los municipios de Colombia y las sedes de la Universidad Nacional de Colombia, es decir, se genera una línea o flujo entre el municipio de nacimiento del egresado y la sede de su última matricula.
+El paso inicial para la realización de este gráfico, así como en todos es seleccionar la plantilla y analizar el conjunto de datos, esta visualización se compone de dos capas, la primera de ellas llamada valores y la segunda llamada locaciones. A continuación, se presenta los datos de ejemplo que contiene la plantilla.</p>
+<div class="figure" style="text-align: center"><span id="fig:capavaloresgloboconexionesflourish-fig"></span>
+<img src="Imágenes/flourish83.jpg" alt="Capa de valores" width="85%" />
+<p class="caption">
+Figura 4.83: Capa de valores
+</p>
+</div>
+<p>El conjunto de datos ubicado en la sección valores debe contener como mínimo tres columnas, las cuales corresponden al origen, destino y valor del flujo; el conjunto de muestra posee dos columnas adicionales que representa una categoría y años, las cuales son usadas en los estantes filtros con el fin de que el usuario pueda elegir que categoría desea visualizar y una línea de tiempo para agregar interactividad y seguimiento de los flujos. Debe notar que los lugares de origen y destino no contienen el nombre del país si no un código de tres letras el cual debe corresponder a los códigos establecidos en la hoja de locaciones.</p>
+<p>La capa de locaciones es algo simple ya que debe contener los códigos mencionados anteriormente, el nombre del país, la ubicación en latitud y longitud. Es muy importante establecer códigos únicos y que si se repiten las cifras de los flujos y su respectiva clasificación no sería correcta.</p>
+<div class="figure" style="text-align: center"><span id="fig:capalocacionesgloboconexionesflourish-fig"></span>
+<img src="Imágenes/flourish84.jpg" alt="Capa de locaciones" width="85%" />
+<p class="caption">
+Figura 4.84: Capa de locaciones
+</p>
+</div>
+<p>Nuevamente se hace uso del software R para generar los conjuntos de datos necesarios para esta visualización, Colombia tiene códigos establecidos para sus departamentos y municipios, el problema es que estos códigos se repiten, por ejemplo el código “001” se repite tantas veces como capitales hay entonces al momento de crear las conexiones el valor del flujo no es correcto ya que se suman todos los valores pertenecientes a este código, la solución propuesta a este problema consiste en generar códigos únicos a partir de la unión del código de departamento y municipio; también se genera el conjunto de datos de locaciones con estos mismos códigos, la creación de estos conjuntos de datos se encuentra en el archivo “DataFlourish.R”.</p>
+<ol style="list-style-type: decimal">
+<li><p>Debe cargar los archivos “valores.csv” y “locaciones.csv” y asignarlos a las capas de valores y locaciones respectivamente en la plantilla de globo de conexiones.</p></li>
+<li><p>Los estantes disponibles en la capa de valores son origen, destino, valores y dos filtros, las columnas G y H deben ser asignadas a los estantes locación de origen y de destino respectivamente, el valor esta representado por la columna F y por último los filtros serán llenados con las columnas B y A respectivamente.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2globoconexionesflourish-fig"></span>
+<img src="Imágenes/flourish85.jpg" alt="Asignación de columnas a estantes para la capa valores" width="85%" />
+<p class="caption">
+Figura 4.85: Asignación de columnas a estantes para la capa valores
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>La capa de locaciones contiene columnas sobre los códigos y nombres de las ubicaciones, así como sus latitudes y longitudes, las columnas B, C, D y E deben ser asignadas a los estantes nombre del lugar, código de localización, latitud y longitud respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3globoconexionesflourish-fig"></span>
+<img src="Imágenes/flourish86.jpg" alt="Asignación de columnas a estantes para la capa locaciones" width="85%" />
+<p class="caption">
+Figura 4.86: Asignación de columnas a estantes para la capa locaciones
+</p>
+</div>
+<p>Regresando a la pestaña de avance debe observar una vista previa de la visualización, muy similar a la mostrada a continuación, observe que hay detalles por corregir como el título, subtítulo y números en la clasificación los orígenes y destinos.</p>
+<div class="figure" style="text-align: center"><span id="fig:vistapreviagloboconexionesflourish-fig"></span>
+<img src="Imágenes/flourish87.jpg" alt="Vista previa del globo de conexiones" width="85%" />
+<p class="caption">
+Figura 4.87: Vista previa del globo de conexiones
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>La primera capa para editar la visualización será diseño en la cual se cambia la superficie del globo, posee diferentes opciones, en este caso se selecciona satélite, también es posible editar el color y resaltado de las flechas, el color de la fecha será “#ECF0F1” y el resaltado debe estar en color “#05B0DE”.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4globoconexionesflourish-fig"></span>
+<img src="Imágenes/flourish88.jpg" alt="Formato a la superficie ddel globo" width="85%" />
+<p class="caption">
+Figura 4.88: Formato a la superficie ddel globo
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Las pestañas siguientes hasta rotación no será editadas ya que las configuraciones establecidas por defecto en la plantilla funcionan de manera adecuada para los fines de la visualización.</p></li>
+<li><p>La sección o pestaña formato de numero permite editar el estilo de los números, desde el separador, cifras decimales hasta los prefijos o sufijos a usar. En este caso debe eliminar el prefijo ya que la cifra mostrada corresponde a un conteo de estudiantes graduados y no a un valor relacionado con dinero, también debe disminuir la cantidad de lugares decimales a cero, ya que las cifras son números enteros.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6globoconexionesflourish-fig"></span>
+<img src="Imágenes/flourish89.jpg" alt="Formato de número" width="85%" />
+<p class="caption">
+Figura 4.89: Formato de número
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Sobre la pestaña diseño en este caso la relacionada con la visualización en general y no la del globo se debe cambiar el color del texto y color de fondo por negro y “#E6E6E6” respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso7globoconexionesflourish-fig"></span>
+<img src="Imágenes/flourish90.jpg" alt="Cambio de color de texto y fondo" width="85%" />
+<p class="caption">
+Figura 4.90: Cambio de color de texto y fondo
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Por último, cambie el título y subtítulo de la visualización por Conexiones UN y Evolución anual de la sede final de los estudiantes, haciendo uso de la pestaña encabezamiento.</li>
+</ol>
+<p>La visualización final presenta la conexión de los municipios con las sedes de la Universidad Nacional de Colombia, adicional a esto se presenta el top 5 de los principales flujos, se observa que la mayor cantidad de estudiantes graduados pertenecen a ciudades principales y la sede de destino es la ubicada en dicha ciudad, por ejemplo, el flujo más fuerte corresponde a estudiantes nacidos en Bogotá y que su sede final corresponde a la sede ubicada en esa ciudad, a continuación, se presenta la visualización obtenida, para visualizarla con la ventana de tiempo involucrada puede ingresar a <a href="https://preview.flourish.studio/5534480/cT-u7gNBx4zbjdJqezzhTCiUcOCbuiMhxIRS6JM0hZ8KHH2jDhVtFajBX7F0x1IB/">Conexiones UN</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:finalgloboconexionesflourish-fig"></span>
+<img src="Imágenes/flourish91.jpg" alt="Conexiones entre municipios y sedes UN seguimiento anual" width="85%" />
+<p class="caption">
+Figura 4.91: Conexiones entre municipios y sedes UN seguimiento anual
+</p>
+</div>
 
 </div>
 </div>

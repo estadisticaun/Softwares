@@ -479,6 +479,8 @@ fig:paso9mapa3dflourish-fig
 fig:paso10mapa3dflourish-fig
 fig:paso11mapa3dflourish-fig
 fig:finalmapa3dflourish-fig
+fig:capavaloresgloboconexionesflourish-fig
+fig:capalocacionesgloboconexionesflourish-fig
 intro
 tableau
 generalidades
@@ -558,4 +560,12 @@ graficocircularflourish
 gráfico-de-barras-1
 mapadeproyecciónflourish
 mapa3Dflourish
+globodeconexionesflourish
 conclu
+fig:paso2globoconexionesflourish-fig
+fig:paso3globoconexionesflourish-fig
+fig:vistapreviagloboconexionesflourish-fig
+fig:paso4globoconexionesflourish-fig
+fig:paso6globoconexionesflourish-fig
+fig:paso7globoconexionesflourish-fig
+fig:finalgloboconexionesflourish-fig

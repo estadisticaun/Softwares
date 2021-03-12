@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-03-03}
+\date{2021-03-11}
 
 \begin{document}
 \maketitle
@@ -9082,6 +9082,36 @@ Dentro de la base de datos con la cual se esta trabajando hay columnas que ident
 \end{figure}
 
 Lo mostrado anteriormente corresponde a una imagen plana tomada de la visualización, si desea ver el gráfico de manera interactiva puede ingresar al siguiente enlace \href{https://preview.flourish.studio/5441266/qIJCGuNhtsQl3VM2HFDj3P_l9X2aisp0Zju101oZAHyTJDuirtp91-loXEcoCZGY/}{Evolución anual de estudiantes graduados por municipio}, es de resaltar que hay momentos en los que los puntos se quedan estáticos y esto corresponde a años donde no se registró la información acerca del municipio y departamento de nacimiento del estudiante graduado, por ende estos registros se muestran en la etiqueta otro ubicada en la esquina superior derecha.
+
+\hypertarget{globodeconexionesflourish}{%
+\subsubsection{Globo de conexiones}\label{globodeconexionesflourish}}
+
+Este tipo de gráficos es de gran utilidad cuando se desea visualizar las conexiones existentes entre diferentes ciudades, regiones o países de todo el mundo; en el caso del conjunto de datos que se está trabajando será utilizado para representar los flujos entre los municipios de Colombia y las sedes de la Universidad Nacional de Colombia, es decir, se genera una línea o flujo entre el municipio de nacimiento del egresado y la sede de su última matricula.
+El paso inicial para la realización de este gráfico, así como en todos es seleccionar la plantilla y analizar el conjunto de datos, esta visualización se compone de dos capas, la primera de ellas llamada valores y la segunda llamada locaciones. A continuación, se presenta los datos de ejemplo que contiene la plantilla.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish83} 
+
+}
+
+\caption{Capa de valores}\label{fig:capavaloresgloboconexionesflourish-fig}
+\end{figure}
+
+El conjunto de datos ubicado en la sección valores debe contener como mínimo tres columnas, las cuales corresponden al origen, destino y valor del flujo; el conjunto de muestra posee dos columnas adicionales que representa una categoría y años, las cuales son usadas en los estantes filtros con el fin de que el usuario pueda elegir que categoría desea visualizar y una línea de tiempo para agregar interactividad y seguimiento de los flujos. Debe notar que los lugares de origen y destino no contienen el nombre del país si no un código de tres letras el cual debe corresponder a los códigos establecidos en la hoja de locaciones.
+
+La capa de locaciones es algo simple ya que debe contener los códigos mencionados anteriormente, el nombre del país, la ubicación en latitud y longitud. Es muy importante establecer códigos únicos y que si se repiten las cifras de los flujos y su respectiva clasificación no sería correcta.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish84} 
+
+}
+
+\caption{Capa de locaciones}\label{fig:capalocacionesgloboconexionesflourish-fig}
+\end{figure}
+
+Nuevamente se hace uso del software R para generar los conjuntos de datos necesarios para esta visualización, Colombia tiene códigos establecidos para sus departamentos y municipios, el problema es que estos códigos se repiten, por ejemplo el código ``001'' se repite tantas veces como capitales hay entonces al momento de crear las conexiones el valor del flujo no es correcto ya que se suman todos los valores pertenecientes a este código, la solución propuesta a este problema consiste en generar códigos únicos a partir de la unión del código de departamento y municipio; también se genera el conjunto de datos de locaciones con estos mismos códigos, la creación de estos conjuntos de datos se encuentra en el archivo ``DataFlourish.R''.
 
 \hypertarget{conclu}{%
 \chapter{Conclusiones}\label{conclu}}

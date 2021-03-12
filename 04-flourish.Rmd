@@ -712,3 +712,50 @@ knitr::include_graphics("Imágenes/flourish84.jpg")
 
 Nuevamente se hace uso del software R para generar los conjuntos de datos necesarios para esta visualización, Colombia tiene códigos establecidos para sus departamentos y municipios, el problema es que estos códigos se repiten, por ejemplo el código “001” se repite tantas veces como capitales hay entonces al momento de crear las conexiones el valor del flujo no es correcto ya que se suman todos los valores pertenecientes a este código, la solución propuesta a este problema consiste en generar códigos únicos a partir de la unión del código de departamento y municipio; también se genera el conjunto de datos de locaciones con estos mismos códigos, la creación de estos conjuntos de datos se encuentra en el archivo “DataFlourish.R”.
 
+1.	Debe cargar los archivos “valores.csv” y “locaciones.csv” y asignarlos a las capas de valores y locaciones respectivamente en la plantilla de globo de conexiones.
+
+2.	Los estantes disponibles en la capa de valores son origen, destino, valores y dos filtros, las columnas G y H deben ser asignadas a los estantes locación de origen y de destino respectivamente, el valor esta representado por la columna F y por último los filtros serán llenados con las columnas B y A respectivamente.
+
+```{r paso2globoconexionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de columnas a estantes para la capa valores', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish85.jpg")
+```
+ 
+3.	La capa de locaciones contiene columnas sobre los códigos y nombres de las ubicaciones, así como sus latitudes y longitudes, las columnas B, C, D y E deben ser asignadas a los estantes nombre del lugar, código de localización, latitud y longitud respectivamente.
+
+```{r paso3globoconexionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de columnas a estantes para la capa locaciones', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish86.jpg")
+```
+
+Regresando a la pestaña de avance debe observar una vista previa de la visualización, muy similar a la mostrada a continuación, observe que hay detalles por corregir como el título, subtítulo y números en la clasificación los orígenes y destinos.
+
+```{r vistapreviagloboconexionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa del globo de conexiones', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish87.jpg")
+```
+
+4.	La primera capa para editar la visualización será diseño en la cual se cambia la superficie del globo, posee diferentes opciones, en este caso se selecciona satélite, también es posible editar el color y resaltado de las flechas, el color de la fecha será “#ECF0F1” y el resaltado debe estar en color “#05B0DE”.
+
+```{r paso4globoconexionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a la superficie ddel globo', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish88.jpg")
+```
+
+5.	Las pestañas siguientes hasta rotación no será editadas ya que las configuraciones establecidas por defecto en la plantilla funcionan de manera adecuada para los fines de la visualización.
+
+6.	La sección o pestaña formato de numero permite editar el estilo de los números, desde el separador, cifras decimales hasta los prefijos o sufijos a usar. En este caso debe eliminar el prefijo ya que la cifra mostrada corresponde a un conteo de estudiantes graduados y no a un valor relacionado con dinero, también debe disminuir la cantidad de lugares decimales a cero, ya que las cifras son números enteros.
+
+```{r paso6globoconexionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de número', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish89.jpg")
+```
+
+7.	Sobre la pestaña diseño en este caso la relacionada con la visualización en general y no la del globo se debe cambiar el color del texto y color de fondo por negro y “#E6E6E6” respectivamente. 
+
+```{r paso7globoconexionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambio de color de texto y fondo', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish90.jpg")
+```
+
+8.	Por último, cambie el título y subtítulo de la visualización por Conexiones UN y Evolución anual de la sede final de los estudiantes, haciendo uso de la pestaña encabezamiento.
+
+La visualización final presenta la conexión de los municipios con las sedes de la Universidad Nacional de Colombia, adicional a esto se presenta el top 5 de los principales flujos, se observa que la mayor cantidad de estudiantes graduados pertenecen a ciudades principales y la sede de destino es la ubicada en dicha ciudad, por ejemplo, el flujo más fuerte corresponde a estudiantes nacidos en Bogotá y que su sede final corresponde a la sede ubicada en esa ciudad, a continuación, se presenta la visualización obtenida, para visualizarla con la ventana de tiempo involucrada puede ingresar a [Conexiones UN]( https://preview.flourish.studio/5534480/cT-u7gNBx4zbjdJqezzhTCiUcOCbuiMhxIRS6JM0hZ8KHH2jDhVtFajBX7F0x1IB/).
+
+```{r finalgloboconexionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Conexiones entre municipios y sedes UN seguimiento anual', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish91.jpg")
+```
