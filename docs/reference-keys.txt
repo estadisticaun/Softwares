@@ -481,6 +481,13 @@ fig:paso11mapa3dflourish-fig
 fig:finalmapa3dflourish-fig
 fig:capavaloresgloboconexionesflourish-fig
 fig:capalocacionesgloboconexionesflourish-fig
+fig:paso2globoconexionesflourish-fig
+fig:paso3globoconexionesflourish-fig
+fig:vistapreviagloboconexionesflourish-fig
+fig:paso4globoconexionesflourish-fig
+fig:paso6globoconexionesflourish-fig
+fig:paso7globoconexionesflourish-fig
+fig:finalgloboconexionesflourish-fig
 intro
 tableau
 generalidades
@@ -562,10 +569,3 @@ mapadeproyecciónflourish
 mapa3Dflourish
 globodeconexionesflourish
 conclu
-fig:paso2globoconexionesflourish-fig
-fig:paso3globoconexionesflourish-fig
-fig:vistapreviagloboconexionesflourish-fig
-fig:paso4globoconexionesflourish-fig
-fig:paso6globoconexionesflourish-fig
-fig:paso7globoconexionesflourish-fig
-fig:finalgloboconexionesflourish-fig
