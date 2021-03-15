@@ -820,15 +820,23 @@ knitr::include_graphics("Imágenes/flourish98.jpg")
 La visualización obtenida permite identificar la distribución por sedes, facultades y programas de los estudiantes graduados para los periodos 2009-1 hasta 2020-1, identifica cuales son los programas y nivel de formación más apetecidos para cada una de las sedes.
 
 ```{r barrasjerarquiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Barras jerarquícas: Distribución de programas por modalidad de formación', out.width='85%'}
-knitr::include_graphics("Imágenes/flourish98.jpg")
+knitr::include_graphics("Imágenes/flourish99.jpg")
 ```
 
 Como se menciono anteriormente Flourish ofrece distintas opciones para la visualización de jerarquías, las cuales pueden ser cambiadas usando la pestaña jerarquía y la sección diseño, a continuación, se presentan las visualizaciones obtenidas con cada una de las plantillas ofrecidas.
 
+```{r mapadearboljerarquiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Mapa de árbol: Distribución de programas por modalidad de formación', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish100.jpg")
+```
 
+```{r circulosjerarquiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Círculos: Distribución de programas por modalidad de formación', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish101.jpg")
+```
 
+```{r anillosjerarquiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Anillos: Distribución de programas por modalidad de formación', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish102.jpg")
+```
 
-
-
-
-
+```{r radialjerarquiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Radial: Distribución de programas por modalidad de formación', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish103.jpg")
+```

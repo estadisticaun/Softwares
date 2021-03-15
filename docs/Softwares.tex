@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-03-11}
+\date{2021-03-15}
 
 \begin{document}
 \maketitle
@@ -9228,6 +9228,158 @@ La visualización final presenta la conexión de los municipios con las sedes de
 
 \caption{Conexiones entre municipios y sedes UN seguimiento anual}\label{fig:finalgloboconexionesflourish-fig}
 \end{figure}
+
+\hypertarget{jerarquiaflourish}{%
+\subsubsection{Jerarquía}\label{jerarquiaflourish}}
+
+Este tipo de gráficos son de gran utilidad para visualizar la jerarquía existente en los datos que se analizan. Flourish ofrece varias alternativas para la realización de este tipo de gráficos como lo son las barras jerárquicas, círculos llenos, resplandor solar, mapa de árbol y árbol radial, todos consisten en una categoría general y son divididas por medio de otra variable categórica.
+
+La categoría general para la Universidad Nacional es la sede, seguido de esto cada sede esta compuesta de diferentes facultades y cada facultad ofrece distintos programas en varios niveles de formación, desde pregrado hasta doctorado, por tanto, al base de datos a usar para la generación de un gráfico jerárquico debe estar compuesta por cinco columnas que deben corresponder a la sede de matrícula, facultad, programa, nivel y cantidad de estudiantes graduados.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Seleccione la plantilla de barras jerárquicas, cargue el archivo llamado ``jerarquia.csv'' y asigne las columnas de la A-C al estante de anidamiento, la variable E corresponde al tamaño y la D corresponde a el filtro, finalmente todas deben ser asignadas a información para ventanas emergentes.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish92} 
+
+}
+
+\caption{Carga de base de datos y asignación de columnas}\label{fig:paso1jerarquiaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Al regresar a la pagina de avance debe observar un gráfico con una barra para cada sede de matricula y su vez estas barras se encuentran divididas por la facultad, es de resaltar que puede acceder a cada una de las sedes haciendo clic sobre el nombre, por ejemplo si selecciona Bogotá se genera una barra por cada facultad y a su vez la facultad estará dividida por el programa de formación.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish93} 
+
+}
+
+\caption{Vista previa de barras jerarquícas}\label{fig:paso2jerarquiaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Es momento de dar formato y personalización a la visualización, para esto en la pestaña etiqueta debe aumentar el tamaño máximo de etiqueta a tres.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish94} 
+
+}
+
+\caption{Personalización de etiquetas}\label{fig:paso3jerarquiaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  La pestaña barra permite dar formato a cada una de las barras, aumente los espesores mínimo y máximo a 50 y 60 respectivamente, por ultimo el acolchado de barra debe estar en 10.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish95} 
+
+}
+
+\caption{Formato de barras}\label{fig:paso4jerarquiaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Sobre la pestaña colores debe editar la paleta de colores, los colores a usar son ``\#8CC63F'', ``\#F15A24'', ``\#0071BC'', ``\#93278F'', ``\#5BC0DE'', ``\#C1272D'' para las sedes Bogotá, Medellín, Manizales, Palmira, Amazonia y Caribe respectivamente.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish96} 
+
+}
+
+\caption{Cambio de paleta de coloresq}\label{fig:paso5jerarquiaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Las ventanas emergentes no son claras ya que cuando se ingresa a alguna sede, aparece información duplicada sobre la sede, facultad, nivel y programa, por lo tanto, deben ser editadas usando contenido personalizado. Sobre la pestaña ventanas emergentes seleccione contenido personalizado y escriba lo mostrado a continuación, también debe escribir ``-`` para el separador.
+  Sede de matricula: \{\{SEDE\_NOMBRE\_MAT\}\}
+  Facultad: \{\{FACULTAD\}\}
+  Nivel de fromacion: \{\{NIVEL\}\}
+  Programa: \{\{PROGRAMA\}\}
+  Total: \{\{n\}\}
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish97} 
+
+}
+
+\caption{Contenido personalizado para ventanas emergentes}\label{fig:paso6jerarquiaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\item
+  Con la pestaña control debe cambiar la palabra ``All'' por ``Todo'' sobre la sección control de filtro.
+\item
+  Observe que el separador de miles es una ``,'', por lo que debe ser cambiado por ``.'', para esto haga clic sobre la pestaña formato de número y seleccione ``,'' como separador decimal, en formato de numero debe seleccionar ``12.345,67'' ya que este usa el ``.'' como separador de miles, por último, los lugares decimales deben establecerse en cero.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish98} 
+
+}
+
+\caption{Formato de barras}\label{fig:paso8jerarquiaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Como últimos detalles active las fronteras y seleccione color negro para todas, esto lo realiza sobre la pestaña diseño; con la pestaña encabezamiento escriba como título para la visualización ``Distribución de programas por nivel de formación.
+\end{enumerate}
+
+La visualización obtenida permite identificar la distribución por sedes, facultades y programas de los estudiantes graduados para los periodos 2009-1 hasta 2020-1, identifica cuales son los programas y nivel de formación más apetecidos para cada una de las sedes.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish98} 
+
+}
+
+\caption{Barras jerarquícas: Distribución de programas por modalidad de formación}\label{fig:barrasjerarquiaflourish-fig}
+\end{figure}
+
+Como se menciono anteriormente Flourish ofrece distintas opciones para la visualización de jerarquías, las cuales pueden ser cambiadas usando la pestaña jerarquía y la sección diseño, a continuación, se presentan las visualizaciones obtenidas con cada una de las plantillas ofrecidas.
 
 \hypertarget{conclu}{%
 \chapter{Conclusiones}\label{conclu}}
