@@ -569,3 +569,12 @@ mapadeproyecciónflourish
 mapa3Dflourish
 globodeconexionesflourish
 conclu
+fig:paso1jerarquiaflourish-fig
+fig:paso2jerarquiaflourish-fig
+fig:paso3jerarquiaflourish-fig
+fig:paso4jerarquiaflourish-fig
+fig:paso5jerarquiaflourish-fig
+fig:paso6jerarquiaflourish-fig
+fig:paso8jerarquiaflourish-fig
+fig:barrasjerarquiaflourish-fig
+jerarquiaflourish

@@ -301,17 +301,13 @@ valores$codsede <- paste("s", str_to_lower(substr(valores$SEDE_NOMBRE_MAT, 6,
 write.csv(valores, "valores.csv", row.names = F)
 
 #JERARQUIA
-jerarquia <- Graduados %>% group_by(SEDE_NOMBRE_MAT, FACULTAD, PROGRAMA, 
-                                    NIVEL) %>% 
+jerarquia <- Graduados %>% 
+  group_by(SEDE_NOMBRE_MAT, FACULTAD, PROGRAMA, NIVEL) %>% 
   mutate(SEDE_NOMBRE_MAT = chartr("áéíóúü", "aeiouu", SEDE_NOMBRE_MAT),
          FACULTAD = chartr("áéíóúü", "aeiouu", FACULTAD),
          NIVEL = chartr("áéíóúü", "aeiouu", NIVEL),
          PROGRAMA = chartr("áéíóúü", "aeiouu", PROGRAMA)) %>% 
-  count()
-
+  summarise(n = n()) %>% 
+  arrange(SEDE_NOMBRE_MAT, FACULTAD, NIVEL, desc(n)) 
+ 
 write.csv(jerarquia, "jerarquia.csv", row.names = F)
-
-
-
-df <- data.frame(x = c(10, 4, 1, 6, 3, 1, 1))
-df %>% top_n(2)

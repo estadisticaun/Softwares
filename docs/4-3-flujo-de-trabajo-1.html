@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-03-11" />
+<meta name="date" content="2021-03-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -977,6 +977,91 @@ Figura 4.90: Cambio de color de texto y fondo
 Figura 4.91: Conexiones entre municipios y sedes UN seguimiento anual
 </p>
 </div>
+</div>
+<div id="jerarquiaflourish" class="section level4">
+<h4><span class="header-section-number">4.3.1.9</span> Jerarquía</h4>
+<p>Este tipo de gráficos son de gran utilidad para visualizar la jerarquía existente en los datos que se analizan. Flourish ofrece varias alternativas para la realización de este tipo de gráficos como lo son las barras jerárquicas, círculos llenos, resplandor solar, mapa de árbol y árbol radial, todos consisten en una categoría general y son divididas por medio de otra variable categórica.</p>
+<p>La categoría general para la Universidad Nacional es la sede, seguido de esto cada sede esta compuesta de diferentes facultades y cada facultad ofrece distintos programas en varios niveles de formación, desde pregrado hasta doctorado, por tanto, al base de datos a usar para la generación de un gráfico jerárquico debe estar compuesta por cinco columnas que deben corresponder a la sede de matrícula, facultad, programa, nivel y cantidad de estudiantes graduados.</p>
+<ol style="list-style-type: decimal">
+<li>Seleccione la plantilla de barras jerárquicas, cargue el archivo llamado “jerarquia.csv” y asigne las columnas de la A-C al estante de anidamiento, la variable E corresponde al tamaño y la D corresponde a el filtro, finalmente todas deben ser asignadas a información para ventanas emergentes.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1jerarquiaflourish-fig"></span>
+<img src="Imágenes/flourish92.jpg" alt="Carga de base de datos y asignación de columnas" width="85%" />
+<p class="caption">
+Figura 4.92: Carga de base de datos y asignación de columnas
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Al regresar a la pagina de avance debe observar un gráfico con una barra para cada sede de matricula y su vez estas barras se encuentran divididas por la facultad, es de resaltar que puede acceder a cada una de las sedes haciendo clic sobre el nombre, por ejemplo si selecciona Bogotá se genera una barra por cada facultad y a su vez la facultad estará dividida por el programa de formación.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2jerarquiaflourish-fig"></span>
+<img src="Imágenes/flourish93.jpg" alt="Vista previa de barras jerarquícas" width="85%" />
+<p class="caption">
+Figura 4.93: Vista previa de barras jerarquícas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Es momento de dar formato y personalización a la visualización, para esto en la pestaña etiqueta debe aumentar el tamaño máximo de etiqueta a tres.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3jerarquiaflourish-fig"></span>
+<img src="Imágenes/flourish94.jpg" alt="Personalización de etiquetas" width="85%" />
+<p class="caption">
+Figura 4.94: Personalización de etiquetas
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>La pestaña barra permite dar formato a cada una de las barras, aumente los espesores mínimo y máximo a 50 y 60 respectivamente, por ultimo el acolchado de barra debe estar en 10.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4jerarquiaflourish-fig"></span>
+<img src="Imágenes/flourish95.jpg" alt="Formato de barras" width="85%" />
+<p class="caption">
+Figura 4.95: Formato de barras
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Sobre la pestaña colores debe editar la paleta de colores, los colores a usar son “#8CC63F”, “#F15A24”, “#0071BC”, “#93278F”, “#5BC0DE”, “#C1272D” para las sedes Bogotá, Medellín, Manizales, Palmira, Amazonia y Caribe respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5jerarquiaflourish-fig"></span>
+<img src="Imágenes/flourish96.jpg" alt="Cambio de paleta de coloresq" width="85%" />
+<p class="caption">
+Figura 4.96: Cambio de paleta de coloresq
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Las ventanas emergentes no son claras ya que cuando se ingresa a alguna sede, aparece información duplicada sobre la sede, facultad, nivel y programa, por lo tanto, deben ser editadas usando contenido personalizado. Sobre la pestaña ventanas emergentes seleccione contenido personalizado y escriba lo mostrado a continuación, también debe escribir “-“ para el separador.
+<b>Sede de matricula: </b> {{SEDE_NOMBRE_MAT}} <br/>
+<b>Facultad: </b> {{FACULTAD}} <br/>
+<b>Nivel de fromacion: </b> {{NIVEL}} <br/>
+<b> Programa: </b> {{PROGRAMA}} <br/>
+<b> Total: </b> {{n}}</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso6jerarquiaflourish-fig"></span>
+<img src="Imágenes/flourish97.jpg" alt="Contenido personalizado para ventanas emergentes" width="85%" />
+<p class="caption">
+Figura 4.97: Contenido personalizado para ventanas emergentes
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Con la pestaña control debe cambiar la palabra “All” por “Todo” sobre la sección control de filtro.</p></li>
+<li><p>Observe que el separador de miles es una “,”, por lo que debe ser cambiado por “.”, para esto haga clic sobre la pestaña formato de número y seleccione “,” como separador decimal, en formato de numero debe seleccionar “12.345,67” ya que este usa el “.” como separador de miles, por último, los lugares decimales deben establecerse en cero.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso8jerarquiaflourish-fig"></span>
+<img src="Imágenes/flourish98.jpg" alt="Formato de barras" width="85%" />
+<p class="caption">
+Figura 4.98: Formato de barras
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Como últimos detalles active las fronteras y seleccione color negro para todas, esto lo realiza sobre la pestaña diseño; con la pestaña encabezamiento escriba como título para la visualización “Distribución de programas por nivel de formación.</li>
+</ol>
+<p>La visualización obtenida permite identificar la distribución por sedes, facultades y programas de los estudiantes graduados para los periodos 2009-1 hasta 2020-1, identifica cuales son los programas y nivel de formación más apetecidos para cada una de las sedes.</p>
+<div class="figure" style="text-align: center"><span id="fig:barrasjerarquiaflourish-fig"></span>
+<img src="Imágenes/flourish98.jpg" alt="Barras jerarquícas: Distribución de programas por modalidad de formación" width="85%" />
+<p class="caption">
+Figura 4.99: Barras jerarquícas: Distribución de programas por modalidad de formación
+</p>
+</div>
+<p>Como se menciono anteriormente Flourish ofrece distintas opciones para la visualización de jerarquías, las cuales pueden ser cambiadas usando la pestaña jerarquía y la sección diseño, a continuación, se presentan las visualizaciones obtenidas con cada una de las plantillas ofrecidas.</p>
 
 </div>
 </div>
