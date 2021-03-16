@@ -496,6 +496,10 @@ fig:paso5jerarquiaflourish-fig
 fig:paso6jerarquiaflourish-fig
 fig:paso8jerarquiaflourish-fig
 fig:barrasjerarquiaflourish-fig
+fig:mapadearboljerarquiaflourish-fig
+fig:circulosjerarquiaflourish-fig
+fig:anillosjerarquiaflourish-fig
+fig:radialjerarquiaflourish-fig
 intro
 tableau
 generalidades
@@ -578,7 +582,3 @@ mapa3Dflourish
 globodeconexionesflourish
 jerarquiaflourish
 conclu
-fig:mapadearboljerarquiaflourish-fig
-fig:circulosjerarquiaflourish-fig
-fig:anillosjerarquiaflourish-fig
-fig:radialjerarquiaflourish-fig

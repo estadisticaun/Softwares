@@ -311,3 +311,19 @@ jerarquia <- Graduados %>%
   arrange(SEDE_NOMBRE_MAT, FACULTAD, NIVEL, desc(n)) 
  
 write.csv(jerarquia, "jerarquia.csv", row.names = F)
+
+#CARRERA DE BARRAS
+car_barras <- Graduados %>% 
+  group_by(YEAR_SEMESTER, AREAC_SNIES, NIVEL) %>% 
+  count() %>% 
+  spread(key = YEAR_SEMESTER, value = n) %>% 
+  mutate_all(~replace(., is.na(.), 0))
+
+write.csv(car_barras, file = "car_barras.csv", row.names = F)
+
+#DIAGRAMA DE SANKEY
+sankey <- Graduados %>% 
+  group_by(SEDE_NOMBRE_ADM, SEDE_NOMBRE_MAT) %>% 
+  count() %>% 
+  filter(SEDE_NOMBRE_ADM != SEDE_NOMBRE_MAT)
+write.csv(sankey, file = "sankey.csv", row.names = F)
