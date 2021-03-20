@@ -878,3 +878,24 @@ El diagrama de flujo obtenido permite identificar la migración entre sedes de l
 ```{r finalsankeyflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Flujo entre sedes de la Universidad Nacional de Colombia', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish108.jpg")
 ```
+
+#### Carrera de grafico de barras
+Esta visualización está basada en un gráfico de barras al cual se le añade una línea de tiempo con el fin de visualizar los cambios de las categorías que representan cada barra, son de gran utilidad para mostrar como crecen las poblaciones, los votos por un determinado partido político, entre otros. Dentro del sistema de educación superior colombiano los programas de formación son clasificados en áreas del conocimiento, la idea es realizar un grafico de barras con las áreas del conocimiento SNIES y añadir como ventana de tiempo los periodos de 2009-1 a 2020-1 con el fin de explorar e identificar cuáles son las áreas con la mayor cantidad de estudiantes graduados en todos los niveles de formación ofrecidos por la Universidad Nacional.
+
+El paso inicial para esta visualización como en todas es analizar la estructura del conjunto de datos de ejemplo, para esto seleccione la plantilla de carrera de barras y haga clic en la pestaña datos, debe observar que se tienen estantes disponibles para etiquetas, valores, categorías e imágenes; observe además que cada año corresponde a una columna razón por la cual la base de datos a subir para crear la visualización deseada tendrá una columna para el área del conocimiento, una más para el nivel de formación y las demás columnas corresponden a cada periodo, faltaría la columna de imágenes pero esta será añadida directamente en Flourish, ya que la manera en la cual se generan las bases de datos para cada visualización no permite añadir una columna con imágenes.
+
+1.	Luego de analizado el conjunto de datos de ejemplo cargue el archivo llamado “car_barras-csv” y corrija los caracteres especiales del español en caso de que no se hayan leído correctamente; antes de asignar las columnas a los estantes se debe añadir la columna para imágenes, para esto haga clic derecho sobre la columna B y seleccione insertar columna a la derecha.
+
+2.	El nombre de esta nueva columna será Imágenes, dentro del repositorio en el cual se aloja este documento encontrara una carpeta llamada Imágenes para Flourish en la cual se guardaron imágenes extraídas de internet relacionadas con cada área del conocimiento SNIES, haciendo clic sobre una casilla de la nueva columna debe seleccionar subir archivo y navegar entre las carpeteas hasta encontrar y elegir la imagen relaciona con el área del conocimiento correspondiente. Por ejemplo, para Agronomía, veterinaria y afines debe subir la imagen llamada “Agronomia y afines.jpg”. 
+
+3.	Luego de añadir una imagen notara que en la fila correspondiente y columna imágenes se genera un enlace que corresponde a la imagen, puede copiar y pegarlo hasta completar todas las filas que corresponden a esa área. Debe el paso 2 y lo mencionado anteriormente hasta completar todas las filas de la columna imágenes.
+
+4.	Luego de tener la base de datos completa debe asignar las columnas a los estantes disponibles, A, D-Z, B y C deben ser asignadas a los estantes etiquetas, valores, categorías e imágenes respectivamente.
+
+5.	Regresando a la pestaña avance se encuentran algunos problemas de formato, tales como el titulo y colores de la leyenda y el nombre de las áreas se corta, están incompletos.
+
+6.	Para iniciar a modificar y personalizar el grafico, debe hacer clic sobre la pestaña colores de barra y editar la paleta de colores, “#6D6666”, “#FBB03B”, “#5BC0DE”, “#C1272D”, y “#8CC63F” deben ser asignados a los niveles doctorado, especialidades médicas, especialización, maestría y pregrado respectivamente.
+
+7.	Dentro de la pestaña etiquetas es posible editar el tamaño del texto y modo de las etiqueta, se ofrecen dos modos de etiquetas, el primero corresponde a etiquetas en barra e imagen en el eje y la segunda opción corresponde a etiquetas en el eje e imágenes en las barras, en este caso debe seleccionar la primera opción ya que las etiquetas son bastante largas y no se ven completamente en el eje, por último, aumente el tamaño del texto a 1,2.
+
+8.	La siguiente pestaña para editar será leyenda, debe seleccionar negrita y el modo del título debe ser fixed.

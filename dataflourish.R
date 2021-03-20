@@ -116,8 +116,6 @@ Graduados[Graduados$DEP_NAC == "Antioquia" &
             Graduados$CIU_NAC == "San martin", 5] <- "Meta"
 Graduados[Graduados$CIU_NAC == "Entrerrios", 5] <- "Antioquia"
 
-
-
 #GRAFICO DE LINEAS
 evoluciongeneral <- Graduados %>% group_by(YEAR_SEMESTER) %>% count()
 write.csv(evoluciongeneral, file = "evoluciongeneral.csv", row.names = F)

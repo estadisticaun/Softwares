@@ -500,6 +500,11 @@ fig:mapadearboljerarquiaflourish-fig
 fig:circulosjerarquiaflourish-fig
 fig:anillosjerarquiaflourish-fig
 fig:radialjerarquiaflourish-fig
+fig:paso1sankeyflourish-fig
+fig:paso2sankeyflourish-fig
+fig:paso3sankeyflourish-fig
+fig:paso4sankeyflourish-fig
+fig:finalsankeyflourish-fig
 intro
 tableau
 generalidades
@@ -581,10 +586,6 @@ mapadeproyecciónflourish
 mapa3Dflourish
 globodeconexionesflourish
 jerarquiaflourish
-conclu
-fig:paso1sankeyflourish-fig
-fig:paso2sankeyflourish-fig
-fig:paso3sankeyflourish-fig
-fig:paso4sankeyflourish-fig
-fig:finalsankeyflourish-fig
 diagramadesankeyflourish
+conclu
+carrera-de-grafico-de-barras

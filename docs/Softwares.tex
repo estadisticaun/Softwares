@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-03-15}
+\date{2021-03-17}
 
 \begin{document}
 \maketitle
@@ -9415,6 +9415,99 @@ Como se menciono anteriormente Flourish ofrece distintas opciones para la visual
 }
 
 \caption{Radial: Distribución de programas por modalidad de formación}\label{fig:radialjerarquiaflourish-fig}
+\end{figure}
+
+\hypertarget{diagramadesankeyflourish}{%
+\subsubsection{Diagramas de Sankey}\label{diagramadesankeyflourish}}
+
+Este tipo de gráficos son de gran utilidad para mostrar lo flujos o cambios de un punto a otro, consiste en mínimo dos puntos, uno de partida y otro final, los cuales se encuentran conectados por una banda que representa la cantidad o proporción que sale de un punto y terminan en otro. Dentro de las universidades es muy común el intercambio entre sedes o hasta de universidad para culminar una carrera profesional, para el caso de la Universidad Nacional de Colombia que cuenta con nueve sedes algunas principales y otras a penas iniciando o consolidándose es muy frecuente que los estudiantes culminen su formación en sedes diferentes a las que fueron admitidos. La idea es hacer uso de un diagrama se Sankey para visualizar como se presentan estos cambios, es decir cuales son las sedes que presentan más migración y hacia donde se presentan dichas migraciones, es de resaltar que solo se tendrán en cuenta los estudiantes que cambian de sede y no aquellos en los que coincide su sede de admisión y de matrícula.
+
+El archivo de datos que se debe usar es llamado ``sankey.csv'' y se encuentra compuesto por tres columnas las cuales son sede de admisión, sede de matrícula y cantidad de estudiantes graduados, como se menciono anteriormente es de interés únicamente las sedes que presentan migración, por esta razón la columna sede de admisión se compone de las sedes Amazonía, Caribe y Orinoquía y la columna sede de matrícula contiene las sedes principales de la Universidad Nacional de Colombia como lo son Bogotá, Medellín, Manizales y Palmira. A continuación, se presentan los pasos a seguir para crear un diagrama de Sankey.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Elegir la plantilla básica de la sección diagramas de Sankey, cargue el conjunto de datos ``sankey.csv'' y asigne las columnas A, B y C a los estantes fuente, objetivo y valor de enlace.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish104} 
+
+}
+
+\caption{Carga de datos y asignación de columnas}\label{fig:paso1sankeyflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Regrese a la pestaña avance y observe detalladamente la visualización obtenida que esta casi lista; si se ubica sobre Orinoquía debe visualizar los flujos hacia las cuatro sedes ubicadas en la derecha, cada una de las bandas representa la cantidad de personas admitidas a una sede y que finalizan en otra, por ejemplo, de 265 admitidos a la sede Orinoquía 135 culminaron su formación en la sede Bogotá y los restantes 130 se encuentran repartidos en las sedes Medellín, Manizales y Palmira.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish105} 
+
+}
+
+\caption{Vista previa de la visualización}\label{fig:paso2sankeyflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Sobre la pestaña formato aumente la margen de nodo vertical a diez y disminuya el ancho de nodo a quince.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish106} 
+
+}
+
+\caption{Formato de la visualización}\label{fig:paso3sankeyflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Desde la pestaña apariencia de nodos y enlace debe editar la paleta de colores, los colores a usar serán ``\#5BC0DE'', ``\#8CC63F'', ``\#0071BC'', ``\#F15A24'', ``\#93278F'', ``\#C1272D'' y ``\#FBB03B'', deben ser asignados a las sedes Amazonía, Bogotá, Manizales, Medellín, Palmira, Caribe y Orinoquía respectivamente.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish107} 
+
+}
+
+\caption{Asignación de paleta de colores}\label{fig:paso4sankeyflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Usando la pestaña de diseño establezca el color ``\#ECF0F1'' como color de fondo, también active las fronteras y seleccione color negro para todas; finalmente, haciendo uso de la pestaña encabezamiento agregue como título de la visualización ``Migración de estudiantes hacia diferentes sedes de la Universidad'' en alineación central.
+\end{enumerate}
+
+El diagrama de flujo obtenido permite identificar la migración entre sedes de los estudiantes para culminar sus estudios, también se observa cuales son las sedes predilectas o mas elegidas por los estudiantes, que en este caso son las sedes principales, es importante resaltar que hay mezcla de niveles de formación y los conteos representan el acumulado de los periodos 2009-1 a 2020-1.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish108} 
+
+}
+
+\caption{Flujo entre sedes de la Universidad Nacional de Colombia}\label{fig:finalsankeyflourish-fig}
 \end{figure}
 
 \hypertarget{conclu}{%
