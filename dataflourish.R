@@ -123,7 +123,7 @@ write.csv(evoluciongeneral, file = "evoluciongeneral.csv", row.names = F)
 #GRAFICO DE LINEAS SEGMNETADO POR UNA DIMENSION (MODALIDAD DE FORMACION)
 modalidadformacion <- Graduados %>% group_by(YEAR_SEMESTER, TIPO_NIVEL) %>% 
   count() %>% 
-  spread(key = TIPO_NIVEL, value = n) %>% 
+  pivot_wider(names_from = TIPO_NIVEL, values_from = n) %>% 
   mutate(Total = Pregrado + Postgrado) %>% 
   mutate(Porcentajepregrado = paste(round((Pregrado/Total)*100, 2), "%")) %>% 
   mutate(Porcentajepostgrado = paste(round((Postgrado/Total)*100, 2), "%"))
@@ -132,7 +132,7 @@ write.csv(modalidadformacion, file = "modalidadformacion.csv", row.names = F)
 #TABLA (MODALIDAD DE FORMACION)
 modalidadformaciontabla <- Graduados %>% group_by(YEAR, SEMESTRE, TIPO_NIVEL) %>% 
   count() %>% 
-  spread(key = TIPO_NIVEL, value = n) %>% 
+  pivot_wider(names_from = TIPO_NIVEL, values_from = n) %>% 
   mutate(Total = Pregrado + Postgrado) %>% 
   mutate(Porcentajepregrado = paste(round((Pregrado/Total)*100, 2), "%")) %>% 
   mutate(Porcentajepostgrado = paste(round((Postgrado/Total)*100, 2), "%"))
@@ -146,7 +146,7 @@ modalidadformacioncircular <- Graduados %>%
   summarise(Cantidad = n()) %>% 
   mutate(Total = aggregate(Cantidad~YEAR_SEMESTER, FUN = sum)[,2]) %>%  
   mutate(Porcentaje = paste(round((Cantidad/Total)*100, 2), "%"))
-  write.csv(modalidadformacioncircular, file = "modalidadformacioncircular.csv", 
+write.csv(modalidadformacioncircular, file = "modalidadformacioncircular.csv", 
           row.names = F)
 
 #FILTRADO POR PERIODO 2020-1
@@ -310,18 +310,35 @@ jerarquia <- Graduados %>%
  
 write.csv(jerarquia, "jerarquia.csv", row.names = F)
 
-#CARRERA DE BARRAS
-car_barras <- Graduados %>% 
-  group_by(YEAR_SEMESTER, AREAC_SNIES, NIVEL) %>% 
-  count() %>% 
-  spread(key = YEAR_SEMESTER, value = n) %>% 
-  mutate_all(~replace(., is.na(.), 0))
-
-write.csv(car_barras, file = "car_barras.csv", row.names = F)
-
 #DIAGRAMA DE SANKEY
 sankey <- Graduados %>% 
   group_by(SEDE_NOMBRE_ADM, SEDE_NOMBRE_MAT) %>% 
   count() %>% 
   filter(SEDE_NOMBRE_ADM != SEDE_NOMBRE_MAT)
 write.csv(sankey, file = "sankey.csv", row.names = F)
+
+#CARRERA DE BARRAS
+car_barras <- Graduados %>% 
+  group_by(YEAR_SEMESTER, AREAC_SNIES, NIVEL) %>% 
+  count() %>% 
+  pivot_wider(names_from = YEAR_SEMESTER, values_from = n) %>% 
+  mutate_all(~replace(., is.na(.), 0))
+write.csv(car_barras, file = "car_barras.csv", row.names = F)
+
+#CARRERA DE LINEAS
+pregrado <- Graduados %>% 
+  group_by(YEAR_SEMESTER, DEP_NAC, NIVEL) %>% 
+  filter(NIVEL == "Pregrado" & DEP_NAC != "NA") %>% 
+  summarise(n = n()) 
+
+
+
+car_lineas <- Graduados %>% 
+  group_by(YEAR_SEMESTER, DEP_NAC, NIVEL) %>% 
+  count() %>% 
+  filter(DEP_NAC != "NA") %>% 
+  pivot_wider(names_from = YEAR_SEMESTER, values_from = n) %>%
+  mutate_all(~replace(., is.na(.), 0))
+  
+write.csv(car_lineas, file = "car_lineas.csv", row.names = F)
+
