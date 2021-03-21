@@ -587,5 +587,15 @@ mapa3Dflourish
 globodeconexionesflourish
 jerarquiaflourish
 diagramadesankeyflourish
-conclu
 carrera-de-grafico-de-barras
+conclu
+fig:paso1carrerabarrasflourish-fig
+fig:paso2carrerabarrasflourish-fig
+fig:paso22carrerabarrasflourish-fig
+fig:paso3carrerabarrasflourish-fig
+fig:paso4carrerabarrasflourish-fig
+fig:paso5carrerabarrasflourish-fig
+fig:paso6carrerabarrasflourish-fig
+fig:paso7carrerabarrasflourish-fig
+fig:paso8carrerabarrasflourish-fig
+fig:paso9carrerabarrasflourish-fig

@@ -886,16 +886,64 @@ El paso inicial para esta visualización como en todas es analizar la estructura
 
 1.	Luego de analizado el conjunto de datos de ejemplo cargue el archivo llamado “car_barras-csv” y corrija los caracteres especiales del español en caso de que no se hayan leído correctamente; antes de asignar las columnas a los estantes se debe añadir la columna para imágenes, para esto haga clic derecho sobre la columna B y seleccione insertar columna a la derecha.
 
-2.	El nombre de esta nueva columna será Imágenes, dentro del repositorio en el cual se aloja este documento encontrara una carpeta llamada Imágenes para Flourish en la cual se guardaron imágenes extraídas de internet relacionadas con cada área del conocimiento SNIES, haciendo clic sobre una casilla de la nueva columna debe seleccionar subir archivo y navegar entre las carpeteas hasta encontrar y elegir la imagen relaciona con el área del conocimiento correspondiente. Por ejemplo, para Agronomía, veterinaria y afines debe subir la imagen llamada “Agronomia y afines.jpg”. 
+```{r paso1carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Insertar columnas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish109.jpg")
+```
+
+2.	El nombre de esta nueva columna será Imágenes, dentro del repositorio en el cual se aloja este documento encontrara una carpeta llamada Imágenes para Flourish en la cual se guardaron imágenes extraídas de internet relacionadas con cada área del conocimiento SNIES, haciendo clic sobre una casilla de la nueva columna debe seleccionar subir archivo y navegar entre las carpeteas hasta encontrar y elegir la imagen relaciona con el área del conocimiento correspondiente. Por ejemplo, para Agronomía, veterinaria y afines debe subir la imagen llamada “Agronomia y afines.jpg”.
+
+```{r paso2carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cargar imágenes', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish110.jpg")
+```
+
+```{r paso22carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Seleccionar archivos', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish111.jpg")
+```
 
 3.	Luego de añadir una imagen notara que en la fila correspondiente y columna imágenes se genera un enlace que corresponde a la imagen, puede copiar y pegarlo hasta completar todas las filas que corresponden a esa área. Debe el paso 2 y lo mencionado anteriormente hasta completar todas las filas de la columna imágenes.
 
+```{r paso3carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Conjunto de datos completo', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish112.jpg")
+```
+
 4.	Luego de tener la base de datos completa debe asignar las columnas a los estantes disponibles, A, D-Z, B y C deben ser asignadas a los estantes etiquetas, valores, categorías e imágenes respectivamente.
+
+```{r paso4carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de columnas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish113.jpg")
+```
 
 5.	Regresando a la pestaña avance se encuentran algunos problemas de formato, tales como el titulo y colores de la leyenda y el nombre de las áreas se corta, están incompletos.
 
+```{r paso5carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa del gráfico', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish114.jpg")
+```
+
 6.	Para iniciar a modificar y personalizar el grafico, debe hacer clic sobre la pestaña colores de barra y editar la paleta de colores, “#6D6666”, “#FBB03B”, “#5BC0DE”, “#C1272D”, y “#8CC63F” deben ser asignados a los niveles doctorado, especialidades médicas, especialización, maestría y pregrado respectivamente.
+
+```{r paso6carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Modificación de paleta de colores', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish115.jpg")
+```
 
 7.	Dentro de la pestaña etiquetas es posible editar el tamaño del texto y modo de las etiqueta, se ofrecen dos modos de etiquetas, el primero corresponde a etiquetas en barra e imagen en el eje y la segunda opción corresponde a etiquetas en el eje e imágenes en las barras, en este caso debe seleccionar la primera opción ya que las etiquetas son bastante largas y no se ven completamente en el eje, por último, aumente el tamaño del texto a 1,2.
 
+```{r paso7carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a etiquetas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish116.jpg")
+```
+
 8.	La siguiente pestaña para editar será leyenda, debe seleccionar negrita y el modo del título debe ser fixed.
+
+```{r paso8carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a la pestaña leyenda', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish117.jpg")
+```
+
+9.	La pestaña línea de tiempo y animación permite configurar el estilo de la línea de tiempo, el botón de reproducción, márgenes y tiempos de la animación, también hay una sección llamada gráfico, esta sección permite mostrar u ocultar un gráfico de líneas sobre el eje de tiempo, dicho grafico de líneas trazará los totales por periodo de cada uno de los niveles de formación; en esta ocasión no será habilitado ya que se satura la visualización. En este caso debe aumentar el tamaño del botón a 1.4 y el tamaño del icono debe aumentarse hasta 1.35, sobre la sección tiempo y animación debe establecer la duración de la línea de tiempo en 60, este tiempo corresponde a la duración total de la animación; la duración antes del bucle debe estar en 2, esto significa que el grafico esperara 2 segundos antes de iniciar de nuevo; por último debe aumentar la duración de la animación de rango de la barra a 1, este valor corresponde al duración del cambio de posición de las barras.
+
+```{r paso9carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Configuración de línea de tiempo y animación', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish118.jpg")
+```
+
+10.	Haciendo uso de la pestaña diseño debe activar todas las fronteras y establecerlas en color negro, finalmente con encabezamiento debe asignar como título Áreas del conocimiento SNIES con la mayor cantidad de estudiantes graduados y el subtítulo será Análisis periodo a periodo por nivel de formación.
+
+La visualización obtenida es de gran utilidad para identificar cuáles son la áreas del conocimiento SNIES en las que la Universidad gradúa más estudiantes, en el caso de pregrado y doctorado dicha cantidad de estudiantes se concentra en Ingeniería, arquitectura, urbanismo y afines, para el nivel maestría dicha concentración se presenta en las áreas de ingeniería, arquitectura, urbanismo y matemáticas y ciencias naturales, las especializaciones se ubican en la gran mayoría en el área de ciencias sociales y humanas.
+
+<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/5624875"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
