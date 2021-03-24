@@ -115,6 +115,8 @@ Graduados[Graduados$DEP_NAC == "Cesar" &
 Graduados[Graduados$DEP_NAC == "Antioquia" & 
             Graduados$CIU_NAC == "San martin", 5] <- "Meta"
 Graduados[Graduados$CIU_NAC == "Entrerrios", 5] <- "Antioquia"
+Graduados[Graduados$PROGRAMA == "Ingenieria Forestal" & 
+                     Graduados$FACULTAD == "Minas", 23] <- "Ciencias agrarias"
 
 #GRAFICO DE LINEAS
 evoluciongeneral <- Graduados %>% group_by(YEAR_SEMESTER) %>% count()
@@ -328,10 +330,8 @@ write.csv(car_barras, file = "car_barras.csv", row.names = F)
 #CARRERA DE LINEAS
 pregrado <- Graduados %>% 
   group_by(YEAR_SEMESTER, DEP_NAC, NIVEL) %>% 
-  filter(NIVEL == "Pregrado" & DEP_NAC != "NA") %>% 
+  filter(NIVEL == "Pregrado", DEP_NAC != "NA") %>% 
   summarise(n = n()) 
-
-
 
 car_lineas <- Graduados %>% 
   group_by(YEAR_SEMESTER, DEP_NAC, NIVEL) %>% 
@@ -342,3 +342,101 @@ car_lineas <- Graduados %>%
   
 write.csv(car_lineas, file = "car_lineas.csv", row.names = F)
 
+#GRAFICO DE RADAR
+radar <- Graduados %>% 
+  group_by(EDAD_MOD, NIVEL, SEDE_NOMBRE_MAT) %>% 
+  filter(EDAD_MOD > 15, EDAD_MOD <70) %>% 
+  count() %>% 
+  mutate(CAT_EDAD = case_when(
+    EDAD_MOD <= 23 ~ "23 años o menos",
+    EDAD_MOD >= 24 & EDAD_MOD <= 25 ~ "24 a 25 años",
+    EDAD_MOD >= 26 & EDAD_MOD <= 30 ~ "26 a 30 años",
+    EDAD_MOD >= 31 & EDAD_MOD <= 35 ~ "31 a 35 años",
+    EDAD_MOD >= 36 ~ "36 años o mas"
+  )) %>% 
+  pivot_wider(names_from = NIVEL, values_from = n) %>% 
+  mutate_all(~replace(., is.na(.), 0))
+
+write.csv(radar, file = "radar.csv", row.names = F)
+
+estrato <- Graduados %>% 
+  group_by(ESTRATO_ORIG, NIVEL, SEDE_NOMBRE_MAT) %>% 
+  filter(ESTRATO_ORIG != "NA") %>% 
+  count() %>% 
+  pivot_wider(names_from = NIVEL, values_from = n) %>% 
+  mutate_all(~replace(., is.na(.), 0))
+write.csv(estrato, file = "estrato.csv", row.names = F)
+
+#GRAFICO DE PENDIENTES
+Facultades <- Graduados %>% 
+  group_by(SEDE_NOMBRE_MAT, PROGRAMA, FACULTAD) %>% 
+  summarise(n = n())
+#se retiran los duplicados existentes
+Programas <- Facultades %>% 
+  distinct(SEDE_NOMBRE_MAT, PROGRAMA, .keep_all = TRUE) %>% 
+  select(-n)
+#Elimar facultad de la base general para luego realizar la union
+Graduados <- Graduados %>% select(-FACULTAD)
+Graduados <- left_join(Graduados, y, by = c("SEDE_NOMBRE_MAT", "PROGRAMA"))
+
+#Pendiente sede medellin
+pendiente_medellin <- Graduados %>% 
+  group_by(YEAR, PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT) %>% 
+  filter(SEDE_NOMBRE_MAT == "Medellín", NIVEL == "Pregrado", 
+         PROGRAMA != "Minas", PROGRAMA != "Ciencias", 
+         PROGRAMA != "Ciencias Humanas Y Economicas")  %>% 
+  count() %>% 
+  pivot_wider(names_from = YEAR, values_from = n) %>% 
+  mutate_all(~replace(., is.na(.), 0)) %>% 
+  select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019")
+write.csv(pendiente_medellin, file = "pendiente_medellin.csv", row.names = F)
+
+#Pendiente sede bogota
+pendiente_bogota <- Graduados %>% 
+  group_by(YEAR, PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT) %>% 
+  filter(SEDE_NOMBRE_MAT == "Bogotá", NIVEL == "Pregrado")  %>% 
+  count() #%>% 
+  pivot_wider(names_from = YEAR, values_from = n) %>% 
+  mutate_all(~replace(., is.na(.), 0)) %>% 
+  select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019")
+write.csv(pendiente_medellin, file = "pendiente_medellin.csv", row.names = F)
+
+#Pendiente sede manizales
+pendiente_manizales <- Graduados %>% 
+  group_by(YEAR, PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT) %>% 
+  filter(SEDE_NOMBRE_MAT == "Manizales", NIVEL == "Pregrado")  %>% 
+  count() #%>% 
+pivot_wider(names_from = YEAR, values_from = n) %>% 
+  mutate_all(~replace(., is.na(.), 0)) %>% 
+  select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019")
+write.csv(pendiente_medellin, file = "pendiente_medellin.csv", row.names = F)
+
+
+, 
+PROGRAMA != "Minas", PROGRAMA != "Ciencias", 
+PROGRAMA != "Ciencias Humanas Y Economicas"
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+#GRAFICO DE RADAR
+puntos <- Graduados %>% 
+  group_by(SEDE_NOMBRE_ADM) %>% 
+  count()
+write.csv(puntos, file = "puntos.csv", row.names = F)
+
+#BOXPLOT EDADES
+edad <- Graduados %>% 
+  group_by(YEAR_SEMESTER, EDAD_MOD, NIVEL, SEDE_NOMBRE_MAT) %>% count() %>% 
+  filter(EDAD_MOD > 15, EDAD_MOD <70)
+write.csv(edad, file = "edad.csv", row.names = F)
