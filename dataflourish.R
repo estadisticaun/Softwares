@@ -356,7 +356,6 @@ radar <- Graduados %>%
   )) %>% 
   pivot_wider(names_from = NIVEL, values_from = n) %>% 
   mutate_all(~replace(., is.na(.), 0))
-
 write.csv(radar, file = "radar.csv", row.names = F)
 
 estrato <- Graduados %>% 
@@ -379,6 +378,16 @@ Programas <- Facultades %>%
 Graduados <- Graduados %>% select(-FACULTAD)
 Graduados <- left_join(Graduados, y, by = c("SEDE_NOMBRE_MAT", "PROGRAMA"))
 
+#Pendiente sede bogota
+pendiente_bogota <- Graduados %>% 
+  group_by(YEAR, PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT) %>% 
+  filter(SEDE_NOMBRE_MAT == "Bogotá", NIVEL == "Pregrado")  %>% 
+  count() %>% 
+  pivot_wider(names_from = YEAR, values_from = n) %>% 
+  select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019") %>% 
+  drop_na()
+write.csv(pendiente_bogota, file = "pendiente_bogota.csv", row.names = F)
+
 #Pendiente sede medellin
 pendiente_medellin <- Graduados %>% 
   group_by(YEAR, PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT) %>% 
@@ -391,43 +400,25 @@ pendiente_medellin <- Graduados %>%
   select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019")
 write.csv(pendiente_medellin, file = "pendiente_medellin.csv", row.names = F)
 
-#Pendiente sede bogota
-pendiente_bogota <- Graduados %>% 
-  group_by(YEAR, PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT) %>% 
-  filter(SEDE_NOMBRE_MAT == "Bogotá", NIVEL == "Pregrado")  %>% 
-  count() #%>% 
-  pivot_wider(names_from = YEAR, values_from = n) %>% 
-  mutate_all(~replace(., is.na(.), 0)) %>% 
-  select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019")
-write.csv(pendiente_medellin, file = "pendiente_medellin.csv", row.names = F)
-
 #Pendiente sede manizales
 pendiente_manizales <- Graduados %>% 
   group_by(YEAR, PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT) %>% 
   filter(SEDE_NOMBRE_MAT == "Manizales", NIVEL == "Pregrado")  %>% 
-  count() #%>% 
-pivot_wider(names_from = YEAR, values_from = n) %>% 
-  mutate_all(~replace(., is.na(.), 0)) %>% 
-  select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019")
-write.csv(pendiente_medellin, file = "pendiente_medellin.csv", row.names = F)
+  count() %>% 
+  pivot_wider(names_from = YEAR, values_from = n) %>% 
+  select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019") %>% 
+  drop_na()
+write.csv(pendiente_manizales, file = "pendiente_manizales.csv", row.names = F)
 
-
-, 
-PROGRAMA != "Minas", PROGRAMA != "Ciencias", 
-PROGRAMA != "Ciencias Humanas Y Economicas"
-
-
-
-
- 
-
-
-
-
-
-
-
-
+#Pendiente sede palmira
+pendiente_palmira <- Graduados %>% 
+  group_by(YEAR, PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT) %>% 
+  filter(SEDE_NOMBRE_MAT == "Palmira", NIVEL == "Pregrado")  %>% 
+  count() %>% 
+  pivot_wider(names_from = YEAR, values_from = n) %>% 
+  select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019") %>% 
+  drop_na()
+write.csv(pendiente_palmira, file = "pendiente_palmira.csv", row.names = F)
 
 #GRAFICO DE RADAR
 puntos <- Graduados %>% 
