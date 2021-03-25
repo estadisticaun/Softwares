@@ -599,3 +599,11 @@ jerarquiaflourish
 diagramadesankeyflourish
 carrera-de-grafico-de-barras
 conclu
+fig:paso1boxplotflourish-fig
+fig:paso2oxplotflourish-fig
+fig:paso3boxplotflourish-fig
+fig:paso4boxplotflourish-fig
+fig:paso6boxplotflourish-fig
+fig:paso7boxplotflourish-fig
+carrerabarrasflourish
+boxplotflourish

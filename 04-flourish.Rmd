@@ -879,7 +879,8 @@ El diagrama de flujo obtenido permite identificar la migración entre sedes de l
 knitr::include_graphics("Imágenes/flourish108.jpg")
 ```
 
-#### Carrera de grafico de barras
+#### Carrera de grafico de barras {#carrerabarrasflourish}
+
 Esta visualización está basada en un gráfico de barras al cual se le añade una línea de tiempo con el fin de visualizar los cambios de las categorías que representan cada barra, son de gran utilidad para mostrar como crecen las poblaciones, los votos por un determinado partido político, entre otros. Dentro del sistema de educación superior colombiano los programas de formación son clasificados en áreas del conocimiento, la idea es realizar un grafico de barras con las áreas del conocimiento SNIES y añadir como ventana de tiempo los periodos de 2009-1 a 2020-1 con el fin de explorar e identificar cuáles son las áreas con la mayor cantidad de estudiantes graduados en todos los niveles de formación ofrecidos por la Universidad Nacional.
 
 El paso inicial para esta visualización como en todas es analizar la estructura del conjunto de datos de ejemplo, para esto seleccione la plantilla de carrera de barras y haga clic en la pestaña datos, debe observar que se tienen estantes disponibles para etiquetas, valores, categorías e imágenes; observe además que cada año corresponde a una columna razón por la cual la base de datos a subir para crear la visualización deseada tendrá una columna para el área del conocimiento, una más para el nivel de formación y las demás columnas corresponden a cada periodo, faltaría la columna de imágenes pero esta será añadida directamente en Flourish, ya que la manera en la cual se generan las bases de datos para cada visualización no permite añadir una columna con imágenes.
@@ -947,3 +948,53 @@ knitr::include_graphics("Imágenes/flourish118.jpg")
 La visualización obtenida es de gran utilidad para identificar cuáles son la áreas del conocimiento SNIES en las que la Universidad gradúa más estudiantes, en el caso de pregrado y doctorado dicha cantidad de estudiantes se concentra en Ingeniería, arquitectura, urbanismo y afines, para el nivel maestría dicha concentración se presenta en las áreas de ingeniería, arquitectura, urbanismo y matemáticas y ciencias naturales, las especializaciones se ubican en la gran mayoría en el área de ciencias sociales y humanas.
 
 <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/5624875"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+#### Box-plot {#boxplotflourish}
+
+Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable y permite la identificación de posibles valores atípicos. Para el conjunto de datos que se está trabajando puede ser de interés realizar un boxplot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta. La plantilla para la realización de estos gráficos se encuentra ubicada en la sección dispersión de la galería de plantillas de Flourish, seleccione la plantilla llamada boxplot y explore la pestaña de datos, con el fin de identificar los estantes disponibles para la creación de esta visualización, el conjunto de datos de ejemplo es bastante simple, únicamente contiene dos columnas que corresponden a los valores del eje X e Y respectivamente, los estantes permiten agregar columnas para generar nombres, establecer colores, tamaño y forma a partir de la categoría de los  puntos, también hay una opción llamada cuadricula de gráficos a la cual se puede añadir un columna categórica y crea mini gráficos para cada valor de esa columna; el estante tiempo permite agregar una columna con fechas o ventana de tiempos para generar una animación en la visualización y finalmente están las opciones de añadir filtros e información para crear ventanas emergentes personalizadas.
+
+La base de datos a usar para crear esta gráfica contiene las columnas “YEAR_SEMESTER”, “EDAD_MOD”, “NIVEL”, “SEDE_NOMBRE_MAT” y el conteo de la cantidad de estudiantes graduados, el archivo a cargar es llamado “edad.csv”.
+
+1.	Cargue el archivo mencionado anteriormente, corrija los errores de ortografía y asigne las columnas C, B, A, D y B-D a los estantes valores de X, valores de Y, tiempo, filtro e información para ventanas emergentes personalizadas respectivamente, la columna C también debe ser asignada al estante color.
+
+```{r paso1boxplotflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cargar el conjunto de datos y asignar columnas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish119.jpg")
+```
+
+2.	Regresando a la pestaña avance debe visualizar cinco boxplot, uno para cada nivel de formación adicional a esto en la esquina superior izquierda se ubica la línea de tiempo y el filtro de sedes, también debe identificar que las ventanas emergentes aunque poseen la información correcta no son estéticamente correctas.
+
+```{r paso2oxplotflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa de la visualización', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish120.jpg")
+```
+
+3.	Inicialmente se debe editar la paleta de colores usando la pestaña colores de puntos, los colores a usar son “#6D6666”, “#29ABE2”, “#C1272D”, “#FBB03B” y “#8CC63F” para los niveles doctorado, especialización, maestría, especialidades médicas y pregrado respectivamente.
+
+```{r paso3boxplotflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Edición de paleta de colores', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish121.jpg")
+```
+
+4.	Para el eje X se debe eliminar el título y poner de manera horizontal las etiquetas, para esto haga clic sobre la pestaña eje X, en la sección título seleccione personalizado, sobre la sección etiquetas active el estilo, aumente el tamaño a 1, asigne color negro, establezca el ángulo en 0 y seleccione negrita.
+
+```{r paso4boxplotflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato al eje X', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish122.jpg")
+```
+
+5.	Repita el paso anterior para el eje Y, añadiendo como título del eje Edad.
+
+6.	Para las ventanas emergentes debe seleccionar contenido personalizado y añadir las variables nivel, sede de matrícula y edad, recuerde que debe usar la notación mostrada en gráficos anteriores y usar los comandos de HTML para negrita y enter.
+
+```{r paso6boxplotflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Contenido personalizado en ventanas emergentes', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish124.jpg")
+```
+
+7.	En la pestaña filtro únicamente debe cambiar la etiqueta “All” por todo; con la pestaña boxplot, violín y beeswarm es posible añadir o eliminar elementos, puede explorar esta pestaña y visualizar los elementos gráficos que se pueden agregar tales como el gráfico de violín y personalizar cada uno; en este caso se cambiara el color de la línea de cada boxplot por negro.
+
+```{r paso7boxplotflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Explorar pestaña de adiciones gráficas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish125.jpg")
+```
+
+8.	Desde la pestaña diseño active las fronteras o bordes de la visualización en color negro, establezca como título del gráfico Boxplot para edad y como subtítulo Análisis periodo a periodo.
+
+La visualización obtenida permite identificar la concentración de edades por cada una de las modalidades de formación, también permite identificar valores atípicos o extraños dentro de cada nivel de formación adicional a esto la cantidad de puntos ubicada en cada categoría indica los periodos en los cuales se tiene mayor cantidad de graduados, al incluir un filtro y una ventana de tiempo se le da al usuario mas capacidad para interactuar y analizar el grafico.
+
+<div class="flourish-embed flourish-scatter" data-src="visualisation/5661715"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
