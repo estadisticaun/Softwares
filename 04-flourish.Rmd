@@ -981,6 +981,10 @@ knitr::include_graphics("Imágenes/flourish122.jpg")
 
 5.	Repita el paso anterior para el eje Y, añadiendo como título del eje Edad.
 
+```{r paso5boxplotflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato al eje Y', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish123.jpg")
+```
+
 6.	Para las ventanas emergentes debe seleccionar contenido personalizado y añadir las variables nivel, sede de matrícula y edad, recuerde que debe usar la notación mostrada en gráficos anteriores y usar los comandos de HTML para negrita y enter.
 
 ```{r paso6boxplotflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Contenido personalizado en ventanas emergentes', out.width='85%'}
