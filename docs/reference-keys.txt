@@ -1,9 +1,9 @@
 fig:nice-fig
 tab:nice-tab
+fig:crearcuentaflourish-fig
 fig:compartirtrabajoflourish-fig
 fig:compartirtrabajoflourishpublicar-fig
 fig:compartirtrabajoflourishdescargarimagen-fig
-fig:crearcuentaflourish-fig
 fig:pantallainicialflourish-fig
 fig:respuestasinstantaneas-fig
 fig:galeriadeplantillas-fig
@@ -192,8 +192,8 @@ principales-ventajas-de-flourish
 principales-desventajas-de-flourish
 productos-de-flourish
 precios-de-flourish
-cómo-compartir-el-trabajo
 instalación-de-flourish
+cómo-compartir-el-trabajo
 formanavegacionflourish
 flujo-de-trabajo-1
 análisis-de-datos

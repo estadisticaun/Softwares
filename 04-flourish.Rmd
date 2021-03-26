@@ -94,6 +94,14 @@ Permite al usuario publicar y compartir visualizaciones o incrustarlas en un sit
 ### Precios de Flourish 
 La versión personal de Flourish tiene un costo de $\$69$ USD por mes y permite cancelación en cualquier momento, Business Lite posee un costo anual desde los $\$4999$ USD, finalmente la versión Business Pro y Enterprise no tiene un costo ya que los paquetes pueden ser construidos según las necesidades de la organización.
 
+### Instalación de Flourish 
+
+Para usar esta herramienta de visualización no es necesario la instalación de softwares ya que es una aplicación completamente web, lo que si es necesario es crear una cuenta o perfil para iniciar a crear gráficos y analizar los datos; debe ingresar a la página principal de [Flourish]( https://flourish.studio/) y seleccionar la opción registrarse ubicada en la esquina superior derecha. Al hacer clic sobre este botón le pedirá el inicio de sesión si ya se encuentra registrado o también inicia sesión por medio de su cuenta de Google, finalmente presenta la alternativa de inscribirse si aún no se encuentra registrado o no se desea iniciar con Google.
+
+```{r crearcuentaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Registro en Flourish', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish4.jpg")
+```
+
 ### ¿Cómo compartir el trabajo?
 
 Como ya se mencionó desde la versión gratuita es posible publicar y compartir o incrustar en un sitio web y descargar los gráficos como imágenes planas, para esto en la esquina superior derecha se ubica un botón llamado Exportar y publicar, al hacer clic sobre el encontrara la opción de publicar para compartir e insertar, descargar imagen o descargar HTML, este último es válido para la versión premium o personal de Flourish.
@@ -113,15 +121,6 @@ También es posible descargar la imagen de la visualización creada, para esto h
 ```{r compartirtrabajoflourishdescargarimagen-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descarga de imágenes', out.width='40%'}
 knitr::include_graphics("Imágenes/flourish3.jpg")
 ```
-
-### Instalación de Flourish 
-
-Para usar esta herramienta de visualización no es necesario la instalación de softwares ya que es una aplicación completamente web, lo que si es necesario es crear una cuenta o perfil para iniciar a crear gráficos y analizar los datos; debe ingresar a la página principal de [Flourish]( https://flourish.studio/) y seleccionar la opción registrarse ubicada en la esquina superior derecha. Al hacer clic sobre este botón le pedirá el inicio de sesión si ya se encuentra registrado o también inicia sesión por medio de su cuenta de Google, finalmente presenta la alternativa de inscribirse si aún no se encuentra registrado o no se desea iniciar con Google.
-
-```{r crearcuentaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Registro en Flourish', out.width='85%'}
-knitr::include_graphics("Imágenes/flourish4.jpg")
-```
-
 ## Forma de navegación {#formanavegacionflourish}
 
 La pantalla inicial de Flourish cuando inicia sesión, permite administrar por carpetas los proyectos, ordenarlos y crear nuevas visualizaciones o historias, en la parte central se ubicarán los proyectos de visualización realizados.
