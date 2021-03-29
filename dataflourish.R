@@ -374,7 +374,7 @@ Facultades <- Graduados %>%
 Programas <- Facultades %>% 
   distinct(SEDE_NOMBRE_MAT, PROGRAMA, .keep_all = TRUE) %>% 
   select(-n)
-#Elimar facultad de la base general para luego realizar la union
+#Eliminar facultad de la base general para luego realizar la union
 Graduados <- Graduados %>% select(-FACULTAD)
 Graduados <- left_join(Graduados, y, by = c("SEDE_NOMBRE_MAT", "PROGRAMA"))
 
@@ -396,8 +396,8 @@ pendiente_medellin <- Graduados %>%
          PROGRAMA != "Ciencias Humanas Y Economicas")  %>% 
   count() %>% 
   pivot_wider(names_from = YEAR, values_from = n) %>% 
-  mutate_all(~replace(., is.na(.), 0)) %>% 
-  select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019")
+  select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019") %>% 
+  drop_na()
 write.csv(pendiente_medellin, file = "pendiente_medellin.csv", row.names = F)
 
 #Pendiente sede manizales

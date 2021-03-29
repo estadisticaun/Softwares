@@ -948,6 +948,52 @@ La visualización obtenida es de gran utilidad para identificar cuáles son la �
 
 <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/5624875"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
+#### Gráfico de pendiente {#graficopendienteflourish}
+
+Este tipo de visualización es ideal cuando se quiere mostrar los cambios en la clasificación o posición de una dimensión desde un punto de partida hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo, para el caso de análisis de la Universidad Nacional es relevante identificar los programas que ganan o pierden popularidad, se evalúa la popularidad a nivel de la cantidad de estudiantes graduados, en este caso el análisis se realizara para los programas de pregrado de las cuatro sedes principales de la Universidad, las cuales son Bogotá, Medellín, Manizales y Palmira, se tomara como punto inicial el año 2009 y como punto final el año 2019, no se toma el 2020 ya que la base de que se está trabajando no contiene información para el segundo periodo del año 2020, por lo tanto para que la comparación se equitativa se decide considerar los años 2009 y 2019 ya que se tiene registro de los dos periodos de cada año. 
+
+Debe seleccionar la plantilla llamada etiquetas en línea ubicada en la sección de grafico de pendientes, analizando la pestaña de datos se identifica que es necesario tener una columna con el nombre o identificador de cada línea y tantas columnas como años se quieran mostrar. En este caso el archivo a cargar consiste en el programa de formación, la facultad a la que pertenece, el nivel de formación (el cual solo será pregrado), la sede de matricula que en este caso es Bogotá y por ultimo los dos años que quieren visualizar. 
+
+1.	Cargue el archivo de datos llamado “pendiente_bogota.csv”, corrija los posibles errores ortográficos y asigne las columnas. La columna A debe ser asignada a los estantes nombre y categoría, la columna B contiene la facultad que funcionara como filtro, por lo tanto deber ser asignada al estante filtro, finalmente las columnas E y F se ubican en resultados ya que ellas contienen los valores a mostrar en el gráfico; el contenido de las ventanas emergentes será personalizado por lo cual debe añadir todas las columnas mencionadas anteriormente deben ser añadidas al estante de información para ventanas emergentes personalizadas.
+
+```{r paso1pendienteflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cargue de base de datos y asignación de columnas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish126.jpg")
+```
+
+2.	Regresando a sección de avance notara que la visualización posee una leyenda con todos los posibles programas y adicional a esto no se ven con claridad las líneas, para iniciar a dar formato haga clic sobre la pestaña gráfico, allí aumente el ancho de pendiente a 2,5 y elimine los nombres ubicados en destacar pendientes.
+
+```{r paso2pendienteflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a la pestaña gráfico', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish127.jpg")
+```
+
+3.	Con el fin de eliminar la saturación existente en el gráfico haga clic sobre la pestaña leyenda y desactívela. Sobre la pestaña etiquetas disminuya el tamaño de fuente a 1,25 y desactive la opción de mostrar solo etiquetas resaltadas.
+
+```{r paso3pendienteflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Desacrivarleyenda y formato a las etiquetas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish128.jpg")
+```
+
+4.	Sobre la pestaña popup es posible editar las ventanas emergentes, en este caso seleccione contenido personalizado y añada las columnas programa, facultad y los años 2009 y 2019, recuerde que debe usar elementos de HTML para negrita y enter.
+
+```{r paso4pendienteflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Contenido personalizado a ventanas emergentes', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish129.jpg")
+```
+
+5.	Para el eje debe aumentar el tamaño de fuente a 1,25. Es necesario eliminar la opción de todo del filtro de facultades ya que hace que el gráfico se vea saturado, para esto haga clic sobre la pestaña controles y desactive la opción de incluir todo.
+
+```{r paso5pendienteflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Desactivar la opción de incluir todo en el filtro', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish130.jpg")
+```
+
+6.	Con ayuda de la pestaña diseño establezca como color de fondo “#ECF0F1”, también active las fronteras de la visualización y seleccione color negro para todas; finalmente con la pestaña encabezamiento escriba como título Gráfico de pendiente, sede Bogotá y el subtítulo será Análisis de popularidad en programas de pregrado.
+
+La visualización obtenida permite identificar los cambios de posición de los programas de pregrado por facultad ofrecidos en la se Bogotá de la Universidad Nacional, a modo de ejemplo si se selecciona la facultad de derecho, ciencias políticas y sociales se observa que los programas de derecho y ciencia política han aumentado su cantidad de graduados, para el año 2009 se graduaron 58 y 88 estudiantes respectivamente, mientras que para el año 2019 ambos programas tuvieron un poco más de 120 graduados.
+
+```{r pendientesedebogotaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de pendiente para la sede Bogotá', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish131.jpg")
+```
+
+Este gráfico debe ser replicado para las demás sedes mencionadas, es decir, Medellín, Manizales y Palmira, ya que luego seran usadas para crear una historia.
+
 #### Box-plot {#boxplotflourish}
 
 Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable y permite la identificación de posibles valores atípicos. Para el conjunto de datos que se está trabajando puede ser de interés realizar un boxplot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta. La plantilla para la realización de estos gráficos se encuentra ubicada en la sección dispersión de la galería de plantillas de Flourish, seleccione la plantilla llamada boxplot y explore la pestaña de datos, con el fin de identificar los estantes disponibles para la creación de esta visualización, el conjunto de datos de ejemplo es bastante simple, únicamente contiene dos columnas que corresponden a los valores del eje X e Y respectivamente, los estantes permiten agregar columnas para generar nombres, establecer colores, tamaño y forma a partir de la categoría de los  puntos, también hay una opción llamada cuadricula de gráficos a la cual se puede añadir un columna categórica y crea mini gráficos para cada valor de esa columna; el estante tiempo permite agregar una columna con fechas o ventana de tiempos para generar una animación en la visualización y finalmente están las opciones de añadir filtros e información para crear ventanas emergentes personalizadas.

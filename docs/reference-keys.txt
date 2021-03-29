@@ -125,6 +125,12 @@ fig:paso4boxplotflourish-fig
 fig:paso5boxplotflourish-fig
 fig:paso6boxplotflourish-fig
 fig:paso7boxplotflourish-fig
+fig:paso1pendienteflourish-fig
+fig:paso2pendienteflourish-fig
+fig:paso3pendienteflourish-fig
+fig:paso4pendienteflourish-fig
+fig:paso5pendienteflourish-fig
+fig:pendientesedebogotaflourish-fig
 intro
 tableau
 generalidades
@@ -209,4 +215,5 @@ jerarquiaflourish
 diagramadesankeyflourish
 carrerabarrasflourish
 boxplotflourish
+graficopendienteflourish
 conclu

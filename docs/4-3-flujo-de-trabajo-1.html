@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-03-26" />
+<meta name="date" content="2021-03-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1237,8 +1237,69 @@ Figura 4.118: Configuración de línea de tiempo y animación
 <script src="https://public.flourish.studio/resources/embed.js"></script>
 </div>
 </div>
+<div id="graficopendienteflourish" class="section level4">
+<h4><span class="header-section-number">4.3.1.12</span> Gráfico de pendiente</h4>
+<p>Este tipo de visualización es ideal cuando se quiere mostrar los cambios en la clasificación o posición de una dimensión desde un punto de partida hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo, para el caso de análisis de la Universidad Nacional es relevante identificar los programas que ganan o pierden popularidad, se evalúa la popularidad a nivel de la cantidad de estudiantes graduados, en este caso el análisis se realizara para los programas de pregrado de las cuatro sedes principales de la Universidad, las cuales son Bogotá, Medellín, Manizales y Palmira, se tomara como punto inicial el año 2009 y como punto final el año 2019, no se toma el 2020 ya que la base de que se está trabajando no contiene información para el segundo periodo del año 2020, por lo tanto para que la comparación se equitativa se decide considerar los años 2009 y 2019 ya que se tiene registro de los dos periodos de cada año.</p>
+<p>Debe seleccionar la plantilla llamada etiquetas en línea ubicada en la sección de grafico de pendientes, analizando la pestaña de datos se identifica que es necesario tener una columna con el nombre o identificador de cada línea y tantas columnas como años se quieran mostrar. En este caso el archivo a cargar consiste en el programa de formación, la facultad a la que pertenece, el nivel de formación (el cual solo será pregrado), la sede de matricula que en este caso es Bogotá y por ultimo los dos años que quieren visualizar.</p>
+<ol style="list-style-type: decimal">
+<li>Cargue el archivo de datos llamado “pendiente_bogota.csv”, corrija los posibles errores ortográficos y asigne las columnas. La columna A debe ser asignada a los estantes nombre y categoría, la columna B contiene la facultad que funcionara como filtro, por lo tanto deber ser asignada al estante filtro, finalmente las columnas E y F se ubican en resultados ya que ellas contienen los valores a mostrar en el gráfico; el contenido de las ventanas emergentes será personalizado por lo cual debe añadir todas las columnas mencionadas anteriormente deben ser añadidas al estante de información para ventanas emergentes personalizadas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso1pendienteflourish-fig"></span>
+<img src="Imágenes/flourish126.jpg" alt="Cargue de base de datos y asignación de columnas" width="85%" />
+<p class="caption">
+Figura 4.119: Cargue de base de datos y asignación de columnas
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Regresando a sección de avance notara que la visualización posee una leyenda con todos los posibles programas y adicional a esto no se ven con claridad las líneas, para iniciar a dar formato haga clic sobre la pestaña gráfico, allí aumente el ancho de pendiente a 2,5 y elimine los nombres ubicados en destacar pendientes.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso2pendienteflourish-fig"></span>
+<img src="Imágenes/flourish127.jpg" alt="Formato a la pestaña gráfico" width="85%" />
+<p class="caption">
+Figura 4.120: Formato a la pestaña gráfico
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Con el fin de eliminar la saturación existente en el gráfico haga clic sobre la pestaña leyenda y desactívela. Sobre la pestaña etiquetas disminuya el tamaño de fuente a 1,25 y desactive la opción de mostrar solo etiquetas resaltadas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso3pendienteflourish-fig"></span>
+<img src="Imágenes/flourish128.jpg" alt="Desacrivarleyenda y formato a las etiquetas" width="85%" />
+<p class="caption">
+Figura 4.121: Desacrivarleyenda y formato a las etiquetas
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Sobre la pestaña popup es posible editar las ventanas emergentes, en este caso seleccione contenido personalizado y añada las columnas programa, facultad y los años 2009 y 2019, recuerde que debe usar elementos de HTML para negrita y enter.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso4pendienteflourish-fig"></span>
+<img src="Imágenes/flourish129.jpg" alt="Contenido personalizado a ventanas emergentes" width="85%" />
+<p class="caption">
+Figura 4.122: Contenido personalizado a ventanas emergentes
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Para el eje debe aumentar el tamaño de fuente a 1,25. Es necesario eliminar la opción de todo del filtro de facultades ya que hace que el gráfico se vea saturado, para esto haga clic sobre la pestaña controles y desactive la opción de incluir todo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:paso5pendienteflourish-fig"></span>
+<img src="Imágenes/flourish130.jpg" alt="Desactivar la opción de incluir todo en el filtro" width="85%" />
+<p class="caption">
+Figura 4.123: Desactivar la opción de incluir todo en el filtro
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Con ayuda de la pestaña diseño establezca como color de fondo “#ECF0F1”, también active las fronteras de la visualización y seleccione color negro para todas; finalmente con la pestaña encabezamiento escriba como título Gráfico de pendiente, sede Bogotá y el subtítulo será Análisis de popularidad en programas de pregrado.</li>
+</ol>
+<p>La visualización obtenida permite identificar los cambios de posición de los programas de pregrado por facultad ofrecidos en la se Bogotá de la Universidad Nacional, a modo de ejemplo si se selecciona la facultad de derecho, ciencias políticas y sociales se observa que los programas de derecho y ciencia política han aumentado su cantidad de graduados, para el año 2009 se graduaron 58 y 88 estudiantes respectivamente, mientras que para el año 2019 ambos programas tuvieron un poco más de 120 graduados.</p>
+<div class="figure" style="text-align: center"><span id="fig:pendientesedebogotaflourish-fig"></span>
+<img src="Imágenes/flourish131.jpg" alt="Gráfico de pendiente para la sede Bogotá" width="85%" />
+<p class="caption">
+Figura 4.124: Gráfico de pendiente para la sede Bogotá
+</p>
+</div>
+<p>Este gráfico debe ser replicado para las demás sedes mencionadas, es decir, Medellín, Manizales y Palmira, ya que luego seran usadas para crear una historia.</p>
+</div>
 <div id="boxplotflourish" class="section level4">
-<h4><span class="header-section-number">4.3.1.12</span> Box-plot</h4>
+<h4><span class="header-section-number">4.3.1.13</span> Box-plot</h4>
 <p>Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable y permite la identificación de posibles valores atípicos. Para el conjunto de datos que se está trabajando puede ser de interés realizar un boxplot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta. La plantilla para la realización de estos gráficos se encuentra ubicada en la sección dispersión de la galería de plantillas de Flourish, seleccione la plantilla llamada boxplot y explore la pestaña de datos, con el fin de identificar los estantes disponibles para la creación de esta visualización, el conjunto de datos de ejemplo es bastante simple, únicamente contiene dos columnas que corresponden a los valores del eje X e Y respectivamente, los estantes permiten agregar columnas para generar nombres, establecer colores, tamaño y forma a partir de la categoría de los puntos, también hay una opción llamada cuadricula de gráficos a la cual se puede añadir un columna categórica y crea mini gráficos para cada valor de esa columna; el estante tiempo permite agregar una columna con fechas o ventana de tiempos para generar una animación en la visualización y finalmente están las opciones de añadir filtros e información para crear ventanas emergentes personalizadas.</p>
 <p>La base de datos a usar para crear esta gráfica contiene las columnas “YEAR_SEMESTER”, “EDAD_MOD”, “NIVEL”, “SEDE_NOMBRE_MAT” y el conteo de la cantidad de estudiantes graduados, el archivo a cargar es llamado “edad.csv”.</p>
 <ol style="list-style-type: decimal">
@@ -1247,7 +1308,7 @@ Figura 4.118: Configuración de línea de tiempo y animación
 <div class="figure" style="text-align: center"><span id="fig:paso1boxplotflourish-fig"></span>
 <img src="Imágenes/flourish119.jpg" alt="Cargar el conjunto de datos y asignar columnas" width="85%" />
 <p class="caption">
-Figura 4.119: Cargar el conjunto de datos y asignar columnas
+Figura 4.125: Cargar el conjunto de datos y asignar columnas
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -1256,7 +1317,7 @@ Figura 4.119: Cargar el conjunto de datos y asignar columnas
 <div class="figure" style="text-align: center"><span id="fig:paso2oxplotflourish-fig"></span>
 <img src="Imágenes/flourish120.jpg" alt="Vista previa de la visualización" width="85%" />
 <p class="caption">
-Figura 4.120: Vista previa de la visualización
+Figura 4.126: Vista previa de la visualización
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -1265,7 +1326,7 @@ Figura 4.120: Vista previa de la visualización
 <div class="figure" style="text-align: center"><span id="fig:paso3boxplotflourish-fig"></span>
 <img src="Imágenes/flourish121.jpg" alt="Edición de paleta de colores" width="85%" />
 <p class="caption">
-Figura 4.121: Edición de paleta de colores
+Figura 4.127: Edición de paleta de colores
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -1274,7 +1335,7 @@ Figura 4.121: Edición de paleta de colores
 <div class="figure" style="text-align: center"><span id="fig:paso4boxplotflourish-fig"></span>
 <img src="Imágenes/flourish122.jpg" alt="Formato al eje X" width="85%" />
 <p class="caption">
-Figura 4.122: Formato al eje X
+Figura 4.128: Formato al eje X
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -1283,7 +1344,7 @@ Figura 4.122: Formato al eje X
 <div class="figure" style="text-align: center"><span id="fig:paso5boxplotflourish-fig"></span>
 <img src="Imágenes/flourish123.jpg" alt="Formato al eje Y" width="85%" />
 <p class="caption">
-Figura 4.123: Formato al eje Y
+Figura 4.129: Formato al eje Y
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
@@ -1292,7 +1353,7 @@ Figura 4.123: Formato al eje Y
 <div class="figure" style="text-align: center"><span id="fig:paso6boxplotflourish-fig"></span>
 <img src="Imágenes/flourish124.jpg" alt="Contenido personalizado en ventanas emergentes" width="85%" />
 <p class="caption">
-Figura 4.124: Contenido personalizado en ventanas emergentes
+Figura 4.130: Contenido personalizado en ventanas emergentes
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
@@ -1301,7 +1362,7 @@ Figura 4.124: Contenido personalizado en ventanas emergentes
 <div class="figure" style="text-align: center"><span id="fig:paso7boxplotflourish-fig"></span>
 <img src="Imágenes/flourish125.jpg" alt="Explorar pestaña de adiciones gráficas" width="85%" />
 <p class="caption">
-Figura 4.125: Explorar pestaña de adiciones gráficas
+Figura 4.131: Explorar pestaña de adiciones gráficas
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
