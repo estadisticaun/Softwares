@@ -9688,6 +9688,118 @@ El paso inicial para esta visualización como en todas es analizar la estructura
 
 La visualización obtenida es de gran utilidad para identificar cuáles son la áreas del conocimiento SNIES en las que la Universidad gradúa más estudiantes, en el caso de pregrado y doctorado dicha cantidad de estudiantes se concentra en Ingeniería, arquitectura, urbanismo y afines, para el nivel maestría dicha concentración se presenta en las áreas de ingeniería, arquitectura, urbanismo y matemáticas y ciencias naturales, las especializaciones se ubican en la gran mayoría en el área de ciencias sociales y humanas.
 
+\hypertarget{graficopendienteflourish}{%
+\subsubsection{Gráfico de pendiente}\label{graficopendienteflourish}}
+
+Este tipo de visualización es ideal cuando se quiere mostrar los cambios en la clasificación o posición de una dimensión desde un punto de partida hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo, para el caso de análisis de la Universidad Nacional es relevante identificar los programas que ganan o pierden popularidad, se evalúa la popularidad a nivel de la cantidad de estudiantes graduados, en este caso el análisis se realizara para los programas de pregrado de las cuatro sedes principales de la Universidad, las cuales son Bogotá, Medellín, Manizales y Palmira, se tomara como punto inicial el año 2009 y como punto final el año 2019, no se toma el 2020 ya que la base de que se está trabajando no contiene información para el segundo periodo del año 2020, por lo tanto para que la comparación se equitativa se decide considerar los años 2009 y 2019 ya que se tiene registro de los dos periodos de cada año.
+
+Debe seleccionar la plantilla llamada etiquetas en línea ubicada en la sección de grafico de pendientes, analizando la pestaña de datos se identifica que es necesario tener una columna con el nombre o identificador de cada línea y tantas columnas como años se quieran mostrar. En este caso el archivo a cargar consiste en el programa de formación, la facultad a la que pertenece, el nivel de formación (el cual solo será pregrado), la sede de matricula que en este caso es Bogotá y por ultimo los dos años que quieren visualizar.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Cargue el archivo de datos llamado ``pendiente\_bogota.csv'', corrija los posibles errores ortográficos y asigne las columnas. La columna A debe ser asignada a los estantes nombre y categoría, la columna B contiene la facultad que funcionara como filtro, por lo tanto deber ser asignada al estante filtro, finalmente las columnas E y F se ubican en resultados ya que ellas contienen los valores a mostrar en el gráfico; el contenido de las ventanas emergentes será personalizado por lo cual debe añadir todas las columnas mencionadas anteriormente deben ser añadidas al estante de información para ventanas emergentes personalizadas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish126} 
+
+}
+
+\caption{Cargue de base de datos y asignación de columnas}\label{fig:paso1pendienteflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Regresando a sección de avance notara que la visualización posee una leyenda con todos los posibles programas y adicional a esto no se ven con claridad las líneas, para iniciar a dar formato haga clic sobre la pestaña gráfico, allí aumente el ancho de pendiente a 2,5 y elimine los nombres ubicados en destacar pendientes.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish127} 
+
+}
+
+\caption{Formato a la pestaña gráfico}\label{fig:paso2pendienteflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Con el fin de eliminar la saturación existente en el gráfico haga clic sobre la pestaña leyenda y desactívela. Sobre la pestaña etiquetas disminuya el tamaño de fuente a 1,25 y desactive la opción de mostrar solo etiquetas resaltadas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish128} 
+
+}
+
+\caption{Desacrivarleyenda y formato a las etiquetas}\label{fig:paso3pendienteflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Sobre la pestaña popup es posible editar las ventanas emergentes, en este caso seleccione contenido personalizado y añada las columnas programa, facultad y los años 2009 y 2019, recuerde que debe usar elementos de HTML para negrita y enter.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish129} 
+
+}
+
+\caption{Contenido personalizado a ventanas emergentes}\label{fig:paso4pendienteflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Para el eje debe aumentar el tamaño de fuente a 1,25. Es necesario eliminar la opción de todo del filtro de facultades ya que hace que el gráfico se vea saturado, para esto haga clic sobre la pestaña controles y desactive la opción de incluir todo.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish130} 
+
+}
+
+\caption{Desactivar la opción de incluir todo en el filtro}\label{fig:paso5pendienteflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Con ayuda de la pestaña diseño establezca como color de fondo ``\#ECF0F1'', también active las fronteras de la visualización y seleccione color negro para todas; finalmente con la pestaña encabezamiento escriba como título Gráfico de pendiente, sede Bogotá y el subtítulo será Análisis de popularidad en programas de pregrado.
+\end{enumerate}
+
+La visualización obtenida permite identificar los cambios de posición de los programas de pregrado por facultad ofrecidos en la se Bogotá de la Universidad Nacional, a modo de ejemplo si se selecciona la facultad de derecho, ciencias políticas y sociales se observa que los programas de derecho y ciencia política han aumentado su cantidad de graduados, para el año 2009 se graduaron 58 y 88 estudiantes respectivamente, mientras que para el año 2019 ambos programas tuvieron un poco más de 120 graduados.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish131} 
+
+}
+
+\caption{Gráfico de pendiente para la sede Bogotá}\label{fig:pendientesedebogotaflourish-fig}
+\end{figure}
+
+Este gráfico debe ser replicado para las demás sedes mencionadas, es decir, Medellín, Manizales y Palmira, ya que luego seran usadas para crear una historia.
+
 \hypertarget{boxplotflourish}{%
 \subsubsection{Box-plot}\label{boxplotflourish}}
 

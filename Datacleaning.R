@@ -23,14 +23,9 @@ nombre <- c("ID","TID", "COD_DEP_NAC", "COD_CIU_NAC", "COD_DEP_PROC",
             "SNIES_SEDE_MAT", "SNIESU_CONVENIO")
 Graduados <- Graduados[, !(names(Graduados) %in% nombre)]
 
-#INICIALES CON MAYUSCULA 
-Graduados$DEP_NAC <- capitalize(tolower(Graduados$DEP_NAC))
-Graduados$DEP_NAC <- str_replace_all(Graduados$DEP_NAC, ", d\\. c\\.", " D.C.")
-
 #QUITAR NUMEROS DE LA VARIABLE CIU_NAC
 Graduados$CIU_NAC <- str_remove_all(Graduados$CIU_NAC, "\\d")
 Graduados$CIU_NAC <- capitalize(tolower(Graduados$CIU_NAC))
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "d\\.c\\.", "D.C.")
 
 #VERIFICAR NA's
 NAs <- data.frame()
@@ -47,49 +42,221 @@ nombre <- c("DEP_PROC", "CIU_PROC", "LON_CIU_PROC", "LAT_CIU_PROC", "TIPO_COL",
 Graduados <- Graduados[,!(names(Graduados) %in% nombre)]
 
 #IDENTIFICACIÓN DE CATEGORIAS
-nacionalidad <- Graduados %>% group_by(NACIONALIDAD) %>% count()
+
+#se corrige la ciudad de Bogotá, d.c por Bogotá D.C 
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "d\\.c\\.", "D.C.")
+#AGRUPAR POR CIU_NAC PARA IDENTIFICAR INCONSISTENCIAS
+ciunac <- Graduados %>% group_by(CIU_NAC) %>% count()
+#Cambiar todo a minuscula
+Graduados$CIU_NAC <- tolower(Graduados$CIU_NAC)
+#eliminar tildes de la columna CIU_NAC
+Graduados$CIU_NAC <- chartr('áéíóú','aeiou', Graduados$CIU_NAC)
+#capitalizar para que la primera letra de cada palabra sea mayuscula
+Graduados$CIU_NAC <- capitalize(Graduados$CIU_NAC)
+
+#Se agrupa por ciudad, latitud y longitud
+puntos <- Graduados %>% 
+  group_by(CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
+  count()
+#Se identifica información duplicada y se debe eliminar
+puntos <- puntos[!duplicated(puntos$CIU_NAC), ]
+puntos <- puntos %>% select(-n)
+#Se eliminan las columnas latitud y longitud de la base original para realizar la union
+Graduados <- Graduados %>% select(-c("LAT_CIU_NAC", "LON_CIU_NAC"))
+Graduados <- left_join(Graduados, puntos, by = "CIU_NAC")
+
+#se corrige nombres de algunas ciudades
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Bogota(|,) d.c.", 
+                                     "Bogota D.C.")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Calima", "Darien")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Guadalajara de buga", 
+                                     "Buga")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "San andres de tumaco", 
+                                     "Tumaco")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Tolu viejo", 
+                                     "Toluviejo")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Don matias", 
+                                     "Donmatias")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Itsmina", 
+                                     "Istmina")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Ubate", 
+                                     "Villa de san diego de ubate")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "San vicente chucuri", 
+                                     "San vicente de chucuri")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Entrerios", 
+                                     "Entrerrios")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
+                                     "Cartagena de indias de indias", 
+                                     "Cartagena de indias")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
+                                     "San vicente( ferrer)?", 
+                                     "San vicente ferrer")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
+                                     "Santafe de antioquia", 
+                                     "Santa fe de antioquia")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
+                                     "San andres sotavento", 
+                                     "San andres de sotavento")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
+                                     "San juan de rio(\\s)?seco", 
+                                     "San juan de rioseco")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
+                                     "San pedro de cartago?", 
+                                     "San pedro de cartago")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
+                                     "Valle del gaumez", 
+                                     "Valle del guamuez")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
+                                     "San vicente ferrer de chucuri", 
+                                     "San vicente de chucuri")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
+                                     "San vicente ferrer del caguan", 
+                                     "San vicente del caguan")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Cartagena(\\sde\\sindias)?", 
+                                     "Cartagena de indias")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "San luis de since", 
+                                     "Since")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Armero(\\sguayabal)?", 
+                                     "Armero")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "San sebastian de mariquita", 
+                                     "Mariquita")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Cartagena de indias del chaira", 
+                                     "Cartagena del chaira")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Güican de la sierra", 
+                                     "Guican")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Ariguani", 
+                                     "Ariguaini")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Cerro de san antonio", 
+                                     "Cerro san antonio")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Lopez de micay", 
+                                     "Lopez")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Santacruz", 
+                                     "Santa cruz")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "El canton del san pablo", 
+                                     "Canton del san pablo")
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Manaure(\\sbalcon\\sdel\\scesar)?", 
+                                     "Manaure")
+
+#AGRUPAR POR DEP_NAC PARA IDENTIFICAR INCONSISTENCIAS
+depnac <- Graduados %>% group_by(DEP_NAC) %>% count()
+#INICIALES CON MAYUSCULA 
+Graduados$DEP_NAC <- capitalize(tolower(Graduados$DEP_NAC))
+#eliminar tildes de la columna DEP_NAC
+Graduados$DEP_NAC <- chartr('áéíóú','aeiou', Graduados$DEP_NAC)
+#Corrección de archipielago de san andres
 Graduados$DEP_NAC <- 
   str_replace_all(Graduados$DEP_NAC,
-                  "Archipiélago de san andrés, providencia y( santa catalina)?",
-                  "Archipiélago de san andrés, providencia y santa catalina")
-Graduados$DEP_NAC <- str_replace_all(Graduados$DEP_NAC,"Bogot(á|a)( D.C.)?",
-                                     "Bogotá D.C.")
-Graduados$DEP_NAC <- chartr('áéíóú','aeiou', Graduados$DEP_NAC)
-depnac <- Graduados %>% group_by(DEP_NAC) %>% count()
-ciunac <- Graduados %>% group_by(CIU_NAC) %>% count()
-Graduados$CIU_NAC <- tolower(Graduados$CIU_NAC)
-Graduados$CIU_NAC <- chartr('áéíóú','aeiou', Graduados$CIU_NAC)
-Graduados$CIU_NAC <- capitalize(Graduados$CIU_NAC)
-ciunac <- Graduados %>% group_by(CIU_NAC) %>% count()
-Graduados$NIVEL <- str_replace_all(Graduados$NIVEL,"Especialidades (m|M)édicas",
-                                   "Especialidades Médicas")
-edad <- Graduados %>% group_by(EDAD_MOD) %>% count()
-cat_edad <- Graduados %>% group_by(CAT_EDAD) %>% count()
-estrato <- Graduados %>% group_by(ESTRATO_ORIG) %>% count()
-estrato_cat <- Graduados %>% group_by(ESTRATO) %>% count()
+                  "Archipielago de san andres, providencia y( santa catalina)?",
+                  "Archipielago de san andres, providencia y santa catalina")
+#se corrige el departamento Bogotá por Bogotá D.C 
+Graduados$DEP_NAC <- str_replace_all(Graduados$DEP_NAC, ", d\\. c\\.", " D.C")
+Graduados$DEP_NAC <- str_replace_all(Graduados$DEP_NAC, "Bogota( D.C)?", 
+                                     "Bogota D.C")
+
+#Cambiar el nombre de algunas ciudades dependiendo de su departameto
+Graduados[Graduados$DEP_NAC == "Antioquia" & 
+                 Graduados$CIU_NAC == "San pedro de los milagros", 6] <- "San pedro"
+
+Graduados[Graduados$DEP_NAC == "Tolima" & 
+            Graduados$CIU_NAC == "Colon", 6] <- "Santa isabel"
+Graduados[Graduados$DEP_NAC == "Antioquia" & 
+            Graduados$CIU_NAC == "San andres", 6] <- "San andres de cuerquia"
+Graduados[Graduados$DEP_NAC == "Antioquia" & 
+            Graduados$CIU_NAC == "San andres de cuerquia", 
+          32] <- "-75.672773119699997"
+Graduados[Graduados$DEP_NAC == "Antioquia" & 
+            Graduados$CIU_NAC == "San andres de cuerquia", 
+          31] <- "6.9236096390800004"
+Graduados[Graduados$DEP_NAC == "Antioquia" & 
+            Graduados$CIU_NAC == "Samana", 5] <- "Caldas"
+Graduados[Graduados$DEP_NAC == "Bolivar" & 
+            Graduados$CIU_NAC == "San agustin", 5] <- "Huila"
+Graduados[Graduados$DEP_NAC == "Cesar" & 
+            Graduados$CIU_NAC == "Libano", 5] <- "Tolima"
+Graduados[Graduados$DEP_NAC == "Antioquia" & 
+            Graduados$CIU_NAC == "Puerto lopez", 5] <- "Meta"
+Graduados[Graduados$DEP_NAC == "Cesar" & 
+            Graduados$CIU_NAC == "San martin", 
+          32] <- "-73.510987"
+Graduados[Graduados$DEP_NAC == "Cesar" & 
+            Graduados$CIU_NAC == "San martin", 
+          31] <- "7.999580"
+Graduados[Graduados$DEP_NAC == "Antioquia" & 
+            Graduados$CIU_NAC == "San martin", 5] <- "Meta"
+Graduados[Graduados$CIU_NAC == "Entrerrios", 5] <- "Antioquia"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#AGRUPAR POR NIVEL PARA IDENTIFICAR INCONSISTENCIAS
+nivel <- Graduados %>% group_by(NIVEL) %>% count()
+#convertir a título para eliminar inconsistencia con especialidades medicas
+Graduados$NIVEL <- str_to_title(Graduados$NIVEL)
+
+#Se agrupa por la sede de matricula y se verifica inconcistencia con sede Amazonia
+sede_matricula <- Graduados %>% group_by(SEDE_NOMBRE_MAT) %>% count()
+#correccion de sede Amazonia
 Graduados$SEDE_NOMBRE_MAT <- str_replace_all(Graduados$SEDE_NOMBRE_MAT,
                                              "Amazon(í|i)a", "Amazonía")
-peama_andina <- Graduados %>% group_by(ADM_PEAMA_ANDINA) %>% count()
+
+#Se agrupa por tipo de admision
+tipo_adm <- Graduados %>% group_by(TIPO_ADM) %>% count()
+#se corrige incosistencia detectada con el tipo PEAMA
 Graduados$TIPO_ADM <- str_replace_all(Graduados$TIPO_ADM,
                                       "PEAM?A", "PEAMA")
-paes <- Graduados %>% group_by(PAES) %>% count()
-peama <- Graduados %>% group_by(PEAMA) %>% count()
-convenio <- Graduados %>% group_by(CONVENIO) %>% count()
-tip_convenio <- Graduados %>% group_by(TIP_CONVENIO) %>% count()
-u_convenio <- Graduados %>% group_by(U_CONVENIO) %>% count()
-Graduados$FACULTAD <- capitalize(Graduados$FACULTAD)
+
+#Se agrupa por facultad y sede de matricula
+Facultad <- Graduados %>%  group_by(SEDE_NOMBRE_MAT, FACULTAD) %>% count()
+#Se corrige tilde en facultad Amazonía
+Graduados$FACULTAD <- str_to_title(Graduados$FACULTAD)
 Graduados$FACULTAD <- str_replace_all(Graduados$FACULTAD,
                                       "Amazon(i|í)a", "Amazonía")
-Graduados$FACULTAD <- str_replace_all(Graduados$FACULTAD,
-                                      "Ciencias (a|A)gropecuarias", 
-                                      "Ciencias Agropecuarias")
-Graduados$PROGRAMA <- capitalize(Graduados$PROGRAMA)
+#sede Medellín no tiene falcultad de ciencias agropecuarias, por lo que debe
+#ser reasignada a la de ciencias agrarias
+Graduados[Graduados$SEDE_NOMBRE_MAT == "Medellín" & 
+            Graduados$FACULTAD == "Ciencias Agropecuarias", "FACULTAD"] <- "Ciencias Agrarias"
+#sede Bogotá no tiene falcultad de Agronomía, por lo que debe ser reasignada a 
+#la de ciencias agrarias
+Graduados[Graduados$SEDE_NOMBRE_MAT == "Bogotá" & 
+            Graduados$FACULTAD == "Agronomía", "FACULTAD"] <- "Ciencias Agrarias"
+
+#Se realiza la agrupacion por sede de matricula, programa y facultad
+Facultades <- Graduados %>% 
+  group_by(SEDE_NOMBRE_MAT, PROGRAMA, FACULTAD) %>% 
+  summarise(n = n())
+#Con la agrupacion anterior se identifica que hay programas en dos faculates,
+#lo cual no es correcto, por lo tanto se retiran los duplicados existentes
+Programas <- Facultades %>% 
+  distinct(SEDE_NOMBRE_MAT, PROGRAMA, .keep_all = TRUE) %>% 
+  select(-n)
+#Eliminar facultad de la base general para luego realizar la union
+Graduados <- Graduados %>% select(-FACULTAD)
+Graduados <- left_join(Graduados, Programas, by = c("SEDE_NOMBRE_MAT", "PROGRAMA"))
+
+#Agrupar por programa
+programa <- Graduados %>% group_by(PROGRAMA) %>% count()
+Graduados$PROGRAMA <- tolower(Graduados$PROGRAMA)
+#eliminar tildes con el fin de eliminar inconsistencias
+Graduados$PROGRAMA <- chartr('áéíóú','aeiou', Graduados$PROGRAMA)
 Graduados$PROGRAMA <- str_to_title(Graduados$PROGRAMA, locale = "en")
-Graduados$PROGRAMA <- chartr('áéíóúÁÉÍÓÚ','aeiouAEIOU', Graduados$PROGRAMA)
+#se remueven palabras sobrantes en los programas de formación
 Graduados$PROGRAMA <- str_remove_all(Graduados$PROGRAMA,"Especializacion En ")
 Graduados$PROGRAMA <- str_remove_all(Graduados$PROGRAMA,"Especializacion ")
 Graduados$PROGRAMA <- str_remove_all(Graduados$PROGRAMA,"Ciencias - ")
 Graduados$PROGRAMA <- str_remove_all(Graduados$PROGRAMA,"Ciencias-")
+#se reemplazan nombres de programas que son incorrectos
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Accion Sin Daño(\\sY\\s)?(C|c)onstruccion De Paz", 
                                       "Accion Sin Daño Y Construccion De Paz")
@@ -192,19 +359,15 @@ Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Estudios Urbano ?- ?Regionales", 
                                       "Estudios Urbano - Regionales")
-
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Fisioterapia\\sDel\\sDeporte( Y | Y La |la )?Actividad\\sFisica",
                                       "Fisioterapia Del Deporte Y La Actividad Fisica")
-
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Geomorfologia De Suelos", 
                                       "Geomorfologia Y Suelos")
-
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Gestion Cultural,?\\s(Con\\s)?Enfasis\\s(En\\s)?Planeacion(\\sY\\s)?(P|p)oliticas\\sC(ulturales)?",
                                       "Gestion Cultural Con Enfasis En Planeacion Y Politicas Culturales")
-
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Gestion Cultural(\\sY\\s)?(C|c)omunicativa", 
                                       "Gestion Cultural Y Comunicativa")
@@ -247,11 +410,9 @@ Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Ingenieria - Transportes?", 
                                       "Ingenieria - Transporte")
-
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Ingenieria\\sAmbiental,?\\s-?\\s?Area\\sSanitaria",
                                       "Ingenieria Ambiental - Area Sanitaria")
-
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Ingenieria De Minas(\\sY\\s)?(M|m)etalurgia", 
                                       "Ingenieria De Minas Y Metalurgia")
@@ -306,11 +467,9 @@ Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Ortopedia(\\sY\\s)?(T|t)raumatologia", 
                                       "Ortopedia Y Traumatologia")
-
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Patologia\\sDe\\sLa\\s?(E|e)dificacion(\\sY\\s)?(T|t)ecnicas\\sDe\\sIntervencion\\sY(\\sPrevencion)?",
                                       "Patologia De La Edificacion Y Tecnicas De Intervencion Y Prevencion")
-
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Perinatologia(\\sY\\s)?(N|n)eonatologia", 
                                       "Perinatologia Y Neonatologia")
@@ -332,11 +491,14 @@ Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Vias(\\sY\\s)?(T|t)ransportes?", 
                                       "Vias Y Transportes")
+
+
+
+
+
 Graduados$YEAR_SEMESTER <- str_c(Graduados$YEAR, Graduados$SEMESTRE,
                                  sep = " - ")
-Graduados[Graduados$SEDE_NOMBRE_MAT == "Bogotá" & 
-            Graduados$FACULTAD == "Agronomía", "FACULTAD"] <- "Ciencias agrarias"
-Graduados[Graduados$SEDE_NOMBRE_MAT == "Medellín" & 
-            Graduados$FACULTAD == "Ciencias Agropecuarias", "FACULTAD"] <- "Ciencias agrarias"
+
+
 
 write.csv(Graduados, file = "Datos.csv", row.names = F)
