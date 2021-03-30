@@ -18,7 +18,7 @@ Permite crear informes y paneles básicos sin conocimientos técnicos, sobre tod
 
 - Integración perfecta con Microsoft Excel
 
-Es posible exportar y conectar fácilmente los datos de Excel con los paneles de Power Bi; esto es una gran ventaja, ya que muchas empresas usan hojas de cálculo de Excel como herramienta de análisis de datos.
+Es posible exportar y conectar fácilmente los datos de Excel con los paneles de Power BI; esto es una gran ventaja, ya que muchas empresas usan hojas de cálculo de Excel como herramienta de análisis de datos.
 
 - Permite hacer múltiples análisis complejos en un solo panel
 
@@ -65,18 +65,18 @@ Existe una gran comunidad de expertos y usuarios de Power BI a nivel mundial, qu
 
 ### Productos de Power BI
 
-- [Power BI Desktop](https://powerbi.microsoft.com/es-es/desktop/): es una aplicación de escritorio gratuita, se puede instalar directamente el su equipo y ayuda a explorar los datos de manera profunda y avanzada.
+- [Power BI Desktop](https://powerbi.microsoft.com/es-es/desktop/): es una aplicación de escritorio gratuita, se puede instalar directamente en su equipo y ayuda a explorar los datos de manera profunda y avanzada.
    * Las visualizaciones creadas son guardadas de manera local.
    * Múltiples conexiones a orígenes de datos tanto locales como basados en la nube tales como Dynamics 365, Salesforce, Azure SQL DB, Excel y SharePoint.
    * Preparación de datos a través de la herramienta Power Query.
    * Uso del lenguaje natural que permite hacer preguntas a Power BI sobre sus datos.
    * Uso del lenguaje DAX, para la creación de funciones como medidas rápidas, agrupación, entre otras.
-   * [Recursos de aprendizaje guiado]( https://docs.microsoft.com/en-us/learn/)
+   * [Recursos de aprendizaje guiado]( https://docs.microsoft.com/en-us/learn/).
    * Ejemplos de [código](https://docs.microsoft.com/en-us/samples/browse/) de las herramientas y tecnologías de Microsoft.
 
 - [Power BI Pro](https://powerbi.microsoft.com/es-es/power-bi-pro/): es una licencia de Power BI que posee funciones más extensas que la versión gratuita. 
    * Permite la colaboración entre miembros de un equipo mediante la creación de grupos de trabajo. 
-   * Crear publicar y ver paquetes de contenido organizativo: de manera que periódicamente y las personas que desees reciban alertas con información y datos de preparados. 
+   * Crear publicar y ver paquetes de contenido organizativo: de manera que periódicamente las personas que desees reciban alertas con información y datos de preparados. 
    * Control de acceso a los datos con seguridad de nivel de fila para usuarios y grupos. 
    * Infinidad de conexión a fuentes de datos. 
    * El tamaño máximo de un conjunto de datos individual es de 1GB.
@@ -87,18 +87,28 @@ Existe una gran comunidad de expertos y usuarios de Power BI a nivel mundial, qu
 - [Power BI Premium](https://powerbi.microsoft.com/es-es/power-bi-premium/): es una extensión de Power BI Pro que ofrece la posibilidad de obtener un mejor y más fiable rendimiento. 
    * Inteligencia de negocio para empresas.
    * Análisis de macrodatos, informes en la nube y en el entorno local.
-   * Recursos de almacenamiento y proceso en la nube dedicados.
+   * Recursos de almacenamiento y procesos en la nube dedicados.
    * El tamaño máximo de un conjunto de datos individual es de 10GB.
    * Posee un almacenamiento máximo de 100 TB.
-   * Permite Almacenar datos de Power BI en Azure Data Lake Storage Gen2.
+   * Permite almacenar datos de Power BI en Azure Data Lake Storage Gen2.
    * Seguridad y cifrado de datos.
    * Modelado de datos basado en IA usando AutoML, Cognitive Services y Azure Machine Learning.
 
 ### Precios de Power BI
 
 La licencia de Power BI Pro tiene un costo de $\$9.99$ USD por usuario mensual y la versión Power BI Premium tiene un precio mensual de $\$4995$ USD por recurso de almacenamiento y calculo en la nube dedicado con suscripción anual.
-   
-### Compartir el trabajo realizado en Power BI
+
+## Instalación de Power BI Desktop
+
+La descarga de este software de visualización se realiza desde la [aplicación de la tienda de Windows](https://aka.ms/pbidesktopstore), hacer clic en instalar.
+
+```{r instalacionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Instalar Power BI', out.width='60%'}
+knitr::include_graphics("Imágenes/powerbi4.jpg")
+```
+
+Cuando se complete la descarga haga clic en iniciar, de esta manera ya tiene el software en su computador y se actualizara automáticamente.
+
+## Compartir el trabajo realizado en Power BI
 
 Cuando se trabaja con la versión Pro o Premium se tiene diversas formas de compartir y colaborar con las personas de la organización. 
 
@@ -112,9 +122,9 @@ knitr::include_graphics("Imágenes/powerbi1.jpg")
 knitr::include_graphics("Imágenes/powerbi2.jpg")
 ```
 
--	Publicar informe en el servicio de Power BI, hacer clic en archivo y seleccionar publicar, se abre un cuadro de dialogo pidiendo el inicio de sesión en el servicio de Power BI.
+-	Publicar informe en el servicio de Power BI, hacer clic en archivo y seleccionar publicar, se abre un cuadro de diálogo pidiendo el inicio de sesión en el servicio de Power BI.
 
--	Insertar informes en paginas web, esto es posible hacerlo usando [SharePoint Online](https://docs.microsoft.com/es-es/power-bi/collaborate-share/service-embed-report-spo) o directamente en una [página web](https://docs.microsoft.com/es-es/power-bi/collaborate-share/service-embed-secure) al extraer la URL del informe.
+-	Insertar informes en páginas web, esto es posible hacerlo usando [SharePoint Online](https://docs.microsoft.com/es-es/power-bi/collaborate-share/service-embed-report-spo) o directamente en una [página web](https://docs.microsoft.com/es-es/power-bi/collaborate-share/service-embed-secure) al extraer la URL del informe.
 
 -	Imprimir o guardar en formato PDF, haciendo clic en archivo, seleccionar exportar y finalmente exportar a PDF. 
 
@@ -124,25 +134,15 @@ knitr::include_graphics("Imágenes/powerbi3.jpg")
 
 Al usar la versión gratuita de Power BI, es decir el producto Power BI Desktop solo es posible guardar el área de trabajo de manera local y exportar los informes como PDF.  
 
-## Instalación de Power BI Desktop
-
-La descarga de este software de visualización se realiza desde la [aplicación de la tienda de Windows](https://aka.ms/pbidesktopstore), hacer clic en instalar.
-
-```{r instalacionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Instalar Power BI', out.width='60%'}
-knitr::include_graphics("Imágenes/powerbi4.jpg")
-```
-
-Cuando se complete la descarga haga clic en iniciar, de esta manera ya tiene el software e su computador y se actualizara automáticamente.
-
 ## Forma de navegación {#formadenavegacionpower}
 
-Al momento de iniciar Power BI esta es la pantalla con la que se encuentra, aparece un cuadro de dialogo de introducción que en su panel lateral izquierdo contiene pestañas para conectarse a fuentes de datos, proyectos realizados con el software y la opción de abrir otros informes; en el panel central se muestra la opción para iniciar sesión y comprar licencias pagas de Power BI; finalmente, el panel derecho posee información sobre novedades, blogs, foros y tutoriales útiles sobre el uso de esta herramienta de visualización.
+Al momento de iniciar Power BI esta es la pantalla con la que se encuentra, aparece un cuadro de diálogo de introducción que en su panel lateral izquierdo contiene pestañas para conectarse a fuentes de datos, proyectos realizados con el software y la opción de abrir otros informes; en el panel central se muestra la opción para iniciar sesión y comprar licencias pagas de Power BI; finalmente, el panel derecho posee información sobre novedades, blogs, foros y tutoriales útiles sobre el uso de esta herramienta de visualización.
 
 ```{r pantallainicialpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Pantalla inicial de Power BI', out.width='80%'}
 knitr::include_graphics("Imágenes/powerbi5.jpg")
 ```
 
-Cierre este cuadro de dialogo introductorio para explorar el entorno de creación, dicho entorno se verá así:
+Cierre este cuadro de diálogo introductorio para explorar el entorno de creación, dicho entorno se verá así:
 
 ```{r entornocreacionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Entorno de creación', out.width='80%'}
 knitr::include_graphics("Imágenes/powerbi6.jpg")
@@ -152,7 +152,7 @@ Contiene $5$ espacios principales que le permitirán crear informes con diferent
 
 La sección número $2$ representa la vista de informe o lienzo, este es el espacio donde se crean y organizan las visualizaciones, si hace clic en el icono de datos se encontrará con la tabla de datos a la que se encuentra conectado, finalmente el icono de modelo administra las relaciones existentes entre diversas fuentes de datos en el caso en que usted este conectado a varias fuentes y estas tengan alguna relación. La barra denominada área $3$ es la pestaña de páginas, la cual permite navegar entre paginas y crear nuevas.
 
-En el contenedor número $4$ se ubican las visualizaciones que se pueden crear con Power BI, debajo de las opciones de visualización se ubican dos campos uno llamado valores y otro llamado formato con un icono de rodillo, el primer campo contiene los estantes para ubicar las variables en los ejes X y Y, estos estantes cambian dependiendo de la visualización que se elija; el campo formato permite editar el color de los elementos en la visualización, titulo, leyendas, entre otras opciones.
+En el contenedor número $4$ se ubican las visualizaciones que se pueden crear con Power BI, debajo de las opciones de visualización se ubican dos campos uno llamado valores y otro llamado formato con un icono de rodillo, el primer campo contiene los estantes para ubicar las variables en los ejes X y Y, estos estantes cambian dependiendo de la visualización que se elija; el campo formato permite editar el color de los elementos en la visualización, título, leyendas, entre otras opciones.
 
 Finalmente, en el panel campos se ubica el nombre de todas las variables que contenga la base de datos, dichas variables se dividen en categóricas y numéricas, las categóricas no tienen icono asociado, mientras que las variables numéricas tienen asociadas un icono de $\Sigma$, como se muestra a continuación.
 
@@ -160,7 +160,7 @@ Finalmente, en el panel campos se ubica el nombre de todas las variables que con
 knitr::include_graphics("Imágenes/powerbi7.jpg")
 ```
 
-Observe entonces que los campos Estado, Localidad, Localidad2, Localidad3 y país con categóricos, mientras que los demás campos que contiene esa fuente son numéricos y se les asigna el icono mencionado anteriormente.
+Observe entonces que los campos Estado, Localidad, Localidad2, Localidad3 y país son categóricos, mientras que los demás campos que contiene esa fuente son numéricos y se les asigna el icono mencionado anteriormente.
 
 ## Flujo de trabajo {#flujotrabajopowerbi}
 
@@ -180,13 +180,13 @@ En este caso la conexión a datos se hará a través de un archivo Excel, inicia
 knitr::include_graphics("Imágenes/powerbi9.jpg")
 ```
 
-2.	En el cuadro de dialogo Obtener datos debe seleccionar Excel y hacer clic en conectar, al hacer esto se abre un cuadro de dialogo que permite navegar a través de las carpetas de su equipo para ubicar la localización de las bases de datos. Debe seleccionar una de las bases y dar clic en botón “Abrir”.
+2.	En el cuadro de diálogo Obtener datos debe seleccionar Excel y hacer clic en conectar, al hacer esto se abre un cuadro de diálogo que permite navegar a través de las carpetas de su equipo para ubicar la localización de las bases de datos. Debe seleccionar una de las bases y dar clic en botón “Abrir”.
 
 ```{r conexiondatos2-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Navegación entre carpetas', out.width='60%'}
 knitr::include_graphics("Imágenes/powerbi10.jpg")
 ```
 
-3.	Completado el paso anterior se abre un nuevo cuadro de dialogo llamado Navegar que en su panel izquierdo se ubica una lista de las hojas de trabajo que componen el archivo Excel, debe seleccionar una y luego hacer clic en Cargar.
+3.	Completado el paso anterior se abre un nuevo cuadro de diálogo llamado Navegar que en su panel izquierdo se ubica una lista de las hojas que componen el archivo Excel, debe seleccionar una y luego hacer clic en Cargar.
 
 ```{r conexiondatos3-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Navegador', out.width='80%'}
 knitr::include_graphics("Imágenes/powerbi11.jpg")
@@ -274,7 +274,7 @@ La creación de grupos debe realizarse usando la pestaña agregar columnas y sel
 knitr::include_graphics("Imágenes/powerbi23.jpg")
 ```
 
-Como muestra la descripción de esta opción lo que permite es crear una nueva columna que agrega los vaolres de manera condicional de una columna que se seleccione, en este caso la variable de interés es EDAD_MOD, se crearan grupos para categorizar las edades. En la ventana emergente llamada agregar columna condicional se deben especificar las condiciones por las cuales se quiere agrupar, en ese caso debe llenar los campos como se muestra en la figura \@ref(fig:agregarcolumnacondicional-fig).
+Como muestra la descripción de esta opción lo que permite es crear una nueva columna que agrega los valores de manera condicional de una columna que se seleccione, en este caso la variable de interés es EDAD_MOD, se crearan grupos para categorizar las edades. En la ventana emergente llamada agregar columna condicional se deben especificar las condiciones por las cuales se quiere agrupar, en ese caso debe llenar los campos como se muestra en la figura \@ref(fig:agregarcolumnacondicional-fig).
 
 ```{r agregarcolumnacondicional-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar columna condicional', out.width='80%'}
 knitr::include_graphics("Imágenes/powerbi24.jpg")
@@ -311,7 +311,7 @@ Ahora para realizar la unión de todas las tablas debe:
 knitr::include_graphics("Imágenes/powerbi27.jpg")
 ```
 
--	En la ventana Anexar seleccione tres o mas tablas, en el panel tablas disponibles haga clic sobre cada tabla y clic sobre el botón agregar, por ultimo haga clic en el botón aceptar para guardar los campos.
+-	En la ventana Anexar seleccione tres o mas tablas, en el panel tablas disponibles haga clic sobre cada tabla y clic sobre el botón agregar, por ultimo haga clic en el botón aceptar para guardar los cambios.
 
 ```{r anexardatos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Anexar datos', out.width='80%'}
 knitr::include_graphics("Imágenes/powerbi28.jpg")
@@ -319,7 +319,7 @@ knitr::include_graphics("Imágenes/powerbi28.jpg")
 
 En el panel Consultas obtendrá una nueva tabla llamada Anexar1 la cual posee la unión de todas las tablas a las que se tienen acceso, dicha tabla contiene $101.841$ registros y $55$ columnas.
 
-Como se menciono en la de sección de Tableau los datos requieren una limpieza y preparación la cual se realizo desde R, dentro de los orígenes de datos disponibles en Power BI existe la opción de cargar scripts de R, por lo tanto, se usará esta forma de conexión a datos para cargar el conjunto de datos limpio y listo para realizar análisis.
+Como se menciono en la sección de Tableau los datos requieren una limpieza y preparación la cual se realizo desde R, dentro de los orígenes de datos disponibles en Power BI existe la opción de cargar scripts de R, por lo tanto, se usará esta forma de conexión a datos para cargar el conjunto de datos limpio y listo para realizar análisis.
 
 Inicialmente es necesario verificar que Power BI se encuentre conectado a la versión en la que fue creado el script de R que se desea ejecutar, para esto debe:
 
@@ -369,7 +369,7 @@ Nuevamente se iniciarán con gráficos similares a los presentados en la secció
 knitr::include_graphics("Imágenes/powerbi34.jpg")
 ```
 
-3.	Amplié el grafico para que ocupe todo el lienzo, debe notar que se agregan opciones de eje, leyenda, valores, valores secundarios e información sobre herramientas en el panel visualizaciones.
+3.	Amplié el gráfico para que ocupe todo el lienzo, debe notar que se agregan opciones de eje, leyenda, valores, valores secundarios e información sobre herramientas en el panel visualizaciones.
 
 ```{r paso3lineaspowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas en blanco', out.width='100%'}
 knitr::include_graphics("Imágenes/powerbi35.jpg")
@@ -380,13 +380,13 @@ knitr::include_graphics("Imágenes/powerbi35.jpg")
 knitr::include_graphics("Imágenes/powerbi36.jpg")
 ```
 
-5.	Al observar a detalle la visualización se identifica que el orden del eje x no es el debido, ya que debe ser un orden cronológico que inicia en el periodo 2009-1 y termina en 2020-1, para corregir esto haga clic en los tres puntos ubicados en la esquina superior derecha, seleccione ordenar por y finalmente YEAR_SEMESTER.
+5.	Al observar a detalle la visualización se identifica que el orden del eje X no es el debido, ya que debe ser un orden cronológico que inicia en el periodo 2009-1 y termina en 2020-1, para corregir esto haga clic en los tres puntos ubicados en la esquina superior derecha, seleccione ordenar por y finalmente YEAR_SEMESTER.
 
 ```{r paso5lineaspowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ordenar por', out.width='100%'}
 knitr::include_graphics("Imágenes/powerbi37.jpg")
 ```
 
-6.	La visualización obtenida ordena el eje x de manera descendente, es decir, inicia en el periodo 2020-1 y finaliza en 2009-1, para modificar esto nuevamente haga clic en los tres puntos y seleccione orden ascendente.
+6.	La visualización obtenida ordena el eje X de manera descendente, es decir, inicia en el periodo 2020-1 y finaliza en 2009-1, para modificar esto nuevamente haga clic en los tres puntos y seleccione orden ascendente.
 
 ```{r paso6lineaspowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ordenar de manera ascendente', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi38.jpg")
@@ -397,13 +397,13 @@ knitr::include_graphics("Imágenes/powerbi38.jpg")
 knitr::include_graphics("Imágenes/powerbi39.jpg")
 ```
 
-8.	Haga clic en la pestaña eje x y en la sección título del eje escriba Periodo y aumente el tamaño del texto a 16pt, de manera similar edite el titulo del eje y. 
+8.	Haga clic en la pestaña eje X y en la sección título del eje escriba Periodo y aumente el tamaño del texto a 16pt, de manera similar edite el título del eje Y. 
 
 ```{r paso8lineaspowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar el eje X', out.width='20%'}
 knitr::include_graphics("Imágenes/powerbi40.jpg")
 ```
 
-9.	La pestaña título permite editar el título de la visualización, por tanto, haga clic sobre esta pestaña y el espacio texto del título escriba Evolución histórica del total de estudiantes graduados, seleccione alineación central y aumente el tamaño hasta 25pt.
+9.	La pestaña título permite editar el título de la visualización, por tanto, haga clic sobre esta pestaña y en el espacio texto del título escriba Evolución histórica del total de estudiantes graduados, seleccione alineación central y aumente el tamaño hasta 25pt.
 
 10.	Haga clic sobre la pestaña colores de datos, despliegue el menú de colores y seleccione color personalizado y escriba “1F82C3” que corresponde al color azul usado en la página web de estadísticas de la Universidad Nacional, hasta el momento su visualización debe verse así.
 
@@ -431,9 +431,9 @@ El siguiente dashboard involucra un gráfico de líneas segmentado por una dimen
 knitr::include_graphics("Imágenes/powerbi43.jpg")
 ```
 
-3.	Repita los pasos 5 y 6 del gráfico anterior que ordenan el eje x.
+3.	Repita los pasos 5 y 6 del gráfico anterior que ordenan el eje X.
 
-4.	Edite los títulos de la visualización como se mostro en los pasos 7, 8 y 9 del grafico creado anteriormente.
+4.	Edite los títulos de la visualización como se mostro en los pasos 7, 8 y 9 del gráfico creado anteriormente.
 
 5.	Para los colores de datos seleccione color personalizado y en la categoría postgrado escriba “F15A24”, para la categoría pregrado asigne el color “8CC63F”.
 
@@ -443,7 +443,7 @@ knitr::include_graphics("Imágenes/powerbi43.jpg")
 knitr::include_graphics("Imágenes/powerbi44.jpg")
 ```
 
-7.	Desde esta misma pestaña en estilo seleccione línea y marcadores, en la sección posición ubicada ala inicio de esta pestaña elija centro inferior, su visualización debe verse así.
+7.	Desde esta misma pestaña en estilo seleccione línea y marcadores, en la sección posición ubicada al inicio de esta pestaña elija centro inferior, su visualización debe verse así.
 
 ```{r paso7lineassegmentadobi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas por modalidad de formación', out.width='80%'}
 knitr::include_graphics("Imágenes/powerbi45.jpg")
@@ -459,13 +459,13 @@ Cuando se trata de analizar cifras es importante visualizar las cantidades como 
 knitr::include_graphics("Imágenes/powerbi72.jpg")
 ```
 
-3.	Cambie el nombre de tabla duplicada por Agrupación1, haga clic sobre le botón Agrupar por ubicado en la barra de herramientas del edito Power Query.
+3.	Cambie el nombre de tabla duplicada por Agrupación1, haga clic sobre le botón Agrupar por ubicado en la barra de herramientas del editor Power Query.
 
 ```{r paso3porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agrupar tabla', out.width='100%'}
 knitr::include_graphics("Imágenes/powerbi73.jpg")
 ```
 
-4.	En el cuadro de dialogo agrupar por seleccione uso avanzado, use el campo YEAR_SEMESTER, haga clic sobre agregar agrupación y use el campo TIPO_NIVEL, como nombre de la columna escriba Cantidad, verifique que la operación sea recuento de filas, luego de esto clic en aceptar para guardar los cambios.
+4.	En el cuadro de diálogo agrupar por seleccione uso avanzado, use el campo YEAR_SEMESTER, haga clic sobre agregar agrupación y use el campo TIPO_NIVEL, como nombre de la columna escriba Cantidad, verifique que la operación sea recuento de filas, luego de esto clic en aceptar para guardar los cambios.
 
 ```{r paso4porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Configurar la agrupación', out.width='70%'}
 knitr::include_graphics("Imágenes/powerbi74.jpg")
@@ -477,7 +477,7 @@ knitr::include_graphics("Imágenes/powerbi74.jpg")
 knitr::include_graphics("Imágenes/powerbi75.jpg")
 ```
 
-6.	Repita el paso 2 y cambie el nombre de la tabla duplicada por agrupación2.
+6.	Repita el paso 2 y cambie el nombre de la tabla duplicada por Agrupación2.
 
 7.	Haga clic sobre agrupar por, seleccione básico y use el campo YEAR_SEMESTER, el nombre de la nueva columna será cantidad semestre, nuevamente debe verificar que la operación sea recuento de filas, finalmente clic en aceptar.
 
@@ -485,13 +485,13 @@ knitr::include_graphics("Imágenes/powerbi75.jpg")
 knitr::include_graphics("Imágenes/powerbi76.jpg")
 ```
 
-8.	Ubíquese en la tabla llamada agrupación1, haga clic sobre combinar y seleccione combinar consultas para crear una nueva.
+8.	Ubíquese en la tabla llamada Agrupación1, haga clic sobre combinar y seleccione combinar consultas para crear una nueva.
 
 ```{r paso8porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Combinar consultas para crear una nueva', out.width='50%'}
 knitr::include_graphics("Imágenes/powerbi77.jpg")
 ```
 
-9.	En la ventana combinar, seleccione la tabla agrupación2 en el segundo campo, el tipo de combinación debe ser externa izquierda y debe hacer clic sobre la columna YEAR_SEMESTER de ambas tablas de datos.
+9.	En la ventana combinar, seleccione la tabla Agrupación2 en el segundo campo, el tipo de combinación debe ser externa izquierda y debe hacer clic sobre la columna YEAR_SEMESTER de ambas tablas de datos.
 
 ```{r paso9porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Configurar la combinación', out.width='80%'}
 knitr::include_graphics("Imágenes/powerbi78.jpg")
@@ -514,7 +514,7 @@ knitr::include_graphics("Imágenes/powerbi80.jpg")
 knitr::include_graphics("Imágenes/powerbi81.jpg")
 ```
 
-13.	En el cuadro de dialogo columna personalizada cambie el nombre de la nueva columna por Porcentaje, al lateral de formula se ubica un cuadro llamado columnas disponibles que contiene las columnas que se tienen disponibles en la tabla de datos, haga clic sobre cantidad y luego en el botón insertar, escriba el símbolo de división /, luego seleccione cantidad semestre e insértela a la formula.
+13.	En el cuadro de diálogo columna personalizada cambie el nombre de la nueva columna por Porcentaje, al lateral de formula se ubica un cuadro llamado columnas disponibles que contiene las columnas que se tienen disponibles en la tabla de datos, haga clic sobre cantidad y luego en el botón insertar, escriba el símbolo de división /, luego seleccione cantidad semestre e insértela a la formula.
 
 ```{r paso13porcentajes-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Configurar columna personalizada', out.width='80%'}
 knitr::include_graphics("Imágenes/powerbi82.jpg")
@@ -532,7 +532,7 @@ Por último, haga clic sobre el botón cerrar y aplicar ubicado debajo de archiv
 
 De nuevo en la ventana de Power BI debe observar que en el panel campos se ubican cuatro tablas, las dos agrupaciones, la tabla de modalidadformación y graduados, para mayor comodidad oculte las dos agrupaciones haciendo clic derecho sobre cada una de ellas y seleccionando ocultar.
 
-Es momento de incluir los porcentajes calculados en el gráfico de líneas, para esto haga clic sobre el grafico de líneas, debe reemplazar los campos YEAR_SEMESTER  y TIPO_NIVEL por estos mismos campos, pero de la tabla Modalidadformación, en el estante valores elimine el campo que está allí y arrastre la variable Cantidad a dicho estante, finalmente debe agregar el campo Porcentaje a información sobre herramientas.
+Es momento de incluir los porcentajes calculados en el gráfico de líneas, para esto haga clic sobre el gráfico de líneas, debe reemplazar los campos YEAR_SEMESTER  y TIPO_NIVEL por estos mismos campos, pero de la tabla Modalidadformación, en el estante valores elimine el campo que está allí y arrastre la variable Cantidad a dicho estante, finalmente debe agregar el campo Porcentaje a información sobre herramientas.
 
 ```{r reemplazarvariablescontablamodalidadformacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas con la tabla creada', out.width='100%'}
 knitr::include_graphics("Imágenes/powerbi84.jpg")
@@ -554,7 +554,7 @@ Se creará una tabla de texto que contenga la información del número de estudi
 knitr::include_graphics("Imágenes/powerbi46.jpg")
 ```
 
-2.	Al estante filas agregue el campo YEAR_SEMESTER, al estante columnas TIPO_NIVEL, nuevamente este ultimo campo al estante valores, pero en su menú desplegable debe seleccionar recuento. 
+2.	Al estante filas agregue el campo YEAR_SEMESTER, al estante columnas TIPO_NIVEL, nuevamente este último campo al estante valores, pero en su menú desplegable debe seleccionar recuento. 
 
 ```{r paso2matriz-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar campos a los estantes', out.width='20%'}
 knitr::include_graphics("Imágenes/powerbi47.jpg")
@@ -606,7 +606,7 @@ knitr::include_graphics("Imágenes/powerbi53.jpg")
 knitr::include_graphics("Imágenes/powerbi54.jpg")
 ```
 
-6.	Active la pestaña título y escriba como titulo Serie, desactive el título, esto con el fin de que no quede información duplicada en el botón, pero que al momento de usarlos para crear los marcadores sea fácil identificarlos.
+6.	Active la pestaña título y escriba como título Serie, desactive el título, esto con el fin de que no quede información duplicada en el botón, pero que al momento de usarlos para crear los marcadores sea fácil identificarlos.
 
 7.	Repita los pasos 5 y 6 para el segundo botón, recuerde que este hará referencia a la tabla de texto.
 
@@ -631,19 +631,19 @@ knitr::include_graphics("Imágenes/powerbi57.jpg")
 
 12.	Repita el paso anterior para el botón Tabla, asignando como marcador tabla.
 
-13.	Al hacer clic sobre el botón serie mientras se mantiene oprimida la tecla ctrl, se muestra el grafico de la evolución de estudiantes graduados por modalidad de formación y se oculta la tabla de texto.
+13.	Al hacer clic sobre el botón serie mientras se mantiene oprimida la tecla ctrl, se muestra el gráfico de la evolución de estudiantes graduados por modalidad de formación y se oculta la tabla de texto.
 
 ```{r paso13alternancia-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Uso de los botones para alternar gráficos', out.width='100%'}
 knitr::include_graphics("Imágenes/powerbi58.jpg")
 ```
 
-14.	Debe mover el grafico de líneas al lateral izquierdo, para que se sobreponga a la tabla de texto.
+14.	Debe mover el gráfico de líneas al lateral izquierdo, para que se sobreponga a la tabla de texto.
 
 #### Gráfico circular
 
 El dashboard que se está realizando contiene un gráfico circular que permite visualizar la distribución del total de estudiantes graduados por modalidad de formación para el último periodo del que se tiene registro, es decir 2020-1.
 
-1.	Ubíquese en la parte en blanco del lienzo de trabajo y sobre el panel visualizaciones haga clic en grafico circular. 
+1.	Ubíquese en la parte en blanco del lienzo de trabajo y sobre el panel visualizaciones haga clic en gráfico circular. 
 
 2.	Al estante leyenda arrastre el campo TIPO_NIVEL y también asígnelo al estante valores. 
 
@@ -653,11 +653,11 @@ knitr::include_graphics("Imágenes/powerbi59.jpg")
 
 3.	Desde formato cambie la posición de la leyenda a centro inferior, desactive el título y aumente le tamaño del texto a 12pt.
 
-4.	Cambie le titulo del grafico por Distribución de graduados por modalidad de formación, periodo 2020-1; color negro, tamaño 25pt y alineación central, todo esto desde la pestaña título.
+4.	Cambie le título del gráfico por Distribución de graduados por modalidad de formación, periodo 2020-1; color negro, tamaño 25pt y alineación central, todo esto desde la pestaña título.
 
 5.	Repita el paso 5 mostrado en \@ref(graficodelineassegmentadopowerbi), para cambiar el color de los datos. 
 
-6.	En la pestaña etiquetas y estilo seleccioné Categoría, porcentaje del total, color negro y tamaño de letra 15pt, por último, amplié el grafico de torta hacia arriba para ocupar todo el lateral derecho del lienzo.
+6.	En la pestaña etiquetas y estilo seleccione Categoría, porcentaje del total, color negro y tamaño de letra 15pt, por último, amplié el gráfico circular hacia arriba para ocupar todo el lateral derecho del lienzo.
 
 7.	Despliegue el panel filtros y arrastre el campo YEAR_SEMESTER, seguido de esto seleccione únicamente el periodo 2020-1.
 
@@ -695,7 +695,7 @@ knitr::include_graphics("Imágenes/powerbi63.jpg")
 
 Es momento de realizar un gráfico de barras para observar la distribución de graduados por modalidad de formación en el periodo 2020-1, para crear dicho gráfico debe seguir estos pasos.
 
-1.	Ubíquese en lateral derecho del lienzo que se encuentra blanco, luego en el panel visualizaciones haga clic sobre grafico de barras agrupadas.
+1.	Ubíquese en el lateral derecho del lienzo que se encuentra blanco, luego en el panel visualizaciones haga clic sobre gráfico de barras agrupadas.
 
 ```{r paso1barras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar gráfico de barras agrupadas', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi64.jpg")
@@ -713,7 +713,7 @@ knitr::include_graphics("Imágenes/powerbi65.jpg")
 knitr::include_graphics("Imágenes/powerbi66.jpg")
 ```
 
-4.	Cambie le título del gráfico por Distribución de graduados por nivel de formación, periodo 2020-1; el título del eje x debe ser Número de graduados, desactive el título del eje y, aumente a 12pt el tamaño del texto y seleccione color negro para el texto de este eje.
+4.	Cambie le título del gráfico por Distribución de graduados por nivel de formación, periodo 2020-1; el título del eje X debe ser Número de graduados, desactive el título del eje Y, aumente a 12pt el tamaño del texto y seleccione color negro para el texto de este eje.
 
 ```{r paso4barras-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar título del gráfico de barras', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi67.jpg")
@@ -747,7 +747,7 @@ knitr::include_graphics("Imágenes/powerbi71.jpg")
 
 #### Gráfico de barras apiladas {#barrasapiladas}
 
-Este tipo de gráficos es útil para comparar valores de categorías respecto a un total, y ver como estas categorías se comportan según un segundo criterio segmentación, en este tipo de visualizaciones se trabaja con un valor base a mostrar en la gráfica mediante una barra horizontal, un criterio de segmentación principal (según el cual se dividirá la barra anterior en tantas como valores tome el campo que defina este criterio) y otro criterio secundario que controla la división de las diferentes barras.
+Este tipo de gráficos es útil para comparar valores de categorías respecto a un total, y ver como estas categorías se comportan según un segundo criterio de segmentación, en este tipo de visualizaciones se trabaja con un valor base a mostrar en la gráfica mediante una barra horizontal, un criterio de segmentación principal (según el cual se dividirá la barra anterior en tantas como valores tome el campo que defina este criterio) y otro criterio secundario que controla la división de las diferentes barras.
 La base de datos con la cual se esta trabajando posee diversas variables categóricas, en especial para este gráfico se usarán los campos Sede de matrícula y nivel de formación.
 
 1.	Agregue una nueva página de trabajo y llámela nivel de formación por sede y facultad.
@@ -766,9 +766,9 @@ knitr::include_graphics("Imágenes/powerbi87.jpg")
 
 4.	Haciendo clic sobre el rodillo para dar formato al gráfico y en la pestaña leyenda desactive el título, seleccione como posición centro inferior y aumente el tamaño del texto a 12pt.
 
-5.	Sobre la pestaña del eje y cambie el color del texto por negro y tamaño 12pt, el color del título también debe ser negro, en el espacio para título debe escribir Sede y aumentar el tamaño a 16pt. 
+5.	Sobre la pestaña del eje Y cambie el color del texto por negro y tamaño 12pt, el color del título también debe ser negro, en el espacio para título debe escribir Sede y aumentar el tamaño a 16pt. 
 
-6.	Para el eje x el título debe ser número de graduados en color negro y tamaño 16pt, también debe seleccionar ninguno en la opción mostrar unidades.
+6.	Para el eje X el título debe ser número de graduados en color negro y tamaño 16pt, también debe seleccionar ninguno en la opción mostrar unidades.
 
 7.	Edite los colores de los datos como se realizo en el paso 9 del gráfico de barras; cambie el título del gráfico por Sede y desactívelo, también active el borde de la visualización y seleccione color negro para dicho borde.
 
@@ -802,7 +802,7 @@ knitr::include_graphics("Imágenes/powerbi91.jpg")
 knitr::include_graphics("Imágenes/powerbi92.jpg")
 ```
 
-Hasta el momento el grafico de barras apiladas es de utilidad para identificar como se distribuyen o comportan los diferentes niveles de formación dentro de cada sede, pero como no todas las sedes poseen las mismas facultades o programas se realizará un gráfico igual al anterior, pero con el campo facultad, con el fin de proporcionar información más detallada.
+Hasta el momento el gráfico de barras apiladas es de utilidad para identificar como se distribuyen o comportan los diferentes niveles de formación dentro de cada sede, pero como no todas las sedes poseen las mismas facultades o programas se realizará un gráfico igual al anterior, pero con el campo facultad, con el fin de proporcionar información más detallada.
 
 ```{r barrasapiladasfacultad-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de barras apiladas por facultad', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi93.jpg")
@@ -814,13 +814,13 @@ Repita los pasos mostrados en la sección \@ref(tabladetextopowerbi) para crear 
 knitr::include_graphics("Imágenes/powerbi94.jpg")
 ```
 
-Con estos botones y marcadores se debe tener algo de cuidado ya que al agregar nuevo gráficos al tablero y alternar con los botones que se han creado los nuevos gráficos pueden verse afectados, por lo que es importante actualizar los marcadores cada que se añaden visualizaciones al tablero.
+Con estos botones y marcadores se debe tener algo de cuidado ya que al agregar nuevos gráficos al tablero y alternar con los botones que se han creado los nuevos gráficos pueden verse afectados, por lo que es importante actualizar los marcadores cada que se añaden visualizaciones al tablero.
 
-#### Grafico de anillos {#gráficoanillos}
+#### Gráfico de anillos {#gráficoanillos}
 
 Estos gráficos son bastante similares a los gráficos circulares, son útiles para representar proporciones y porcentajes. En este caso se usará para mostrar la distribución de los programas dentro de la Universidad Nacional, como son muchos programas se hará un filtro del estilo Top N para mostrar únicamente los 5 programas con más estudiantes graduados.
 
-1.	Se trabajará sobre el mismo lienzo en el que se realizaron los gráficos de barras apiladas usando el lateral derecho que se encuentra libre, haga clic sobre el icono de grafico de anillos ubicado en el panel visualizaciones.
+1.	Se trabajará sobre el mismo lienzo en el que se realizaron los gráficos de barras apiladas usando el lateral derecho que se encuentra libre, haga clic sobre el icono de gráfico de anillos ubicado en el panel visualizaciones.
 
 ```{r paso1anillos-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir gráfico de anillos', out.width='25%'}
 knitr::include_graphics("Imágenes/powerbi95.jpg")
@@ -899,7 +899,7 @@ knitr::include_graphics("Imágenes/powerbi105.jpg")
 knitr::include_graphics("Imágenes/powerbi106.jpg")
 ```
 
-En este momento el dashboard contiene todos los elementos visuales para que sea útil y fácil de usar, pero cuando se usan segmentaciones de datos no siempre es necesario que dichas segmentaciones afecten a los objetos que se tienen en el tablero, en este caso en especial el filtro para seleccionar sede puede afectar a todas las visualizaciones excepto al gráfico de barras apiladas por sede, para editar esto debe hacer clic sobre la segemnetación seleccionar sede, luego clic en formato y seleccionar editar relaciones.
+En este momento el dashboard contiene todos los elementos visuales para que sea útil y fácil de usar, pero cuando se usan segmentaciones de datos no siempre es necesario que dichas segmentaciones afecten a los objetos que se tienen en el tablero, en este caso en especial el filtro para seleccionar sede puede afectar a todas las visualizaciones excepto al gráfico de barras apiladas por sede, para editar esto debe hacer clic sobre la segmenetación seleccionar sede, luego clic en formato y seleccionar editar interacciones.
 
 ```{r editarinteracciones-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar interacciones de las segmentaciones', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi107.jpg")
@@ -936,15 +936,15 @@ knitr::include_graphics("Imágenes/powerbi110.jpg")
 ```{r paso3cascada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar variables al gráfico', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi111.jpg")
 ```
-4.	Note que el eje x no posee el orden cronológico correcto por lo que es necesario ordenarlo como se mostró en \@ref(graficolineaspowerbi).
+4.	Note que el eje X no posee el orden cronológico correcto por lo que es necesario ordenarlo como se mostró en \@ref(graficolineaspowerbi).
 
-```{r paso4cascada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ordenar el eje x', out.width='90%'}
+```{r paso4cascada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ordenar el eje X', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi111.jpg")
 ```
 
 5.	Es momento de dar formato al gráfico, por lo cual se cambiará la posición de la leyenda a centro inferior y se aumentará su tamaño a 12pt.
 
-6.	El título del eje x debe ser Periodo en color negro y tamaño 16pt, similar para el eje y pero el título es Número de graduados, para las unidades de este eje seleccione ninguno; por último, desactive el título de la visualización y active el borde.
+6.	El título del eje X debe ser Periodo en color negro y tamaño 16pt, similar para el eje Y pero el título es Número de graduados, para las unidades de este eje seleccione ninguno; por último, desactive el título de la visualización y active el borde.
 
 ```{r paso6cascada-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato del gráfico', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi113.jpg")
@@ -994,7 +994,7 @@ La función CALCULATE evalúa una expresión en un contexto que es modificado po
 knitr::include_graphics("Imágenes/powerbi121.jpg")
 ```
 
-5.	Debe ordenar el eje x como se mostró en secciones anteriores, cambie el nombre de los campos ubicados en los estantes del gráfico por Periodo, Sede de admisión, Total acumulado de graduados.
+5.	Debe ordenar el eje X como se mostró en secciones anteriores, cambie el nombre de los campos ubicados en los estantes del gráfico por Periodo, Sede de admisión, Total acumulado de graduados.
 
 ```{r paso5graficoareas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar nombre de las variables', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi122.jpg")
@@ -1010,8 +1010,8 @@ knitr::include_graphics("Imágenes/powerbi123.jpg")
 
 #### Gráfico de la barra de herramientas
 
- Este tipo de gráficos son útiles para visualizar y detectar rápidamente que categoría de datos tiene la clasificación más alta (el valor mayor). Los gráficos de barra de herramientas con eficaces para mostrar un cambio de clasificación, con el intervalo más alto (valor) en la parte superior de cada periodo de tiempo.
-El dashboard en construcción contiene gráficos útiles que permiten visualizar los periodos de cambio de por sede y también su total acumulado de graduados, es momento de agregar un gráfico como el de barra de herramientas que a demás de permitir visualizar la evolución también permitirá identificar la clasificación de estas sedes por cada periodo.
+ Este tipo de gráficos son útiles para visualizar y detectar rápidamente que categoría de datos tiene la clasificación más alta (el valor mayor). Los gráficos de barra de herramientas son eficaces para mostrar un cambio de clasificación, con el intervalo más alto (valor) en la parte superior de cada periodo de tiempo.
+El dashboard en construcción contiene gráficos útiles que permiten visualizar los periodos de cambio por sede y también su total acumulado de graduados, es momento de agregar un gráfico como el de barra de herramientas que a demás de permitir visualizar la evolución también permitirá identificar la clasificación de estas sedes por cada periodo.
 
 1.	Libere un espacio en la parte inferior del lienzo de trabajo y desde el panel visualizaciones seleccione gráfico de la barra de herramientas.
 
@@ -1025,19 +1025,19 @@ knitr::include_graphics("Imágenes/powerbi124.jpg")
 knitr::include_graphics("Imágenes/powerbi125.jpg")
 ```
 
-3.	Nuevamente debe ordenar el eje x y cambiar el nombre de los campos por Periodo, Sede de admisión y Número de graduados.
+3.	Nuevamente debe ordenar el eje X y cambiar el nombre de los campos por Periodo, Sede de admisión y Número de graduados.
 
-```{r paso3graficobarradeherramientas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Orden del eje x y cambio de nombre a variables', out.width='90%'}
+```{r paso3graficobarradeherramientas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Orden del eje X y cambio de nombre a variables', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi126.jpg")
 ```
 
-4.	Hasta el momento el gráfico es de gran utilidad para visualizar la evolución del número de estudiantes graduados y la clasificación por sedes. Replique los pasos realizados en secciones anteriores para dar formato al gráfico y el paso 6 de \@ref(graficodeareaspowerbi) para dar color a los datos, finalmente, desactive el título del gráfico y active el título.
+4.	Hasta el momento el gráfico es de gran utilidad para visualizar la evolución del número de estudiantes graduados y la clasificación por sedes. Replique los pasos realizados en secciones anteriores para dar formato al gráfico y el paso 6 de \@ref(graficodeareaspowerbi) para dar color a los datos, finalmente, desactive el título del gráfico y active el borde.
 
 ```{r paso4graficobarradeherramientas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato y color de datos gráfico de cascada', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi127.jpg")
 ```
 
-5.	Observe que este gráfico no posee eje Y, por lo que es importante activar las etiquetas para visualizar la cantidad de estudiantes graduados en cada periodo, para esto en la pestaña formato active las etiquetas, enmostrar unidades seleccione ninguno, la orientación será vertical, active texto de desbordamiento, por último, aumente el tamaño del texto a 12pt.
+5.	Observe que este gráfico no posee eje Y, por lo que es importante activar las etiquetas para visualizar la cantidad de estudiantes graduados en cada periodo, para esto en la pestaña formato active las etiquetas, en mostrar unidades seleccione ninguno, la orientación será vertical, active texto de desbordamiento, por último, aumente el tamaño del texto a 12pt.
 
 ```{r paso5graficobarradeherramientas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Activar etiquetas', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi128.jpg")
@@ -1112,7 +1112,7 @@ knitr::include_graphics("Imágenes/powerbi137.jpg")
 knitr::include_graphics("Imágenes/powerbi138.jpg")
 ```
 
-7.	Expanda la columna agrupación por periodo y matricula por las columnas SEDE_NOMBRE_MAT y Total sede y periodo.
+7.	Expanda la columna agrupación por periodo y matrícula por las columnas SEDE_NOMBRE_MAT y Total sede y periodo.
 
 ```{r expandiragrupacionperiodoymatricla-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Expandir la tabla agrupación por periodo y matrícula', out.width='70%'}
 knitr::include_graphics("Imágenes/powerbi139.jpg")
@@ -1135,7 +1135,7 @@ knitr::include_graphics("Imágenes/powerbi141.jpg")
 knitr::include_graphics("Imágenes/powerbi142.jpg")
 ```
 
-11.	En este momento ya se tiene establecido el valor en porcentaje y conteo que toma cada sede en cada uno de sus periodos, hace falta agregar el valor de destino o meta tanto en porcentaje como en conteo para cada sede y en cada uno de los periodos. Recuerde que dicho porcentaje se estable a partir de la proporción del total que ocupa cada sede, a modo de ejemplo este valor debe ser $62.03\%$ para la sede Bogotá y en conteo este valor debe ser 3074, esto por que este es el valor que representa el porcentaje de meta del total de graduados en el periodo 2009-1. Se iniciará agregando la variable con el total de graduados por sede, independiente del periodo, para esto, duplique la tabla de graduados, cambie el nombre por Agrupación sede, seleccione agrupar por, elija la variable SEDDE_NOMBRE_MAT, la columna nueva debe llamarse Total por sede.
+11.	En este momento ya se tiene establecido el valor en porcentaje y conteo que toma cada sede en cada uno de sus periodos, hace falta agregar el valor de destino o meta tanto en porcentaje como en conteo para cada sede y en cada uno de los periodos. Recuerde que dicho porcentaje se establece a partir de la proporción del total que ocupa cada sede, a modo de ejemplo este valor debe ser $62.03\%$ para la sede Bogotá y en conteo este valor debe ser 3074, esto por que este es el valor que representa el porcentaje de meta del total de graduados en el periodo 2009-1. Se iniciará agregando la variable con el total de graduados por sede, independiente del periodo, para esto, duplique la tabla de graduados, cambie el nombre por Agrupación sede, seleccione agrupar por, elija la variable SEDE_NOMBRE_MAT, la columna nueva debe llamarse Total por sede.
 
 ```{r agrupacionporsede-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agrupación por sede', out.width='60%'}
 knitr::include_graphics("Imágenes/powerbi143.jpg")
@@ -1173,13 +1173,13 @@ knitr::include_graphics("Imágenes/powerbi147.jpg")
 knitr::include_graphics("Imágenes/powerbi148.jpg")
 ```
 
-18.	Es momento de agregar una nueva columna que represente el porcentaje que ocupa cada sede sobre el total, añada una nueva columna personalizada, asigne como nombre Porcentaje de meta y en la formula debe dividir Total por sede sobre Total.
+18.	Es momento de agregar una nueva columna que represente el porcentaje que ocupa cada sede sobre el total, añada una nueva columna personalizada, asigne como nombre Porcentaje de meta y en la fórmula debe dividir Total por sede sobre Total.
 
 ```{r porcentajedemeta-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear columna de porcentaje de meta', out.width='80%'}
 knitr::include_graphics("Imágenes/powerbi149.jpg")
 ```
 
-19.	Cambie el tipo de dato a porcentaje, la interpretación de estos dos porcentajes es sencilla, porcentaje periodo representa el porcentaje que ocupo cada sede del total de graduados en cada periodo y porcentaje de meta representa el porcentaje de graduados que debía ocupar. Por ejemplo, la primera fila representa el periodo 2009-1 y la sede Bogotá, en este caso esta sede ocupo el $67.05\%$ del total de graduados en ese periodo, cuando en realidad se esperada que solo ocupara el $62.03%$, es decir, que se superó la meta.
+19.	Cambie el tipo de dato a porcentaje, la interpretación de estos dos porcentajes es sencilla, porcentaje periodo representa el porcentaje que ocupo cada sede del total de graduados en cada periodo y porcentaje de meta representa el porcentaje de graduados que debía ocupar. Por ejemplo, la primera fila representa el periodo 2009-1 y la sede Bogotá, en este caso esta sede ocupo el $67.05\%$ del total de graduados en ese periodo, cuando en realidad se esperada que solo ocupara el $62.03\%$, es decir, que se superó la meta.
 
 ```{r porccentajedemetaenlabase-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Porcentaje de meta', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi150.jpg")
@@ -1220,7 +1220,7 @@ knitr::include_graphics("Imágenes/powerbi155.jpg")
 
 4.	Para dar formato a este gráfico haga clic sobre la columna Total meta ubicada en el panel campos y haga clic sobre la coma ubicada en formato; repita esta operación para Total sede y periodo.
 
-5.	En este momento la visualización se está calculando de manera general y la idea inicial es ver este progreso a nivel de sede y periodo, por tanto, es necesario agregar dos segmentaciones de datos una con el campo SEDE_NOMBRE_MAT y otra con YEAR_SEMESTER, recuerde darte el formato mostrado en secciones anteriores y activar la selección única.
+5.	En este momento la visualización se está calculando de manera general y la idea inicial es ver este progreso a nivel de sede y periodo, por tanto, es necesario agregar dos segmentaciones de datos una con el campo SEDE_NOMBRE_MAT y otra con YEAR_SEMESTER, recuerde darle el formato mostrado en secciones anteriores y activar la selección única.
 
 ```{r paso5medidor-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar segmentaciones', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi156.jpg")
@@ -1238,7 +1238,7 @@ knitr::include_graphics("Imágenes/powerbi157.jpg")
 knitr::include_graphics("Imágenes/powerbi158.jpg")
 ```
 
-8.	En el espacio en blanco ubicado en el lateral izquierdo debe agregar un grafico circular que permita identificar la distribución de las sedes de matrícula por periodo, añada el gráfico circular y asigne los campos SEDE_NOMBRE_MAT y Conteo a los estantes leyenda y valores respectivamente, estos campos los debe tomar de la base de datos Graduados.
+8.	En el espacio en blanco ubicado en el lateral izquierdo debe agregar un gráfico circular que permita identificar la distribución de las sedes de matrícula por periodo, añada el gráfico circular y asigne los campos SEDE_NOMBRE_MAT y Conteo a los estantes leyenda y valores respectivamente, estos campos los debe tomar de la base de datos Graduados.
 
 ```{r paso8medidor-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar gráfico circular', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi159.jpg")
@@ -1250,7 +1250,7 @@ knitr::include_graphics("Imágenes/powerbi159.jpg")
 knitr::include_graphics("Imágenes/powerbi160.jpg")
 ```
 
-10.	Para dar formato a este último gráfico debe desactivar la leyenda, asignar los colores de datos mostrados en la sección (hacer referencia gráfico de áreas), para la pestaña etiquetas seleccione todas las etiquetas de detalle, en color negro y tamaño 12pt, como título debe escribir Distribución de graduados por sede en color negro, tamaño 25pt y alineación central; finalmente cambie el título de los campos SEDE_NOMBRE_MAT por Sede de matrícula y Conteo por Número de estudiantes graduados; también debe activar el borde.
+10.	Para dar formato a este último gráfico debe desactivar la leyenda, asignar los colores de datos mostrados en la sección \@ref(graficodeareaspowerbi) para la pestaña etiquetas seleccione todas las etiquetas de detalle, en color negro y tamaño 12pt, como título debe escribir Distribución de graduados por sede en color negro, tamaño 25pt y alineación central; finalmente cambie el título de los campos SEDE_NOMBRE_MAT por Sede de matrícula y Conteo por Número de estudiantes graduados; también debe activar el borde.
 
 ```{r tablerofinalmetasporsededematricula-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard: Metas por sede de matrícula', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi161.jpg")
@@ -1259,9 +1259,9 @@ knitr::include_graphics("Imágenes/powerbi161.jpg")
 #### Mapeo de datos {#mapeodatospowerbi}
 
 El mapeo de datos o georreferenciación es una herramienta muy utilizada cuando se quiere mostrar la procedencia de la información; en el conjunto de datos que se esta analizando se tiene información sobre la longitud y latitud de la cuidad de nacimiento, el nombre de dicha ciudad y el departamento al que pertenece.
-El software de visualización Power Bi presenta diversas formas de realizar mapeo de datos, 3 de ellas están en los objetos predeterminados del panel visualizaciones y otro debe ser activado desde opciones y configuración.
+El software de visualización Power BI presenta diversas formas de realizar mapeo de datos, 3 de ellas están en los objetos predeterminados del panel visualizaciones y otro debe ser activado desde opciones y configuración.
 
--	Mapa: este objeto visual posee un icono de globo terráqueo, es un mapa de burbujas, es decir, que al introducir coordenadas de ubicación como latitud y longitud dibuja una burbuja sobre el punto, es posible añadir una variable que determine el tamaño de ducho punto. Para realizar este tipo de mapa únicamente es necesario añadir el objeto al lienzo y agregar los campos LAT_CUI_NAC, LON_CIU_NAC a loa estantes latitud y longitud respectivamente, para el tamaño debe agregar el campo conteo.
+-	Mapa: este objeto visual posee un icono de globo terráqueo, es un mapa de burbujas, es decir, que al introducir coordenadas de ubicación como latitud y longitud dibuja una burbuja sobre el punto, es posible añadir una variable que determine el tamaño de dicho punto. Para realizar este tipo de mapa únicamente es necesario añadir el objeto al lienzo y agregar los campos LAT_CUI_NAC, LON_CIU_NAC a los estantes latitud y longitud respectivamente, para el tamaño debe agregar el campo conteo.
 
 ```{r mapaburbujas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Mapa de burbujas para cuidad de nacimiento', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi162.jpg")
@@ -1277,7 +1277,7 @@ knitr::include_graphics("Imágenes/powerbi163.jpg")
 
 Se identifica que las ciudades no se ubican únicamente en Colombia como debería ser, sino que están repartidas en el mundo, esto sucede ya que hay ciudades con el mismo nombre en diferentes lugares del mundo y no es posible indicarle al mapa que únicamente se quieren visualizar las ciudades que pertenecen a Colombia; a pesar de que este mapa es una buena opción ya que rellena toda el área que pertenece a una ciudad no es posible usarlo en este caso ya que no se puede especificar el país al que deben pertenecer estas ciudades.
 
--	ArcGIS Maps for Power BI: ArcGIS es un completo sistema que permite recopilar, organizar, administrar, compartir y distribuir información geográfica, Power Bi proporciona una integración con este sistema que pretende llevar las visualizaciones de mapa a un siguiente nivel, al usar datos demográficos y mapas atractivos. Para añadir este tipo de mapas al lienzo de trabajo haga clic sobre el icono de ArcGIS en el panel visualizaciones, agregue el campo CIU_NAC al estante location y la variable conteo al estante size.
+-	ArcGIS Maps for Power BI: ArcGIS es un completo sistema que permite recopilar, organizar, administrar, compartir y distribuir información geográfica, Power BI proporciona una integración con este sistema que pretende llevar las visualizaciones de mapa a un siguiente nivel, al usar datos demográficos y mapas atractivos. Para añadir este tipo de mapas al lienzo de trabajo haga clic sobre el icono de ArcGIS en el panel visualizaciones, agregue el campo CIU_NAC al estante location y la variable conteo al estante size.
 
 ```{r mapaarcgis-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='ArcGIS Map para cuidad de nacimiento, nivel mundial', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi164.jpg")
@@ -1307,7 +1307,7 @@ Observara que su mapa no presenta cambios, es decir que sigue representando las 
 knitr::include_graphics("Imágenes/powerbi179.jpg")
 ```
 
-La idea del dashboard para el lugar de nacimiento es mostrar la cantidad de estudiantes graduados para el periodo 2020-1, para esto despliegue el panel filtros y lleve hacia el la variable YEAR_SEMESTER, seleccione únicamente el periodo 2020-1.
+La idea del dashboard para el lugar de nacimiento es mostrar la cantidad de estudiantes graduados para el periodo 2020-1, para esto despliegue el panel filtros y lleve hacia el a la variable YEAR_SEMESTER, seleccione únicamente el periodo 2020-1.
 
 ```{r mapaarcgiscoloreadofiltrodeperiodo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Agregar filtro del periodo 2020-1', out.width='100%'}
 knitr::include_graphics("Imágenes/powerbi182.jpg")
@@ -1331,7 +1331,7 @@ Cierre la pestaña Symbol color y ubíquese sobre la pestaña symbol style, sele
 knitr::include_graphics("Imágenes/powerbi183.jpg")
 ```
 
-Es momento de cambiar el nombre de las variables, CIU_NAC debe ser cambiado por Municipio y Conteo por Numero de estudiantes graduados, al hacer esto notara que vuelve a ser un mapa de burbujas, por lo tanto, repita el paso donde se cambia para que se sombree toda el área, desde el botón formato con el icono de rodillo debe desactivar el titulo y activar el borde. Se obtiene un mapa que permite visualizar la distribución de los estudiantes graduados por municipio. 
+Es momento de cambiar el nombre de las variables, CIU_NAC debe ser cambiado por Municipio y Conteo por Numero de estudiantes graduados, al hacer esto notara que vuelve a ser un mapa de burbujas, por lo tanto, repita el paso donde se cambia para que se sombree toda el área, desde el botón formato con el icono de rodillo debe desactivar el título y activar el borde. Se obtiene un mapa que permite visualizar la distribución de los estudiantes graduados por municipio. 
 
 ```{r mapaarcgismunicipiosperiodo20201-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Total de estudiantes graduados por municipio, periodo 2020-1', out.width='100%'}
 knitr::include_graphics("Imágenes/powerbi184.jpg")
@@ -1422,7 +1422,7 @@ knitr::include_graphics("Imágenes/powerbi176.jpg")
 #### Objeto visual de script de R
 La versión gratuita de Power BI no posee todos los gráficos básicos que un análisis estadístico exploratorio requiere, como lo son histogramas o bloxplot, pero ofrece la posibilidad de crear objetos visuales a través de scripts de R, en este caso se creara un histograma que permita visualizar la distribución de las edades por modalidad de formación, algo muy similar a lo mostrado en \@ref(histograma).
 
-1.	Cree una nueva pagina de trabajo y haga clic sobre el icono de R en el panel visualizaciones.
+1.	Cree una nueva página de trabajo y haga clic sobre el icono de R en el panel visualizaciones.
 
 2.	Después de agregar el objeto visual R, su lienzo de trabajo se dividirá en dos secciones, una de ellas mostrara la visualización creada a partir de un script R y la otra sección funciona como un editor de script de R que permite escribir o pegar código, inicialmente esta última sección le pedirá agregar campos al área valores, esto se debe a que Power BI creara una base de datos con los campos seleccionados.
 
@@ -1444,7 +1444,7 @@ knitr::include_graphics("Imágenes/powerbi199.jpg")
 knitr::include_graphics("Imágenes/powerbi200.jpg")
 ```
 
-El conjunto de datos con el cual se trabaja es “dataset”, inicialmente se eliminan las filas con valores faltantes, seguido de esto se remueven los valores de edad menores a 15 años y mayores a 70 ya que se consideran posibles errores de digitación, finalmente se crea un histograma con apoyo de la librería ggplot2, dicho histograma presenta la edad en el eje x, el relleno de las barras dependerá de la modalidad de formación y el ancho de cada agrupación será de cinco.
+El conjunto de datos con el cual se trabaja es “dataset”, inicialmente se eliminan las filas con valores faltantes, seguido de esto se remueven los valores de edad menores a 15 años y mayores a 70 ya que se consideran posibles errores de digitación, finalmente se crea un histograma con apoyo de la librería ggplot2, dicho histograma presenta la edad en el eje X, el relleno de las barras dependerá de la modalidad de formación y el ancho de cada agrupación será de cinco.
 
 6.	Haga clic sobre el icono ejecutar script ubicado en la esquina superior derecha de la ventana de editor, al ejecutarlo obtendrá dos histogramas, uno para cada modalidad de formación.
 
@@ -1452,9 +1452,10 @@ El conjunto de datos con el cual se trabaja es “dataset”, inicialmente se el
 knitr::include_graphics("Imágenes/powerbi201.jpg")
 ```
 
-Al observar detalladamente el gráfico obtenido se identifica que este es incorrecto ya que la cantidad de estudiantes graduados es muy baja pata ambas modalidades, esto se debe a que Power BI por defecto elimina las filas duplicadas, es decir que la cantidad de datos se reduce en gran medida.
+Al observar detalladamente el gráfico obtenido se identifica que este es incorrecto ya que la cantidad de estudiantes graduados es muy baja para ambas modalidades, esto se debe a que Power BI por defecto elimina las filas duplicadas, es decir que la cantidad de datos se reduce en gran medida.
 
 Una solución a este problema es agregar una columna que funcione cono índice o identificador, que debe ser agregado con los demás campos al estante valores, con esto no se identificarán filas duplicadas y por tanto no serán removidas.
+
 1.	Elimine el objeto visual R creado anteriormente.
 
 2.	Haga clic sobre transformar datos, ya ubicado sobre el panel Power Query seleccione la tabla graduados, haga clic sobre agregar columna y seleccione columna de índice desde 1.
@@ -1493,7 +1494,7 @@ knitr::include_graphics("Imágenes/powerbi206.jpg")
 
 Se observa que la mayoría de los puntos atípicos o extremos se ubican en la parte superior de los bigotes, el nivel con menor dispersión es pregrado para el cual su mediana se ubica alrededor de los 25 años, la mediana superior se ubica en el nivel doctorado, alrededor de los 40 años.
 
-Debe editar el titulo de cada una de las visualizaciones creadas, agregar una tarjeta para la segmentación con el campo SEDE_NOMBRE_MAT y botones que permitan la alternancia de gráficos, su dashboard debe verse de la siguiente manera.
+Debe editar el título de cada una de las visualizaciones creadas, agregar una tarjeta para la segmentación con el campo SEDE_NOMBRE_MAT y botones que permitan la alternancia de gráficos, su dashboard debe verse de la siguiente manera.
 
 ```{r tableroedad-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Dashboard: Edad', out.width='90%'}
 knitr::include_graphics("Imágenes/powerbi207.jpg")
@@ -1515,7 +1516,7 @@ knitr::include_graphics("Imágenes/powerbi187.jpg")
 knitr::include_graphics("Imágenes/powerbi188.jpg")
 ```
 
-3.	Notara que su gráfico solo presenta un punto, esto se debe a que las medidas se encuentran agregadas, es decir que ese punto representa la suma de todas las ventas y la suma de todos los beneficios, suma es la agregación por defecto; para solucionar esto debe hacer clic en el menú desplegable de los campos Profit y Sales y seleccionar no resumir.
+3.	Notara que su gráfico solo presenta un punto, esto se debe a que las medidas se encuentran agregadas, es decir que ese punto representa la suma de todas las ventas y la suma de todos los beneficios, suma es la agregación por defecto; para solucionar esto debe hacer clic en el menú desplegable de los campos Profit y Sales y seleccione no resumir.
 
 ```{r paso3dispersionpowerbi-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='No resumir medidas', out.width='30%'}
 knitr::include_graphics("Imágenes/powerbi189.jpg")
@@ -1579,4 +1580,4 @@ knitr::include_graphics("Imágenes/powerbi196.jpg")
 knitr::include_graphics("Imágenes/powerbi197.jpg")
 ```
 
-La descripción emergente indica el valor de la predicción y los limites del intervalo de confianza, así como en las líneas de tendencia no es posible encontrar información acerca del método usado para realizar el pronóstico o medidas estadísticas útiles que permitan la evaluación del mismo. 
+La descripción emergente indica el valor de la predicción y los límites del intervalo de confianza, así como en las líneas de tendencia no es posible encontrar información acerca del método usado para realizar el pronóstico o medidas estadísticas útiles que permitan la evaluación del mismo. 
