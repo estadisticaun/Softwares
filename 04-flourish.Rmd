@@ -1044,6 +1044,6 @@ knitr::include_graphics("Imágenes/flourish125.jpg")
 
 8.	Desde la pestaña diseño active las fronteras o bordes de la visualización en color negro, establezca como título del gráfico Boxplot para edad y como subtítulo Análisis periodo a periodo.
 
-La visualización obtenida permite identificar la concentración de edades por cada una de las modalidades de formación, también permite identificar valores atípicos o extraños dentro de cada nivel de formación adicional a esto la cantidad de puntos ubicada en cada categoría indica los periodos en los cuales se tiene mayor cantidad de graduados, al incluir un filtro y una ventana de tiempo se le da al usuario mas capacidad para interactuar y analizar el grafico.
+La visualización obtenida permite identificar la concentración de edades por cada una de las modalidades de formación, también permite identificar valores atípicos o extraños dentro de cada nivel de formación adicional a esto la cantidad de puntos ubicada en cada categoría indica los periodos en los cuales se tiene mayor cantidad de graduados, al incluir un filtro y una ventana de tiempo se le da al usuario más capacidad para interactuar y analizar el grafico. 
 
 <div class="flourish-embed flourish-scatter" data-src="visualisation/5661715"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
