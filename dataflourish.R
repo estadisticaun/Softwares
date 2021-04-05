@@ -5,118 +5,8 @@ library(magrittr)
 library(rjson)
 library(jsonlite)
 Graduados <- read_xlsx("Datos.xlsx")
-puntos <- Graduados %>% 
-  group_by(CIU_NAC, LAT_CIU_NAC, LON_CIU_NAC) %>% 
-  count()
-puntos <- puntos[!duplicated(puntos$CIU_NAC), ]
-puntos <- puntos %>% select(-n)
-Graduados <- Graduados %>% select(-c("LAT_CIU_NAC", "LON_CIU_NAC"))
-Graduados <- left_join(Graduados, puntos, by = "CIU_NAC")
-Graduados$DEP_NAC <- str_replace_all(Graduados$DEP_NAC, "Bogota D.C.", 
-                                     "Bogota D.C")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Bogot(á|a),? d.c.", 
-                                     "Bogota D.C.")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Calima", "Darien")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Guadalajara de buga", 
-                                     "Buga")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "San andres de tumaco", 
-                                     "Tumaco")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Tolu viejo", 
-                                     "Toluviejo")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Don matias", 
-                                     "Donmatias")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Itsmina", 
-                                     "Istmina")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Ubate", 
-                                     "Villa de san diego de ubate")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "San vicente chucuri", 
-                                     "San vicente de chucuri")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Entrerios", 
-                                     "Entrerrios")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
-                                     "Cartagena de indias de indias", 
-                                     "Cartagena de indias")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
-                                     "San vicente( ferrer)?", 
-                                     "San vicente ferrer")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
-                                     "Santafe de antioquia", 
-                                     "Santa fe de antioquia")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
-                                     "San andres sotavento", 
-                                     "San andres de sotavento")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
-                                     "San juan de rio(\\s)?seco", 
-                                     "San juan de rioseco")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
-                                     "San pedro de cartago?", 
-                                     "San pedro de cartago")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
-                                     "Valle del gaumez", 
-                                     "Valle del guamuez")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
-                                     "San vicente ferrer de chucuri", 
-                                     "San vicente de chucuri")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, 
-                                     "San vicente ferrer del caguan", 
-                                     "San vicente del caguan")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Cartagena(\\sde\\sindias)?", 
-                                     "Cartagena de indias")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "San luis de since", 
-                                     "Since")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Armero(\\sguayabal)?", 
-                                     "Armero")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "San sebastian de mariquita", 
-                                     "Mariquita")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Cartagena de indias del chaira", 
-                                     "Cartagena del chaira")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Güican de la sierra", 
-                                     "Guican")
-
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Ariguani", 
-                                     "Ariguaini")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Cerro de san antonio", 
-                                     "Cerro san antonio")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Lopez de micay", 
-                                     "Lopez")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Santacruz", 
-                                     "Santa cruz")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "El canton del san pablo", 
-                                     "Canton del san pablo")
-#falta corregir esta
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Manaure(\\sbalcon\\sdel\\cesar)?", 
-                                     "Manaure")
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "San pedro de los milagros", 6] <- "San pedro"
-Graduados[Graduados$DEP_NAC == "Tolima" & 
-            Graduados$CIU_NAC == "Colon", 6] <- "Santa isabel"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "San andres", 6] <- "San andres de cuerquia"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "San andres de cuerquia", 
-          32] <- "-75.672773119699997"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "San andres de cuerquia", 
-          31] <- "6.9236096390800004"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "Samana", 5] <- "Caldas"
-Graduados[Graduados$DEP_NAC == "Bolivar" & 
-            Graduados$CIU_NAC == "San agustin", 5] <- "Huila"
-Graduados[Graduados$DEP_NAC == "Cesar" & 
-            Graduados$CIU_NAC == "Libano", 5] <- "Tolima"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "Puerto lopez", 5] <- "Meta"
-Graduados[Graduados$DEP_NAC == "Cesar" & 
-            Graduados$CIU_NAC == "San martin", 
-          32] <- "-73.510987"
-Graduados[Graduados$DEP_NAC == "Cesar" & 
-            Graduados$CIU_NAC == "San martin", 
-          31] <- "7.999580"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "San martin", 5] <- "Meta"
-Graduados[Graduados$CIU_NAC == "Entrerrios", 5] <- "Antioquia"
-Graduados[Graduados$PROGRAMA == "Ingenieria Forestal" & 
-                     Graduados$FACULTAD == "Minas", 23] <- "Ciencias agrarias"
+#es necesario volver a mayusculas para coincidir con el archivo GeoJson
+Graduados$DEP_NAC <- toupper(Graduados$DEP_NAC)
 
 #GRAFICO DE LINEAS
 evoluciongeneral <- Graduados %>% group_by(YEAR_SEMESTER) %>% count()
@@ -192,9 +82,6 @@ write_json(data.json, "depts.json")
 
 
 #PUNTOS MUNICIPIOS
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Bogota(|,) d.c.", 
-                                     "Bogota D.C.")
-Graduados$CIU_NAC <- chartr('áéíóúü','aeiouu', Graduados$CIU_NAC)
 municipios <- Graduados %>% 
   group_by(CIU_NAC, LON_CIU_NAC, LAT_CIU_NAC) %>% 
   count()
@@ -219,8 +106,7 @@ mps <- Graduados %>%
   group_by(YEAR_SEMESTER, DEP_NAC, CIU_NAC) %>% 
   count() %>% 
   filter(YEAR_SEMESTER == "2020 - 1") %>% 
-  mutate(CIU_NAC = str_to_upper(chartr("áéíóúü", "aeiouu", CIU_NAC), locale = "es"), 
-         DEP_NAC = str_to_upper(DEP_NAC, locale = "es"))
+  mutate(CIU_NAC = str_to_upper(CIU_NAC))
 
 #Importar, agregar nueva propiedad y exportar el archivo Json  
 mpios.json <- fromJSON(file="mpio.json")
@@ -232,6 +118,7 @@ for (i in 1:length(mpios.json$features)) {
   dpto[i] <- mpios.json$features[[i]]$properties$NOMBRE_DPT
   mpio[i] <- mpios.json$features[[i]]$properties$NOMBRE_MPI
 }
+
 basejson <- data.frame(id, dpto, mpio)
 union <- left_join(basejson, mps, by = c("dpto" = "DEP_NAC", "mpio" = "CIU_NAC"))
 union %<>% mutate(n = replace_na(n, 0))
@@ -283,7 +170,7 @@ locaciones <- rbind(locaciones, s_amazonas, s_bogota, s_caribe, s_medellin,
 write.csv(locaciones, "locaciones.csv", row.names = F)
 
 #VALORES: categoria, año, origen (coincidir con codigo), destino(coincidir 
-#con codigo), vallor(conteo de estudiantes)
+#con codigo), valor(conteo de estudiantes)
 valores <- Graduados %>% group_by(YEAR, TIPO_NIVEL, DEP_NAC, CIU_NAC, 
                                   SEDE_NOMBRE_MAT) %>% 
   mutate(CIU_NAC = str_to_upper(chartr("áéíóúü", "aeiouu", CIU_NAC), 
