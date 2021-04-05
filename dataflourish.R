@@ -10,7 +10,7 @@ Graduados$DEP_NAC <- toupper(Graduados$DEP_NAC)
 
 #GRAFICO DE LINEAS
 evoluciongeneral <- Graduados %>% group_by(YEAR_SEMESTER) %>% count()
-write.csv(evoluciongeneral, file = "evoluciongeneral.csv", row.names = F)
+write.csv(evoluciongeneral, file = "Datos para Flourish/evoluciongeneral.csv", row.names = F)
 
 #GRAFICO DE LINEAS SEGMNETADO POR UNA DIMENSION (MODALIDAD DE FORMACION)
 modalidadformacion <- Graduados %>% group_by(YEAR_SEMESTER, TIPO_NIVEL) %>% 
@@ -19,7 +19,7 @@ modalidadformacion <- Graduados %>% group_by(YEAR_SEMESTER, TIPO_NIVEL) %>%
   mutate(Total = Pregrado + Postgrado) %>% 
   mutate(Porcentajepregrado = paste(round((Pregrado/Total)*100, 2), "%")) %>% 
   mutate(Porcentajepostgrado = paste(round((Postgrado/Total)*100, 2), "%"))
-write.csv(modalidadformacion, file = "modalidadformacion.csv", row.names = F)
+write.csv(modalidadformacion, file = "Datos para Flourish/modalidadformacion.csv", row.names = F)
 
 #TABLA (MODALIDAD DE FORMACION)
 modalidadformaciontabla <- Graduados %>% group_by(YEAR, SEMESTRE, TIPO_NIVEL) %>% 
@@ -28,7 +28,7 @@ modalidadformaciontabla <- Graduados %>% group_by(YEAR, SEMESTRE, TIPO_NIVEL) %>
   mutate(Total = Pregrado + Postgrado) %>% 
   mutate(Porcentajepregrado = paste(round((Pregrado/Total)*100, 2), "%")) %>% 
   mutate(Porcentajepostgrado = paste(round((Postgrado/Total)*100, 2), "%"))
-write.csv(modalidadformaciontabla, file = "modalidadformaciontabla.csv", 
+write.csv(modalidadformaciontabla, file = "Datos para Flourish/modalidadformaciontabla.csv", 
           row.names = F)
 
 #GRAFICO CIRCULAR (MODALIDAD DE FORMACION) CON VARIABLE YEAR_SEMESTER
@@ -38,7 +38,7 @@ modalidadformacioncircular <- Graduados %>%
   summarise(Cantidad = n()) %>% 
   mutate(Total = aggregate(Cantidad~YEAR_SEMESTER, FUN = sum)[,2]) %>%  
   mutate(Porcentaje = paste(round((Cantidad/Total)*100, 2), "%"))
-write.csv(modalidadformacioncircular, file = "modalidadformacioncircular.csv", 
+write.csv(modalidadformacioncircular, file = "Datos para Flourish/modalidadformacioncircular.csv", 
           row.names = F)
 
 #FILTRADO POR PERIODO 2020-1
@@ -48,7 +48,7 @@ modalidadformacioncircularfiltrada <- Graduados %>%
   filter(YEAR_SEMESTER == "2020 - 1") %>% 
   mutate(Porcetaje = round((Cantidad/sum(Cantidad))*100, 2))
 write.csv(modalidadformacioncircularfiltrada, 
-          file = "modalidadformacioncircularfiltrada.csv", 
+          file = "Datos para Flourish/modalidadformacioncircularfiltrada.csv", 
           row.names = F)
 
 #GRAFICO DE BARRAS (NIVEL DE FORMACION)
@@ -58,7 +58,7 @@ nivelformacion <- Graduados %>%
   mutate(Total = aggregate(Cantidad~YEAR_SEMESTER, FUN = sum)[,2]) %>% 
   mutate(Porcentaje = paste(round((Cantidad/Total)*100, 2), "%")) %>% 
   filter(YEAR_SEMESTER == "2020 - 1")
-write.csv(nivelformacion, file = "nivelformacion.csv", 
+write.csv(nivelformacion, file = "Datos para Flourish/nivelformacion.csv", 
           row.names = FALSE)
 
 #MAPA POR DEPARTAMENTOS
@@ -78,14 +78,14 @@ for (i in 1:x) {
                     paste0("^", data.json$features[[i]]$properties$NOMBRE_DPT, "$"))
   data.json$features[[i]]$properties$n = as.character(deptos[pos, "n"])
 }
-write_json(data.json, "depts.json")
+write_json(data.json, "Datos para Flourish/depts.json")
 
 
 #PUNTOS MUNICIPIOS
 municipios <- Graduados %>% 
   group_by(CIU_NAC, LON_CIU_NAC, LAT_CIU_NAC) %>% 
   count()
-write.csv(municipios, file = "municipios.csv", 
+write.csv(municipios, file = "Datos para Flourish/municipios.csv", 
           row.names = FALSE)
 
 #EXTRAER CAPITALES DE LOS DEPARTAMENTOS, DE LA BASE MUNICIPIOS
@@ -97,7 +97,7 @@ capitales <-c("Leticia", "Medellin", "Arauca", "Barranquilla",
               "San andres", "Bucaramanga", "Sincelejo", "Cali", "Mitu", 
               "Puerto carreno", "Ibague")
 Capitales <- municipios %>% filter(CIU_NAC %in% capitales)
-write.csv(Capitales, file = "capitales.csv", 
+write.csv(Capitales, file = "Datos para Flourish/capitales.csv", 
           row.names = FALSE)
 
 #MAPA POR MUNICIPIOS
@@ -125,12 +125,12 @@ union %<>% mutate(n = replace_na(n, 0))
 for (i in 1:length(union$id)) {
   mpios.json$features[[i]]$properties$n = union[i, "n"]
 }
-write_json(mpios.json, "municipios.json")
+write_json(mpios.json, "Datos para Flourish/municipios.json")
 
 #MAPA DE PUNTOS 3D
 municipios3d <- Graduados %>% group_by(YEAR, LON_CIU_NAC, LAT_CIU_NAC,
                                  DEP_NAC, CIU_NAC) %>% count()
-write.csv(municipios3d, "municipios3d.csv", row.names = FALSE)
+write.csv(municipios3d, "Datos para Flourish/municipios3d.csv", row.names = FALSE)
 
 #GLOBO DE CONEXIONES
 dpto <- c() 
@@ -167,7 +167,7 @@ s_palmira <- c("VALLE DEL CAUCA", "SEDE PALMIRA", "s_palmira", 3.512328,
                -76.307490)
 locaciones <- rbind(locaciones, s_amazonas, s_bogota, s_caribe, s_medellin,
                     s_manizales, s_palmira)
-write.csv(locaciones, "locaciones.csv", row.names = F)
+write.csv(locaciones, "Datos para Flourish/locaciones.csv", row.names = F)
 
 #VALORES: categoria, año, origen (coincidir con codigo), destino(coincidir 
 #con codigo), valor(conteo de estudiantes)
@@ -185,7 +185,7 @@ valores <- left_join(valores, codigos, by = c("DEP_NAC" = "dpto",
 valores$codsede <- paste("s", str_to_lower(substr(valores$SEDE_NOMBRE_MAT, 6,
                                                   nchar(valores$SEDE_NOMBRE_MAT)))
                          , sep = "_")
-write.csv(valores, "valores.csv", row.names = F)
+write.csv(valores, "Datos para Flourish/valores.csv", row.names = F)
 
 #JERARQUIA
 jerarquia <- Graduados %>% 
@@ -197,14 +197,14 @@ jerarquia <- Graduados %>%
   summarise(n = n()) %>% 
   arrange(SEDE_NOMBRE_MAT, FACULTAD, NIVEL, desc(n)) 
  
-write.csv(jerarquia, "jerarquia.csv", row.names = F)
+write.csv(jerarquia, "Datos para Flourish/jerarquia.csv", row.names = F)
 
 #DIAGRAMA DE SANKEY
 sankey <- Graduados %>% 
   group_by(SEDE_NOMBRE_ADM, SEDE_NOMBRE_MAT) %>% 
   count() %>% 
   filter(SEDE_NOMBRE_ADM != SEDE_NOMBRE_MAT)
-write.csv(sankey, file = "sankey.csv", row.names = F)
+write.csv(sankey, file = "Datos para Flourish/sankey.csv", row.names = F)
 
 #CARRERA DE BARRAS
 car_barras <- Graduados %>% 
@@ -212,7 +212,7 @@ car_barras <- Graduados %>%
   count() %>% 
   pivot_wider(names_from = YEAR_SEMESTER, values_from = n) %>% 
   mutate_all(~replace(., is.na(.), 0))
-write.csv(car_barras, file = "car_barras.csv", row.names = F)
+write.csv(car_barras, file = "Datos para Flourish/car_barras.csv", row.names = F)
 
 #CARRERA DE LINEAS
 pregrado <- Graduados %>% 
@@ -227,7 +227,7 @@ car_lineas <- Graduados %>%
   pivot_wider(names_from = YEAR_SEMESTER, values_from = n) %>%
   mutate_all(~replace(., is.na(.), 0))
   
-write.csv(car_lineas, file = "car_lineas.csv", row.names = F)
+write.csv(car_lineas, file = "Datos para Flourish/car_lineas.csv", row.names = F)
 
 #GRAFICO DE RADAR
 radar <- Graduados %>% 
@@ -243,7 +243,7 @@ radar <- Graduados %>%
   )) %>% 
   pivot_wider(names_from = NIVEL, values_from = n) %>% 
   mutate_all(~replace(., is.na(.), 0))
-write.csv(radar, file = "radar.csv", row.names = F)
+write.csv(radar, file = "Datos para Flourish/radar.csv", row.names = F)
 
 estrato <- Graduados %>% 
   group_by(ESTRATO_ORIG, NIVEL, SEDE_NOMBRE_MAT) %>% 
@@ -251,19 +251,9 @@ estrato <- Graduados %>%
   count() %>% 
   pivot_wider(names_from = NIVEL, values_from = n) %>% 
   mutate_all(~replace(., is.na(.), 0))
-write.csv(estrato, file = "estrato.csv", row.names = F)
+write.csv(estrato, file = "Datos para Flourish/estrato.csv", row.names = F)
 
 #GRAFICO DE PENDIENTES
-Facultades <- Graduados %>% 
-  group_by(SEDE_NOMBRE_MAT, PROGRAMA, FACULTAD) %>% 
-  summarise(n = n())
-#se retiran los duplicados existentes
-Programas <- Facultades %>% 
-  distinct(SEDE_NOMBRE_MAT, PROGRAMA, .keep_all = TRUE) %>% 
-  select(-n)
-#Eliminar facultad de la base general para luego realizar la union
-Graduados <- Graduados %>% select(-FACULTAD)
-Graduados <- left_join(Graduados, y, by = c("SEDE_NOMBRE_MAT", "PROGRAMA"))
 
 #Pendiente sede bogota
 pendiente_bogota <- Graduados %>% 
@@ -273,7 +263,7 @@ pendiente_bogota <- Graduados %>%
   pivot_wider(names_from = YEAR, values_from = n) %>% 
   select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019") %>% 
   drop_na()
-write.csv(pendiente_bogota, file = "pendiente_bogota.csv", row.names = F)
+write.csv(pendiente_bogota, file = "Datos para Flourish/pendiente_bogota.csv", row.names = F)
 
 #Pendiente sede medellin
 pendiente_medellin <- Graduados %>% 
@@ -285,7 +275,7 @@ pendiente_medellin <- Graduados %>%
   pivot_wider(names_from = YEAR, values_from = n) %>% 
   select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019") %>% 
   drop_na()
-write.csv(pendiente_medellin, file = "pendiente_medellin.csv", row.names = F)
+write.csv(pendiente_medellin, file = "Datos para Flourish/pendiente_medellin.csv", row.names = F)
 
 #Pendiente sede manizales
 pendiente_manizales <- Graduados %>% 
@@ -295,7 +285,7 @@ pendiente_manizales <- Graduados %>%
   pivot_wider(names_from = YEAR, values_from = n) %>% 
   select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019") %>% 
   drop_na()
-write.csv(pendiente_manizales, file = "pendiente_manizales.csv", row.names = F)
+write.csv(pendiente_manizales, file = "Datos para Flourish/pendiente_manizales.csv", row.names = F)
 
 #Pendiente sede palmira
 pendiente_palmira <- Graduados %>% 
@@ -305,16 +295,16 @@ pendiente_palmira <- Graduados %>%
   pivot_wider(names_from = YEAR, values_from = n) %>% 
   select(PROGRAMA, FACULTAD, TIPO_NIVEL, SEDE_NOMBRE_MAT, "2009", "2019") %>% 
   drop_na()
-write.csv(pendiente_palmira, file = "pendiente_palmira.csv", row.names = F)
+write.csv(pendiente_palmira, file = "Datos para Flourish/pendiente_palmira.csv", row.names = F)
 
 #GRAFICO DE RADAR
 puntos <- Graduados %>% 
   group_by(SEDE_NOMBRE_ADM) %>% 
   count()
-write.csv(puntos, file = "puntos.csv", row.names = F)
+write.csv(puntos, file = "Datos para Flourish/puntos.csv", row.names = F)
 
 #BOXPLOT EDADES
 edad <- Graduados %>% 
   group_by(YEAR_SEMESTER, EDAD_MOD, NIVEL, SEDE_NOMBRE_MAT) %>% count() %>% 
   filter(EDAD_MOD > 15, EDAD_MOD <70)
-write.csv(edad, file = "edad.csv", row.names = F)
+write.csv(edad, file = "Datos para Flourish/edad.csv", row.names = F)

@@ -1,0 +1,563 @@
+"SEDE_NOMBRE_MAT","FACULTAD","PROGRAMA","NIVEL","n"
+"Amazonia","Amazonia","Estudios Amazonicos","Doctorado",3
+"Amazonia","Amazonia","Estudios Amazonicos","Especializacion",28
+"Amazonia","Amazonia","Amazonia","Especializacion",2
+"Amazonia","Amazonia","Estudios Amazonicos","Maestria",61
+"Amazonia","Amazonia","Amazonia","Maestria",13
+"Bogota","Artes","Arte Y Arquitectura","Doctorado",22
+"Bogota","Artes","Fotografia","Especializacion",185
+"Bogota","Artes","Diseño Y Desarrollo Del Producto","Especializacion",161
+"Bogota","Artes","Pedagogia Del Diseño","Especializacion",127
+"Bogota","Artes","Animacion","Especializacion",125
+"Bogota","Artes","Artes","Especializacion",111
+"Bogota","Artes","Educacion Artistica Integral","Especializacion",72
+"Bogota","Artes","Instrumentos De Ordenamiento Urbano - Regional","Especializacion",19
+"Bogota","Artes","Diseño Urbano","Especializacion",1
+"Bogota","Artes","Escrituras Creativas","Maestria",450
+"Bogota","Artes","Interdisciplinaria En Teatro Y Artes Vivas","Maestria",166
+"Bogota","Artes","Musicoterapia","Maestria",128
+"Bogota","Artes","Artes","Maestria",127
+"Bogota","Artes","Construccion","Maestria",111
+"Bogota","Artes","Diseño Urbano","Maestria",99
+"Bogota","Artes","Arquitectura","Maestria",88
+"Bogota","Artes","Artes Plasticas Y Visuales","Maestria",86
+"Bogota","Artes","Educacion Artistica","Maestria",76
+"Bogota","Artes","Museologia Y Gestion Del Patrimonio","Maestria",75
+"Bogota","Artes","Urbanismo","Maestria",68
+"Bogota","Artes","Historia Y Teoria Del Arte, La Arquitectura Y La Ciudad","Maestria",67
+"Bogota","Artes","Ordenamiento Urbano-Regional","Maestria",54
+"Bogota","Artes","Comunicacion Y Medios","Maestria",49
+"Bogota","Artes","Direccion Sinfonica","Maestria",47
+"Bogota","Artes","Habitat","Maestria",34
+"Bogota","Artes","Conservacion Del Patrimonio Cultural Inmueble","Maestria",29
+"Bogota","Artes","Diseño","Maestria",22
+"Bogota","Artes","Pedagogia Del Piano","Maestria",21
+"Bogota","Artes","Arquitectura De La Vivienda","Maestria",20
+"Bogota","Artes","Musicologia","Maestria",17
+"Bogota","Artes","Diseño Multimedia","Maestria",15
+"Bogota","Artes","Interpretacion Y Pedagogia Instrumental","Maestria",6
+"Bogota","Artes","Arquitectura","Pregrado",990
+"Bogota","Artes","Diseño Industrial","Pregrado",690
+"Bogota","Artes","Artes Plasticas","Pregrado",489
+"Bogota","Artes","Diseño Grafico","Pregrado",459
+"Bogota","Artes","Musica Instrumental","Pregrado",406
+"Bogota","Artes","Artes","Pregrado",345
+"Bogota","Artes","Cine Y Television","Pregrado",343
+"Bogota","Artes","Musica","Pregrado",73
+"Bogota","Artes","Diseño Y Desarrollo Del Producto","Pregrado",4
+"Bogota","Artes","Fotografia","Pregrado",1
+"Bogota","Ciencias","Quimica","Doctorado",103
+"Bogota","Ciencias","Biologia","Doctorado",65
+"Bogota","Ciencias","Fisica","Doctorado",50
+"Bogota","Ciencias","Matematicas","Doctorado",42
+"Bogota","Ciencias","Biotecnologia","Doctorado",32
+"Bogota","Ciencias","Ciencias","Doctorado",28
+"Bogota","Ciencias","Ciencias Farmaceuticas","Doctorado",27
+"Bogota","Ciencias","Estadistica","Doctorado",16
+"Bogota","Ciencias","Geociencias","Doctorado",12
+"Bogota","Ciencias","Bioquimica","Doctorado",5
+"Bogota","Ciencias","Estadistica","Especializacion",299
+"Bogota","Ciencias","Ciencia Y Tecnologia De Alimentos","Especializacion",175
+"Bogota","Ciencias","Ciencia Y Tecnologia Cosmetica","Especializacion",125
+"Bogota","Ciencias","Ciencias","Especializacion",63
+"Bogota","Ciencias","Metodos Estadisticos Basicos","Especializacion",26
+"Bogota","Ciencias","Actuaria","Especializacion",16
+"Bogota","Ciencias","Ciencias Fisica","Especializacion",3
+"Bogota","Ciencias","Fisica","Especializacion",1
+"Bogota","Ciencias","Enseñanza De Las Ciencias Exactas Y Naturales","Maestria",720
+"Bogota","Ciencias","Biologia","Maestria",296
+"Bogota","Ciencias","Quimica","Maestria",288
+"Bogota","Ciencias","Fisica","Maestria",251
+"Bogota","Ciencias","Ciencias","Maestria",198
+"Bogota","Ciencias","Microbiologia","Maestria",174
+"Bogota","Ciencias","Matematicas","Maestria",161
+"Bogota","Ciencias","Bioquimica","Maestria",136
+"Bogota","Ciencias","Estadistica","Maestria",130
+"Bogota","Ciencias","Ciencias Farmaceuticas","Maestria",104
+"Bogota","Ciencias","Ciencia Y Tecnologia De Alimentos","Maestria",88
+"Bogota","Ciencias","Geofisica","Maestria",83
+"Bogota","Ciencias","Farmacologia","Maestria",73
+"Bogota","Ciencias","Geologia","Maestria",73
+"Bogota","Ciencias","Fisica Medica","Maestria",69
+"Bogota","Ciencias","Matematica Aplicada","Maestria",49
+"Bogota","Ciencias","Meteorologia","Maestria",46
+"Bogota","Ciencias","Astronomia","Maestria",43
+"Bogota","Ciencias","Matematica","Maestria",42
+"Bogota","Ciencias","Actuaria Y Finanzas","Maestria",38
+"Bogota","Ciencias","Bioestadistica","Maestria",4
+"Bogota","Ciencias","Farmacia","Pregrado",1062
+"Bogota","Ciencias","Biologia","Pregrado",828
+"Bogota","Ciencias","Geologia","Pregrado",608
+"Bogota","Ciencias","Quimica","Pregrado",512
+"Bogota","Ciencias","Fisica","Pregrado",497
+"Bogota","Ciencias","Estadistica","Pregrado",474
+"Bogota","Ciencias","Matematicas","Pregrado",376
+"Bogota","Ciencias","Ciencias","Pregrado",357
+"Bogota","Ciencias Agrarias","Ciencias Agrarias","Doctorado",44
+"Bogota","Ciencias Agrarias","Agroecologia","Doctorado",12
+"Bogota","Ciencias Agrarias","Agronomia","Doctorado",6
+"Bogota","Ciencias Agrarias","Cultivos Perennes Industriales","Especializacion",89
+"Bogota","Ciencias Agrarias","Agronomia","Especializacion",25
+"Bogota","Ciencias Agrarias","Ciencia Y Tecnologia De Alimentos","Especializacion",13
+"Bogota","Ciencias Agrarias","Desarrollo Rural","Especializacion",7
+"Bogota","Ciencias Agrarias","Horticultura","Especializacion",1
+"Bogota","Ciencias Agrarias","Ciencias Agrarias","Maestria",228
+"Bogota","Ciencias Agrarias","Geomatica","Maestria",33
+"Bogota","Ciencias Agrarias","Agronomia","Maestria",28
+"Bogota","Ciencias Agrarias","Ciencia Y Tecnologia De Alimentos","Maestria",23
+"Bogota","Ciencias Agrarias","Geomantica","Maestria",21
+"Bogota","Ciencias Agrarias","Gestion Y Desarrollo Rural","Maestria",2
+"Bogota","Ciencias Agrarias","Ingenieria Agronomica","Pregrado",808
+"Bogota","Ciencias Agrarias","Agronomia","Pregrado",80
+"Bogota","Ciencias Economicas","Ciencias Economicas","Doctorado",35
+"Bogota","Ciencias Economicas","Administracion","Maestria",454
+"Bogota","Ciencias Economicas","Ciencias Economicas","Maestria",444
+"Bogota","Ciencias Economicas","Medio Ambiente Y Desarrollo","Maestria",172
+"Bogota","Ciencias Economicas","Estudios Politicos","Maestria",127
+"Bogota","Ciencias Economicas","Contabilidad Y Finanzas","Maestria",34
+"Bogota","Ciencias Economicas","Administracion - Convenio Universidad Tecnologica Del Choco","Maestria",1
+"Bogota","Ciencias Economicas","Administracion De Empresas","Pregrado",1142
+"Bogota","Ciencias Economicas","Economia","Pregrado",1107
+"Bogota","Ciencias Economicas","Contaduria Publica","Pregrado",1039
+"Bogota","Ciencias Economicas","Ciencias Economicas","Pregrado",516
+"Bogota","Ciencias Humanas","Historia","Doctorado",42
+"Bogota","Ciencias Humanas","Filosofia","Doctorado",41
+"Bogota","Ciencias Humanas","Ciencias Humanas Y Sociales","Doctorado",17
+"Bogota","Ciencias Humanas","Antropologia","Doctorado",10
+"Bogota","Ciencias Humanas","Geografia","Doctorado",9
+"Bogota","Ciencias Humanas","Ciencias Humanas","Doctorado",4
+"Bogota","Ciencias Humanas","Psicologia","Doctorado",4
+"Bogota","Ciencias Humanas","Accion Sin Daño Y Construccion De Paz","Especializacion",211
+"Bogota","Ciencias Humanas","Analisis Espacial","Especializacion",108
+"Bogota","Ciencias Humanas","Estudios Feministas Y De Genero","Especializacion",58
+"Bogota","Ciencias Humanas","Estudios Feministas De Genero","Especializacion",41
+"Bogota","Ciencias Humanas","Ciencias Humanas","Especializacion",9
+"Bogota","Ciencias Humanas","Antropologia Forense","Especializacion",2
+"Bogota","Ciencias Humanas","Filosofia Politica","Especializacion",2
+"Bogota","Ciencias Humanas","Educacion","Maestria",291
+"Bogota","Ciencias Humanas","Psicologia","Maestria",159
+"Bogota","Ciencias Humanas","Filosofia","Maestria",118
+"Bogota","Ciencias Humanas","Historia","Maestria",114
+"Bogota","Ciencias Humanas","Estudios Literarios","Maestria",102
+"Bogota","Ciencias Humanas","Sociologia","Maestria",98
+"Bogota","Ciencias Humanas","Ciencias Humanas","Maestria",81
+"Bogota","Ciencias Humanas","Antropologia","Maestria",74
+"Bogota","Ciencias Humanas","Estudios Culturales","Maestria",73
+"Bogota","Ciencias Humanas","Linguistica","Maestria",63
+"Bogota","Ciencias Humanas","Estudios De Genero - Area Mujer Y Desarrollo","Maestria",60
+"Bogota","Ciencias Humanas","Psicoanalisis, Subjetividad Y Cultura (De Freud A Lacan)","Maestria",50
+"Bogota","Ciencias Humanas","Trabajo Social","Maestria",50
+"Bogota","Ciencias Humanas","Geografia","Maestria",49
+"Bogota","Ciencias Humanas","Estudios De Genero","Maestria",43
+"Bogota","Ciencias Humanas","Estudios Sociales De La Ciencia","Maestria",31
+"Bogota","Ciencias Humanas","Comunicacion Y Medios","Maestria",8
+"Bogota","Ciencias Humanas","Linguistica Convenio Universidad Tecnologica Del Choco","Maestria",2
+"Bogota","Ciencias Humanas","Psicologia","Pregrado",1134
+"Bogota","Ciencias Humanas","Filologia E Idiomas","Pregrado",842
+"Bogota","Ciencias Humanas","Antropologia","Pregrado",763
+"Bogota","Ciencias Humanas","Ciencias Humanas","Pregrado",709
+"Bogota","Ciencias Humanas","Sociologia","Pregrado",677
+"Bogota","Ciencias Humanas","Trabajo Social","Pregrado",567
+"Bogota","Ciencias Humanas","Filosofia","Pregrado",455
+"Bogota","Ciencias Humanas","Estudios Literarios","Pregrado",352
+"Bogota","Ciencias Humanas","Historia","Pregrado",331
+"Bogota","Ciencias Humanas","Geografia","Pregrado",301
+"Bogota","Ciencias Humanas","Linguistica","Pregrado",284
+"Bogota","Ciencias Humanas","Español Y Filologia Clasica","Pregrado",207
+"Bogota","Ciencias Humanas","Filologia E Idiomas Ingles","Pregrado",66
+"Bogota","Ciencias Humanas","Filologia E Idiomas Frances","Pregrado",41
+"Bogota","Ciencias Humanas","Filologia E Idiomas Aleman","Pregrado",26
+"Bogota","Ciencias Humanas","Literatura (Estudios Literarios)","Pregrado",17
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho","Doctorado",24
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Estudios Politicos Y Relaciones Internacionales","Doctorado",18
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho Administrativo","Especializacion",1802
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Instituciones Juridico-Procesales","Especializacion",1076
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho Constitucional","Especializacion",994
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho Del Trabajo","Especializacion",595
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho, Ciencias Politicas Y Sociales","Especializacion",505
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho De Familia","Especializacion",434
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Instituciones Juridico-Penales","Especializacion",393
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Analisis De Politicas Publicas","Especializacion",326
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho Privado Economico","Especializacion",279
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Instituciones Juridicas De La Seguridad Social","Especializacion",232
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derechos Humanos Y Derecho Internacional Humanitario","Especializacion",231
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Mercados Y Politicas De Suelo En America Latina","Especializacion",215
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Justicia, Victimas Y Construccion De Paz","Especializacion",56
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Instituciones Juridico Penales - Universidad De Nariño","Especializacion",2
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Instituciones Juridico-Procesales -Universidad De Nariño","Especializacion",1
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Instituciones Juridico-Procesales Convenio Univ. Choco","Especializacion",1
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho","Maestria",509
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Politicas Publicas","Maestria",62
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Estudios Politicos Latinoamericanos","Maestria",30
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Biociencias Y Derecho","Maestria",24
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho, Ciencias Politicas Y Sociales","Maestria",23
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho","Pregrado",1162
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Ciencia Politica","Pregrado",1026
+"Bogota","Derecho, Ciencias Politicas Y Sociales","Derecho, Ciencias Politicas Y Sociales","Pregrado",262
+"Bogota","Enfermeria","Enfermeria","Doctorado",40
+"Bogota","Enfermeria","Enfermeria Cardiorrespiratoria","Especializacion",107
+"Bogota","Enfermeria","Salud Ocupacional","Especializacion",99
+"Bogota","Enfermeria","Salud Y Seguridad En El Trabajo","Especializacion",46
+"Bogota","Enfermeria","Enfermeria Materna Perinatal Con Apoyo Familiar","Especializacion",39
+"Bogota","Enfermeria","Enfermeria Materno Perinatal","Especializacion",16
+"Bogota","Enfermeria","Enfermeria","Especializacion",14
+"Bogota","Enfermeria","Enfermeria","Maestria",291
+"Bogota","Enfermeria","Salud Y Seguridad En El Trabajo","Maestria",79
+"Bogota","Enfermeria","Enfermeria","Pregrado",1270
+"Bogota","Ingenieria","Ingenieria - Ingenieria Quimica","Doctorado",44
+"Bogota","Ingenieria","Ingenieria - Ciencia Y Tecnologia De Materiales","Doctorado",35
+"Bogota","Ingenieria","Ingenieria - Ingenieria Electrica","Doctorado",30
+"Bogota","Ingenieria","Ingenieria - Sistemas Y Computacion","Doctorado",28
+"Bogota","Ingenieria","Ingenieria - Industria Y Organizaciones","Doctorado",25
+"Bogota","Ingenieria","Ingenieria - Ingenieria Mecanica Y Mecatronica","Doctorado",13
+"Bogota","Ingenieria","Ingenieria Sistemas Y Computacion","Doctorado",11
+"Bogota","Ingenieria","Ingenieria - Ingenieria Civil","Doctorado",4
+"Bogota","Ingenieria","Ingenieria - Geotecnia","Doctorado",3
+"Bogota","Ingenieria","Ingenieria","Doctorado",1
+"Bogota","Ingenieria","Transito, Diseño Y Seguridad Vial","Especializacion",142
+"Bogota","Ingenieria","Gobierno Electronico","Especializacion",113
+"Bogota","Ingenieria","Iluminacion Publica Y Privada","Especializacion",111
+"Bogota","Ingenieria","Estructuras","Especializacion",74
+"Bogota","Ingenieria","Ingenieria","Especializacion",31
+"Bogota","Ingenieria","Ingenieria Ambiental - Area Sanitaria","Especializacion",8
+"Bogota","Ingenieria","Automatizacion Industrial","Especializacion",3
+"Bogota","Ingenieria","Geotecnia","Especializacion",1
+"Bogota","Ingenieria","Transportes","Especializacion",1
+"Bogota","Ingenieria","Ingenieria - Ingenieria De Sistemas Y Computacion","Maestria",145
+"Bogota","Ingenieria","Ingenieria - Ingenieria Quimica","Maestria",138
+"Bogota","Ingenieria","Ingenieria - Automatizacion Industrial","Maestria",118
+"Bogota","Ingenieria","Ingenieria - Ingenieria Electrica","Maestria",113
+"Bogota","Ingenieria","Ingenieria - Geotecnia","Maestria",109
+"Bogota","Ingenieria","Ingenieria - Recursos Hidraulicos","Maestria",91
+"Bogota","Ingenieria","Ingenieria - Ingenieria Ambiental","Maestria",90
+"Bogota","Ingenieria","Ingenieria Industrial","Maestria",90
+"Bogota","Ingenieria","Ingenieria","Maestria",87
+"Bogota","Ingenieria","Ingenieria - Telecomunicaciones","Maestria",82
+"Bogota","Ingenieria","Ingenieria - Estructuras","Maestria",75
+"Bogota","Ingenieria","Ingenieria - Ingenieria Industrial","Maestria",75
+"Bogota","Ingenieria","Ingenieria Mecanica","Maestria",72
+"Bogota","Ingenieria","Ingenieria - Transporte","Maestria",56
+"Bogota","Ingenieria","Ingenieria - Materiales Y Procesos","Maestria",54
+"Bogota","Ingenieria","Ingenieria - Ingenieria Agricola","Maestria",50
+"Bogota","Ingenieria","Ingenieria - Ingenieria De Sistemas","Maestria",48
+"Bogota","Ingenieria","Ingenieria - Ingenieria Mecanica","Maestria",43
+"Bogota","Ingenieria","Materiales Y Procesos","Maestria",28
+"Bogota","Ingenieria","Ingenieria - Ingenieria Electronica","Maestria",22
+"Bogota","Ingenieria","Bioinformatica","Maestria",18
+"Bogota","Ingenieria","Ingenieria - Sistemas Y Computacion","Maestria",9
+"Bogota","Ingenieria","Ingenieria - Ingenieria De Sistemas Y Computacion - Conv Upc","Maestria",3
+"Bogota","Ingenieria","Ingenieria Civil","Pregrado",1530
+"Bogota","Ingenieria","Ingenieria Quimica","Pregrado",1461
+"Bogota","Ingenieria","Ingenieria Mecanica","Pregrado",900
+"Bogota","Ingenieria","Ingenieria De Sistemas Y Computacion","Pregrado",859
+"Bogota","Ingenieria","Ingenieria Electronica","Pregrado",745
+"Bogota","Ingenieria","Ingenieria Electrica","Pregrado",726
+"Bogota","Ingenieria","Ingenieria","Pregrado",704
+"Bogota","Ingenieria","Ingenieria Industrial","Pregrado",681
+"Bogota","Ingenieria","Ingenieria Mecatronica","Pregrado",496
+"Bogota","Ingenieria","Ingenieria Agricola","Pregrado",391
+"Bogota","Ingenieria","Ingenieria De Sistemas","Pregrado",33
+"Bogota","Medicina","Salud Publica","Doctorado",65
+"Bogota","Medicina","Ciencias Biomedicas","Doctorado",17
+"Bogota","Medicina","Medicina","Doctorado",8
+"Bogota","Medicina","Medicina Interna","Especialidades Medicas",162
+"Bogota","Medicina","Pediatria","Especialidades Medicas",149
+"Bogota","Medicina","Medicina","Especialidades Medicas",99
+"Bogota","Medicina","Obstetricia Y Ginecologia","Especialidades Medicas",94
+"Bogota","Medicina","Cirugia General","Especialidades Medicas",57
+"Bogota","Medicina","Medicina Fisica Y Rehabilitacion","Especialidades Medicas",53
+"Bogota","Medicina","Psiquiatria","Especialidades Medicas",46
+"Bogota","Medicina","Ortopedia Y Traumatologia","Especialidades Medicas",45
+"Bogota","Medicina","Anestesiologia Y Reanimacion","Especialidades Medicas",39
+"Bogota","Medicina","Radiologia E Imagenes Diagnosticas","Especialidades Medicas",35
+"Bogota","Medicina","Dermatologia","Especialidades Medicas",31
+"Bogota","Medicina","Geriatria","Especialidades Medicas",29
+"Bogota","Medicina","Otorrinolaringologia","Especialidades Medicas",29
+"Bogota","Medicina","Reumatologia","Especialidades Medicas",27
+"Bogota","Medicina","Neurologia Clinica","Especialidades Medicas",26
+"Bogota","Medicina","Neuropediatria","Especialidades Medicas",24
+"Bogota","Medicina","Infectologia","Especialidades Medicas",22
+"Bogota","Medicina","Medicina Forense","Especialidades Medicas",22
+"Bogota","Medicina","Endocrinologia","Especialidades Medicas",21
+"Bogota","Medicina","Hematologia","Especialidades Medicas",21
+"Bogota","Medicina","Medicina Aeroespacial","Especialidades Medicas",21
+"Bogota","Medicina","Perinatologia Y Neonatologia","Especialidades Medicas",21
+"Bogota","Medicina","Gastroenterologia","Especialidades Medicas",20
+"Bogota","Medicina","Oftalmologia","Especialidades Medicas",20
+"Bogota","Medicina","Cirugia Plastica","Especialidades Medicas",19
+"Bogota","Medicina","Patologia Anatomica Y Clinica","Especialidades Medicas",19
+"Bogota","Medicina","Urologia","Especialidades Medicas",19
+"Bogota","Medicina","Cirugia Pediatrica","Especialidades Medicas",18
+"Bogota","Medicina","Cuidado Intensivo Pediatrico","Especialidades Medicas",18
+"Bogota","Medicina","Onco - Hematologia Pediatrica","Especialidades Medicas",18
+"Bogota","Medicina","Neurocirugia","Especialidades Medicas",12
+"Bogota","Medicina","Neumologia Clinica","Especialidades Medicas",11
+"Bogota","Medicina","Radiologia Pediatrica","Especialidades Medicas",9
+"Bogota","Medicina","Administracion En Salud Publica","Especializacion",262
+"Bogota","Medicina","Alimentacion Y Nutricion En Promocion De La Salud","Especializacion",126
+"Bogota","Medicina","Medicina","Especializacion",11
+"Bogota","Medicina","Medicina Alternativa","Maestria",290
+"Bogota","Medicina","Salud Publica","Maestria",166
+"Bogota","Medicina","Medicina","Maestria",98
+"Bogota","Medicina","Epidemiologia Clinica","Maestria",86
+"Bogota","Medicina","Fisiologia","Maestria",83
+"Bogota","Medicina","Discapacidad E Inclusion Social","Maestria",62
+"Bogota","Medicina","Toxicologia","Maestria",62
+"Bogota","Medicina","Ingenieria Biomedica","Maestria",59
+"Bogota","Medicina","Neurociencias","Maestria",59
+"Bogota","Medicina","Genetica Humana","Maestria",52
+"Bogota","Medicina","Seguridad Alimentaria Y Nutricional","Maestria",46
+"Bogota","Medicina","Infecciones Y Salud En El Tropico","Maestria",40
+"Bogota","Medicina","Fisioterapia Del Deporte Y La Actividad Fisica","Maestria",39
+"Bogota","Medicina","Morfologia Humana","Maestria",33
+"Bogota","Medicina","Bioquimica","Maestria",1
+"Bogota","Medicina","Medicina","Pregrado",2350
+"Bogota","Medicina","Nutricion Y Dietetica","Pregrado",611
+"Bogota","Medicina","Fisioterapia","Pregrado",284
+"Bogota","Medicina","Terapia Ocupacional","Pregrado",248
+"Bogota","Medicina","Fonoaudiologia","Pregrado",228
+"Bogota","Medicina Veterinaria Y De Zootecnia","Salud Animal O Produccion Animal","Doctorado",15
+"Bogota","Medicina Veterinaria Y De Zootecnia","Salud Animal","Doctorado",8
+"Bogota","Medicina Veterinaria Y De Zootecnia","Anatomopatologia Veterinaria","Especialidades Medicas",15
+"Bogota","Medicina Veterinaria Y De Zootecnia","Medicina Veterinaria Y De Zootecnia","Especialidades Medicas",3
+"Bogota","Medicina Veterinaria Y De Zootecnia","Salud Y Produccion Animal","Maestria",76
+"Bogota","Medicina Veterinaria Y De Zootecnia","Salud Animal O Produccion Animal","Maestria",37
+"Bogota","Medicina Veterinaria Y De Zootecnia","Medicina Veterinaria Y De Zootecnia","Maestria",11
+"Bogota","Medicina Veterinaria Y De Zootecnia","Zootecnia","Pregrado",613
+"Bogota","Medicina Veterinaria Y De Zootecnia","Medicina Veterinaria","Pregrado",583
+"Bogota","Medicina Veterinaria Y De Zootecnia","Medicina Veterinaria Y De Zootecnia","Pregrado",96
+"Bogota","Odontologia","Endodoncia","Especialidades Medicas",69
+"Bogota","Odontologia","Periodoncia","Especialidades Medicas",60
+"Bogota","Odontologia","Ortodoncia Y Ortopedia Maxilar","Especialidades Medicas",58
+"Bogota","Odontologia","Rehabilitacion Oral","Especialidades Medicas",58
+"Bogota","Odontologia","Estomatologia Pediatrica Y Ortopedia Maxilar","Especialidades Medicas",57
+"Bogota","Odontologia","Cirugia Oral Y Maxilofacial","Especialidades Medicas",30
+"Bogota","Odontologia","Odontologia","Especialidades Medicas",2
+"Bogota","Odontologia","Operatoria Dental Estetica","Especializacion",105
+"Bogota","Odontologia","Ortodoncia Y Ortopedia Maxilar","Especializacion",10
+"Bogota","Odontologia","Estomatologia Pediatrica Y Ortopedia Maxilar","Especializacion",5
+"Bogota","Odontologia","Rehabilitacion Oral","Especializacion",4
+"Bogota","Odontologia","Cirugia Oral Y Maxilofacial","Especializacion",3
+"Bogota","Odontologia","Odontologia","Maestria",22
+"Bogota","Odontologia","Odontologia","Pregrado",850
+"Caribe","Caribe","Biologia","Doctorado",3
+"Caribe","Caribe","Estudios Del Caribe","Maestria",29
+"Caribe","Caribe","Biologia","Maestria",21
+"Manizales","Administracion","Gerencia Estrategica De Proyectos","Especializacion",739
+"Manizales","Administracion","Finanzas Corporativas","Especializacion",253
+"Manizales","Administracion","Alta Gerencia","Especializacion",212
+"Manizales","Administracion","Gestion Cultural Con Enfasis En Planeacion Y Politicas Culturales","Especializacion",154
+"Manizales","Administracion","Auditoria De Sistemas","Especializacion",87
+"Manizales","Administracion","Administracion","Especializacion",48
+"Manizales","Administracion","Gestion De Redes Y Datos","Especializacion",46
+"Manizales","Administracion","Ingenieria Financiera","Especializacion",11
+"Manizales","Administracion","Administracion","Maestria",322
+"Manizales","Administracion","Administracion De Sistemas Informaticos","Maestria",10
+"Manizales","Administracion","Administracion De Empresas (Diurno)","Pregrado",654
+"Manizales","Administracion","Administracion De Sistemas Informaticos","Pregrado",474
+"Manizales","Administracion","Administracion De Empresas (Nocturno)","Pregrado",410
+"Manizales","Administracion","Administracion De Empresas","Pregrado",249
+"Manizales","Administracion","Administracion","Pregrado",243
+"Manizales","Administracion","Gestion Cultural Y Comunicativa","Pregrado",187
+"Manizales","Ciencias Exactas Y Naturales","Estadistica","Especializacion",13
+"Manizales","Ciencias Exactas Y Naturales","Enseñanza De Las Ciencias Exactas Y Naturales","Maestria",301
+"Manizales","Ciencias Exactas Y Naturales","Fisica","Maestria",60
+"Manizales","Ciencias Exactas Y Naturales","Matematica Aplicada","Maestria",49
+"Manizales","Ciencias Exactas Y Naturales","Ciencias Exactas Y Naturales","Maestria",8
+"Manizales","Ciencias Exactas Y Naturales","Matematica Aplicada - Convenio U Sucre","Maestria",1
+"Manizales","Ciencias Exactas Y Naturales","Ingenieria Fisica","Pregrado",220
+"Manizales","Ciencias Exactas Y Naturales","Matematicas","Pregrado",85
+"Manizales","Ciencias Exactas Y Naturales","Ciencias Exactas Y Naturales","Pregrado",35
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Automatica","Doctorado",53
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Automatica","Doctorado",34
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Industria Y Organizaciones","Doctorado",19
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Ingenieria Quimica","Doctorado",12
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Y Arquitectura","Doctorado",8
+"Manizales","Ingenieria Y Arquitectura","Vias Y Transportes","Especializacion",430
+"Manizales","Ingenieria Y Arquitectura","Direccion De Produccion Y Operaciones","Especializacion",309
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Hidraulica Y Ambiental","Especializacion",250
+"Manizales","Ingenieria Y Arquitectura","Estructuras","Especializacion",242
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Ambiental - Area Sanitaria","Especializacion",106
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Y Arquitectura","Especializacion",67
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Automatizacion Industrial","Especializacion",3
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Automatizacion Industrial","Maestria",133
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Ingenieria Quimica","Maestria",72
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Ingenieria Industrial","Maestria",60
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Ingenieria Electrica","Maestria",48
+"Manizales","Ingenieria Y Arquitectura","Medio Ambiente Y Desarrollo","Maestria",37
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Ingenieria Ambiental","Maestria",26
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Y Arquitectura","Maestria",26
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Infraestructura Y Sistemas De Transporte","Maestria",19
+"Manizales","Ingenieria Y Arquitectura","Habitat","Maestria",18
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Electrica","Maestria",17
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Recursos Hidraulicos","Maestria",14
+"Manizales","Ingenieria Y Arquitectura","Ingenieria - Estructuras","Maestria",2
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Civil","Pregrado",909
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Electrica","Pregrado",875
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Industrial","Pregrado",861
+"Manizales","Ingenieria Y Arquitectura","Arquitectura","Pregrado",739
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Electronica","Pregrado",629
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Quimica","Pregrado",507
+"Manizales","Ingenieria Y Arquitectura","Ingenieria Y Arquitectura","Pregrado",477
+"Manizales","Ingenieria Y Arquitectura","Construccion","Pregrado",15
+"Medellin","Arquitectura","Interventoria De Proyectos Y Obras","Especializacion",428
+"Medellin","Arquitectura","Gestion Inmobiliaria","Especializacion",175
+"Medellin","Arquitectura","Arquitectura","Especializacion",139
+"Medellin","Arquitectura","Patologia De La Edificacion Y Tecnicas De Intervencion Y Prevencion","Especializacion",119
+"Medellin","Arquitectura","Diseño Urbano","Especializacion",42
+"Medellin","Arquitectura","Planeacion Urbano-Regional","Especializacion",19
+"Medellin","Arquitectura","Estudios Urbano - Regionales","Maestria",126
+"Medellin","Arquitectura","Arquitectura","Maestria",53
+"Medellin","Arquitectura","Construccion","Maestria",50
+"Medellin","Arquitectura","Habitat","Maestria",49
+"Medellin","Arquitectura","Artes Plasticas Y Visuales","Maestria",40
+"Medellin","Arquitectura","Arquitectura","Pregrado",988
+"Medellin","Arquitectura","Construccion","Pregrado",336
+"Medellin","Arquitectura","Artes Plasticas","Pregrado",249
+"Medellin","Ciencias","Biotecnologia","Doctorado",39
+"Medellin","Ciencias","Matematicas","Doctorado",13
+"Medellin","Ciencias","Fisica","Doctorado",8
+"Medellin","Ciencias","Estadistica","Doctorado",7
+"Medellin","Ciencias","Ciencias Fisica","Doctorado",5
+"Medellin","Ciencias","Ciencias Estadistica","Doctorado",4
+"Medellin","Ciencias","Estadistica","Especializacion",143
+"Medellin","Ciencias","Biotecnologia","Especializacion",39
+"Medellin","Ciencias","Ciencias","Especializacion",13
+"Medellin","Ciencias","Enseñanza De Las Ciencias Exactas Y Naturales","Maestria",898
+"Medellin","Ciencias","Biotecnologia","Maestria",168
+"Medellin","Ciencias","Estadistica","Maestria",93
+"Medellin","Ciencias","Matematicas","Maestria",74
+"Medellin","Ciencias","Fisica","Maestria",58
+"Medellin","Ciencias","Quimica","Maestria",56
+"Medellin","Ciencias","Ciencias","Maestria",47
+"Medellin","Ciencias","Entomologia","Maestria",42
+"Medellin","Ciencias","Geomorfologia Y Suelos","Maestria",36
+"Medellin","Ciencias","Matematica Aplicada","Maestria",14
+"Medellin","Ciencias","Ingenieria Biologica","Pregrado",507
+"Medellin","Ciencias","Estadistica","Pregrado",202
+"Medellin","Ciencias","Ingenieria Fisica","Pregrado",202
+"Medellin","Ciencias","Ciencias","Pregrado",131
+"Medellin","Ciencias","Matematicas","Pregrado",124
+"Medellin","Ciencias Agrarias","Ciencias Agrarias","Doctorado",27
+"Medellin","Ciencias Agrarias","Ecologia","Doctorado",13
+"Medellin","Ciencias Agrarias","Ciencias Agropecuarias - Area Agraria","Doctorado",10
+"Medellin","Ciencias Agrarias","Agroecologia","Doctorado",1
+"Medellin","Ciencias Agrarias","Ciencia Y Tecnologia De Alimentos","Doctorado",1
+"Medellin","Ciencias Agrarias","Ciencias Agropecuarias","Doctorado",1
+"Medellin","Ciencias Agrarias","Ciencia Y Tecnologia De Alimentos","Especializacion",104
+"Medellin","Ciencias Agrarias","Sistemas","Especializacion",61
+"Medellin","Ciencias Agrarias","Nutricion Animal","Especializacion",28
+"Medellin","Ciencias Agrarias","Ciencias Agropecuarias","Especializacion",11
+"Medellin","Ciencias Agrarias","Gestion Agroambiental","Especializacion",1
+"Medellin","Ciencias Agrarias","Ciencias Agrarias","Maestria",134
+"Medellin","Ciencias Agrarias","Ciencia Y Tecnologia De Alimentos","Maestria",131
+"Medellin","Ciencias Agrarias","Bosques Y Conservacion Ambiental","Maestria",81
+"Medellin","Ciencias Agrarias","Ciencias Agropecuarias","Maestria",24
+"Medellin","Ciencias Agrarias","Ingenieria Agroindustrial","Maestria",17
+"Medellin","Ciencias Agrarias","Ingenieria Forestal","Pregrado",413
+"Medellin","Ciencias Agrarias","Zootecnia","Pregrado",397
+"Medellin","Ciencias Agrarias","Ingenieria Agronomica","Pregrado",320
+"Medellin","Ciencias Agrarias","Ingenieria Agricola","Pregrado",167
+"Medellin","Ciencias Agrarias","Ciencias Agropecuarias","Pregrado",141
+"Medellin","Ciencias Agrarias","Tecnologia Forestal","Pregrado",21
+"Medellin","Ciencias Humanas Y Economicas","Historia","Doctorado",37
+"Medellin","Ciencias Humanas Y Economicas","Ciencias Humanas Y Sociales","Doctorado",27
+"Medellin","Ciencias Humanas Y Economicas","Ciencias Humanas Y Economicas","Doctorado",4
+"Medellin","Ciencias Humanas Y Economicas","Ciencia Politica","Especializacion",34
+"Medellin","Ciencias Humanas Y Economicas","Ciencias Humanas Y Economicas","Especializacion",5
+"Medellin","Ciencias Humanas Y Economicas","Economia Internacional","Especializacion",3
+"Medellin","Ciencias Humanas Y Economicas","Estetica","Especializacion",2
+"Medellin","Ciencias Humanas Y Economicas","Historia","Maestria",82
+"Medellin","Ciencias Humanas Y Economicas","Estetica","Maestria",63
+"Medellin","Ciencias Humanas Y Economicas","Estudios Politicos","Maestria",37
+"Medellin","Ciencias Humanas Y Economicas","Ciencias Economicas","Maestria",34
+"Medellin","Ciencias Humanas Y Economicas","Archivistica","Maestria",8
+"Medellin","Ciencias Humanas Y Economicas","Ciencias Humanas Y Economicas","Maestria",7
+"Medellin","Ciencias Humanas Y Economicas","Ciencia Politica","Pregrado",559
+"Medellin","Ciencias Humanas Y Economicas","Historia","Pregrado",370
+"Medellin","Ciencias Humanas Y Economicas","Economia","Pregrado",319
+"Medellin","Ciencias Humanas Y Economicas","Ciencias Humanas Y Economicas","Pregrado",194
+"Medellin","Minas","Ingenieria - Ciencia Y Tecnologia De Materiales","Doctorado",55
+"Medellin","Minas","Ingenieria - Sistemas","Doctorado",39
+"Medellin","Minas","Ingenieria - Sistemas Energeticos","Doctorado",39
+"Medellin","Minas","Ingenieria - Industria Y Organizaciones","Doctorado",26
+"Medellin","Minas","Ingenieria - Sistemas E Informatica","Doctorado",26
+"Medellin","Minas","Ingenieria - Recursos Hidraulicos","Doctorado",24
+"Medellin","Minas","Minas","Doctorado",8
+"Medellin","Minas","Ciencias Del Mar","Doctorado",4
+"Medellin","Minas","Ingenieria","Doctorado",4
+"Medellin","Minas","Ingenieria - Ingenieria Civil","Doctorado",2
+"Medellin","Minas","Ingenieria - Ingenieria Mecanica Y Mecatronica","Doctorado",1
+"Medellin","Minas","Ingenieria Financiera","Especializacion",333
+"Medellin","Minas","Gestion Empresarial","Especializacion",330
+"Medellin","Minas","Estructuras","Especializacion",247
+"Medellin","Minas","Vias Y Transportes","Especializacion",245
+"Medellin","Minas","Gestion Ambiental","Especializacion",179
+"Medellin","Minas","Mercados De Energia","Especializacion",164
+"Medellin","Minas","Analitica","Especializacion",162
+"Medellin","Minas","Minas","Especializacion",152
+"Medellin","Minas","Aprovechamiento De Recursos Hidraulicos","Especializacion",141
+"Medellin","Minas","Mantenimiento","Especializacion",76
+"Medellin","Minas","Ingenieria Geotecnia","Especializacion",69
+"Medellin","Minas","Ingenieria De Software","Especializacion",23
+"Medellin","Minas","Materiales Y Procesos","Especializacion",18
+"Medellin","Minas","Ingenieria De Materiales Y Procesos","Especializacion",12
+"Medellin","Minas","Recursos Minerales","Especializacion",9
+"Medellin","Minas","Sistemas","Especializacion",2
+"Medellin","Minas","Ingenieria - Ingenieria De Sistemas","Maestria",206
+"Medellin","Minas","Ingenieria - Ingenieria Administrativa","Maestria",193
+"Medellin","Minas","Medio Ambiente Y Desarrollo","Maestria",164
+"Medellin","Minas","Ingenieria - Ingenieria Quimica","Maestria",137
+"Medellin","Minas","Ingenieria - Recursos Hidraulicos","Maestria",125
+"Medellin","Minas","Ingenieria - Materiales Y Procesos","Maestria",119
+"Medellin","Minas","Minas","Maestria",66
+"Medellin","Minas","Ingenieria - Geotecnia","Maestria",58
+"Medellin","Minas","Ingenieria - Sistemas Energeticos","Maestria",54
+"Medellin","Minas","Ingenieria - Ingenieria Electrica","Maestria",49
+"Medellin","Minas","Ingenieria - Recursos Minerales","Maestria",46
+"Medellin","Minas","Ingenieria - Ingenieria De Petroleos","Maestria",42
+"Medellin","Minas","Ingenieria - Ingenieria De Petroleos","Maestria",41
+"Medellin","Minas","Ingenieria - Infraestructura Y Sistemas De Transporte","Maestria",36
+"Medellin","Minas","Ingenieria Administrativa","Maestria",29
+"Medellin","Minas","Ingenieria Mecanica","Maestria",22
+"Medellin","Minas","Ingenieria Industrial","Maestria",19
+"Medellin","Minas","Ingenieria - Ingenieria Mecanica","Maestria",14
+"Medellin","Minas","Ingenieria - Automatizacion Industrial","Maestria",12
+"Medellin","Minas","Automatizacion Industrial","Maestria",2
+"Medellin","Minas","Ingenieria - Estructuras","Maestria",2
+"Medellin","Minas","Ingenieria - Ingenieria Civil","Maestria",1
+"Medellin","Minas","Ingenieria Civil","Pregrado",1120
+"Medellin","Minas","Ingenieria Administrativa","Pregrado",1065
+"Medellin","Minas","Ingenieria Industrial","Pregrado",946
+"Medellin","Minas","Minas","Pregrado",804
+"Medellin","Minas","Ingenieria De Petroleos","Pregrado",746
+"Medellin","Minas","Ingenieria Mecanica","Pregrado",724
+"Medellin","Minas","Ingenieria Quimica","Pregrado",705
+"Medellin","Minas","Ingenieria De Sistemas E Informatica","Pregrado",517
+"Medellin","Minas","Ingenieria De Minas Y Metalurgia","Pregrado",432
+"Medellin","Minas","Ingenieria Geologica","Pregrado",411
+"Medellin","Minas","Ingenieria Electrica","Pregrado",388
+"Medellin","Minas","Ingenieria De Control","Pregrado",328
+"Medellin","Minas","Ingenieria Ambiental","Pregrado",173
+"Palmira","Ciencias Agropecuarias","Ciencias Agrarias","Doctorado",107
+"Palmira","Ciencias Agropecuarias","Agroecologia","Doctorado",16
+"Palmira","Ciencias Agropecuarias","Ciencias Agropecuarias","Doctorado",2
+"Palmira","Ciencias Agropecuarias","Ciencias Agropecuarias","Especializacion",19
+"Palmira","Ciencias Agropecuarias","Ciencias Agrarias","Maestria",258
+"Palmira","Ciencias Agropecuarias","Ciencias Biologicas","Maestria",64
+"Palmira","Ciencias Agropecuarias","Ciencias Agropecuarias","Maestria",26
+"Palmira","Ciencias Agropecuarias","Ingenieria Agronomica","Pregrado",716
+"Palmira","Ciencias Agropecuarias","Zootecnia","Pregrado",408
+"Palmira","Ciencias Agropecuarias","Ciencias Agropecuarias","Pregrado",78
+"Palmira","Ingenieria Y Administracion","Ergonomia","Especializacion",14
+"Palmira","Ingenieria Y Administracion","Enseñanza De Las Ciencias Exactas Y Naturales","Maestria",373
+"Palmira","Ingenieria Y Administracion","Administracion","Maestria",84
+"Palmira","Ingenieria Y Administracion","Ingenieria Agroindustrial","Maestria",36
+"Palmira","Ingenieria Y Administracion","Ingenieria - Ingenieria Ambiental","Maestria",32
+"Palmira","Ingenieria Y Administracion","Ingenieria Ambiental","Maestria",30
+"Palmira","Ingenieria Y Administracion","Ingenieria Ambiental","Pregrado",658
+"Palmira","Ingenieria Y Administracion","Ingenieria Agroindustrial","Pregrado",551
+"Palmira","Ingenieria Y Administracion","Administracion De Empresas","Pregrado",468
+"Palmira","Ingenieria Y Administracion","Diseño Industrial","Pregrado",381
+"Palmira","Ingenieria Y Administracion","Ingenieria Agricola","Pregrado",266
+"Palmira","Ingenieria Y Administracion","Ingenieria Y Administracion","Pregrado",226
