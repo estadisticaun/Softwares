@@ -43,7 +43,8 @@ Graduados <- Graduados[,!(names(Graduados) %in% nombre)]
 
 #IDENTIFICACIÓN DE CATEGORIAS
 
-#se corrige la ciudad de Bogotá, d.c por Bogotá D.C 
+#se elimina "," y se corrige la ciudad de Bogotá, d.c por Bogotá D.C 
+Graduados$CIU_NAC <- str_remove_all(Graduados$CIU_NAC, ",")
 Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "d\\.c\\.", "D.C.")
 #AGRUPAR POR CIU_NAC PARA IDENTIFICAR INCONSISTENCIAS
 ciunac <- Graduados %>% group_by(CIU_NAC) %>% count()
@@ -66,8 +67,6 @@ Graduados <- Graduados %>% select(-c("LAT_CIU_NAC", "LON_CIU_NAC"))
 Graduados <- left_join(Graduados, puntos, by = "CIU_NAC")
 
 #se corrige nombres de algunas ciudades
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Bogota(|,) d.c.", 
-                                     "Bogota D.C.")
 Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Calima", "Darien")
 Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Guadalajara de buga", 
                                      "Buga")
@@ -153,52 +152,40 @@ Graduados$DEP_NAC <- str_replace_all(Graduados$DEP_NAC, ", d\\. c\\.", " D.C")
 Graduados$DEP_NAC <- str_replace_all(Graduados$DEP_NAC, "Bogota( D.C)?", 
                                      "Bogota D.C")
 
-#Cambiar el nombre de algunas ciudades dependiendo de su departameto
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-                 Graduados$CIU_NAC == "San pedro de los milagros", 6] <- "San pedro"
 
-Graduados[Graduados$DEP_NAC == "Tolima" & 
-            Graduados$CIU_NAC == "Colon", 6] <- "Santa isabel"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "San andres", 6] <- "San andres de cuerquia"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "San andres de cuerquia", 
-          32] <- "-75.672773119699997"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "San andres de cuerquia", 
-          31] <- "6.9236096390800004"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "Samana", 5] <- "Caldas"
-Graduados[Graduados$DEP_NAC == "Bolivar" & 
-            Graduados$CIU_NAC == "San agustin", 5] <- "Huila"
-Graduados[Graduados$DEP_NAC == "Cesar" & 
-            Graduados$CIU_NAC == "Libano", 5] <- "Tolima"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "Puerto lopez", 5] <- "Meta"
-Graduados[Graduados$DEP_NAC == "Cesar" & 
+
+#Cambiar el nombre de algunas ciudades y departamentos dependiendo de su 
+#departameto
+Graduados[(!is.na(Graduados$CIU_NAC)) & (Graduados$DEP_NAC == "Antioquia") &
+         (Graduados$CIU_NAC == "San pedro de los milagros"), "CIU_NAC"] <- "San pedro"
+Graduados[(!is.na(Graduados$CIU_NAC)) & (Graduados$DEP_NAC == "Antioquia") & 
+            (Graduados$CIU_NAC == "San andres"), "CIU_NAC"] <- "San andres de cuerquia"
+Graduados[(!is.na(Graduados$CIU_NAC)) & (Graduados$DEP_NAC == "Tolima") & 
+            (Graduados$CIU_NAC == "Colon"), "CIU_NAC"] <- "Santa isabel"
+Graduados[(!is.na(Graduados$CIU_NAC)) & Graduados$DEP_NAC == "Antioquia" & 
+            Graduados$CIU_NAC == "Samana", "DEP_NAC"] <- "Caldas"
+Graduados[(!is.na(Graduados$CIU_NAC)) & (Graduados$DEP_NAC == "Bolivar") & 
+            (Graduados$CIU_NAC == "San agustin"), "DEP_NAC"] <- "Huila"
+Graduados[(!is.na(Graduados$CIU_NAC)) & (Graduados$DEP_NAC == "Cesar") & 
+            (Graduados$CIU_NAC == "Libano"), "DEP_NAC"] <- "Tolima"
+Graduados[(!is.na(Graduados$CIU_NAC)) & (Graduados$DEP_NAC == "Antioquia") & 
+            (Graduados$CIU_NAC == "Puerto lopez"), "DEP_NAC"] <- "Meta"
+Graduados[(!is.na(Graduados$CIU_NAC)) & (Graduados$DEP_NAC == "Antioquia") & 
+            (Graduados$CIU_NAC == "San martin"), "DEP_NAC"] <- "Meta"
+Graduados[(!is.na(Graduados$CIU_NAC)) & 
+            (Graduados$CIU_NAC == "Entrerrios"), "DEP_NAC"] <- "Antioquia"
+Graduados[(!is.na(Graduados$CIU_NAC)) & (Graduados$DEP_NAC == "Antioquia") & 
+            (Graduados$CIU_NAC == "San andres de cuerquia"), 
+          "LON_CIU_NAC"] <- "-75.672773119699997"
+Graduados[(!is.na(Graduados$CIU_NAC)) & (Graduados$DEP_NAC == "Antioquia") & 
+            (Graduados$CIU_NAC == "San andres de cuerquia"), 
+          "LAT_CIU_NAC"] <- "6.9236096390800004"
+Graduados[(!is.na(Graduados$CIU_NAC)) & (Graduados$DEP_NAC == "Cesar") & 
+            (Graduados$CIU_NAC == "San martin"), 
+          "LON_CIU_NAC"] <- "-73.510987"
+Graduados[(!is.na(Graduados$CIU_NAC)) & Graduados$DEP_NAC == "Cesar" & 
             Graduados$CIU_NAC == "San martin", 
-          32] <- "-73.510987"
-Graduados[Graduados$DEP_NAC == "Cesar" & 
-            Graduados$CIU_NAC == "San martin", 
-          31] <- "7.999580"
-Graduados[Graduados$DEP_NAC == "Antioquia" & 
-            Graduados$CIU_NAC == "San martin", 5] <- "Meta"
-Graduados[Graduados$CIU_NAC == "Entrerrios", 5] <- "Antioquia"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          "LAT_CIU_NAC"] <- "7.999580"
 
 #AGRUPAR POR NIVEL PARA IDENTIFICAR INCONSISTENCIAS
 nivel <- Graduados %>% group_by(NIVEL) %>% count()
@@ -491,14 +478,8 @@ Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
 Graduados$PROGRAMA <- str_replace_all(Graduados$PROGRAMA,
                                       "Vias(\\sY\\s)?(T|t)ransportes?", 
                                       "Vias Y Transportes")
-
-
-
-
-
+#CREAR NUEVA COLUMNA PARA EL PERIODO
 Graduados$YEAR_SEMESTER <- str_c(Graduados$YEAR, Graduados$SEMESTRE,
                                  sep = " - ")
-
-
 
 write.csv(Graduados, file = "Datos.csv", row.names = F)
