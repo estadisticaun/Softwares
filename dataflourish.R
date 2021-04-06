@@ -3,6 +3,7 @@ library(dplyr)
 library(tidyverse)
 library(magrittr)
 library(rjson)
+library(R.utils)
 library(jsonlite)
 Graduados <- read_xlsx("Datos.xlsx")
 #es necesario volver a mayusculas para coincidir con el archivo GeoJson
@@ -229,30 +230,6 @@ car_lineas <- Graduados %>%
   
 write.csv(car_lineas, file = "Datos para Flourish/car_lineas.csv", row.names = F)
 
-#GRAFICO DE RADAR
-radar <- Graduados %>% 
-  group_by(EDAD_MOD, NIVEL, SEDE_NOMBRE_MAT) %>% 
-  filter(EDAD_MOD > 15, EDAD_MOD <70) %>% 
-  count() %>% 
-  mutate(CAT_EDAD = case_when(
-    EDAD_MOD <= 23 ~ "23 años o menos",
-    EDAD_MOD >= 24 & EDAD_MOD <= 25 ~ "24 a 25 años",
-    EDAD_MOD >= 26 & EDAD_MOD <= 30 ~ "26 a 30 años",
-    EDAD_MOD >= 31 & EDAD_MOD <= 35 ~ "31 a 35 años",
-    EDAD_MOD >= 36 ~ "36 años o mas"
-  )) %>% 
-  pivot_wider(names_from = NIVEL, values_from = n) %>% 
-  mutate_all(~replace(., is.na(.), 0))
-write.csv(radar, file = "Datos para Flourish/radar.csv", row.names = F)
-
-estrato <- Graduados %>% 
-  group_by(ESTRATO_ORIG, NIVEL, SEDE_NOMBRE_MAT) %>% 
-  filter(ESTRATO_ORIG != "NA") %>% 
-  count() %>% 
-  pivot_wider(names_from = NIVEL, values_from = n) %>% 
-  mutate_all(~replace(., is.na(.), 0))
-write.csv(estrato, file = "Datos para Flourish/estrato.csv", row.names = F)
-
 #GRAFICO DE PENDIENTES
 
 #Pendiente sede bogota
@@ -297,14 +274,60 @@ pendiente_palmira <- Graduados %>%
   drop_na()
 write.csv(pendiente_palmira, file = "Datos para Flourish/pendiente_palmira.csv", row.names = F)
 
-#GRAFICO DE RADAR
-puntos <- Graduados %>% 
-  group_by(SEDE_NOMBRE_ADM) %>% 
-  count()
-write.csv(puntos, file = "Datos para Flourish/puntos.csv", row.names = F)
 
 #BOXPLOT EDADES
 edad <- Graduados %>% 
   group_by(YEAR_SEMESTER, EDAD_MOD, NIVEL, SEDE_NOMBRE_MAT) %>% count() %>% 
   filter(EDAD_MOD > 15, EDAD_MOD <70)
 write.csv(edad, file = "Datos para Flourish/edad.csv", row.names = F)
+
+#GRAFICO DE RADAR
+#resultados saber pro
+Saberpro <- read_xlsx("saberpro2019.xlsx")
+programas <- Graduados %>% 
+  filter(NIVEL == "Pregrado") %>% 
+  group_by(SEDE_NOMBRE_MAT, FACULTAD, PROGRAMA) %>% 
+  mutate(PROGRAMA = capitalize(tolower(chartr('áéíóúü','aeiouu', PROGRAMA)))) %>% 
+  count()
+
+resultados_unal <- Saberpro %>% 
+  filter(AGREGACION == "PROGRAMA_ACÁDEMICO", 
+         NOMBRE_INSTITUCION == "UNIVERSIDAD NACIONAL DE COLOMBIA",
+         MEDIDA_AGREGACION == "PUNTAJE_PRUEBA", 
+         NOMBRE_PRUEBA %in% c("LECTURA CRÍTICA",
+                              "RAZONAMIENTO CUANTITATIVO",
+                              "COMPETENCIAS CIUDADANAS",
+                              "COMUNICACIÓN ESCRITA",
+                              "INGLÉS")) %>% 
+  select("EXAMEN", "CANTIDADEVALUADOS", "NOMBRE_PRUEBA", "NOMBRE_SEDE",
+         "ID_PROGRAMA_ACAD", "NOMBRE_PROGRAMA_ACAD", "NOMBRE_GRUPOREF",
+         "PROMEDIO_PRUEBA") %>% 
+  mutate(NOMBRE_PRUEBA = capitalize(tolower(NOMBRE_PRUEBA)),
+         NOMBRE_SEDE = capitalize(tolower(str_replace(NOMBRE_SEDE ,
+                                                      '[\\w\\s]+-(\\w+)', '\\1'))),
+         NOMBRE_PROGRAMA_ACAD = capitalize(tolower(NOMBRE_PROGRAMA_ACAD)),
+         NOMBRE_GRUPOREF = capitalize(tolower(NOMBRE_GRUPOREF)))
+
+resultados_unal$NOMBRE_SEDE <- str_replace_all(resultados_unal$NOMBRE_SEDE,
+                                               " d.c.", "")
+resultados_unal$NOMBRE_SEDE <- str_replace_all(resultados_unal$NOMBRE_SEDE,
+                                               "Medellin", "Medellín")
+resultados_unal$NOMBRE_PROGRAMA_ACAD <- str_replace_all(resultados_unal$NOMBRE_PROGRAMA_ACAD,
+                                                        "Literatura",
+                                                        "Literatura (estudios literarios)")
+union_saber <- left_join(resultados_unal, programas, 
+                         by = c("NOMBRE_SEDE" = "SEDE_NOMBRE_MAT",
+                                "NOMBRE_PROGRAMA_ACAD" = "PROGRAMA")) %>% 
+  pivot_wider(names_from = NOMBRE_PRUEBA, values_from = PROMEDIO_PRUEBA) %>% 
+  mutate_all(~replace(., is.na(.), 0))
+
+
+saber_bogota <- union_saber %>% filter(NOMBRE_SEDE == "Bogotá")
+saber_medellin <- union_saber %>% filter(NOMBRE_SEDE == "Medellín")
+saber_manizales <- union_saber %>% filter(NOMBRE_SEDE == "Manizales")
+saber_palmira <- union_saber %>% filter(NOMBRE_SEDE == "Palmira")
+
+write.csv(saber_bogota, file = "Datos para Flourish/saber_bogota.csv", row.names = F)
+write.csv(saber_medellin, file = "Datos para Flourish/saber_medellin.csv", row.names = F)
+write.csv(saber_manizales, file = "Datos para Flourish/saber_manizales.csv", row.names = F)
+write.csv(saber_palmira, file = "Datos para Flourish/saber_palmira.csv", row.names = F)
