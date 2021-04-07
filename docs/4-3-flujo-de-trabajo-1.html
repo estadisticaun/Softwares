@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-04-06" />
+<meta name="date" content="2021-04-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1298,8 +1298,21 @@ Figura 4.124: Gráfico de pendiente para la sede Bogotá
 </div>
 <p>Este gráfico debe ser replicado para las demás sedes mencionadas, es decir, Medellín, Manizales y Palmira, ya que luego seran usadas para crear una historia.</p>
 </div>
+<div id="graficoradarflourish" class="section level4">
+<h4><span class="header-section-number">4.3.1.13</span> Gráfico de radar</h4>
+<p>Los gráficos de radar son un método para mostrar datos multivariados en forma de un gráfico bidimensional de 3 o más variables cuantitativas representadas en ejes que comienzan desde el mismo punto, Flourish ofrece tres plantillas para la creación de este tipo de gráficos, la primera de ellas consiste en polígonos llenos con filtro, las siguientes dos plantillas muestran la misma información y se construyen de manera similar los gráficos, pero cambia la forma del polígono, una de ellas ofrece barras y la otra estrellas. A continuación, se presentan las tres plantillas disponibles.</p>
+<div class="figure" style="text-align: center"><span id="fig:plantillasradarflourish-fig"></span>
+<img src="Imágenes/flourish132.jpg" alt="Plantillas disponibles para gráficos de radar" width="85%" />
+<p class="caption">
+Figura 4.125: Plantillas disponibles para gráficos de radar
+</p>
+</div>
+<p>La plantilla para explorar será la llamada “Radar with filter”, la cual permite crear polígonos llenos y añadir una columna para generar un filtro dentro de la visualización; como ya se ha mencionado el primer paso para la creación con Flourish es analizar la estructura de los datos de ejemplo. Para esta visualización como mínimo se deben tener cuatro columnas, la primera de ellas contiene los nombres a partir de los cuales se crea cada gráfico de radar, seguido de esto deben existir tres columnas donde cada una representa un eje, es importante que estas columnas de valores sean compatibles, por lo que todas deben estar en la misma escala. La columna de filtros no es un campo obligatorio, pero en el caso de contener muchos datos es útil utilizarla, ya que permite filtrar lo que muestra la visualización al seleccionar una categoría.</p>
+<p>En el sistema de educación colombiana para que los estudiantes de Instituciones de educación superior puedan obtener un título de pregrado deben realizar un examen llamado Saber Pro, en el cual tiene como finalidad evaluar la calidad de la educación superior, en este examen se evalúan cinco módulos genéricos los cuales son lectura crítica, razonamiento cuantitativo, competencias ciudadanas, comunicación escrita e inglés, además existen módulos asociados a temáticas y contenidos específicos que los estudiantes tienen la posibilidad de presentar de acuerdo a su área de formación profesional.</p>
+<p>La página web del <a href="https://www.icfes.gov.co/web/guest/acerca-del-examen-saber-pro">Icfes</a> en la sección de resultados Saber Pro se encuentran disponibles bases de datos con los resultados agregados de las pruebas aplicadas desde 2013 hasta 2019, a nivel de metadatos es decir una base para cada año, esta base contiene una columna llamada Agregación, la cual contiene diferentes agregaciones de los datos una de ellas es programa académico, a demás posee información sobre el nombre de la institución y la medida de agregación. En este caso interesa explorar los resultados obtenidos a nivel de pruebas genéricas para la Universidad Nacional de Colombia en cada una de sus sedes, inicialmente se quería añadir una línea de tiempo para explorar estos resultados por sede a nivel anual, pero la plantilla no permite hacerlo, razón por la cual únicamente se van a explorar los datos relacionados al año 2019.</p>
+</div>
 <div id="boxplotflourish" class="section level4">
-<h4><span class="header-section-number">4.3.1.13</span> Box-plot</h4>
+<h4><span class="header-section-number">4.3.1.14</span> Box-plot</h4>
 <p>Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable y permite la identificación de posibles valores atípicos. Para el conjunto de datos que se está trabajando puede ser de interés realizar un boxplot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta. La plantilla para la realización de estos gráficos se encuentra ubicada en la sección dispersión de la galería de plantillas de Flourish, seleccione la plantilla llamada boxplot y explore la pestaña de datos, con el fin de identificar los estantes disponibles para la creación de esta visualización, el conjunto de datos de ejemplo es bastante simple, únicamente contiene dos columnas que corresponden a los valores del eje X e Y respectivamente, los estantes permiten agregar columnas para generar nombres, establecer colores, tamaño y forma a partir de la categoría de los puntos, también hay una opción llamada cuadricula de gráficos a la cual se puede añadir un columna categórica y crea mini gráficos para cada valor de esa columna; el estante tiempo permite agregar una columna con fechas o ventana de tiempos para generar una animación en la visualización y finalmente están las opciones de añadir filtros e información para crear ventanas emergentes personalizadas.</p>
 <p>La base de datos a usar para crear esta gráfica contiene las columnas “YEAR_SEMESTER”, “EDAD_MOD”, “NIVEL”, “SEDE_NOMBRE_MAT” y el conteo de la cantidad de estudiantes graduados, el archivo a cargar es llamado “edad.csv”.</p>
 <ol style="list-style-type: decimal">
@@ -1308,7 +1321,7 @@ Figura 4.124: Gráfico de pendiente para la sede Bogotá
 <div class="figure" style="text-align: center"><span id="fig:paso1boxplotflourish-fig"></span>
 <img src="Imágenes/flourish119.jpg" alt="Cargar el conjunto de datos y asignar columnas" width="85%" />
 <p class="caption">
-Figura 4.125: Cargar el conjunto de datos y asignar columnas
+Figura 4.126: Cargar el conjunto de datos y asignar columnas
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -1317,7 +1330,7 @@ Figura 4.125: Cargar el conjunto de datos y asignar columnas
 <div class="figure" style="text-align: center"><span id="fig:paso2oxplotflourish-fig"></span>
 <img src="Imágenes/flourish120.jpg" alt="Vista previa de la visualización" width="85%" />
 <p class="caption">
-Figura 4.126: Vista previa de la visualización
+Figura 4.127: Vista previa de la visualización
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -1326,7 +1339,7 @@ Figura 4.126: Vista previa de la visualización
 <div class="figure" style="text-align: center"><span id="fig:paso3boxplotflourish-fig"></span>
 <img src="Imágenes/flourish121.jpg" alt="Edición de paleta de colores" width="85%" />
 <p class="caption">
-Figura 4.127: Edición de paleta de colores
+Figura 4.128: Edición de paleta de colores
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -1335,7 +1348,7 @@ Figura 4.127: Edición de paleta de colores
 <div class="figure" style="text-align: center"><span id="fig:paso4boxplotflourish-fig"></span>
 <img src="Imágenes/flourish122.jpg" alt="Formato al eje X" width="85%" />
 <p class="caption">
-Figura 4.128: Formato al eje X
+Figura 4.129: Formato al eje X
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -1344,7 +1357,7 @@ Figura 4.128: Formato al eje X
 <div class="figure" style="text-align: center"><span id="fig:paso5boxplotflourish-fig"></span>
 <img src="Imágenes/flourish123.jpg" alt="Formato al eje Y" width="85%" />
 <p class="caption">
-Figura 4.129: Formato al eje Y
+Figura 4.130: Formato al eje Y
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
@@ -1353,7 +1366,7 @@ Figura 4.129: Formato al eje Y
 <div class="figure" style="text-align: center"><span id="fig:paso6boxplotflourish-fig"></span>
 <img src="Imágenes/flourish124.jpg" alt="Contenido personalizado en ventanas emergentes" width="85%" />
 <p class="caption">
-Figura 4.130: Contenido personalizado en ventanas emergentes
+Figura 4.131: Contenido personalizado en ventanas emergentes
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
@@ -1362,7 +1375,7 @@ Figura 4.130: Contenido personalizado en ventanas emergentes
 <div class="figure" style="text-align: center"><span id="fig:paso7boxplotflourish-fig"></span>
 <img src="Imágenes/flourish125.jpg" alt="Explorar pestaña de adiciones gráficas" width="85%" />
 <p class="caption">
-Figura 4.131: Explorar pestaña de adiciones gráficas
+Figura 4.132: Explorar pestaña de adiciones gráficas
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">

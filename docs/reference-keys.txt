@@ -614,3 +614,5 @@ carrerabarrasflourish
 graficopendienteflourish
 boxplotflourish
 conclu
+fig:plantillasradarflourish-fig
+graficoradarflourish
