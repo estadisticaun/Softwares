@@ -521,6 +521,7 @@ fig:paso3pendienteflourish-fig
 fig:paso4pendienteflourish-fig
 fig:paso5pendienteflourish-fig
 fig:pendientesedebogotaflourish-fig
+fig:plantillasradarflourish-fig
 fig:paso1boxplotflourish-fig
 fig:paso2oxplotflourish-fig
 fig:paso3boxplotflourish-fig
@@ -612,7 +613,6 @@ jerarquiaflourish
 diagramadesankeyflourish
 carrerabarrasflourish
 graficopendienteflourish
+graficoradarflourish
 boxplotflourish
 conclu
-fig:plantillasradarflourish-fig
-graficoradarflourish

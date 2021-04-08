@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-04-05}
+\date{2021-04-07}
 
 \begin{document}
 \maketitle
@@ -9797,6 +9797,26 @@ La visualización obtenida permite identificar los cambios de posición de los p
 \end{figure}
 
 Este gráfico debe ser replicado para las demás sedes mencionadas, es decir, Medellín, Manizales y Palmira, ya que luego seran usadas para crear una historia.
+
+\hypertarget{graficoradarflourish}{%
+\subsubsection{Gráfico de radar}\label{graficoradarflourish}}
+
+Los gráficos de radar son un método para mostrar datos multivariados en forma de un gráfico bidimensional de 3 o más variables cuantitativas representadas en ejes que comienzan desde el mismo punto, Flourish ofrece tres plantillas para la creación de este tipo de gráficos, la primera de ellas consiste en polígonos llenos con filtro, las siguientes dos plantillas muestran la misma información y se construyen de manera similar los gráficos, pero cambia la forma del polígono, una de ellas ofrece barras y la otra estrellas. A continuación, se presentan las tres plantillas disponibles.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish132} 
+
+}
+
+\caption{Plantillas disponibles para gráficos de radar}\label{fig:plantillasradarflourish-fig}
+\end{figure}
+
+La plantilla para explorar será la llamada ``Radar with filter'', la cual permite crear polígonos llenos y añadir una columna para generar un filtro dentro de la visualización; como ya se ha mencionado el primer paso para la creación con Flourish es analizar la estructura de los datos de ejemplo. Para esta visualización como mínimo se deben tener cuatro columnas, la primera de ellas contiene los nombres a partir de los cuales se crea cada gráfico de radar, seguido de esto deben existir tres columnas donde cada una representa un eje, es importante que estas columnas de valores sean compatibles, por lo que todas deben estar en la misma escala. La columna de filtros no es un campo obligatorio, pero en el caso de contener muchos datos es útil utilizarla, ya que permite filtrar lo que muestra la visualización al seleccionar una categoría.
+
+En el sistema de educación colombiana para que los estudiantes de Instituciones de educación superior puedan obtener un título de pregrado deben realizar un examen llamado Saber Pro, en el cual tiene como finalidad evaluar la calidad de la educación superior, en este examen se evalúan cinco módulos genéricos los cuales son lectura crítica, razonamiento cuantitativo, competencias ciudadanas, comunicación escrita e inglés, además existen módulos asociados a temáticas y contenidos específicos que los estudiantes tienen la posibilidad de presentar de acuerdo a su área de formación profesional.
+
+La página web del \href{https://www.icfes.gov.co/web/guest/acerca-del-examen-saber-pro}{Icfes} en la sección de resultados Saber Pro se encuentran disponibles bases de datos con los resultados agregados de las pruebas aplicadas desde 2013 hasta 2019, a nivel de metadatos es decir una base para cada año, esta base contiene una columna llamada Agregación, la cual contiene diferentes agregaciones de los datos una de ellas es programa académico, a demás posee información sobre el nombre de la institución y la medida de agregación. En este caso interesa explorar los resultados obtenidos a nivel de pruebas genéricas para la Universidad Nacional de Colombia en cada una de sus sedes, inicialmente se quería añadir una línea de tiempo para explorar estos resultados por sede a nivel anual, pero la plantilla no permite hacerlo, razón por la cual únicamente se van a explorar los datos relacionados al año 2019.
 
 \hypertarget{boxplotflourish}{%
 \subsubsection{Box-plot}\label{boxplotflourish}}

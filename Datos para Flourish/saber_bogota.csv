@@ -1,56 +1,56 @@
-"EXAMEN","CANTIDADEVALUADOS","NOMBRE_SEDE","ID_PROGRAMA_ACAD","NOMBRE_PROGRAMA_ACAD","NOMBRE_GRUPOREF","FACULTAD","n","Competencias ciudadanas","Comunicación escrita","Lectura crítica","Razonamiento cuantitativo","Inglés"
-"SABER PRO - 2019",84,"Bogotá",3667,"Ingenieria mecanica","Ingeniería","Ingeniería",900,177,0,185,206,198
-"SABER PRO - 2019",67,"Bogotá",2208,"Odontologia","Salud","Odontología",850,167,146,178,179,181
-"SABER PRO - 2019",51,"Bogotá",3761,"Ingenieria agricola","Ingeniería","Ingeniería",391,170,157,175,197,186
-"SABER PRO - 2019",11,"Bogotá",4167,"Terapia ocupacional","Salud","Medicina",248,182,176,181,170,180
-"SABER PRO - 2019",101,"Bogotá",6810,"Arquitectura","Arquitectura y urbanismo","Artes",990,169,152,179,185,187
-"SABER PRO - 2019",114,"Bogotá",5552,"Economia","Economía","Ciencias Económicas",1107,196,167,191,197,200
-"SABER PRO - 2019",43,"Bogotá",2794,"Artes plasticas","Bellas artes y diseño","Artes",489,175,153,191,173,197
-"SABER PRO - 2019",31,"Bogotá",4306,"Historia","Humanidades","Ciencias Humanas",331,189,161,201,177,197
-"SABER PRO - 2019",87,"Bogotá",3788,"Antropologia","Ciencias sociales","Ciencias Humanas",763,0,166,0,0,0
-"SABER PRO - 2019",96,"Bogotá",5101,"Ingenieria electrica","Ingeniería","Ingeniería",726,175,148,179,203,190
-"SABER PRO - 2019",87,"Bogotá",1875,"Filologia e idiomas","Humanidades","Ciencias Humanas",842,177,0,191,171,210
-"SABER PRO - 2019",47,"Bogotá",4305,"Geografia","Ciencias sociales","Ciencias Humanas",301,182,164,180,176,184
-"SABER PRO - 2019",123,"Bogotá",6811,"Derecho","Derecho","Derecho, Ciencias Políticas Y Sociales",1162,204,179,196,180,189
-"SABER PRO - 2019",105,"Bogotá",2644,"Ingenieria de sistemas","Ingeniería","Ingeniería",33,180,153,190,203,201
-"SABER PRO - 2019",46,"Bogotá",519,"Fisica","Ciencias naturales y exactas","Ciencias",497,193,166,198,220,205
-"SABER PRO - 2019",56,"Bogotá",468,"Ingenieria electronica","Ingeniería","Ingeniería",745,176,150,189,206,198
-"SABER PRO - 2019",63,"Bogotá",3033,"Medicina veterinaria","Ciencias agropecuarias","Medicina Veterinaria Y De Zootecnia",583,175,154,184,183,191
-"SABER PRO - 2019",69,"Bogotá",3666,"Ingenieria industrial","Ingeniería","Ingeniería",681,184,160,196,202,202
-"SABER PRO - 2019",43,"Bogotá",186,"Cine y television","Bellas artes y diseño","Artes",343,177,150,190,176,199
-"SABER PRO - 2019",107,"Bogotá",5551,"Administracion de empresas","Administración y afines","Ciencias Económicas",1142,181,160,187,189,189
-"SABER PRO - 2019",62,"Bogotá",3668,"Trabajo social","Ciencias sociales","Ciencias Humanas",567,184,167,187,161,173
-"SABER PRO - 2019",56,"Bogotá",4304,"Estadistica","Ciencias naturales y exactas","Ciencias",474,168,155,181,200,188
-"SABER PRO - 2019",62,"Bogotá",6948,"Sociologia","Ciencias sociales","Ciencias Humanas",677,195,163,200,182,182
-"SABER PRO - 2019",45,"Bogotá",1920,"Musica instrumental","Bellas artes y diseño","Artes",406,144,146,162,154,181
-"SABER PRO - 2019",21,"Bogotá",4166,"Fonoaudiologia","Salud","Medicina",228,173,162,183,168,176
-"SABER PRO - 2019",46,"Bogotá",1054,"Filosofia","Humanidades","Ciencias Humanas",455,192,171,202,175,196
-"SABER PRO - 2019",127,"Bogotá",905,"Ingenieria civil","Ingeniería","Ingeniería",1530,181,154,188,217,192
-"SABER PRO - 2019",69,"Bogotá",2645,"Nutricion y dietetica","Salud","Medicina",611,171,159,177,183,184
-"SABER PRO - 2019",61,"Bogotá",3084,"Geologia","Ciencias naturales y exactas","Ciencias",608,180,158,190,200,199
-"SABER PRO - 2019",120,"Bogotá",1469,"Farmacia","Salud","Ciencias",1062,182,155,188,197,192
-"SABER PRO - 2019",70,"Bogotá",3139,"Ingenieria agronomica","Ciencias agropecuarias","Ciencias Agrarias",808,169,154,176,192,183
-"SABER PRO - 2019",28,"Bogotá",3665,"Fisioterapia","Salud","Medicina",284,171,171,178,182,180
-"SABER PRO - 2019",44,"Bogotá",6444,"Matematicas","Ciencias naturales y exactas","Ciencias",376,178,146,183,204,189
-"SABER PRO - 2019",191,"Bogotá",5658,"Medicina","Medicina","Medicina",2350,185,163,194,194,197
-"SABER PRO - 2019",68,"Bogotá",467,"Contaduria publica","Contaduría y afines","Ciencias Económicas",1039,186,159,188,191,190
-"SABER PRO - 2019",116,"Bogotá",185,"Ciencia politica","Ciencias sociales","Derecho, Ciencias Políticas Y Sociales",1026,192,0,192,168,182
-"SABER PRO - 2019",88,"Bogotá",3788,"Antropologia","Ciencias sociales","Ciencias Humanas",763,188,0,197,178,196
-"SABER PRO - 2019",42,"Bogotá",15721,"Español y filologia clasica","Bellas artes y diseño","Ciencias Humanas",207,185,164,203,164,196
-"SABER PRO - 2019",44,"Bogotá",4168,"Zootecnia","Ciencias agropecuarias","Medicina Veterinaria Y De Zootecnia",613,169,151,180,178,176
-"SABER PRO - 2019",86,"Bogotá",93,"Quimica","Ciencias naturales y exactas","Ciencias",512,169,161,183,201,192
-"SABER PRO - 2019",55,"Bogotá",6945,"Diseño grafico","Bellas artes y diseño","Artes",459,176,150,190,175,200
-"SABER PRO - 2019",86,"Bogotá",1875,"Filologia e idiomas","Humanidades","Ciencias Humanas",842,0,161,0,0,0
-"SABER PRO - 2019",89,"Bogotá",1383,"Biologia","Ciencias naturales y exactas","Ciencias",828,189,0,196,192,201
-"SABER PRO - 2019",158,"Bogotá",4280,"Ingenieria quimica","Ingeniería","Ingeniería",1461,184,0,188,208,199
-"SABER PRO - 2019",82,"Bogotá",3789,"Diseño industrial","Bellas artes y diseño","Artes",690,179,153,180,184,195
-"SABER PRO - 2019",57,"Bogotá",1919,"Ingenieria mecatronica","Ingeniería","Ingeniería",496,185,152,191,217,208
-"SABER PRO - 2019",105,"Bogotá",55,"Psicologia","Psicología","Ciencias Humanas",1134,190,157,196,180,200
-"SABER PRO - 2019",83,"Bogotá",3667,"Ingenieria mecanica","Ingeniería","Ingeniería",900,0,155,0,0,0
-"SABER PRO - 2019",72,"Bogotá",5100,"Enfermeria","Enfermería","Enfermería",1270,174,157,183,182,174
-"SABER PRO - 2019",88,"Bogotá",1383,"Biologia","Ciencias naturales y exactas","Ciencias",828,0,164,0,0,0
-"SABER PRO - 2019",47,"Bogotá",189,"Literatura (estudios literarios)","Humanidades","Ciencias Humanas",17,193,170,193,173,202
-"SABER PRO - 2019",7,"Bogotá",2795,"Musica","Bellas artes y diseño","Artes",73,170,129,172,181,199
-"SABER PRO - 2019",42,"Bogotá",6095,"Linguistica","Humanidades","Ciencias Humanas",284,184,172,193,167,189
-"SABER PRO - 2019",115,"Bogotá",185,"Ciencia politica","Ciencias sociales","Derecho, Ciencias Políticas Y Sociales",1026,0,167,0,0,0
-"SABER PRO - 2019",157,"Bogotá",4280,"Ingenieria quimica","Ingeniería","Ingeniería",1461,0,161,0,0,0
+"EXAMEN","CANTIDADEVALUADOS","NOMBRE_SEDE","ID_PROGRAMA_ACAD","NOMBRE_PROGRAMA_ACAD","NOMBRE_GRUPOREF","FACULTAD","Competencias ciudadanas","Comunicación escrita","Lectura crítica","Razonamiento cuantitativo","Inglés"
+"SABER PRO - 2019",84,"Bogotá",3667,"Ingenieria mecanica","Ingeniería","Ingeniería",177,0,185,206,198
+"SABER PRO - 2019",67,"Bogotá",2208,"Odontologia","Salud","Odontología",167,146,178,179,181
+"SABER PRO - 2019",51,"Bogotá",3761,"Ingenieria agricola","Ingeniería","Ingeniería",170,157,175,197,186
+"SABER PRO - 2019",11,"Bogotá",4167,"Terapia ocupacional","Salud","Medicina",182,176,181,170,180
+"SABER PRO - 2019",101,"Bogotá",6810,"Arquitectura","Arquitectura y urbanismo","Artes",169,152,179,185,187
+"SABER PRO - 2019",114,"Bogotá",5552,"Economia","Economía","Ciencias económicas",196,167,191,197,200
+"SABER PRO - 2019",43,"Bogotá",2794,"Artes plasticas","Bellas artes y diseño","Artes",175,153,191,173,197
+"SABER PRO - 2019",31,"Bogotá",4306,"Historia","Humanidades","Ciencias humanas",189,161,201,177,197
+"SABER PRO - 2019",87,"Bogotá",3788,"Antropologia","Ciencias sociales","Ciencias humanas",0,166,0,0,0
+"SABER PRO - 2019",96,"Bogotá",5101,"Ingenieria electrica","Ingeniería","Ingeniería",175,148,179,203,190
+"SABER PRO - 2019",87,"Bogotá",1875,"Filologia e idiomas","Humanidades","Ciencias humanas",177,0,191,171,210
+"SABER PRO - 2019",47,"Bogotá",4305,"Geografia","Ciencias sociales","Ciencias humanas",182,164,180,176,184
+"SABER PRO - 2019",123,"Bogotá",6811,"Derecho","Derecho","Derecho, ciencias políticas y sociales",204,179,196,180,189
+"SABER PRO - 2019",105,"Bogotá",2644,"Ingenieria de sistemas","Ingeniería","Ingeniería",180,153,190,203,201
+"SABER PRO - 2019",46,"Bogotá",519,"Fisica","Ciencias naturales y exactas","Ciencias",193,166,198,220,205
+"SABER PRO - 2019",56,"Bogotá",468,"Ingenieria electronica","Ingeniería","Ingeniería",176,150,189,206,198
+"SABER PRO - 2019",63,"Bogotá",3033,"Medicina veterinaria","Ciencias agropecuarias","Medicina veterinaria y de zootecnia",175,154,184,183,191
+"SABER PRO - 2019",69,"Bogotá",3666,"Ingenieria industrial","Ingeniería","Ingeniería",184,160,196,202,202
+"SABER PRO - 2019",43,"Bogotá",186,"Cine y television","Bellas artes y diseño","Artes",177,150,190,176,199
+"SABER PRO - 2019",107,"Bogotá",5551,"Administracion de empresas","Administración y afines","Ciencias económicas",181,160,187,189,189
+"SABER PRO - 2019",62,"Bogotá",3668,"Trabajo social","Ciencias sociales","Ciencias humanas",184,167,187,161,173
+"SABER PRO - 2019",56,"Bogotá",4304,"Estadistica","Ciencias naturales y exactas","Ciencias",168,155,181,200,188
+"SABER PRO - 2019",62,"Bogotá",6948,"Sociologia","Ciencias sociales","Ciencias humanas",195,163,200,182,182
+"SABER PRO - 2019",45,"Bogotá",1920,"Musica instrumental","Bellas artes y diseño","Artes",144,146,162,154,181
+"SABER PRO - 2019",21,"Bogotá",4166,"Fonoaudiologia","Salud","Medicina",173,162,183,168,176
+"SABER PRO - 2019",46,"Bogotá",1054,"Filosofia","Humanidades","Ciencias humanas",192,171,202,175,196
+"SABER PRO - 2019",127,"Bogotá",905,"Ingenieria civil","Ingeniería","Ingeniería",181,154,188,217,192
+"SABER PRO - 2019",69,"Bogotá",2645,"Nutricion y dietetica","Salud","Medicina",171,159,177,183,184
+"SABER PRO - 2019",61,"Bogotá",3084,"Geologia","Ciencias naturales y exactas","Ciencias",180,158,190,200,199
+"SABER PRO - 2019",120,"Bogotá",1469,"Farmacia","Salud","Ciencias",182,155,188,197,192
+"SABER PRO - 2019",70,"Bogotá",3139,"Ingenieria agronomica","Ciencias agropecuarias","Ciencias agrarias",169,154,176,192,183
+"SABER PRO - 2019",28,"Bogotá",3665,"Fisioterapia","Salud","Medicina",171,171,178,182,180
+"SABER PRO - 2019",44,"Bogotá",6444,"Matematicas","Ciencias naturales y exactas","Ciencias",178,146,183,204,189
+"SABER PRO - 2019",191,"Bogotá",5658,"Medicina","Medicina","Medicina",185,163,194,194,197
+"SABER PRO - 2019",68,"Bogotá",467,"Contaduria publica","Contaduría y afines","Ciencias económicas",186,159,188,191,190
+"SABER PRO - 2019",116,"Bogotá",185,"Ciencia politica","Ciencias sociales","Derecho, ciencias políticas y sociales",192,0,192,168,182
+"SABER PRO - 2019",88,"Bogotá",3788,"Antropologia","Ciencias sociales","Ciencias humanas",188,0,197,178,196
+"SABER PRO - 2019",42,"Bogotá",15721,"Español y filologia clasica","Bellas artes y diseño","Ciencias humanas",185,164,203,164,196
+"SABER PRO - 2019",44,"Bogotá",4168,"Zootecnia","Ciencias agropecuarias","Medicina veterinaria y de zootecnia",169,151,180,178,176
+"SABER PRO - 2019",86,"Bogotá",93,"Quimica","Ciencias naturales y exactas","Ciencias",169,161,183,201,192
+"SABER PRO - 2019",55,"Bogotá",6945,"Diseño grafico","Bellas artes y diseño","Artes",176,150,190,175,200
+"SABER PRO - 2019",86,"Bogotá",1875,"Filologia e idiomas","Humanidades","Ciencias humanas",0,161,0,0,0
+"SABER PRO - 2019",89,"Bogotá",1383,"Biologia","Ciencias naturales y exactas","Ciencias",189,0,196,192,201
+"SABER PRO - 2019",158,"Bogotá",4280,"Ingenieria quimica","Ingeniería","Ingeniería",184,0,188,208,199
+"SABER PRO - 2019",82,"Bogotá",3789,"Diseño industrial","Bellas artes y diseño","Artes",179,153,180,184,195
+"SABER PRO - 2019",57,"Bogotá",1919,"Ingenieria mecatronica","Ingeniería","Ingeniería",185,152,191,217,208
+"SABER PRO - 2019",105,"Bogotá",55,"Psicologia","Psicología","Ciencias humanas",190,157,196,180,200
+"SABER PRO - 2019",83,"Bogotá",3667,"Ingenieria mecanica","Ingeniería","Ingeniería",0,155,0,0,0
+"SABER PRO - 2019",72,"Bogotá",5100,"Enfermeria","Enfermería","Enfermería",174,157,183,182,174
+"SABER PRO - 2019",88,"Bogotá",1383,"Biologia","Ciencias naturales y exactas","Ciencias",0,164,0,0,0
+"SABER PRO - 2019",47,"Bogotá",189,"Literatura (estudios literarios)","Humanidades","Ciencias humanas",193,170,193,173,202
+"SABER PRO - 2019",7,"Bogotá",2795,"Musica","Bellas artes y diseño","Artes",170,129,172,181,199
+"SABER PRO - 2019",42,"Bogotá",6095,"Linguistica","Humanidades","Ciencias humanas",184,172,193,167,189
+"SABER PRO - 2019",115,"Bogotá",185,"Ciencia politica","Ciencias sociales","Derecho, ciencias políticas y sociales",0,167,0,0,0
+"SABER PRO - 2019",157,"Bogotá",4280,"Ingenieria quimica","Ingeniería","Ingeniería",0,161,0,0,0

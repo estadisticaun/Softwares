@@ -287,7 +287,8 @@ Saberpro <- read_xlsx("saberpro2019.xlsx")
 programas <- Graduados %>% 
   filter(NIVEL == "Pregrado") %>% 
   group_by(SEDE_NOMBRE_MAT, FACULTAD, PROGRAMA) %>% 
-  mutate(PROGRAMA = capitalize(tolower(chartr('áéíóúü','aeiouu', PROGRAMA)))) %>% 
+  mutate(PROGRAMA = capitalize(tolower(chartr('áéíóúü','aeiouu', PROGRAMA))),
+         FACULTAD = capitalize(tolower(FACULTAD))) %>% 
   count()
 
 resultados_unal <- Saberpro %>% 
@@ -319,6 +320,7 @@ union_saber <- left_join(resultados_unal, programas,
                          by = c("NOMBRE_SEDE" = "SEDE_NOMBRE_MAT",
                                 "NOMBRE_PROGRAMA_ACAD" = "PROGRAMA")) %>% 
   pivot_wider(names_from = NOMBRE_PRUEBA, values_from = PROMEDIO_PRUEBA) %>% 
+  select(-n) %>% 
   mutate_all(~replace(., is.na(.), 0))
 
 
