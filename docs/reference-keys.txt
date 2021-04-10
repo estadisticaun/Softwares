@@ -616,3 +616,7 @@ graficopendienteflourish
 graficoradarflourish
 boxplotflourish
 conclu
+fig:asignarcolumnasradarflourish-fig
+fig:paso1radarflourish-fig
+fig:paso2radarflourish-fig
+fig:radarbogotaflourish-fig
