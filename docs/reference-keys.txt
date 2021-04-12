@@ -522,6 +522,10 @@ fig:paso4pendienteflourish-fig
 fig:paso5pendienteflourish-fig
 fig:pendientesedebogotaflourish-fig
 fig:plantillasradarflourish-fig
+fig:asignarcolumnasradarflourish-fig
+fig:paso1radarflourish-fig
+fig:paso2radarflourish-fig
+fig:radarbogotaflourish-fig
 fig:paso1boxplotflourish-fig
 fig:paso2oxplotflourish-fig
 fig:paso3boxplotflourish-fig
@@ -616,7 +620,3 @@ graficopendienteflourish
 graficoradarflourish
 boxplotflourish
 conclu
-fig:asignarcolumnasradarflourish-fig
-fig:paso1radarflourish-fig
-fig:paso2radarflourish-fig
-fig:radarbogotaflourish-fig

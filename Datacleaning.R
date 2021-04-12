@@ -21,7 +21,7 @@ for(archivo in list.files("C:/Users/camil/Escritorio/Estudiante Auxiliar/Softwar
 nombre <- c("ID","TID", "COD_DEP_NAC", "COD_CIU_NAC", "COD_DEP_PROC", 
             "COD_CIU_PROC", "CODS_NAC", "CODN_NAC", "SNIES_SEDE_ADM", 
             "SNIES_SEDE_MAT", "SNIESU_CONVENIO")
-Graduados <- Graduados[, !(names(Graduados) %in% nombre)]
+Graduados <- Graduados %>% select(-nombre)
 
 #QUITAR NUMEROS DE LA VARIABLE CIU_NAC
 Graduados$CIU_NAC <- str_remove_all(Graduados$CIU_NAC, "\\d")
@@ -39,13 +39,12 @@ for (columna in colnames(Graduados)) {
 nombre <- c("DEP_PROC", "CIU_PROC", "LON_CIU_PROC", "LAT_CIU_PROC", "TIPO_COL",
             "PBM_ORIG", "PBM", "MAT_PVEZ", "DISCAPACIDAD", "TIPO_DISC", 
             "MOV_PEAMA", "FACULTAD_S", "PROGRAMA_S")
-Graduados <- Graduados[,!(names(Graduados) %in% nombre)]
+Graduados <- Graduados %>% select(-nombre)
 
 #IDENTIFICACIÓN DE CATEGORIAS
 
-#se elimina "," y se corrige la ciudad de Bogotá, d.c por Bogotá D.C 
+#se elimina ","
 Graduados$CIU_NAC <- str_remove_all(Graduados$CIU_NAC, ",")
-Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "d\\.c\\.", "D.C.")
 #AGRUPAR POR CIU_NAC PARA IDENTIFICAR INCONSISTENCIAS
 ciunac <- Graduados %>% group_by(CIU_NAC) %>% count()
 #Cambiar todo a minuscula
@@ -54,6 +53,9 @@ Graduados$CIU_NAC <- tolower(Graduados$CIU_NAC)
 Graduados$CIU_NAC <- chartr('áéíóú','aeiou', Graduados$CIU_NAC)
 #capitalizar para que la primera letra de cada palabra sea mayuscula
 Graduados$CIU_NAC <- capitalize(Graduados$CIU_NAC)
+# Corrección de la ciudad de Bogotá para que posteriormente coincida con los
+#archivos GeoJson
+Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "d\\.c\\.", "D.C.")
 
 #Se agrupa por ciudad, latitud y longitud
 puntos <- Graduados %>% 
@@ -65,6 +67,9 @@ puntos <- puntos %>% select(-n)
 #Se eliminan las columnas latitud y longitud de la base original para realizar la union
 Graduados <- Graduados %>% select(-c("LAT_CIU_NAC", "LON_CIU_NAC"))
 Graduados <- left_join(Graduados, puntos, by = "CIU_NAC")
+#cambiar "," por ".", para evitar inconcistencias en las latitudes y longitudes
+Graduados$LAT_CIU_NAC <- str_replace_all(Graduados$LAT_CIU_NAC, ",", ".")
+Graduados$LON_CIU_NAC <- str_replace_all(Graduados$LON_CIU_NAC, ",", ".")
 
 #se corrige nombres de algunas ciudades
 Graduados$CIU_NAC <- str_replace_all(Graduados$CIU_NAC, "Calima", "Darien")
@@ -483,3 +488,4 @@ Graduados$YEAR_SEMESTER <- str_c(Graduados$YEAR, Graduados$SEMESTRE,
                                  sep = " - ")
 
 write.csv(Graduados, file = "Datos.csv", row.names = F)
+

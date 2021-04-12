@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-04-07}
+\date{2021-04-09}
 
 \begin{document}
 \maketitle
@@ -9817,6 +9817,75 @@ La plantilla para explorar será la llamada ``Radar with filter'', la cual permi
 En el sistema de educación colombiana para que los estudiantes de Instituciones de educación superior puedan obtener un título de pregrado deben realizar un examen llamado Saber Pro, en el cual tiene como finalidad evaluar la calidad de la educación superior, en este examen se evalúan cinco módulos genéricos los cuales son lectura crítica, razonamiento cuantitativo, competencias ciudadanas, comunicación escrita e inglés, además existen módulos asociados a temáticas y contenidos específicos que los estudiantes tienen la posibilidad de presentar de acuerdo a su área de formación profesional.
 
 La página web del \href{https://www.icfes.gov.co/web/guest/acerca-del-examen-saber-pro}{Icfes} en la sección de resultados Saber Pro se encuentran disponibles bases de datos con los resultados agregados de las pruebas aplicadas desde 2013 hasta 2019, a nivel de metadatos es decir una base para cada año, esta base contiene una columna llamada Agregación, la cual contiene diferentes agregaciones de los datos una de ellas es programa académico, a demás posee información sobre el nombre de la institución y la medida de agregación. En este caso interesa explorar los resultados obtenidos a nivel de pruebas genéricas para la Universidad Nacional de Colombia en cada una de sus sedes, inicialmente se quería añadir una línea de tiempo para explorar estos resultados por sede a nivel anual, pero la plantilla no permite hacerlo, razón por la cual únicamente se van a explorar los datos relacionados al año 2019.
+
+Para crear la base de datos a usar en la plantilla de Flourish nuevamente de hace uso del lenguaje de programación R, allí se carga el archivo de datos ``saberpro2019.xlsx'', se aplican filtros para seleccionar la agregación de programas, Universidad Nacional de Colombia y las pruebas genéricas, a demás d esto se seleccionan las columnas que se consideran más relevantes para el gráfico a realizar, también se realizan algunos cambios a nivel de escritura de los datos tales como tildes, mayúsculas, entre otras. La base Saber Pro 2019 no contiene la facultad a la que pertenece cada programa y es importante tener esta información ya que se puede usar como filtro y la visualización final no se verá saturada, para agregar esta columna se realiza la unión entre una base llamada programas la cual contiene los programas de formación y la facultad a la que pertenecen, dicha base es extraída de la base original, es decir, Graduados y la base resultante de la aplicación de filtros y selecciones de Saber Pro; finalmente se realizan filtros por cada sede de la Universidad con el fin de obtener una base para cada sede, para posteriormente ser exportadas.
+
+Dentro de la plantilla para gráfico de radar de Flourish debe cargar el archivo de datos llamado ``saber\_bogota.csv'', inicialmente deberá corregir los errores ortográficos en los datos, seguido de esto podrá asignar las columnas a los estantes disponibles, el nombre esta dado por la columna E, los valores inician en la columna H y terminan en la L, así que deberá agregar de H a L al estante de valores, finalmente al filtro le corresponde la columna G.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish133} 
+
+}
+
+\caption{Asignación de columnas a estantes disponibles}\label{fig:asignarcolumnasradarflourish-fig}
+\end{figure}
+
+Ahora debe regresar a la pestaña de avance para iniciar a dar formato a la visualización, lo primero que se observa es que hay una leyenda que indica el color para cada uno de los programas, esta leyenda no es necesaria ya que cada gráfico de radar tiene un título que coincide con el programa de formación; además esta leyenda hace que el gráfico se vea saturado, por lo que se debe dirigir a la pestaña de leyenda y desactivarla.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Con la pestaña eje radial es posible dar formato al eje del gráfico, inicialmente debe cambiar el color de las líneas por ``\#646464'' y aumentar el ancho a 0.15; el color de las etiquetas también debe ser ``\#646464'' y su tamaño debe ser reducido a 1; las líneas y anillos deben ser de color ``\#808080'' al igual que la etiqueta Y.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish134} 
+
+}
+
+\caption{Edición del eje radial}\label{fig:paso1radarflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  La pestaña controles permite cambiar forma, colores y texto de los filtros incluidos en la visualización, para iniciar cambie el nombre de la etiqueta combinada y separada por Combinado y Separado respectivamente y para el filtro de facultades la opción All debe ser cambiada por Todos. Finalmente debe dirigirse a la sección de estilos de botones y cambiar el color de seleccionado por ``\#808080''.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish135} 
+
+}
+
+\caption{Asignación de columnas a estantes disponibles}\label{fig:paso2radarflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Haciendo uno de la pestaña diseño asigne ``\#ECF0F1'' como color de fondo y también active las fronteras, estas deben ser de color negro. Por último, se debe incluir un título y subtítulo en la visualización, los cuales serán Resultados Saber Pro 2019, Bogotá y Competencias genéricas respectivamente.
+\end{enumerate}
+
+La visualización obtenida permite observar los resultados obtenidos en el examen Saber Pro del año 2019 para la sede Bogotá, en cada programa de formación, adicional a esto da al usuario la posibilidad de controlar por los programas a visualizar al usar un filtro de facultad, por ejemplo, si se selecciona la facultad de ciencias económicas se obtiene la siguiente visualización.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish136} 
+
+}
+
+\caption{Gráfico de radar sede Bogotá facultad de ciencias económicas}\label{fig:radarbogotaflourish-fig}
+\end{figure}
+
+Es posible replicar este tipo de gráficos para las sedes restantes, es decir, Medellín, Manizales y Palmira, para después reunirlas en una historia y analizar los resultados sede por sede.
 
 \hypertarget{boxplotflourish}{%
 \subsubsection{Box-plot}\label{boxplotflourish}}
