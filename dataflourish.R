@@ -5,7 +5,7 @@ library(magrittr)
 library(rjson)
 library(R.utils)
 library(jsonlite)
-Graduados <- read_xlsx("Datos.xlsx")
+Graduados <- read.csv("Datos.csv", sep = ",", header = TRUE)
 #es necesario volver a mayusculas para coincidir con el archivo GeoJson
 Graduados$DEP_NAC <- toupper(Graduados$DEP_NAC)
 
@@ -333,3 +333,8 @@ write.csv(saber_bogota, file = "Datos para Flourish/saber_bogota.csv", row.names
 write.csv(saber_medellin, file = "Datos para Flourish/saber_medellin.csv", row.names = F)
 write.csv(saber_manizales, file = "Datos para Flourish/saber_manizales.csv", row.names = F)
 write.csv(saber_palmira, file = "Datos para Flourish/saber_palmira.csv", row.names = F)
+
+#DIAGRAMAS DE DISPERSION
+sample <- read_xls("Sample - Superstore.xls", sheet = "Orders")
+sample$`Order Date` <- format(sample$`Order Date`, '%Y')
+ventas <- write.csv(sample, file = "Datos para Flourish/ventas.csv", row.names = F)
