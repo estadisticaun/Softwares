@@ -620,3 +620,16 @@ graficopendienteflourish
 graficoradarflourish
 boxplotflourish
 conclu
+fig:dispersionbasicoflourish-fig
+fig:dispersionbasicotendenciaflourish-fig
+fig:minidispersioncotendenciaflourish-fig
+fig:minidispersioncolortendenciaflourish-fig
+fig:graficoburbujaflourish-fig
+fig:graficoburbujaconfiltroflourish-fig
+fig:hansroselingflourish-fig
+fig:formatopuntosflourish-fig
+fig:cambiopaletacoloresflourish-fig
+fig:formatoejexdispersionflourish-fig
+fig:formatoleyendadispersionflourish-fig
+fig:formatonumerodispersionflourish-fig
+dispersionflourish

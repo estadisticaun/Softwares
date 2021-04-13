@@ -1040,6 +1040,93 @@ knitr::include_graphics("Imágenes/flourish136.jpg")
 
 Es posible replicar este tipo de gráficos para las sedes restantes, es decir, Medellín, Manizales y Palmira, para después reunirlas en una historia y analizar los resultados sede por sede.
 
+#### Diagramas de dispersión {#dispersionflourish}
+
+Este tipo de gráficos son de gran utilidad cuando se desea visualizar relaciones entre dos variables numéricas y Flourish ofrece diversas opciones que van desde un diagrama de dispersión básico con puntos para los ejes X y Y hasta el diagrama de Hans Roseling que incluye diversos tamaños, colores y una línea de tiempo; todos estos gráficos se crean a partir de la plantilla básica y se volverán tan especializados como estantes se usen.
+
+La base de datos con información de graduados con la cual se han realizado varias visualizaciones no posee columnas numéricas que permitan crear diagramas de dispersión, por esta razón se usara la base de datos llamada “ventas.csv”.
+
+1.	Seleccione la plantilla de diagrama de dispersión básico y cargue el archivo de datos mencionado anteriormente, asigne las columnas U y R a los estantes valores de X y valores de Y respectivamente, con esto obtendrá un gráfico de dispersión básico.
+
+```{r dispersionbasicoflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de dispersión básico para beneficos vs ventas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish137.jpg")
+```
+
+Haciendo uso de la pestaña líneas de tendencia y seleccionando la opción uno por color discreto se añadira una línea de tendencia a la visualización, pero no es posible obtener información sobre el ajuste de esta línea.
+
+```{r dispersionbasicotendenciaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de dispersión básico para beneficos vs ventas con línea de tendencia', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish142.jpg")
+```
+
+2.	Si se añade una columna categórica al estante cuadricula de gráficos, se obtiene una visualización con tantos gráficos como categorías posea la columna, por ejemplo, añada la columna Category al estante mencionado y obtendrá la siguiente visualización.
+
+```{r minidispersioncotendenciaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Minigráficos por categoría con líneas de tendencia', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish138.jpg")
+```
+También es posible añadir las columnas Category y Quantity a los estantes color y tamaño respectivamente, con esto la visualización tendrá un color para cada minigráfico y el tamaño de los puntos cambiará dependiendo de la cantidad de productos solicitados.
+
+```{r minidispersioncolortendenciaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Columnas para controlar el color y tamaño de los puntos', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish139.jpg")
+```
+
+3.	Para realizar el gráfico de burbujas se debe retirar la columna ubicada en el estante cuadricula de gráfico y añadir la columna Product Name al estante nombre, active la leyenda para que en la parte superior aparezca el texto que identifica a cada color y desactive la línea de tendencia.
+
+```{r graficoburbujaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de burbuja', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish140.jpg")
+```
+
+4.	También es posible añadir una filtro a partir de una variable categórica con el fin de proporcionar interactividad entre el usuario y la visualización, por ejemplo, puede añadir la columna Region al estante filtro; esto permitirá analizar las ventas y beneficios para cada una de las regiones, al seleccionar la región Oeste se observa que hay un producto de la categoría de tecnología que genera pérdidas, pero también hay un producto de esta categoría que a pesar de solo vender cuatro unidades genera grandes beneficios para la compañía.
+
+```{r graficoburbujaconfiltroflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de burbuja con filtro de región', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish141.jpg")
+```
+5.	Para realizar el diagrama de Hans Roseling se debe agregar una columna de tiempo al estante tiempo, en este caso dicha columna será Order Date que corresponde a la fecha en la cual el cliente realiza el pedido, únicamente se seleccionaron los años de dicha fecha ya que se tienen registros diarios y la visualización no era informativa, ya que solo presentaría pocos puntos.
+
+```{r hansroselingflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de Hans Roseling', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish143.jpg")
+```
+
+Al igual que en las demás visualizaciones realizadas es posible dar formato y personalizar un poco los gráficos.
+
+-	Con la pestaña estilo de puntos es posible editar el tamaño, la forma y opacidad de cada uno de los puntos presentes en la visualización; inicialmente debe reducir la opacidad del punto a 0.5 y el tamaño mínimo a 1; la opacidad de la línea exterior deberá ser 1.
+
+```{r formatopuntosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a los puntos', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish144.jpg")
+```
+
+-	Para editar la paleta de colores haga clic en la pestaña color de puntos y edite la paleta de colores, los colore a usar serán “#29ABE2”, “#F15A24” Y “#8CC63F” para las categorías Furniture, Office Supplies y Technology respectivamente.
+
+```{r cambiopaletacoloresflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambio de paleta de colores', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish145.jpg")
+```
+
+-	Usando la pestaña configuraciones de gráfico active el color de fondo y asigne “#F5F5F5”.
+
+-	Ahora para el eje X active el estilo de título y seleccione negrita en color negro y tamaño 1.1; para las etiquetas también active el estilo para cambiar el color a negro y como ángulo debe seleccionar 0. Finalmente active las líneas de cuadricula y cambie su color por “#BBBBB9”.
+
+```{r formatoejexdispersionflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato al eje X', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish146.jpg")
+```
+
+-	Repita lo realizado anteriormente para dar formato al eje Y. Para la leyenda debe seleccionar la posición abajo y el modo de título debe ser reparado.
+
+```{r formatoleyendadispersionflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de leyenda', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish147.jpg")
+```
+
+-	Ahora con ayuda de la pestaña formato de número debe seleccionar la opción que tenga como separador de miles el punto.
+
+```{r formatonumerodispersionflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de número', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish148.jpg")
+```
+
+-	Por último, con ayuda de la pestaña diseño active todas las fronteras de la visualización y establézcalas en color negro, también añada el título Análisis año a año de beneficios vs ventas.
+
+La visualización obtenida permite al usuario filtrar por regiones y categorías de productos, adicional a esto el tamaño de cada punto esta determinado por la cantidad vendida y al añadir la línea de tiempo permite realizar un análisis anual de los beneficios de la compañía.
+
+<div class="flourish-embed flourish-scatter" data-src="visualisation/5847335"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+
 #### Box-plot {#boxplotflourish}
 
 Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable y permite la identificación de posibles valores atípicos. Para el conjunto de datos que se está trabajando puede ser de interés realizar un boxplot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta. La plantilla para la realización de estos gráficos se encuentra ubicada en la sección dispersión de la galería de plantillas de Flourish, seleccione la plantilla llamada boxplot y explore la pestaña de datos, con el fin de identificar los estantes disponibles para la creación de esta visualización, el conjunto de datos de ejemplo es bastante simple, únicamente contiene dos columnas que corresponden a los valores del eje X e Y respectivamente, los estantes permiten agregar columnas para generar nombres, establecer colores, tamaño y forma a partir de la categoría de los  puntos, también hay una opción llamada cuadricula de gráficos a la cual se puede añadir un columna categórica y crea mini gráficos para cada valor de esa columna; el estante tiempo permite agregar una columna con fechas o ventana de tiempos para generar una animación en la visualización y finalmente están las opciones de añadir filtros e información para crear ventanas emergentes personalizadas.

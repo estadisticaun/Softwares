@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-04-09" />
+<meta name="date" content="2021-04-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1349,8 +1349,126 @@ Figura 4.129: Gráfico de radar sede Bogotá facultad de ciencias económicas
 </div>
 <p>Es posible replicar este tipo de gráficos para las sedes restantes, es decir, Medellín, Manizales y Palmira, para después reunirlas en una historia y analizar los resultados sede por sede.</p>
 </div>
+<div id="dispersionflourish" class="section level4">
+<h4><span class="header-section-number">4.3.1.14</span> Diagramas de dispersión</h4>
+<p>Este tipo de gráficos son de gran utilidad cuando se desea visualizar relaciones entre dos variables numéricas y Flourish ofrece diversas opciones que van desde un diagrama de dispersión básico con puntos para los ejes X y Y hasta el diagrama de Hans Roseling que incluye diversos tamaños, colores y una línea de tiempo; todos estos gráficos se crean a partir de la plantilla básica y se volverán tan especializados como estantes se usen.</p>
+<p>La base de datos con información de graduados con la cual se han realizado varias visualizaciones no posee columnas numéricas que permitan crear diagramas de dispersión, por esta razón se usara la base de datos llamada “ventas.csv”.</p>
+<ol style="list-style-type: decimal">
+<li>Seleccione la plantilla de diagrama de dispersión básico y cargue el archivo de datos mencionado anteriormente, asigne las columnas U y R a los estantes valores de X y valores de Y respectivamente, con esto obtendrá un gráfico de dispersión básico.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:dispersionbasicoflourish-fig"></span>
+<img src="Imágenes/flourish137.jpg" alt="Gráfico de dispersión básico para beneficos vs ventas" width="85%" />
+<p class="caption">
+Figura 4.130: Gráfico de dispersión básico para beneficos vs ventas
+</p>
+</div>
+<p>Haciendo uso de la pestaña líneas de tendencia y seleccionando la opción uno por color discreto se añadira una línea de tendencia a la visualización, pero no es posible obtener información sobre el ajuste de esta línea.</p>
+<div class="figure" style="text-align: center"><span id="fig:dispersionbasicotendenciaflourish-fig"></span>
+<img src="Imágenes/flourish142.jpg" alt="Gráfico de dispersión básico para beneficos vs ventas con línea de tendencia" width="85%" />
+<p class="caption">
+Figura 4.131: Gráfico de dispersión básico para beneficos vs ventas con línea de tendencia
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Si se añade una columna categórica al estante cuadricula de gráficos, se obtiene una visualización con tantos gráficos como categorías posea la columna, por ejemplo, añada la columna Category al estante mencionado y obtendrá la siguiente visualización.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:minidispersioncotendenciaflourish-fig"></span>
+<img src="Imágenes/flourish138.jpg" alt="Minigráficos por categoría con líneas de tendencia" width="85%" />
+<p class="caption">
+Figura 4.132: Minigráficos por categoría con líneas de tendencia
+</p>
+</div>
+<p>También es posible añadir las columnas Category y Quantity a los estantes color y tamaño respectivamente, con esto la visualización tendrá un color para cada minigráfico y el tamaño de los puntos cambiará dependiendo de la cantidad de productos solicitados.</p>
+<div class="figure" style="text-align: center"><span id="fig:minidispersioncolortendenciaflourish-fig"></span>
+<img src="Imágenes/flourish139.jpg" alt="Columnas para controlar el color y tamaño de los puntos" width="85%" />
+<p class="caption">
+Figura 4.133: Columnas para controlar el color y tamaño de los puntos
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Para realizar el gráfico de burbujas se debe retirar la columna ubicada en el estante cuadricula de gráfico y añadir la columna Product Name al estante nombre, active la leyenda para que en la parte superior aparezca el texto que identifica a cada color y desactive la línea de tendencia.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:graficoburbujaflourish-fig"></span>
+<img src="Imágenes/flourish140.jpg" alt="Gráfico de burbuja" width="85%" />
+<p class="caption">
+Figura 4.134: Gráfico de burbuja
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>También es posible añadir una filtro a partir de una variable categórica con el fin de proporcionar interactividad entre el usuario y la visualización, por ejemplo, puede añadir la columna Region al estante filtro; esto permitirá analizar las ventas y beneficios para cada una de las regiones, al seleccionar la región Oeste se observa que hay un producto de la categoría de tecnología que genera pérdidas, pero también hay un producto de esta categoría que a pesar de solo vender cuatro unidades genera grandes beneficios para la compañía.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:graficoburbujaconfiltroflourish-fig"></span>
+<img src="Imágenes/flourish141.jpg" alt="Gráfico de burbuja con filtro de región" width="85%" />
+<p class="caption">
+Figura 4.135: Gráfico de burbuja con filtro de región
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Para realizar el diagrama de Hans Roseling se debe agregar una columna de tiempo al estante tiempo, en este caso dicha columna será Order Date que corresponde a la fecha en la cual el cliente realiza el pedido, únicamente se seleccionaron los años de dicha fecha ya que se tienen registros diarios y la visualización no era informativa, ya que solo presentaría pocos puntos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:hansroselingflourish-fig"></span>
+<img src="Imágenes/flourish143.jpg" alt="Gráfico de Hans Roseling" width="85%" />
+<p class="caption">
+Figura 4.136: Gráfico de Hans Roseling
+</p>
+</div>
+<p>Al igual que en las demás visualizaciones realizadas es posible dar formato y personalizar un poco los gráficos.</p>
+<ul>
+<li>Con la pestaña estilo de puntos es posible editar el tamaño, la forma y opacidad de cada uno de los puntos presentes en la visualización; inicialmente debe reducir la opacidad del punto a 0.5 y el tamaño mínimo a 1; la opacidad de la línea exterior deberá ser 1.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:formatopuntosflourish-fig"></span>
+<img src="Imágenes/flourish144.jpg" alt="Formato a los puntos" width="85%" />
+<p class="caption">
+Figura 4.137: Formato a los puntos
+</p>
+</div>
+<ul>
+<li>Para editar la paleta de colores haga clic en la pestaña color de puntos y edite la paleta de colores, los colore a usar serán “#29ABE2”, “#F15A24” Y “#8CC63F” para las categorías Furniture, Office Supplies y Technology respectivamente.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:cambiopaletacoloresflourish-fig"></span>
+<img src="Imágenes/flourish145.jpg" alt="Cambio de paleta de colores" width="85%" />
+<p class="caption">
+Figura 4.138: Cambio de paleta de colores
+</p>
+</div>
+<ul>
+<li><p>Usando la pestaña configuraciones de gráfico active el color de fondo y asigne “#F5F5F5”.</p></li>
+<li><p>Ahora para el eje X active el estilo de título y seleccione negrita en color negro y tamaño 1.1; para las etiquetas también active el estilo para cambiar el color a negro y como ángulo debe seleccionar 0. Finalmente active las líneas de cuadricula y cambie su color por “#BBBBB9”.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:formatoejexdispersionflourish-fig"></span>
+<img src="Imágenes/flourish146.jpg" alt="Formato al eje X" width="85%" />
+<p class="caption">
+Figura 4.139: Formato al eje X
+</p>
+</div>
+<ul>
+<li>Repita lo realizado anteriormente para dar formato al eje Y. Para la leyenda debe seleccionar la posición abajo y el modo de título debe ser reparado.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:formatoleyendadispersionflourish-fig"></span>
+<img src="Imágenes/flourish147.jpg" alt="Formato de leyenda" width="85%" />
+<p class="caption">
+Figura 4.140: Formato de leyenda
+</p>
+</div>
+<ul>
+<li>Ahora con ayuda de la pestaña formato de número debe seleccionar la opción que tenga como separador de miles el punto.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:formatonumerodispersionflourish-fig"></span>
+<img src="Imágenes/flourish148.jpg" alt="Formato de número" width="85%" />
+<p class="caption">
+Figura 4.141: Formato de número
+</p>
+</div>
+<ul>
+<li>Por último, con ayuda de la pestaña diseño active todas las fronteras de la visualización y establézcalas en color negro, también añada el título Análisis año a año de beneficios vs ventas.</li>
+</ul>
+<p>La visualización obtenida permite al usuario filtrar por regiones y categorías de productos, adicional a esto el tamaño de cada punto esta determinado por la cantidad vendida y al añadir la línea de tiempo permite realizar un análisis anual de los beneficios de la compañía.</p>
+<div class="flourish-embed flourish-scatter" data-src="visualisation/5847335">
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+</div>
+</div>
 <div id="boxplotflourish" class="section level4">
-<h4><span class="header-section-number">4.3.1.14</span> Box-plot</h4>
+<h4><span class="header-section-number">4.3.1.15</span> Box-plot</h4>
 <p>Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable y permite la identificación de posibles valores atípicos. Para el conjunto de datos que se está trabajando puede ser de interés realizar un boxplot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta. La plantilla para la realización de estos gráficos se encuentra ubicada en la sección dispersión de la galería de plantillas de Flourish, seleccione la plantilla llamada boxplot y explore la pestaña de datos, con el fin de identificar los estantes disponibles para la creación de esta visualización, el conjunto de datos de ejemplo es bastante simple, únicamente contiene dos columnas que corresponden a los valores del eje X e Y respectivamente, los estantes permiten agregar columnas para generar nombres, establecer colores, tamaño y forma a partir de la categoría de los puntos, también hay una opción llamada cuadricula de gráficos a la cual se puede añadir un columna categórica y crea mini gráficos para cada valor de esa columna; el estante tiempo permite agregar una columna con fechas o ventana de tiempos para generar una animación en la visualización y finalmente están las opciones de añadir filtros e información para crear ventanas emergentes personalizadas.</p>
 <p>La base de datos a usar para crear esta gráfica contiene las columnas “YEAR_SEMESTER”, “EDAD_MOD”, “NIVEL”, “SEDE_NOMBRE_MAT” y el conteo de la cantidad de estudiantes graduados, el archivo a cargar es llamado “edad.csv”.</p>
 <ol style="list-style-type: decimal">
@@ -1359,7 +1477,7 @@ Figura 4.129: Gráfico de radar sede Bogotá facultad de ciencias económicas
 <div class="figure" style="text-align: center"><span id="fig:paso1boxplotflourish-fig"></span>
 <img src="Imágenes/flourish119.jpg" alt="Cargar el conjunto de datos y asignar columnas" width="85%" />
 <p class="caption">
-Figura 4.130: Cargar el conjunto de datos y asignar columnas
+Figura 4.142: Cargar el conjunto de datos y asignar columnas
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -1368,7 +1486,7 @@ Figura 4.130: Cargar el conjunto de datos y asignar columnas
 <div class="figure" style="text-align: center"><span id="fig:paso2oxplotflourish-fig"></span>
 <img src="Imágenes/flourish120.jpg" alt="Vista previa de la visualización" width="85%" />
 <p class="caption">
-Figura 4.131: Vista previa de la visualización
+Figura 4.143: Vista previa de la visualización
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -1377,7 +1495,7 @@ Figura 4.131: Vista previa de la visualización
 <div class="figure" style="text-align: center"><span id="fig:paso3boxplotflourish-fig"></span>
 <img src="Imágenes/flourish121.jpg" alt="Edición de paleta de colores" width="85%" />
 <p class="caption">
-Figura 4.132: Edición de paleta de colores
+Figura 4.144: Edición de paleta de colores
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -1386,7 +1504,7 @@ Figura 4.132: Edición de paleta de colores
 <div class="figure" style="text-align: center"><span id="fig:paso4boxplotflourish-fig"></span>
 <img src="Imágenes/flourish122.jpg" alt="Formato al eje X" width="85%" />
 <p class="caption">
-Figura 4.133: Formato al eje X
+Figura 4.145: Formato al eje X
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -1395,7 +1513,7 @@ Figura 4.133: Formato al eje X
 <div class="figure" style="text-align: center"><span id="fig:paso5boxplotflourish-fig"></span>
 <img src="Imágenes/flourish123.jpg" alt="Formato al eje Y" width="85%" />
 <p class="caption">
-Figura 4.134: Formato al eje Y
+Figura 4.146: Formato al eje Y
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
@@ -1404,7 +1522,7 @@ Figura 4.134: Formato al eje Y
 <div class="figure" style="text-align: center"><span id="fig:paso6boxplotflourish-fig"></span>
 <img src="Imágenes/flourish124.jpg" alt="Contenido personalizado en ventanas emergentes" width="85%" />
 <p class="caption">
-Figura 4.135: Contenido personalizado en ventanas emergentes
+Figura 4.147: Contenido personalizado en ventanas emergentes
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
@@ -1413,7 +1531,7 @@ Figura 4.135: Contenido personalizado en ventanas emergentes
 <div class="figure" style="text-align: center"><span id="fig:paso7boxplotflourish-fig"></span>
 <img src="Imágenes/flourish125.jpg" alt="Explorar pestaña de adiciones gráficas" width="85%" />
 <p class="caption">
-Figura 4.136: Explorar pestaña de adiciones gráficas
+Figura 4.148: Explorar pestaña de adiciones gráficas
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
