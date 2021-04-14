@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-04-09}
+\date{2021-04-13}
 
 \begin{document}
 \maketitle
@@ -9886,6 +9886,205 @@ La visualización obtenida permite observar los resultados obtenidos en el exame
 \end{figure}
 
 Es posible replicar este tipo de gráficos para las sedes restantes, es decir, Medellín, Manizales y Palmira, para después reunirlas en una historia y analizar los resultados sede por sede.
+
+\hypertarget{dispersionflourish}{%
+\subsubsection{Diagramas de dispersión}\label{dispersionflourish}}
+
+Este tipo de gráficos son de gran utilidad cuando se desea visualizar relaciones entre dos variables numéricas y Flourish ofrece diversas opciones que van desde un diagrama de dispersión básico con puntos para los ejes X y Y hasta el diagrama de Hans Roseling que incluye diversos tamaños, colores y una línea de tiempo; todos estos gráficos se crean a partir de la plantilla básica y se volverán tan especializados como estantes se usen.
+
+La base de datos con información de graduados con la cual se han realizado varias visualizaciones no posee columnas numéricas que permitan crear diagramas de dispersión, por esta razón se usara la base de datos llamada ``ventas.csv''.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Seleccione la plantilla de diagrama de dispersión básico y cargue el archivo de datos mencionado anteriormente, asigne las columnas U y R a los estantes valores de X y valores de Y respectivamente, con esto obtendrá un gráfico de dispersión básico.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish137} 
+
+}
+
+\caption{Gráfico de dispersión básico para beneficos vs ventas}\label{fig:dispersionbasicoflourish-fig}
+\end{figure}
+
+Haciendo uso de la pestaña líneas de tendencia y seleccionando la opción uno por color discreto se añadira una línea de tendencia a la visualización, pero no es posible obtener información sobre el ajuste de esta línea.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish142} 
+
+}
+
+\caption{Gráfico de dispersión básico para beneficos vs ventas con línea de tendencia}\label{fig:dispersionbasicotendenciaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Si se añade una columna categórica al estante cuadricula de gráficos, se obtiene una visualización con tantos gráficos como categorías posea la columna, por ejemplo, añada la columna Category al estante mencionado y obtendrá la siguiente visualización.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish138} 
+
+}
+
+\caption{Minigráficos por categoría con líneas de tendencia}\label{fig:minidispersioncotendenciaflourish-fig}
+\end{figure}
+
+También es posible añadir las columnas Category y Quantity a los estantes color y tamaño respectivamente, con esto la visualización tendrá un color para cada minigráfico y el tamaño de los puntos cambiará dependiendo de la cantidad de productos solicitados.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish139} 
+
+}
+
+\caption{Columnas para controlar el color y tamaño de los puntos}\label{fig:minidispersioncolortendenciaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Para realizar el gráfico de burbujas se debe retirar la columna ubicada en el estante cuadricula de gráfico y añadir la columna Product Name al estante nombre, active la leyenda para que en la parte superior aparezca el texto que identifica a cada color y desactive la línea de tendencia.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish140} 
+
+}
+
+\caption{Gráfico de burbuja}\label{fig:graficoburbujaflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  También es posible añadir una filtro a partir de una variable categórica con el fin de proporcionar interactividad entre el usuario y la visualización, por ejemplo, puede añadir la columna Region al estante filtro; esto permitirá analizar las ventas y beneficios para cada una de las regiones, al seleccionar la región Oeste se observa que hay un producto de la categoría de tecnología que genera pérdidas, pero también hay un producto de esta categoría que a pesar de solo vender cuatro unidades genera grandes beneficios para la compañía.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish141} 
+
+}
+
+\caption{Gráfico de burbuja con filtro de región}\label{fig:graficoburbujaconfiltroflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Para realizar el diagrama de Hans Roseling se debe agregar una columna de tiempo al estante tiempo, en este caso dicha columna será Order Date que corresponde a la fecha en la cual el cliente realiza el pedido, únicamente se seleccionaron los años de dicha fecha ya que se tienen registros diarios y la visualización no era informativa, ya que solo presentaría pocos puntos.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish143} 
+
+}
+
+\caption{Gráfico de Hans Roseling}\label{fig:hansroselingflourish-fig}
+\end{figure}
+
+Al igual que en las demás visualizaciones realizadas es posible dar formato y personalizar un poco los gráficos.
+
+\begin{itemize}
+\tightlist
+\item
+  Con la pestaña estilo de puntos es posible editar el tamaño, la forma y opacidad de cada uno de los puntos presentes en la visualización; inicialmente debe reducir la opacidad del punto a 0.5 y el tamaño mínimo a 1; la opacidad de la línea exterior deberá ser 1.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish144} 
+
+}
+
+\caption{Formato a los puntos}\label{fig:formatopuntosflourish-fig}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Para editar la paleta de colores haga clic en la pestaña color de puntos y edite la paleta de colores, los colore a usar serán ``\#29ABE2'', ``\#F15A24'' Y ``\#8CC63F'' para las categorías Furniture, Office Supplies y Technology respectivamente.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish145} 
+
+}
+
+\caption{Cambio de paleta de colores}\label{fig:cambiopaletacoloresflourish-fig}
+\end{figure}
+
+\begin{itemize}
+\item
+  Usando la pestaña configuraciones de gráfico active el color de fondo y asigne ``\#F5F5F5''.
+\item
+  Ahora para el eje X active el estilo de título y seleccione negrita en color negro y tamaño 1.1; para las etiquetas también active el estilo para cambiar el color a negro y como ángulo debe seleccionar 0. Finalmente active las líneas de cuadricula y cambie su color por ``\#BBBBB9''.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish146} 
+
+}
+
+\caption{Formato al eje X}\label{fig:formatoejexdispersionflourish-fig}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Repita lo realizado anteriormente para dar formato al eje Y. Para la leyenda debe seleccionar la posición abajo y el modo de título debe ser reparado.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish147} 
+
+}
+
+\caption{Formato de leyenda}\label{fig:formatoleyendadispersionflourish-fig}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Ahora con ayuda de la pestaña formato de número debe seleccionar la opción que tenga como separador de miles el punto.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish148} 
+
+}
+
+\caption{Formato de número}\label{fig:formatonumerodispersionflourish-fig}
+\end{figure}
+
+\begin{itemize}
+\tightlist
+\item
+  Por último, con ayuda de la pestaña diseño active todas las fronteras de la visualización y establézcalas en color negro, también añada el título Análisis año a año de beneficios vs ventas.
+\end{itemize}
+
+La visualización obtenida permite al usuario filtrar por regiones y categorías de productos, adicional a esto el tamaño de cada punto esta determinado por la cantidad vendida y al añadir la línea de tiempo permite realizar un análisis anual de los beneficios de la compañía.
 
 \hypertarget{boxplotflourish}{%
 \subsubsection{Box-plot}\label{boxplotflourish}}

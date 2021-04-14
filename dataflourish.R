@@ -338,3 +338,14 @@ write.csv(saber_palmira, file = "Datos para Flourish/saber_palmira.csv", row.nam
 sample <- read_xls("Sample - Superstore.xls", sheet = "Orders")
 sample$`Order Date` <- format(sample$`Order Date`, '%Y')
 ventas <- write.csv(sample, file = "Datos para Flourish/ventas.csv", row.names = F)
+
+#GRÁFICO DE PUNTOS
+puntos <- Graduados %>% group_by(YEAR_SEMESTER, SEDE_NOMBRE_MAT) %>% count()
+write.csv(puntos, file = "Datos para Flourish/graficopuntos.csv", row.names = F)
+
+#GRAFICO DE PUNTOS CONECTADOS
+conectados <- Graduados %>% 
+  group_by(YEAR, SEDE_NOMBRE_ADM) %>% 
+  filter(YEAR == 2009 | YEAR == 2019) %>% 
+  count()
+write.csv(conectados, file = "Datos para Flourish/conectados.csv", row.names = F)
