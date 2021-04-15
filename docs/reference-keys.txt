@@ -633,3 +633,12 @@ graficoradarflourish
 dispersionflourish
 boxplotflourish
 conclu
+fig:paso1puntosflourish-fig
+fig:paso2puntosflourish-fig
+fig:paso3puntosflourish-fig
+fig:paso5puntosflourish-fig
+fig:paso7puntosflourish-fig
+fig:paso8puntosflourish-fig
+fig:paso9puntosflourish-fig
+fig:paso10puntosflourish-fig
+fig:finalpuntosflourish-fig
