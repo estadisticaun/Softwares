@@ -1,156 +1,33 @@
-"DEP_NAC","NIVEL","2009 - 1","2009 - 2","2012 - 1","2012 - 2","2015 - 1","2015 - 2","2016 - 1","2016 - 2","2017 - 1","2017 - 2","2018 - 1","2018 - 2","2019 - 1","2019 - 2","2020 - 1"
-"ANTIOQUIA","Doctorado",3,6,5,9,15,16,16,20,13,24,21,18,23,38,27
-"ANTIOQUIA","Especialidades Médicas",2,1,7,3,6,2,7,3,10,3,9,2,4,2,7
-"ANTIOQUIA","Especialización",72,2,188,42,154,84,168,90,186,110,160,94,30,192,162
-"ANTIOQUIA","Maestría",63,54,95,194,117,182,147,180,162,166,141,173,125,185,116
-"ANTIOQUIA","Pregrado",481,247,526,710,654,894,483,463,469,470,413,488,173,648,396
-"ARAUCA","Especialización",1,2,0,0,12,3,18,26,0,14,4,25,10,25,24
-"ARAUCA","Pregrado",6,1,0,0,17,4,13,10,15,19,20,23,7,38,20
-"ATLANTICO","Especialidades Médicas",2,0,0,0,2,0,2,0,4,1,3,2,4,0,1
-"ATLANTICO","Especialización",1,0,1,0,3,6,1,8,14,4,5,6,7,10,7
-"ATLANTICO","Maestría",2,5,2,12,7,27,9,15,6,14,9,14,7,11,16
-"ATLANTICO","Pregrado",20,10,1,25,18,25,20,17,19,16,26,15,7,27,12
-"BOGOTA D.C","Doctorado",8,12,1,18,21,38,15,35,31,35,30,45,45,57,45
-"BOGOTA D.C","Especialidades Médicas",46,0,38,7,47,14,45,11,52,6,53,14,33,16,55
-"BOGOTA D.C","Especialización",146,25,140,73,162,176,200,230,231,208,201,235,166,298,235
-"BOGOTA D.C","Maestría",120,129,102,311,327,342,308,370,400,342,398,370,324,485,387
-"BOGOTA D.C","Pregrado",1225,785,1028,1095,1094,1211,1241,1255,1358,1285,1317,1220,430,2117,1355
-"BOLIVAR","Especialidades Médicas",4,0,3,0,2,1,3,0,1,0,1,1,2,1,2
-"BOLIVAR","Especialización",5,0,15,3,5,3,3,9,10,7,7,5,6,7,9
-"BOLIVAR","Maestría",3,2,6,14,8,6,12,10,12,14,7,12,4,13,8
-"BOLIVAR","Pregrado",22,17,5,54,30,118,20,19,15,19,25,20,9,38,23
-"BOYACA","Especialidades Médicas",4,1,5,3,5,1,7,3,5,1,4,2,5,2,10
-"BOYACA","Especialización",18,5,59,18,73,28,100,35,122,19,89,60,65,92,46
-"BOYACA","Maestría",20,20,16,34,41,44,29,31,36,37,43,53,34,47,30
-"BOYACA","Pregrado",119,66,10,100,83,0,88,113,131,107,117,114,28,190,108
-"CALDAS","Doctorado",1,0,0,0,4,7,8,4,9,7,8,12,7,5,7
-"CALDAS","Especialización",22,3,15,5,72,85,88,100,118,136,92,122,75,109,73
-"CALDAS","Maestría",15,17,7,13,36,56,57,60,57,46,63,65,36,36,45
-"CALDAS","Pregrado",310,268,196,41,51,36,271,246,262,234,248,199,52,338,253
-"CAQUETA","Especialización",2,0,1,0,2,1,3,3,3,6,6,4,3,4,4
-"CAQUETA","Pregrado",13,4,3,5,6,14,11,18,10,18,6,11,3,17,12
-"CASANARE","Especialización",1,0,1,0,0,2,6,3,22,2,16,7,19,7,2
-"CASANARE","Pregrado",6,6,2,3,5,7,11,10,10,4,11,13,2,18,16
-"CAUCA","Especialización",2,0,7,16,8,5,6,2,1,2,6,4,6,3,5
-"CAUCA","Maestría",7,4,5,12,7,11,16,13,14,9,8,20,4,8,15
-"CAUCA","Pregrado",11,11,4,28,33,16,18,24,26,24,34,26,10,27,18
-"CESAR","Especialización",6,0,2,1,5,45,4,4,0,9,2,9,4,6,4
-"CESAR","Maestría",2,1,3,6,7,6,5,4,33,9,9,10,8,11,6
-"CESAR","Pregrado",13,9,3,25,27,14,15,20,9,13,14,11,8,17,14
-"CHOCO","Especialización",3,0,3,1,24,4,27,2,25,2,47,18,6,21,5
-"CHOCO","Maestría",3,0,1,5,10,10,11,6,5,13,14,7,3,5,11
-"CHOCO","Pregrado",5,3,0,5,9,3,3,5,2,4,7,4,1,6,3
-"CORDOBA","Especialidades Médicas",1,0,5,0,0,0,2,1,0,0,0,0,1,0,0
-"CORDOBA","Especialización",3,0,30,6,4,4,11,8,6,7,8,4,5,13,9
-"CORDOBA","Maestría",1,4,15,42,11,12,7,18,12,12,12,7,9,13,7
-"CORDOBA","Pregrado",20,8,11,110,140,109,33,33,24,27,33,31,14,47,21
-"CUNDINAMARCA","Especialidades Médicas",2,0,1,1,2,1,2,0,8,1,2,0,5,0,0
-"CUNDINAMARCA","Especialización",16,3,17,12,12,14,15,19,23,16,20,17,24,18,27
-"CUNDINAMARCA","Maestría",9,5,11,29,25,29,27,35,41,28,31,31,23,34,32
-"CUNDINAMARCA","Pregrado",85,67,92,90,81,1,92,103,105,99,106,111,38,191,112
-"GUAINIA","Pregrado",1,0,0,3,1,0,0,0,1,1,0,1,0,2,1
-"HUILA","Especialidades Médicas",3,1,0,0,3,0,1,4,5,1,4,0,2,0,2
-"HUILA","Especialización",6,0,0,2,8,8,6,35,4,56,8,52,9,29,13
-"HUILA","Pregrado",27,21,4,12,12,26,20,35,28,34,30,30,12,49,39
-"LA GUAJIRA","Especialización",1,0,0,0,4,11,3,3,14,4,15,3,1,7,3
-"LA GUAJIRA","Pregrado",4,4,5,7,4,9,3,6,4,1,3,1,2,5,4
-"MAGDALENA","Especialidades Médicas",1,0,1,0,2,0,0,0,1,1,2,0,1,0,1
-"MAGDALENA","Especialización",3,0,0,0,3,3,4,3,4,2,5,2,1,3,3
-"MAGDALENA","Maestría",4,0,1,0,0,4,2,2,2,1,4,6,3,2,2
-"MAGDALENA","Pregrado",7,9,0,8,3,146,7,4,10,8,5,6,1,12,6
-"META","Maestría",2,0,0,0,9,15,9,10,9,9,8,5,10,5,8
-"META","Pregrado",24,15,4,8,4,17,32,21,31,34,23,31,6,54,29
-"NARIÑO","Especialidades Médicas",4,0,4,3,3,1,3,3,6,2,4,2,8,1,12
-"NARIÑO","Especialización",7,5,21,7,80,21,71,11,63,16,147,11,102,36,77
-"NARIÑO","Maestría",10,7,5,34,21,21,29,22,30,24,15,38,28,33,24
-"NARIÑO","Pregrado",74,52,27,92,94,1,106,98,126,123,113,124,36,185,122
-"NORTE DE SANTANDER","Especialidades Médicas",7,0,1,0,2,1,2,1,4,0,7,2,2,2,3
-"NORTE DE SANTANDER","Especialización",8,0,3,2,26,6,8,13,15,16,10,12,11,12,11
-"NORTE DE SANTANDER","Maestría",7,5,4,9,4,14,7,13,12,10,18,36,7,12,10
-"NORTE DE SANTANDER","Pregrado",37,23,5,29,18,37,23,27,26,26,30,29,8,53,28
-"PUTUMAYO","Especialidades Médicas",1,0,0,0,0,1,0,0,1,0,1,0,0,0,0
-"PUTUMAYO","Pregrado",6,7,5,14,9,22,7,16,24,25,29,24,5,40,28
-"QUINDIO","Pregrado",3,1,4,4,2,15,14,13,14,14,11,17,7,17,10
-"RISARALDA","Especialidades Médicas",1,0,0,1,3,0,1,0,2,0,3,0,0,1,4
-"RISARALDA","Especialización",3,0,1,0,11,15,10,17,11,22,8,11,3,11,12
-"RISARALDA","Maestría",3,2,0,1,12,7,5,9,8,14,8,11,7,13,11
-"RISARALDA","Pregrado",20,17,0,3,8,1,21,19,26,22,23,20,5,27,17
-"SANTANDER","Doctorado",2,1,0,2,3,3,4,2,1,5,4,2,3,5,0
-"SANTANDER","Especialidades Médicas",3,0,8,2,7,0,6,3,10,1,6,3,8,4,6
-"SANTANDER","Especialización",11,1,7,1,11,11,38,30,25,33,16,56,65,29,28
-"SANTANDER","Maestría",19,10,4,28,20,20,19,18,26,17,15,19,26,22,17
-"SANTANDER","Pregrado",30,30,5,38,26,1,50,41,45,50,43,60,18,72,58
-"SUCRE","Especialización",1,0,3,1,2,5,6,26,5,7,7,3,0,6,6
-"SUCRE","Maestría",2,1,0,5,11,7,9,7,12,5,3,2,8,4,4
-"SUCRE","Pregrado",20,3,8,10,6,1,16,12,15,15,22,14,8,23,12
-"TOLIMA","Especialidades Médicas",3,1,1,0,8,0,5,1,4,0,2,1,3,1,6
-"TOLIMA","Especialización",10,2,11,22,17,12,17,15,16,17,20,15,10,21,24
-"TOLIMA","Maestría",8,5,7,18,27,20,18,23,19,18,21,18,13,24,26
-"TOLIMA","Pregrado",52,38,13,35,48,0,51,50,61,61,51,49,20,88,63
-"VALLE DEL CAUCA","Especialidades Médicas",2,1,5,2,6,2,8,0,5,2,8,1,6,2,5
-"VALLE DEL CAUCA","Especialización",6,0,20,6,23,18,17,19,20,21,16,11,18,20,20
-"VALLE DEL CAUCA","Maestría",14,6,4,21,45,55,59,35,43,56,31,123,50,63,40
-"VALLE DEL CAUCA","Pregrado",61,34,77,55,61,143,149,161,159,177,216,214,90,198,153
-"ARAUCA","Especialidades Médicas",0,1,0,0,0,0,0,0,0,1,0,0,0,0,2
-"CAQUETA","Maestría",0,1,0,3,4,3,5,2,4,4,3,3,3,4,3
-"CASANARE","Maestría",0,1,1,0,0,2,3,2,1,1,2,3,2,2,3
-"HUILA","Maestría",0,2,1,4,9,13,13,10,21,17,25,19,12,15,7
-"META","Doctorado",0,1,0,0,0,1,0,1,1,0,0,0,2,1,0
-"META","Especialización",0,1,0,0,9,67,6,49,9,39,9,92,12,67,11
-"PUTUMAYO","Maestría",0,1,1,1,0,1,2,2,2,0,5,4,4,1,2
-"VAUPES","Pregrado",0,1,0,1,0,0,2,0,0,1,0,0,0,1,1
-"VICHADA","Pregrado",0,1,0,0,0,1,2,0,0,0,0,2,0,2,0
-"AMAZONAS","Pregrado",0,0,1,0,0,8,3,6,9,11,11,4,1,17,11
-"ARCHIPIELAGO DE SAN ANDRES, PROVIDENCIA Y SANTA CATALINA","Pregrado",0,0,1,0,7,7,3,9,8,8,5,11,2,18,4
-"ATLANTICO","Doctorado",0,0,1,0,0,0,1,2,1,0,1,1,1,3,4
-"BOLIVAR","Doctorado",0,0,1,0,0,0,0,0,1,1,0,0,1,0,2
-"BOYACA","Doctorado",0,0,1,1,2,1,0,5,6,4,8,8,4,7,4
-"CAQUETA","Especialidades Médicas",0,0,1,0,0,0,3,0,1,0,0,0,0,0,0
-"CUNDINAMARCA","Doctorado",0,0,1,0,2,2,2,2,1,3,4,5,2,6,6
-"NARIÑO","Doctorado",0,0,1,2,2,2,1,4,2,5,3,2,3,2,5
-"QUINDIO","Especialización",0,0,2,0,8,11,9,7,5,5,1,5,3,13,4
-"QUINDIO","Maestría",0,0,1,0,5,6,5,6,14,8,9,6,7,9,6
-"SUCRE","Especialidades Médicas",0,0,1,1,0,2,3,0,3,1,0,1,1,2,1
-"VALLE DEL CAUCA","Doctorado",0,0,2,1,3,6,9,7,6,5,2,6,5,11,3
-"ARAUCA","Maestría",0,0,0,1,6,4,1,3,1,1,1,15,3,3,3
-"CAUCA","Especialidades Médicas",0,0,0,2,0,0,2,0,2,0,4,1,2,1,0
-"CORDOBA","Doctorado",0,0,0,3,1,1,4,1,1,1,0,3,0,4,1
-"GUAVIARE","Maestría",0,0,0,1,0,0,0,0,0,0,0,0,1,1,3
-"LA GUAJIRA","Maestría",0,0,0,3,1,1,0,1,4,1,2,0,3,7,1
-"PUTUMAYO","Especialización",0,0,0,2,2,3,3,5,1,7,6,4,1,15,6
-"TOLIMA","Doctorado",0,0,0,1,4,4,2,5,3,5,2,5,4,4,2
-"AMAZONAS","Especialización",0,0,0,0,2,1,0,0,1,0,0,1,0,1,1
-"ARCHIPIELAGO DE SAN ANDRES, PROVIDENCIA Y SANTA CATALINA","Especialización",0,0,0,0,7,17,2,1,20,18,1,0,0,0,2
-"CALDAS","Especialidades Médicas",0,0,0,0,6,0,5,1,3,1,2,1,3,2,4
-"CAUCA","Doctorado",0,0,0,0,1,0,1,1,3,2,0,4,0,5,1
-"CESAR","Especialidades Médicas",0,0,0,0,2,0,1,0,3,0,4,0,2,1,1
-"GUAVIARE","Especialización",0,0,0,0,1,0,0,0,0,2,0,2,0,2,0
-"LA GUAJIRA","Especialidades Médicas",0,0,0,0,1,0,1,0,0,0,0,0,0,0,1
-"META","Especialidades Médicas",0,0,0,0,1,1,0,0,3,0,2,0,2,1,3
-"NORTE DE SANTANDER","Doctorado",0,0,0,0,1,2,0,0,2,1,1,4,0,2,1
-"PUTUMAYO","Doctorado",0,0,0,0,2,0,0,0,0,1,0,0,0,0,0
-"AMAZONAS","Maestría",0,0,0,0,0,1,0,0,2,0,0,2,1,2,0
-"CAQUETA","Doctorado",0,0,0,0,0,1,0,0,0,0,0,2,1,1,0
-"CESAR","Doctorado",0,0,0,0,0,1,0,0,0,0,0,0,1,1,2
-"GUAVIARE","Pregrado",0,0,0,0,0,2,1,4,4,0,2,1,0,3,1
-"HUILA","Doctorado",0,0,0,0,0,3,3,1,0,1,0,1,0,3,4
-"MAGDALENA","Doctorado",0,0,0,0,0,1,0,1,0,3,1,1,2,1,1
-"QUINDIO","Doctorado",0,0,0,0,0,3,0,1,0,1,1,0,1,2,0
-"QUINDIO","Especialidades Médicas",0,0,0,0,0,1,2,1,0,0,2,1,0,0,2
-"RISARALDA","Doctorado",0,0,0,0,0,1,1,1,2,0,3,1,0,0,0
-"ARCHIPIELAGO DE SAN ANDRES, PROVIDENCIA Y SANTA CATALINA","Maestría",0,0,0,0,0,0,1,4,7,1,3,1,0,0,2
-"CHOCO","Especialidades Médicas",0,0,0,0,0,0,1,0,1,0,0,0,0,1,0
-"LA GUAJIRA","Doctorado",0,0,0,0,0,0,1,0,0,0,0,0,0,1,0
-"SUCRE","Doctorado",0,0,0,0,0,0,0,1,2,0,0,0,0,1,2
-"VICHADA","Especialización",0,0,0,0,0,0,0,1,0,0,0,1,0,0,0
-"CASANARE","Doctorado",0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-"ARCHIPIELAGO DE SAN ANDRES, PROVIDENCIA Y SANTA CATALINA","Especialidades Médicas",0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
-"CHOCO","Doctorado",0,0,0,0,0,0,0,0,0,0,2,0,0,3,0
-"VICHADA","Maestría",0,0,0,0,0,0,0,0,0,0,1,0,0,0,1
-"ARAUCA","Doctorado",0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
-"CASANARE","Especialidades Médicas",0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
-"VAUPES","Especialización",0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
-"ARCHIPIELAGO DE SAN ANDRES, PROVIDENCIA Y SANTA CATALINA","Doctorado",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
-"GUAINIA","Especialización",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
-"GUAVIARE","Doctorado",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
-"VICHADA","Doctorado",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"Region","Departamento","2009 - 1","2009 - 2","2012 - 1","2012 - 2","2015 - 1","2015 - 2","2016 - 1","2016 - 2","2017 - 1","2017 - 2","2018 - 1","2018 - 2","2019 - 1","2019 - 2","2020 - 1"
+"Andina","Antioquia",621,310,821,958,946,1178,821,756,840,773,744,775,355,1065,708
+"Andina","Boyaca",161,92,91,156,204,74,224,187,300,168,261,237,136,338,198
+"Andina","Caldas",348,288,218,59,169,184,429,411,449,424,413,399,173,490,382
+"Andina","Bogota D.C",1545,951,1309,1504,1651,1781,1809,1901,2072,1876,1999,1884,998,2973,2077
+"Andina","Cundinamarca",112,75,122,132,122,47,138,159,178,147,163,164,92,249,177
+"Andina","Huila",36,24,5,18,32,50,43,85,58,109,67,102,35,96,65
+"Andina","Norte de santander",59,28,13,40,51,60,40,54,59,53,66,83,28,81,53
+"Andina","Quindio",3,1,7,4,15,36,30,28,33,28,24,29,18,41,22
+"Andina","Risaralda",27,19,1,5,34,24,38,46,49,58,45,43,15,52,44
+"Andina","Santander",65,42,24,71,67,35,117,94,107,106,84,140,120,132,109
+"Andina","Tolima",73,46,32,76,104,36,93,94,103,101,96,88,50,138,121
+"Caribe","Atlantico",25,15,5,37,30,58,33,42,44,35,44,38,26,51,40
+"Caribe","Bolivar",34,19,30,71,45,128,38,38,39,41,40,38,22,59,44
+"Caribe","Cesar",21,10,8,32,41,66,25,28,45,31,29,30,23,36,27
+"Caribe","Cordoba",25,12,61,161,156,126,57,61,43,47,53,45,29,77,38
+"Caribe","Magdalena",15,9,2,8,8,154,13,10,17,15,17,15,8,18,13
+"Caribe","Archipielago de san andres, providencia y santa catalina",0,0,1,0,14,24,6,14,35,27,10,12,3,18,8
+"Caribe","Sucre",23,4,12,17,19,15,34,46,37,28,32,20,17,36,25
+"Pacifica","Cauca",20,15,16,58,49,32,43,40,46,37,52,55,22,44,39
+"Pacifica","Choco",11,3,4,11,43,17,42,13,33,19,70,29,10,36,19
+"Pacifica","Nariño",95,64,58,138,200,46,210,138,227,170,282,177,177,257,240
+"Pacifica","Valle del cauca",83,41,108,85,138,224,242,222,233,261,273,355,169,294,221
+"Orinoquia","Arauca",7,4,0,1,35,11,32,39,16,35,25,64,20,66,49
+"Orinoquia","Casanare",7,7,4,3,5,11,20,15,33,8,29,24,23,27,21
+"Orinoquia","Meta",26,17,4,8,23,101,47,81,53,82,42,128,32,128,51
+"Orinoquia","Vichada",0,1,0,0,0,1,2,1,0,0,1,3,0,2,2
+"Amazonica","Amazonas",0,0,1,0,2,10,3,6,12,11,11,7,2,20,12
+"Amazonica","Caqueta",15,5,5,8,12,19,22,23,18,28,15,20,10,26,19
+"Amazonica","Guainia",1,0,0,3,1,0,0,0,1,1,0,1,0,2,2
+"Amazonica","Guaviare",0,0,0,1,1,2,1,4,4,2,2,3,1,6,5
+"Amazonica","Putumayo",7,8,6,17,13,27,12,23,28,33,41,32,10,56,36
+"Amazonica","Vaupes",0,1,0,1,0,0,2,0,0,1,0,1,0,1,1

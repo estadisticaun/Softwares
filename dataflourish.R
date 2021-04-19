@@ -216,18 +216,15 @@ car_barras <- Graduados %>%
 write.csv(car_barras, file = "Datos para Flourish/car_barras.csv", row.names = F)
 
 #CARRERA DE LINEAS
-pregrado <- Graduados %>% 
-  group_by(YEAR_SEMESTER, DEP_NAC, NIVEL) %>% 
-  filter(NIVEL == "Pregrado", DEP_NAC != "NA") %>% 
-  summarise(n = n()) 
-
-car_lineas <- Graduados %>% 
-  group_by(YEAR_SEMESTER, DEP_NAC, NIVEL) %>% 
-  count() %>% 
-  filter(DEP_NAC != "NA") %>% 
-  pivot_wider(names_from = YEAR_SEMESTER, values_from = n) %>%
+Regiones <- read.csv("Regiones_colombia.csv", sep = ";", header = TRUE)
+Departamentos <- Graduados %>% group_by(DEP_NAC, YEAR_SEMESTER) %>% 
+  mutate(DEP_NAC = capitalize(tolower(DEP_NAC)),
+         DEP_NAC = str_replace_all(DEP_NAC, "d.c", "D.C")) %>% 
+  count()
+car_lineas <- left_join(Regiones, Departamentos, 
+                        by = c("Departamento" = "DEP_NAC")) %>% 
+  pivot_wider(names_from = YEAR_SEMESTER, values_from = n) %>% 
   mutate_all(~replace(., is.na(.), 0))
-  
 write.csv(car_lineas, file = "Datos para Flourish/car_lineas.csv", row.names = F)
 
 #GRAFICO DE PENDIENTES

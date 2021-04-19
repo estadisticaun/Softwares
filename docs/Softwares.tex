@@ -113,7 +113,7 @@
 
 \title{Softwares para la visualización estadística}
 \author{Camila Acosta Ramirez}
-\date{2021-04-13}
+\date{2021-04-15}
 
 \begin{document}
 \maketitle
@@ -10220,6 +10220,166 @@ La base de datos a usar para crear esta gráfica contiene las columnas ``YEAR\_S
 \end{enumerate}
 
 La visualización obtenida permite identificar la concentración de edades por cada una de las modalidades de formación, también permite identificar valores atípicos o extraños dentro de cada nivel de formación adicional a esto la cantidad de puntos ubicada en cada categoría indica los periodos en los cuales se tiene mayor cantidad de graduados, al incluir un filtro y una ventana de tiempo se le da al usuario más capacidad para interactuar y analizar el grafico.
+
+\#\#\#\#Gráfico de puntos
+
+Este tipo de gráficos es útil para mostrar la distribución de una variable numérica por categorías, estos gráficos consisten en dos ejes, el eje X será quien muestre la información relacionada con la variable numérica y el eje Y contiene las categorías. La base de datos Graduados que se ha usado en la mayoría de las visualizaciones contiene varias columnas categóricas, en este caso se usara la columna de sede de matrícula como categórica y para la variable numérica se usa el conteo de estudiantes graduados.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Seleccione la plantilla gráfica de puntos y cargue el archivo de datos llamado ``graficopuntos.csv''. Asigne las columnas SEDE\_NOMBRE\_MAT y n a los estantes valores de X y valores de Y respectivamente, adicional a esto asigne todas las columnas de la base de datos a información para ventanas emergentes personalizadas.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish149} 
+
+}
+
+\caption{Asignación de columnas a estantes}\label{fig:paso1puntosflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Al regresar a la pestaña avance la visualización muestra la cantidad de estudiantes graduados por sede de matrícula, pero se identifican algunos problemas con los títulos de los ejes y la descripción emergente.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish150} 
+
+}
+
+\caption{Vista previa de la visualización}\label{fig:paso2puntosflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Inicialmente haciendo uso de la pestaña estilo de puntos debe disminuir la opacidad del punto a 0.2, con el fin de generar más transparencia en cada punto y poder observar lo puntos que se sobreponen.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish151} 
+
+}
+
+\caption{Formato al estilo de puntos}\label{fig:paso3puntosflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Usando la pestaña configuraciones de gráfico active el color de fondo y deje el color pregerminado, el cual es ``\#F5F5F5''.
+\item
+  Para el eje X debe seleccionar título personalizado y en el espacio de texto escribir ``Número de gradauados'', active el estilo y seleccione negrita en color negro; para las etiquetas debe activar la opción de estilo, aumentar el tamaño a 1, color negro y ángulo de cero; adicional a este debe activar las líneas de cuadriculas, activar su estilo, cambiar el color por ``\#BBBBB9'' y como estilo seleccione punteada.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish152} 
+
+}
+
+\caption{Formato al eje X}\label{fig:paso5puntosflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\item
+  Repita lo mencionado en el paso anterior para dar formato al eje Y, debe tener en cuenta que el título de este eje es Sede de matrícula.
+\item
+  Es momento de cambiar el contenido de las ventanas emergentes, para esto debe seleccionar contenido personalizado en la pestaña de ventanas emergentes las columnas a incluir en esta descripción emergente son periodo, sede de matrícula y cantidad de estudiantes graduados; recuerde que se debe usar los códigos HTML para negrita y enter.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish153} 
+
+}
+
+\caption{Contenido personalizado a ventanas emergentes}\label{fig:paso7puntosflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  La pestaña Box, violin and beeswarm plots permite añadir estas opciones gráficas los puntos, por ejemplo, al seleccionar la opción automático de la sección beeswarm, se dispersan los puntos en cada una de las sedes.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish154} 
+
+}
+
+\caption{Beeswarm}\label{fig:paso8puntosflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  Sobre esta misma pestaña se puede activar la opción de Boxplot y se obtiene un diagrama de cajas sobre cada una de las sedes.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish155} 
+
+}
+
+\caption{Boxplot}\label{fig:paso9puntosflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  Finalmente es posible añadir el gráfico de violín, en este caso debe cambiar su color por ``\#808080'' para lograr visualizarlos, también es de destacar que no hay información sobre la creación de estas sombras o violines.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish156} 
+
+}
+
+\caption{Violin}\label{fig:paso10puntosflourish-fig}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{10}
+\tightlist
+\item
+  Finalmente, con la ayuda de la pestaña diseño active las fronteras y seleccione para todo el color negro; con la pestaña encabezamiento escriba como título Cantidad de graduados por sede de admisión.
+\end{enumerate}
+
+La visualización obtenida permite visualizar la cantidad de estudiantes graduados por sede de matrícula, con un diagrama de violín que permite identificar la distribución de estos puntos.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{Imágenes/flourish157} 
+
+}
+
+\caption{Distribución de estudiantes graduados por sede de matrícula}\label{fig:finalpuntosflourish-fig}
+\end{figure}
 
 \hypertarget{conclu}{%
 \chapter{Conclusiones}\label{conclu}}
