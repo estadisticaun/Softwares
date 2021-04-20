@@ -878,7 +878,7 @@ El diagrama de flujo obtenido permite identificar la migración entre sedes de l
 knitr::include_graphics("Imágenes/flourish108.jpg")
 ```
 
-#### Carrera de grafico de barras {#carrerabarrasflourish}
+#### Carrera de gráfico de barras {#carrerabarrasflourish}
 
 Esta visualización está basada en un gráfico de barras al cual se le añade una línea de tiempo con el fin de visualizar los cambios de las categorías que representan cada barra, son de gran utilidad para mostrar como crecen las poblaciones, los votos por un determinado partido político, entre otros. Dentro del sistema de educación superior colombiano los programas de formación son clasificados en áreas del conocimiento, la idea es realizar un grafico de barras con las áreas del conocimiento SNIES y añadir como ventana de tiempo los periodos de 2009-1 a 2020-1 con el fin de explorar e identificar cuáles son las áreas con la mayor cantidad de estudiantes graduados en todos los niveles de formación ofrecidos por la Universidad Nacional.
 
@@ -947,6 +947,65 @@ knitr::include_graphics("Imágenes/flourish118.jpg")
 La visualización obtenida es de gran utilidad para identificar cuáles son la áreas del conocimiento SNIES en las que la Universidad gradúa más estudiantes, en el caso de pregrado y doctorado dicha cantidad de estudiantes se concentra en Ingeniería, arquitectura, urbanismo y afines, para el nivel maestría dicha concentración se presenta en las áreas de ingeniería, arquitectura, urbanismo y matemáticas y ciencias naturales, las especializaciones se ubican en la gran mayoría en el área de ciencias sociales y humanas.
 
 <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/5624875"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+#### Carrera de gráfico de líneas {#carreradelineasflourish}
+
+Este tipo de gráficos son de gran utilidad cuando se quiere mostrar la evolución histórica de varias categorías, por ejemplos, mostrar la evolución en la cantidad de estudiantes graduados por departamento en cada periodo, Flourish ofrece tres plantillas para la creación de este gráfico, la primera de ellas llamada sencilla la cual muestra la evolución de las líneas por rangos o valores a los largo del tiempo; la segunda plantilla permite añadir un filtro para darle control al usuario sobre las líneas que desea visualizar, finalmente esta la plantilla Zoomed con la cual el eje X de la visualización es dinámico, esta plantilla es de gran utilidad cuando el periodo de tiempo es muy  largo; todas las plantillas admiten imágenes que se ubican en un circulo al final de cada línea.
+
+La base de datos con la cual se ha trabajado contiene información sobre el departamento de nacimiento de cada uno de los estudiantes graduados, por lo que es de interés visualizar como ha evolucionado la cantidad de estudiantes graduados por cada uno de estos departamentos, una de las desventajas de la plantilla de Flourish es que no permite elegir la cantidad de líneas a visualizar, es decir, no se puede indicar si se quieren ver las primeras 10 o más, razón por la cual se decide agrupar los departamentos por región geográfica y así evitar la saturación en el gráfico de líneas.
+
+Inicialmente debe seleccionar la plantilla con filtrado de la sección carrera de gráfico de líneas y analizar la estructura de datos, debe observar que es necesario construir una base de datos que contenga una columna para el filtrado, otra con el nombre del departamento, y finalmente una columna por cada punto en el tiempo; la columna de imágenes es adicional y será creada directamente desde la sección datos de Flourish, similar a como se realizó en \@ref(carrerabarrasflourish).
+
+1.	Cargue el archivo de datos llamado “car_lineas.csv” y asigne las columnas Región y Departamento a los estantes filtro y nombre de línea respectivamente; deberá insertar una nueva columna a la izquierda de la columna C, la cual se llamará imágenes y debe adjuntar la imagen de la bandera correspondiente a cada departamento y luego asignar esta columna al estante imagen, finalmente las columnas D a la R deben ubicarse en el estante puntajes de columnas. 
+
+```{r paso1carlineasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Creación de columna imágenes y asignación a estantes', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish158.jpg")
+```
+
+2.	Regresando a la pestaña avance o previa se observan algunos inconvenientes, tales como el tamaño de los textos, el idioma de los botones y las márgenes; una solución rápida para ampliar un poco el gráfico es cambiar el nombre Archipiélago de san andrés, providencia y santa catalina por San andrés, esto lo puede hacer desde el panel datos.
+
+```{r paso2carlineasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa de la visualización', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish159.jpg")
+```
+
+3.	La primera pestaña disponible para dar formato al gráfico es vista, con la cual se controla la cantidad de puntos de la ventana de tiempo que se muestran, la primera opción es mostrar todo, es decir, se muestran al tiempo todos los puntos de la línea de tiempo y la opción Zoomed permite mostrar la cantidad de puntos deseada haciendo que el eje de tiempo sea dinámico; en este caso los puntos en el tiempo no son demasiados por lo que se debe dejar en mostrar todo.
+
+4.	Con ayuda de la pestaña tamaño del gráfico debe seleccionar como modo de altura llenar espacio, también se harán modificaciones en las márgenes, la margen derecha debe establecerse en 1, la izquierda en 2 y las demás opciones en 0.
+
+```{r paso4carlineasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Edición de tamaño del gráfico', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish160.jpg")
+```
+
+5.	Es momento de dar formato a los controles de selección y filtro, haga clic en la pestaña controles, inicialmente en la sección filtrar deberá desactivar la opción de incluir todo, seguido de esto se debe cambiar el nombre de las etiquetas por rangos, cantidad y repetir respectivamente, por último, en la sección estilos de grupos de botones deberá cambiar el color de seleccionado por “#808080”.
+
+```{r paso5carlineasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a los controles', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish161.jpg")
+```
+
+6.	Con ayuda de la pestaña estilos de línea deberá aumentar el ancho de línea a 0.2, haga clic en la pestaña estilos de círculos y aumente los radios de inicio y final a 0.4 y 1 respectivamente, adicional a esto para el color de trazo debe seleccionar fondo.
+
+```{r paso6carlineasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Estilos de línea y círculo', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish162.jpg")
+```
+
+7.	La pestaña estilos de etiqueta permite controlar el color y tamaño de las etiquetas, en este caso debe aumentar el tanto el tamaño de fuente de clasificación como el de la etiqueta a 1 y el color de la etiqueta debe ser reparado (fixed).
+
+```{r paso7carlineasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Estilo de etiquetas', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish163.jpg")
+```
+
+8.	Para el eje Y debe aumentar el tamaño de etiqueta a 1 y activar la opción de eje dinámico, esto para que dependiendo del máximo y mínimo de cada región geográfica el eje Y se adecue.
+
+```{r paso8carlineasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato al eje Y', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish164.jpg")
+```
+
+9.	Para el eje X el tamaño de la etiqueta también será de 1 y el ángulo debe establecerse en 30°. Finalmente haciendo uso de la pestaña diseño seleccione como color de fondo “#ECF0F1” y active los bordes en color negro; escriba como título Evolución histórica del total de estudiantes graduados por departamentos en alineación central.
+
+El gráfico obtenido permite visualizar la evolución del total de estudiantes graduados por departamento de nacimiento y permite al usuario ver la clasificación o la cantidad de estudiantes graduados, también permite seleccionar la región geográfica a visualizar y repetir la animación cuantas veces desee.
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/5913710"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
 
 #### Gráfico de pendiente {#graficopendienteflourish}
 

@@ -642,3 +642,11 @@ graficoradarflourish
 dispersionflourish
 boxplotflourish
 conclu
+fig:paso1carlineasflourish-fig
+fig:paso2carlineasflourish-fig
+fig:paso4carlineasflourish-fig
+fig:paso5carlineasflourish-fig
+fig:paso6carlineasflourish-fig
+fig:paso7carlineasflourish-fig
+fig:paso8carlineasflourish-fig
+carreradelineasflourish
