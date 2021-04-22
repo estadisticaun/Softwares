@@ -1297,10 +1297,72 @@ knitr::include_graphics("Imágenes/flourish155.jpg")
 knitr::include_graphics("Imágenes/flourish156.jpg")
 ```
 
-11.	Finalmente, con la ayuda de la pestaña diseño active las fronteras y seleccione para todo el color negro; con la pestaña encabezamiento escriba como título Cantidad de graduados por sede de admisión.
+11.	Finalmente, con la ayuda de la pestaña diseño active las fronteras y seleccione para todo el color negro; con la pestaña encabezamiento escriba como título Cantidad de graduados por sede de matrícula.
 
 La visualización obtenida permite visualizar la cantidad de estudiantes graduados por sede de matrícula, con un diagrama de violín que permite identificar la distribución de estos puntos.
 
 ```{r finalpuntosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Distribución de estudiantes graduados por sede de matrícula', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish157.jpg")
 ```
+
+### Compartir visualizaciones
+
+Flourish ofrece diferentes posibilidades para compartir las visualizaciones creadas, desde la versión gratuita es posible publicar, opción con la cual se generan dos alternativas, la primera de ellas genera un enlace a la visualización y la segunda para insertar en una página web por medio del código embebido que se genera o descargar las imágenes, esta última opción es la menos adecuada cuando se trata de visualizaciones con líneas de  tiempo o animaciones ya  que se pierde esta funcionalidad. 
+
+Cada que se crea una visualización y ha sido guardada; en la esquina superior encontrará un botón llamado exportar y publicar que presenta las opciones mencionadas anteriormente, cuando se trata de visualización con filtro, descripciones emergentes o líneas de tiempo la mejor manera de compartirlo con otras personas es por medio del enlace o código HTML, algunos de los gráficos creados en este libro fueron insertados por medio del código HTML para no perder las funcionalidades temporales, para generar este código únicamente debe hacer clic en exportar y publicar, en la ventana emergente debe seleccionar publicar y ya obtendrá tanto el enlace como el código. El paso a paso de esta forma de publicación se encuentra en la sección (hacer referencia de como compartir el trabajo).
+
+Flourish no ofrece la posibilidad de generar o crear dashboards que combinen diferentes gráficos, en esta herramienta se debe crear cada objeto visual y compartirlo de manera independiente o usar una historia para combinarlos, estas historias son muy similares a una presentación tipo Power Point donde cada gráfico es insertado en una diapositiva y es posible adicionar títulos o texto relacionados con los datos de interés de la visualización.
+
+Para crear historias debe hacer clic en el botón crear nueva historia de la pantalla inicial de Flourish en la imagen mostrada en \@ref(fig:pantallainicialflourish-fig), la ventana para la creación de historias contiene un panel lateral izquierdo en el cual es posible modificar la forma de navegación, activar botones de reproducción, agregar audios y ver todas las diapositivas creadas, la pantalla central contiene la diapositiva en la cual se está trabajando, hay dos opciones de creación, elegir una visualización para insertar o crear una diapositiva básica para incluir texto e imágenes.
+
+```{r pantallaincialhistoriaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Página inicial creación de historias', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish165.jpg")
+```
+
+1.	La primera diapositiva tendrá la evolución histórica de total de estudiantes graduados, haga clic sobre elegir visualización y haga clic sobre el gráfico llamado Evolución graduados.
+
+```{r paso1historiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir una visualización', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish166.jpg")
+```
+
+2.	Al añadir una visualización obtendrá lo siguiente, lo cual corresponde a un estilo de diapositiva con la visualización seleccionada.
+
+```{r paso2historiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Primera visualización', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish167.jpg")
+```
+
+3.	El icono de lápiz permite añadir anotaciones a la visualización, para demarcar puntos o acontecimientos importantes, por ejemplo, se puede añadir una anotación o mensaje en el punto más bajo de la línea indicando el acontecimiento ocurrido en ese periodo que produjo esa cantidad de estudiantes graduados. Para añadir una anotación haga clic sobre el lápiz y luego clic sobre el lugar de la visualización donde quiere ubicar el mensaje.
+
+```{r paso3historiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir anotaciones', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish168.jpg")
+```
+
+4.	Luego de esto aparecerán opciones para la anotación en la sección en blanco mostrada en la imagen anterior, entre las opciones hay un cuadro de texto, las opciones para mostrar la anotación en las cuales se incluye siempre, modo escritorio y dos opciones para celular, diferentes tipos de marcadores y conectores.
+
+```{r paso4historiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Alternativas para las anotaciones', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish169.jpg")
+```
+
+5.	De esta manera es posible añadir todas las visualizaciones que se deseen a la historia, en este caso se creara una historia de 15 puntos o diapositivas, entre las cuales se seleccionaron gráficos de líneas, circulares, barras, mapas, carreras de barras y líneas, entre otros.
+
+6.	 Estas historias ofrecen la posibilidad de auto reproducción con un tiempo para cada una de las diapositivas o visualizaciones, esta opción se activa en el panel lateral izquierdo, desde allí también es posible subir audios, esta alternativa es bastante útil cuando se debe grabar la presentación con narración; por último en la superior derecha de cada diapositiva se ubica el control de tiempo, este se modifica según las necesidades de cada visualización, por ejemplo, visualizaciones animadas o con ventanas de tiempo que tengan una duración total de 60 segundos, el tiempo de la diapositiva que la contenga deberá ser igual o un poco superior, aunque es posible pausar la autoproducción en cualquier momento.
+
+```{r paso6historiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Auto reproducción y control de tiempo', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish170.jpg")
+```
+
+7.	En cada diapositiva o punto de la historia se ofrece la posibilidad de añadir encabezados o mensajes en la parte superior, al lado de los controles de reproducción, primero se debe escribir el texto y luego seleccionándolo todo es posible cambiar el estilo a negrita, cursiva o subrayado.
+
+```{r paso7historiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir descripciones o encabezados', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish171.jpg")
+```
+
+En cuanto a formato y personalización de las plantillas no es posible hacer mucho, es un poco estricto sobre la forma de cada dispositiva. Finalmente, cuando la historia este completa puede hacer clic en el botón publicar y exportar, para generar en enlace y código HTML para insertar.
+
+```{r compartirhistoriaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Compartir la historia creada', out.width='85%'}
+knitr::include_graphics("Imágenes/flourish172.jpg")
+```
+
+Esta es la historia final, insertada directamente con el código HTML generado.
+
+<div class="flourish-embed" data-src="story/836426"><script src="https://public.flourish.studio/resources/embed.js"></script></div>

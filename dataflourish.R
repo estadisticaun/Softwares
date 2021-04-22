@@ -1,4 +1,3 @@
-library(readxl)
 library(dplyr)
 library(tidyverse)
 library(magrittr)
@@ -52,6 +51,21 @@ write.csv(modalidadformacioncircularfiltrada,
           file = "Datos para Flourish/modalidadformacioncircularfiltrada.csv", 
           row.names = F)
 
+#GRAFICO DE LINEAS SEGMNETADO POR UNA DIMENSION (NIVEL DE FORMACION)
+lineasnivelformacion <- Graduados %>% group_by(YEAR_SEMESTER, NIVEL) %>% 
+  count() %>% 
+  pivot_wider(names_from = NIVEL, values_from = n) %>% 
+  mutate(Total = Pregrado + Maestría + `Especialidades Médicas` + 
+           Especialización + Doctorado) %>% 
+  mutate(Porcentajepregrado = paste(round((Pregrado/Total)*100, 2), "%")) %>% 
+  mutate(PorcentajeMaestria = paste(round((Maestría/Total)*100, 2), "%")) %>% 
+  mutate(Porcentajeespecialidades = paste(round((`Especialidades Médicas`/Total)*100, 2), "%")) %>%
+  mutate(Porcentajeespecializacion = paste(round((Especialización/Total)*100, 2), "%")) %>% 
+  mutate(Porcentajedoctorado = paste(round((Doctorado/Total)*100, 2), "%"))
+write.csv(lineasnivelformacion, 
+          file = "Datos para Flourish/lineasnivelformacion.csv", 
+          row.names = F)
+
 #GRAFICO DE BARRAS (NIVEL DE FORMACION)
 nivelformacion <- Graduados %>% 
   group_by(YEAR_SEMESTER, NIVEL) %>% 
@@ -61,6 +75,24 @@ nivelformacion <- Graduados %>%
   filter(YEAR_SEMESTER == "2020 - 1")
 write.csv(nivelformacion, file = "Datos para Flourish/nivelformacion.csv", 
           row.names = FALSE)
+
+#GRAFICO DE LINEAS SEGMNETADO POR UNA DIMENSION (SEDE DE ADMISION)
+lineasedeadmision <- Graduados %>% group_by(YEAR_SEMESTER, SEDE_NOMBRE_ADM) %>% 
+  count() %>% 
+  pivot_wider(names_from = SEDE_NOMBRE_ADM, values_from = n) %>%
+  mutate_all(~replace(., is.na(.), 0)) %>% 
+  mutate(Total = Amazonía + Bogotá + Manizales + Medellín + Palmira +
+           Caribe + Orinoquía) %>% 
+  mutate(Porcentajeamazonia = paste(round((Amazonía/Total)*100, 2), "%")) %>% 
+  mutate(Porcentajebogota= paste(round((Bogotá/Total)*100, 2), "%")) %>% 
+  mutate(Porcentajemanizales = paste(round((Manizales/Total)*100, 2), "%")) %>%
+  mutate(Porcentajemedellin = paste(round((Medellín/Total)*100, 2), "%")) %>% 
+  mutate(Porcentajepalmira = paste(round((Palmira/Total)*100, 2), "%")) %>% 
+  mutate(Porcentajecaribe = paste(round((Caribe/Total)*100, 2), "%")) %>% 
+  mutate(Porcentajeorinoquia = paste(round((Orinoquía/Total)*100, 2), "%"))
+write.csv(lineasedeadmision, 
+          file = "Datos para Flourish/lineasedeadmision.csv", 
+          row.names = F)
 
 #MAPA POR DEPARTAMENTOS
 
