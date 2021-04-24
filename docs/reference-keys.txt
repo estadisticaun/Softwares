@@ -637,7 +637,7 @@ principales-desventajas-de-flourish
 productos-de-flourish
 precios-de-flourish
 instalación-de-flourish
-cómo-compartir-el-trabajo
+compartirtrabajoflourish
 formanavegacionflourish
 flujo-de-trabajo-1
 análisis-de-datos
@@ -657,7 +657,6 @@ graficopendienteflourish
 graficoradarflourish
 dispersionflourish
 boxplotflourish
+gráfico-de-puntos
 compartir-visualizaciones
 conclu
-compartirtrabajoflourish
-gráfico-de-puntos

@@ -1104,7 +1104,7 @@ Es posible replicar este tipo de gráficos para las sedes restantes, es decir, M
 
 #### Diagramas de dispersión {#dispersionflourish}
 
-Este tipo de gráficos son de gran utilidad cuando se desea visualizar relaciones entre dos variables numéricas y Flourish ofrece diversas opciones que van desde un diagrama de dispersión básico con puntos para los ejes X y Y hasta el diagrama de Hans Roseling que incluye diversos tamaños, colores y una línea de tiempo; todos estos gráficos se crean a partir de la plantilla básica y se volverán tan especializados como estantes se usen.
+Este tipo de gráficos son de gran utilidad cuando se desea visualizar relaciones entre dos variables numéricas y Flourish ofrece diversas opciones que van desde un diagrama de dispersión básico con puntos para los ejes X e Y hasta el diagrama de Hans Roseling que incluye diversos tamaños, colores y una línea de tiempo; todos estos gráficos se crean a partir de la plantilla básica y se volverán tan especializados como estantes se usen.
 
 La base de datos con información de graduados con la cual se han realizado varias visualizaciones no posee columnas numéricas que permitan crear diagramas de dispersión, por esta razón se usara la base de datos llamada “ventas.csv”.
 
