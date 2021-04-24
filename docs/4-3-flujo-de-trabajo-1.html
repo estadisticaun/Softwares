@@ -24,7 +24,7 @@
 <meta name="author" content="Camila Acosta Ramirez" />
 
 
-<meta name="date" content="2021-04-21" />
+<meta name="date" content="2021-04-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -177,7 +177,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1.4" data-path="4-1-generalidadesflourish.html"><a href="4-1-generalidadesflourish.html#productos-de-flourish"><i class="fa fa-check"></i><b>4.1.4</b> Productos de Flourish</a></li>
 <li class="chapter" data-level="4.1.5" data-path="4-1-generalidadesflourish.html"><a href="4-1-generalidadesflourish.html#precios-de-flourish"><i class="fa fa-check"></i><b>4.1.5</b> Precios de Flourish</a></li>
 <li class="chapter" data-level="4.1.6" data-path="4-1-generalidadesflourish.html"><a href="4-1-generalidadesflourish.html#instalación-de-flourish"><i class="fa fa-check"></i><b>4.1.6</b> Instalación de Flourish</a></li>
-<li class="chapter" data-level="4.1.7" data-path="4-1-generalidadesflourish.html"><a href="4-1-generalidadesflourish.html#cómo-compartir-el-trabajo"><i class="fa fa-check"></i><b>4.1.7</b> ¿Cómo compartir el trabajo?</a></li>
+<li class="chapter" data-level="4.1.7" data-path="4-1-generalidadesflourish.html"><a href="4-1-generalidadesflourish.html#compartirtrabajoflourish"><i class="fa fa-check"></i><b>4.1.7</b> ¿Cómo compartir el trabajo?</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="4-2-formanavegacionflourish.html"><a href="4-2-formanavegacionflourish.html"><i class="fa fa-check"></i><b>4.2</b> Forma de navegación</a></li>
 <li class="chapter" data-level="4.3" data-path="4-3-flujo-de-trabajo-1.html"><a href="4-3-flujo-de-trabajo-1.html"><i class="fa fa-check"></i><b>4.3</b> Flujo de trabajo</a><ul>
@@ -214,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4><span class="header-section-number">4.3.1.1</span> Gráfico de líneas</h4>
 <p>Lo primero que se debe hacer al seleccionar una plantilla es identificar la estructura del conjunto de datos, es de resaltar que las plantillas que pertenecen a una misma categoría en este caso líneas, barras y circulares tendrán la misma estructura y la creación de cada gráfico va a diferir en la asignación de las columnas a los ejes. En este caso la estructura del gráfico de líneas coincide con la mostrada en la imagen <a href="4-2-formanavegacionflourish.html#fig:pestanadatosflourish-fig">4.9</a>, como se mencionó anteriormente se desea visualizar la evolución del número de estudiantes graduados a través de todos los periodos de los que se tiene registro, para realizar esto es necesario crear una base de datos que en su primera columna contenga el periodo y en la segunda el conteo que representara el total de estudiantes, para esto se tendrá la ayuda de R, si desea revisar el código utilizado para la creación de las bases a usar para este software puede consultar el archivo R llamado “DataFlourish.R”. Para la creación del gráfico de líneas debe seguir estos pasos.</p>
 <ol style="list-style-type: decimal">
-<li>Luego de seleccionada la plantilla de grafico de líneas debe hacer clic sobre subir datos, navegar en las carpetas, seleccionar el archivo “evoluciongeneral.csv” y hacer clic en abrir para cargar los datos, luego de esto se presentará un aviso en su pantalla en el que se informa que los datos serán visibles públicamente debido a que se está usando la versión gratuita, debe hacer clic en el botón importar públicamente.</li>
+<li>Luego de seleccionada la plantilla de gráfico de líneas debe hacer clic sobre subir datos, navegar en las carpetas, seleccionar el archivo “evoluciongeneral.csv” y hacer clic en abrir para cargar los datos, luego de esto se presentará un aviso en su pantalla en el que se informa que los datos serán visibles públicamente debido a que se está usando la versión gratuita, debe hacer clic en el botón importar públicamente.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:advertenciadedatospublicosflourish-fig"></span>
 <img src="Imágenes/flourish11.jpg" alt="Advertencia de datos públicos" width="40%" />
@@ -243,7 +243,7 @@ Figura 4.13: Gráfico de líneas base
 </div>
 <p>Observe que se identifican algunos problemas con la descripción emergente, también se tiene una leyenda en la esquina superior izquierda que identifica el color de la línea, algo que no es necesario ya que solo se tiene una línea, con la ayuda del panel lateral derecho se corregirán estos problemas.</p>
 <ol start="4" style="list-style-type: decimal">
-<li>La primera pestaña para explorar y dar formato al gráfico será Colors (colores), allí debe desplegar el campo paleta y seleccionar editar paleta de colores, elimine los colores que posee esta paleta dejando solo uno el cual debe reemplazar el color con “#358DC8”.</li>
+<li>La primera pestaña para explorar y dar formato al gráfico será Colors (colores), allí debe desplegar el campo paleta y seleccionar editar paleta de colores, elimine los colores que posee esta paleta dejando solo uno el cual debe reemplazar con “#358DC8”.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:editarpaletadecoloresflourish-fig"></span>
 <img src="Imágenes/flourish14.jpg" alt="Editar paleta de colores" width="85%" />
@@ -262,7 +262,7 @@ Figura 4.15: Cambiar el estilo de la curva
 </div>
 <p>Hacia el final de esta pestaña encontrara una sección llamada Puntos, debe asegurarse de que se encuentre en apagado para eliminar los puntos que se presentan en la visualización.</p>
 <ol start="6" style="list-style-type: decimal">
-<li>Es momento de editar los ejes, para esto haga clic sobre la pestaña eje x, en el cajón texto debe escribir Periodo y activar el botón para dar estilo, debe seleccionar negrita en color negro y tamaño 1.3.</li>
+<li>Es momento de editar los ejes, para esto haga clic sobre la pestaña eje X, en el cajón texto debe escribir Periodo y activar el botón para dar estilo, debe seleccionar negrita en color negro y tamaño 1.3.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:editarejexflourish-fig"></span>
 <img src="Imágenes/flourish16.jpg" alt="Formato y edición del eje X" width="85%" />
@@ -280,7 +280,7 @@ Figura 4.17: Formato de etiquetas del eje X
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>Nuevamente sobre la pestaña eje x se encuentra una sección dedicada a las marcas de graduación y líneas del eje, cambie el color de línea por “#BDC3C7”, active las líneas de cuadricula y su botón de estilo, allí debe asignar el mismo color de línea en un estilo punteado.</li>
+<li>Nuevamente sobre la pestaña eje X se encuentra una sección dedicada a las marcas de graduación y líneas del eje, cambie el color de línea por “#BDC3C7”, active las líneas de cuadrícula y su botón de estilo, allí debe asignar el mismo color de línea en un estilo punteado.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:marcasdegraduacionylineasdelejeflourish-fig"></span>
 <img src="Imágenes/flourish18.jpg" alt="Formato de marcas de gradaución y líneas del eje" width="85%" />
@@ -289,7 +289,7 @@ Figura 4.18: Formato de marcas de gradaución y líneas del eje
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>Repita los pasos 6, 7 y 8 para editar el eje y, tenga en cuenta que el título de este debe ser Número de graduados.</li>
+<li>Repita los pasos 6, 7 y 8 para editar el eje Y, tenga en cuenta que el título de este debe ser Número de graduados.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:formatodeambosejesflourish-fig"></span>
 <img src="Imágenes/flourish19.jpg" alt="Gráfico con ambos ejes editados" width="85%" />
@@ -350,15 +350,15 @@ Figura 4.24: Añadir un título al gráfico creado
 </div>
 <div id="graficolineassegmentadoflourish" class="section level4">
 <h4><span class="header-section-number">4.3.1.2</span> Gráfico de líneas segmentado por una dimensión</h4>
-<p>Esta visualización también pertenece a la sección de plantillas de gráficos de líneas, barras y circulares y se usara la plantilla del gráfico anterior solo que esta vez se incorpora la modalidad de formación, la base de datos a cargar debe contener mínimo tres columnas, la primera de ellas con el periodo y las siguientes dos corresponden a pregrado y postgrado, adicional a esto es de vital importancia mostrar el número de estudiantes graduados como porcentaje del total por periodo, por tal razón se generan otras dos columnas con los respetivos porcentajes para cada modalidad de formación.</p>
+<p>Esta visualización también pertenece a la sección de plantillas de gráficos de líneas, barras y circulares y se usara la plantilla del gráfico anterior solo que esta vez se incorpora la modalidad de formación, la base de datos a cargar debe contener mínimo tres columnas, la primera de ellas con el periodo y las siguientes dos corresponden a pregrado y postgrado, adicional a esto es de vital importancia mostrar el número de estudiantes graduados como porcentaje del total por periodo, por tal razón se generan otras dos columnas con los respectivos porcentajes para cada modalidad de formación.</p>
 <ol style="list-style-type: decimal">
 <li><p>Elija la plantilla gráfico de líneas y cargue el archivo llamado “modalidadformacion.csv”.</p></li>
 <li><p>La columna A debe ser asignada al estante Labels/time (Etiquetas/ tiempo), las columnas B y C al estante Values (Valores), finalmente todas la columnas es decir de la A a la E deben ubicarse en información para ventanas emergentes personalizadas.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:asignaciondecamposflourish-fig"></span>
-<img src="Imágenes/flourish25.jpg" alt="Asignar columnas a los estantes correspondienetes" width="85%" />
+<img src="Imágenes/flourish25.jpg" alt="Asignar columnas a los estantes correspondientes" width="85%" />
 <p class="caption">
-Figura 4.25: Asignar columnas a los estantes correspondienetes
+Figura 4.25: Asignar columnas a los estantes correspondientes
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -411,7 +411,7 @@ Figura 4.30: Contenido personalizado para ventanas emergentes
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>Debe repetir los pasos 14, 15 y 16 del grafico de líneas, para el paso 15 el título de la visualización debe ser Evolución del número de estudiantes graduados por modalidad de formación y para el paso 16 será Modalidad de formación.</li>
+<li>Debe repetir los pasos 14, 15 y 16 del gráfico de líneas, para el paso 15 el título de la visualización debe ser Evolución del número de estudiantes graduados por modalidad de formación y para el paso 16 será Modalidad de formación.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso8lineassegmentadaflourish-fig"></span>
 <img src="Imágenes/flourish30.jpg" alt="Evolución del número de estudiantes graduados por modalidad de formación" width="85%" />
@@ -485,9 +485,9 @@ Figura 4.37: Tabla: Total de estudiantes graduados por modalidad de formación
 </div>
 <div id="graficocircularflourish" class="section level4">
 <h4><span class="header-section-number">4.3.1.4</span> Gráfico circular</h4>
-<p>Este gráfico circular debe mostrar la distribución de estudiantes graduados por modalidad de formación para el último periodo del cual se tiene registro, para realizar esta visualización se tienen dos opciones la primera de ellas es incorporar la variable YEAR_SEMESTER como filtro de filas, esto permitiría al usuario seleccionar cualquier periodo; la segunda opción es no incluir esta variable y por tanto no generar el filtro, se realizaran ambas opciones para explorar cómo funcionan los filtros en este software.</p>
+<p>Este gráfico circular debe mostrar la distribución de estudiantes graduados por modalidad de formación para el último periodo del cual se tiene registro, para realizar esta visualización se tienen dos opciones la primera de ellas es incorporar la variable YEAR_SEMESTER como filtro de filas, esto permitiría al usuario seleccionar cualquier periodo; la segunda opción es no incluir esta variable y por tanto no generar el filtro, se realizaran ambas opciones para explorar cómo funcionan los filtros en esta herramienta.</p>
 <ol style="list-style-type: decimal">
-<li>Desde la galería de plantillas debe seleccionar gráfico circular, cargar la fuente de datos llamada “modalidadformacioncricular.csv”, para el estante Labels/Time debe asignar la columna B ya que esta contiene la modalidad de formación, la columna E debe ir en el estante Values debido a que se quiere mostrar los porcentajes, la columna A será usada como filtro de fila, finalmente al estante de información para ventanas emergentes personalizadas se deben asignar las columnas B y C.</li>
+<li>Desde la galería de plantillas debe seleccionar gráfico circular, cargar la fuente de datos llamada “modalidadformacioncircular.csv”, para el estante Labels/Time debe asignar la columna B ya que esta contiene la modalidad de formación, la columna E debe ir en el estante Values debido a que se quiere mostrar los porcentajes, la columna A será usada como filtro de fila, finalmente al estante de información para ventanas emergentes personalizadas se deben asignar las columnas B y C.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso1graficocircularflourish-fig"></span>
 <img src="Imágenes/flourish37.jpg" alt="Carga de datos y asignación de columnas" width="85%" />
@@ -525,16 +525,16 @@ Figura 4.41: Personalización de la ventana emergente
 </div>
 <ol start="6" style="list-style-type: decimal">
 <li><p>Sobre la pestaña diseño active la opción fronteras y asigne color negro a todas.</p></li>
-<li><p>Con ayuda de la sección encabezamiento seleccione alineación central y escriba como título Distribución de graduados por modalidad de formación, periodo, este titulo debe estar en negrita y su tamaño debe ser la A mayúscula más grande.</p></li>
+<li><p>Con ayuda de la sección encabezamiento seleccione alineación central y escriba como título Distribución de graduados por modalidad de formación, periodo, este título debe estar en negrita y su tamaño debe ser la A mayúscula más grande.</p></li>
 </ol>
 <p>La visualización obtenida muestra la distribución de estudiantes graduados por modalidad de formación según el periodo que el usuario seleccione en el filtro, por ejemplo, en el periodo 2018-1 el <span class="math inline">\(58.9\%\)</span> de los estudiantes graduados pertenecían a pregrado.</p>
 <div class="figure" style="text-align: center"><span id="fig:graficocircularconfiltroflourish-fig"></span>
-<img src="Imágenes/flourish41.jpg" alt="Distibución de estudiantes graduados por modalidad de formación" width="85%" />
+<img src="Imágenes/flourish41.jpg" alt="Distribución de estudiantes graduados por modalidad de formación" width="85%" />
 <p class="caption">
-Figura 4.42: Distibución de estudiantes graduados por modalidad de formación
+Figura 4.42: Distribución de estudiantes graduados por modalidad de formación
 </p>
 </div>
-<p>Para la segunda opción de este tipo de gráfico el cual no contendrá filtro debe ir a la pagina principal donde se ubican todos sus proyectos y duplicar la visualización creada anteriormente, sobre la pestaña datos debe cargar el archivo “modalidadformacioncircularfiltrada.csv” y reasignar las columnas a los campos disponibles, B debe ir el Labels, D se agina a Values y nuevamente las columnas B y C se usarán para las ventanas emergentes personalizadas.</p>
+<p>Para la segunda opción de este tipo de gráfico el cual no contendrá filtro debe ir a la pagina principal donde se ubican todos sus proyectos y duplicar la visualización creada anteriormente, sobre la pestaña datos debe cargar el archivo “modalidadformacioncircularfiltrada.csv” y reasignar las columnas a los campos disponibles, B debe ir en Labels, D se agina a Values y nuevamente las columnas B y C se usarán para las ventanas emergentes personalizadas.</p>
 <div class="figure" style="text-align: center"><span id="fig:graficocircularflourish-fig"></span>
 <img src="Imágenes/flourish42.jpg" alt="Asignación de campos a estantes" width="85%" />
 <p class="caption">
@@ -564,7 +564,7 @@ Figura 4.45: Asignación de columnas a estantes disponibles
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>En la pestaña colores debe seleccionar por fila el modo de color y editar la paleta de colores, pregrado debe estar en color “#8CC63F”, Maestría en color “#C1272D”, especialización “#29ABE2”, especialidades médicas en color “#6D6666” y por último doctorado “#FBB03B”.</li>
+<li>En la pestaña colores debe seleccionar por fila el modo de color y editar la paleta de colores, pregrado debe estar en color “#8CC63F”, maestría en color “#C1272D”, especialización “#29ABE2”, especialidades médicas en color “#6D6666” y por último doctorado “#FBB03B”.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso4graficobarrasflourish-fig"></span>
 <img src="Imágenes/flourish45.jpg" alt="Cambio de paleta de colores" width="85%" />
@@ -574,7 +574,7 @@ Figura 4.46: Cambio de paleta de colores
 </div>
 <ol start="5" style="list-style-type: decimal">
 <li><p>Sobre la pestaña barras debe aumentar la opacidad de la barra a 1, el estilo de la etiqueta debe ser eje, también debe activar la opción de mostrar etiquetas de puntos de datos; esta configuración debe realizarse en la pestaña etiquetas.</p></li>
-<li><p>Es momento de editar los ejes para esto haga clic sobre eje X y asigne como título Número de graduados en color negro, negrita y tamaño 1.3, las etiquetas también deben estar en color negro y tamaño 1; también debe activar las líneas de cuadricula.</p></li>
+<li><p>Es momento de editar los ejes para esto haga clic sobre eje X y asigne como título Número de graduados en color negro, negrita y tamaño 1.3, las etiquetas también deben estar en color negro y tamaño 1; también debe activar las líneas de cuadrícula.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso6graficobarrasflourish-fig"></span>
 <img src="Imágenes/flourish46.jpg" alt="Formato del eje X" width="85%" />
@@ -603,7 +603,7 @@ Figura 4.49: Ventanas emergentes personalizadas
 <ol start="9" style="list-style-type: decimal">
 <li>Active las fronteras de la visualización como ya se mostró en gráficos anteriores y como título del gráfico debe escribir Distribución de graduados por nivel de formación, periodo 2020-1.</li>
 </ol>
-<p>El gráfico de barras obtenido muestra la distribución del número de estudiantes graduados por nivel de formación para el periodo</p>
+<p>El gráfico de barras obtenido muestra la distribución del número de estudiantes graduados por nivel de formación para el periodo.</p>
 <div class="figure" style="text-align: center"><span id="fig:graficobarrasflourish-fig"></span>
 <img src="Imágenes/flourish50.jpg" alt="Distribución de graduados por nivel de formación, periodo 2020-1" width="85%" />
 <p class="caption">
@@ -613,7 +613,7 @@ Figura 4.50: Distribución de graduados por nivel de formación, periodo 2020-1
 </div>
 <div id="mapadeproyecciónflourish" class="section level4">
 <h4><span class="header-section-number">4.3.1.6</span> Mapa de proyección</h4>
-<p>Esta plantilla permite crear mapas de datos con sombreado de región y/o puntos, dentro de las plantillas disponibles se encuentran algunos continentes divididos por países o regiones y algunos países fraccionado por estados o provincias, también existe una plantilla en blanco para añadir el archivo propio de datos para crear un continente o país que no se encuentre en las plantillas existentes.</p>
+<p>Esta plantilla permite crear mapas de datos con sombreado de región y/o puntos, dentro de las plantillas disponibles se encuentran algunos continentes divididos por países o regiones y algunos países fraccionados por estados o provincias, también existe una plantilla en blanco para añadir el archivo propio de datos para crear un continente o país que no se encuentre en las plantillas existentes.</p>
 <p>Con el fin de ilustrar las capas que componen este tipo de mapas debe seleccionar la plantilla del mundo ubicada en la parte inferior de la sección mapa de proyección de la galería de plantillas de Flourish.</p>
 <div class="figure" style="text-align: center"><span id="fig:plantillasmapaproyeccionflourish-fig"></span>
 <img src="Imágenes/flourish51.jpg" alt="Galería de plantillas para mapas de proyección" width="85%" />
@@ -673,7 +673,7 @@ Figura 4.57: Carga de datos para la capa de regiones y asignación de columnas
 Figura 4.58: Carga de datos para la capa de puntos y asignación de columnas
 </p>
 </div>
-<p>Ahora debe regresar a la pestaña avance para comenzar a dar formato y personalizar el mapa creado, en este momento su visualización asigno un color a cada municipio dependiendo del conteo de este y posee puntos en color gris oscuro que representan cada capital.</p>
+<p>Ahora debe regresar a la pestaña avance para comenzar a dar formato y personalizar el mapa creado, en este momento su visualización asigno un color a cada departamento dependiendo del conteo de este y posee puntos en color gris oscuro que representan cada capital.</p>
 <div class="figure" style="text-align: center"><span id="fig:vistapreviamapadeptosflourish-fig"></span>
 <img src="Imágenes/flourish59.jpg" alt="Vista previa del mapa creado" width="85%" />
 <p class="caption">
@@ -717,7 +717,7 @@ Figura 4.63: Contenido personalizado para ventanas emergentes
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>Otra pestaña para editar y personalizar el gráfico es caja de búsqueda, con esta se da formato a la opción de búsqueda; el texto del marcado será “Buscar…” y debe activar las opciones de mostrar sugerencias desplegables y expandir el cuadro de búsqueda.</li>
+<li>Otra pestaña para editar y personalizar el gráfico es caja de búsqueda, con esta se da formato a la opción de búsqueda; el texto del marcador será “Buscar…” y debe activar las opciones de mostrar sugerencias desplegables y expandir el cuadro de búsqueda.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso5mapadeptosflourish-fig"></span>
 <img src="Imágenes/flourish64.jpg" alt="Formato a la caja de búsqueda" width="85%" />
@@ -729,14 +729,14 @@ Figura 4.64: Formato a la caja de búsqueda
 <li><p>Como color de fondo debe asignar “#EFEFEF”, activar las fronteras y ponerlas en color negro, estos ajustes deben hacerse desde la pestaña diseño.</p></li>
 <li><p>Con ayuda de la pestaña encabezamiento debe escribir “Graduados 2020-1” como título con el tamaño más pequeño posible; por último, el nombre de la visualización será Total por departamentos.</p></li>
 </ol>
-<p>La visualización obtenida permite identificar la cantidad de estudiantes graduados en el periodo 2020-1 según su lugar de nacimiento, a pesar de que el grafico logra ser estético y agradable quedan faltando algunos detalles como etiquetas con el nombre del departamento y su capital.</p>
+<p>La visualización obtenida permite identificar la cantidad de estudiantes graduados en el periodo 2020-1 según su lugar de nacimiento, a pesar de que el gráfico logra ser estético y agradable quedan faltando algunos detalles como etiquetas con el nombre del departamento y su capital.</p>
 <div class="figure" style="text-align: center"><span id="fig:mapadeptosflourish-fig"></span>
 <img src="Imágenes/flourish65.jpg" alt="Total estudiantes graduados por departamento en el periodo 2020-1" width="85%" />
 <p class="caption">
 Figura 4.65: Total estudiantes graduados por departamento en el periodo 2020-1
 </p>
 </div>
-<p>El siguiente mapa a realizar contiene el total de estudiantes graduados por municipio, el archivo llamado “municipiosfinal.json” ya se encuentra listo para ser cargado a Flourish, luego de cargar el archivo debe asignar las columnas A, I, Q a los estantes geometría, nombre y valores respectivamente, las ultimas dos columnas mencionadas también deben ser añadidas al estante de datos para ventanas emergentes personalizadas, al igual que la columna G.</p>
+<p>El siguiente mapa a realizar contiene el total de estudiantes graduados por municipio, el archivo llamado “municipiosfinal.json” ya se encuentra listo para ser cargado a Flourish, luego de cargar el archivo debe asignar las columnas A, I, Q a los estantes geometría, nombre y valores respectivamente, las últimas dos columnas mencionadas también deben ser añadidas al estante de datos para ventanas emergentes personalizadas, al igual que la columna G.</p>
 <div class="figure" style="text-align: center"><span id="fig:regionesmapampiosfloruish-fig"></span>
 <img src="Imágenes/flourish66.jpg" alt="Carga de datos para la capa de regiones y asignación de columnas" width="85%" />
 <p class="caption">
@@ -768,7 +768,7 @@ Figura 4.69: Formato a la capa de regiones
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>La siguiente pestaña para editar es popups y panles, en la cual debe seleccionar contenido emergente personalizado, el encabezado será el nombre del municipio y departamento y el contenido será la cantidad de graduados y para la ventana emergente relacionada a los puntos no debe editar nada.</li>
+<li>La siguiente pestaña para editar es popups y paneles, en la cual debe seleccionar contenido emergente personalizado, el encabezado será el nombre del municipio y departamento y el contenido será la cantidad de graduados y para la ventana emergente relacionada a los puntos no debe editar nada.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso2mapampiosflourish-fig"></span>
 <img src="Imágenes/flourish70.jpg" alt="Ventanas emergentes personalizadas" width="85%" />
@@ -793,9 +793,9 @@ Figura 4.71: Total estudiantes graduados por municipio en el periodo 2020-1
 <ol style="list-style-type: decimal">
 <li>Seleccione la plantilla Regiones y puntos ubicada en la sección de mapas 3D, lo primero a realizar será analizar la estructura de los datos usados en cada capa. La primera capa llamada regiones corresponde a un archivo GeoJson con la geometría y propiedades de cada país, la siguiente capa llamada puntos puede ser un archivo Excel o CSV y como mínimo debe contener las columnas latitud, longitud, fecha y nombre del lugar, la ultima capa llamada regiones de mapa insertadas no es usada en esta visualización por lo que se encuentra vacía.</li>
 </ol>
-<p>Dentro de la base de datos con la cual se esta trabajando hay columnas que identifican el lugar de nacimiento de los estudiantes graduados, por lo tanto, estas son las columnas para usar en la creación del mapa 3D, la idea es mostrar la evolución de graduados por municipio de manera anual, es decir, aparecerán puntos por municipio si en ese año hubieron graduados dicho municipio. Al usar dos capas para la creación del mapa es necesario disponer de dos bases de datos, la primera pertenece a la capa de regiones y es posible usar el archivo “municipiosfinal.json” y para la capa de puntos se construirá un archivo CSV con la ayuda de R que contenga el año, latitud, longitud, nombre del municipio y conteo de estudiantes graduados, dicho archivo es exportado y lo puede encontrar como “municipios3d.csv”.</p>
+<p>Dentro de la base de datos con la cual se esta trabajando hay columnas que identifican el lugar de nacimiento de los estudiantes graduados, por lo tanto, estas son las columnas para usar en la creación del mapa 3D, la idea es mostrar la evolución de graduados por municipio de manera anual, es decir, aparecerán puntos por municipio si en ese año hubieron graduados de dicho municipio. Al usar dos capas para la creación del mapa es necesario disponer de dos bases de datos, la primera pertenece a la capa de regiones y es posible usar el archivo “municipiosfinal.json” y para la capa de puntos se construirá un archivo CSV con la ayuda de R que contenga el año, latitud, longitud, nombre del municipio y conteo de estudiantes graduados, dicho archivo es exportado y lo puede encontrar como “municipios3d.csv”.</p>
 <ol start="2" style="list-style-type: decimal">
-<li>Cargue los archivos mencionados con anterioridad a las capas correspondientes, la columna A del archivo en formato Json deben ser asignada a la geometría, la siguiente capa será puntos en la cual será hará uso de varios estantes disponibles tales como la latitud y longitud a las que debe asignar las columnas C y B, el estante escala determina el tamaño de los puntos, por lo cual se le debe asignar la columna F, sobre fecha de inicio debe ubicar la columna A, el nombre lo contiene la columna E y por ultimo debe asignar las columnas de la D a la F a ventanas emergentes personalizadas.</li>
+<li>Cargue los archivos mencionados con anterioridad a las capas correspondientes, la columna A del archivo en formato Json deben ser asignada a la geometría, la siguiente capa será puntos en la cual será hará uso de varios estantes disponibles tales como la latitud y longitud a las que debe asignar las columnas C y B, el estante escala determina el tamaño de los puntos, por lo cual se le debe asignar la columna F, sobre fecha de inicio debe ubicar la columna A, el nombre lo contiene la columna E y por último debe asignar las columnas de la D a la F a ventanas emergentes personalizadas.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso2mapa3dflourish-fig"></span>
 <img src="Imágenes/flourish72.jpg" alt="Capa de puntos y asignación de columnas" width="85%" />
@@ -813,7 +813,7 @@ Figura 4.73: Formato a la pestaña mapa base
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>La siguiente pestaña será Viewport e interacción, con la cual se controla el diseño y visualización inicial del mapa; sobre la ventana de visualización inicial debe establecer el tono y el soporte en 0, para los limites de la ventana gráfica y debe aumentar el zoom máximo a 22, también desactive la opción de repetir el mapa horizontalmente; por último, sobre la sección controles active el control de pantalla completa.</li>
+<li>La siguiente pestaña será Viewport e interacción, con la cual se controla el diseño y visualización inicial del mapa; sobre la ventana de visualización inicial debe establecer el tono y el soporte en 0, para los límites de la ventana gráfica y debe aumentar el zoom máximo a 22, también desactive la opción de repetir el mapa horizontalmente; por último, sobre la sección controles active el control de pantalla completa.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso4mapa3dflourish-fig"></span>
 <img src="Imágenes/flourish74.jpg" alt="Personalización de visualización incial" width="85%" />
@@ -849,16 +849,16 @@ Figura 4.77: Formato a la capa de puntos
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>La siguiente pestaña es cronología, con la cual se puede dar formato a la línea de tiempo de la visualización; inicialmente debe desactivar la opción de cronología en bucle esto para que no se repita cada que termina, establezca las márgenes izquierdas, fondo y derecha en 0, en la sección grafico asigne como color de fondo “#ECF0F1”, la altura debe ser 4 y por último debe activar la opción de líneas curvas.</li>
+<li>La siguiente pestaña es cronología, con la cual se puede dar formato a la línea de tiempo de la visualización; inicialmente debe desactivar la opción de cronología en bucle esto para que no se repita cada que termina, establezca las márgenes izquierdas, fondo y derecha en 0, en la sección gráfico asigne como color de fondo “#ECF0F1”, la altura debe ser 4 y por último debe activar la opción de líneas curvas.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso8mapa3dflourish-fig"></span>
-<img src="Imágenes/flourish78.jpg" alt="Edicón de la línea de tiempo" width="85%" />
+<img src="Imágenes/flourish78.jpg" alt="Edición de la línea de tiempo" width="85%" />
 <p class="caption">
-Figura 4.78: Edicón de la línea de tiempo
+Figura 4.78: Edición de la línea de tiempo
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>Sobre la misma pestaña de cronología encontrara una sección llamada botón de reproducción con la cual se controla el diseño del botón, en este caso únicamente debe modificar el tamaño del botón y del icono, el tamaño del botón será 1,5 y para el icono de 1; la sección tiempo y animación controla el tiempo total de duración de la línea de tiempo en segundos, los saltos entre años y la duración de desaparición o aparición de un nuevo punto, estos tiempos se deben establecer en 60, 10 y 2 respectivamente. Para la sección d agregación debe seleccionar Total y en el intervalo de tasa de agregación debe seleccionar personalizado y luego año.</li>
+<li>Sobre la misma pestaña de cronología encontrara una sección llamada botón de reproducción con la cual se controla el diseño del botón, en este caso únicamente debe modificar el tamaño del botón y del icono, el tamaño del botón será 1.5 y para el icono de 1; la sección tiempo y animación controla el tiempo total de duración de la línea de tiempo en segundos, los saltos entre años y la duración de desaparición o aparición de un nuevo punto, estos tiempos se deben establecer en 60, 10 y 2 respectivamente. Para la sección de agregación debe seleccionar Total y en el intervalo de tasa de agregación debe seleccionar personalizado y luego año.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso9mapa3dflourish-fig"></span>
 <img src="Imágenes/flourish79.jpg" alt="Formato a la cronología" width="85%" />
@@ -906,7 +906,7 @@ Figura 4.83: Capa de valores
 </p>
 </div>
 <p>El conjunto de datos ubicado en la sección valores debe contener como mínimo tres columnas, las cuales corresponden al origen, destino y valor del flujo; el conjunto de muestra posee dos columnas adicionales que representa una categoría y años, las cuales son usadas en los estantes filtros con el fin de que el usuario pueda elegir que categoría desea visualizar y una línea de tiempo para agregar interactividad y seguimiento de los flujos. Debe notar que los lugares de origen y destino no contienen el nombre del país si no un código de tres letras el cual debe corresponder a los códigos establecidos en la hoja de locaciones.</p>
-<p>La capa de locaciones es algo simple ya que debe contener los códigos mencionados anteriormente, el nombre del país, la ubicación en latitud y longitud. Es muy importante establecer códigos únicos y que si se repiten las cifras de los flujos y su respectiva clasificación no sería correcta.</p>
+<p>La capa de locaciones es algo simple ya que debe contener los códigos mencionados anteriormente, el nombre del país, la ubicación en latitud y longitud. Es muy importante establecer códigos únicos ya que si se repiten las cifras de los flujos y su respectiva clasificación no sería correcta.</p>
 <div class="figure" style="text-align: center"><span id="fig:capalocacionesgloboconexionesflourish-fig"></span>
 <img src="Imágenes/flourish84.jpg" alt="Capa de locaciones" width="85%" />
 <p class="caption">
@@ -933,7 +933,7 @@ Figura 4.85: Asignación de columnas a estantes para la capa valores
 Figura 4.86: Asignación de columnas a estantes para la capa locaciones
 </p>
 </div>
-<p>Regresando a la pestaña de avance debe observar una vista previa de la visualización, muy similar a la mostrada a continuación, observe que hay detalles por corregir como el título, subtítulo y números en la clasificación los orígenes y destinos.</p>
+<p>Regresando a la pestaña de avance debe observar una vista previa de la visualización, muy similar a la mostrada a continuación, observe que hay detalles por corregir como el título, subtítulo y números en la clasificación de orígenes y destinos.</p>
 <div class="figure" style="text-align: center"><span id="fig:vistapreviagloboconexionesflourish-fig"></span>
 <img src="Imágenes/flourish87.jpg" alt="Vista previa del globo de conexiones" width="85%" />
 <p class="caption">
@@ -951,7 +951,7 @@ Figura 4.88: Formato a la superficie ddel globo
 </div>
 <ol start="5" style="list-style-type: decimal">
 <li><p>Las pestañas siguientes hasta rotación no será editadas ya que las configuraciones establecidas por defecto en la plantilla funcionan de manera adecuada para los fines de la visualización.</p></li>
-<li><p>La sección o pestaña formato de numero permite editar el estilo de los números, desde el separador, cifras decimales hasta los prefijos o sufijos a usar. En este caso debe eliminar el prefijo ya que la cifra mostrada corresponde a un conteo de estudiantes graduados y no a un valor relacionado con dinero, también debe disminuir la cantidad de lugares decimales a cero, ya que las cifras son números enteros.</p></li>
+<li><p>La sección o pestaña formato de número permite editar el estilo de los números, desde el separador, cifras decimales hasta los prefijos o sufijos a usar. En este caso debe eliminar el prefijo ya que la cifra mostrada corresponde a un conteo de estudiantes graduados y no a un valor relacionado con dinero, también debe disminuir la cantidad de lugares decimales a cero, ya que las cifras son números enteros.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso6globoconexionesflourish-fig"></span>
 <img src="Imágenes/flourish89.jpg" alt="Formato de número" width="85%" />
@@ -1023,9 +1023,9 @@ Figura 4.95: Formato de barras
 <li>Sobre la pestaña colores debe editar la paleta de colores, los colores a usar son “#8CC63F”, “#F15A24”, “#0071BC”, “#93278F”, “#5BC0DE”, “#C1272D” para las sedes Bogotá, Medellín, Manizales, Palmira, Amazonia y Caribe respectivamente.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso5jerarquiaflourish-fig"></span>
-<img src="Imágenes/flourish96.jpg" alt="Cambio de paleta de coloresq" width="85%" />
+<img src="Imágenes/flourish96.jpg" alt="Cambio de paleta de colores" width="85%" />
 <p class="caption">
-Figura 4.96: Cambio de paleta de coloresq
+Figura 4.96: Cambio de paleta de colores
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
@@ -1047,13 +1047,13 @@ Figura 4.97: Contenido personalizado para ventanas emergentes
 <li><p>Observe que el separador de miles es una “,”, por lo que debe ser cambiado por “.”, para esto haga clic sobre la pestaña formato de número y seleccione “,” como separador decimal, en formato de numero debe seleccionar “12.345,67” ya que este usa el “.” como separador de miles, por último, los lugares decimales deben establecerse en cero.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso8jerarquiaflourish-fig"></span>
-<img src="Imágenes/flourish98.jpg" alt="Formato de barras" width="85%" />
+<img src="Imágenes/flourish98.jpg" alt="Formato de número" width="85%" />
 <p class="caption">
-Figura 4.98: Formato de barras
+Figura 4.98: Formato de número
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>Como últimos detalles active las fronteras y seleccione color negro para todas, esto lo realiza sobre la pestaña diseño; con la pestaña encabezamiento escriba como título para la visualización “Distribución de programas por nivel de formación.</li>
+<li>Como últimos detalles active las fronteras y seleccione color negro para todas, esto lo realiza sobre la pestaña diseño; con la pestaña encabezamiento escriba como título para la visualización Distribución de programas por nivel de formación.</li>
 </ol>
 <p>La visualización obtenida permite identificar la distribución por sedes, facultades y programas de los estudiantes graduados para los periodos 2009-1 hasta 2020-1, identifica cuales son los programas y nivel de formación más apetecidos para cada una de las sedes.</p>
 <div class="figure" style="text-align: center"><span id="fig:barrasjerarquiaflourish-fig"></span>
@@ -1141,7 +1141,7 @@ Figura 4.108: Flujo entre sedes de la Universidad Nacional de Colombia
 </div>
 <div id="carrerabarrasflourish" class="section level4">
 <h4><span class="header-section-number">4.3.1.11</span> Carrera de gráfico de barras</h4>
-<p>Esta visualización está basada en un gráfico de barras al cual se le añade una línea de tiempo con el fin de visualizar los cambios de las categorías que representan cada barra, son de gran utilidad para mostrar como crecen las poblaciones, los votos por un determinado partido político, entre otros. Dentro del sistema de educación superior colombiano los programas de formación son clasificados en áreas del conocimiento, la idea es realizar un grafico de barras con las áreas del conocimiento SNIES y añadir como ventana de tiempo los periodos de 2009-1 a 2020-1 con el fin de explorar e identificar cuáles son las áreas con la mayor cantidad de estudiantes graduados en todos los niveles de formación ofrecidos por la Universidad Nacional.</p>
+<p>Esta visualización está basada en un gráfico de barras al cual se le añade una línea de tiempo con el fin de visualizar los cambios de las categorías que representan cada barra, son de gran utilidad para mostrar como crecen las poblaciones, los votos por un determinado partido político, entre otros. Dentro del sistema de educación superior colombiano los programas de formación son clasificados en áreas del conocimiento, la idea es realizar un gráfico de barras con las áreas del conocimiento SNIES y añadir como ventana de tiempo los periodos de 2009-1 a 2020-1 con el fin de explorar e identificar cuáles son las áreas con la mayor cantidad de estudiantes graduados en todos los niveles de formación ofrecidos por la Universidad Nacional.</p>
 <p>El paso inicial para esta visualización como en todas es analizar la estructura del conjunto de datos de ejemplo, para esto seleccione la plantilla de carrera de barras y haga clic en la pestaña datos, debe observar que se tienen estantes disponibles para etiquetas, valores, categorías e imágenes; observe además que cada año corresponde a una columna razón por la cual la base de datos a subir para crear la visualización deseada tendrá una columna para el área del conocimiento, una más para el nivel de formación y las demás columnas corresponden a cada periodo, faltaría la columna de imágenes pero esta será añadida directamente en Flourish, ya que la manera en la cual se generan las bases de datos para cada visualización no permite añadir una columna con imágenes.</p>
 <ol style="list-style-type: decimal">
 <li>Luego de analizado el conjunto de datos de ejemplo cargue el archivo llamado “car_barras-csv” y corrija los caracteres especiales del español en caso de que no se hayan leído correctamente; antes de asignar las columnas a los estantes se debe añadir la columna para imágenes, para esto haga clic derecho sobre la columna B y seleccione insertar columna a la derecha.</li>
@@ -1168,7 +1168,7 @@ Figura 4.111: Seleccionar archivos
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>Luego de añadir una imagen notara que en la fila correspondiente y columna imágenes se genera un enlace que corresponde a la imagen, puede copiar y pegarlo hasta completar todas las filas que corresponden a esa área. Debe el paso 2 y lo mencionado anteriormente hasta completar todas las filas de la columna imágenes.</li>
+<li>Luego de añadir una imagen notara que en la fila correspondiente y columna imágenes se genera un enlace que corresponde a la imagen, puede copiar y pegarlo hasta completar todas las filas que corresponden a esa área. Debe repetir el paso 2 y lo mencionado anteriormente hasta completar todas las filas de la columna imágenes.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso3carrerabarrasflourish-fig"></span>
 <img src="Imágenes/flourish112.jpg" alt="Conjunto de datos completo" width="85%" />
@@ -1186,7 +1186,7 @@ Figura 4.113: Asignación de columnas
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>Regresando a la pestaña avance se encuentran algunos problemas de formato, tales como el titulo y colores de la leyenda y el nombre de las áreas se corta, están incompletos.</li>
+<li>Regresando a la pestaña avance se encuentran algunos problemas de formato, tales como el título y colores de la leyenda y el nombre de las áreas se corta, están incompletos.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso5carrerabarrasflourish-fig"></span>
 <img src="Imágenes/flourish114.jpg" alt="Vista previa del gráfico" width="85%" />
@@ -1195,7 +1195,7 @@ Figura 4.114: Vista previa del gráfico
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>Para iniciar a modificar y personalizar el grafico, debe hacer clic sobre la pestaña colores de barra y editar la paleta de colores, “#6D6666”, “#FBB03B”, “#5BC0DE”, “#C1272D”, y “#8CC63F” deben ser asignados a los niveles doctorado, especialidades médicas, especialización, maestría y pregrado respectivamente.</li>
+<li>Para iniciar a modificar y personalizar el gráfico, debe hacer clic sobre la pestaña colores de barra y editar la paleta de colores, “#6D6666”, “#FBB03B”, “#5BC0DE”, “#C1272D”, y “#8CC63F” deben ser asignados a los niveles doctorado, especialidades médicas, especialización, maestría y pregrado respectivamente.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso6carrerabarrasflourish-fig"></span>
 <img src="Imágenes/flourish115.jpg" alt="Modificación de paleta de colores" width="85%" />
@@ -1204,7 +1204,7 @@ Figura 4.115: Modificación de paleta de colores
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
-<li>Dentro de la pestaña etiquetas es posible editar el tamaño del texto y modo de las etiqueta, se ofrecen dos modos de etiquetas, el primero corresponde a etiquetas en barra e imagen en el eje y la segunda opción corresponde a etiquetas en el eje e imágenes en las barras, en este caso debe seleccionar la primera opción ya que las etiquetas son bastante largas y no se ven completamente en el eje, por último, aumente el tamaño del texto a 1,2.</li>
+<li>Dentro de la pestaña etiquetas es posible editar el tamaño del texto y modo de las etiqueta, se ofrecen dos modos de etiquetas, el primero corresponde a etiquetas en barra e imagen en el eje Y la segunda opción corresponde a etiquetas en el eje e imágenes en las barras, en este caso debe seleccionar la primera opción ya que las etiquetas son bastante largas y no se ven completamente en el eje, por último, aumente el tamaño del texto a 1.2.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso7carrerabarrasflourish-fig"></span>
 <img src="Imágenes/flourish116.jpg" alt="Formato a etiquetas" width="85%" />
@@ -1222,7 +1222,7 @@ Figura 4.117: Formato a la pestaña leyenda
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>La pestaña línea de tiempo y animación permite configurar el estilo de la línea de tiempo, el botón de reproducción, márgenes y tiempos de la animación, también hay una sección llamada gráfico, esta sección permite mostrar u ocultar un gráfico de líneas sobre el eje de tiempo, dicho grafico de líneas trazará los totales por periodo de cada uno de los niveles de formación; en esta ocasión no será habilitado ya que se satura la visualización. En este caso debe aumentar el tamaño del botón a 1.4 y el tamaño del icono debe aumentarse hasta 1.35, sobre la sección tiempo y animación debe establecer la duración de la línea de tiempo en 60, este tiempo corresponde a la duración total de la animación; la duración antes del bucle debe estar en 2, esto significa que el grafico esperara 2 segundos antes de iniciar de nuevo; por último debe aumentar la duración de la animación de rango de la barra a 1, este valor corresponde al duración del cambio de posición de las barras.</li>
+<li>La pestaña línea de tiempo y animación permite configurar el estilo de la línea de tiempo, el botón de reproducción, márgenes y tiempos de la animación, también hay una sección llamada gráfico, esta sección permite mostrar u ocultar un gráfico de líneas sobre el eje de tiempo, dicho gráfico de líneas trazará los totales por periodo de cada uno de los niveles de formación; en esta ocasión no será habilitado ya que se satura la visualización. En este caso debe aumentar el tamaño del botón a 1.4 y el tamaño del icono debe aumentarse hasta 1.35, sobre la sección tiempo y animación debe establecer la duración de la línea de tiempo en 60, este tiempo corresponde a la duración total de la animación; la duración antes del bucle debe estar en 2, esto significa que el gráfico esperara 2 segundos antes de iniciar de nuevo; por último debe aumentar la duración de la animación de rango de la barra a 1, este valor corresponde a la duración del cambio de posición de las barras.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso9carrerabarrasflourish-fig"></span>
 <img src="Imágenes/flourish118.jpg" alt="Configuración de línea de tiempo y animación" width="85%" />
@@ -1240,7 +1240,7 @@ Figura 4.118: Configuración de línea de tiempo y animación
 </div>
 <div id="carreradelineasflourish" class="section level4">
 <h4><span class="header-section-number">4.3.1.12</span> Carrera de gráfico de líneas</h4>
-<p>Este tipo de gráficos son de gran utilidad cuando se quiere mostrar la evolución histórica de varias categorías, por ejemplos, mostrar la evolución en la cantidad de estudiantes graduados por departamento en cada periodo, Flourish ofrece tres plantillas para la creación de este gráfico, la primera de ellas llamada sencilla la cual muestra la evolución de las líneas por rangos o valores a los largo del tiempo; la segunda plantilla permite añadir un filtro para darle control al usuario sobre las líneas que desea visualizar, finalmente esta la plantilla Zoomed con la cual el eje X de la visualización es dinámico, esta plantilla es de gran utilidad cuando el periodo de tiempo es muy largo; todas las plantillas admiten imágenes que se ubican en un circulo al final de cada línea.</p>
+<p>Este tipo de gráficos son de gran utilidad cuando se quiere mostrar la evolución histórica de varias categorías, por ejemplo, mostrar la evolución en la cantidad de estudiantes graduados por departamento en cada periodo, Flourish ofrece tres plantillas para la creación de este gráfico, la primera de ellas llamada sencilla la cual muestra la evolución de las líneas por rangos o valores a lo largo del tiempo; la segunda plantilla permite añadir un filtro para darle control al usuario sobre las líneas que desea visualizar, finalmente esta la plantilla Zoomed con la cual el eje X de la visualización es dinámico, esta plantilla es de gran utilidad cuando el periodo de tiempo es muy largo; todas las plantillas admiten imágenes que se ubican en un circulo al final de cada línea.</p>
 <p>La base de datos con la cual se ha trabajado contiene información sobre el departamento de nacimiento de cada uno de los estudiantes graduados, por lo que es de interés visualizar como ha evolucionado la cantidad de estudiantes graduados por cada uno de estos departamentos, una de las desventajas de la plantilla de Flourish es que no permite elegir la cantidad de líneas a visualizar, es decir, no se puede indicar si se quieren ver las primeras 10 o más, razón por la cual se decide agrupar los departamentos por región geográfica y así evitar la saturación en el gráfico de líneas.</p>
 <p>Inicialmente debe seleccionar la plantilla con filtrado de la sección carrera de gráfico de líneas y analizar la estructura de datos, debe observar que es necesario construir una base de datos que contenga una columna para el filtrado, otra con el nombre del departamento, y finalmente una columna por cada punto en el tiempo; la columna de imágenes es adicional y será creada directamente desde la sección datos de Flourish, similar a como se realizó en <a href="4-3-flujo-de-trabajo-1.html#carrerabarrasflourish">4.3.1.11</a>.</p>
 <ol style="list-style-type: decimal">
@@ -1290,7 +1290,7 @@ Figura 4.123: Estilos de línea y círculo
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
-<li>La pestaña estilos de etiqueta permite controlar el color y tamaño de las etiquetas, en este caso debe aumentar el tanto el tamaño de fuente de clasificación como el de la etiqueta a 1 y el color de la etiqueta debe ser reparado (fixed).</li>
+<li>La pestaña estilos de etiqueta permite controlar el color y tamaño de las etiquetas, en este caso debe aumentar tanto el tamaño de fuente de clasificación como el de la etiqueta a 1 y el color de la etiqueta debe ser reparado (fixed).</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso7carlineasflourish-fig"></span>
 <img src="Imágenes/flourish163.jpg" alt="Estilo de etiquetas" width="85%" />
@@ -1318,9 +1318,9 @@ Figura 4.125: Formato al eje Y
 <div id="graficopendienteflourish" class="section level4">
 <h4><span class="header-section-number">4.3.1.13</span> Gráfico de pendiente</h4>
 <p>Este tipo de visualización es ideal cuando se quiere mostrar los cambios en la clasificación o posición de una dimensión desde un punto de partida hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo, para el caso de análisis de la Universidad Nacional es relevante identificar los programas que ganan o pierden popularidad, se evalúa la popularidad a nivel de la cantidad de estudiantes graduados, en este caso el análisis se realizara para los programas de pregrado de las cuatro sedes principales de la Universidad, las cuales son Bogotá, Medellín, Manizales y Palmira, se tomara como punto inicial el año 2009 y como punto final el año 2019, no se toma el 2020 ya que la base de que se está trabajando no contiene información para el segundo periodo del año 2020, por lo tanto para que la comparación se equitativa se decide considerar los años 2009 y 2019 ya que se tiene registro de los dos periodos de cada año.</p>
-<p>Debe seleccionar la plantilla llamada etiquetas en línea ubicada en la sección de grafico de pendientes, analizando la pestaña de datos se identifica que es necesario tener una columna con el nombre o identificador de cada línea y tantas columnas como años se quieran mostrar. En este caso el archivo a cargar consiste en el programa de formación, la facultad a la que pertenece, el nivel de formación (el cual solo será pregrado), la sede de matricula que en este caso es Bogotá y por ultimo los dos años que quieren visualizar.</p>
+<p>Debe seleccionar la plantilla llamada etiquetas en línea ubicada en la sección de gráfico de pendientes, analizando la pestaña de datos se identifica que es necesario tener una columna con el nombre o identificador de cada línea y tantas columnas como años se quieran mostrar. En este caso el archivo a cargar consiste en el programa de formación, la facultad a la que pertenece, el nivel de formación (el cual solo será pregrado), la sede de matricula que en este caso es Bogotá y por último los dos años que quieren visualizar.</p>
 <ol style="list-style-type: decimal">
-<li>Cargue el archivo de datos llamado “pendiente_bogota.csv”, corrija los posibles errores ortográficos y asigne las columnas. La columna A debe ser asignada a los estantes nombre y categoría, la columna B contiene la facultad que funcionara como filtro, por lo tanto deber ser asignada al estante filtro, finalmente las columnas E y F se ubican en resultados ya que ellas contienen los valores a mostrar en el gráfico; el contenido de las ventanas emergentes será personalizado por lo cual debe añadir todas las columnas mencionadas anteriormente deben ser añadidas al estante de información para ventanas emergentes personalizadas.</li>
+<li>Cargue el archivo de datos llamado “pendiente_bogota.csv”, corrija los posibles errores ortográficos y asigne las columnas. La columna A debe ser asignada a los estantes nombre y categoría, la columna B contiene la facultad que funcionara como filtro, por lo tanto deber ser asignada al estante filtro, finalmente las columnas E y F se ubican en resultados ya que ellas contienen los valores a mostrar en el gráfico; el contenido de las ventanas emergentes será personalizado por lo cual debe añadir todas las columnas mencionadas anteriormente al estante de información para ventanas emergentes personalizadas.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso1pendienteflourish-fig"></span>
 <img src="Imágenes/flourish126.jpg" alt="Cargue de base de datos y asignación de columnas" width="85%" />
@@ -1329,7 +1329,7 @@ Figura 4.126: Cargue de base de datos y asignación de columnas
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>Regresando a sección de avance notara que la visualización posee una leyenda con todos los posibles programas y adicional a esto no se ven con claridad las líneas, para iniciar a dar formato haga clic sobre la pestaña gráfico, allí aumente el ancho de pendiente a 2,5 y elimine los nombres ubicados en destacar pendientes.</li>
+<li>Regresando a sección de avance notara que la visualización posee una leyenda con todos los posibles programas y adicional a esto no se ven con claridad las líneas, para iniciar a dar formato haga clic sobre la pestaña gráfico, allí aumente el ancho de pendiente a 2.5 y elimine los nombres ubicados en destacar pendientes.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso2pendienteflourish-fig"></span>
 <img src="Imágenes/flourish127.jpg" alt="Formato a la pestaña gráfico" width="85%" />
@@ -1338,12 +1338,12 @@ Figura 4.127: Formato a la pestaña gráfico
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>Con el fin de eliminar la saturación existente en el gráfico haga clic sobre la pestaña leyenda y desactívela. Sobre la pestaña etiquetas disminuya el tamaño de fuente a 1,25 y desactive la opción de mostrar solo etiquetas resaltadas.</li>
+<li>Con el fin de eliminar la saturación existente en el gráfico haga clic sobre la pestaña leyenda y desactívela. Sobre la pestaña etiquetas disminuya el tamaño de fuente a 1.25 y desactive la opción de mostrar solo etiquetas resaltadas.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso3pendienteflourish-fig"></span>
-<img src="Imágenes/flourish128.jpg" alt="Desacrivarleyenda y formato a las etiquetas" width="85%" />
+<img src="Imágenes/flourish128.jpg" alt="Desactivar leyenda y formato a las etiquetas" width="85%" />
 <p class="caption">
-Figura 4.128: Desacrivarleyenda y formato a las etiquetas
+Figura 4.128: Desactivar leyenda y formato a las etiquetas
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -1356,7 +1356,7 @@ Figura 4.129: Contenido personalizado a ventanas emergentes
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>Para el eje debe aumentar el tamaño de fuente a 1,25. Es necesario eliminar la opción de todo del filtro de facultades ya que hace que el gráfico se vea saturado, para esto haga clic sobre la pestaña controles y desactive la opción de incluir todo.</li>
+<li>Para el eje debe aumentar el tamaño de fuente a 1.25. Es necesario eliminar la opción de todo del filtro de facultades ya que hace que el gráfico se vea saturado, para esto haga clic sobre la pestaña controles y desactive la opción de incluir todo.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso5pendienteflourish-fig"></span>
 <img src="Imágenes/flourish130.jpg" alt="Desactivar la opción de incluir todo en el filtro" width="85%" />
@@ -1367,7 +1367,7 @@ Figura 4.130: Desactivar la opción de incluir todo en el filtro
 <ol start="6" style="list-style-type: decimal">
 <li>Con ayuda de la pestaña diseño establezca como color de fondo “#ECF0F1”, también active las fronteras de la visualización y seleccione color negro para todas; finalmente con la pestaña encabezamiento escriba como título Gráfico de pendiente, sede Bogotá y el subtítulo será Análisis de popularidad en programas de pregrado.</li>
 </ol>
-<p>La visualización obtenida permite identificar los cambios de posición de los programas de pregrado por facultad ofrecidos en la se Bogotá de la Universidad Nacional, a modo de ejemplo si se selecciona la facultad de derecho, ciencias políticas y sociales se observa que los programas de derecho y ciencia política han aumentado su cantidad de graduados, para el año 2009 se graduaron 58 y 88 estudiantes respectivamente, mientras que para el año 2019 ambos programas tuvieron un poco más de 120 graduados.</p>
+<p>La visualización obtenida permite identificar los cambios de posición de los programas de pregrado por facultad ofrecidos en la sede Bogotá de la Universidad Nacional, a modo de ejemplo si se selecciona la facultad de derecho, ciencias políticas y sociales se observa que los programas de derecho y ciencia política han aumentado su cantidad de graduados, para el año 2009 se graduaron 58 y 88 estudiantes respectivamente, mientras que para el año 2019 ambos programas tuvieron un poco más de 120 graduados.</p>
 <div class="figure" style="text-align: center"><span id="fig:pendientesedebogotaflourish-fig"></span>
 <img src="Imágenes/flourish131.jpg" alt="Gráfico de pendiente para la sede Bogotá" width="85%" />
 <p class="caption">
@@ -1386,9 +1386,9 @@ Figura 4.132: Plantillas disponibles para gráficos de radar
 </p>
 </div>
 <p>La plantilla para explorar será la llamada “Radar with filter”, la cual permite crear polígonos llenos y añadir una columna para generar un filtro dentro de la visualización; como ya se ha mencionado el primer paso para la creación con Flourish es analizar la estructura de los datos de ejemplo. Para esta visualización como mínimo se deben tener cuatro columnas, la primera de ellas contiene los nombres a partir de los cuales se crea cada gráfico de radar, seguido de esto deben existir tres columnas donde cada una representa un eje, es importante que estas columnas de valores sean compatibles, por lo que todas deben estar en la misma escala. La columna de filtros no es un campo obligatorio, pero en el caso de contener muchos datos es útil utilizarla, ya que permite filtrar lo que muestra la visualización al seleccionar una categoría.</p>
-<p>En el sistema de educación colombiana para que los estudiantes de Instituciones de educación superior puedan obtener un título de pregrado deben realizar un examen llamado Saber Pro, en el cual tiene como finalidad evaluar la calidad de la educación superior, en este examen se evalúan cinco módulos genéricos los cuales son lectura crítica, razonamiento cuantitativo, competencias ciudadanas, comunicación escrita e inglés, además existen módulos asociados a temáticas y contenidos específicos que los estudiantes tienen la posibilidad de presentar de acuerdo a su área de formación profesional.</p>
+<p>En el sistema de educación colombiana para que los estudiantes de Instituciones de educación superior puedan obtener un título de pregrado deben realizar un examen llamado Saber Pro, el cual tiene como finalidad evaluar la calidad de la educación superior, en este examen se evalúan cinco módulos genéricos los cuales son lectura crítica, razonamiento cuantitativo, competencias ciudadanas, comunicación escrita e inglés, además existen módulos asociados a temáticas y contenidos específicos que los estudiantes tienen la posibilidad de presentar de acuerdo a su área de formación profesional.</p>
 <p>La página web del <a href="https://www.icfes.gov.co/web/guest/acerca-del-examen-saber-pro">Icfes</a> en la sección de resultados Saber Pro se encuentran disponibles bases de datos con los resultados agregados de las pruebas aplicadas desde 2013 hasta 2019, a nivel de metadatos es decir una base para cada año, esta base contiene una columna llamada Agregación, la cual contiene diferentes agregaciones de los datos una de ellas es programa académico, a demás posee información sobre el nombre de la institución y la medida de agregación. En este caso interesa explorar los resultados obtenidos a nivel de pruebas genéricas para la Universidad Nacional de Colombia en cada una de sus sedes, inicialmente se quería añadir una línea de tiempo para explorar estos resultados por sede a nivel anual, pero la plantilla no permite hacerlo, razón por la cual únicamente se van a explorar los datos relacionados al año 2019.</p>
-<p>Para crear la base de datos a usar en la plantilla de Flourish nuevamente de hace uso del lenguaje de programación R, allí se carga el archivo de datos “saberpro2019.xlsx”, se aplican filtros para seleccionar la agregación de programas, Universidad Nacional de Colombia y las pruebas genéricas, a demás d esto se seleccionan las columnas que se consideran más relevantes para el gráfico a realizar, también se realizan algunos cambios a nivel de escritura de los datos tales como tildes, mayúsculas, entre otras. La base Saber Pro 2019 no contiene la facultad a la que pertenece cada programa y es importante tener esta información ya que se puede usar como filtro y la visualización final no se verá saturada, para agregar esta columna se realiza la unión entre una base llamada programas la cual contiene los programas de formación y la facultad a la que pertenecen, dicha base es extraída de la base original, es decir, Graduados y la base resultante de la aplicación de filtros y selecciones de Saber Pro; finalmente se realizan filtros por cada sede de la Universidad con el fin de obtener una base para cada sede, para posteriormente ser exportadas.</p>
+<p>Para crear la base de datos a usar en la plantilla de Flourish nuevamente de hace uso del lenguaje de programación R, allí se carga el archivo de datos “saberpro2019.xlsx”, se aplican filtros para seleccionar la agregación de programas, Universidad Nacional de Colombia y las pruebas genéricas, a demás de esto se seleccionan las columnas que se consideran más relevantes para el gráfico a realizar, también se realizan algunos cambios a nivel de escritura de los datos tales como tildes, mayúsculas, entre otras. La base Saber Pro 2019 no contiene la facultad a la que pertenece cada programa y es importante tener esta información ya que se puede usar como filtro y la visualización final no se verá saturada, para agregar esta columna se realiza la unión entre una base llamada programas la cual contiene los programas de formación y la facultad a la que pertenecen, dicha base es extraída de la base original, es decir, Graduados y la base resultante de la aplicación de filtros y selecciones de Saber Pro; finalmente se realizan filtros por cada sede de la Universidad con el fin de obtener una base para cada sede, para posteriormente ser exportadas.</p>
 <p>Dentro de la plantilla para gráfico de radar de Flourish debe cargar el archivo de datos llamado “saber_bogota.csv”, inicialmente deberá corregir los errores ortográficos en los datos, seguido de esto podrá asignar las columnas a los estantes disponibles, el nombre esta dado por la columna E, los valores inician en la columna H y terminan en la L, así que deberá agregar de H a L al estante de valores, finalmente al filtro le corresponde la columna G.</p>
 <div class="figure" style="text-align: center"><span id="fig:asignarcolumnasradarflourish-fig"></span>
 <img src="Imágenes/flourish133.jpg" alt="Asignación de columnas a estantes disponibles" width="85%" />
@@ -1410,13 +1410,13 @@ Figura 4.134: Edición del eje radial
 <li>La pestaña controles permite cambiar forma, colores y texto de los filtros incluidos en la visualización, para iniciar cambie el nombre de la etiqueta combinada y separada por Combinado y Separado respectivamente y para el filtro de facultades la opción All debe ser cambiada por Todos. Finalmente debe dirigirse a la sección de estilos de botones y cambiar el color de seleccionado por “#808080”.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso2radarflourish-fig"></span>
-<img src="Imágenes/flourish135.jpg" alt="Asignación de columnas a estantes disponibles" width="85%" />
+<img src="Imágenes/flourish135.jpg" alt="Formato a los controles" width="85%" />
 <p class="caption">
-Figura 4.135: Asignación de columnas a estantes disponibles
+Figura 4.135: Formato a los controles
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>Haciendo uno de la pestaña diseño asigne “#ECF0F1” como color de fondo y también active las fronteras, estas deben ser de color negro. Por último, se debe incluir un título y subtítulo en la visualización, los cuales serán Resultados Saber Pro 2019, Bogotá y Competencias genéricas respectivamente.</li>
+<li>Haciendo uso de la pestaña diseño asigne “#ECF0F1” como color de fondo y también active las fronteras, estas deben ser de color negro. Por último, se debe incluir un título y subtítulo en la visualización, los cuales serán Resultados Saber Pro 2019, Bogotá y Competencias genéricas respectivamente.</li>
 </ol>
 <p>La visualización obtenida permite observar los resultados obtenidos en el examen Saber Pro del año 2019 para la sede Bogotá, en cada programa de formación, adicional a esto da al usuario la posibilidad de controlar por los programas a visualizar al usar un filtro de facultad, por ejemplo, si se selecciona la facultad de ciencias económicas se obtiene la siguiente visualización.</p>
 <div class="figure" style="text-align: center"><span id="fig:radarbogotaflourish-fig"></span>
@@ -1448,7 +1448,7 @@ Figura 4.138: Gráfico de dispersión básico para beneficos vs ventas con líne
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>Si se añade una columna categórica al estante cuadricula de gráficos, se obtiene una visualización con tantos gráficos como categorías posea la columna, por ejemplo, añada la columna Category al estante mencionado y obtendrá la siguiente visualización.</li>
+<li>Si se añade una columna categórica al estante cuadrícula de gráficos, se obtiene una visualización con tantos gráficos como categorías posea la columna, por ejemplo, añada la columna Category al estante mencionado y obtendrá la siguiente visualización.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:minidispersioncotendenciaflourish-fig"></span>
 <img src="Imágenes/flourish138.jpg" alt="Minigráficos por categoría con líneas de tendencia" width="85%" />
@@ -1464,7 +1464,7 @@ Figura 4.140: Columnas para controlar el color y tamaño de los puntos
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>Para realizar el gráfico de burbujas se debe retirar la columna ubicada en el estante cuadricula de gráfico y añadir la columna Product Name al estante nombre, active la leyenda para que en la parte superior aparezca el texto que identifica a cada color y desactive la línea de tendencia.</li>
+<li>Para realizar el gráfico de burbujas se debe retirar la columna ubicada en el estante cuadrícula de gráfico y añadir la columna Product Name al estante nombre, active la leyenda para que en la parte superior aparezca el texto que identifica a cada color y desactive la línea de tendencia.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:graficoburbujaflourish-fig"></span>
 <img src="Imágenes/flourish140.jpg" alt="Gráfico de burbuja" width="85%" />
@@ -1501,7 +1501,7 @@ Figura 4.144: Formato a los puntos
 </p>
 </div>
 <ul>
-<li>Para editar la paleta de colores haga clic en la pestaña color de puntos y edite la paleta de colores, los colore a usar serán “#29ABE2”, “#F15A24” Y “#8CC63F” para las categorías Furniture, Office Supplies y Technology respectivamente.</li>
+<li>Para editar la paleta de colores haga clic en la pestaña color de puntos y edite la paleta de colores, los colores a usar serán “#29ABE2”, “#F15A24” Y “#8CC63F” para las categorías Furniture, Office Supplies y Technology respectivamente.</li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:cambiopaletacoloresflourish-fig"></span>
 <img src="Imágenes/flourish145.jpg" alt="Cambio de paleta de colores" width="85%" />
@@ -1511,7 +1511,7 @@ Figura 4.145: Cambio de paleta de colores
 </div>
 <ul>
 <li><p>Usando la pestaña configuraciones de gráfico active el color de fondo y asigne “#F5F5F5”.</p></li>
-<li><p>Ahora para el eje X active el estilo de título y seleccione negrita en color negro y tamaño 1.1; para las etiquetas también active el estilo para cambiar el color a negro y como ángulo debe seleccionar 0. Finalmente active las líneas de cuadricula y cambie su color por “#BBBBB9”.</p></li>
+<li><p>Ahora para el eje X active el estilo de título y seleccione negrita en color negro y tamaño 1.1; para las etiquetas también active el estilo para cambiar el color a negro y como ángulo debe seleccionar 0. Finalmente active las líneas de cuadrícula y cambie su color por “#BBBBB9”.</p></li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:formatoejexdispersionflourish-fig"></span>
 <img src="Imágenes/flourish146.jpg" alt="Formato al eje X" width="85%" />
@@ -1547,7 +1547,7 @@ Figura 4.148: Formato de número
 </div>
 <div id="boxplotflourish" class="section level4">
 <h4><span class="header-section-number">4.3.1.16</span> Box-plot</h4>
-<p>Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable y permite la identificación de posibles valores atípicos. Para el conjunto de datos que se está trabajando puede ser de interés realizar un boxplot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta. La plantilla para la realización de estos gráficos se encuentra ubicada en la sección dispersión de la galería de plantillas de Flourish, seleccione la plantilla llamada boxplot y explore la pestaña de datos, con el fin de identificar los estantes disponibles para la creación de esta visualización, el conjunto de datos de ejemplo es bastante simple, únicamente contiene dos columnas que corresponden a los valores del eje X e Y respectivamente, los estantes permiten agregar columnas para generar nombres, establecer colores, tamaño y forma a partir de la categoría de los puntos, también hay una opción llamada cuadricula de gráficos a la cual se puede añadir un columna categórica y crea mini gráficos para cada valor de esa columna; el estante tiempo permite agregar una columna con fechas o ventana de tiempos para generar una animación en la visualización y finalmente están las opciones de añadir filtros e información para crear ventanas emergentes personalizadas.</p>
+<p>Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable y permite la identificación de posibles valores atípicos. Para el conjunto de datos que se está trabajando puede ser de interés realizar un boxplot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta. La plantilla para la realización de estos gráficos se encuentra ubicada en la sección dispersión de la galería de plantillas de Flourish, seleccione la plantilla llamada boxplot y explore la pestaña de datos, con el fin de identificar los estantes disponibles para la creación de esta visualización, el conjunto de datos de ejemplo es bastante simple, únicamente contiene dos columnas que corresponden a los valores del eje X e Y respectivamente, los estantes permiten agregar columnas para generar nombres, establecer colores, tamaño y forma a partir de la categoría de los puntos, también hay una opción llamada cuadrícula de gráficos a la cual se puede añadir un columna categórica y crea mini gráficos para cada valor de esa columna; el estante tiempo permite agregar una columna con fechas o ventana de tiempo para generar una animación en la visualización y finalmente están las opciones de añadir filtros e información para crear ventanas emergentes personalizadas.</p>
 <p>La base de datos a usar para crear esta gráfica contiene las columnas “YEAR_SEMESTER”, “EDAD_MOD”, “NIVEL”, “SEDE_NOMBRE_MAT” y el conteo de la cantidad de estudiantes graduados, el archivo a cargar es llamado “edad.csv”.</p>
 <ol style="list-style-type: decimal">
 <li>Cargue el archivo mencionado anteriormente, corrija los errores de ortografía y asigne las columnas C, B, A, D y B-D a los estantes valores de X, valores de Y, tiempo, filtro e información para ventanas emergentes personalizadas respectivamente, la columna C también debe ser asignada al estante color.</li>
@@ -1615,11 +1615,13 @@ Figura 4.155: Explorar pestaña de adiciones gráficas
 <ol start="8" style="list-style-type: decimal">
 <li>Desde la pestaña diseño active las fronteras o bordes de la visualización en color negro, establezca como título del gráfico Boxplot para edad y como subtítulo Análisis periodo a periodo.</li>
 </ol>
-<p>La visualización obtenida permite identificar la concentración de edades por cada una de las modalidades de formación, también permite identificar valores atípicos o extraños dentro de cada nivel de formación adicional a esto la cantidad de puntos ubicada en cada categoría indica los periodos en los cuales se tiene mayor cantidad de graduados, al incluir un filtro y una ventana de tiempo se le da al usuario más capacidad para interactuar y analizar el grafico.</p>
+<p>La visualización obtenida permite identificar la concentración de edades por cada una de las modalidades de formación, también permite identificar valores atípicos o extraños dentro de cada nivel de formación adicional a esto la cantidad de puntos ubicada en cada categoría indica los periodos en los cuales se tiene mayor cantidad de graduados, al incluir un filtro y una ventana de tiempo se le da al usuario más capacidad para interactuar y analizar el gráfico.</p>
 <div class="flourish-embed flourish-scatter" data-src="visualisation/5661715">
 <script src="https://public.flourish.studio/resources/embed.js"></script>
 </div>
-<p>####Gráfico de puntos</p>
+</div>
+<div id="gráfico-de-puntos" class="section level4">
+<h4><span class="header-section-number">4.3.1.17</span> Gráfico de puntos</h4>
 <p>Este tipo de gráficos es útil para mostrar la distribución de una variable numérica por categorías, estos gráficos consisten en dos ejes, el eje X será quien muestre la información relacionada con la variable numérica y el eje Y contiene las categorías. La base de datos Graduados que se ha usado en la mayoría de las visualizaciones contiene varias columnas categóricas, en este caso se usara la columna de sede de matrícula como categórica y para la variable numérica se usa el conteo de estudiantes graduados.</p>
 <ol style="list-style-type: decimal">
 <li>Seleccione la plantilla gráfica de puntos y cargue el archivo de datos llamado “graficopuntos.csv”. Asigne las columnas SEDE_NOMBRE_MAT y n a los estantes valores de X y valores de Y respectivamente, adicional a esto asigne todas las columnas de la base de datos a información para ventanas emergentes personalizadas.</li>
@@ -1649,8 +1651,8 @@ Figura 4.158: Formato al estilo de puntos
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li><p>Usando la pestaña configuraciones de gráfico active el color de fondo y deje el color pregerminado, el cual es “#F5F5F5”.</p></li>
-<li><p>Para el eje X debe seleccionar título personalizado y en el espacio de texto escribir “Número de gradauados”, active el estilo y seleccione negrita en color negro; para las etiquetas debe activar la opción de estilo, aumentar el tamaño a 1, color negro y ángulo de cero; adicional a este debe activar las líneas de cuadriculas, activar su estilo, cambiar el color por “#BBBBB9” y como estilo seleccione punteada.</p></li>
+<li><p>Usando la pestaña configuraciones de gráfico active el color de fondo y deje el color predeterminado, el cual es “#F5F5F5”.</p></li>
+<li><p>Para el eje X debe seleccionar título personalizado y en el espacio de texto escribir “Número de gradauados”, active el estilo y seleccione negrita en color negro; para las etiquetas debe activar la opción de estilo, aumentar el tamaño a 1, color negro y ángulo de cero; adicional a esto debe activar las líneas de cuadrículas, activar su estilo, cambiar el color por “#BBBBB9” y como estilo seleccione punteada.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso5puntosflourish-fig"></span>
 <img src="Imágenes/flourish152.jpg" alt="Formato al eje X" width="85%" />
@@ -1669,7 +1671,7 @@ Figura 4.160: Contenido personalizado a ventanas emergentes
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>La pestaña Box, violin and beeswarm plots permite añadir estas opciones gráficas los puntos, por ejemplo, al seleccionar la opción automático de la sección beeswarm, se dispersan los puntos en cada una de las sedes.</li>
+<li>La pestaña Box, violin and beeswarm plots permite añadir estas opciones gráficas a los puntos, por ejemplo, al seleccionar la opción automático de la sección beeswarm, se dispersan los puntos en cada una de las sedes.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso8puntosflourish-fig"></span>
 <img src="Imágenes/flourish154.jpg" alt="Beeswarm" width="85%" />
@@ -1690,13 +1692,13 @@ Figura 4.162: Boxplot
 <li>Finalmente es posible añadir el gráfico de violín, en este caso debe cambiar su color por “#808080” para lograr visualizarlos, también es de destacar que no hay información sobre la creación de estas sombras o violines.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso10puntosflourish-fig"></span>
-<img src="Imágenes/flourish156.jpg" alt="Violin" width="85%" />
+<img src="Imágenes/flourish156.jpg" alt="Violín" width="85%" />
 <p class="caption">
-Figura 4.163: Violin
+Figura 4.163: Violín
 </p>
 </div>
 <ol start="11" style="list-style-type: decimal">
-<li>Finalmente, con la ayuda de la pestaña diseño active las fronteras y seleccione para todo el color negro; con la pestaña encabezamiento escriba como título Cantidad de graduados por sede de admisión.</li>
+<li>Finalmente, con la ayuda de la pestaña diseño active las fronteras y seleccione para todo el color negro; con la pestaña encabezamiento escriba como título Cantidad de graduados por sede de matrícula.</li>
 </ol>
 <p>La visualización obtenida permite visualizar la cantidad de estudiantes graduados por sede de matrícula, con un diagrama de violín que permite identificar la distribución de estos puntos.</p>
 <div class="figure" style="text-align: center"><span id="fig:finalpuntosflourish-fig"></span>
@@ -1710,7 +1712,7 @@ Figura 4.164: Distribución de estudiantes graduados por sede de matrícula
 <div id="compartir-visualizaciones" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Compartir visualizaciones</h3>
 <p>Flourish ofrece diferentes posibilidades para compartir las visualizaciones creadas, desde la versión gratuita es posible publicar, opción con la cual se generan dos alternativas, la primera de ellas genera un enlace a la visualización y la segunda para insertar en una página web por medio del código embebido que se genera o descargar las imágenes, esta última opción es la menos adecuada cuando se trata de visualizaciones con líneas de tiempo o animaciones ya que se pierde esta funcionalidad.</p>
-<p>Cada que se crea una visualización y ha sido guardada; en la esquina superior encontrará un botón llamado exportar y publicar que presenta las opciones mencionadas anteriormente, cuando se trata de visualización con filtro, descripciones emergentes o líneas de tiempo la mejor manera de compartirlo con otras personas es por medio del enlace o código HTML, algunos de los gráficos creados en este libro fueron insertados por medio del código HTML para no perder las funcionalidades temporales, para generar este código únicamente debe hacer clic en exportar y publicar, en la ventana emergente debe seleccionar publicar y ya obtendrá tanto el enlace como el código. El paso a paso de esta forma de publicación se encuentra en la sección (hacer referencia de como compartir el trabajo).</p>
+<p>Cada que se crea una visualización y ha sido guardada; en la esquina superior encontrará un botón llamado exportar y publicar que presenta las opciones mencionadas anteriormente, cuando se trata de visualización con filtro, descripciones emergentes o líneas de tiempo la mejor manera de compartirlo con otras personas es por medio del enlace o código HTML, algunos de los gráficos creados en este libro fueron insertados por medio del código HTML para no perder las funcionalidades temporales, para generar este código únicamente debe hacer clic en exportar y publicar, en la ventana emergente debe seleccionar publicar y ya obtendrá tanto el enlace como el código. El paso a paso de esta forma de publicación se encuentra en la sección <a href="4-1-generalidadesflourish.html#compartirtrabajoflourish">4.1.7</a>.</p>
 <p>Flourish no ofrece la posibilidad de generar o crear dashboards que combinen diferentes gráficos, en esta herramienta se debe crear cada objeto visual y compartirlo de manera independiente o usar una historia para combinarlos, estas historias son muy similares a una presentación tipo Power Point donde cada gráfico es insertado en una diapositiva y es posible adicionar títulos o texto relacionados con los datos de interés de la visualización.</p>
 <p>Para crear historias debe hacer clic en el botón crear nueva historia de la pantalla inicial de Flourish en la imagen mostrada en <a href="4-2-formanavegacionflourish.html#fig:pantallainicialflourish-fig">4.5</a>, la ventana para la creación de historias contiene un panel lateral izquierdo en el cual es posible modificar la forma de navegación, activar botones de reproducción, agregar audios y ver todas las diapositivas creadas, la pantalla central contiene la diapositiva en la cual se está trabajando, hay dos opciones de creación, elegir una visualización para insertar o crear una diapositiva básica para incluir texto e imágenes.</p>
 <div class="figure" style="text-align: center"><span id="fig:pantallaincialhistoriaflourish-fig"></span>
@@ -1720,7 +1722,7 @@ Figura 4.165: Página inicial creación de historias
 </p>
 </div>
 <ol style="list-style-type: decimal">
-<li>La primera diapositiva tendrá la evolución histórica de total de estudiantes graduados, haga clic sobre elegir visualización y haga clic sobre el gráfico llamado Evolución graduados.</li>
+<li>La primera diapositiva tendrá la evolución histórica del total de estudiantes graduados, haga clic sobre elegir visualización y haga clic sobre el gráfico llamado Evolución graduados.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso1historiaflourish-fig"></span>
 <img src="Imágenes/flourish166.jpg" alt="Añadir una visualización" width="85%" />
@@ -1757,7 +1759,7 @@ Figura 4.169: Alternativas para las anotaciones
 </div>
 <ol start="5" style="list-style-type: decimal">
 <li><p>De esta manera es posible añadir todas las visualizaciones que se deseen a la historia, en este caso se creara una historia de 15 puntos o diapositivas, entre las cuales se seleccionaron gráficos de líneas, circulares, barras, mapas, carreras de barras y líneas, entre otros.</p></li>
-<li><p>Estas historias ofrecen la posibilidad de auto reproducción con un tiempo para cada una de las diapositivas o visualizaciones, esta opción se activa en el panel lateral izquierdo, desde allí también es posible subir audios, esta alternativa es bastante útil cuando se debe grabar la presentación con narración; por último en la superior derecha de cada diapositiva se ubica el control de tiempo, este se modifica según las necesidades de cada visualización, por ejemplo, visualizaciones animadas o con ventanas de tiempo que tengan una duración total de 60 segundos, el tiempo de la diapositiva que la contenga deberá ser igual o un poco superior, aunque es posible pausar la autoproducción en cualquier momento.</p></li>
+<li><p>Estas historias ofrecen la posibilidad de auto reproducción con un tiempo para cada una de las diapositivas o visualizaciones, esta opción se activa en el panel lateral izquierdo, desde allí también es posible subir audios, esta alternativa es bastante útil cuando se debe grabar la presentación con narración; por último en la superior derecha de cada diapositiva se ubica el control de tiempo, este se modifica según las necesidades de cada visualización, por ejemplo, visualizaciones animadas o con ventanas de tiempo que tengan una duración total de 60 segundos, el tiempo de la diapositiva que la contenga deberá ser igual o un poco superior, aunque es posible pausar la auto reproducción en cualquier momento.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:paso6historiaflourish-fig"></span>
 <img src="Imágenes/flourish170.jpg" alt="Auto reproducción y control de tiempo" width="85%" />

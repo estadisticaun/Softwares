@@ -6,7 +6,7 @@
 
 Flourish es una aplicación web especializada en crear presentaciones y visualizaciones de gran impacto y utilidad a partir de datos, uno de los objetivos principales de esta compañía es explorar y explicar los datos con hermosas visualizaciones e historias, es posible publicar, presentar o descargar el trabajo realizado sin la necesidad de codificar ni instalar un software.
 
-Esta aplicación fue cofundada por Duncan Clark y Robin Houston. El primero de ellos tiene experiencia en narración de historias en periodismo de datos y publicación, mientras que Robin es matemático y desarrollador, esta pareja comenzó a trabajar en visualizaciones como un proyecto paralelo en 2012, sus primeros proyectos generaron tanto interés que decidieron crean in estudio de visualizaciones llamado Kiln. Durante los siguientes años trabajaron con diversos clientes entre los cuales se encuentran Google, la OMS y LSE, y algunos premios.  Durante todo este tiempo, Duncan y Robin trabajaron en una idea: una herramienta que permitiera a los no codificadores crear visualizaciones e historias de alta calidad sin el costo y las demoras de encargar proyectos a medida. Para 2016, tenían una visión clara para tal herramienta y nació Flourish.
+Esta aplicación fue cofundada por Duncan Clark y Robin Houston. El primero de ellos tiene experiencia en narración de historias en periodismo de datos y publicación, mientras que Robin es matemático y desarrollador, esta pareja comenzó a trabajar en visualizaciones como un proyecto paralelo en 2012, sus primeros proyectos generaron tanto interés que decidieron crean un estudio de visualizaciones llamado Kiln. Durante los siguientes años trabajaron con diversos clientes entre los cuales se encuentran Google, la OMS y LSE, y algunos premios.  Durante todo este tiempo, Duncan y Robin trabajaron en una idea: una herramienta que permitiera a los no codificadores crear visualizaciones e historias de alta calidad sin el costo y las demoras de encargar proyectos a medida. Para 2016, tenían una visión clara para tal herramienta y nació Flourish.
 
 ### Principales ventajas de Flourish
 
@@ -49,7 +49,9 @@ Todas las versiones disponen de recursos prácticos como las plantillas de gráf
 - Alianzas
 
 Flourish cuenta con una alianza importante con el Google News Lab con la cual se logra acceso a las condiciones premium para medios de comunicación y estudiantes.
-Facilidad para compartir el trabajo 
+
+- Facilidad para compartir el trabajo 
+
 Permite al usuario publicar y compartir visualizaciones o incrustarlas en un sitio web.
 
 ### Principales desventajas de Flourish
@@ -102,7 +104,7 @@ Para usar esta herramienta de visualización no es necesario la instalación de 
 knitr::include_graphics("Imágenes/flourish4.jpg")
 ```
 
-### ¿Cómo compartir el trabajo?
+### ¿Cómo compartir el trabajo?{#compartirtrabajoflourish}
 
 Como ya se mencionó desde la versión gratuita es posible publicar y compartir o incrustar en un sitio web y descargar los gráficos como imágenes planas, para esto en la esquina superior derecha se ubica un botón llamado Exportar y publicar, al hacer clic sobre el encontrara la opción de publicar para compartir e insertar, descargar imagen o descargar HTML, este último es válido para la versión premium o personal de Flourish.
 
@@ -135,7 +137,7 @@ El icono de interrogación ubicado en la esquina inferior derecha contiene respu
 knitr::include_graphics("Imágenes/flourish6.jpg")
 ```
 
-A modo de exploración de la interfaz de trabajo debe hacer clic sobre el botón nueva visualización, al hacer esto se encontrará con una galería de plantillas que incluye todo tipo de gráficos, entre los cuales se encuentran gráficos de barras, líneas, circulares, mapas y mapas en 3D, dispersión, jerarquía, tarjetas, mapas de calor, carrera de grafico de barras y líneas, gráficos de pendientes, entre muchas otras opciones.
+A modo de exploración de la interfaz de trabajo debe hacer clic sobre el botón nueva visualización, al hacer esto se encontrará con una galería de plantillas que incluye todo tipo de gráficos, entre los cuales se encuentran gráficos de barras, líneas, circulares, mapas y mapas en 3D, dispersión, jerarquía, tarjetas, mapas de calor, carrera de gráfico de barras y líneas, gráficos de pendientes, entre muchas otras opciones.
 
 ```{r galeriadeplantillas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Galería de plantillas', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish7.jpg")
@@ -160,7 +162,7 @@ knitr::include_graphics("Imágenes/flourish10.jpg")
 
 La opción subir archivo de datos permite reemplazar los datos ficticios con un archivo cargado, la función cargar datos y fusionar realiza una combinación entre la hoja actual con un nuevo archivo cargado, cabe resaltar que esta unión es de columnas y no de filas, para ambas alternativas de carga de datos las posibilidades de archivos son Excel, CSV, TSV, JSON y GeoJSON. 
 
-Siguiendo en este mismo panel derecho se ubican estantes que dan forma al gráfico, el primero de ellos es etiquetas/tiempo que se refiere el eje x de la visualización para el ejemplo que usa la plantilla a este estante se encuentra asignada la columna A la cual contiene información de años. El siguiente estante o campo es valores el cual debe ser una o más columnas numéricas ya que darán la altura de cada barra; cuadricula de gráficos permite crear mini gráficos separados para cada uno de los valores de la columna asignada a este estante, la siguiente opción llamada filtro de filas permite crear un control de fila orientado al usuario; por último se encuentra información para ventanas emergentes especializadas aquí se puede añadir diferentes columnas con la información que se quiere mostrar en las descripciones emergentes. Si desea obtener una pequeña explicación sobre cada estante puede hacer clic sobre el signo de interrogación ubicado al lado de cada uno.
+Siguiendo en este mismo panel derecho se ubican estantes que dan forma al gráfico, el primero de ellos es etiquetas/tiempo que se refiere el eje X de la visualización para el ejemplo que usa la plantilla a este estante se encuentra asignada la columna A la cual contiene información de años. El siguiente estante o campo es valores el cual debe ser una o más columnas numéricas ya que darán la altura de cada barra; cuadrícula de gráficos permite crear mini gráficos separados para cada uno de los valores de la columna asignada a este estante, la siguiente opción llamada filtro de filas permite crear un control de fila orientado al usuario; por último se encuentra información para ventanas emergentes especializadas aquí se puede añadir diferentes columnas con la información que se quiere mostrar en las descripciones emergentes. Si desea obtener una pequeña explicación sobre cada estante puede hacer clic sobre el signo de interrogación ubicado al lado de cada uno.
 
 El contenedor número dos es el lienzo de trabajo y simplemente mostrara la visualización que se está creando, el espacio número tres es de alguna manera el más importante ya que incluye las opciones de formato, tales como tipo de gráfico, controles y filtros, colores, etiquetas, ejes, tipo de datos, leyendas, ventanas emergentes, diseño, entre otras, estas pestañas se exploraran cuando se inicie a crear gráficos.
 
@@ -177,7 +179,7 @@ Debe recordar que las visualizaciones creadas se basan en las estadísticas ofic
 
 Lo primero que se debe hacer al seleccionar una plantilla es identificar la estructura del conjunto de datos, es de resaltar que las plantillas que pertenecen a una misma categoría en este caso líneas, barras y circulares tendrán la misma estructura y la creación de cada gráfico va a diferir en la asignación de las columnas a los ejes. En este caso la estructura del gráfico de líneas coincide con la mostrada en la imagen \@ref(fig:pestanadatosflourish-fig), como se mencionó anteriormente se desea visualizar la evolución del número de estudiantes graduados a través de todos los periodos de los que se tiene registro, para realizar esto es necesario crear una base de datos que en su primera columna contenga el periodo y en la segunda el conteo que representara el total de estudiantes, para esto se tendrá la ayuda de R, si desea revisar el código utilizado para la creación de las bases a usar para este software puede consultar el archivo R llamado “DataFlourish.R”. Para la creación del gráfico de líneas debe seguir estos pasos.
 
-1.	Luego de seleccionada la plantilla de grafico de líneas debe hacer clic sobre subir datos, navegar en las carpetas, seleccionar el archivo “evoluciongeneral.csv” y hacer clic en abrir para cargar los datos, luego de esto se presentará un aviso en su pantalla en el que se informa que los datos serán visibles públicamente debido a que se está usando la versión gratuita, debe hacer clic en el botón importar públicamente.
+1.	Luego de seleccionada la plantilla de gráfico de líneas debe hacer clic sobre subir datos, navegar en las carpetas, seleccionar el archivo “evoluciongeneral.csv” y hacer clic en abrir para cargar los datos, luego de esto se presentará un aviso en su pantalla en el que se informa que los datos serán visibles públicamente debido a que se está usando la versión gratuita, debe hacer clic en el botón importar públicamente.
 
 ```{r advertenciadedatospublicosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Advertencia de datos públicos', out.width='40%'}
 knitr::include_graphics("Imágenes/flourish11.jpg")
@@ -199,7 +201,7 @@ knitr::include_graphics("Imágenes/flourish13.jpg")
 
 Observe que se identifican algunos problemas con la descripción emergente, también se tiene una leyenda en la esquina superior izquierda que identifica el color de la línea, algo que no es necesario ya que solo se tiene una línea, con la ayuda del panel lateral derecho se corregirán estos problemas.
 
-4.	La primera pestaña para explorar y dar formato al gráfico será Colors (colores), allí debe desplegar el campo paleta y seleccionar editar paleta de colores, elimine los colores que posee esta paleta dejando solo uno el cual debe reemplazar el color con “#358DC8”.
+4.	La primera pestaña para explorar y dar formato al gráfico será Colors (colores), allí debe desplegar el campo paleta y seleccionar editar paleta de colores, elimine los colores que posee esta paleta dejando solo uno el cual debe reemplazar con “#358DC8”.
 
 ```{r editarpaletadecoloresflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar paleta de colores', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish14.jpg")
@@ -213,7 +215,7 @@ knitr::include_graphics("Imágenes/flourish15.jpg")
 
 Hacia el final de esta pestaña encontrara una sección llamada Puntos, debe asegurarse de que se encuentre en apagado para eliminar los puntos que se presentan en la visualización.
 
-6.	Es momento de editar los ejes, para esto haga clic sobre la pestaña eje x, en el cajón texto debe escribir Periodo y activar el botón para dar estilo, debe seleccionar negrita en color negro y tamaño 1.3.
+6.	Es momento de editar los ejes, para esto haga clic sobre la pestaña eje X, en el cajón texto debe escribir Periodo y activar el botón para dar estilo, debe seleccionar negrita en color negro y tamaño 1.3.
 
 ```{r editarejexflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato y edición del eje X', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish16.jpg")
@@ -225,13 +227,13 @@ knitr::include_graphics("Imágenes/flourish16.jpg")
 knitr::include_graphics("Imágenes/flourish17.jpg")
 ```
 
-8.	Nuevamente sobre la pestaña eje x se encuentra una sección dedicada a las marcas de graduación y líneas del eje, cambie el color de línea por “#BDC3C7”, active las líneas de cuadricula y su botón de estilo, allí debe asignar el mismo color de línea en un estilo punteado.
+8.	Nuevamente sobre la pestaña eje X se encuentra una sección dedicada a las marcas de graduación y líneas del eje, cambie el color de línea por “#BDC3C7”, active las líneas de cuadrícula y su botón de estilo, allí debe asignar el mismo color de línea en un estilo punteado.
 
 ```{r marcasdegraduacionylineasdelejeflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de marcas de gradaución y líneas del eje', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish18.jpg")
 ```
 
-9.	Repita los pasos 6, 7 y 8 para editar el eje y, tenga en cuenta que el título de este debe ser Número de graduados.
+9.	Repita los pasos 6, 7 y 8 para editar el eje Y, tenga en cuenta que el título de este debe ser Número de graduados.
 
 ```{r formatodeambosejesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico con ambos ejes editados', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish19.jpg")
@@ -275,13 +277,13 @@ Después de verificado que los cambios se han guardado haga clic sobre el icono 
 
 #### Gráfico de líneas segmentado por una dimensión {#graficolineassegmentadoflourish}
 
-Esta visualización también pertenece a la sección de plantillas de gráficos de líneas, barras y circulares y se usara la plantilla del gráfico anterior solo que esta vez se incorpora la modalidad de formación, la base de datos a cargar debe contener mínimo tres columnas, la primera de ellas con el periodo y las siguientes dos corresponden a pregrado y postgrado, adicional a esto es de vital importancia mostrar el número de estudiantes graduados como porcentaje del total por periodo, por tal razón se generan otras dos columnas con los respetivos porcentajes para cada modalidad de formación. 
+Esta visualización también pertenece a la sección de plantillas de gráficos de líneas, barras y circulares y se usara la plantilla del gráfico anterior solo que esta vez se incorpora la modalidad de formación, la base de datos a cargar debe contener mínimo tres columnas, la primera de ellas con el periodo y las siguientes dos corresponden a pregrado y postgrado, adicional a esto es de vital importancia mostrar el número de estudiantes graduados como porcentaje del total por periodo, por tal razón se generan otras dos columnas con los respectivos porcentajes para cada modalidad de formación. 
 
 1.	Elija la plantilla gráfico de líneas y cargue el archivo llamado “modalidadformacion.csv”.
 
 2.	La columna A debe ser asignada al estante Labels/time (Etiquetas/ tiempo), las columnas B y C al estante Values (Valores), finalmente todas la columnas es decir de la A a la E deben ubicarse en información para ventanas emergentes personalizadas.
 
-```{r asignaciondecamposflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar columnas a los estantes correspondienetes', out.width='85%'}
+```{r asignaciondecamposflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignar columnas a los estantes correspondientes', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish25.jpg")
 ```
 
@@ -320,13 +322,14 @@ También debe activar la opción de estilo personalizado para cambiar el color d
 knitr::include_graphics("Imágenes/flourish49.jpg")
 ```
 
-8.	Debe repetir los pasos 14, 15 y 16 del grafico de líneas, para el paso 15 el título de la visualización debe ser Evolución del número de estudiantes graduados por modalidad de formación y para el paso 16 será Modalidad de formación.
+8.	Debe repetir los pasos 14, 15 y 16 del gráfico de líneas, para el paso 15 el título de la visualización debe ser Evolución del número de estudiantes graduados por modalidad de formación y para el paso 16 será Modalidad de formación.
 
 ```{r paso8lineassegmentadaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Evolución del número de estudiantes graduados por modalidad de formación', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish30.jpg")
 ```
 
 #### Tabla de texto {#tablatextoflourish}
+
 El tablero mostrado en la página web de las estadísticas oficiales de la Universidad Nacional para la modalidad de formación se compone de tres elementos principales, un gráfico de líneas que se realizó anteriormente, una tabla de texto y por último un gráfico circular; es momento de realizar la tabla de texto la cual debe contener cuatro columnas, la primera será el año, seguida del semestre y las modalidades de formación ofrecidas por la universidad, la tabla guía o de referencia posee un botón que permite mostrar el total de los estudiantes graduados, esto no es posible de construir en Flourish por tanto el conjunto de datos a cargar contendrá cinco columnas las cuales son Año, Semestre, Pregrado, Postgrado y Total.
 
 1.	Haga clic en nueva visualización, navegue en la página de plantillas y en la sección Table elija 
@@ -376,9 +379,9 @@ knitr::include_graphics("Imágenes/flourish36.jpg")
 
 #### Gráfico circular {#graficocircularflourish}
 
-Este gráfico circular debe mostrar la distribución de estudiantes graduados por modalidad de formación para el último periodo del cual se tiene registro, para realizar esta visualización se tienen dos opciones la primera de ellas es incorporar la variable YEAR_SEMESTER como filtro de filas, esto permitiría al usuario seleccionar cualquier periodo; la segunda opción es no incluir esta variable y por tanto no generar el filtro, se realizaran ambas opciones para explorar cómo funcionan los filtros en este software.
+Este gráfico circular debe mostrar la distribución de estudiantes graduados por modalidad de formación para el último periodo del cual se tiene registro, para realizar esta visualización se tienen dos opciones la primera de ellas es incorporar la variable YEAR_SEMESTER como filtro de filas, esto permitiría al usuario seleccionar cualquier periodo; la segunda opción es no incluir esta variable y por tanto no generar el filtro, se realizaran ambas opciones para explorar cómo funcionan los filtros en esta herramienta.
 
-1.	Desde la galería de plantillas debe seleccionar gráfico circular, cargar la fuente de datos llamada “modalidadformacioncricular.csv”, para el estante Labels/Time debe asignar la columna B ya que esta contiene la modalidad de formación, la columna E debe ir en el estante Values debido a que se quiere mostrar los porcentajes, la columna A será usada como filtro de fila, finalmente al estante de información para ventanas emergentes personalizadas se deben asignar las columnas B y C.
+1.	Desde la galería de plantillas debe seleccionar gráfico circular, cargar la fuente de datos llamada “modalidadformacioncircular.csv”, para el estante Labels/Time debe asignar la columna B ya que esta contiene la modalidad de formación, la columna E debe ir en el estante Values debido a que se quiere mostrar los porcentajes, la columna A será usada como filtro de fila, finalmente al estante de información para ventanas emergentes personalizadas se deben asignar las columnas B y C.
 
 ```{r paso1graficocircularflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Carga de datos y asignación de columnas', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish37.jpg")
@@ -406,14 +409,14 @@ knitr::include_graphics("Imágenes/flourish40.jpg")
 
 6.	Sobre la pestaña diseño active la opción fronteras y asigne color negro a todas.
 
-7.	Con ayuda de la sección encabezamiento seleccione alineación central y escriba como título Distribución de graduados por modalidad de formación, periodo, este titulo debe estar en negrita y su tamaño debe ser la A mayúscula más grande.
+7.	Con ayuda de la sección encabezamiento seleccione alineación central y escriba como título Distribución de graduados por modalidad de formación, periodo, este título debe estar en negrita y su tamaño debe ser la A mayúscula más grande.
 
 La visualización obtenida muestra la distribución de estudiantes graduados por modalidad de formación según el periodo que el usuario seleccione en el filtro, por ejemplo, en el periodo 2018-1 el $58.9\%$ de los estudiantes graduados pertenecían a pregrado.
 
-```{r graficocircularconfiltroflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Distibución de estudiantes graduados por modalidad de formación', out.width='85%'}
+```{r graficocircularconfiltroflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Distribución de estudiantes graduados por modalidad de formación', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish41.jpg")
 ```
-Para la segunda opción de este tipo de gráfico el cual no contendrá filtro debe ir a la pagina principal donde se ubican todos sus proyectos y duplicar la visualización creada anteriormente, sobre la pestaña datos debe cargar el archivo “modalidadformacioncircularfiltrada.csv” y reasignar las columnas a los campos disponibles, B debe ir el Labels, D se agina a Values y nuevamente las columnas B y C se usarán para las ventanas emergentes personalizadas.
+Para la segunda opción de este tipo de gráfico el cual no contendrá filtro debe ir a la pagina principal donde se ubican todos sus proyectos y duplicar la visualización creada anteriormente, sobre la pestaña datos debe cargar el archivo “modalidadformacioncircularfiltrada.csv” y reasignar las columnas a los campos disponibles, B debe ir en Labels, D se agina a Values y nuevamente las columnas B y C se usarán para las ventanas emergentes personalizadas.
 
 ```{r graficocircularflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de campos a estantes', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish42.jpg")
@@ -439,7 +442,7 @@ El gráfico de barras a realizar debe mostrar la cantidad de graduados por nivel
 knitr::include_graphics("Imágenes/flourish44.jpg")
 ```
 
-4.	En la pestaña colores debe seleccionar por fila el modo de color y editar la paleta de colores, pregrado debe estar en color “#8CC63F”, Maestría en color “#C1272D”, especialización “#29ABE2”, especialidades médicas en color “#6D6666” y por último doctorado “#FBB03B”.
+4.	En la pestaña colores debe seleccionar por fila el modo de color y editar la paleta de colores, pregrado debe estar en color “#8CC63F”, maestría en color “#C1272D”, especialización “#29ABE2”, especialidades médicas en color “#6D6666” y por último doctorado “#FBB03B”.
 
 ```{r paso4graficobarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambio de paleta de colores', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish45.jpg")
@@ -447,7 +450,7 @@ knitr::include_graphics("Imágenes/flourish45.jpg")
 
 5.	Sobre la pestaña barras debe aumentar la opacidad de la barra a 1, el estilo de la etiqueta debe ser eje, también debe activar la opción de mostrar etiquetas de puntos de datos; esta configuración debe realizarse en la pestaña etiquetas.
 
-6.	Es momento de editar los ejes para esto haga clic sobre eje X y asigne como título Número de graduados en color negro, negrita y tamaño 1.3, las etiquetas también deben estar en color negro y tamaño 1; también debe activar las líneas de cuadricula.
+6.	Es momento de editar los ejes para esto haga clic sobre eje X y asigne como título Número de graduados en color negro, negrita y tamaño 1.3, las etiquetas también deben estar en color negro y tamaño 1; también debe activar las líneas de cuadrícula.
 
 ```{r paso6graficobarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato del eje X', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish46.jpg")
@@ -467,7 +470,7 @@ knitr::include_graphics("Imágenes/flourish48.jpg")
 
 9.	Active las fronteras de la visualización como ya se mostró en gráficos anteriores y como título del gráfico debe escribir Distribución de graduados por nivel de formación, periodo 2020-1. 
 
-El gráfico de barras obtenido muestra la distribución del número de estudiantes graduados por nivel de formación para el periodo 
+El gráfico de barras obtenido muestra la distribución del número de estudiantes graduados por nivel de formación para el periodo.
 
 ```{r graficobarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Distribución de graduados por nivel de formación, periodo 2020-1', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish50.jpg")
@@ -475,7 +478,7 @@ knitr::include_graphics("Imágenes/flourish50.jpg")
 
 #### Mapa de proyección {#mapadeproyecciónflourish}
 
-Esta plantilla permite crear mapas de datos con sombreado de región y/o puntos, dentro de las plantillas disponibles se encuentran algunos continentes divididos por países o regiones y algunos países fraccionado por estados o provincias, también existe una plantilla en blanco para añadir el archivo propio de datos para crear un continente o país que no se encuentre en las plantillas existentes. 
+Esta plantilla permite crear mapas de datos con sombreado de región y/o puntos, dentro de las plantillas disponibles se encuentran algunos continentes divididos por países o regiones y algunos países fraccionados por estados o provincias, también existe una plantilla en blanco para añadir el archivo propio de datos para crear un continente o país que no se encuentre en las plantillas existentes. 
 
 Con el fin de ilustrar las capas que componen este tipo de mapas debe seleccionar la plantilla del mundo ubicada en la parte inferior de la sección mapa de proyección de la galería de plantillas de Flourish.
 
@@ -531,7 +534,7 @@ Nuevamente sobre el archivo “DataFlourish.R” se extraen los municipios con s
 knitr::include_graphics("Imágenes/flourish58.jpg")
 ```
 
-Ahora debe regresar a la pestaña avance para comenzar a dar formato y personalizar el mapa creado, en este momento su visualización asigno un color a cada municipio dependiendo del conteo de este y posee puntos en color gris oscuro que representan cada capital.
+Ahora debe regresar a la pestaña avance para comenzar a dar formato y personalizar el mapa creado, en este momento su visualización asigno un color a cada departamento dependiendo del conteo de este y posee puntos en color gris oscuro que representan cada capital.
 
 ```{r vistapreviamapadeptosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa del mapa creado', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish59.jpg")
@@ -561,7 +564,7 @@ knitr::include_graphics("Imágenes/flourish62.jpg")
 knitr::include_graphics("Imágenes/flourish63.jpg")
 ```
 
-5.	Otra pestaña para editar y personalizar el gráfico es caja de búsqueda, con esta se da formato a la opción de búsqueda; el texto del marcado será “Buscar…” y debe activar las opciones de mostrar sugerencias desplegables y expandir el cuadro de búsqueda.
+5.	Otra pestaña para editar y personalizar el gráfico es caja de búsqueda, con esta se da formato a la opción de búsqueda; el texto del marcador será “Buscar…” y debe activar las opciones de mostrar sugerencias desplegables y expandir el cuadro de búsqueda.
 
 ```{r paso5mapadeptosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a la caja de búsqueda', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish64.jpg")
@@ -571,13 +574,13 @@ knitr::include_graphics("Imágenes/flourish64.jpg")
 
 7.	Con ayuda de la pestaña encabezamiento debe escribir “Graduados 2020-1” como título con el tamaño más pequeño posible; por último, el nombre de la visualización será Total por departamentos.
 
-La visualización obtenida permite identificar la cantidad de estudiantes graduados en el periodo 2020-1 según su lugar de nacimiento, a pesar de que el grafico logra ser estético y agradable quedan faltando algunos detalles como etiquetas con el nombre del departamento y su capital.
+La visualización obtenida permite identificar la cantidad de estudiantes graduados en el periodo 2020-1 según su lugar de nacimiento, a pesar de que el gráfico logra ser estético y agradable quedan faltando algunos detalles como etiquetas con el nombre del departamento y su capital.
 
 ```{r mapadeptosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Total estudiantes graduados por departamento en el periodo 2020-1', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish65.jpg")
 ```
 
-El siguiente mapa a realizar contiene el total de estudiantes graduados por municipio, el archivo llamado “municipiosfinal.json” ya se encuentra listo para ser cargado a Flourish, luego de cargar el archivo debe asignar las columnas A, I, Q a los estantes geometría, nombre y valores respectivamente, las ultimas dos columnas mencionadas también deben ser añadidas al estante de datos para ventanas emergentes personalizadas, al igual que la columna G.
+El siguiente mapa a realizar contiene el total de estudiantes graduados por municipio, el archivo llamado “municipiosfinal.json” ya se encuentra listo para ser cargado a Flourish, luego de cargar el archivo debe asignar las columnas A, I, Q a los estantes geometría, nombre y valores respectivamente, las últimas dos columnas mencionadas también deben ser añadidas al estante de datos para ventanas emergentes personalizadas, al igual que la columna G.
 
 ```{r regionesmapampiosfloruish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Carga de datos para la capa de regiones y asignación de columnas', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish66.jpg")
@@ -603,7 +606,7 @@ knitr::include_graphics("Imágenes/flourish68.jpg")
 knitr::include_graphics("Imágenes/flourish69.jpg")
 ```
 
-2.	La siguiente pestaña para editar es popups y panles, en la cual debe seleccionar contenido emergente personalizado, el encabezado será el nombre del municipio y departamento y el contenido será la cantidad de graduados y para la ventana emergente relacionada a los puntos no debe editar nada.
+2.	La siguiente pestaña para editar es popups y paneles, en la cual debe seleccionar contenido emergente personalizado, el encabezado será el nombre del municipio y departamento y el contenido será la cantidad de graduados y para la ventana emergente relacionada a los puntos no debe editar nada.
 
 ```{r paso2mapampiosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ventanas emergentes personalizadas', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish70.jpg")
@@ -623,9 +626,9 @@ Esta sección de plantillas permite crear mapas similares los mapas de proyecci�
 
 1.	Seleccione la plantilla Regiones y puntos ubicada en la sección de mapas 3D, lo primero a realizar será analizar la estructura de los datos usados en cada capa. La primera capa llamada regiones corresponde a un archivo GeoJson con la geometría y propiedades de cada país, la siguiente capa llamada puntos puede ser un archivo Excel o CSV y como mínimo debe contener las columnas latitud, longitud, fecha y nombre del lugar, la ultima capa llamada regiones de mapa insertadas no es usada en esta visualización por lo que se encuentra vacía.
 
-Dentro de la base de datos con la cual se esta trabajando hay columnas que identifican el lugar de nacimiento de los estudiantes graduados, por lo tanto, estas son las columnas para usar en la creación del mapa 3D, la idea es mostrar la evolución de graduados por municipio de manera anual, es decir, aparecerán puntos por municipio si en ese año hubieron graduados dicho municipio. Al usar dos capas para la creación del mapa es necesario disponer de dos bases de datos, la primera pertenece a la capa de regiones y es posible usar el archivo “municipiosfinal.json” y para la capa de puntos se construirá un archivo CSV con la ayuda de R que contenga el año, latitud, longitud, nombre del municipio y conteo de estudiantes graduados, dicho archivo es exportado y lo puede encontrar como “municipios3d.csv”.
+Dentro de la base de datos con la cual se esta trabajando hay columnas que identifican el lugar de nacimiento de los estudiantes graduados, por lo tanto, estas son las columnas para usar en la creación del mapa 3D, la idea es mostrar la evolución de graduados por municipio de manera anual, es decir, aparecerán puntos por municipio si en ese año hubieron graduados de dicho municipio. Al usar dos capas para la creación del mapa es necesario disponer de dos bases de datos, la primera pertenece a la capa de regiones y es posible usar el archivo “municipiosfinal.json” y para la capa de puntos se construirá un archivo CSV con la ayuda de R que contenga el año, latitud, longitud, nombre del municipio y conteo de estudiantes graduados, dicho archivo es exportado y lo puede encontrar como “municipios3d.csv”.
 
-2.	Cargue los archivos mencionados con anterioridad a las capas correspondientes, la columna A del archivo en formato Json deben ser asignada a la geometría, la siguiente capa será puntos en la cual será hará uso de varios estantes disponibles tales como la latitud y longitud a las que debe asignar las columnas C y B, el estante escala determina el tamaño de los puntos, por lo cual se le debe asignar la columna F, sobre fecha de inicio debe ubicar la columna A, el nombre lo contiene la columna E y por ultimo debe asignar las columnas de la D a la F a ventanas emergentes personalizadas.
+2.	Cargue los archivos mencionados con anterioridad a las capas correspondientes, la columna A del archivo en formato Json deben ser asignada a la geometría, la siguiente capa será puntos en la cual será hará uso de varios estantes disponibles tales como la latitud y longitud a las que debe asignar las columnas C y B, el estante escala determina el tamaño de los puntos, por lo cual se le debe asignar la columna F, sobre fecha de inicio debe ubicar la columna A, el nombre lo contiene la columna E y por último debe asignar las columnas de la D a la F a ventanas emergentes personalizadas.
 
 ```{r paso2mapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Capa de puntos y asignación de columnas', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish72.jpg")
@@ -637,7 +640,7 @@ knitr::include_graphics("Imágenes/flourish72.jpg")
 knitr::include_graphics("Imágenes/flourish73.jpg")
 ```
 
-4.	La siguiente pestaña será Viewport e interacción, con la cual se controla el diseño y visualización inicial del mapa; sobre la ventana de visualización inicial debe establecer el tono y el soporte en 0, para los limites de la ventana gráfica y debe aumentar el zoom máximo a 22, también desactive la opción de repetir el mapa horizontalmente; por último, sobre la sección controles active el control de pantalla completa.
+4.	La siguiente pestaña será Viewport e interacción, con la cual se controla el diseño y visualización inicial del mapa; sobre la ventana de visualización inicial debe establecer el tono y el soporte en 0, para los límites de la ventana gráfica y debe aumentar el zoom máximo a 22, también desactive la opción de repetir el mapa horizontalmente; por último, sobre la sección controles active el control de pantalla completa.
 
 ```{r paso4mapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Personalización de visualización incial', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish74.jpg")
@@ -661,13 +664,13 @@ knitr::include_graphics("Imágenes/flourish76.jpg")
 knitr::include_graphics("Imágenes/flourish77.jpg")
 ```
 
-8.	La siguiente pestaña es cronología, con la cual se puede dar formato a la línea de tiempo de la visualización; inicialmente debe desactivar la opción de cronología en bucle esto para que no se repita cada que termina, establezca las márgenes izquierdas, fondo y derecha en 0, en la sección grafico asigne como color de fondo “#ECF0F1”, la altura debe ser 4 y por último debe activar la opción de líneas curvas.
+8.	La siguiente pestaña es cronología, con la cual se puede dar formato a la línea de tiempo de la visualización; inicialmente debe desactivar la opción de cronología en bucle esto para que no se repita cada que termina, establezca las márgenes izquierdas, fondo y derecha en 0, en la sección gráfico asigne como color de fondo “#ECF0F1”, la altura debe ser 4 y por último debe activar la opción de líneas curvas.
 
-```{r paso8mapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Edicón de la línea de tiempo', out.width='85%'}
+```{r paso8mapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Edición de la línea de tiempo', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish78.jpg")
 ```
 
-9.	Sobre la misma pestaña de cronología encontrara una sección llamada botón de reproducción con la cual se controla el diseño del botón, en este caso únicamente debe modificar el tamaño del botón y del icono, el tamaño del botón será 1,5 y para el icono de 1; la sección tiempo y animación controla el tiempo total de duración de la línea de tiempo en segundos, los saltos entre años y la duración de desaparición o aparición de un nuevo punto, estos tiempos se deben establecer en 60, 10 y 2 respectivamente. Para la sección d agregación debe seleccionar Total y en el intervalo de tasa de agregación debe seleccionar personalizado y luego año. 
+9.	Sobre la misma pestaña de cronología encontrara una sección llamada botón de reproducción con la cual se controla el diseño del botón, en este caso únicamente debe modificar el tamaño del botón y del icono, el tamaño del botón será 1.5 y para el icono de 1; la sección tiempo y animación controla el tiempo total de duración de la línea de tiempo en segundos, los saltos entre años y la duración de desaparición o aparición de un nuevo punto, estos tiempos se deben establecer en 60, 10 y 2 respectivamente. Para la sección de agregación debe seleccionar Total y en el intervalo de tasa de agregación debe seleccionar personalizado y luego año. 
 
 ```{r paso9mapa3dflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a la cronología', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish79.jpg")
@@ -703,7 +706,7 @@ knitr::include_graphics("Imágenes/flourish83.jpg")
 
 El conjunto de datos ubicado en la sección valores debe contener como mínimo tres columnas, las cuales corresponden al origen, destino y valor del flujo; el conjunto de muestra posee dos columnas adicionales que representa una categoría y años, las cuales son usadas en los estantes filtros con el fin de que el usuario pueda elegir que categoría desea visualizar y una línea de tiempo para agregar interactividad y seguimiento de los flujos. Debe notar que los lugares de origen y destino no contienen el nombre del país si no un código de tres letras el cual debe corresponder a los códigos establecidos en la hoja de locaciones.
 
-La capa de locaciones es algo simple ya que debe contener los códigos mencionados anteriormente, el nombre del país, la ubicación en latitud y longitud. Es muy importante establecer códigos únicos y que si se repiten las cifras de los flujos y su respectiva clasificación no sería correcta.
+La capa de locaciones es algo simple ya que debe contener los códigos mencionados anteriormente, el nombre del país, la ubicación en latitud y longitud. Es muy importante establecer códigos únicos ya que si se repiten las cifras de los flujos y su respectiva clasificación no sería correcta.
 
 ```{r capalocacionesgloboconexionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Capa de locaciones', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish84.jpg")
@@ -725,7 +728,7 @@ knitr::include_graphics("Imágenes/flourish85.jpg")
 knitr::include_graphics("Imágenes/flourish86.jpg")
 ```
 
-Regresando a la pestaña de avance debe observar una vista previa de la visualización, muy similar a la mostrada a continuación, observe que hay detalles por corregir como el título, subtítulo y números en la clasificación los orígenes y destinos.
+Regresando a la pestaña de avance debe observar una vista previa de la visualización, muy similar a la mostrada a continuación, observe que hay detalles por corregir como el título, subtítulo y números en la clasificación de orígenes y destinos.
 
 ```{r vistapreviagloboconexionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa del globo de conexiones', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish87.jpg")
@@ -739,7 +742,7 @@ knitr::include_graphics("Imágenes/flourish88.jpg")
 
 5.	Las pestañas siguientes hasta rotación no será editadas ya que las configuraciones establecidas por defecto en la plantilla funcionan de manera adecuada para los fines de la visualización.
 
-6.	La sección o pestaña formato de numero permite editar el estilo de los números, desde el separador, cifras decimales hasta los prefijos o sufijos a usar. En este caso debe eliminar el prefijo ya que la cifra mostrada corresponde a un conteo de estudiantes graduados y no a un valor relacionado con dinero, también debe disminuir la cantidad de lugares decimales a cero, ya que las cifras son números enteros.
+6.	La sección o pestaña formato de número permite editar el estilo de los números, desde el separador, cifras decimales hasta los prefijos o sufijos a usar. En este caso debe eliminar el prefijo ya que la cifra mostrada corresponde a un conteo de estudiantes graduados y no a un valor relacionado con dinero, también debe disminuir la cantidad de lugares decimales a cero, ya que las cifras son números enteros.
 
 ```{r paso6globoconexionesflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de número', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish89.jpg")
@@ -791,7 +794,7 @@ knitr::include_graphics("Imágenes/flourish95.jpg")
 
 5.	Sobre la pestaña colores debe editar la paleta de colores, los colores a usar son “#8CC63F”, “#F15A24”, “#0071BC”, “#93278F”, “#5BC0DE”, “#C1272D” para las sedes Bogotá, Medellín, Manizales, Palmira, Amazonia y Caribe respectivamente.
 
-```{r paso5jerarquiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambio de paleta de coloresq', out.width='85%'}
+```{r paso5jerarquiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambio de paleta de colores', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish96.jpg")
 ```
 
@@ -810,11 +813,11 @@ knitr::include_graphics("Imágenes/flourish97.jpg")
 
 8.	Observe que el separador de miles es una “,”, por lo que debe ser cambiado por “.”, para esto haga clic sobre la pestaña formato de número y seleccione “,” como separador decimal, en formato de numero debe seleccionar “12.345,67” ya que este usa el “.” como separador de miles, por último, los lugares decimales deben establecerse en cero.
 
-```{r paso8jerarquiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de barras', out.width='85%'}
+```{r paso8jerarquiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato de número', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish98.jpg")
 ```
 
-9.	Como últimos detalles active las fronteras y seleccione color negro para todas, esto lo realiza sobre la pestaña diseño; con la pestaña encabezamiento escriba como título para la visualización “Distribución de programas por nivel de formación.
+9.	Como últimos detalles active las fronteras y seleccione color negro para todas, esto lo realiza sobre la pestaña diseño; con la pestaña encabezamiento escriba como título para la visualización Distribución de programas por nivel de formación.
 
 La visualización obtenida permite identificar la distribución por sedes, facultades y programas de los estudiantes graduados para los periodos 2009-1 hasta 2020-1, identifica cuales son los programas y nivel de formación más apetecidos para cada una de las sedes.
 
@@ -880,7 +883,7 @@ knitr::include_graphics("Imágenes/flourish108.jpg")
 
 #### Carrera de gráfico de barras {#carrerabarrasflourish}
 
-Esta visualización está basada en un gráfico de barras al cual se le añade una línea de tiempo con el fin de visualizar los cambios de las categorías que representan cada barra, son de gran utilidad para mostrar como crecen las poblaciones, los votos por un determinado partido político, entre otros. Dentro del sistema de educación superior colombiano los programas de formación son clasificados en áreas del conocimiento, la idea es realizar un grafico de barras con las áreas del conocimiento SNIES y añadir como ventana de tiempo los periodos de 2009-1 a 2020-1 con el fin de explorar e identificar cuáles son las áreas con la mayor cantidad de estudiantes graduados en todos los niveles de formación ofrecidos por la Universidad Nacional.
+Esta visualización está basada en un gráfico de barras al cual se le añade una línea de tiempo con el fin de visualizar los cambios de las categorías que representan cada barra, son de gran utilidad para mostrar como crecen las poblaciones, los votos por un determinado partido político, entre otros. Dentro del sistema de educación superior colombiano los programas de formación son clasificados en áreas del conocimiento, la idea es realizar un gráfico de barras con las áreas del conocimiento SNIES y añadir como ventana de tiempo los periodos de 2009-1 a 2020-1 con el fin de explorar e identificar cuáles son las áreas con la mayor cantidad de estudiantes graduados en todos los niveles de formación ofrecidos por la Universidad Nacional.
 
 El paso inicial para esta visualización como en todas es analizar la estructura del conjunto de datos de ejemplo, para esto seleccione la plantilla de carrera de barras y haga clic en la pestaña datos, debe observar que se tienen estantes disponibles para etiquetas, valores, categorías e imágenes; observe además que cada año corresponde a una columna razón por la cual la base de datos a subir para crear la visualización deseada tendrá una columna para el área del conocimiento, una más para el nivel de formación y las demás columnas corresponden a cada periodo, faltaría la columna de imágenes pero esta será añadida directamente en Flourish, ya que la manera en la cual se generan las bases de datos para cada visualización no permite añadir una columna con imágenes.
 
@@ -900,7 +903,7 @@ knitr::include_graphics("Imágenes/flourish110.jpg")
 knitr::include_graphics("Imágenes/flourish111.jpg")
 ```
 
-3.	Luego de añadir una imagen notara que en la fila correspondiente y columna imágenes se genera un enlace que corresponde a la imagen, puede copiar y pegarlo hasta completar todas las filas que corresponden a esa área. Debe el paso 2 y lo mencionado anteriormente hasta completar todas las filas de la columna imágenes.
+3.	Luego de añadir una imagen notara que en la fila correspondiente y columna imágenes se genera un enlace que corresponde a la imagen, puede copiar y pegarlo hasta completar todas las filas que corresponden a esa área. Debe repetir el paso 2 y lo mencionado anteriormente hasta completar todas las filas de la columna imágenes.
 
 ```{r paso3carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Conjunto de datos completo', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish112.jpg")
@@ -912,19 +915,19 @@ knitr::include_graphics("Imágenes/flourish112.jpg")
 knitr::include_graphics("Imágenes/flourish113.jpg")
 ```
 
-5.	Regresando a la pestaña avance se encuentran algunos problemas de formato, tales como el titulo y colores de la leyenda y el nombre de las áreas se corta, están incompletos.
+5.	Regresando a la pestaña avance se encuentran algunos problemas de formato, tales como el título y colores de la leyenda y el nombre de las áreas se corta, están incompletos.
 
 ```{r paso5carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa del gráfico', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish114.jpg")
 ```
 
-6.	Para iniciar a modificar y personalizar el grafico, debe hacer clic sobre la pestaña colores de barra y editar la paleta de colores, “#6D6666”, “#FBB03B”, “#5BC0DE”, “#C1272D”, y “#8CC63F” deben ser asignados a los niveles doctorado, especialidades médicas, especialización, maestría y pregrado respectivamente.
+6.	Para iniciar a modificar y personalizar el gráfico, debe hacer clic sobre la pestaña colores de barra y editar la paleta de colores, “#6D6666”, “#FBB03B”, “#5BC0DE”, “#C1272D”, y “#8CC63F” deben ser asignados a los niveles doctorado, especialidades médicas, especialización, maestría y pregrado respectivamente.
 
 ```{r paso6carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Modificación de paleta de colores', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish115.jpg")
 ```
 
-7.	Dentro de la pestaña etiquetas es posible editar el tamaño del texto y modo de las etiqueta, se ofrecen dos modos de etiquetas, el primero corresponde a etiquetas en barra e imagen en el eje y la segunda opción corresponde a etiquetas en el eje e imágenes en las barras, en este caso debe seleccionar la primera opción ya que las etiquetas son bastante largas y no se ven completamente en el eje, por último, aumente el tamaño del texto a 1,2.
+7.	Dentro de la pestaña etiquetas es posible editar el tamaño del texto y modo de las etiqueta, se ofrecen dos modos de etiquetas, el primero corresponde a etiquetas en barra e imagen en el eje Y la segunda opción corresponde a etiquetas en el eje e imágenes en las barras, en este caso debe seleccionar la primera opción ya que las etiquetas son bastante largas y no se ven completamente en el eje, por último, aumente el tamaño del texto a 1.2.
 
 ```{r paso7carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a etiquetas', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish116.jpg")
@@ -936,7 +939,7 @@ knitr::include_graphics("Imágenes/flourish116.jpg")
 knitr::include_graphics("Imágenes/flourish117.jpg")
 ```
 
-9.	La pestaña línea de tiempo y animación permite configurar el estilo de la línea de tiempo, el botón de reproducción, márgenes y tiempos de la animación, también hay una sección llamada gráfico, esta sección permite mostrar u ocultar un gráfico de líneas sobre el eje de tiempo, dicho grafico de líneas trazará los totales por periodo de cada uno de los niveles de formación; en esta ocasión no será habilitado ya que se satura la visualización. En este caso debe aumentar el tamaño del botón a 1.4 y el tamaño del icono debe aumentarse hasta 1.35, sobre la sección tiempo y animación debe establecer la duración de la línea de tiempo en 60, este tiempo corresponde a la duración total de la animación; la duración antes del bucle debe estar en 2, esto significa que el grafico esperara 2 segundos antes de iniciar de nuevo; por último debe aumentar la duración de la animación de rango de la barra a 1, este valor corresponde al duración del cambio de posición de las barras.
+9.	La pestaña línea de tiempo y animación permite configurar el estilo de la línea de tiempo, el botón de reproducción, márgenes y tiempos de la animación, también hay una sección llamada gráfico, esta sección permite mostrar u ocultar un gráfico de líneas sobre el eje de tiempo, dicho gráfico de líneas trazará los totales por periodo de cada uno de los niveles de formación; en esta ocasión no será habilitado ya que se satura la visualización. En este caso debe aumentar el tamaño del botón a 1.4 y el tamaño del icono debe aumentarse hasta 1.35, sobre la sección tiempo y animación debe establecer la duración de la línea de tiempo en 60, este tiempo corresponde a la duración total de la animación; la duración antes del bucle debe estar en 2, esto significa que el gráfico esperara 2 segundos antes de iniciar de nuevo; por último debe aumentar la duración de la animación de rango de la barra a 1, este valor corresponde a la duración del cambio de posición de las barras.
 
 ```{r paso9carrerabarrasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Configuración de línea de tiempo y animación', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish118.jpg")
@@ -950,7 +953,7 @@ La visualización obtenida es de gran utilidad para identificar cuáles son la �
 
 #### Carrera de gráfico de líneas {#carreradelineasflourish}
 
-Este tipo de gráficos son de gran utilidad cuando se quiere mostrar la evolución histórica de varias categorías, por ejemplos, mostrar la evolución en la cantidad de estudiantes graduados por departamento en cada periodo, Flourish ofrece tres plantillas para la creación de este gráfico, la primera de ellas llamada sencilla la cual muestra la evolución de las líneas por rangos o valores a los largo del tiempo; la segunda plantilla permite añadir un filtro para darle control al usuario sobre las líneas que desea visualizar, finalmente esta la plantilla Zoomed con la cual el eje X de la visualización es dinámico, esta plantilla es de gran utilidad cuando el periodo de tiempo es muy  largo; todas las plantillas admiten imágenes que se ubican en un circulo al final de cada línea.
+Este tipo de gráficos son de gran utilidad cuando se quiere mostrar la evolución histórica de varias categorías, por ejemplo, mostrar la evolución en la cantidad de estudiantes graduados por departamento en cada periodo, Flourish ofrece tres plantillas para la creación de este gráfico, la primera de ellas llamada sencilla la cual muestra la evolución de las líneas por rangos o valores a lo largo del tiempo; la segunda plantilla permite añadir un filtro para darle control al usuario sobre las líneas que desea visualizar, finalmente esta la plantilla Zoomed con la cual el eje X de la visualización es dinámico, esta plantilla es de gran utilidad cuando el periodo de tiempo es muy  largo; todas las plantillas admiten imágenes que se ubican en un circulo al final de cada línea.
 
 La base de datos con la cual se ha trabajado contiene información sobre el departamento de nacimiento de cada uno de los estudiantes graduados, por lo que es de interés visualizar como ha evolucionado la cantidad de estudiantes graduados por cada uno de estos departamentos, una de las desventajas de la plantilla de Flourish es que no permite elegir la cantidad de líneas a visualizar, es decir, no se puede indicar si se quieren ver las primeras 10 o más, razón por la cual se decide agrupar los departamentos por región geográfica y así evitar la saturación en el gráfico de líneas.
 
@@ -988,7 +991,7 @@ knitr::include_graphics("Imágenes/flourish161.jpg")
 knitr::include_graphics("Imágenes/flourish162.jpg")
 ```
 
-7.	La pestaña estilos de etiqueta permite controlar el color y tamaño de las etiquetas, en este caso debe aumentar el tanto el tamaño de fuente de clasificación como el de la etiqueta a 1 y el color de la etiqueta debe ser reparado (fixed).
+7.	La pestaña estilos de etiqueta permite controlar el color y tamaño de las etiquetas, en este caso debe aumentar tanto el tamaño de fuente de clasificación como el de la etiqueta a 1 y el color de la etiqueta debe ser reparado (fixed).
 
 ```{r paso7carlineasflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Estilo de etiquetas', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish163.jpg")
@@ -1011,23 +1014,23 @@ El gráfico obtenido permite visualizar la evolución del total de estudiantes g
 
 Este tipo de visualización es ideal cuando se quiere mostrar los cambios en la clasificación o posición de una dimensión desde un punto de partida hasta un punto final, es útil para mostrar si una dimensión especifica aumento o disminuyo entre dos puntos en el tiempo, para el caso de análisis de la Universidad Nacional es relevante identificar los programas que ganan o pierden popularidad, se evalúa la popularidad a nivel de la cantidad de estudiantes graduados, en este caso el análisis se realizara para los programas de pregrado de las cuatro sedes principales de la Universidad, las cuales son Bogotá, Medellín, Manizales y Palmira, se tomara como punto inicial el año 2009 y como punto final el año 2019, no se toma el 2020 ya que la base de que se está trabajando no contiene información para el segundo periodo del año 2020, por lo tanto para que la comparación se equitativa se decide considerar los años 2009 y 2019 ya que se tiene registro de los dos periodos de cada año. 
 
-Debe seleccionar la plantilla llamada etiquetas en línea ubicada en la sección de grafico de pendientes, analizando la pestaña de datos se identifica que es necesario tener una columna con el nombre o identificador de cada línea y tantas columnas como años se quieran mostrar. En este caso el archivo a cargar consiste en el programa de formación, la facultad a la que pertenece, el nivel de formación (el cual solo será pregrado), la sede de matricula que en este caso es Bogotá y por ultimo los dos años que quieren visualizar. 
+Debe seleccionar la plantilla llamada etiquetas en línea ubicada en la sección de gráfico de pendientes, analizando la pestaña de datos se identifica que es necesario tener una columna con el nombre o identificador de cada línea y tantas columnas como años se quieran mostrar. En este caso el archivo a cargar consiste en el programa de formación, la facultad a la que pertenece, el nivel de formación (el cual solo será pregrado), la sede de matricula que en este caso es Bogotá y por último los dos años que quieren visualizar. 
 
-1.	Cargue el archivo de datos llamado “pendiente_bogota.csv”, corrija los posibles errores ortográficos y asigne las columnas. La columna A debe ser asignada a los estantes nombre y categoría, la columna B contiene la facultad que funcionara como filtro, por lo tanto deber ser asignada al estante filtro, finalmente las columnas E y F se ubican en resultados ya que ellas contienen los valores a mostrar en el gráfico; el contenido de las ventanas emergentes será personalizado por lo cual debe añadir todas las columnas mencionadas anteriormente deben ser añadidas al estante de información para ventanas emergentes personalizadas.
+1.	Cargue el archivo de datos llamado “pendiente_bogota.csv”, corrija los posibles errores ortográficos y asigne las columnas. La columna A debe ser asignada a los estantes nombre y categoría, la columna B contiene la facultad que funcionara como filtro, por lo tanto deber ser asignada al estante filtro, finalmente las columnas E y F se ubican en resultados ya que ellas contienen los valores a mostrar en el gráfico; el contenido de las ventanas emergentes será personalizado por lo cual debe añadir todas las columnas mencionadas anteriormente al estante de información para ventanas emergentes personalizadas.
 
 ```{r paso1pendienteflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cargue de base de datos y asignación de columnas', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish126.jpg")
 ```
 
-2.	Regresando a sección de avance notara que la visualización posee una leyenda con todos los posibles programas y adicional a esto no se ven con claridad las líneas, para iniciar a dar formato haga clic sobre la pestaña gráfico, allí aumente el ancho de pendiente a 2,5 y elimine los nombres ubicados en destacar pendientes.
+2.	Regresando a sección de avance notara que la visualización posee una leyenda con todos los posibles programas y adicional a esto no se ven con claridad las líneas, para iniciar a dar formato haga clic sobre la pestaña gráfico, allí aumente el ancho de pendiente a 2.5 y elimine los nombres ubicados en destacar pendientes.
 
 ```{r paso2pendienteflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a la pestaña gráfico', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish127.jpg")
 ```
 
-3.	Con el fin de eliminar la saturación existente en el gráfico haga clic sobre la pestaña leyenda y desactívela. Sobre la pestaña etiquetas disminuya el tamaño de fuente a 1,25 y desactive la opción de mostrar solo etiquetas resaltadas.
+3.	Con el fin de eliminar la saturación existente en el gráfico haga clic sobre la pestaña leyenda y desactívela. Sobre la pestaña etiquetas disminuya el tamaño de fuente a 1.25 y desactive la opción de mostrar solo etiquetas resaltadas.
 
-```{r paso3pendienteflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Desacrivarleyenda y formato a las etiquetas', out.width='85%'}
+```{r paso3pendienteflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Desactivar leyenda y formato a las etiquetas', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish128.jpg")
 ```
 
@@ -1037,7 +1040,7 @@ knitr::include_graphics("Imágenes/flourish128.jpg")
 knitr::include_graphics("Imágenes/flourish129.jpg")
 ```
 
-5.	Para el eje debe aumentar el tamaño de fuente a 1,25. Es necesario eliminar la opción de todo del filtro de facultades ya que hace que el gráfico se vea saturado, para esto haga clic sobre la pestaña controles y desactive la opción de incluir todo.
+5.	Para el eje debe aumentar el tamaño de fuente a 1.25. Es necesario eliminar la opción de todo del filtro de facultades ya que hace que el gráfico se vea saturado, para esto haga clic sobre la pestaña controles y desactive la opción de incluir todo.
 
 ```{r paso5pendienteflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Desactivar la opción de incluir todo en el filtro', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish130.jpg")
@@ -1045,7 +1048,7 @@ knitr::include_graphics("Imágenes/flourish130.jpg")
 
 6.	Con ayuda de la pestaña diseño establezca como color de fondo “#ECF0F1”, también active las fronteras de la visualización y seleccione color negro para todas; finalmente con la pestaña encabezamiento escriba como título Gráfico de pendiente, sede Bogotá y el subtítulo será Análisis de popularidad en programas de pregrado.
 
-La visualización obtenida permite identificar los cambios de posición de los programas de pregrado por facultad ofrecidos en la se Bogotá de la Universidad Nacional, a modo de ejemplo si se selecciona la facultad de derecho, ciencias políticas y sociales se observa que los programas de derecho y ciencia política han aumentado su cantidad de graduados, para el año 2009 se graduaron 58 y 88 estudiantes respectivamente, mientras que para el año 2019 ambos programas tuvieron un poco más de 120 graduados.
+La visualización obtenida permite identificar los cambios de posición de los programas de pregrado por facultad ofrecidos en la sede Bogotá de la Universidad Nacional, a modo de ejemplo si se selecciona la facultad de derecho, ciencias políticas y sociales se observa que los programas de derecho y ciencia política han aumentado su cantidad de graduados, para el año 2009 se graduaron 58 y 88 estudiantes respectivamente, mientras que para el año 2019 ambos programas tuvieron un poco más de 120 graduados.
 
 ```{r pendientesedebogotaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de pendiente para la sede Bogotá', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish131.jpg")
@@ -1063,11 +1066,11 @@ knitr::include_graphics("Imágenes/flourish132.jpg")
 
 La plantilla para explorar será la llamada “Radar with filter”, la cual permite crear polígonos llenos y añadir una columna para generar un filtro dentro de la visualización; como ya se ha mencionado el primer paso para la creación con Flourish es analizar la estructura de los datos de ejemplo. Para esta visualización como mínimo se deben tener cuatro columnas, la primera de ellas contiene los nombres a partir de los cuales se crea cada gráfico de radar, seguido de esto deben existir tres columnas donde cada una representa un eje, es importante que estas columnas de valores sean compatibles, por lo que todas deben estar en la misma escala. La columna de filtros no es un campo obligatorio, pero en el caso de contener muchos datos es útil utilizarla, ya que permite filtrar lo que muestra la visualización al seleccionar una categoría.
 
-En el sistema de educación colombiana para que los estudiantes de Instituciones de educación superior puedan obtener un título de pregrado deben realizar un examen llamado Saber Pro, en el cual tiene como finalidad evaluar la calidad de la educación superior, en este examen se evalúan cinco módulos genéricos los cuales son lectura crítica, razonamiento cuantitativo, competencias ciudadanas, comunicación escrita e inglés, además existen módulos asociados a temáticas y contenidos específicos que los estudiantes tienen la posibilidad de presentar de acuerdo a su área de formación profesional.
+En el sistema de educación colombiana para que los estudiantes de Instituciones de educación superior puedan obtener un título de pregrado deben realizar un examen llamado Saber Pro, el cual tiene como finalidad evaluar la calidad de la educación superior, en este examen se evalúan cinco módulos genéricos los cuales son lectura crítica, razonamiento cuantitativo, competencias ciudadanas, comunicación escrita e inglés, además existen módulos asociados a temáticas y contenidos específicos que los estudiantes tienen la posibilidad de presentar de acuerdo a su área de formación profesional.
 
 La página web del [Icfes](https://www.icfes.gov.co/web/guest/acerca-del-examen-saber-pro) en la sección de resultados Saber Pro se encuentran disponibles bases de datos con los resultados agregados de las pruebas aplicadas desde 2013 hasta 2019, a nivel de metadatos es decir una base para cada año, esta base contiene una columna llamada Agregación, la cual contiene diferentes agregaciones de los datos una de ellas es programa académico, a demás posee información sobre el nombre de la institución y la medida de agregación. En este caso interesa explorar los resultados obtenidos a nivel de pruebas genéricas para la Universidad Nacional de Colombia en cada una de sus sedes, inicialmente se quería añadir una línea de tiempo para explorar estos resultados por sede a nivel anual, pero la plantilla no permite hacerlo, razón por la cual únicamente se van a explorar los datos relacionados al año 2019.
 
-Para crear la base de datos a usar en la plantilla de Flourish nuevamente de hace uso del lenguaje de programación R, allí se carga el archivo de datos “saberpro2019.xlsx”, se aplican filtros para seleccionar la agregación de programas, Universidad Nacional de Colombia y las pruebas genéricas, a demás d esto se seleccionan las columnas que se consideran más relevantes para el gráfico a realizar, también se realizan algunos cambios a nivel de escritura de los datos tales como tildes, mayúsculas, entre otras. La base Saber Pro 2019 no contiene la facultad a la que pertenece cada programa y es importante tener esta información ya que se puede usar como filtro y la visualización final no se verá saturada, para agregar esta columna se realiza la unión entre una base llamada programas la cual contiene los programas de formación y la facultad a la que pertenecen, dicha base es extraída de la base original, es decir, Graduados y la base resultante de la aplicación de filtros y selecciones de Saber Pro; finalmente se realizan filtros por cada sede de la Universidad con el fin de obtener una base para cada sede, para posteriormente ser exportadas.
+Para crear la base de datos a usar en la plantilla de Flourish nuevamente de hace uso del lenguaje de programación R, allí se carga el archivo de datos “saberpro2019.xlsx”, se aplican filtros para seleccionar la agregación de programas, Universidad Nacional de Colombia y las pruebas genéricas, a demás de esto se seleccionan las columnas que se consideran más relevantes para el gráfico a realizar, también se realizan algunos cambios a nivel de escritura de los datos tales como tildes, mayúsculas, entre otras. La base Saber Pro 2019 no contiene la facultad a la que pertenece cada programa y es importante tener esta información ya que se puede usar como filtro y la visualización final no se verá saturada, para agregar esta columna se realiza la unión entre una base llamada programas la cual contiene los programas de formación y la facultad a la que pertenecen, dicha base es extraída de la base original, es decir, Graduados y la base resultante de la aplicación de filtros y selecciones de Saber Pro; finalmente se realizan filtros por cada sede de la Universidad con el fin de obtener una base para cada sede, para posteriormente ser exportadas.
 
 Dentro de la plantilla para gráfico de radar de Flourish debe cargar el archivo de datos llamado “saber_bogota.csv”, inicialmente deberá corregir los errores ortográficos en los datos, seguido de esto podrá asignar las columnas a los estantes disponibles, el nombre esta dado por la columna E, los valores inician en la columna H y terminan en la L, así que deberá agregar de H a L al estante de valores, finalmente al filtro le corresponde la columna G.
 
@@ -1085,11 +1088,11 @@ knitr::include_graphics("Imágenes/flourish134.jpg")
 
 2.	La pestaña controles permite cambiar forma, colores y texto de los filtros incluidos en la visualización, para iniciar cambie el nombre de la etiqueta combinada y separada por Combinado y Separado respectivamente y para el filtro de facultades la opción All debe ser cambiada por Todos. Finalmente debe dirigirse a la sección de estilos de botones y cambiar el color de seleccionado por “#808080”.
 
-```{r paso2radarflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de columnas a estantes disponibles', out.width='85%'}
+```{r paso2radarflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato a los controles', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish135.jpg")
 ```
 
-3.	Haciendo uno de la pestaña diseño asigne “#ECF0F1” como color de fondo y también active las fronteras, estas deben ser de color negro. Por último, se debe incluir un título y subtítulo en la visualización, los cuales serán Resultados Saber Pro 2019, Bogotá y Competencias genéricas respectivamente.
+3.	Haciendo uso de la pestaña diseño asigne “#ECF0F1” como color de fondo y también active las fronteras, estas deben ser de color negro. Por último, se debe incluir un título y subtítulo en la visualización, los cuales serán Resultados Saber Pro 2019, Bogotá y Competencias genéricas respectivamente.
 
 La visualización obtenida permite observar los resultados obtenidos en el examen Saber Pro del año 2019 para la sede Bogotá, en cada programa de formación, adicional a esto da al usuario la posibilidad de controlar por los programas a visualizar al usar un filtro de facultad, por ejemplo, si se selecciona la facultad de ciencias económicas se obtiene la siguiente visualización.
 
@@ -1117,7 +1120,7 @@ Haciendo uso de la pestaña líneas de tendencia y seleccionando la opción uno 
 knitr::include_graphics("Imágenes/flourish142.jpg")
 ```
 
-2.	Si se añade una columna categórica al estante cuadricula de gráficos, se obtiene una visualización con tantos gráficos como categorías posea la columna, por ejemplo, añada la columna Category al estante mencionado y obtendrá la siguiente visualización.
+2.	Si se añade una columna categórica al estante cuadrícula de gráficos, se obtiene una visualización con tantos gráficos como categorías posea la columna, por ejemplo, añada la columna Category al estante mencionado y obtendrá la siguiente visualización.
 
 ```{r minidispersioncotendenciaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Minigráficos por categoría con líneas de tendencia', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish138.jpg")
@@ -1128,7 +1131,7 @@ También es posible añadir las columnas Category y Quantity a los estantes colo
 knitr::include_graphics("Imágenes/flourish139.jpg")
 ```
 
-3.	Para realizar el gráfico de burbujas se debe retirar la columna ubicada en el estante cuadricula de gráfico y añadir la columna Product Name al estante nombre, active la leyenda para que en la parte superior aparezca el texto que identifica a cada color y desactive la línea de tendencia.
+3.	Para realizar el gráfico de burbujas se debe retirar la columna ubicada en el estante cuadrícula de gráfico y añadir la columna Product Name al estante nombre, active la leyenda para que en la parte superior aparezca el texto que identifica a cada color y desactive la línea de tendencia.
 
 ```{r graficoburbujaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de burbuja', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish140.jpg")
@@ -1153,7 +1156,7 @@ Al igual que en las demás visualizaciones realizadas es posible dar formato y p
 knitr::include_graphics("Imágenes/flourish144.jpg")
 ```
 
--	Para editar la paleta de colores haga clic en la pestaña color de puntos y edite la paleta de colores, los colore a usar serán “#29ABE2”, “#F15A24” Y “#8CC63F” para las categorías Furniture, Office Supplies y Technology respectivamente.
+-	Para editar la paleta de colores haga clic en la pestaña color de puntos y edite la paleta de colores, los colores a usar serán “#29ABE2”, “#F15A24” Y “#8CC63F” para las categorías Furniture, Office Supplies y Technology respectivamente.
 
 ```{r cambiopaletacoloresflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambio de paleta de colores', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish145.jpg")
@@ -1161,7 +1164,7 @@ knitr::include_graphics("Imágenes/flourish145.jpg")
 
 -	Usando la pestaña configuraciones de gráfico active el color de fondo y asigne “#F5F5F5”.
 
--	Ahora para el eje X active el estilo de título y seleccione negrita en color negro y tamaño 1.1; para las etiquetas también active el estilo para cambiar el color a negro y como ángulo debe seleccionar 0. Finalmente active las líneas de cuadricula y cambie su color por “#BBBBB9”.
+-	Ahora para el eje X active el estilo de título y seleccione negrita en color negro y tamaño 1.1; para las etiquetas también active el estilo para cambiar el color a negro y como ángulo debe seleccionar 0. Finalmente active las líneas de cuadrícula y cambie su color por “#BBBBB9”.
 
 ```{r formatoejexdispersionflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato al eje X', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish146.jpg")
@@ -1188,7 +1191,7 @@ La visualización obtenida permite al usuario filtrar por regiones y categorías
 
 #### Box-plot {#boxplotflourish}
 
-Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable y permite la identificación de posibles valores atípicos. Para el conjunto de datos que se está trabajando puede ser de interés realizar un boxplot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta. La plantilla para la realización de estos gráficos se encuentra ubicada en la sección dispersión de la galería de plantillas de Flourish, seleccione la plantilla llamada boxplot y explore la pestaña de datos, con el fin de identificar los estantes disponibles para la creación de esta visualización, el conjunto de datos de ejemplo es bastante simple, únicamente contiene dos columnas que corresponden a los valores del eje X e Y respectivamente, los estantes permiten agregar columnas para generar nombres, establecer colores, tamaño y forma a partir de la categoría de los  puntos, también hay una opción llamada cuadricula de gráficos a la cual se puede añadir un columna categórica y crea mini gráficos para cada valor de esa columna; el estante tiempo permite agregar una columna con fechas o ventana de tiempos para generar una animación en la visualización y finalmente están las opciones de añadir filtros e información para crear ventanas emergentes personalizadas.
+Estos diagramas son una herramienta estadística muy útil ya que permite visualizar la dispersión y simetría de una variable y permite la identificación de posibles valores atípicos. Para el conjunto de datos que se está trabajando puede ser de interés realizar un boxplot para la variable edad, con el fin de identificar valores por fuera del límite inferior o superior, observar que tan simétrica es la variable y la dispersión de esta. La plantilla para la realización de estos gráficos se encuentra ubicada en la sección dispersión de la galería de plantillas de Flourish, seleccione la plantilla llamada boxplot y explore la pestaña de datos, con el fin de identificar los estantes disponibles para la creación de esta visualización, el conjunto de datos de ejemplo es bastante simple, únicamente contiene dos columnas que corresponden a los valores del eje X e Y respectivamente, los estantes permiten agregar columnas para generar nombres, establecer colores, tamaño y forma a partir de la categoría de los  puntos, también hay una opción llamada cuadrícula de gráficos a la cual se puede añadir un columna categórica y crea mini gráficos para cada valor de esa columna; el estante tiempo permite agregar una columna con fechas o ventana de tiempo para generar una animación en la visualización y finalmente están las opciones de añadir filtros e información para crear ventanas emergentes personalizadas.
 
 La base de datos a usar para crear esta gráfica contiene las columnas “YEAR_SEMESTER”, “EDAD_MOD”, “NIVEL”, “SEDE_NOMBRE_MAT” y el conteo de la cantidad de estudiantes graduados, el archivo a cargar es llamado “edad.csv”.
 
@@ -1236,11 +1239,11 @@ knitr::include_graphics("Imágenes/flourish125.jpg")
 
 8.	Desde la pestaña diseño active las fronteras o bordes de la visualización en color negro, establezca como título del gráfico Boxplot para edad y como subtítulo Análisis periodo a periodo.
 
-La visualización obtenida permite identificar la concentración de edades por cada una de las modalidades de formación, también permite identificar valores atípicos o extraños dentro de cada nivel de formación adicional a esto la cantidad de puntos ubicada en cada categoría indica los periodos en los cuales se tiene mayor cantidad de graduados, al incluir un filtro y una ventana de tiempo se le da al usuario más capacidad para interactuar y analizar el grafico. 
+La visualización obtenida permite identificar la concentración de edades por cada una de las modalidades de formación, también permite identificar valores atípicos o extraños dentro de cada nivel de formación adicional a esto la cantidad de puntos ubicada en cada categoría indica los periodos en los cuales se tiene mayor cantidad de graduados, al incluir un filtro y una ventana de tiempo se le da al usuario más capacidad para interactuar y analizar el gráfico. 
 
 <div class="flourish-embed flourish-scatter" data-src="visualisation/5661715"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-####Gráfico de puntos
+#### Gráfico de puntos
 
 Este tipo de gráficos es útil para mostrar la distribución de una variable numérica por categorías, estos gráficos consisten en dos ejes, el eje X será quien muestre la información relacionada con la variable numérica y el eje Y contiene las categorías. La base de datos Graduados que se ha usado en la mayoría de las visualizaciones contiene varias columnas categóricas, en este caso se usara la columna de sede de matrícula como categórica y para la variable numérica se usa el conteo de estudiantes graduados.
 
@@ -1263,9 +1266,9 @@ knitr::include_graphics("Imágenes/flourish150.jpg")
 knitr::include_graphics("Imágenes/flourish151.jpg")
 ```
 
-4.	Usando la pestaña configuraciones de gráfico active el color de fondo y deje el color pregerminado, el cual es “#F5F5F5”.
+4.	Usando la pestaña configuraciones de gráfico active el color de fondo y deje el color predeterminado, el cual es “#F5F5F5”.
 
-5.	Para el eje X debe seleccionar título personalizado y en el espacio de texto escribir “Número de gradauados”, active el estilo y seleccione negrita en color negro; para las etiquetas debe activar la opción de estilo, aumentar el tamaño a 1, color negro y ángulo de cero; adicional a este debe activar las líneas de cuadriculas, activar su estilo, cambiar el color por “#BBBBB9” y como estilo seleccione punteada.
+5.	Para el eje X debe seleccionar título personalizado y en el espacio de texto escribir “Número de gradauados”, active el estilo y seleccione negrita en color negro; para las etiquetas debe activar la opción de estilo, aumentar el tamaño a 1, color negro y ángulo de cero; adicional a esto debe activar las líneas de cuadrículas, activar su estilo, cambiar el color por “#BBBBB9” y como estilo seleccione punteada.
 
 ```{r paso5puntosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Formato al eje X', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish152.jpg")
@@ -1279,7 +1282,7 @@ knitr::include_graphics("Imágenes/flourish152.jpg")
 knitr::include_graphics("Imágenes/flourish153.jpg")
 ```
 
-8.	La pestaña Box, violin and beeswarm plots permite añadir estas opciones gráficas los puntos, por ejemplo, al seleccionar la opción automático de la sección beeswarm, se dispersan los puntos en cada una de las sedes.
+8.	La pestaña Box, violin and beeswarm plots permite añadir estas opciones gráficas a los puntos, por ejemplo, al seleccionar la opción automático de la sección beeswarm, se dispersan los puntos en cada una de las sedes.
 
 ```{r paso8puntosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Beeswarm', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish154.jpg")
@@ -1293,7 +1296,7 @@ knitr::include_graphics("Imágenes/flourish155.jpg")
 
 10.	Finalmente es posible añadir el gráfico de violín, en este caso debe cambiar su color por “#808080” para lograr visualizarlos, también es de destacar que no hay información sobre la creación de estas sombras o violines.
 
-```{r paso10puntosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Violin', out.width='85%'}
+```{r paso10puntosflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Violín', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish156.jpg")
 ```
 
@@ -1309,7 +1312,7 @@ knitr::include_graphics("Imágenes/flourish157.jpg")
 
 Flourish ofrece diferentes posibilidades para compartir las visualizaciones creadas, desde la versión gratuita es posible publicar, opción con la cual se generan dos alternativas, la primera de ellas genera un enlace a la visualización y la segunda para insertar en una página web por medio del código embebido que se genera o descargar las imágenes, esta última opción es la menos adecuada cuando se trata de visualizaciones con líneas de  tiempo o animaciones ya  que se pierde esta funcionalidad. 
 
-Cada que se crea una visualización y ha sido guardada; en la esquina superior encontrará un botón llamado exportar y publicar que presenta las opciones mencionadas anteriormente, cuando se trata de visualización con filtro, descripciones emergentes o líneas de tiempo la mejor manera de compartirlo con otras personas es por medio del enlace o código HTML, algunos de los gráficos creados en este libro fueron insertados por medio del código HTML para no perder las funcionalidades temporales, para generar este código únicamente debe hacer clic en exportar y publicar, en la ventana emergente debe seleccionar publicar y ya obtendrá tanto el enlace como el código. El paso a paso de esta forma de publicación se encuentra en la sección (hacer referencia de como compartir el trabajo).
+Cada que se crea una visualización y ha sido guardada; en la esquina superior encontrará un botón llamado exportar y publicar que presenta las opciones mencionadas anteriormente, cuando se trata de visualización con filtro, descripciones emergentes o líneas de tiempo la mejor manera de compartirlo con otras personas es por medio del enlace o código HTML, algunos de los gráficos creados en este libro fueron insertados por medio del código HTML para no perder las funcionalidades temporales, para generar este código únicamente debe hacer clic en exportar y publicar, en la ventana emergente debe seleccionar publicar y ya obtendrá tanto el enlace como el código. El paso a paso de esta forma de publicación se encuentra en la sección \@ref(compartirtrabajoflourish).
 
 Flourish no ofrece la posibilidad de generar o crear dashboards que combinen diferentes gráficos, en esta herramienta se debe crear cada objeto visual y compartirlo de manera independiente o usar una historia para combinarlos, estas historias son muy similares a una presentación tipo Power Point donde cada gráfico es insertado en una diapositiva y es posible adicionar títulos o texto relacionados con los datos de interés de la visualización.
 
@@ -1319,7 +1322,7 @@ Para crear historias debe hacer clic en el botón crear nueva historia de la pan
 knitr::include_graphics("Imágenes/flourish165.jpg")
 ```
 
-1.	La primera diapositiva tendrá la evolución histórica de total de estudiantes graduados, haga clic sobre elegir visualización y haga clic sobre el gráfico llamado Evolución graduados.
+1.	La primera diapositiva tendrá la evolución histórica del total de estudiantes graduados, haga clic sobre elegir visualización y haga clic sobre el gráfico llamado Evolución graduados.
 
 ```{r paso1historiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Añadir una visualización', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish166.jpg")
@@ -1345,7 +1348,7 @@ knitr::include_graphics("Imágenes/flourish169.jpg")
 
 5.	De esta manera es posible añadir todas las visualizaciones que se deseen a la historia, en este caso se creara una historia de 15 puntos o diapositivas, entre las cuales se seleccionaron gráficos de líneas, circulares, barras, mapas, carreras de barras y líneas, entre otros.
 
-6.	 Estas historias ofrecen la posibilidad de auto reproducción con un tiempo para cada una de las diapositivas o visualizaciones, esta opción se activa en el panel lateral izquierdo, desde allí también es posible subir audios, esta alternativa es bastante útil cuando se debe grabar la presentación con narración; por último en la superior derecha de cada diapositiva se ubica el control de tiempo, este se modifica según las necesidades de cada visualización, por ejemplo, visualizaciones animadas o con ventanas de tiempo que tengan una duración total de 60 segundos, el tiempo de la diapositiva que la contenga deberá ser igual o un poco superior, aunque es posible pausar la autoproducción en cualquier momento.
+6.	 Estas historias ofrecen la posibilidad de auto reproducción con un tiempo para cada una de las diapositivas o visualizaciones, esta opción se activa en el panel lateral izquierdo, desde allí también es posible subir audios, esta alternativa es bastante útil cuando se debe grabar la presentación con narración; por último en la superior derecha de cada diapositiva se ubica el control de tiempo, este se modifica según las necesidades de cada visualización, por ejemplo, visualizaciones animadas o con ventanas de tiempo que tengan una duración total de 60 segundos, el tiempo de la diapositiva que la contenga deberá ser igual o un poco superior, aunque es posible pausar la auto reproducción en cualquier momento.
 
 ```{r paso6historiaflourish-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Auto reproducción y control de tiempo', out.width='85%'}
 knitr::include_graphics("Imágenes/flourish170.jpg")
