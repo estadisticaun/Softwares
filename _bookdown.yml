@@ -7,3 +7,5 @@ language:
   ui:
     chapter_name: "Capítulo "
 output_dir: "docs"
+rmd_files: ["index.Rmd", "01-intro.Rmd", "02-tableau.Rmd", "03-powerbi.Rmd", "04-flourish.Rmd", "05-conclusiones.Rmd", "06-referencias.Rmd"]
+# rmd_files: ["index.Rmd", "01-intro.Rmd", "02-tableau.Rmd", "03-powerbi.Rmd""]

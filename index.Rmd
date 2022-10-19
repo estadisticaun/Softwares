@@ -12,4 +12,6 @@ link-citations: yes
 
 # Portada{-}
 
-Espacio para la portada ....
+```{r fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr::include_graphics('Imágenes/Portada.jpg')
+```

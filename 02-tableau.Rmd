@@ -54,7 +54,7 @@ En Internet es posible encontrar multitud de usuarios que comparten su trabajo y
 - Se requiere preparación de datos inicial.
 - Las características pueden parecer demasiado especializadas y restrictivas, ya que Tableau esta diseñado para un uso más amplio. 
 - Aunque es excelente para fines analíticos, no puede reemplazar las aplicaciones de informes financieros. 	
-- Brinda la capacidad de establecer seguridad de “nivel bajo” en el nivel de datos, pero lo implementa de una manera un poco precaria. 
+- Brinda la capacidad de establecer seguridad de "nivel bajo" en el nivel de datos, pero lo implementa de una manera un poco precaria. 
 - Tableau se ha especializado en el factor de facilidad de uso. Sin embargo, a medida que los usuarios van obteniendo habilidades y experiencia desean hacer más, y Tableau posee una capacidad limitada de ampliación que no siempre les permite ir a donde desean.
 - Los usuarios especializados en herramientas de Inteligencia Empresarial suelen considerar mejor contar con una arquitectura abierta. 
 
@@ -300,7 +300,7 @@ knitr::include_graphics("Imágenes/Interfaz3.JPG")
 En la parte central se encuentran ubicados los estantes Columnas y Filas, estos permiten dominar el eje X y Y respectivamente. El estante Columnas crea las columnas de una tabla, mientras que el estante Filas crea las filas. Puede colocar todos los campos que quiera en estos estantes.
 Al colocar una dimensión en los estantes Filas o Columnas, se crean los encabezados de los miembros de dicha dimensión. Al colocar una medida en el estante Filas o Columnas, se crean ejes cuantitativos para esa medida. Cada vez que agrega más campos a la vista, se incluyen encabezados y ejes adicionales en la tabla y obtiene una imagen cada vez más detallada de sus datos.
 
-La creación de vistas en Tableau es muy sencilla, existen dos opciones principales; la primera es usando los estantes de filas o columnas para añadir las medidas y las dimensiones, la segunda opción consiste en seleccionar los campos que quiere incluir en la vista y luego dar clic en el botón “Mostrarme” que se ubica e la esquina superior derecha de la barra de herramientas, le permite elegir un tipo de vista resaltando los tipos de vista que mejor se adapten a los tipos de campo que ha seleccionado de sus datos. Alrededor del tipo de gráfico más adecuado para sus datos aparece un contorno de color naranja, los tipos de vista disponibles con esta funcionalidad se presentan en la figura \@ref(fig:mostrarme-fig).
+La creación de vistas en Tableau es muy sencilla, existen dos opciones principales; la primera es usando los estantes de filas o columnas para añadir las medidas y las dimensiones, la segunda opción consiste en seleccionar los campos que quiere incluir en la vista y luego dar clic en el botón "Mostrarme" que se ubica e la esquina superior derecha de la barra de herramientas, le permite elegir un tipo de vista resaltando los tipos de vista que mejor se adapten a los tipos de campo que ha seleccionado de sus datos. Alrededor del tipo de gráfico más adecuado para sus datos aparece un contorno de color naranja, los tipos de vista disponibles con esta funcionalidad se presentan en la figura \@ref(fig:mostrarme-fig).
 
 ```{r mostrarme-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Opciones de la funcionalidad Mostrarme', out.width='30%'}
 knitr::include_graphics("Imágenes/Interfaz5.JPG")
@@ -316,7 +316,7 @@ Antes de poder crear y analizar los datos debe conectar Tableau a estos, en este
 
 1.	Abrir Tableau desde el acceso directo creado en su escritorio al momento de la instalación, la pantalla que se debe ver es la mostrada en la figura \@ref(fig:paginaprincipal-fig).
 
-2.	Hacer clic en el botón “Microsoft Excel” si su archivo posee este formato,  se abre una ventana que permite navegar a través de las carpetas de su equipo para ubicar las bases de datos. Debe seleccionar una de las bases y dar clic en el botón “Abrir”.
+2.	Hacer clic en el botón "Microsoft Excel" si su archivo posee este formato,  se abre una ventana que permite navegar a través de las carpetas de su equipo para ubicar las bases de datos. Debe seleccionar una de las bases y dar clic en el botón “Abrir”.
 
 ```{r carpetas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Navegación entre carpetas', out.width='60%'}
 knitr::include_graphics("Imágenes/conexiondatos1.jpg")
@@ -327,7 +327,7 @@ Con esta conexión a la fuente de datos se obtiene la siguiente pantalla
 knitr::include_graphics("Imágenes/conexiondatos2.jpg")
 ``` 
 
-En el panel lateral izquierdo encontrará el nombre del archivo al que se conectó en este caso “P2009 Graduados”, debajo de esto se ubican las hojas que componen el archivo para esta base solo se tiene una hoja llamada “P2009G”, luego se encuentra un botón llamado “Nueva unión”. La parte central de la conexión a datos es el lienzo en blanco dispuesto en la parte superior allí se deben arrastrar las hojas a las que se quiere conectar, en la parte inferior se encuentra una vista previa de la base de datos, los campos marcados con “#” indica que son medidas, “Abc” indica que el campo es una dimensión y finalmente las variables relacionadas con ubicaciones geográficas como latitud y longitud tiene como icono un globo terráqueo, haciendo clic sobre estos iconos se puede editar el tipo de dato, por ejemplo la variable "Snies Sede Mat" Tableau la tomo como una medida cuando en realidad esta variable hace referencia a la categorización establecida para las sedes de la universidad, la puede editar haciendo clic en el icono “#” y en el menú desplegable seleccionar Cadena. 
+En el panel lateral izquierdo encontrará el nombre del archivo al que se conectó en este caso “P2009 Graduados”, debajo de esto se ubican las hojas que componen el archivo para esta base solo se tiene una hoja llamada “P2009G”, luego se encuentra un botón llamado “Nueva unión”. La parte central de la conexión a datos es el lienzo en blanco dispuesto en la parte superior allí se deben arrastrar las hojas a las que se quiere conectar, en la parte inferior se encuentra una vista previa de la base de datos, los campos marcados con "#" indica que son medidas, "Abc" indica que el campo es una dimensión y finalmente las variables relacionadas con ubicaciones geográficas como latitud y longitud tiene como icono un globo terráqueo, haciendo clic sobre estos iconos se puede editar el tipo de dato, por ejemplo la variable "Snies Sede Mat" Tableau la tomo como una medida cuando en realidad esta variable hace referencia a la categorización establecida para las sedes de la universidad, la puede editar haciendo clic en el icono "#" y en el menú desplegable seleccionar Cadena. 
 
 ```{r cambiartipocampo-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar el tipo de un campo', out.width='20%'}
 knitr::include_graphics("Imágenes/conexiondatos3.jpg")
@@ -356,7 +356,7 @@ Ahora la vista previa de la base se modificó, solo contiene las observaciones e
 Este mismo tipo de filtros se puede aplicar a medidas, definiendo un intervalo para los valores o seleccionando un valor mínimo o máximo o un cálculo especial. 
 Otra opción ofrecida por Tableau es hacer uniones entre tablas de datos, esto es útil cuando se tiene la información en distintas bases de datos con la misma estructura como en este caso que se tiene la información de estudiantes graduados desde el año 2009 hasta el 2020 semestre 1 a nivel de microdatos, es decir los archivos están separados. 
 
-Existen dos métodos básicos para combinar conjuntos de datos en Tableau la unión de columnas y la unión de filas, se pueden combinar las columnas de dos conjuntos de datos o bien filas de dos o más conjuntos de datos, primero debe conectarse a las tablas que desea combinar cabe aclarar que estas tablas deben pertenecer al mismo archivo, en este caso como se está usando archivos Excel las tablas a unir deben ser dos hojas del archivo, a modo de ejemplo se creara un archivo en Excel que contenga en una hoja la información de los graduados en el año 2009 y en otra hoja los registros de los graduados en el año 2010 y se hará la conexión a los datos, cuando realice dicha conexión en el panel lateral izquierdo se ubica el nombre del archivo Excel, en este caso llamado “P2009-2010 Graduados” y más abajo el nombre de las dos hojas que contiene dicho archivo llamadas “P2009G” y “P2010G”, como se ilustra en la figura \@ref(fig:hojas-fig).
+Existen dos métodos básicos para combinar conjuntos de datos en Tableau la unión de columnas y la unión de filas, se pueden combinar las columnas de dos conjuntos de datos o bien filas de dos o más conjuntos de datos, primero debe conectarse a las tablas que desea combinar cabe aclarar que estas tablas deben pertenecer al mismo archivo, en este caso como se está usando archivos Excel las tablas a unir deben ser dos hojas del archivo, a modo de ejemplo se creara un archivo en Excel que contenga en una hoja la información de los graduados en el año 2009 y en otra hoja los registros de los graduados en el año 2010 y se hará la conexión a los datos, cuando realice dicha conexión en el panel lateral izquierdo se ubica el nombre del archivo Excel, en este caso llamado "P2009-2010 Graduados" y más abajo el nombre de las dos hojas que contiene dicho archivo llamadas "P2009G" y "P2010G", como se ilustra en la figura \@ref(fig:hojas-fig).
 
 ```{r hojas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Nombre del archivo y hojas', out.width='40%'}
 knitr::include_graphics("Imágenes/conexiondatos7.jpg")
@@ -374,7 +374,7 @@ La unión por columnas es útil cuando se quiere trabajar con dos columnas que s
 
 En los conjuntos de datos que se están usando todos tienen las mismas columnas por lo que el interés se centra en realizar unión por filas y no por columnas para realizar este tipo de unión se tiene dos opciones:
 
-1.	Arrastrar y soltar; este método consiste en llevar la primera hoja al lienzo, arrastrar la otra hoja que se quiere unir y no soltar hasta que aparezca el cuadro “Unión de filas” en color naranja, solo se debe soltar la hoja cuando este cuadro aparezca. 
+1.	Arrastrar y soltar; este método consiste en llevar la primera hoja al lienzo, arrastrar la otra hoja que se quiere unir y no soltar hasta que aparezca el cuadro "Unión de filas en color naranja, solo se debe soltar la hoja cuando este cuadro aparezca. 
 
 ```{r unionarrastrar-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Unión: Método de arrastrar y soltar', out.width='80%'}
 knitr::include_graphics("Imágenes/conexiondatos8.jpg")
@@ -391,13 +391,13 @@ knitr::include_graphics("Imágenes/conexiondatos10.jpg")
 ```
 Siguiendo con un análisis detallado de lo mostrado por Tableau en la vista previa del conjunto de datos, se observan columnas problemáticas, la variable "Ciu Nac" presenta una combinación de números y texto como se muestra en la figura \@ref(fig:columaciunac-fig), existe una función llamada división personalizada que se puede ver al hacer clic en el menú desplegable de la columna, dicha función necesita un separador para realizar la división pero en este caso no es posible usarla ya que no existe separador alguno entre el numero y el texto, esto en un problema que no puede solucionarse desde Tableau. 
 
-```{r columaciunac-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Problema columna Ciu_Nac', out.width='80%'}
+```{r columaciunac-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Problema columna CiuNac', out.width='80%'}
 knitr::include_graphics("Imágenes/conexiondatos11.jpg")
 ```
 
 En este mismo menú desplegable se encuentra una opción llamada Describir, al dar clic en esta opción Tableau abre una ventana que muestra una descripción corta de la columna, algo similar a la función summary() de R. En la figura \@ref(fig:descripcion-fig) se muestra la descripción de la variable "Dep Nac", esta permite visualizar el tipo de campo que en este caso es dicreto, contiene valores faltantes y en la parte inferior muestra una lista de los miembros más dominantes en este caso 20 de los 31 miembros totales. 
 
-```{r descripcion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción columna Dep_Nac', out.width='80%'}
+```{r descripcion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Descripción columna DepNac', out.width='80%'}
 knitr::include_graphics("Imágenes/conexiondatos12.jpg")
 ```
 
@@ -457,7 +457,7 @@ Tableau no permite hacer una limpieza y preparación de datos, por tal razón la
 
 La primera observación al conectarse al conjunto de datos "Datos.xlsx" es que hay algunas columnas que no se tomaron como debería, por ejemplo, las variables relacionadas con la ubicación geográfica como latitud y longitud de la cuidad de nacimiento, para esto se debe,
 
-1.	Hacer clic en el icono “Abc” y en el menú que se despliega seleccionar Número(decimal).
+1.	Hacer clic en el icono "Abc" y en el menú que se despliega seleccionar Número(decimal).
 
 ```{r geograficas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar tipo de columna', out.width='40%'}
 knitr::include_graphics("Imágenes/conexiondatos21.jpg")
@@ -498,7 +498,7 @@ knitr::include_graphics("Imágenes/analisis2.jpg")
 ```
 Con esto se obtiene un gráfico de barras, donde cada barra representa el periodo y la altura de dicha barra es la cantidad de estudiantes graduados en ese periodo. 
 
-3.	Se quiere realizar un gráfico de líneas y no de barras, para cambiarlo en el estante marcas haga clic en el menú desplegable que en el momento se encuentra en “Automático” y seleccione línea. 
+3.	Se quiere realizar un gráfico de líneas y no de barras, para cambiarlo en el estante marcas haga clic en el menú desplegable que en el momento se encuentra en "Automático" y seleccione línea. 
 
 ```{r paso3lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Cambiar la marca Automático por Línea', out.width='60%'}
 knitr::include_graphics("Imágenes/analisis3.jpg")
@@ -508,7 +508,7 @@ Hasta el momento la visualización se ve de esta manera.
 ```{r paso3-1lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Vista previa de la viasualización', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis4.jpg")
 ```
-4.	Observe que hay un espacio vacío en el lienzo para ajustar la visualización a todo el lienzo, ubíquese en la barra de herramientas y haga clic en el menú desplegable de “Estándar” y seleccione “Ajustar anchura”, con esto el grafico de líneas ocupara todo el lienzo. 
+4.	Observe que hay un espacio vacío en el lienzo para ajustar la visualización a todo el lienzo, ubíquese en la barra de herramientas y haga clic en el menú desplegable de "Estándar" y seleccione "Ajustar anchura", con esto el grafico de líneas ocupara todo el lienzo. 
 
 ```{r paso4lineas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Ajustar tamaño de la visualización', out.width='20%'}
 knitr::include_graphics("Imágenes/analisis5.jpg")
@@ -618,7 +618,7 @@ El título de a visualización y de la hoja duplicada es Evolución histórica d
 ```{r lineassegmentadoporduplicacion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Gráfico de líneas segmentado', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis22.jpg")
 ```
-Note que la descripción emergente no muestra la modalidad de formación a la que pertenece cada estudiante graduado por lo tanto se debe editar, agregando “Modalidad de formación: <Tipo Nivel>” donde :  y <Tipo Nivel> se encuentran separados con un Tab; Modalidad de formación: debe ser escrito en el gris más oscuro disponible en la paleta y <Tipo Nivel> en negro. 
+Note que la descripción emergente no muestra la modalidad de formación a la que pertenece cada estudiante graduado por lo tanto se debe editar, agregando "Modalidad de formación: <Tipo Nivel>" donde :  y <Tipo Nivel> se encuentran separados con un Tab; Modalidad de formación: debe ser escrito en el gris más oscuro disponible en la paleta y <Tipo Nivel> en negro. 
 
 ```{r lineassegmentadodescripcion-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Editar descripción emergente', out.width='80%'}
 knitr::include_graphics("Imágenes/analisis23.jpg")
@@ -964,7 +964,7 @@ knitr::include_graphics("Imágenes/analisis60.jpg")
 knitr::include_graphics("Imágenes/analisis61.jpg")
 ```
 
-16.	Para tener aun mas claridad en la vista e creara un campo calculado que identifique si el punto esta fuera o dentro de los límites de control. Cree un nuevo campo calculado y asigne el nombre de “¿Está dentro del límite de control?” y en el espacio en blanco escriba
+16.	Para tener aun mas claridad en la vista e creara un campo calculado que identifique si el punto esta fuera o dentro de los límites de control. Cree un nuevo campo calculado y asigne el nombre de "¿Está dentro del límite de control?" y en el espacio en blanco escriba
 
 **IF COUNT([Year Semester]) > [Límite superior]**
 
@@ -1149,7 +1149,7 @@ La base de datos original no posee un campo que contenga estos valores de meta, 
 
 **ELSE "6000" END**
 
-Por ejemplo, en el primer renglón se le esta indicando que si el campo Sede Nombre Mat inicia con “Ama” asigne como meta 200, finalmente haga clic en Aceptar para guardar el campo. 
+Por ejemplo, en el primer renglón se le esta indicando que si el campo Sede Nombre Mat inicia con "Ama" asigne como meta 200, finalmente haga clic en Aceptar para guardar el campo. 
 
 ```{r campocalculadometas-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Crear campo calculado con metas por sede', out.width='70%'}
 knitr::include_graphics("Imágenes/analisis85.jpg")
@@ -1296,13 +1296,13 @@ knitr::include_graphics("Imágenes/analisis102.jpg")
 
 La georreferenciación es una de las herramientas más apropiadas cuando se desea mostrar la procedencia de los registros a nivel de ciudad, municipio o departamento; en el conjunto de datos que se esta trabajando se tiene información sobre la longitud y la latitud de la ciudad de nacimiento, el nombre de la ciudad y el departamento. 
 
-Inicialmente se deben asignar funciones geográficas a los campos que contienen el departamento y la ciudad de nacimiento ya que estas fueron leídas por Tableau como cadenas, haga clic sobre el icono “Abc” del campo Ciu Nac, seleccione función geográfica y Provincia/Municipio/Condado.
+Inicialmente se deben asignar funciones geográficas a los campos que contienen el departamento y la ciudad de nacimiento ya que estas fueron leídas por Tableau como cadenas, haga clic sobre el icono "Abc" del campo Ciu Nac, seleccione función geográfica y Provincia/Municipio/Condado.
 
 ```{r funciongeografica-fig, echo=FALSE, fig.align='center', fig.asp=.75, fig.cap='Asignación de función geográfica', out.width='40%'}
 knitr::include_graphics("Imágenes/analisis103.png")
 ```
 
-Para el campo Dep Nac realice el mismo proceso, pero como función geográfica seleccione CC.AA./Estado/Provincia/Dpto. Debe notar que los iconos de estos campos cambiaron de “Abc” a un globo terráqueo que significa que ahora son variables con funciones geográficas. 
+Para el campo Dep Nac realice el mismo proceso, pero como función geográfica seleccione CC.AA./Estado/Provincia/Dpto. Debe notar que los iconos de estos campos cambiaron de "Abc" a un globo terráqueo que significa que ahora son variables con funciones geográficas. 
 
 Luego de tener listas las variables a usar es momento de hacer mapas, inicialmente se hará un mapa que contenga el total de graduados por departamento para el periodo 2020-1.
 

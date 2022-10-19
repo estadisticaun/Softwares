@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3.1 Generalidades | Softwares para la visualización estadística</title>
+  <meta name="description" content="3.1 Generalidades | Softwares para la visualización estadística" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3.1 Generalidades | Softwares para la visualización estadística" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3.1 Generalidades | Softwares para la visualización estadística" />
+  
+  
+  
+
+<meta name="author" content="Camila Acosta Ramirez" />
+
+
+<meta name="date" content="2022-10-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="3-flourish.html"/>
+<link rel="next" href="3.2-formanavegacionflourish.html"/>
+<script src="libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Visualización estadística</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#portada" id="toc-portada">Portada<span></span></a></li>
+<li><a href="1-intro.html#intro" id="toc-intro"><span class="toc-section-number">1</span> Introduccción<span></span></a></li>
+<li><a href="2-powerbi.html#powerbi" id="toc-powerbi"><span class="toc-section-number">2</span> Power BI<span></span></a>
+<ul>
+<li><a href="2.1-generalidadespowerbi.html#generalidadespowerbi" id="toc-generalidadespowerbi"><span class="toc-section-number">2.1</span> Generalidades<span></span></a>
+<ul>
+<li><a href="2.1-generalidadespowerbi.html#qué-es-power-bi" id="toc-qué-es-power-bi"><span class="toc-section-number">2.1.1</span> ¿Qué es Power BI?<span></span></a></li>
+<li><a href="2.1-generalidadespowerbi.html#principales-ventajas-de-power-bi" id="toc-principales-ventajas-de-power-bi"><span class="toc-section-number">2.1.2</span> Principales ventajas de Power BI<span></span></a></li>
+<li><a href="2.1-generalidadespowerbi.html#principales-desventajas-de-power-bi" id="toc-principales-desventajas-de-power-bi"><span class="toc-section-number">2.1.3</span> Principales desventajas de Power BI<span></span></a></li>
+<li><a href="2.1-generalidadespowerbi.html#productos-de-power-bi" id="toc-productos-de-power-bi"><span class="toc-section-number">2.1.4</span> Productos de Power BI<span></span></a></li>
+<li><a href="2.1-generalidadespowerbi.html#precios-de-power-bi" id="toc-precios-de-power-bi"><span class="toc-section-number">2.1.5</span> Precios de Power BI<span></span></a></li>
+</ul></li>
+<li><a href="2.2-instalación-de-power-bi-desktop.html#instalación-de-power-bi-desktop" id="toc-instalación-de-power-bi-desktop"><span class="toc-section-number">2.2</span> Instalación de Power BI Desktop<span></span></a></li>
+<li><a href="2.3-compartir-el-trabajo-realizado-en-power-bi.html#compartir-el-trabajo-realizado-en-power-bi" id="toc-compartir-el-trabajo-realizado-en-power-bi"><span class="toc-section-number">2.3</span> Compartir el trabajo realizado en Power BI<span></span></a></li>
+<li><a href="2.4-formadenavegacionpower.html#formadenavegacionpower" id="toc-formadenavegacionpower"><span class="toc-section-number">2.4</span> Forma de navegación<span></span></a></li>
+<li><a href="2.5-flujotrabajopowerbi.html#flujotrabajopowerbi" id="toc-flujotrabajopowerbi"><span class="toc-section-number">2.5</span> Flujo de trabajo<span></span></a>
+<ul>
+<li><a href="2.5-flujotrabajopowerbi.html#conexionfuentesdatospowerbi" id="toc-conexionfuentesdatospowerbi"><span class="toc-section-number">2.5.1</span> Conexión a fuentes de datos<span></span></a></li>
+<li><a href="2.5-flujotrabajopowerbi.html#analisisdatospowerbi" id="toc-analisisdatospowerbi"><span class="toc-section-number">2.5.2</span> Análisis de datos<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="3-flourish.html#flourish" id="toc-flourish"><span class="toc-section-number">3</span> Flourish<span></span></a>
+<ul>
+<li><a href="3.1-generalidadesflourish.html#generalidadesflourish" id="toc-generalidadesflourish"><span class="toc-section-number">3.1</span> Generalidades<span></span></a>
+<ul>
+<li><a href="3.1-generalidadesflourish.html#qué-es-flourish" id="toc-qué-es-flourish"><span class="toc-section-number">3.1.1</span> ¿Qué es Flourish?<span></span></a></li>
+<li><a href="3.1-generalidadesflourish.html#principales-ventajas-de-flourish" id="toc-principales-ventajas-de-flourish"><span class="toc-section-number">3.1.2</span> Principales ventajas de Flourish<span></span></a></li>
+<li><a href="3.1-generalidadesflourish.html#principales-desventajas-de-flourish" id="toc-principales-desventajas-de-flourish"><span class="toc-section-number">3.1.3</span> Principales desventajas de Flourish<span></span></a></li>
+<li><a href="3.1-generalidadesflourish.html#productos-de-flourish" id="toc-productos-de-flourish"><span class="toc-section-number">3.1.4</span> Productos de Flourish<span></span></a></li>
+<li><a href="3.1-generalidadesflourish.html#precios-de-flourish" id="toc-precios-de-flourish"><span class="toc-section-number">3.1.5</span> Precios de Flourish<span></span></a></li>
+<li><a href="3.1-generalidadesflourish.html#instalación-de-flourish" id="toc-instalación-de-flourish"><span class="toc-section-number">3.1.6</span> Instalación de Flourish<span></span></a></li>
+<li><a href="3.1-generalidadesflourish.html#compartirtrabajoflourish" id="toc-compartirtrabajoflourish"><span class="toc-section-number">3.1.7</span> ¿Cómo compartir el trabajo?<span></span></a></li>
+</ul></li>
+<li><a href="3.2-formanavegacionflourish.html#formanavegacionflourish" id="toc-formanavegacionflourish"><span class="toc-section-number">3.2</span> Forma de navegación<span></span></a></li>
+<li><a href="3.3-flujo-de-trabajo.html#flujo-de-trabajo" id="toc-flujo-de-trabajo"><span class="toc-section-number">3.3</span> Flujo de trabajo<span></span></a>
+<ul>
+<li><a href="3.3-flujo-de-trabajo.html#análisis-de-datos" id="toc-análisis-de-datos"><span class="toc-section-number">3.3.1</span> Análisis de datos<span></span></a></li>
+<li><a href="3.3-flujo-de-trabajo.html#compartir-visualizaciones" id="toc-compartir-visualizaciones"><span class="toc-section-number">3.3.2</span> Compartir visualizaciones<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="4-conclu.html#conclu" id="toc-conclu"><span class="toc-section-number">4</span> Conclusiones<span></span></a></li>
+<li><a href="referencias.html#referencias" id="toc-referencias">Referencias<span></span></a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Softwares para la visualización estadística</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="generalidadesflourish" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Generalidades<a href="3.1-generalidadesflourish.html#generalidadesflourish" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="qué-es-flourish" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> ¿Qué es Flourish?<a href="3.1-generalidadesflourish.html#qué-es-flourish" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Flourish es una aplicación web especializada en crear presentaciones y visualizaciones de gran impacto y utilidad a partir de datos, uno de los objetivos principales de esta compañía es explorar y explicar los datos con hermosas visualizaciones e historias, es posible publicar, presentar o descargar el trabajo realizado sin la necesidad de codificar ni instalar un software.</p>
+<p>Esta aplicación fue cofundada por Duncan Clark y Robin Houston. El primero de ellos tiene experiencia en narración de historias en periodismo de datos y publicación, mientras que Robin es matemático y desarrollador, esta pareja comenzó a trabajar en visualizaciones como un proyecto paralelo en 2012, sus primeros proyectos generaron tanto interés que decidieron crean un estudio de visualizaciones llamado Kiln. Durante los siguientes años trabajaron con diversos clientes entre los cuales se encuentran Google, la OMS y LSE, y algunos premios. Durante todo este tiempo, Duncan y Robin trabajaron en una idea: una herramienta que permitiera a los no codificadores crear visualizaciones e historias de alta calidad sin el costo y las demoras de encargar proyectos a medida. Para 2016, tenían una visión clara para tal herramienta y nació Flourish.</p>
+</div>
+<div id="principales-ventajas-de-flourish" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Principales ventajas de Flourish<a href="3.1-generalidadesflourish.html#principales-ventajas-de-flourish" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Sencillez de manejo</li>
+</ul>
+<p>Para acceder a la versión gratuita es necesario la creación de una cuenta o perfil, una vez realizado esto se puede iniciar a trabajar inmediatamente, la curva de aprendizaje es muy rápida y corta, todas las visualizaciones que se pueden realizar con esta herramienta están apoyadas por ejemplos prefabricados con datos falsos, lo único que se deba hacer es adaptar nuestros datos a la forma en la que se encuentran en los ejemplos.</p>
+<ul>
+<li>Capacidad de personalización</li>
+</ul>
+<p>Permite usar temas personalizados que se alinean con las pautas de su marca o empresa, existe la posibilidad de crear o encargar plantillas a medida usando el SDK para desarrolladores.</p>
+<ul>
+<li>Variedad de visualizaciones</li>
+</ul>
+<p>El portafolio ofrecido por Flourish es bastante amplio, incluye todo tipo de gráficos y mapas atractivos, ofrece desde gráficos tradicionales como barras, áreas, líneas hasta mapas en los cuales se pueden marcar tanto localidades concretas como polígonos geográficos. Una de sus funcionalidades más atractivas es incluir movimiento en los gráficos de una forma automatizada a través del uso de fechas.</p>
+<ul>
+<li>Mejora continua de la plataforma</li>
+</ul>
+<p>La herramienta posee un <a href="https://flourish.studio/blog/">blog propio</a> en el cual se informa a los usuarios las novedades en las cuales se encuentran trabajando, una de esas novedades es la posibilidad de tomar datos en tiempo real lo que permite que los gráficos evolucionen en función de una variable temporal.</p>
+<ul>
+<li>Adaptación a diversos tamaños de pantalla</li>
+</ul>
+<p>Las visualizaciones creadas usando Flourish funcionan en todos los tamaños de pantalla, solo es necesario generar una vista previa al momento de desarrollar los gráficos y publicarla.</p>
+<ul>
+<li>Conexión a varias fuentes de datos</li>
+</ul>
+<p>Permite la conexión a hojas de cálculo, conexión a fuentes en vivo o integración con la API.</p>
+<ul>
+<li>Sin instalación</li>
+</ul>
+<p>Esta aplicación no requiere instalación, ya que es completamente web solo es necesario poseer un navegador para empezar a crear.</p>
+<ul>
+<li>Flujos de trabajo</li>
+</ul>
+<p>Los flujos de trabajo permiten al editor decidir quienes puede publicar de manera libre o quienes deben tener su aprobación.</p>
+<ul>
+<li>Recurso de ayudas</li>
+</ul>
+<p>Todas las versiones disponen de recursos prácticos como las plantillas de gráficos y una página web de <a href="https://help.flourish.studio/">ayuda</a>, pero el asesoramiento y soporte técnico esta dedicado a los clientes empresariales.</p>
+<ul>
+<li>Alianzas</li>
+</ul>
+<p>Flourish cuenta con una alianza importante con el Google News Lab con la cual se logra acceso a las condiciones premium para medios de comunicación y estudiantes.</p>
+<ul>
+<li>Facilidad para compartir el trabajo</li>
+</ul>
+<p>Permite al usuario publicar y compartir visualizaciones o incrustarlas en un sitio web.</p>
+</div>
+<div id="principales-desventajas-de-flourish" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Principales desventajas de Flourish<a href="3.1-generalidadesflourish.html#principales-desventajas-de-flourish" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Al usar la versión gratuita los trabajos realizados usando esta herramienta permanecerán públicos y cualquiera puede acceder a ellos, esto es bueno para comunicadores y medios, pero no para organizaciones que manejan información sensible.</p></li>
+<li><p>Preparación inicial de datos.</p></li>
+<li><p>La forma de funcionamiento se basa en plantillas prefabricadas que ayudan con la facilidad de uso, pero es posible tener que cambiar la estructura de sus datos para que se acomoden a la forma que posee cada plantilla.</p></li>
+<li><p>No posee material de apoyo como videos o aprendizaje guiado.</p></li>
+<li><p>Solo permite la creación de historias tipo diapositiva y no tableros que combinen varios objetos visuales.</p></li>
+</ul>
+</div>
+<div id="productos-de-flourish" class="section level3 hasAnchor" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> Productos de Flourish<a href="3.1-generalidadesflourish.html#productos-de-flourish" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Flourish Público: este producto es la versión gratuita de Flourish con la cual se puede crear, publicar y compartir visualizaciones, pero todos los datos son públicos, es una herramienta útil para explorar o de uso educativo.
+<ul>
+<li>Todos los datos y proyectos son públicos.</li>
+<li>Compartir e insertar proyectos.</li>
+<li>Crear historias y presentaciones.</li>
+<li>Compatible con dispositivos móviles y tabletas.</li>
+</ul></li>
+<li>Flourish Personal: es una licencia que ofrece privacidad y soporte ideal para particulares y trabajo con datos sensibles.
+<ul>
+<li>Ofrece todos los servicios de Flourish Público.</li>
+<li>Posibilidad de mantener los datos y proyectos privados.</li>
+<li>Compartir, insertar o auto alojar con atribucuón.</li>
+<li>Soporte por correo electrónico.</li>
+</ul></li>
+<li>Flourish Business Lite: es un plan ideal para inicios de negocio con características de marca y equipo, adicional a los servicios ofrecidos en la versión Personal, también ofrece:
+<ul>
+<li>Incorporación de varios usuarios en equipo.</li>
+<li>Tema personalizado con fuente de Google.</li>
+<li>Publicación protegida por contraseña.</li>
+<li>Soporte prioritario.</li>
+</ul></li>
+<li>Flourish Business Pro y Enterprise: al acceder a este producto se liberan todos los servicios y utilidades de la plataforma Flourish, sus paquetes pueden incluir:
+<ul>
+<li>Plantillas y funciones premium.</li>
+<li>Temas personalizados en sus fuentes/estilos.</li>
+<li>Escritura de desplazamiento sin código en su CMS.</li>
+<li>Conexión a CSV en vivo o Google sheets.</li>
+<li>SDK para plantillas personalizadas privadas.</li>
+<li>Gestor de cuentas y planes de formación.</li>
+</ul></li>
+</ul>
+</div>
+<div id="precios-de-flourish" class="section level3 hasAnchor" number="3.1.5">
+<h3><span class="header-section-number">3.1.5</span> Precios de Flourish<a href="3.1-generalidadesflourish.html#precios-de-flourish" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La versión personal de Flourish tiene un costo de <span class="math inline">\(\$69\)</span> USD por mes y permite cancelación en cualquier momento, Business Lite posee un costo anual desde los <span class="math inline">\(\$4999\)</span> USD, finalmente la versión Business Pro y Enterprise no tiene un costo ya que los paquetes pueden ser construidos según las necesidades de la organización.</p>
+</div>
+<div id="instalación-de-flourish" class="section level3 hasAnchor" number="3.1.6">
+<h3><span class="header-section-number">3.1.6</span> Instalación de Flourish<a href="3.1-generalidadesflourish.html#instalación-de-flourish" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para usar esta herramienta de visualización no es necesario la instalación de softwares ya que es una aplicación completamente web, lo que si es necesario es crear una cuenta o perfil para iniciar a crear gráficos y analizar los datos; debe ingresar a la página principal de <a href="https://flourish.studio/">Flourish</a> y seleccionar la opción registrarse ubicada en la esquina superior derecha. Al hacer clic sobre este botón le pedirá el inicio de sesión si ya se encuentra registrado o también inicia sesión por medio de su cuenta de Google, finalmente presenta la alternativa de inscribirse si aún no se encuentra registrado o no se desea iniciar con Google.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:crearcuentaflourish-fig"></span>
+<img src="Imágenes/flourish4.jpg" alt="Registro en Flourish" width="85%" />
+<p class="caption">
+Figura 3.1: Registro en Flourish
+</p>
+</div>
+</div>
+<div id="compartirtrabajoflourish" class="section level3 hasAnchor" number="3.1.7">
+<h3><span class="header-section-number">3.1.7</span> ¿Cómo compartir el trabajo?<a href="3.1-generalidadesflourish.html#compartirtrabajoflourish" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Como ya se mencionó desde la versión gratuita es posible publicar y compartir o incrustar en un sitio web y descargar los gráficos como imágenes planas, para esto en la esquina superior derecha se ubica un botón llamado Exportar y publicar, al hacer clic sobre el encontrara la opción de publicar para compartir e insertar, descargar imagen o descargar HTML, este último es válido para la versión premium o personal de Flourish.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:compartirtrabajoflourish-fig"></span>
+<img src="Imágenes/flourish1.jpg" alt="Opciones de exportación y publicación" width="40%" />
+<p class="caption">
+Figura 3.2: Opciones de exportación y publicación
+</p>
+</div>
+<p>Al hacer clic sobre Publicar para compartir e insertar aparecerá un mensaje en cual debe confirmar la publicación, luego de publicado se habilita un enlace y un código para incrustación web.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:compartirtrabajoflourishpublicar-fig"></span>
+<img src="Imágenes/flourish2.jpg" alt="Opciones de publicación" width="40%" />
+<p class="caption">
+Figura 3.3: Opciones de publicación
+</p>
+</div>
+<p>También es posible descargar la imagen de la visualización creada, para esto haga clic sobre descargar imagen, en la ventana de descarga debe asignar un nombre a la imagen, seleccionar un formato y elegir un tamaño.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:compartirtrabajoflourishdescargarimagen-fig"></span>
+<img src="Imágenes/flourish3.jpg" alt="Descarga de imágenes" width="40%" />
+<p class="caption">
+Figura 3.4: Descarga de imágenes
+</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="3-flourish.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3.2-formanavegacionflourish.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Softwares.pdf", "Softwares.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

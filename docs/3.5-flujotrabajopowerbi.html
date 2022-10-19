@@ -1,0 +1,2177 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3.5 Flujo de trabajo | Softwares para la visualización estadística</title>
+  <meta name="description" content="3.5 Flujo de trabajo | Softwares para la visualización estadística" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3.5 Flujo de trabajo | Softwares para la visualización estadística" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3.5 Flujo de trabajo | Softwares para la visualización estadística" />
+  
+  
+  
+
+<meta name="author" content="Camila Acosta Ramirez" />
+
+
+<meta name="date" content="2022-10-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="3.4-formadenavegacionpower.html"/>
+<link rel="next" href="4-flourish.html"/>
+<script src="libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Visualización estadística</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#portada" id="toc-portada">Portada<span></span></a></li>
+<li><a href="1-intro.html#intro" id="toc-intro"><span class="toc-section-number">1</span> Introduccción<span></span></a></li>
+<li><a href="2-tableau.html#tableau" id="toc-tableau"><span class="toc-section-number">2</span> Tableau<span></span></a>
+<ul>
+<li><a href="2.1-generalidades.html#generalidades" id="toc-generalidades"><span class="toc-section-number">2.1</span> Generalidades<span></span></a>
+<ul>
+<li><a href="2.1-generalidades.html#qué-es-tableau" id="toc-qué-es-tableau"><span class="toc-section-number">2.1.1</span> ¿Qué es Tableau?<span></span></a></li>
+<li><a href="2.1-generalidades.html#principales-ventajas-de-tableau" id="toc-principales-ventajas-de-tableau"><span class="toc-section-number">2.1.2</span> Principales ventajas de Tableau<span></span></a></li>
+<li><a href="2.1-generalidades.html#principales-desventajas-de-tableau" id="toc-principales-desventajas-de-tableau"><span class="toc-section-number">2.1.3</span> Principales desventajas de Tableau<span></span></a></li>
+<li><a href="2.1-generalidades.html#productos-de-tableau" id="toc-productos-de-tableau"><span class="toc-section-number">2.1.4</span> Productos de Tableau<span></span></a></li>
+<li><a href="2.1-generalidades.html#precios-de-tableau" id="toc-precios-de-tableau"><span class="toc-section-number">2.1.5</span> Precios de Tableau<span></span></a></li>
+<li><a href="2.1-generalidades.html#compartirtrabajo" id="toc-compartirtrabajo"><span class="toc-section-number">2.1.6</span> Compartir el trabajo realizado en Tableau<span></span></a></li>
+</ul></li>
+<li><a href="2.2-instalación-de-tableau-desktop-public.html#instalación-de-tableau-desktop-public" id="toc-instalación-de-tableau-desktop-public"><span class="toc-section-number">2.2</span> Instalación de Tableau Desktop Public<span></span></a></li>
+<li><a href="2.3-formadenavegacion.html#formadenavegacion" id="toc-formadenavegacion"><span class="toc-section-number">2.3</span> Forma de navegación<span></span></a></li>
+<li><a href="2.4-flujo-de-trabajo.html#flujo-de-trabajo" id="toc-flujo-de-trabajo"><span class="toc-section-number">2.4</span> Flujo de trabajo<span></span></a>
+<ul>
+<li><a href="2.4-flujo-de-trabajo.html#conexión-a-fuentes-de-datos" id="toc-conexión-a-fuentes-de-datos"><span class="toc-section-number">2.4.1</span> Conexión a fuentes de datos<span></span></a></li>
+<li><a href="2.4-flujo-de-trabajo.html#analisisdedatos" id="toc-analisisdedatos"><span class="toc-section-number">2.4.2</span> Análisis de datos<span></span></a></li>
+<li><a href="2.4-flujo-de-trabajo.html#compartir-las-visualizaciones" id="toc-compartir-las-visualizaciones"><span class="toc-section-number">2.4.3</span> Compartir las visualizaciones<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="3-powerbi.html#powerbi" id="toc-powerbi"><span class="toc-section-number">3</span> Power BI<span></span></a>
+<ul>
+<li><a href="3.1-generalidadespowerbi.html#generalidadespowerbi" id="toc-generalidadespowerbi"><span class="toc-section-number">3.1</span> Generalidades<span></span></a>
+<ul>
+<li><a href="3.1-generalidadespowerbi.html#qué-es-power-bi" id="toc-qué-es-power-bi"><span class="toc-section-number">3.1.1</span> ¿Qué es Power BI?<span></span></a></li>
+<li><a href="3.1-generalidadespowerbi.html#principales-ventajas-de-power-bi" id="toc-principales-ventajas-de-power-bi"><span class="toc-section-number">3.1.2</span> Principales ventajas de Power BI<span></span></a></li>
+<li><a href="3.1-generalidadespowerbi.html#principales-desventajas-de-power-bi" id="toc-principales-desventajas-de-power-bi"><span class="toc-section-number">3.1.3</span> Principales desventajas de Power BI<span></span></a></li>
+<li><a href="3.1-generalidadespowerbi.html#productos-de-power-bi" id="toc-productos-de-power-bi"><span class="toc-section-number">3.1.4</span> Productos de Power BI<span></span></a></li>
+<li><a href="3.1-generalidadespowerbi.html#precios-de-power-bi" id="toc-precios-de-power-bi"><span class="toc-section-number">3.1.5</span> Precios de Power BI<span></span></a></li>
+</ul></li>
+<li><a href="3.2-instalación-de-power-bi-desktop.html#instalación-de-power-bi-desktop" id="toc-instalación-de-power-bi-desktop"><span class="toc-section-number">3.2</span> Instalación de Power BI Desktop<span></span></a></li>
+<li><a href="3.3-compartir-el-trabajo-realizado-en-power-bi.html#compartir-el-trabajo-realizado-en-power-bi" id="toc-compartir-el-trabajo-realizado-en-power-bi"><span class="toc-section-number">3.3</span> Compartir el trabajo realizado en Power BI<span></span></a></li>
+<li><a href="3.4-formadenavegacionpower.html#formadenavegacionpower" id="toc-formadenavegacionpower"><span class="toc-section-number">3.4</span> Forma de navegación<span></span></a></li>
+<li><a href="3.5-flujotrabajopowerbi.html#flujotrabajopowerbi" id="toc-flujotrabajopowerbi"><span class="toc-section-number">3.5</span> Flujo de trabajo<span></span></a>
+<ul>
+<li><a href="3.5-flujotrabajopowerbi.html#conexionfuentesdatospowerbi" id="toc-conexionfuentesdatospowerbi"><span class="toc-section-number">3.5.1</span> Conexión a fuentes de datos<span></span></a></li>
+<li><a href="3.5-flujotrabajopowerbi.html#analisisdatospowerbi" id="toc-analisisdatospowerbi"><span class="toc-section-number">3.5.2</span> Análisis de datos<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="4-flourish.html#flourish" id="toc-flourish"><span class="toc-section-number">4</span> Flourish<span></span></a>
+<ul>
+<li><a href="4.1-generalidadesflourish.html#generalidadesflourish" id="toc-generalidadesflourish"><span class="toc-section-number">4.1</span> Generalidades<span></span></a>
+<ul>
+<li><a href="4.1-generalidadesflourish.html#qué-es-flourish" id="toc-qué-es-flourish"><span class="toc-section-number">4.1.1</span> ¿Qué es Flourish?<span></span></a></li>
+<li><a href="4.1-generalidadesflourish.html#principales-ventajas-de-flourish" id="toc-principales-ventajas-de-flourish"><span class="toc-section-number">4.1.2</span> Principales ventajas de Flourish<span></span></a></li>
+<li><a href="4.1-generalidadesflourish.html#principales-desventajas-de-flourish" id="toc-principales-desventajas-de-flourish"><span class="toc-section-number">4.1.3</span> Principales desventajas de Flourish<span></span></a></li>
+<li><a href="4.1-generalidadesflourish.html#productos-de-flourish" id="toc-productos-de-flourish"><span class="toc-section-number">4.1.4</span> Productos de Flourish<span></span></a></li>
+<li><a href="4.1-generalidadesflourish.html#precios-de-flourish" id="toc-precios-de-flourish"><span class="toc-section-number">4.1.5</span> Precios de Flourish<span></span></a></li>
+<li><a href="4.1-generalidadesflourish.html#instalación-de-flourish" id="toc-instalación-de-flourish"><span class="toc-section-number">4.1.6</span> Instalación de Flourish<span></span></a></li>
+<li><a href="4.1-generalidadesflourish.html#compartirtrabajoflourish" id="toc-compartirtrabajoflourish"><span class="toc-section-number">4.1.7</span> ¿Cómo compartir el trabajo?<span></span></a></li>
+</ul></li>
+<li><a href="4.2-formanavegacionflourish.html#formanavegacionflourish" id="toc-formanavegacionflourish"><span class="toc-section-number">4.2</span> Forma de navegación<span></span></a></li>
+<li><a href="4.3-flujo-de-trabajo-1.html#flujo-de-trabajo-1" id="toc-flujo-de-trabajo-1"><span class="toc-section-number">4.3</span> Flujo de trabajo<span></span></a>
+<ul>
+<li><a href="4.3-flujo-de-trabajo-1.html#análisis-de-datos" id="toc-análisis-de-datos"><span class="toc-section-number">4.3.1</span> Análisis de datos<span></span></a></li>
+<li><a href="4.3-flujo-de-trabajo-1.html#compartir-visualizaciones" id="toc-compartir-visualizaciones"><span class="toc-section-number">4.3.2</span> Compartir visualizaciones<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="5-conclu.html#conclu" id="toc-conclu"><span class="toc-section-number">5</span> Conclusiones<span></span></a></li>
+<li><a href="referencias.html#referencias" id="toc-referencias">Referencias<span></span></a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Softwares para la visualización estadística</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="flujotrabajopowerbi" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Flujo de trabajo<a href="3.5-flujotrabajopowerbi.html#flujotrabajopowerbi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="conexionfuentesdatospowerbi" class="section level3 hasAnchor" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Conexión a fuentes de datos<a href="3.5-flujotrabajopowerbi.html#conexionfuentesdatospowerbi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Antes de iniciar con la creación de visualizaciones y el análisis de datos debe conectar Power BI a estos, este software de visualización permite conectarse a muchos tipos de fuentes de datos, incluidas bases de datos locales, libros de trabajo de Microsoft Excel y servicios en la nube, puede explorar todas las opciones de conexión haciendo clic en obtener datos en la pantalla introductoria de Power BI.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:obtenerdatospbi-fig"></span>
+<img src="Imágenes/powerbi8.jpg" alt="Obtener datos" width="60%" />
+<p class="caption">
+Figura 3.8: Obtener datos
+</p>
+</div>
+<p>En este caso la conexión a datos se hará a través de un archivo Excel, inicialmente se hará la conexión a las bases de datos de estudiantes graduados a nivel de microdatos para explorar algunas funcionalidades del panel Power Query.</p>
+<ol style="list-style-type: decimal">
+<li>Abrir Power BI y hacer clic en obtener datos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:conexiondatos1-fig"></span>
+<img src="Imágenes/powerbi9.jpg" alt="Pantalla inicial" width="80%" />
+<p class="caption">
+Figura 3.9: Pantalla inicial
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>En el cuadro de diálogo Obtener datos debe seleccionar Excel y hacer clic en conectar, al hacer esto se abre un cuadro de diálogo que permite navegar a través de las carpetas de su equipo para ubicar la localización de las bases de datos. Debe seleccionar una de las bases y dar clic en botón “Abrir”.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:conexiondatos2-fig"></span>
+<img src="Imágenes/powerbi10.jpg" alt="Navegación entre carpetas" width="60%" />
+<p class="caption">
+Figura 3.10: Navegación entre carpetas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Completado el paso anterior se abre un nuevo cuadro de diálogo llamado Navegar que en su panel izquierdo se ubica una lista de las hojas que componen el archivo Excel, debe seleccionar una y luego hacer clic en Cargar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:conexiondatos3-fig"></span>
+<img src="Imágenes/powerbi11.jpg" alt="Navegador" width="80%" />
+<p class="caption">
+Figura 3.11: Navegador
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Después de cargados los datos haga clic en Transformar datos, ubicado en la barra de herramientas, obtendrá una nueva ventana llamada Editor de Power Query que permite realizar algunas transformaciones sobre la base de datos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:conexiondatos4-fig"></span>
+<img src="Imágenes/powerbi12.jpg" alt="Panel Power Query" width="80%" />
+<p class="caption">
+Figura 3.12: Panel Power Query
+</p>
+</div>
+<p>Este editor en su barra de herramientas contiene botones útiles que permiten interactuar con los datos, como transformaciones, creación de nuevas columnas, herramientas y ayuda. En el panel lateral izquierdo encontrara una lista de las tablas a las que se encuentra conectado, en este caso la hoja del archivo Excel a la cual se realizó la conexión es “P2009G”, en la parte central del editor se ubica una vista previa de los datos, por último, el panel Configuración de la consulta muestra las propiedades y los pasos aplicados para transformar la base de datos.</p>
+<p>Observe que cada columna tiene asociado un icono que indica si es una variable numérica o de texto, puede editar este tipo de datos haciendo clic sobre el icono y seleccionando el tipo de dato, por ejemplo, la columna semestre debe cambiarse de numérica a texto.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cambiartipodato-fig"></span>
+<img src="Imágenes/powerbi13.jpg" alt="Cambiar tipo de dato" width="30%" />
+<p class="caption">
+Figura 3.13: Cambiar tipo de dato
+</p>
+</div>
+<p>Al hacer clic en el menú desplegable de cada variable encontrara información sobre los datos que contiene, opciones de orden como ascendente y descendente, eliminar vacíos y añadir filtros de texto, muy similar a lo encontrado en Excel cuando se quiere aplicar filtros a los datos. En la pestaña filtros de texto se tiene diversas opciones para filtrar los datos que permiten especificar si es igual o no, el inicio o final, entre otras opciones.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:opcionesfiltrado-fig"></span>
+<img src="Imágenes/powerbi14.jpg" alt="Menú de cada variable" width="50%" />
+<p class="caption">
+Figura 3.14: Menú de cada variable
+</p>
+</div>
+<p>A modo de ejemplo puede seleccionar únicamente Antioquia y obtendrá una base de datos que solo contiene las observaciones en las cuales se cumple el filtro aplicado, es decir donde DEP_NAC sea Antioquia.</p>
+<p>Haciendo clic derecho sobre el nombre de una variable se despliega un menú con diversas opciones, entre ellas copiar, quitar, duplicar, reemplazar, dividir, agrupar, entre otras; como se muestra en la figura <a href="3.5-flujotrabajopowerbi.html#fig:opcionesdecolumna-fig">3.15</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:opcionesdecolumna-fig"></span>
+<img src="Imágenes/powerbi15.jpg" alt="Opciones de cada variable" width="40%" />
+<p class="caption">
+Figura 3.15: Opciones de cada variable
+</p>
+</div>
+<p>Al final de la base de datos se agregaron dos columnas llamadas columna56 y columna57 respectivamente, es necesario eliminarlas ya que no hacen parte del conjunto de variables a analizar, para esto haga clic derecho sobre el nombre de la columna y seleccione quitar.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:quitarcolumnas-fig"></span>
+<img src="Imágenes/powerbi16.jpg" alt="Eliminar columnas" width="50%" />
+<p class="caption">
+Figura 3.16: Eliminar columnas
+</p>
+</div>
+<p>La opción dividir columna presenta diferentes alternativas para realizar divisiones de columna tales como división por un delimitador, número de caracteres, posiciones y algunas opciones de texto como mayúsculas, minúsculas y dígitos; tal y como se muestra en la figura <a href="3.5-flujotrabajopowerbi.html#fig:opcionesdedivision-fig">3.17</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:opcionesdedivision-fig"></span>
+<img src="Imágenes/powerbi20.jpg" alt="Alternativas para dividir columnas" width="40%" />
+<p class="caption">
+Figura 3.17: Alternativas para dividir columnas
+</p>
+</div>
+<p>La siguiente columna que presenta problemas es la llamada CIU_NAC puesto que presenta una combinación de números y texto, para solucionar esto se debe usar la opción de división de dígito a no dígito.</p>
+<ul>
+<li>Haga clic derecho sobre la columna, en el menú desplegable seleccione dividir columna y de dígito a no dígito.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:dividirdigitoanodigito-fig"></span>
+<img src="Imágenes/powerbi21.jpg" alt="Dividir columnas usando de dígito a no dígito" width="70%" />
+<p class="caption">
+Figura 3.18: Dividir columnas usando de dígito a no dígito
+</p>
+</div>
+<p>Con esto se obtienen dos columnas, una de ellas contiene el número que en este caso corresponde al código del departamento y la otra variable contiene el nombre, tal y como se muestra en la figura <a href="3.5-flujotrabajopowerbi.html#fig:columnasdivididas-fig">3.19</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:columnasdivididas-fig"></span>
+<img src="Imágenes/powerbi22.jpg" alt="Vista previa de la columna Ciudad dividida" width="80%" />
+<p class="caption">
+Figura 3.19: Vista previa de la columna Ciudad dividida
+</p>
+</div>
+<p>Un detalle importante es que el primer registro que pertenece a la ciudad de Sopó no contenía números por lo tanto para esta fila no se hizo la división.</p>
+<p>Cuando se tiene un separador en la columna es útil usar la división de columna por delimitador, en este caso la variable PROGRAMA_S se compone del nombre del programa y la sede a la que pertenece, estos dos atributos se encuentran separados por un guion el cual se usara como delimitador para realizar la división.</p>
+<ul>
+<li>Haga clic derecho sobre la columna de interés, seleccione división y por delimitador.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:columnasdivididasdelimitador-fig"></span>
+<img src="Imágenes/powerbi17.jpg" alt="Dividir columnas usando un delimitador" width="70%" />
+<p class="caption">
+Figura 3.20: Dividir columnas usando un delimitador
+</p>
+</div>
+<ul>
+<li>En la ventana emergente llamada dividir columna por delimitador seleccione personalizado y escriba un – en el siguiente espacio, por último, en la sección dividir en seleccione cada aparición del delimitador.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:configuraciondeldelimitador-fig"></span>
+<img src="Imágenes/powerbi18.jpg" alt="Configuración del delimitador" width="80%" />
+<p class="caption">
+Figura 3.21: Configuración del delimitador
+</p>
+</div>
+<p>Al seleccionar cada aparición del delimitador se obtienen dos columnas, una de ellas contiene el programa y la otra la sede a la que pertenece.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:columnadivididacondelimitador-fig"></span>
+<img src="Imágenes/powerbi19.jpg" alt="Columna programa- sede dividida" width="80%" />
+<p class="caption">
+Figura 3.22: Columna programa- sede dividida
+</p>
+</div>
+<p>La creación de grupos debe realizarse usando la pestaña agregar columnas y seleccionando columna condicional.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:columnacondicional-fig"></span>
+<img src="Imágenes/powerbi23.jpg" alt="Crear columna condicional" width="40%" />
+<p class="caption">
+Figura 3.23: Crear columna condicional
+</p>
+</div>
+<p>Como muestra la descripción de esta opción lo que permite es crear una nueva columna que agrega los valores de manera condicional de una columna que se seleccione, en este caso la variable de interés es EDAD_MOD, se crearan grupos para categorizar las edades. En la ventana emergente llamada agregar columna condicional se deben especificar las condiciones por las cuales se quiere agrupar, en ese caso debe llenar los campos como se muestra en la figura <a href="3.5-flujotrabajopowerbi.html#fig:agregarcolumnacondicional-fig">3.24</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:agregarcolumnacondicional-fig"></span>
+<img src="Imágenes/powerbi24.jpg" alt="Agregar columna condicional" width="80%" />
+<p class="caption">
+Figura 3.24: Agregar columna condicional
+</p>
+</div>
+<p>Al finalizar esta operación se crea una nueva columna llamada Grupo edad que contiene los grupos creados para la variable edad, dichos grupos fueron asignados de manera correcta y contiene algunos errores debido a que existen valores faltantes en la columna agrupada.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:columnacondicionalfinal-fig"></span>
+<img src="Imágenes/powerbi25.jpg" alt="Columna grupo edad" width="80%" />
+<p class="caption">
+Figura 3.25: Columna grupo edad
+</p>
+</div>
+<p>Otra funcionalidad importante que presenta el editor Power Query es la unión de bases de datos, estas alternativas se ubican en la barra de herramientas y el botón Combinar, las opciones disponibles son combinar consultas y anexar consultas, la primera permite hacer uniones por columna y la segunda permite hacer uniones por filas.</p>
+<p>Las uniones por columna son útiles cuando se quiere trabajar con dos columnas que se encuentran en diferentes conjuntos de datos, existen seis opciones de realizar las uniones por columnas:</p>
+<ul>
+<li>Externa izquierda: devuelve todos los registros de la tabla izquierda y solo los registros que coinciden con la tabla de la derecha</li>
+<li>Externa derecha: devuelve todos los registros de la tabla derecha y solo los registros que coinciden con la tabla de la izquierda.</li>
+<li>Externa completa: devuelve todos los registros de ambas tablas.</li>
+<li>Interna: devuelve únicamente los registros que están en ambas tablas.</li>
+<li>Anti izquierda: devuelve únicamente los registros de la tabla izquierda.</li>
+<li>Anti derecha: devuelve únicamente los registros de la tabla derecha.</li>
+</ul>
+<p>Los conjuntos de datos que se quieren analizar contienen las mismas columnas por lo que el interés se centra en realizar uniones por filas, se debe realizar la conexión a todas las fuentes de datos usando el botón nuevo origen, seleccionar Excel y cargar los datos, en el panel lateral izquierdo debe tener la lista de tablas a las que se conectó, como se muestra en la figura <a href="3.5-flujotrabajopowerbi.html#fig:listamicrodatos-fig">3.26</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:listamicrodatos-fig"></span>
+<img src="Imágenes/powerbi26.jpg" alt="Lista de tablas" width="80%" />
+<p class="caption">
+Figura 3.26: Lista de tablas
+</p>
+</div>
+<p>Ahora para realizar la unión de todas las tablas debe:</p>
+<ul>
+<li>Hacer clic en el botón combinar ubicado en la barra de herramientas hacia el lado derecho, seleccionar anexar consultas y anexar consultas para crear una nueva.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:combinardatos-fig"></span>
+<img src="Imágenes/powerbi27.jpg" alt="Combinar tablas de datos" width="35%" />
+<p class="caption">
+Figura 3.27: Combinar tablas de datos
+</p>
+</div>
+<ul>
+<li>En la ventana Anexar seleccione tres o mas tablas, en el panel tablas disponibles haga clic sobre cada tabla y clic sobre el botón agregar, por ultimo haga clic en el botón aceptar para guardar los cambios.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:anexardatos-fig"></span>
+<img src="Imágenes/powerbi28.jpg" alt="Anexar datos" width="80%" />
+<p class="caption">
+Figura 3.28: Anexar datos
+</p>
+</div>
+<p>En el panel Consultas obtendrá una nueva tabla llamada Anexar1 la cual posee la unión de todas las tablas a las que se tienen acceso, dicha tabla contiene <span class="math inline">\(101.841\)</span> registros y <span class="math inline">\(55\)</span> columnas.</p>
+<p>Como se menciono en la sección de Tableau los datos requieren una limpieza y preparación la cual se realizo desde R, dentro de los orígenes de datos disponibles en Power BI existe la opción de cargar scripts de R, por lo tanto, se usará esta forma de conexión a datos para cargar el conjunto de datos limpio y listo para realizar análisis.</p>
+<p>Inicialmente es necesario verificar que Power BI se encuentre conectado a la versión en la que fue creado el script de R que se desea ejecutar, para esto debe:</p>
+<ol style="list-style-type: decimal">
+<li>Abrir Power BI Desktop, cerrar la ventana introductoria, seguido de esto hacer clic en archivo, seleccionar opciones y configuración y nuevamente clic en opciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:opcionesyconfiguracion-fig"></span>
+<img src="Imágenes/powerbi29.jpg" alt="Opciones y configuración" width="70%" />
+<p class="caption">
+Figura 3.29: Opciones y configuración
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Se abrirá una ventana emergente con las opciones de configuración disponibles, en el panel global seleccione scripts de R, luego de esto en el panel lateral derecho asegúrese de que el directorio se ubique en la versión en la cual fue creada el script y como IDE de R se ubique R Studio.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:opcionesyconfiguracionR-fig"></span>
+<img src="Imágenes/powerbi30.jpg" alt="Opciones de script de R" width="70%" />
+<p class="caption">
+Figura 3.30: Opciones de script de R
+</p>
+</div>
+<p>Cuando ya se han realizado las configuraciones necesarias haga clic en obtener datos y seleccione otras, script de R y clic en conectar.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:obtenerdatosR-fig"></span>
+<img src="Imágenes/powerbi31.jpg" alt="Obtener datos de script de R" width="60%" />
+<p class="caption">
+Figura 3.31: Obtener datos de script de R
+</p>
+</div>
+<p>Después de completado el paso anterior se abrirá una ventana llamada Script de R en la cual debe escribir su código R, dicho código puede ser copiado del archivo llamado Datacleaning.R ubicado en el repositorio de trabajo, debe tener cuidado de no copiar la última línea ya que en esa se extrae el archivo en CSV y no es necesario hacerlo ya que la tabla queda guardada en el entorno R.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:scriptdeR-fig"></span>
+<img src="Imágenes/powerbi32.jpg" alt="Script de R" width="80%" />
+<p class="caption">
+Figura 3.32: Script de R
+</p>
+</div>
+<p>Al hacer clic en aceptar para guardar los cambios Power BI iniciara la conexión con R para ejecutar las líneas de código escritas, nuevamente se abre una ventana llamada navegar que incluye todas las tablas almacenadas en el ambiente R, la que se debe usar es la llamada Graduados que contiene la unión de todas las tablas ordenadas y preparadas para el análisis, haga clic sobre esta tabla y finalmente clic en cargar.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Navegador-fig"></span>
+<img src="Imágenes/powerbi33.jpg" alt="Navegador" width="80%" />
+<p class="caption">
+Figura 3.33: Navegador
+</p>
+</div>
+<p>Cuando se han cargado los datos en el panel campos se ubicarán todas las variables que contiene el conjunto de datos al que se encuentra conectado, haga clic en transformar datos con el fin de verificar el tipo de cada variable y hacer los cambios que sean necesarios, luego de verificar y realizar los cambios necesarios es momento de iniciar con las visualizaciones.</p>
+</div>
+<div id="analisisdatospowerbi" class="section level3 hasAnchor" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> Análisis de datos<a href="3.5-flujotrabajopowerbi.html#analisisdatospowerbi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="graficolineaspowerbi" class="section level4 hasAnchor" number="3.5.2.1">
+<h4><span class="header-section-number">3.5.2.1</span> Gráfico de líneas<a href="3.5-flujotrabajopowerbi.html#graficolineaspowerbi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Nuevamente se iniciarán con gráficos similares a los presentados en la sección cifras generales y graduados la página de las <a href="http://estadisticas.unal.edu.co/home/">estadísticas</a> de la Universidad Nacional de Colombia, en principio se hará un gráfico de líneas que muestre la evolución histórica de los estudiantes graduados en los periodos de 2009-1 a 2020-1. Una de las principales diferencias entre Tableau y Power BI es que en el primero se crean los objetos visuales de manera individual en hojas de trabajo y luego son combinadas en un dashboard o historias, el lienzo de Power BI es directamente un dashboard, por lo que cada objeto será creado sobre un tablero.</p>
+<ol style="list-style-type: decimal">
+<li><p>Cambie el nombre del lienzo de trabajo por Evolución graduados.</p></li>
+<li><p>Desde el panel visualizaciones haga clic sobre el icono de gráfico de líneas.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Agregargraficolineas-fig"></span>
+<img src="Imágenes/powerbi34.jpg" alt="Gráfico de líneas" width="20%" />
+<p class="caption">
+Figura 3.34: Gráfico de líneas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Amplié el gráfico para que ocupe todo el lienzo, debe notar que se agregan opciones de eje, leyenda, valores, valores secundarios e información sobre herramientas en el panel visualizaciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi35.jpg" alt="Gráfico de líneas en blanco" width="100%" />
+<p class="caption">
+Figura 3.35: Gráfico de líneas en blanco
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Arrastre el campo YEAR_SEMESTER al estante eje y nuevamente desde el panel campos debe arrastrarlo al estante valores.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi36.jpg" alt="Gráfico de líneas en blanco" width="100%" />
+<p class="caption">
+Figura 3.36: Gráfico de líneas en blanco
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Al observar a detalle la visualización se identifica que el orden del eje X no es el debido, ya que debe ser un orden cronológico que inicia en el periodo 2009-1 y termina en 2020-1, para corregir esto haga clic en los tres puntos ubicados en la esquina superior derecha, seleccione ordenar por y finalmente YEAR_SEMESTER.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso5lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi37.jpg" alt="Ordenar por" width="100%" />
+<p class="caption">
+Figura 3.37: Ordenar por
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>La visualización obtenida ordena el eje X de manera descendente, es decir, inicia en el periodo 2020-1 y finaliza en 2009-1, para modificar esto nuevamente haga clic en los tres puntos y seleccione orden ascendente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi38.jpg" alt="Ordenar de manera ascendente" width="90%" />
+<p class="caption">
+Figura 3.38: Ordenar de manera ascendente
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Es momento de editar el título de la visualización y de los ejes, por lo que debe hacer clic en el rodillo ubicado en el panel visualizaciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso7lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi39.jpg" alt="Formato de la visualización" width="20%" />
+<p class="caption">
+Figura 3.39: Formato de la visualización
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Haga clic en la pestaña eje X y en la sección título del eje escriba Periodo y aumente el tamaño del texto a 16pt, de manera similar edite el título del eje Y.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso8lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi40.jpg" alt="Editar el eje X" width="20%" />
+<p class="caption">
+Figura 3.40: Editar el eje X
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li><p>La pestaña título permite editar el título de la visualización, por tanto, haga clic sobre esta pestaña y en el espacio texto del título escriba Evolución histórica del total de estudiantes graduados, seleccione alineación central y aumente el tamaño hasta 25pt.</p></li>
+<li><p>Haga clic sobre la pestaña colores de datos, despliegue el menú de colores y seleccione color personalizado y escriba “1F82C3” que corresponde al color azul usado en la página web de estadísticas de la Universidad Nacional, hasta el momento su visualización debe verse así.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso10lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi41.jpg" alt="Evolución histórica de estudiantes graduados" width="80%" />
+<p class="caption">
+Figura 3.41: Evolución histórica de estudiantes graduados
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>Note que la descripción emergente no es clara, ubíquese en la sección campos, debajo de visualizaciones, haga doble clic sobre Recuento YEAR_SEMESTER y escriba Total.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso11lineaspowerbi-fig"></span>
+<img src="Imágenes/powerbi42.jpg" alt="Edición de la descripción emergente" width="100%" />
+<p class="caption">
+Figura 3.42: Edición de la descripción emergente
+</p>
+</div>
+<p>Con eso se finaliza el primer dashboard que se encuentra en la página de estadísticas de la Universidad Nacional.</p>
+<p>El siguiente dashboard involucra un gráfico de líneas segmentado por una dimensión, un cuadro de texto y un gráfico circular, inicialmente se creará el gráfico de líneas segmentado por una dimensión.</p>
+</div>
+<div id="graficodelineassegmentadopowerbi" class="section level4 hasAnchor" number="3.5.2.2">
+<h4><span class="header-section-number">3.5.2.2</span> Gráfico de líneas segmentado por una dimensión<a href="3.5-flujotrabajopowerbi.html#graficodelineassegmentadopowerbi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva página de trabajo, cambie su nombre por Modalidad de formación y repita el paso 2 del gráfico anterior.</p></li>
+<li><p>Amplié el tamaño de la visualización para que ocupe la mitad superior izquierda del lienzo de trabajo, agregue el campo YEAR_SEMESTER al estante eje y el campo TIPO_NIVEL a leyenda y valores.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2lineassegmentadobi-fig"></span>
+<img src="Imágenes/powerbi43.jpg" alt="Gráfico de líneas segmentado por una dimensión" width="100%" />
+<p class="caption">
+Figura 3.43: Gráfico de líneas segmentado por una dimensión
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Repita los pasos 5 y 6 del gráfico anterior que ordenan el eje X.</p></li>
+<li><p>Edite los títulos de la visualización como se mostro en los pasos 7, 8 y 9 del gráfico creado anteriormente.</p></li>
+<li><p>Para los colores de datos seleccione color personalizado y en la categoría postgrado escriba “F15A24”, para la categoría pregrado asigne el color “8CC63F”.</p></li>
+<li><p>Haga clic sobre la pestaña leyenda y desactive el título.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6lineassegmentadobi-fig"></span>
+<img src="Imágenes/powerbi44.jpg" alt="Desactivar título de leyenda" width="20%" />
+<p class="caption">
+Figura 3.44: Desactivar título de leyenda
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Desde esta misma pestaña en estilo seleccione línea y marcadores, en la sección posición ubicada al inicio de esta pestaña elija centro inferior, su visualización debe verse así.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso7lineassegmentadobi-fig"></span>
+<img src="Imágenes/powerbi45.jpg" alt="Gráfico de líneas por modalidad de formación" width="80%" />
+<p class="caption">
+Figura 3.45: Gráfico de líneas por modalidad de formación
+</p>
+</div>
+<p>Cuando se trata de analizar cifras es importante visualizar las cantidades como porcentajes, la forma de trabajar porcentajes en Power BI no es tan fácil e intuitiva como en Tableau, especialmente en este gráfico que los porcentajes no son calculados sobre un total general si no sobre el número de estudiantes graduados en cada periodo; para añadir este porcentaje a las visualizaciones se creara una nueva tabla de datos.</p>
+<ol style="list-style-type: decimal">
+<li><p>Haga clic sobre el botón transformar datos.</p></li>
+<li><p>Haciendo clic derecho sobre la tabla graduados seleccione duplicar.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2porcentajes-fig"></span>
+<img src="Imágenes/powerbi72.jpg" alt="Duplicar tablas" width="40%" />
+<p class="caption">
+Figura 3.46: Duplicar tablas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Cambie el nombre de tabla duplicada por Agrupación1, haga clic sobre le botón Agrupar por ubicado en la barra de herramientas del editor Power Query.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3porcentajes-fig"></span>
+<img src="Imágenes/powerbi73.jpg" alt="Agrupar tabla" width="100%" />
+<p class="caption">
+Figura 3.47: Agrupar tabla
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>En el cuadro de diálogo agrupar por seleccione uso avanzado, use el campo YEAR_SEMESTER, haga clic sobre agregar agrupación y use el campo TIPO_NIVEL, como nombre de la columna escriba Cantidad, verifique que la operación sea recuento de filas, luego de esto clic en aceptar para guardar los cambios.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4porcentajes-fig"></span>
+<img src="Imágenes/powerbi74.jpg" alt="Configurar la agrupación" width="70%" />
+<p class="caption">
+Figura 3.48: Configurar la agrupación
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Obtendrá una tabla que contiene el conteo de estudiantes graduados de pregrado y postgrado por cada periodo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso5porcentajes-fig"></span>
+<img src="Imágenes/powerbi75.jpg" alt="Tabla agrupación1" width="80%" />
+<p class="caption">
+Figura 3.49: Tabla agrupación1
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Repita el paso 2 y cambie el nombre de la tabla duplicada por Agrupación2.</p></li>
+<li><p>Haga clic sobre agrupar por, seleccione básico y use el campo YEAR_SEMESTER, el nombre de la nueva columna será cantidad semestre, nuevamente debe verificar que la operación sea recuento de filas, finalmente clic en aceptar.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso7porcentajes-fig"></span>
+<img src="Imágenes/powerbi76.jpg" alt="Configurar la segunda agrupación" width="70%" />
+<p class="caption">
+Figura 3.50: Configurar la segunda agrupación
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Ubíquese en la tabla llamada Agrupación1, haga clic sobre combinar y seleccione combinar consultas para crear una nueva.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso8porcentajes-fig"></span>
+<img src="Imágenes/powerbi77.jpg" alt="Combinar consultas para crear una nueva" width="50%" />
+<p class="caption">
+Figura 3.51: Combinar consultas para crear una nueva
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>En la ventana combinar, seleccione la tabla Agrupación2 en el segundo campo, el tipo de combinación debe ser externa izquierda y debe hacer clic sobre la columna YEAR_SEMESTER de ambas tablas de datos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso9porcentajes-fig"></span>
+<img src="Imágenes/powerbi78.jpg" alt="Configurar la combinación" width="80%" />
+<p class="caption">
+Figura 3.52: Configurar la combinación
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>En el panel consultas encontrara una nueva tabla llamada combinar1, cambie el nombre de esta tabla por Modalidadformación, debe verse algo así dicha tabla.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso10porcentajes-fig"></span>
+<img src="Imágenes/powerbi79.jpg" alt="Tablas combinadas" width="100%" />
+<p class="caption">
+Figura 3.53: Tablas combinadas
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>Note que la columna Agrupación2, no presenta las cifras que debería, haga clic sobre el icono ubicado a la derecha del nombre de dicha columna y seleccione únicamente cantidad semestre, cambie el nombre de esta columna por Cantidad semestre.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso11porcentajes-fig"></span>
+<img src="Imágenes/powerbi80.jpg" alt="Expandir segunda agrupación" width="50%" />
+<p class="caption">
+Figura 3.54: Expandir segunda agrupación
+</p>
+</div>
+<ol start="12" style="list-style-type: decimal">
+<li>Haga clic en la pestaña agregar columna y seleccione columna personalizada.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso12porcentajes-fig"></span>
+<img src="Imágenes/powerbi81.jpg" alt="Crear columna personalizada" width="100%" />
+<p class="caption">
+Figura 3.55: Crear columna personalizada
+</p>
+</div>
+<ol start="13" style="list-style-type: decimal">
+<li>En el cuadro de diálogo columna personalizada cambie el nombre de la nueva columna por Porcentaje, al lateral de formula se ubica un cuadro llamado columnas disponibles que contiene las columnas que se tienen disponibles en la tabla de datos, haga clic sobre cantidad y luego en el botón insertar, escriba el símbolo de división /, luego seleccione cantidad semestre e insértela a la formula.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso13porcentajes-fig"></span>
+<img src="Imágenes/powerbi82.jpg" alt="Configurar columna personalizada" width="80%" />
+<p class="caption">
+Figura 3.56: Configurar columna personalizada
+</p>
+</div>
+<ol start="14" style="list-style-type: decimal">
+<li>Cambie el tipo de dato de la columna porcentaje a número decimal.</li>
+</ol>
+<p>La tabla llamada Modalidadformación debe verse de la siguiente manera.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tablamodalidadformacion-fig"></span>
+<img src="Imágenes/powerbi83.jpg" alt="Tabla modalidad de formación" width="100%" />
+<p class="caption">
+Figura 3.57: Tabla modalidad de formación
+</p>
+</div>
+<p>Por último, haga clic sobre el botón cerrar y aplicar ubicado debajo de archivo en la barra de herramientas.</p>
+<p>De nuevo en la ventana de Power BI debe observar que en el panel campos se ubican cuatro tablas, las dos agrupaciones, la tabla de modalidadformación y graduados, para mayor comodidad oculte las dos agrupaciones haciendo clic derecho sobre cada una de ellas y seleccionando ocultar.</p>
+<p>Es momento de incluir los porcentajes calculados en el gráfico de líneas, para esto haga clic sobre el gráfico de líneas, debe reemplazar los campos YEAR_SEMESTER y TIPO_NIVEL por estos mismos campos, pero de la tabla Modalidadformación, en el estante valores elimine el campo que está allí y arrastre la variable Cantidad a dicho estante, finalmente debe agregar el campo Porcentaje a información sobre herramientas.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:reemplazarvariablescontablamodalidadformacion-fig"></span>
+<img src="Imágenes/powerbi84.jpg" alt="Gráfico de líneas con la tabla creada" width="100%" />
+<p class="caption">
+Figura 3.58: Gráfico de líneas con la tabla creada
+</p>
+</div>
+<p>Para cambiar el formato de la variable porcentaje haga doble clic sobre dicha variable, en formato seleccione porcentaje, tambien debe cambiar el nombre de la variable ubicada en el estante leyenda por Modalidad de formación, su dashboard se verá así.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:formatoporcentaje-fig"></span>
+<img src="Imágenes/powerbi85.jpg" alt="Añadir formato de porcentaje" width="100%" />
+<p class="caption">
+Figura 3.59: Añadir formato de porcentaje
+</p>
+</div>
+</div>
+<div id="tabladetextopowerbi" class="section level4 hasAnchor" number="3.5.2.3">
+<h4><span class="header-section-number">3.5.2.3</span> Tabla de texto<a href="3.5-flujotrabajopowerbi.html#tabladetextopowerbi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se creará una tabla de texto que contenga la información del número de estudiantes graduados por modalidad de formación, se trabajara sobre el dashboard que contiene el gráfico de líneas segmentado por una dimensión.</p>
+<ol style="list-style-type: decimal">
+<li>Haga clic sobre la equina inferior izquierda del lienzo de trabajo y sobre el panel visualizaciones haga clic sobre matriz.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1matriz-fig"></span>
+<img src="Imágenes/powerbi46.jpg" alt="Añadir matriz" width="20%" />
+<p class="caption">
+Figura 3.60: Añadir matriz
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Al estante filas agregue el campo YEAR_SEMESTER, al estante columnas TIPO_NIVEL, nuevamente este último campo al estante valores, pero en su menú desplegable debe seleccionar recuento.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2matriz-fig"></span>
+<img src="Imágenes/powerbi47.jpg" alt="Agregar campos a los estantes" width="20%" />
+<p class="caption">
+Figura 3.61: Agregar campos a los estantes
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Haga doble clic en el campo ubicado en el estante filas y escriba Periodo.</p></li>
+<li><p>Amplié el tamaño de las columnas para que ocupen todo el ancho de la visualización, esto se hace de manera similar a como se amplía el tamaño de una columna en Word.</p></li>
+<li><p>Haga clic sobre el icono del rodillo que se refiere al formato de la vista, haciendo clic sobre la pestaña cuadricula active las cuadriculas tanto verticales como horizontales y aumente su grosor a tres; como color de esquema establezca un color gris levemente oscuro, finalmente, aumente el tamaño del texto a 16pt.</p></li>
+<li><p>Ubíquese sobre la pestaña título y actívelo, en el estante llamado texto del título escriba Total de estudiantes graduados por modalidad de formación, use color de fuente negro, alienación central y un tamaño de 25pt.</p></li>
+</ol>
+<p>Se obtiene una tabla de texto con el total de estudiantes graduados para cada periodo por modalidad de formación, su dashboard hasta este momento debe verse así:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6matriz-fig"></span>
+<img src="Imágenes/powerbi49.jpg" alt="Tabla de texto para modalidad de formación" width="80%" />
+<p class="caption">
+Figura 3.62: Tabla de texto para modalidad de formación
+</p>
+</div>
+<p>Si se observa con detalle este tablero en la página de estadísticas de la Universidad Nacional se identifica una alternancia entre la serie de tiempo y la tabla de texto que se activa por medio de dos botones, para hacer esta alternancia de gráficos en Power BI se debe hacer uso de las herramientas de botones, selección, marcadores y acciones.</p>
+<ol style="list-style-type: decimal">
+<li>Mueva la serie de tiempo hacia el lateral derecho y agrande ambas vistas para que ocupen todo el lienzo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1alternancia-fig"></span>
+<img src="Imágenes/powerbi50.jpg" alt="Tabla de texto y serie para modalidad de formación" width="80%" />
+<p class="caption">
+Figura 3.63: Tabla de texto y serie para modalidad de formación
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Disminuya un poco el tamaño de ambas vistas con el fin de dejar un espacio en la parte superior para ubicar los botones de alternancia de visualizaciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2alternancia-fig"></span>
+<img src="Imágenes/powerbi51.jpg" alt="Espacio para los botones" width="100%" />
+<p class="caption">
+Figura 3.64: Espacio para los botones
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>En la barra de herramientas haga clic sobre la pestaña insertar, seleccione botones e inserte dos botones en blanco.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3alternancia-fig"></span>
+<img src="Imágenes/powerbi52.jpg" alt="Insertar botones" width="80%" />
+<p class="caption">
+Figura 3.65: Insertar botones
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Edite el tamaño de ambos botones para que ocupen la parte superior de la tabla de texto, como se muestra a continuación.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4alternancia-fig"></span>
+<img src="Imágenes/powerbi53.jpg" alt="Acomodar botones de alternancia" width="90%" />
+<p class="caption">
+Figura 3.66: Acomodar botones de alternancia
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Ubíquese en el panel visualizaciones y active la pestaña texto de botón, sobre el rectángulo para escribir el texto, escriba Serie, use color negro, finalmente aumente el tamaño del texto a 18pt.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso5alternancia-fig"></span>
+<img src="Imágenes/powerbi54.jpg" alt="Añadir texto a los botones" width="90%" />
+<p class="caption">
+Figura 3.67: Añadir texto a los botones
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Active la pestaña título y escriba como título Serie, desactive el título, esto con el fin de que no quede información duplicada en el botón, pero que al momento de usarlos para crear los marcadores sea fácil identificarlos.</p></li>
+<li><p>Repita los pasos 5 y 6 para el segundo botón, recuerde que este hará referencia a la tabla de texto.</p></li>
+<li><p>Haga clic sobre la pestaña ver de la barra de herramientas y active selección y marcadores.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso8alternancia-fig"></span>
+<img src="Imágenes/powerbi55.jpg" alt="Activar marcadores y selección" width="100%" />
+<p class="caption">
+Figura 3.68: Activar marcadores y selección
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Observe que en panel selección se ubican cuatro elementos visuales, Tabla y serie hacen referencia a los botones creados, los otros dos objetos identifican la serie y la tabla de texto. El ojo que se ubica a la derecha del título de las visualizaciones permite ocultar el gráfico, en primer lugar, se ocultara la tabla de texto haciendo uso del botón con icono de ojo, seguido de esto debe hacer clic sobre agregar que se encuentra en el panel marcadores, cambie el nombre del marcador a Serie y haga clic sobre el menú desplegable del marcador y seleccione actualizar.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso9alternancia-fig"></span>
+<img src="Imágenes/powerbi56.jpg" alt="Actualiazar marcador" width="100%" />
+<p class="caption">
+Figura 3.69: Actualiazar marcador
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li><p>Repita el paso anterior, pero oculte la serie y cree el marcador con el nombre de Tabla. Luego de esto cierre estos dos paneles.</p></li>
+<li><p>Haga clic sobre el botón Serie, active la pestaña Acción, en tipo seleccione marcador y en marcador elija serie.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso11alternancia-fig"></span>
+<img src="Imágenes/powerbi57.jpg" alt="Activar acción de marcador para el botón" width="15%" />
+<p class="caption">
+Figura 3.70: Activar acción de marcador para el botón
+</p>
+</div>
+<ol start="12" style="list-style-type: decimal">
+<li><p>Repita el paso anterior para el botón Tabla, asignando como marcador tabla.</p></li>
+<li><p>Al hacer clic sobre el botón serie mientras se mantiene oprimida la tecla ctrl, se muestra el gráfico de la evolución de estudiantes graduados por modalidad de formación y se oculta la tabla de texto.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso13alternancia-fig"></span>
+<img src="Imágenes/powerbi58.jpg" alt="Uso de los botones para alternar gráficos" width="100%" />
+<p class="caption">
+Figura 3.71: Uso de los botones para alternar gráficos
+</p>
+</div>
+<ol start="14" style="list-style-type: decimal">
+<li>Debe mover el gráfico de líneas al lateral izquierdo, para que se sobreponga a la tabla de texto.</li>
+</ol>
+</div>
+<div id="gráfico-circular" class="section level4 hasAnchor" number="3.5.2.4">
+<h4><span class="header-section-number">3.5.2.4</span> Gráfico circular<a href="3.5-flujotrabajopowerbi.html#gráfico-circular" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El dashboard que se está realizando contiene un gráfico circular que permite visualizar la distribución del total de estudiantes graduados por modalidad de formación para el último periodo del que se tiene registro, es decir 2020-1.</p>
+<ol style="list-style-type: decimal">
+<li><p>Ubíquese en la parte en blanco del lienzo de trabajo y sobre el panel visualizaciones haga clic en gráfico circular.</p></li>
+<li><p>Al estante leyenda arrastre el campo TIPO_NIVEL y también asígnelo al estante valores.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2circular-fig"></span>
+<img src="Imágenes/powerbi59.jpg" alt="Crear un gráfico circular" width="90%" />
+<p class="caption">
+Figura 3.72: Crear un gráfico circular
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Desde formato cambie la posición de la leyenda a centro inferior, desactive el título y aumente le tamaño del texto a 12pt.</p></li>
+<li><p>Cambie le título del gráfico por Distribución de graduados por modalidad de formación, periodo 2020-1; color negro, tamaño 25pt y alineación central, todo esto desde la pestaña título.</p></li>
+<li><p>Repita el paso 5 mostrado en <a href="3.5-flujotrabajopowerbi.html#graficodelineassegmentadopowerbi">3.5.2.2</a>, para cambiar el color de los datos.</p></li>
+<li><p>En la pestaña etiquetas y estilo seleccione Categoría, porcentaje del total, color negro y tamaño de letra 15pt, por último, amplié el gráfico circular hacia arriba para ocupar todo el lateral derecho del lienzo.</p></li>
+<li><p>Despliegue el panel filtros y arrastre el campo YEAR_SEMESTER, seguido de esto seleccione únicamente el periodo 2020-1.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso7circular-fig"></span>
+<img src="Imágenes/powerbi60.jpg" alt="Filtrar por el periodo 2020-1" width="90%" />
+<p class="caption">
+Figura 3.73: Filtrar por el periodo 2020-1
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Por último, cambie el nombre de los campos leyenda y valores por Modalidad de formación y Número de graduados respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso8circular-fig"></span>
+<img src="Imágenes/powerbi61.jpg" alt="Cambiar nombre de los estantes leyenda y valores" width="90%" />
+<p class="caption">
+Figura 3.74: Cambiar nombre de los estantes leyenda y valores
+</p>
+</div>
+<p>El filtro mostrado en el paso 7 es un filtro básico en el cual se debe seleccionar de manera manual el periodo que se quiere visualizar, a pesar de que funciona de manera adecuada existen alternativas para automatizarlo y lograr que cuando la base de datos sea actualizada con un nuevo periodo no se tenga que editar el filtro del gráfico para seleccionar el nuevo periodo incluido.</p>
+<p>Una de las alternativas consiste en cambiar el tipo de filtro de filtrado básico a Top N, en la sección mostrar elementos debe seleccionar superior y escribir el número 1, al estante por valor deberá arrastrar la columna YEAR_SEMESTER y en su menú desplegable elegir último, finalmente debe hacer clic sobre aplicar filtro.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:filtrotopngraficocircular-fig"></span>
+<img src="Imágenes/powerbi208.jpg" alt="Uso de filtro Top N para mostrar el último periodo" width="40%" />
+<p class="caption">
+Figura 3.75: Uso de filtro Top N para mostrar el último periodo
+</p>
+</div>
+<p>Después de creados los objetos visuales sobre el lienzo se obtiene un dashboard útil e informativo con interactividad entre dos de los gráficos construidos.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:dashboardmodalidadformacion-fig"></span>
+<img src="Imágenes/powerbi62.jpg" alt="Dashboard modalidad de formación" width="90%" />
+<p class="caption">
+Figura 3.76: Dashboard modalidad de formación
+</p>
+</div>
+<p>El siguiente dashboard presentado en la página de estadísticas de la Universidad Nacional contiene información sobre el nivel de formación de los estudiantes graduados, al igual que el creado anteriormente contiene tres gráficos uno de líneas, una tabla de texto y un gráfico de barras y alternancia entre el gráfico de líneas y la tabla de texto; como estos dos primeros objetos ya fueron creados para otros campos replique los pasos, pero usando el campo NIVEL, al final debe obtener dos gráficos que se pueden alternar usando los botones Serie y Tabla.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:evolucionnivelformacion-fig"></span>
+<img src="Imágenes/powerbi63.jpg" alt="Evolución del número de estudiantes graduados por nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.77: Evolución del número de estudiantes graduados por nivel de formación
+</p>
+</div>
+</div>
+<div id="gráfico-de-barras" class="section level4 hasAnchor" number="3.5.2.5">
+<h4><span class="header-section-number">3.5.2.5</span> Gráfico de barras<a href="3.5-flujotrabajopowerbi.html#gráfico-de-barras" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Es momento de realizar un gráfico de barras para observar la distribución de graduados por modalidad de formación en el periodo 2020-1, para crear dicho gráfico debe seguir estos pasos.</p>
+<ol style="list-style-type: decimal">
+<li>Ubíquese en el lateral derecho del lienzo que se encuentra blanco, luego en el panel visualizaciones haga clic sobre gráfico de barras agrupadas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1barras-fig"></span>
+<img src="Imágenes/powerbi64.jpg" alt="Agregar gráfico de barras agrupadas" width="90%" />
+<p class="caption">
+Figura 3.78: Agregar gráfico de barras agrupadas
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Agregue los campos NIVEL a los estantes eje y valores.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2barras-fig"></span>
+<img src="Imágenes/powerbi65.jpg" alt="Gráfico de barras para nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.79: Gráfico de barras para nivel de formación
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Edite los colores de los datos asignando “8CC63F”, “C1272D”, “3FC1F8”, “FBB03B”, “6D6666” a Pregrado, Maestría, Especialización, Especialidades médicas y doctorado respectivamente; repita el paso 7 de gráfico circular para seleccionar únicamente el periodo 2020-1.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3barras-fig"></span>
+<img src="Imágenes/powerbi66.jpg" alt="Editar colores" width="90%" />
+<p class="caption">
+Figura 3.80: Editar colores
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Cambie le título del gráfico por Distribución de graduados por nivel de formación, periodo 2020-1; el título del eje X debe ser Número de graduados, desactive el título del eje Y, aumente a 12pt el tamaño del texto y seleccione color negro para el texto de este eje.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4barras-fig"></span>
+<img src="Imágenes/powerbi67.jpg" alt="Editar título del gráfico de barras" width="90%" />
+<p class="caption">
+Figura 3.81: Editar título del gráfico de barras
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Active la pestaña etiquetas, seleccione color negro, en mostrar unidades seleccione ninguno, seleccione posición extremo exterior y aumente el tamaño del texto a 12pt.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso5barras-fig"></span>
+<img src="Imágenes/powerbi68.jpg" alt="Agregar etiquetas para cada barra" width="90%" />
+<p class="caption">
+Figura 3.82: Agregar etiquetas para cada barra
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Ubicado nuevamente en campos del panel visualizaciones debe hacer doble clic sobre el estante eje y valores para cambiar sus títulos por Nivel y Número de graduados respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6barras-fig"></span>
+<img src="Imágenes/powerbi69.jpg" alt="Cambiar título de los estantes" width="90%" />
+<p class="caption">
+Figura 3.83: Cambiar título de los estantes
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Es muy útil mostrar los porcentajes de cada nivel de formación para esto agregue el campo nivel al estante información sobre herramientas, en su menú desplegable seleccione recuento, luego de nuevo haga clic en su menú desplegable y seleccione mostrar valor como y luego elija porcentaje de total general.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso7barras-fig"></span>
+<img src="Imágenes/powerbi70.jpg" alt="Mostrar cantidad como porcentaje del total" width="90%" />
+<p class="caption">
+Figura 3.84: Mostrar cantidad como porcentaje del total
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Haga doble clic sobre el campo ubicado en información sobre herramientas y escriba porcentaje.</li>
+</ol>
+<p>Finalmente se obtiene un dashboard con información útil y muy clara sobre el comportamiento del número de estudiantes graduados por nivel de formación, dicho dashboard se muestra a continuación.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tableronivelformacion-fig"></span>
+<img src="Imágenes/powerbi71.jpg" alt="Dashboard para nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.85: Dashboard para nivel de formación
+</p>
+</div>
+</div>
+<div id="barrasapiladas" class="section level4 hasAnchor" number="3.5.2.6">
+<h4><span class="header-section-number">3.5.2.6</span> Gráfico de barras apiladas<a href="3.5-flujotrabajopowerbi.html#barrasapiladas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Este tipo de gráficos es útil para comparar valores de categorías respecto a un total, y ver como estas categorías se comportan según un segundo criterio de segmentación, en este tipo de visualizaciones se trabaja con un valor base a mostrar en la gráfica mediante una barra horizontal, un criterio de segmentación principal (según el cual se dividirá la barra anterior en tantas como valores tome el campo que defina este criterio) y otro criterio secundario que controla la división de las diferentes barras.
+La base de datos con la cual se esta trabajando posee diversas variables categóricas, en especial para este gráfico se usarán los campos Sede de matrícula y nivel de formación.</p>
+<ol style="list-style-type: decimal">
+<li><p>Agregue una nueva página de trabajo y llámela nivel de formación por sede y facultad.</p></li>
+<li><p>Desde el panel visualizaciones haga clic sobre el icono del gráfico de barras apiladas.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2barrasapiladas-fig"></span>
+<img src="Imágenes/powerbi86.jpg" alt="Agregar gráfico de barras apiladas" width="30%" />
+<p class="caption">
+Figura 3.86: Agregar gráfico de barras apiladas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Amplié la visualización para que ocupe todo el lienzo de trabajo, añada el campo SEDE_NOMBRE_MAT al estante eje y el campo NIVEL a leyenda y valores.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3barrasapiladas-fig"></span>
+<img src="Imágenes/powerbi87.jpg" alt="Barras apiladas sede de matrícula" width="90%" />
+<p class="caption">
+Figura 3.87: Barras apiladas sede de matrícula
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Haciendo clic sobre el rodillo para dar formato al gráfico y en la pestaña leyenda desactive el título, seleccione como posición centro inferior y aumente el tamaño del texto a 12pt.</p></li>
+<li><p>Sobre la pestaña del eje Y cambie el color del texto por negro y tamaño 12pt, el color del título también debe ser negro, en el espacio para título debe escribir Sede y aumentar el tamaño a 16pt.</p></li>
+<li><p>Para el eje X el título debe ser número de graduados en color negro y tamaño 16pt, también debe seleccionar ninguno en la opción mostrar unidades.</p></li>
+<li><p>Edite los colores de los datos como se realizo en el paso 9 del gráfico de barras; cambie el título del gráfico por Sede y desactívelo, también active el borde de la visualización y seleccione color negro para dicho borde.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso7barrasapiladas-fig"></span>
+<img src="Imágenes/powerbi88.jpg" alt="Gráfico de barras apiladas para la sede de matrícula" width="90%" />
+<p class="caption">
+Figura 3.88: Gráfico de barras apiladas para la sede de matrícula
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Por último, debe editar los nombres de los campos ubicados en los estantes con el fin de hacer el gráfico más estético, SEDE_NOMBRE_MAT debe ser cambiado por Sede, NIVEL por Nivel y Recuento NIVEL por Número de graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso8barrasapiladas-fig"></span>
+<img src="Imágenes/powerbi89.jpg" alt="Gráfico de barras apiladas para la sede de matrícula con descripción emergente clara" width="90%" />
+<p class="caption">
+Figura 3.89: Gráfico de barras apiladas para la sede de matrícula con descripción emergente clara
+</p>
+</div>
+<p>Observe que el número de estudiantes graduados no se esta presentado en formato de miles, es decir, en la imagen mostrada anteriormente el número de graduados debe verse como 13.999 y no 13999 por esto se creara una nueva columna que tome el valor de 1, ya que al ser una columna numérica se tiene la posibilidad de darle formato de número.</p>
+<ol style="list-style-type: decimal">
+<li>Haga clic sobre la pestaña modelado y seleccione nueva columna.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1crearconteo-fig"></span>
+<img src="Imágenes/powerbi90.jpg" alt="Crear nueva columna" width="90%" />
+<p class="caption">
+Figura 3.90: Crear nueva columna
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>En la línea resultante cambie Columna = por Conteo = 1, haga clic sobre la coma ubicada en la pestaña formato, por último, haga clic sobre el chulo para guardar los cambios.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2crearconteo-fig"></span>
+<img src="Imágenes/powerbi91.jpg" alt="Editar el formato de la nueva columna" width="90%" />
+<p class="caption">
+Figura 3.91: Editar el formato de la nueva columna
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Elimine el campo Número de graduados del estante valores y arrastre canteo a dicho campo, nuevamente cambie el nombre por Número de graduados, ahora la descripción emergente de la visualización se verá así.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3crearconteo-fig"></span>
+<img src="Imágenes/powerbi92.jpg" alt="Barras apiladas con la columna conteo" width="90%" />
+<p class="caption">
+Figura 3.92: Barras apiladas con la columna conteo
+</p>
+</div>
+<p>Hasta el momento el gráfico de barras apiladas es de utilidad para identificar como se distribuyen o comportan los diferentes niveles de formación dentro de cada sede, pero como no todas las sedes poseen las mismas facultades o programas se realizará un gráfico igual al anterior, pero con el campo facultad, con el fin de proporcionar información más detallada.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:barrasapiladasfacultad-fig"></span>
+<img src="Imágenes/powerbi93.jpg" alt="Gráfico de barras apiladas por facultad" width="90%" />
+<p class="caption">
+Figura 3.93: Gráfico de barras apiladas por facultad
+</p>
+</div>
+<p>Repita los pasos mostrados en la sección <a href="3.5-flujotrabajopowerbi.html#tabladetextopowerbi">3.5.2.3</a> para crear botones que permitan la alternancia entre estos dos gráficos, ubique ambos gráficos en el lateral derecho y los botones de alternancia en la parte superior de estos, también debe dejar un espacio en la parte superior para agregar un título general al dashboard ya que no se esta agregando título a cada gráfico.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:alternanciaentrebarrasapiladas-fig"></span>
+<img src="Imágenes/powerbi94.jpg" alt="Alternancia entre los gráficos de barras" width="90%" />
+<p class="caption">
+Figura 3.94: Alternancia entre los gráficos de barras
+</p>
+</div>
+<p>Con estos botones y marcadores se debe tener algo de cuidado ya que al agregar nuevos gráficos al tablero y alternar con los botones que se han creado los nuevos gráficos pueden verse afectados, por lo que es importante actualizar los marcadores cada que se añaden visualizaciones al tablero.</p>
+</div>
+<div id="gráficoanillos" class="section level4 hasAnchor" number="3.5.2.7">
+<h4><span class="header-section-number">3.5.2.7</span> Gráfico de anillos<a href="3.5-flujotrabajopowerbi.html#gráficoanillos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Estos gráficos son bastante similares a los gráficos circulares, son útiles para representar proporciones y porcentajes. En este caso se usará para mostrar la distribución de los programas dentro de la Universidad Nacional, como son muchos programas se hará un filtro del estilo Top N para mostrar únicamente los 5 programas con más estudiantes graduados.</p>
+<ol style="list-style-type: decimal">
+<li>Se trabajará sobre el mismo lienzo en el que se realizaron los gráficos de barras apiladas usando el lateral derecho que se encuentra libre, haga clic sobre el icono de gráfico de anillos ubicado en el panel visualizaciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1anillos-fig"></span>
+<img src="Imágenes/powerbi95.jpg" alt="Añadir gráfico de anillos" width="25%" />
+<p class="caption">
+Figura 3.95: Añadir gráfico de anillos
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Agregue los campos PROGRAMA y Conteo a los estantes leyenda y valores respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2anillos-fig"></span>
+<img src="Imágenes/powerbi96.jpg" alt="Gráfico de anillos por programa" width="90%" />
+<p class="caption">
+Figura 3.96: Gráfico de anillos por programa
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Como era de esperarse el gráfico esta completamente saturado debido a la gran cantidad de programas que ofrece la Universidad, haga clic sobre el panel filtros, despliegue el estante programa, seleccione Top N en tipo de filtro, asegúrese de que los elementos a mostrar sean los superiores y escriba 5, para mostrar los 5 programas superiores, arrastre el campo PROGRAMA al estante por valor y seleccione recuento; por último, clic en aplicar filtro.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3anillos-fig"></span>
+<img src="Imágenes/powerbi97.jpg" alt="Añadir filtro para el campo programa" width="90%" />
+<p class="caption">
+Figura 3.97: Añadir filtro para el campo programa
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Es momento de dar formato al gráfico de anillos, en primer lugar, desactive la leyenda, en etiquetas seleccione como estilo todas las etiquetas de detalle en color negro y tamaño 12pt, en el campo mostrar unidades seleccione ninguno; finalmente desactive el título de la visualización y active el borde.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4anillos-fig"></span>
+<img src="Imágenes/powerbi98.jpg" alt="Dar formato al gráfico de anillos" width="90%" />
+<p class="caption">
+Figura 3.98: Dar formato al gráfico de anillos
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Cambie los nombres de los estantes por Programa y Número de graduados, no olvide actualizar los marcadores.</li>
+</ol>
+</div>
+<div id="segementaciondatospowerbi" class="section level4 hasAnchor" number="3.5.2.8">
+<h4><span class="header-section-number">3.5.2.8</span> Segmentación de datos<a href="3.5-flujotrabajopowerbi.html#segementaciondatospowerbi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>La segmentación de datos es una forma alternativa de filtro que limita la parte del conjunto de datos que se muestra en otras visualizaciones del informe, en este caso se añadirán tres segmentaciones para permitir al usuario seleccionar la sede, facultad y nivel de formación para el cual quiere ver los programas con más alumnos graduados.</p>
+<ol style="list-style-type: decimal">
+<li>Disminuya un poco el tamaño del gráfico de anillos para dejar un espacio en blanco en el lateral izquierdo; luego desde el panel visualizaciones haga clic sobre segmentación de datos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1segmentacion-fig"></span>
+<img src="Imágenes/powerbi99.jpg" alt="Añadir segemtación de datos" width="90%" />
+<p class="caption">
+Figura 3.99: Añadir segemtación de datos
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Añada SEDE_NOMBRE_MAT al estante campos de la segmentación.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2segmentacion-fig"></span>
+<img src="Imágenes/powerbi100.jpg" alt="Asignar un campo para realizar la segmentación" width="90%" />
+<p class="caption">
+Figura 3.100: Asignar un campo para realizar la segmentación
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Haga clic sobre la flecha ubicada al lado de Sede_Nombre_Mat en la segmentación de datos y seleccione menú desplegable.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3segmentacion-fig"></span>
+<img src="Imágenes/powerbi101.jpg" alt="Cambiar de lista a menú desplegable" width="90%" />
+<p class="caption">
+Figura 3.101: Cambiar de lista a menú desplegable
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Para dar formato a esta segmentación, en controles de selección active la opción de mostrar seleccionar todo, desactive el encabezado, active el título y escriba seleccione sede en tamaño 16pt, color negro y alineación central, para los elementos también use color negro y tamaño 12pt; por último, active el borde.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4segmentacion-fig"></span>
+<img src="Imágenes/powerbi102.jpg" alt="Segementación por sede matrícula" width="90%" />
+<p class="caption">
+Figura 3.102: Segementación por sede matrícula
+</p>
+</div>
+<p>Agregue otras dos segmentaciones de datos, pero con las variables facultad y nivel, su dashboard debe verse de esta manera:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:segmentacionessedefacultadnivel-fig"></span>
+<img src="Imágenes/powerbi103.jpg" alt="Segementación por sede matrícula, facultad y nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.103: Segementación por sede matrícula, facultad y nivel de formación
+</p>
+</div>
+<p>Las matrices son tablas de texto que ayudan a presentar de una manera útil e informativa un resumen de los datos que se usan en las visualizaciones, se añadirá una en la parte inferior de la segmentación y el gráfico de anillos, la cual tendrá en sus filas los campos SEDE_NOMBRE_MAT y FACULTAD, en columnas NIVEL y en valores conteo.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:matrizparanivel-fig"></span>
+<img src="Imágenes/powerbi104.jpg" alt="Matriz" width="90%" />
+<p class="caption">
+Figura 3.104: Matriz
+</p>
+</div>
+<p>En el espacio vacío ubicado entre la matriz y la segmentación de datos se agregara una tarjeta que indique el total de estudiantes graduados según los filtros o segmentaciones aplicadas.</p>
+<ol style="list-style-type: decimal">
+<li>Haga clic sobre la tarjeta ubicada en el panel visualizaciones y ubíquela en el espacio vacío y en estante campos de dicha tarjeta agregue la columna conteo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1tarjeta-fig"></span>
+<img src="Imágenes/powerbi105.jpg" alt="Agregar tarjeta al dashboard" width="90%" />
+<p class="caption">
+Figura 3.105: Agregar tarjeta al dashboard
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Para darle formato a la tarjeta creada desactive la etiqueta, active el título y escriba Número de graduados, color negro, alineación central y tamaño 16pt; en la pestaña etiqueta de datos seleccione color negro, la opción mostrar unidades debe ser ninguno y disminuya el tamaño del texto hasta que la cifra de estudiantes graduados se vea completa.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2tarjeta-fig"></span>
+<img src="Imágenes/powerbi106.jpg" alt="Tarjeta con el número de estudiantes graduados" width="90%" />
+<p class="caption">
+Figura 3.106: Tarjeta con el número de estudiantes graduados
+</p>
+</div>
+<p>En este momento el dashboard contiene todos los elementos visuales para que sea útil y fácil de usar, pero cuando se usan segmentaciones de datos no siempre es necesario que dichas segmentaciones afecten a los objetos que se tienen en el tablero, en este caso en especial el filtro para seleccionar sede puede afectar a todas las visualizaciones excepto al gráfico de barras apiladas por sede, para editar esto debe hacer clic sobre la segmenetación seleccionar sede, luego clic en formato y seleccionar editar interacciones.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:editarinteracciones-fig"></span>
+<img src="Imágenes/powerbi107.jpg" alt="Editar interacciones de las segmentaciones" width="90%" />
+<p class="caption">
+Figura 3.107: Editar interacciones de las segmentaciones
+</p>
+</div>
+<p>Al hacer clic sobre editar interacciones se activan una serie de iconos de filtro y prohibido en cada visualización, en este caso se quiere que no afecte a las barras apiladas por sede, por lo que debe hacer clic sobre el icono de prohibido para este gráfico.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:editarinteraccionessedeybarrasapiladassede-fig"></span>
+<img src="Imágenes/powerbi108.jpg" alt="Cancelar la interacción entre la segementación de  sede y el gráfico de barras apiladas" width="90%" />
+<p class="caption">
+Figura 3.108: Cancelar la interacción entre la segementación de sede y el gráfico de barras apiladas
+</p>
+</div>
+<p>Repita esta operación para que el filtro de seleccionar facultad y nivel de formación afecten únicamente al gráfico de anillos y la matriz. Finalmente se debe ubicar un título en la parte superior del dashboard, en la pestaña insertar seleccione cuadro de texto y ubíquelo en la parte superior en blanco y escriba Distribución de graduados a nivel de facultad y sede.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tablerodistribucuondegraduadossedeyfacultad-fig"></span>
+<img src="Imágenes/powerbi109.jpg" alt="Distribución de graduados a nivel de sede y facultad" width="90%" />
+<p class="caption">
+Figura 3.109: Distribución de graduados a nivel de sede y facultad
+</p>
+</div>
+</div>
+<div id="graficocascada" class="section level4 hasAnchor" number="3.5.2.9">
+<h4><span class="header-section-number">3.5.2.9</span> Gráfico de cascada<a href="3.5-flujotrabajopowerbi.html#graficocascada" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Los gráficos de cascada muestran un total acumulado a medida que Power BI suma y resta valores, son útiles para comprender como un valor inicial se ve afectado por una serie de cambios positivos y negativos. En este gráfico las columnas están codificados por colores que permiten identificar rápidamente aumentos o disminuciones, son de gran utilidad cuando se tienen cambios para una medida a lo largo del tiempo, como una serie o diferentes categorías.</p>
+<p>Dentro de la Universidad es importante visualizar el comportamiento del número de estudiantes graduados a través de los periodos ya que en cada periodo se presentan circunstancias como deserción, paros estudiantiles, entre otros que pueden afectar drásticamente la cantidad de estudiantes que se gradúan en cada periodo, incluso la misma sede puede afectar esta cifra; por tanto, se usara la variable YEAR_SEMESTER, SEDE_NOMBRE_ADM y Conteo para crear un gráfico de cascada.</p>
+<ol style="list-style-type: decimal">
+<li><p>Añada una nueva página al informe, la cual tendrá como nombre Sede de admisión.</p></li>
+<li><p>Desde el panel visualizaciones haga clic sobre gráfico de cascada.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2cascada-fig"></span>
+<img src="Imágenes/powerbi110.jpg" alt="Añadir gráfico de cascada" width="90%" />
+<p class="caption">
+Figura 3.110: Añadir gráfico de cascada
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Agregue las variables YEAR_SEMESTER, SEDE_NOMBRE_ADM y conteo a los estantes categoría, desglose y valores respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3cascada-fig"></span>
+<img src="Imágenes/powerbi111.jpg" alt="Agregar variables al gráfico" width="90%" />
+<p class="caption">
+Figura 3.111: Agregar variables al gráfico
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Note que el eje X no posee el orden cronológico correcto por lo que es necesario ordenarlo como se mostró en <a href="3.5-flujotrabajopowerbi.html#graficolineaspowerbi">3.5.2.1</a>.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4cascada-fig"></span>
+<img src="Imágenes/powerbi111.jpg" alt="Ordenar el eje X" width="90%" />
+<p class="caption">
+Figura 3.112: Ordenar el eje X
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Es momento de dar formato al gráfico, por lo cual se cambiará la posición de la leyenda a centro inferior y se aumentará su tamaño a 12pt.</p></li>
+<li><p>El título del eje X debe ser Periodo en color negro y tamaño 16pt, similar para el eje Y pero el título es Número de graduados, para las unidades de este eje seleccione ninguno; por último, desactive el título de la visualización y active el borde.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6cascada-fig"></span>
+<img src="Imágenes/powerbi113.jpg" alt="Formato del gráfico" width="90%" />
+<p class="caption">
+Figura 3.113: Formato del gráfico
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Cambie el nombre de las variables ubicadas en los estantes categoría, desglose y valores por Periodo, Sede de admisión y Número de graduados respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso7cascada-fig"></span>
+<img src="Imágenes/powerbi114.jpg" alt="Cambiar nombre de los campos usados" width="90%" />
+<p class="caption">
+Figura 3.114: Cambiar nombre de los campos usados
+</p>
+</div>
+<p>Hasta el momento el gráfico permite visualizar el cambio por periodo de cada sede, por ejemplo, el cambio para la sede Bogotá en los periodos 2010-1 a 2010-2 es de 1.517 estudiantes es decir que hubo una disminución del 44.09%, a pesar de que le gráfico es informativo se encuentra saturado ya que se tiene registro para doce años en cada sede, para solucionar esto debe agregar una segmentación de datos para la sede de admisión, similar a como se mostró en <a href="3.5-flujotrabajopowerbi.html#segementaciondatospowerbi">3.5.2.8</a>, también agregue una tarjeta con la variable conteo.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:graficocascada-fig"></span>
+<img src="Imágenes/powerbi115.jpg" alt="Gráfico de cascada por sede de admisión" width="90%" />
+<p class="caption">
+Figura 3.115: Gráfico de cascada por sede de admisión
+</p>
+</div>
+<p>Al seleccionar la sede Amazonía se identifican 5 periodos consecutivos de aumento de estudiantes graduados, seguido de una disminución fuerte en el periodo 2012-1, el total de estudiantes graduados para esta sede en todos los periodos es de 271.</p>
+</div>
+<div id="graficodeareaspowerbi" class="section level4 hasAnchor" number="3.5.2.10">
+<h4><span class="header-section-number">3.5.2.10</span> Gráfico de áreas<a href="3.5-flujotrabajopowerbi.html#graficodeareaspowerbi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Este tipo de gráficos son un gráfico de líneas en el que el área entre la línea y el eje aparece sombreada con un color; son usados para visualizar el comportamiento de una medida a lo largo del tiempo, en este caso se realizara un gráfico de área que permite observar el total acumulado del número de graduados por sede de admisión.</p>
+<ol style="list-style-type: decimal">
+<li>Trabajando sobre el mismo dashboard en el que se creo el gráfico de cascada agregue el gráfico de áreas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1graficoareas-fig"></span>
+<img src="Imágenes/powerbi116.jpg" alt="Agregar gráfico de áreas" width="90%" />
+<p class="caption">
+Figura 3.116: Agregar gráfico de áreas
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Es necesario crear una nueva medida que realice la suma acumulada del número de estudiantes graduados por periodo, para esto haga clic sobre el botón Nueva medida ubicado en la barra de herramientas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2graficoareas-fig"></span>
+<img src="Imágenes/powerbi119.jpg" alt="Crear una nueva medida" width="90%" />
+<p class="caption">
+Figura 3.117: Crear una nueva medida
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>En este punto en necesario escribir una formula DAX que realice el calculo deseado, se usaran 7 funciones DAX, en el recuadro que se abre al seleccionar nueva medida debe escribir la formula y seleccionar coma en el recuadro de formato:</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3graficoareas-fig"></span>
+<img src="Imágenes/powerbi120.jpg" alt="Escribir la nueva medida" width="100%" />
+<p class="caption">
+Figura 3.118: Escribir la nueva medida
+</p>
+</div>
+<p>La función CALCULATE evalúa una expresión en un contexto que es modificado por los filtros que se ceden como argumentos, en este caso la expresión que evalúa es SUM, es decir, que suma la columna conteo de la base de datos graduados, seguido de la expresión se aplica la función FILTER, dicha función devuelve una tabla que representa un subconjunto de otra tabla, su sintaxis incluye una tabla y el filtro a aplicar, en este caso para definir la tabla se usa la función ALLSELECTED que omite los filtros que se hayan aplicado, pero dicha omisión es solo aplicada dentro de la visualización en la que se ejecuta; para definir el filtro se usa la función ISONORAFTER, que es una función booleana que emula el comportamiento de una cláusula “Comenzar en” y devuelve verdadero para una fila que cumple con todos los parámetros de condición; en primer lugar se indica la columna a la que se quiere aplicar la función, en este caso YEAR_SEMESTER, seguido de la función MAX que encuentra el valor más grande de la misma columna y por último se le indica el orden de clasificación, DESC que señala orden descendente. Para obtener más información sobre las funciones DAX puede ingresar a <a href="https://docs.microsoft.com/en-us/dax/">referencia de la función DAX</a>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Luego de tener la formula DAX haga clic sobre el icono de chulo para guardarla; agregue los campos YEAR_SEMESTER, SEDE_NOMBRE_ADM y Total acumulado por periodo a los estantes eje, leyenda y valores respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4graficoareas-fig"></span>
+<img src="Imágenes/powerbi121.jpg" alt="Añadir variables a los estantes del gráfico" width="90%" />
+<p class="caption">
+Figura 3.119: Añadir variables a los estantes del gráfico
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Debe ordenar el eje X como se mostró en secciones anteriores, cambie el nombre de los campos ubicados en los estantes del gráfico por Periodo, Sede de admisión, Total acumulado de graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso5graficoareas-fig"></span>
+<img src="Imágenes/powerbi122.jpg" alt="Cambiar nombre de las variables" width="90%" />
+<p class="caption">
+Figura 3.120: Cambiar nombre de las variables
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Para dar formato al gráfico siga los pasos que ya se han mencionado para la leyenda y los ejes, el color de los datos debe ser modificado, asigne los colores “5BC0DE”, “8CC63F”, “C1272D”, “0071BC”, “F15A24”, “FBB03B”, “93278F”, a las sedes Amazonía, Bogotá, Caribe, Manizales, Medellín, Orinoquía y Palmira respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6graficoareas-fig"></span>
+<img src="Imágenes/powerbi123.jpg" alt="Dar formato y color a los datos" width="90%" />
+<p class="caption">
+Figura 3.121: Dar formato y color a los datos
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Por último, desactive el título del gráfico y active el borde.</li>
+</ol>
+</div>
+<div id="gráfico-de-la-barra-de-herramientas" class="section level4 hasAnchor" number="3.5.2.11">
+<h4><span class="header-section-number">3.5.2.11</span> Gráfico de la barra de herramientas<a href="3.5-flujotrabajopowerbi.html#gráfico-de-la-barra-de-herramientas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Este tipo de gráficos son útiles para visualizar y detectar rápidamente que categoría de datos tiene la clasificación más alta (el valor mayor). Los gráficos de barra de herramientas son eficaces para mostrar un cambio de clasificación, con el intervalo más alto (valor) en la parte superior de cada periodo de tiempo.
+El dashboard en construcción contiene gráficos útiles que permiten visualizar los periodos de cambio por sede y también su total acumulado de graduados, es momento de agregar un gráfico como el de barra de herramientas que a demás de permitir visualizar la evolución también permitirá identificar la clasificación de estas sedes por cada periodo.</p>
+<ol style="list-style-type: decimal">
+<li>Libere un espacio en la parte inferior del lienzo de trabajo y desde el panel visualizaciones seleccione gráfico de la barra de herramientas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1graficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi124.jpg" alt="Añadir gráfico de la barra de herramientas al tablero" width="100%" />
+<p class="caption">
+Figura 3.122: Añadir gráfico de la barra de herramientas al tablero
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Agregue los campos YEAR_SEMESTER, SEDE_NOMBRE_ADM y conteo a los estantes eje, leyenda y valores respectivamente.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2graficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi125.jpg" alt="Agregar variables al gráfico" width="90%" />
+<p class="caption">
+Figura 3.123: Agregar variables al gráfico
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Nuevamente debe ordenar el eje X y cambiar el nombre de los campos por Periodo, Sede de admisión y Número de graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3graficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi126.jpg" alt="Orden del eje X y cambio de nombre a variables" width="90%" />
+<p class="caption">
+Figura 3.124: Orden del eje X y cambio de nombre a variables
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Hasta el momento el gráfico es de gran utilidad para visualizar la evolución del número de estudiantes graduados y la clasificación por sedes. Replique los pasos realizados en secciones anteriores para dar formato al gráfico y el paso 6 de <a href="3.5-flujotrabajopowerbi.html#graficodeareaspowerbi">3.5.2.10</a> para dar color a los datos, finalmente, desactive el título del gráfico y active el borde.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4graficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi127.jpg" alt="Formato y color de datos gráfico de cascada" width="90%" />
+<p class="caption">
+Figura 3.125: Formato y color de datos gráfico de cascada
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Observe que este gráfico no posee eje Y, por lo que es importante activar las etiquetas para visualizar la cantidad de estudiantes graduados en cada periodo, para esto en la pestaña formato active las etiquetas, en mostrar unidades seleccione ninguno, la orientación será vertical, active texto de desbordamiento, por último, aumente el tamaño del texto a 12pt.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso5graficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi128.jpg" alt="Activar etiquetas" width="90%" />
+<p class="caption">
+Figura 3.126: Activar etiquetas
+</p>
+</div>
+<p>Como detalles finales del tablero se de agregar un matriz que en sus filas tendrá las variables YEAR y SEMETRE, en columnas SEDE_NOMBRE_ADM y en valores la variable conteo; finalmente se deben agregar tres botones que permitan alternar los gráficos de áreas, gráfico de la barra de herramientas y el gráfico de cascada, por comodidad y estética se decide activar el título de los gráficos, para el gráfico de la barra de herramientas el título debe ser Clasificación histórica de las sedes; para el gráfico de áreas debe ser evolución acumulada y por último para el gráfico de cascada será análisis periodo a periodo.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:detallesgraficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi129.jpg" alt="Botones, matriz y títulos de los gráficos" width="90%" />
+<p class="caption">
+Figura 3.127: Botones, matriz y títulos de los gráficos
+</p>
+</div>
+<p>Al final del panel izquierdo se ubica un espacio en blanco el cual será usado para añadir un botón con acción de URL que permita al usuario ir a los metadatos que se ubican en la página web de las estadísticas de la Universidad Nacional, agregue un botón en blanco y active la pestaña acción, como tipo seleccione URL web y pegue la URL de los metadatos.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:botonurlgraficobarradeherramientas-fig"></span>
+<img src="Imágenes/powerbi130.jpg" alt="Añadir un botón con acción de URL web" width="90%" />
+<p class="caption">
+Figura 3.128: Añadir un botón con acción de URL web
+</p>
+</div>
+<p>Añada un texto al botón que diga Ver metadatos, cambie el tamaño y la alineación del texto para que coincida con los botones creados anteriormente.</p>
+<p>De esta manera se da por terminado este dashboard que analiza el número de estudiantes graduados por sede de admisión a través de tres gráficos y una tabla de texto, permite interactividad con el usuario al tener una segmentación de datos y botones que permiten la alternancia entre gráficos y un vínculo web.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tablerosededeadmision-fig"></span>
+<img src="Imágenes/powerbi131.jpg" alt="Dashboard: Sede de admisión" width="90%" />
+<p class="caption">
+Figura 3.129: Dashboard: Sede de admisión
+</p>
+</div>
+</div>
+<div id="medidores" class="section level4 hasAnchor" number="3.5.2.12">
+<h4><span class="header-section-number">3.5.2.12</span> Medidores<a href="3.5-flujotrabajopowerbi.html#medidores" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Este tipo de gráficos poseen un arco circular y muestran un valor único que mide el progreso hacia un objetivo o indicador clave de rendimiento. En este caso el gráfico de medidor será usado para analizar como las sedes de la Universidad Nacional se comportan a nivel de porcentaje de graduados por periodo; inicialmente se identifica que porcentaje del total de graduados corresponde a cada sede, cabe aclarar que se tomara en cuenta la sede de matrícula, para después usar este valor como porcentaje de meta o valor de destino de la sede en el periodo que se seleccione.</p>
+<p>Agregue los campos SEDE_NOMBRE_MAT y Conteo al estante valores en una nueva página de trabajo, no es necesario editar o dar formato a esta visualización ya que solo será una guía.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:verconteiporsedematricula-fig"></span>
+<img src="Imágenes/powerbi132.jpg" alt="Conteo por sede de matrícula" width="50%" />
+<p class="caption">
+Figura 3.130: Conteo por sede de matrícula
+</p>
+</div>
+<p>En el menú desplegable de la variable conteo seleccione mostrar valor como porcentaje del total general.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:verporcentajeporsedematricula-fig"></span>
+<img src="Imágenes/powerbi133.jpg" alt="Porcetaje por sede de matrícula" width="50%" />
+<p class="caption">
+Figura 3.131: Porcetaje por sede de matrícula
+</p>
+</div>
+<p>Observe que la sede Amazonía ocupa el <span class="math inline">\(0.11\%\)</span> del total de graduados, es decir que a nivel de periodo este valor de porcentaje será tomado como el valor de meta, por ejemplo, si en el periodo 2009-1 se graduaron 4956 estudiantes se espera que el <span class="math inline">\(0.11\%\)</span> de esos estudiantes corresponda a sede de matrícula Amazonía. Como para cada sede el porcentaje esperado es diferente se hará uso del Editor Power Query para crear una nueva base de datos que contenga las columnas necesarias para crear el gráfico de medidor como se desea.</p>
+<ol style="list-style-type: decimal">
+<li><p>Haga clic en el botón transformar datos y duplique la tabla Graduados.</p></li>
+<li><p>Cambie el nombre de la tabla duplicada por Agrupación por periodo y matrícula, luego haga clic en botón agrupar por.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:agruparporperiodosede-fig"></span>
+<img src="Imágenes/powerbi134.jpg" alt="Porcentaje por sede de matrícula" width="100%" />
+<p class="caption">
+Figura 3.132: Porcentaje por sede de matrícula
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>En la ventana agrupar por seleccione uso avanzado, elija el campo YEAR_SEMESTER, haga clic sobre agregar agrupación y elija la variable SEDE_NOMBRE_MAT, como nombre de columna escriba Total sede y periodo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:agruparporperiodosedematricula-fig"></span>
+<img src="Imágenes/powerbi135.jpg" alt="Agrupar por periodo y sede de matrícula" width="70%" />
+<p class="caption">
+Figura 3.133: Agrupar por periodo y sede de matrícula
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Se obtiene una tabla que muestra el total de estudiantes graduados en cada periodo por sede, por ejemplo, para el periodo 2009-1 se observa que 3323 estudiantes se graduaron teniendo como sede de matrícula a Bogotá.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:agrpacionporperiodoymatricula-fig"></span>
+<img src="Imágenes/powerbi136.jpg" alt="Agrupación por periodo y matrícula" width="60%" />
+<p class="caption">
+Figura 3.134: Agrupación por periodo y matrícula
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Nuevamente duplique la tabla graduados, cambie su nombre por Agrupación periodo, seleccione agrupar por, en la ventana elija el campo YEAR_SEMESTER y como nombre de la columna escriba Total por periodo. Obtendrá una tabla que contiene el total de estudiantes graduados por periodo, por ejemplo, para el periodo 2009-1 se graduaron 4956 estudiantes.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:agruparporperiodoa-fig"></span>
+<img src="Imágenes/powerbi137.jpg" alt="Agrupación por periodo" width="50%" />
+<p class="caption">
+Figura 3.135: Agrupación por periodo
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Es momento de combinar las agrupaciones creadas anteriormente para esto haga clic sobre le botón combinar y seleccione combinar consultas, sobre la ventana combinar elija como segunda tabla Agrupación por periodo y matricula, de ambas tablas seleccione la variable YEAR_SEMESTER.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:combinaragrupaciones-fig"></span>
+<img src="Imágenes/powerbi138.jpg" alt="Combinar las agrupaciones" width="70%" />
+<p class="caption">
+Figura 3.136: Combinar las agrupaciones
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Expanda la columna agrupación por periodo y matrícula por las columnas SEDE_NOMBRE_MAT y Total sede y periodo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:expandiragrupacionperiodoymatricla-fig"></span>
+<img src="Imágenes/powerbi139.jpg" alt="Expandir la tabla agrupación por periodo y matrícula" width="70%" />
+<p class="caption">
+Figura 3.137: Expandir la tabla agrupación por periodo y matrícula
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Cambie el nombre de estas dos nuevas columnas por SEDE_NOMBRE_MAT y Total por sede y periodo, mueva la variable SEDE_NOMBRE_MAT a la derecha de YEAR_SEMESTER y cambie el nombre de la tabla por DatosMedidor.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cambiarnombreyordenarcolumnas-fig"></span>
+<img src="Imágenes/powerbi140.jpg" alt="Cambiar nombre y ordenar columnas" width="65%" />
+<p class="caption">
+Figura 3.138: Cambiar nombre y ordenar columnas
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Hasta el momento se tiene el total de estudiantes graduados en cada periodo y también el total de estudiantes graduados en cada periodo y cada sede, la idea es trabajar los valores con porcentajes por tanto se debe añadir una columna que contenga el porcentaje que representa cada sede sobre el total de cada periodo, por ejemplo, que porcentaje es 3323 (cantidad de graduados sede Bogotá periodo 2009-1) de 4956 que fue el total de graduados en el periodo 2009-1. Para realizar este calculo se agrega una columna personalizada la cual debe llamarse Porcentaje periodo y en la formula debe dividir la columna Total sede y periodo por la columna Total por periodo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:columnapersonalizadadeporcentajeperiodo-fig"></span>
+<img src="Imágenes/powerbi141.jpg" alt="Crear columna personalizada para calcular el porcentaje por periodo" width="80%" />
+<p class="caption">
+Figura 3.139: Crear columna personalizada para calcular el porcentaje por periodo
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>Cambie el tipo de dato de la nueva columna a porcentaje, esta columna representa en porcentaje la cantidad de estudiantes graduados en un periodo por sede, por ejemplo, <span class="math inline">\(67.05\%\)</span> representa el porcentaje del total de estudiantes graduados en el periodo 2009-1 que corresponden a la sede Bogotá.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:columnapersonalizadadeporcentajeperiodocambiaraporcetaje-fig"></span>
+<img src="Imágenes/powerbi142.jpg" alt="Cambiar tipo de dato a porcentaje" width="90%" />
+<p class="caption">
+Figura 3.140: Cambiar tipo de dato a porcentaje
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>En este momento ya se tiene establecido el valor en porcentaje y conteo que toma cada sede en cada uno de sus periodos, hace falta agregar el valor de destino o meta tanto en porcentaje como en conteo para cada sede y en cada uno de los periodos. Recuerde que dicho porcentaje se establece a partir de la proporción del total que ocupa cada sede, a modo de ejemplo este valor debe ser <span class="math inline">\(62.03\%\)</span> para la sede Bogotá y en conteo este valor debe ser 3074, esto por que este es el valor que representa el porcentaje de meta del total de graduados en el periodo 2009-1. Se iniciará agregando la variable con el total de graduados por sede, independiente del periodo, para esto, duplique la tabla de graduados, cambie el nombre por Agrupación sede, seleccione agrupar por, elija la variable SEDE_NOMBRE_MAT, la columna nueva debe llamarse Total por sede.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:agrupacionporsede-fig"></span>
+<img src="Imágenes/powerbi143.jpg" alt="Agrupación por sede" width="60%" />
+<p class="caption">
+Figura 3.141: Agrupación por sede
+</p>
+</div>
+<ol start="12" style="list-style-type: decimal">
+<li>Ubíquese nuevamente sobre la tabla DatosMedidor y realice la combinación de esta con la tabla Agrupación sede, dicha combinación debe ser hecha usando la columna SEDE_NOMBRE_MAT; expanda la nueva columna por la variable Total por sede, cambie el nombre de esta misma por Total por sede.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:combinaciondatosmedidoryagrupacionsede-fig"></span>
+<img src="Imágenes/powerbi144.jpg" alt="Combinación de tablas DatosMedidor y Agrupación por sede" width="90%" />
+<p class="caption">
+Figura 3.142: Combinación de tablas DatosMedidor y Agrupación por sede
+</p>
+</div>
+<ol start="13" style="list-style-type: decimal">
+<li><p>Para calcular el porcentaje que ocupa cada sede del total es necesario incluir una nueva columna que contenga el total de registros de la base de datos Graduados para que sea el divisor de la columna Total por sede, para esto duplique nuevamente la tabla Graduados y cambie su nombre por Total.</p></li>
+<li><p>Agregue una nueva columna llamada Cantidad y en la formula escriba 1.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:crearcolumnacantidadentotal-fig"></span>
+<img src="Imágenes/powerbi145.jpg" alt="Crear columna personalizada de cantidad" width="80%" />
+<p class="caption">
+Figura 3.143: Crear columna personalizada de cantidad
+</p>
+</div>
+<ol start="15" style="list-style-type: decimal">
+<li>Ahora debe agrupar la tabla por esta columna que acaba de crear, obtendrá una tabla con dos columnas una de ellas es cantidad que tendrá el número 1 y la segunda corresponde a Total en este caso 101840 que coincide con el total de registros que contiene la base de datos.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tabladetotal-fig"></span>
+<img src="Imágenes/powerbi146.jpg" alt="Tabla de total" width="60%" />
+<p class="caption">
+Figura 3.144: Tabla de total
+</p>
+</div>
+<ol start="16" style="list-style-type: decimal">
+<li>Diríjase a la tabla DatosMedidor y cree una nueva columna igual a la mostrada en el paso 14, luego debe combinar esta tabla con Total usando la columna Cantidad ya que es la columna que ambas tablas poseen.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:combinardatoscontotal-fig"></span>
+<img src="Imágenes/powerbi147.jpg" alt="Combinación de DatosMedidor con Total" width="90%" />
+<p class="caption">
+Figura 3.145: Combinación de DatosMedidor con Total
+</p>
+</div>
+<ol start="17" style="list-style-type: decimal">
+<li>Debe expandir la última columna por la variable Total y cambie su nombre por Total, quite la columna Cantidad, lleve la columna Porcentaje periodo al final y la columna Total ubíquela al lado derecho de la variable SEDE_NOMBRE_MAT.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:expandirportotal-fig"></span>
+<img src="Imágenes/powerbi148.jpg" alt="Expandir por Total y reordenar columnas" width="90%" />
+<p class="caption">
+Figura 3.146: Expandir por Total y reordenar columnas
+</p>
+</div>
+<ol start="18" style="list-style-type: decimal">
+<li>Es momento de agregar una nueva columna que represente el porcentaje que ocupa cada sede sobre el total, añada una nueva columna personalizada, asigne como nombre Porcentaje de meta y en la fórmula debe dividir Total por sede sobre Total.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:porcentajedemeta-fig"></span>
+<img src="Imágenes/powerbi149.jpg" alt="Crear columna de porcentaje de meta" width="80%" />
+<p class="caption">
+Figura 3.147: Crear columna de porcentaje de meta
+</p>
+</div>
+<ol start="19" style="list-style-type: decimal">
+<li>Cambie el tipo de dato a porcentaje, la interpretación de estos dos porcentajes es sencilla, porcentaje periodo representa el porcentaje que ocupo cada sede del total de graduados en cada periodo y porcentaje de meta representa el porcentaje de graduados que debía ocupar. Por ejemplo, la primera fila representa el periodo 2009-1 y la sede Bogotá, en este caso esta sede ocupo el <span class="math inline">\(67.05\%\)</span> del total de graduados en ese periodo, cuando en realidad se esperada que solo ocupara el <span class="math inline">\(62.03\%\)</span>, es decir, que se superó la meta.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:porccentajedemetaenlabase-fig"></span>
+<img src="Imágenes/powerbi150.jpg" alt="Porcentaje de meta" width="90%" />
+<p class="caption">
+Figura 3.148: Porcentaje de meta
+</p>
+</div>
+<ol start="20" style="list-style-type: decimal">
+<li>En este momento el único valor faltante es el valor de meta, pero en conteo, para esto agregue una nueva columna personalizada llamada Total meta, en su fórmula debe multiplicar las columnas Porcentaje de meta y Total por periodo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:totaldemeta-fig"></span>
+<img src="Imágenes/powerbi151.jpg" alt="Crear columna de total de meta" width="80%" />
+<p class="caption">
+Figura 3.149: Crear columna de total de meta
+</p>
+</div>
+<ol start="21" style="list-style-type: decimal">
+<li>Cambie el tipo de dato de esta última columna a número entero, ubique esta variable al lado derecho de Total por sede y periodo. La interpretación de esta columna es equivalente a la de Porcentaje periodo.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:totaldemetaenlabasededatos-fig"></span>
+<img src="Imágenes/powerbi152.jpg" alt="Total meta" width="90%" />
+<p class="caption">
+Figura 3.150: Total meta
+</p>
+</div>
+<ol start="22" style="list-style-type: decimal">
+<li>Finalmente debe hacer clic en cerrar y aplicar para guardar la base de datos y usarla posteriormente en la creación de los medidores. Ya ubicado en el lienzo de trabajo se observa que en el panel Campos se tienen 5 tablas de la cuales solo interesan 3 que son Graduados, Modalidadfromación y DatosMedidor, las demás que corresponden a las agrupaciones deben ser ocultadas.</li>
+</ol>
+<p>En este punto ya se tiene la base de datos construida de una manera que permite crear el gráfico de medidor como se desea, elimine la tabla que se realizo al inicio de esta sección y cambie el nombre de la pagina de trabajo por Metas por sede de matrícula. Ahora para crear el gráfico de medidores debe seguir estos pasos.</p>
+<ol style="list-style-type: decimal">
+<li>Desde el panel visualizaciones haga clic sobre Medidor.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1medidor-fig"></span>
+<img src="Imágenes/powerbi153.jpg" alt="Añadir medidor al lienzo" width="90%" />
+<p class="caption">
+Figura 3.151: Añadir medidor al lienzo
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Añada los campos Porcentaje periodo y Porcentaje de meta a los estantes Valor y Valor de destino respectivamente, los campos Total por sede y periodo y Total meta deben ubicarse en la tarjeta Información sobre herramientas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2medidor-fig"></span>
+<img src="Imágenes/powerbi154.jpg" alt="Agregar campos a los estantes del medidor" width="90%" />
+<p class="caption">
+Figura 3.152: Agregar campos a los estantes del medidor
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Debe cambiar el nombre los campos agregados a la visualización por Porcentaje real, Porcentaje esperado, Número de estudiantes graduados y Número esperado de estudiantes graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3medidor-fig"></span>
+<img src="Imágenes/powerbi155.jpg" alt="Cambiar el formato de los totales" width="90%" />
+<p class="caption">
+Figura 3.153: Cambiar el formato de los totales
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Para dar formato a este gráfico haga clic sobre la columna Total meta ubicada en el panel campos y haga clic sobre la coma ubicada en formato; repita esta operación para Total sede y periodo.</p></li>
+<li><p>En este momento la visualización se está calculando de manera general y la idea inicial es ver este progreso a nivel de sede y periodo, por tanto, es necesario agregar dos segmentaciones de datos una con el campo SEDE_NOMBRE_MAT y otra con YEAR_SEMESTER, recuerde darle el formato mostrado en secciones anteriores y activar la selección única.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso5medidor-fig"></span>
+<img src="Imágenes/powerbi156.jpg" alt="Agregar segmentaciones" width="90%" />
+<p class="caption">
+Figura 3.154: Agregar segmentaciones
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Los valores que se muestran en el medidor los cuales corresponden a Porcentaje periodo y Porcentaje de meta deben tener formato de porcentaje, para esto haga clic sobre uno de ellos y seleccione el icono de porcentaje ubicado en formato, repita lo mismo para el otro valor. Si selecciona sede Bogotá y periodo 2009-1, obtendrá el siguiente tablero, el cual permite identificar que en dicho periodo la sede seleccionada supero la meta propuesta.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6medidor-fig"></span>
+<img src="Imágenes/powerbi157.jpg" alt="Cambiar formato de porcentajes" width="90%" />
+<p class="caption">
+Figura 3.155: Cambiar formato de porcentajes
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Es momento de dar formato al medidor, para esto en la pestaña colores de datos asigne el color “5BC0DE” al relleno y para la meta seleccione color negro. El color de las etiquetas y destino debe ser negro y el tamaño del texto 14pt; cambie el color de la pestaña valor del globo a negro; el título de la visualización será Indicador de estudiantes graduados en color negro, alineación central y tamaño 25pt, finalmente debe activar el borde.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso7medidor-fig"></span>
+<img src="Imágenes/powerbi158.jpg" alt="Formato del medidor" width="90%" />
+<p class="caption">
+Figura 3.156: Formato del medidor
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>En el espacio en blanco ubicado en el lateral izquierdo debe agregar un gráfico circular que permita identificar la distribución de las sedes de matrícula por periodo, añada el gráfico circular y asigne los campos SEDE_NOMBRE_MAT y Conteo a los estantes leyenda y valores respectivamente, estos campos los debe tomar de la base de datos Graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso8medidor-fig"></span>
+<img src="Imágenes/powerbi159.jpg" alt="Agregar gráfico circular" width="90%" />
+<p class="caption">
+Figura 3.157: Agregar gráfico circular
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Note que este último gráfico esta siendo afectado por las segmentaciones que se han realizado, la única segmentación que debe afectar este gráfico es la de periodo, por tanto, debe editar la interacción entre la segmentación de sede y el gráfico circular.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso9medidor-fig"></span>
+<img src="Imágenes/powerbi160.jpg" alt="Eliminar interacción entre la segmentación sede y el gráfico circular" width="90%" />
+<p class="caption">
+Figura 3.158: Eliminar interacción entre la segmentación sede y el gráfico circular
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>Para dar formato a este último gráfico debe desactivar la leyenda, asignar los colores de datos mostrados en la sección <a href="3.5-flujotrabajopowerbi.html#graficodeareaspowerbi">3.5.2.10</a> para la pestaña etiquetas seleccione todas las etiquetas de detalle, en color negro y tamaño 12pt, como título debe escribir Distribución de graduados por sede en color negro, tamaño 25pt y alineación central; finalmente cambie el título de los campos SEDE_NOMBRE_MAT por Sede de matrícula y Conteo por Número de estudiantes graduados; también debe activar el borde.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tablerofinalmetasporsededematricula-fig"></span>
+<img src="Imágenes/powerbi161.jpg" alt="Dashboard: Metas por sede de matrícula" width="90%" />
+<p class="caption">
+Figura 3.159: Dashboard: Metas por sede de matrícula
+</p>
+</div>
+</div>
+<div id="mapeodatospowerbi" class="section level4 hasAnchor" number="3.5.2.13">
+<h4><span class="header-section-number">3.5.2.13</span> Mapeo de datos<a href="3.5-flujotrabajopowerbi.html#mapeodatospowerbi" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El mapeo de datos o georreferenciación es una herramienta muy utilizada cuando se quiere mostrar la procedencia de la información; en el conjunto de datos que se esta analizando se tiene información sobre la longitud y latitud de la cuidad de nacimiento, el nombre de dicha ciudad y el departamento al que pertenece.
+El software de visualización Power BI presenta diversas formas de realizar mapeo de datos, 3 de ellas están en los objetos predeterminados del panel visualizaciones y otro debe ser activado desde opciones y configuración.</p>
+<ul>
+<li>Mapa: este objeto visual posee un icono de globo terráqueo, es un mapa de burbujas, es decir, que al introducir coordenadas de ubicación como latitud y longitud dibuja una burbuja sobre el punto, es posible añadir una variable que determine el tamaño de dicho punto. Para realizar este tipo de mapa únicamente es necesario añadir el objeto al lienzo y agregar los campos LAT_CUI_NAC, LON_CIU_NAC a los estantes latitud y longitud respectivamente, para el tamaño debe agregar el campo conteo.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaburbujas-fig"></span>
+<img src="Imágenes/powerbi162.jpg" alt="Mapa de burbujas para cuidad de nacimiento" width="90%" />
+<p class="caption">
+Figura 3.160: Mapa de burbujas para cuidad de nacimiento
+</p>
+</div>
+<p>Observe que todas las burbujas poseen el mismo tamaño a pesar de haber especificado que la variable conteo determinara el tamaño de cada una, tampoco es posible añadir como etiqueta de cada punto la ciudad a la que pertenece. Este tipo de mapas no es muy útil en este caso ya que se tienen demasiadas coordenadas y se ve saturado.</p>
+<ul>
+<li>Mapa coroplético: este tipo de mapas usa sombras o colores para mostrar como un valor difiere en proporción a una geografía o región, es decir, que usa la frecuencia de aparición de una región o ciudad para asignar el sombreado. Posee los mismos campos que el mapa de burbujas, pero en este caso es necesario usar la ubicación en lugar de latitud y longitud, seleccione mapa coroplético en el panel visualizaciones y agregue el campo CIU_NAC al estante ubicación.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:maparelleno-fig"></span>
+<img src="Imágenes/powerbi163.jpg" alt="Mapa coroplético para cuidad de nacimiento" width="90%" />
+<p class="caption">
+Figura 3.161: Mapa coroplético para cuidad de nacimiento
+</p>
+</div>
+<p>Se identifica que las ciudades no se ubican únicamente en Colombia como debería ser, sino que están repartidas en el mundo, esto sucede ya que hay ciudades con el mismo nombre en diferentes lugares del mundo y no es posible indicarle al mapa que únicamente se quieren visualizar las ciudades que pertenecen a Colombia; a pesar de que este mapa es una buena opción ya que rellena toda el área que pertenece a una ciudad no es posible usarlo en este caso ya que no se puede especificar el país al que deben pertenecer estas ciudades.</p>
+<ul>
+<li>ArcGIS Maps for Power BI: ArcGIS es un completo sistema que permite recopilar, organizar, administrar, compartir y distribuir información geográfica, Power BI proporciona una integración con este sistema que pretende llevar las visualizaciones de mapa a un siguiente nivel, al usar datos demográficos y mapas atractivos. Para añadir este tipo de mapas al lienzo de trabajo haga clic sobre el icono de ArcGIS en el panel visualizaciones, agregue el campo CIU_NAC al estante location y la variable conteo al estante size.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgis-fig"></span>
+<img src="Imágenes/powerbi164.jpg" alt="ArcGIS Map para cuidad de nacimiento, nivel mundial" width="90%" />
+<p class="caption">
+Figura 3.162: ArcGIS Map para cuidad de nacimiento, nivel mundial
+</p>
+</div>
+<p>Observe que nuevamente las ciudades están siendo ubicadas a nivel mundial, una ventaja de este objeto visual es que el panel formato y pestaña Location Type es posible especificar el país al que se refieren dichas ciudades, seleccione Colombia. Ahora su mapa solo posee puntos o burbujas a nivel de Colombia.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgiscolombia-fig"></span>
+<img src="Imágenes/powerbi165.jpg" alt="ArcGIS Map para cuidad de nacimiento, Colombia" width="90%" />
+<p class="caption">
+Figura 3.163: ArcGIS Map para cuidad de nacimiento, Colombia
+</p>
+</div>
+<p>La idea es construir un mapa que sombree el área que pertenece a cada ciudad, desde el panel formato de Power BI no es posible hacerlo, pero desde el formato de ArcGIS se puede realizar, haga clic sobre el circulo amarillo ubicado en la esquina superior izquierda, clic sobre el cuarto icono que se refiere a la capas del mapa (Layer list), ahora debe hacer clic sobre los tres puntos ubicados en la esquina derecha de Layers y seleccionar Location Type.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgiscolombiasombrear-fig"></span>
+<img src="Imágenes/powerbi177.jpg" alt="Formato de ArcGIS" width="30%" />
+<p class="caption">
+Figura 3.164: Formato de ArcGIS
+</p>
+</div>
+<p>Ubicado en la ventana Location type debe cambiar Points por Boundaries, Departaments por Municipalities, finalmente clic en Ok.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgiscolombiasformatomunicipios-fig"></span>
+<img src="Imágenes/powerbi178.jpg" alt="Seleccionar fronteras y municipios" width="30%" />
+<p class="caption">
+Figura 3.165: Seleccionar fronteras y municipios
+</p>
+</div>
+<p>Observara que su mapa no presenta cambios, es decir que sigue representando las ciudades con burbujas, esto se debe a que el campo Size tiene asignado la variable conteo, por lo que debe mover esta variable al estante color.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgiscoloreado-fig"></span>
+<img src="Imágenes/powerbi179.jpg" alt="Agregar campo al estante color" width="100%" />
+<p class="caption">
+Figura 3.166: Agregar campo al estante color
+</p>
+</div>
+<p>La idea del dashboard para el lugar de nacimiento es mostrar la cantidad de estudiantes graduados para el periodo 2020-1, para esto despliegue el panel filtros y lleve hacia el a la variable YEAR_SEMESTER, seleccione únicamente el periodo 2020-1.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgiscoloreadofiltrodeperiodo-fig"></span>
+<img src="Imágenes/powerbi182.jpg" alt="Agregar filtro del periodo 2020-1" width="100%" />
+<p class="caption">
+Figura 3.167: Agregar filtro del periodo 2020-1
+</p>
+</div>
+<p>Este tipo de visualiazación al no ser nativa de Power BI no se le da formato de color desde el rodillo como se hace en las demás, nuevamente se debe hacer desde el circulo amarillo ubicado en la esquina superior, hacer clic sobre Layer list y sobre los tres puntos, pero esta vez debe seleccionar symbology.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgiseditarsimbologia-fig"></span>
+<img src="Imágenes/powerbi180.jpg" alt="Formato de simbología" width="30%" />
+<p class="caption">
+Figura 3.168: Formato de simbología
+</p>
+</div>
+<p>Diríjase hasta la pestaña Symbol Color, asegúrese que el tipo de clasificación sea manual con seis clases y cambie el color a una gama de verdes, haciendo doble clic sobre el número de la línea divisoria en la barra de colores puede editar la ubicación de dicha línea, las divisiones deben ubicarse en 1, 2, 4, 10 y finalmente 100.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgiseditarsimbologiacolor-fig"></span>
+<img src="Imágenes/powerbi181.jpg" alt="Editar color y división del mismo" width="30%" />
+<p class="caption">
+Figura 3.169: Editar color y división del mismo
+</p>
+</div>
+<p>Cierre la pestaña Symbol color y ubíquese sobre la pestaña symbol style, seleccione color personalizado y escriba “#699682”.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgiseditarsimbologiacolorborde-fig"></span>
+<img src="Imágenes/powerbi183.jpg" alt="Editar color para el borde de los municipios" width="100%" />
+<p class="caption">
+Figura 3.170: Editar color para el borde de los municipios
+</p>
+</div>
+<p>Es momento de cambiar el nombre de las variables, CIU_NAC debe ser cambiado por Municipio y Conteo por Numero de estudiantes graduados, al hacer esto notara que vuelve a ser un mapa de burbujas, por lo tanto, repita el paso donde se cambia para que se sombree toda el área, desde el botón formato con el icono de rodillo debe desactivar el título y activar el borde. Se obtiene un mapa que permite visualizar la distribución de los estudiantes graduados por municipio.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgismunicipiosperiodo20201-fig"></span>
+<img src="Imágenes/powerbi184.jpg" alt="Total de estudiantes graduados por municipio, periodo 2020-1" width="100%" />
+<p class="caption">
+Figura 3.171: Total de estudiantes graduados por municipio, periodo 2020-1
+</p>
+</div>
+<p>Este mismo mapa debe ser realizado para la variable DEP_NAC, el color debe ser una gama de azules.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mapaarcgismunicipiosperiododepartamento20201-fig"></span>
+<img src="Imágenes/powerbi185.jpg" alt="Total de estudiantes graduados por municipio y departamento, periodo 2020-1" width="100%" />
+<p class="caption">
+Figura 3.172: Total de estudiantes graduados por municipio y departamento, periodo 2020-1
+</p>
+</div>
+<p>Finalmente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno “88AD84” y disminuir su transparencia a cero.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:dashboardlugardenacmiento-fig"></span>
+<img src="Imágenes/powerbi186.jpg" alt="Dashboard: Lugar de nacmiento, periodo 2020-1" width="100%" />
+<p class="caption">
+Figura 3.173: Dashboard: Lugar de nacmiento, periodo 2020-1
+</p>
+</div>
+<ul>
+<li>Mapa de formas: este tipo de mapas son muy similares a los coropléticos ya que se rellena con un determinado color el polígono perteneciente a cada ciudad o departamento, la diferencia radica en que son mapas personalizados que al basarse en archivos TopoJSON permiten mapear datos sobre mapas geográficos, disposición de asientos, planos de plantas y otros. Este tipo de mapas no esta habilitado en la vista previa del del panel visualizaciones por lo que es necesario activarlo.</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Haga clic sobre la pestaña archivo, luego seleccione opciones y configuración y nuevamente opciones.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1mapadeformas-fig"></span>
+<img src="Imágenes/powerbi166.jpg" alt="Opciones y configuración" width="60%" />
+<p class="caption">
+Figura 3.174: Opciones y configuración
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Sobre la pestaña mapas debe seleccionar características de versión preliminar y activar la opción Objeto visual Mapa de formas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2mapadeformas-fig"></span>
+<img src="Imágenes/powerbi167.jpg" alt="Activar el objeto visual Mapa de formas" width="60%" />
+<p class="caption">
+Figura 3.175: Activar el objeto visual Mapa de formas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Luego de activar el objeto visual este aparecerá en el panel visualizaciones al lado de mapas coropléticos, haga clic sobre el mapa de formas para añadirlo al lienzo y agregue el campo CIU_NAC al estante ubicación.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3mapadeformas-fig"></span>
+<img src="Imágenes/powerbi168.jpg" alt="Uso del mapa de formas" width="90%" />
+<p class="caption">
+Figura 3.176: Uso del mapa de formas
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Se obtiene un mapa de Estados Unidos con el estado de Florida coloreado ya que es la única ciudad de Colombia que coincide con una ubicación en este país, al hacer clic en formato y en la pestaña forma, se visualiza un campo llamado mapa que contiene los mapas disponibles, en dicha lista no se encuentra Colombia.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4mapadeformas-fig"></span>
+<img src="Imágenes/powerbi169.jpg" alt="Lista de mapas disponibles" width="90%" />
+<p class="caption">
+Figura 3.177: Lista de mapas disponibles
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Observe que existe la posibilidad de agregar mapa, como se menciono anteriormente estos mapas de forma se basan en archivos TopoJSON, por lo que si se desea agregar un mapa debe ser en este formato, se realizó una búsqueda de archivos en este formato para Colombia y se encontró un repositorio de <a href="https://gist.github.com/john-guerra/727e8992e9599b9d9f1dbfdc4c8e479e">GitHub</a> que almacena un Zip con un archivo JSON del mapa de Colombia con municipios y departamentos, dicho archivo ya se encuentra en el repositorio de en el cual se almacena este libro.</p></li>
+<li><p>Haga clic sobre agregar mapa y navegue entre la carpetas de su equipo hasta encontrar el archivo llamado Colombia-municipios.json y haga clic en abrir.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6mapadeformas-fig"></span>
+<img src="Imágenes/powerbi170.jpg" alt="Agregar mapa de Colombia, archivo JSON" width="60%" />
+<p class="caption">
+Figura 3.178: Agregar mapa de Colombia, archivo JSON
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>En el lienzo de trabajo se observa el mapa de Colombia que colorea en azul las ciudades de las cuales se tiene registro.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso7mapadeformas-fig"></span>
+<img src="Imágenes/powerbi171.jpg" alt="Municipios de Colombia" width="90%" />
+<p class="caption">
+Figura 3.179: Municipios de Colombia
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Haga clic sobre campos ubicado debajo de visualizaciones y añada Conteo al estante saturación de color, también debe cambiar el nombre CIU_NAC por Ciudad de nacimiento y conteo por Número de estudiantes graduados.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso8mapadeformas-fig"></span>
+<img src="Imágenes/powerbi172.jpg" alt="Agregar campo a saturación de color" width="90%" />
+<p class="caption">
+Figura 3.180: Agregar campo a saturación de color
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>En la pestaña formato seleccione colores de datos, para mínimo establezca el color “D9F0A3” y valor 0, para máximo el color debe ser “006837” y valor 100.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso9mapadeformas-fig"></span>
+<img src="Imágenes/powerbi173.jpg" alt="Asignación de colores" width="90%" />
+<p class="caption">
+Figura 3.181: Asignación de colores
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>Para el grosor de color predeterminado seleccione 2, en la pestaña zoom active ampliar selección, desactive el título y active el borde.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso10mapadeformas-fig"></span>
+<img src="Imágenes/powerbi174.jpg" alt="Mapa: número de estudiantes graduados por ciudad de nacimiento" width="90%" />
+<p class="caption">
+Figura 3.182: Mapa: número de estudiantes graduados por ciudad de nacimiento
+</p>
+</div>
+<p>Una gran desventaja es que no es posible añadir etiquetas para que cada municipio tenga su nombre, repita este mapa para la variable DEP_NAC pero los colores de datos deben ser “A6BDDB” para mínimo y “045A8D” para máximo.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso11mapadeformas-fig"></span>
+<img src="Imágenes/powerbi175.jpg" alt="Mapa: número de estudiantes graduados por ciudad y departamento de nacimiento" width="90%" />
+<p class="caption">
+Figura 3.183: Mapa: número de estudiantes graduados por ciudad y departamento de nacimiento
+</p>
+</div>
+<p>Finalmente debe agregar dos botones que permitan la alternancia de estos dos gráficos, en formato debe hacer uso del botón rellenar para asignar como color de relleno “88AD84” y disminuir su transparencia a cero. A continuación, se presenta el dashboard para lugar de nacimiento, algo simple, pero es lo que se logra hacer al usar archivos TopoJSON.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:dashboardlugarnacimeinto-fig"></span>
+<img src="Imágenes/powerbi176.jpg" alt="Dashboard lugar de nacimiento" width="90%" />
+<p class="caption">
+Figura 3.184: Dashboard lugar de nacimiento
+</p>
+</div>
+</div>
+<div id="objeto-visual-de-script-de-r" class="section level4 hasAnchor" number="3.5.2.14">
+<h4><span class="header-section-number">3.5.2.14</span> Objeto visual de script de R<a href="3.5-flujotrabajopowerbi.html#objeto-visual-de-script-de-r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>La versión gratuita de Power BI no posee todos los gráficos básicos que un análisis estadístico exploratorio requiere, como lo son histogramas o bloxplot, pero ofrece la posibilidad de crear objetos visuales a través de scripts de R, en este caso se creara un histograma que permita visualizar la distribución de las edades por modalidad de formación, algo muy similar a lo mostrado en <a href="2.4-flujo-de-trabajo.html#histograma">2.4.2.10</a>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Cree una nueva página de trabajo y haga clic sobre el icono de R en el panel visualizaciones.</p></li>
+<li><p>Después de agregar el objeto visual R, su lienzo de trabajo se dividirá en dos secciones, una de ellas mostrara la visualización creada a partir de un script R y la otra sección funciona como un editor de script de R que permite escribir o pegar código, inicialmente esta última sección le pedirá agregar campos al área valores, esto se debe a que Power BI creara una base de datos con los campos seleccionados.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2histogramapowerbi-fig"></span>
+<img src="Imágenes/powerbi198.jpg" alt="Agregar objeto visual de R" width="90%" />
+<p class="caption">
+Figura 3.185: Agregar objeto visual de R
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Se realizará un histograma que permita identificar la distribución de edades por modalidad de formación y después se añade una segmentación que permita filtrar por la sede de matrícula, por tanto, los campos que se deben añadir al estante valores serán EDAD_MOD, TIPO_NIVEL, SEDE_NOMBRE_MAT.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3histogramapowerbi-fig"></span>
+<img src="Imágenes/powerbi199.jpg" alt="Agregar campos al estante valores" width="90%" />
+<p class="caption">
+Figura 3.186: Agregar campos al estante valores
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Debe verificar que los campos agregados al estante valores no se encuentren resumidos, ya que esto hará que la base de datos no se construya como debería, haga clic sobre el menú desplegable de cada campo y seleccione no resumir. Observe que en la pestaña editor de Script R se informa sobre lo que siempre será ejecutado, se crea un conjunto de datos con los campos agregados y se eliminan las filas duplicadas.</p></li>
+<li><p>El histograma se realizará con ayuda del paquete ggplot2, el código será escrito a partir de la línea siete como se muestra en la siguiente imagen.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso5histogramapowerbi-fig"></span>
+<img src="Imágenes/powerbi200.jpg" alt="Código para crear histograma" width="90%" />
+<p class="caption">
+Figura 3.187: Código para crear histograma
+</p>
+</div>
+<p>El conjunto de datos con el cual se trabaja es “dataset”, inicialmente se eliminan las filas con valores faltantes, seguido de esto se remueven los valores de edad menores a 15 años y mayores a 70 ya que se consideran posibles errores de digitación, finalmente se crea un histograma con apoyo de la librería ggplot2, dicho histograma presenta la edad en el eje X, el relleno de las barras dependerá de la modalidad de formación y el ancho de cada agrupación será de cinco.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Haga clic sobre el icono ejecutar script ubicado en la esquina superior derecha de la ventana de editor, al ejecutarlo obtendrá dos histogramas, uno para cada modalidad de formación.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6histogramapowerbi-fig"></span>
+<img src="Imágenes/powerbi201.jpg" alt="Histograma para edad por modalidad de formación" width="90%" />
+<p class="caption">
+Figura 3.188: Histograma para edad por modalidad de formación
+</p>
+</div>
+<p>Al observar detalladamente el gráfico obtenido se identifica que este es incorrecto ya que la cantidad de estudiantes graduados es muy baja para ambas modalidades, esto se debe a que Power BI por defecto elimina las filas duplicadas, es decir que la cantidad de datos se reduce en gran medida.</p>
+<p>Una solución a este problema es agregar una columna que funcione cono índice o identificador, que debe ser agregado con los demás campos al estante valores, con esto no se identificarán filas duplicadas y por tanto no serán removidas.</p>
+<ol style="list-style-type: decimal">
+<li><p>Elimine el objeto visual R creado anteriormente.</p></li>
+<li><p>Haga clic sobre transformar datos, ya ubicado sobre el panel Power Query seleccione la tabla graduados, haga clic sobre agregar columna y seleccione columna de índice desde 1.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:correccionhistograma-fig"></span>
+<img src="Imágenes/powerbi202.jpg" alt="Agregar columna de índice" width="90%" />
+<p class="caption">
+Figura 3.189: Agregar columna de índice
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Luego de agregar la columna índice haga clic en archivo y luego en cerrar y aplicar.</li>
+</ol>
+<p>Nuevamente agregue el objeto visual R, pero ahora los campos añadir serán índice, EDAD_MOD, TIPO_NIVEL, SEDE_NOMBRE_MAT, también debe verificar que no se encuentren resumidos, finalmente escriba el código R mostrado en <a href="2.4-flujo-de-trabajo.html#fig:paso5histograma-fig">2.126</a>, añada la instrucción scale_fill_manual(values=c(“#f15a24”, “#8cc63f”)) separada por el singo mas (+) de la instrucción final.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:correccionhistogramacodigo-fig"></span>
+<img src="Imágenes/powerbi203.jpg" alt="Código para creación de histograma con colores personalizados" width="90%" />
+<p class="caption">
+Figura 3.190: Código para creación de histograma con colores personalizados
+</p>
+</div>
+<p>Al ejecutar el script de R tendrá un gráfico con dos histogramas, uno para cada modalidad de formación, observe que ahora en pregrado la cantidad graduados con 25 años supera los 40.000 estudiantes.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:histogramapowerbi-fig"></span>
+<img src="Imágenes/powerbi204.jpg" alt="Histograma para edad y modalidad de formación" width="90%" />
+<p class="caption">
+Figura 3.191: Histograma para edad y modalidad de formación
+</p>
+</div>
+<p>A pesar de que esta integración es bastante útil no es la más estética debido a que se muestra algo como una imagen del gráfico que se obtendría en R, el cual tampoco tiene descripción emergente.</p>
+<p>Como complemento a este gráfico se realizará un boxplot para las edades por nivel de formación, el código a usar se muestra a continuación.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:codigoboxplotpowerbi-fig"></span>
+<img src="Imágenes/powerbi205.jpg" alt="Código para crear boxplot por nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.192: Código para crear boxplot por nivel de formación
+</p>
+</div>
+<p>Al ejecutar el código mostrado anteriormente obtendrá un gráfico de boxplot, en el cual cada caja representa un nivel de formación y cada punto las edades de los estudiantes graduados en dichos niveles.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:boxplotpowerbi-fig"></span>
+<img src="Imágenes/powerbi206.jpg" alt="Boxplot para edad por nivel de formación" width="90%" />
+<p class="caption">
+Figura 3.193: Boxplot para edad por nivel de formación
+</p>
+</div>
+<p>Se observa que la mayoría de los puntos atípicos o extremos se ubican en la parte superior de los bigotes, el nivel con menor dispersión es pregrado para el cual su mediana se ubica alrededor de los 25 años, la mediana superior se ubica en el nivel doctorado, alrededor de los 40 años.</p>
+<p>Debe editar el título de cada una de las visualizaciones creadas, agregar una tarjeta para la segmentación con el campo SEDE_NOMBRE_MAT y botones que permitan la alternancia de gráficos, su dashboard debe verse de la siguiente manera.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tableroedad-fig"></span>
+<img src="Imágenes/powerbi207.jpg" alt="Dashboard: Edad" width="90%" />
+<p class="caption">
+Figura 3.194: Dashboard: Edad
+</p>
+</div>
+</div>
+<div id="gráfico-de-dispersión" class="section level4 hasAnchor" number="3.5.2.15">
+<h4><span class="header-section-number">3.5.2.15</span> Gráfico de dispersión<a href="3.5-flujotrabajopowerbi.html#gráfico-de-dispersión" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Este tipo de gráficos son útiles cuando se pretende identificar o analizar las relaciones existentes entre dos variables del tipo numérico, como se mencionó en <a href="2.4-flujo-de-trabajo.html#dispersion">2.4.2.13</a> la base de datos con la cual se está trabajando no posee dos campos del tipo numérico para realizar este gráfico, por lo cual deberá abrir un nuevo lienzo de trabajo haciendo clic sobre archivo y seleccionando nuevo, luego de ubicarse en el nuevo lienzo de trabajo conéctese a la fuente de datos Sample-Superstore.xls y seleccione la hoja Orders, este conjunto de datos contiene información sobre productos vendidos.</p>
+<ol style="list-style-type: decimal">
+<li>Llame a la página de trabajo Diagrama de dispersión y desde el panel visualizaciones seleccione gráfico de dispersión.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso1dispersionpowerbi-fig"></span>
+<img src="Imágenes/powerbi187.jpg" alt="Agregar gráfico de dispersión al lienzo" width="90%" />
+<p class="caption">
+Figura 3.195: Agregar gráfico de dispersión al lienzo
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Agregue los campos Profit y Sales a los ejes X y Y respectivamente</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2dispersionpowerbi-fig"></span>
+<img src="Imágenes/powerbi188.jpg" alt="Asignar campos a los ejes X y Y" width="90%" />
+<p class="caption">
+Figura 3.196: Asignar campos a los ejes X y Y
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Notara que su gráfico solo presenta un punto, esto se debe a que las medidas se encuentran agregadas, es decir que ese punto representa la suma de todas las ventas y la suma de todos los beneficios, suma es la agregación por defecto; para solucionar esto debe hacer clic en el menú desplegable de los campos Profit y Sales y seleccione no resumir.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3dispersionpowerbi-fig"></span>
+<img src="Imágenes/powerbi189.jpg" alt="No resumir medidas" width="30%" />
+<p class="caption">
+Figura 3.197: No resumir medidas
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Con el paso anterior se obtiene un diagrama de dispersión para cada par de puntos de beneficios y ventas.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4dispersionpowerbi-fig"></span>
+<img src="Imágenes/powerbi190.jpg" alt="Diagrama de dispersión para beneficios y ventas" width="90%" />
+<p class="caption">
+Figura 3.198: Diagrama de dispersión para beneficios y ventas
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Puede agregar el campo Category al estante leyenda para identificar las tres categorías de productos vendidos, a la derecha del icono para dar formato a las visualizaciones se ubica la pestaña analítica que permite añadir líneas de referencia, tendencia y sombreado de simetría.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso5dispersionpowerbi-fig"></span>
+<img src="Imágenes/powerbi191.jpg" alt="Panel analítica" width="20%" />
+<p class="caption">
+Figura 3.199: Panel analítica
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Haga clic sobre la pestaña línea de tendencia, luego clic en agregar y finalmente desactive la opción combinar series, para obtener tres líneas de tendencia, una para cada categoría.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6dispersionpowerbi-fig"></span>
+<img src="Imágenes/powerbi192.jpg" alt="Diagrama de dispersión para beneficios y ventas con líneas de tendencia por categoría" width="90%" />
+<p class="caption">
+Figura 3.200: Diagrama de dispersión para beneficios y ventas con líneas de tendencia por categoría
+</p>
+</div>
+<p>Esta es la manera en la que se agregan líneas de tendencia a los gráficos de dispersión, al ubicarse sobre una de las líneas no se obtiene descripción emergente o descripción de la línea, como coeficientes, significancia o medidas estadísticas útiles para verificar su calidad de ajuste.</p>
+</div>
+<div id="pronósticos-para-series-de-tiempo-univariadas-1" class="section level4 hasAnchor" number="3.5.2.16">
+<h4><span class="header-section-number">3.5.2.16</span> Pronósticos para series de tiempo univariadas<a href="3.5-flujotrabajopowerbi.html#pronósticos-para-series-de-tiempo-univariadas-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Cuando se trabaja con campos de fechas y numéricos es de gran utilidad generar pronósticos, Power BI permite generar estas predicciones nuevamente usando el panel de analítica, se inicia con un gráfico de líneas básico y se añade la predicción.</p>
+<ol style="list-style-type: decimal">
+<li><p>Añada una nueva página de trabajo y llámela evolución histórica de las ventas.</p></li>
+<li><p>Agregue un gráfico de líneas que contenga la variable Order Date en el estante eje y Sales para valores.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso2pronosticopowerbi-fig"></span>
+<img src="Imágenes/powerbi193.jpg" alt="Evolución anual de las ventas" width="90%" />
+<p class="caption">
+Figura 3.201: Evolución anual de las ventas
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Observe que en estante eje se establece una jerarquía de fecha, desde año hasta día, es posible eliminar las que no se quieren visualizar por ejemplo eliminar año, trimestre y día para visualizar las ventas a nivel de mes, al hacer esto obtendrá un gráfico de líneas que representa las ventas por mes.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso3pronosticopowerbi-fig"></span>
+<img src="Imágenes/powerbi194.jpg" alt="Evolución anual de las ventas" width="90%" />
+<p class="caption">
+Figura 3.202: Evolución anual de las ventas
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Otra opción es seleccionar Order Date en el menú desplegable de esta variable, con esto se obtiene un gráfico de líneas saturado ya que se está representando las ventas fecha a fecha.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso4pronosticopowerbi-fig"></span>
+<img src="Imágenes/powerbi195.jpg" alt="Evolución de las ventas fecha por fecha" width="90%" />
+<p class="caption">
+Figura 3.203: Evolución de las ventas fecha por fecha
+</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Seleccione nuevamente jerarquía de fechas, en el estate eje debe quedar únicamente el día.</p></li>
+<li><p>Ubíquese sobre el panel analítica, al final de este panel se ubica una pestaña llamada previsión la cual permite hacer predicciones, haga clic sobre esta pestaña y sobre agregar, el pronóstico debe hacerla para 30 puntos.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso6pronosticopowerbi-fig"></span>
+<img src="Imágenes/powerbi196.jpg" alt="Pronóstico de las ventas para 30 días" width="90%" />
+<p class="caption">
+Figura 3.204: Pronóstico de las ventas para 30 días
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Observe que al final de este recuadro gris se ubica un campo llamado estacionalidad, este permite especificar el periodo de estacionalidad que posee la serie de tiempo, a modo de ejemplo puede escribir 30 para esta opción, notara que el pronostico replicara el comportamiento de los 30 puntos reales.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:paso7pronosticopowerbi-fig"></span>
+<img src="Imágenes/powerbi197.jpg" alt="Pronóstico de las ventas para 30 días agregando estacionalidad" width="90%" />
+<p class="caption">
+Figura 3.205: Pronóstico de las ventas para 30 días agregando estacionalidad
+</p>
+</div>
+<p>La descripción emergente indica el valor de la predicción y los límites del intervalo de confianza, así como en las líneas de tendencia no es posible encontrar información acerca del método usado para realizar el pronóstico o medidas estadísticas útiles que permitan la evaluación del mismo.</p>
+
+</div>
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="3.4-formadenavegacionpower.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="4-flourish.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Softwares.pdf", "Softwares.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
