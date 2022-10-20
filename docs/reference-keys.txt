@@ -1,5 +1,3 @@
-fig:nice-fig
-tab:nice-tab
 fig:guardar1-fig
 fig:iniciosesion-fig
 fig:nombrelibro-fig

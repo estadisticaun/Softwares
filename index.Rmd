@@ -1,7 +1,7 @@
 --- 
 title: "Softwares para la visualización estadística"
 author: "Camila Acosta Ramirez"
-date: "`r Sys.Date()`"
+date: "Última Actualización <br>`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -15,3 +15,16 @@ link-citations: yes
 ```{r fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
 knitr::include_graphics('Imágenes/Portada.jpg')
 ```
+
+
+<h2>**Sistema Estadístico UNAL**</h2> 
+
+Este manual hace parte integral del *sistema estadístico institucional*. Para aquellos interesados en conocer la información estadística general de la Universidad Nacional de Colombia, así como de las demás sedes que hacen parte de esta institución, los invitamos a ingresar al sitio web de [estadísticas institucionales](http://estadisticas.unal.edu.co/home/) y a conocer los porqués de este sitio expresados en el siguiente video institucional.
+
+<br/>
+
+<html>
+<center>
+<iframe width="580" height="320" src="https://www.youtube.com/embed/D1228EikvoM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+</html>
